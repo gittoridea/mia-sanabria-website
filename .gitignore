@@ -45,3 +45,4 @@ bun.lockb
 # screenshots / artifacts
 screenshots/
 audit-reports/
+tsconfig.tsbuildinfo
