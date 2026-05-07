@@ -8,9 +8,9 @@ import { JsonLd } from "@/components/schema/JsonLd";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Insights — Southeast Florida Luxury Real Estate",
+  title: "Insights — SE Florida Luxury Real Estate",
   description:
-    "What South Florida real estate concierge means in practice — how Mia Sanabria's representation works for buyers and sellers in Fort Lauderdale, Boca Raton, and the Palm Beach corridor.",
+    "What South Florida real estate concierge means in practice — how Mia Sanabria represents buyers and sellers in Fort Lauderdale, Boca Raton, and Palm Beach.",
   alternates: { canonical: `${SITE.url}/insights/` },
 };
 

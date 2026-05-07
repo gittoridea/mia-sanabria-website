@@ -45,7 +45,10 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: [`${SITE.url}/og-default.jpg`],
   },
-  alternates: { canonical: SITE.url },
+  alternates: {
+    canonical: SITE.url,
+    languages: { "en-US": SITE.url, "x-default": SITE.url },
+  },
   robots: {
     index: true,
     follow: true,
@@ -69,6 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-US">
       <head>
         <meta name="color-scheme" content="light" />
+        <link rel="alternate" hrefLang="en-US" href={SITE.url} />
+        <link rel="alternate" hrefLang="x-default" href={SITE.url} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

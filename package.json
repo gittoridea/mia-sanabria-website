@@ -12,7 +12,8 @@
     "audit:stale": "bun run scripts/audit-stale-terms.ts",
     "audit:schema": "bun run scripts/audit-schema.ts",
     "audit:links": "bun run scripts/audit-links.ts",
-    "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links"
+    "audit:seo": "bun run scripts/audit-seo.ts",
+    "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo"
   },
   "dependencies": {
     "next": "15.1.0",

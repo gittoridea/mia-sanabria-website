@@ -7,9 +7,9 @@ import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Home Valuation — Mia Sanabria Luxury Real Estate",
+  title: "Home Valuation — Luxury Real Estate",
   description:
-    "Receive a complimentary, bespoke valuation of your Southeast Florida luxury property. Sophisticated, confidential, and grounded in current micro-market dynamics.",
+    "Receive a complimentary, bespoke valuation of your Southeast Florida luxury property. Sophisticated, confidential, and grounded in micro-market dynamics.",
   alternates: { canonical: `${SITE.url}/valuation/` },
 };
 

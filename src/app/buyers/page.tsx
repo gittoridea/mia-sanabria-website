@@ -10,9 +10,9 @@ import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Buying with Mia Sanabria — Bespoke Acquisition",
+  title: "Buying — Bespoke Acquisition",
   description:
-    "Bespoke acquisition for Southeast Florida's luxury market. Mia Sanabria curates discreet, off-market opportunities in Boca Raton, Fort Lauderdale, and Palm Beach for buyers who treat the residence as a legacy.",
+    "Bespoke acquisition for Southeast Florida's luxury market — discreet, off-market opportunities in Boca Raton, Fort Lauderdale, and Palm Beach.",
   alternates: { canonical: `${SITE.url}/buyers/` },
 };
 

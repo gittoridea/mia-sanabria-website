@@ -10,9 +10,9 @@ import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Selling with Mia Sanabria — Elevated Marketing & Strategy",
+  title: "Selling — Elevated Marketing & Strategy",
   description:
-    "A bespoke approach to marketing Southeast Florida's most distinguished estates. Mia Sanabria positions luxury residences with editorial photography, off-market networks, and strategic pricing for optimal market velocity.",
+    "Bespoke marketing for Southeast Florida's distinguished estates — editorial photography, off-market networks, and strategic pricing for market velocity.",
   alternates: { canonical: `${SITE.url}/sellers/` },
 };
 

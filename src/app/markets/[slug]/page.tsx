@@ -25,8 +25,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const market = getMarket(slug);
   if (!market) return {};
-  const title = `${market.name} Real Estate — Luxury Concierge Representation`;
-  const description = `${market.name} luxury real estate with Mia Sanabria. ${market.tagline} ${market.priceCharacter}`;
+  const title = `${market.name} Luxury Real Estate`;
+  const description = `${market.name} luxury real estate with Mia Sanabria. ${market.tagline}`;
   return {
     title,
     description,

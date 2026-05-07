@@ -10,9 +10,9 @@ import { SITE } from "@/lib/site";
 import { MIA } from "@/lib/mia";
 
 export const metadata: Metadata = {
-  title: "About Mia Sanabria — Southeast Florida Luxury Realtor",
+  title: "About Mia — Southeast Florida Luxury Realtor",
   description:
-    "Mia Sanabria is a Fort Lauderdale–based luxury real estate concierge representing buyers, sellers, and investors across Boca Raton, Fort Lauderdale, and Palm Beach with discretion, rigor, and white-glove care.",
+    "Mia Sanabria is a Fort Lauderdale–based luxury concierge representing buyers, sellers, and investors across Boca Raton, Fort Lauderdale, and Palm Beach.",
   alternates: { canonical: `${SITE.url}/about/` },
 };
 

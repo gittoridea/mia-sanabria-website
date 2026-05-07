@@ -2,11 +2,11 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: observe
-progress: 0/96
+phase: think
+progress: 73/130
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-06
+updated: 2026-05-07
 algorithm_version: 6.4.0
 ---
 
@@ -187,6 +187,56 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 - [ ] ISC-95: Anti: No `console.log` in shipped client bundles (lint-enforced).
 - [ ] ISC-96: Antecedent: User experiences a luxury concierge framing on first paint (hero copy + imagery convey position before scroll).
 
+### Mission 2026-05-07 — Ideal state gap closure + AI-OS process extraction
+
+**Ideal-state articulation (Phase 1)**
+- [ ] ISC-97: `docs/MIA_IDEAL_PRODUCTION_STATE.md` exists and covers all 11 axes (page architecture, compliance, IDX/MLS, SEO/AEO/GEO, conversion, GHL integration, analytics/Search Console, performance/accessibility, client review, launch/cutover, rollback).
+- [ ] ISC-98: Each axis has a measurable target (numeric threshold, file-existence check, URL-200 check, or Mia-confirmation gate).
+- [ ] ISC-99: Document distinguishes ideal-state items requiring Mia confirmation from items shippable without (per fact-ledger discipline).
+- [ ] ISC-100: Document references existing artifacts where they already exist (Caddyfile, Dockerfile, sitemap.ts, robots.ts, audit scripts) — does not duplicate ground truth.
+
+**Gap matrix (Phase 2)**
+- [ ] ISC-101: `docs/MIA_CURRENT_TO_IDEAL_GAP_MATRIX.md` exists with one row per ideal-state target.
+- [ ] ISC-102: Every gap row classified P0 / P1 / P2 / GATED / APPROVAL / AUTOMATE.
+- [ ] ISC-103: Every gap row cites current evidence (route 200, audit output, repo file, ISA verification entry) and ideal-state evidence (the threshold or confirmation).
+- [ ] ISC-104: GATED rows name which Mia-confirmation gate they wait on; APPROVAL rows name which Torrey decision; AUTOMATE rows name the BSS process candidate.
+
+**Safe-gap closure (Phase 3)**
+- [ ] ISC-105: All chosen P0 gaps closed with file diff and commit hash.
+- [ ] ISC-106: All chosen P1 gaps closed OR explicitly deferred with reason (each deferral logged in `## Decisions`).
+- [ ] ISC-107: Anti: zero edits to `NEXT_PUBLIC_SITE_URL` default, sitemap host, canonical host base, or DNS.
+- [ ] ISC-108: Anti: zero copy edits that introduce unverified facts; every copy edit is either (a) typo/grammar, (b) compliance-language softening, or (c) generic luxury concierge phrasing already grounded in ledger.
+- [ ] ISC-109: Anti: zero new outbound HTTP calls from runtime code; form stubs remain placeholder.
+- [ ] ISC-110: After Phase 3 edits, `bun run typecheck && bun run audit:all` exit 0.
+- [ ] ISC-111: After Phase 3 edits, every public route still returns 200 on local serve (or static-export `out/`).
+
+**Audit-script improvements**
+- [ ] ISC-112: At least one new check added to `scripts/audit-stale-terms.ts`, `audit-schema.ts`, OR `audit-links.ts`, OR a new `audit-seo.ts` lands covering the gaps Phase 2 surfaces.
+- [ ] ISC-113: New audit check passes on current `out/`.
+
+**Deterministic AI-OS processes (Phase 4)**
+- [ ] ISC-114: `docs/BSS_AI_OS_DETERMINISTIC_PROCESSES_V0.md` exists and documents exactly 3 processes (Ideal-State Diff, Ten-Minute Leverage Scout, Production Readiness Gate).
+- [ ] ISC-115: Each process has: trigger, inputs, deterministic steps, outputs, exit criteria, escalation rule.
+- [ ] ISC-116: Each process names which step is Claude/AI-driven vs human-gated.
+- [ ] ISC-117: Each process cites at least one Mia-build artifact as the empirical source.
+
+**BSS realtor templates (Phase 5)**
+- [ ] ISC-118: `docs/BSS_REALTOR_WEBSITE_DEPLOYMENT_TEMPLATE_V0.md` exists.
+- [ ] ISC-119: `docs/BSS_REALTOR_FACT_LEDGER_SCHEMA.md` exists with verified/candidate/refuted/not-found/historical/do-not-publish categories matching the Mia ledger v2 contract.
+- [ ] ISC-120: `docs/BSS_REALTOR_COMPLIANCE_GATE.md` exists covering FREC ad rules, Fair Housing, brokerage attribution, license # display, IDX/MLS terms, accessibility statement.
+- [ ] ISC-121: `docs/BSS_REALTOR_GHL_INTEGRATION_PACKET_TEMPLATE.md` exists with form-mapping, calendar-embed, tag-taxonomy, sub-account-checklist sections.
+- [ ] ISC-122: `docs/BSS_REALTOR_CLIENT_REVIEW_PACK_TEMPLATE.md` exists with screenshot inventory, fact-confirmation matrix, photography checklist, copy-approval checklist.
+- [ ] ISC-123: `docs/BSS_REALTOR_LAUNCH_CUTOVER_CHECKLIST.md` exists covering DNS swap, env var swap, sitemap re-submit, 301 staging→prod, GSC/Bing reverification, rollback command.
+
+**Verification + ISA hygiene (Phase 6)**
+- [ ] ISC-124: All Phase 1–5 docs added in a single feature branch (or main) commit with conventional message.
+- [ ] ISC-125: `git push origin main` succeeds (or PR created).
+- [ ] ISC-126: Dokploy deploy state polled; if webhook silent, manual `application.deploy` issued (per ISA D-2026-05-07 doctrine).
+- [ ] ISC-127: Post-deploy: every public route returns 200, sitemap.xml includes every public page, security headers present.
+- [ ] ISC-128: ISA `## Decisions` and `## Changelog` updated with mission learnings.
+- [ ] ISC-129: Cato cross-vendor audit returns no `critical` findings (Rule 2a, mandatory at E4).
+- [ ] ISC-130: Anti: this mission introduces zero changes to AI-OS infra (Librarian cron, Pulse reconciler, skillOverrides, Hermes contracts, background agents).
+
 ## Test Strategy
 
 | ISC range | Type | Check | Threshold | Tool |
@@ -217,6 +267,12 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 | F8: Deployment | ISC-69–76 | F4, F5, F6, F7 | sequential after F7 |
 | F9: Audit + verify | ISC-77–85 | F8 | sequential |
 | F10: Anti-criteria probes | ISC-86–96 | continuous | every phase |
+| F11: Ideal-state articulation | ISC-97–100 | F4-F9 baseline | sequential |
+| F12: Gap matrix | ISC-101–104 | F11 | sequential |
+| F13: Safe-gap closure | ISC-105–113 | F12 | per-gap parallel |
+| F14: AI-OS deterministic processes doc | ISC-114–117 | F12, F13 | sequential |
+| F15: BSS realtor templates (6 docs) | ISC-118–123 | F11–F14 | parallel doc-write |
+| F16: Mission verify + ISA hygiene | ISC-124–130 | F11–F15 | sequential |
 
 ## Decisions
 
@@ -225,6 +281,10 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 - 2026-05-06 — Domain: **staging at miasanabriarealtor.trueidea.com** (Torrey's domain) — production cutover to `miasanabriarealtor.com` deferred to a later approval (per user "first must be production ready").
 - 2026-05-06 — Specialist probe: Forge ✅ codex at /home/torrey/.local/bin/codex (oauth); Cato ✅ same binary read-only; Anvil ❌ (no kimi binary) → Forge handles whole-project context. Probe stdout quoted in v6.4.0 doctrine.
 - 2026-05-06 — Mia confirmation gates from prior plan are NOT lifted: license # / designations / Spanish / display office stay placeholder. Only the deploy/build gates are lifted by user's "full permission".
+- 2026-05-07 — **Mission scope expansion**: Torrey directed an EXECUTE-with-gates mission to (1) articulate full ideal production state for `miasanabriarealtor.com`, (2) build a current-vs-ideal gap matrix on staging, (3) close every safe P0/P1 gap, (4) extract three deterministic AI-OS processes (Ideal-State Diff, Ten-Minute Leverage Scout, Production Readiness Gate), and (5) extract six reusable BSS realtor-website templates. Effort: classifier returned E3 via fail-safe (timeout); conversation context is comprehensive cross-cutting work spanning ≥12 deliverable docs, code edits, deploy verification, BSS productization → escalated to E4 per v6.4.0 conversation-context override. ISCs 97–130 added to track this mission. Hard constraints: no DNS, no .com cutover, no GHL writes, no n8n changes, no real lead/contact data submitted, no contact to Mia, no AI-OS infra changes, no secret printing, no fact invention. Mia confirmation gates fully preserved.
+- 2026-05-07 — **Specialist probe (mission run)**: Forge ✅ (codex /home/torrey/.local/bin/codex, oauth ~/.codex/auth.json), Cato ✅ (read-only), Anvil ❌ (binary missing — same as 2026-05-06; tombstoned again, Forge handles long-context), Perplexity ✅ (OPENROUTER_API_KEY). Probe stdout from `bun ~/.claude/PAI/TOOLS/SpecialistProbe.ts --json` quoted in mission session log.
+- 2026-05-07 — **Preflight outcome**: 18/18 staging routes return 200; sitemap.xml + robots.txt + manifest.webmanifest + og-default.svg all 200; TLS Let's Encrypt R13 valid for `miasanabriarealtor.trueidea.com`; local typecheck clean; `bun run audit:stale` clean; `bun run audit:schema` reports 100 JSON-LD blocks across 20 pages, all parse with @context+@type; `bun run audit:links` reports 669/669 internal links resolve. Secret scan: no `.env*` tracked, gitignore covers `.env*`, flagged matches in ISA.md and og-default.jpg are documentation prose / binary image (no real secrets). Fact ledger gates intact (license #, designations, Spanish, display office still placeholder).
+- 2026-05-07 — **STATE PROBE (mission ISCs 97–130)**: 0/34 already-passing — full execution required. Negative-result entry per v6.4.0 M3. `docs/` directory absent on disk; baseline pre-edit gates ISC-110 (typecheck+audit:all exit 0) and ISC-111 (18/18 routes 200) confirmed via Phase 0 preflight, but they remain `[ ]` because the criterion is "after Phase 3 edits" — re-probe required post-EXECUTE. Existing referenceable artifacts confirmed for ISC-100: Caddyfile, Dockerfile, docker-compose.yml, DEPLOY.md, src/app/{sitemap,robots,manifest}.ts, scripts/{audit-stale-terms,audit-schema,audit-links,render-images}.ts. Existing PUBLIC_FACT_LEDGER.md v2 at ~/.claude/PAI/USER/PROJECTS/MiaSanabria/ confirmed as empirical source for ISC-119 schema.
 
 ## Changelog
 

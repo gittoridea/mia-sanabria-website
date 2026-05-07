@@ -14,7 +14,7 @@ import { MIA } from "@/lib/mia";
 export const metadata: Metadata = {
   title: "Contact Mia Sanabria — Private Consultation",
   description:
-    "Begin a confidential conversation with Mia Sanabria, Southeast Florida's luxury real estate concierge. Private consultations for buyers, sellers, and investors across Boca Raton, Fort Lauderdale, and Palm Beach.",
+    "Begin a confidential conversation with Mia Sanabria — SE Florida's luxury concierge. Private consultations: Boca Raton, Fort Lauderdale, Palm Beach.",
   alternates: { canonical: `${SITE.url}/contact/` },
 };
 
