@@ -62,6 +62,7 @@ export default function ValuationPage() {
           <form
             method="post"
             action="/api/submit-valuation"
+            aria-describedby="valuation-form-helper"
             className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10"
             noValidate
           >
@@ -75,11 +76,11 @@ export default function ValuationPage() {
                 THE PROPERTY
               </legend>
               <div className="mt-4 grid gap-5">
-                <Field label="Property Address" name="address" required />
+                <Field label="Property Address" name="address" autoComplete="street-address" required />
                 <div className="grid gap-5 sm:grid-cols-3">
-                  <Field label="City" name="city" required />
-                  <Field label="Bedrooms" name="bedrooms" type="number" />
-                  <Field label="Bathrooms" name="bathrooms" type="number" />
+                  <Field label="City" name="city" autoComplete="address-level2" required />
+                  <Field label="Bedrooms" name="bedrooms" type="number" inputMode="numeric" />
+                  <Field label="Bathrooms" name="bathrooms" type="number" inputMode="numeric" />
                 </div>
                 <div>
                   <label
@@ -104,20 +105,28 @@ export default function ValuationPage() {
                 YOU
               </legend>
               <div className="mt-4 grid gap-5 sm:grid-cols-2">
-                <Field label="First Name" name="firstName" required />
-                <Field label="Last Name" name="lastName" required />
-                <Field label="Email Address" name="email" type="email" required />
-                <Field label="Phone Number" name="phone" type="tel" />
+                <Field label="First Name" name="firstName" autoComplete="given-name" required />
+                <Field label="Last Name" name="lastName" autoComplete="family-name" required />
+                <Field
+                  label="Email Address"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  inputMode="email"
+                  required
+                />
+                <Field label="Phone Number" name="phone" type="tel" autoComplete="tel" inputMode="tel" />
               </div>
             </fieldset>
 
             <button
               type="submit"
+              aria-describedby="valuation-form-helper"
               className="mt-10 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium tracking-wide text-cream-50 transition-colors hover:bg-navy-700"
             >
               Request Valuation
             </button>
-            <p className="mt-3 text-xs text-navy-800/60">
+            <p id="valuation-form-helper" className="mt-3 text-xs text-navy-800/60">
               This is a confidential request. We never share your information.
             </p>
           </form>
@@ -156,11 +165,15 @@ function Field({
   label,
   name,
   type = "text",
+  autoComplete,
+  inputMode,
   required = false,
 }: {
   label: string;
   name: string;
   type?: string;
+  autoComplete?: string;
+  inputMode?: "email" | "tel" | "numeric";
   required?: boolean;
 }) {
   return (
@@ -172,6 +185,8 @@ function Field({
         id={name}
         name={name}
         type={type}
+        autoComplete={autoComplete}
+        inputMode={inputMode}
         required={required}
         aria-required={required}
         className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-sm text-navy-800 focus:border-brass-400 focus:outline-none"

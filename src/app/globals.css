@@ -40,6 +40,8 @@
 
 :root {
   color-scheme: light;
+  --font-cinzel: "Cinzel";
+  --font-montserrat: "Montserrat";
 }
 
 html {
@@ -98,6 +100,8 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
+summary:focus-visible,
+iframe:focus-visible,
 [role="button"]:focus-visible {
   outline: 2px solid var(--color-brass-400);
   outline-offset: 3px;

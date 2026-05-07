@@ -99,6 +99,7 @@ export default function ContactPage() {
           <form
             method="post"
             action="/api/submit-contact"
+            aria-describedby="contact-form-helper"
             className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10"
             noValidate
           >
@@ -108,12 +109,19 @@ export default function ContactPage() {
             </p>
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              <Field label="First Name" name="firstName" required />
-              <Field label="Last Name" name="lastName" required />
+              <Field label="First Name" name="firstName" autoComplete="given-name" required />
+              <Field label="Last Name" name="lastName" autoComplete="family-name" required />
             </div>
             <div className="mt-5 grid gap-5 sm:grid-cols-2">
-              <Field label="Email Address" name="email" type="email" required />
-              <Field label="Phone Number" name="phone" type="tel" />
+              <Field
+                label="Email Address"
+                name="email"
+                type="email"
+                autoComplete="email"
+                inputMode="email"
+                required
+              />
+              <Field label="Phone Number" name="phone" type="tel" autoComplete="tel" inputMode="tel" />
             </div>
             <div className="mt-5">
               <label htmlFor="interest" className="block text-xs uppercase tracking-[0.25em] text-navy-800/70">
@@ -156,11 +164,12 @@ export default function ContactPage() {
 
             <button
               type="submit"
+              aria-describedby="contact-form-helper"
               className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium tracking-wide text-cream-50 transition-colors hover:bg-navy-700"
             >
               Send Private Inquiry
             </button>
-            <p className="mt-3 text-xs text-navy-800/60">
+            <p id="contact-form-helper" className="mt-3 text-xs text-navy-800/60">
               By submitting you agree to receive a private response from Mia or her team. We never share contact details.
             </p>
           </form>
@@ -178,10 +187,20 @@ export default function ContactPage() {
             <iframe
               title="Fort Lauderdale, Florida map"
               src="https://www.google.com/maps?q=Fort+Lauderdale,+FL+33305&hl=en&output=embed"
+              width="1200"
+              height="420"
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
               className="h-[420px] w-full"
             />
+            <noscript>
+              <a
+                href="https://www.google.com/maps?q=Fort+Lauderdale,+FL+33305"
+                className="block px-6 py-5 text-sm font-medium text-navy-800 underline decoration-brass-400 underline-offset-4"
+              >
+                Open the Fort Lauderdale map.
+              </a>
+            </noscript>
           </div>
         </div>
       </section>
@@ -195,11 +214,15 @@ function Field({
   label,
   name,
   type = "text",
+  autoComplete,
+  inputMode,
   required = false,
 }: {
   label: string;
   name: string;
   type?: string;
+  autoComplete?: string;
+  inputMode?: "email" | "tel" | "numeric";
   required?: boolean;
 }) {
   return (
@@ -211,6 +234,8 @@ function Field({
         id={name}
         name={name}
         type={type}
+        autoComplete={autoComplete}
+        inputMode={inputMode}
         required={required}
         aria-required={required}
         className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-sm text-navy-800 focus:border-brass-400 focus:outline-none"

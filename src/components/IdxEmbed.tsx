@@ -1,4 +1,6 @@
 export function IdxEmbed() {
+  const searchUrl = "https://sef.mlsmatrix.com/Matrix/Public/IDXSearch.aspx?count=1&idx=10bd1eab&pv=&or=";
+
   return (
     <section
       aria-labelledby="idx-heading"
@@ -18,11 +20,21 @@ export function IdxEmbed() {
         <div className="mt-10 overflow-hidden rounded-sm border border-navy-800/10 bg-white shadow-card">
           <iframe
             title="Southeast Florida property search"
-            src="https://sef.mlsmatrix.com/Matrix/Public/IDXSearch.aspx?count=1&idx=10bd1eab&pv=&or="
-            className="h-[1100px] w-full sm:h-[900px] lg:h-[800px]"
+            src={searchUrl}
+            width="1200"
+            height="900"
+            className="min-h-[760px] w-full aspect-[4/5] sm:aspect-[16/11] lg:aspect-[3/2] lg:min-h-[800px]"
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
           />
+          <noscript>
+            <a
+              href={searchUrl}
+              className="block px-6 py-5 text-sm font-medium text-navy-800 underline decoration-brass-400 underline-offset-4"
+            >
+              Open the Southeast Florida property search.
+            </a>
+          </noscript>
         </div>
       </div>
     </section>

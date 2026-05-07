@@ -70,6 +70,7 @@ export function SiteHeader() {
       <nav
         id="mobile-nav"
         aria-label="Mobile primary"
+        aria-hidden={!open}
         className={cn(
           "lg:hidden border-t border-cream-300 bg-cream-50",
           open ? "block" : "hidden",

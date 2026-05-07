@@ -105,7 +105,7 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
             <p className="mt-6 text-[17px] leading-relaxed text-navy-800/85">
               {market.lifestyle}
             </p>
-            <h3 className="mt-10 font-display text-xl text-navy-800">Highlights</h3>
+            <h2 className="mt-10 font-display text-xl text-navy-800">Highlights</h2>
             <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-navy-800/85">
               {market.highlights.map((h, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -117,7 +117,7 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
                 </li>
               ))}
             </ul>
-            <h3 className="mt-10 font-display text-xl text-navy-800">The market</h3>
+            <h2 className="mt-10 font-display text-xl text-navy-800">The market</h2>
             <p className="mt-3 text-[15px] leading-relaxed text-navy-800/85">
               {market.priceCharacter}
             </p>
