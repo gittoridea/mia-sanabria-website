@@ -48,11 +48,11 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
   const otherMarkets = MARKETS.filter((m) => m.slug !== slug).slice(0, 3);
   const faq = [
     {
-      question: `What kinds of properties define ${market.name}?`,
-      answer: market.intro,
+      question: `Where is ${market.name} and what defines the market?`,
+      answer: `${market.localContext} ${market.intro}`,
     },
     {
-      question: `What does the ${market.name} lifestyle look like?`,
+      question: `What does day-to-day life in ${market.name} look like?`,
       answer: market.lifestyle,
     },
     {
@@ -60,8 +60,12 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
       answer: market.priceCharacter,
     },
     {
+      question: `Which county is ${market.name} in, and how does that affect a transaction?`,
+      answer: `${market.name} is in ${market.county}. County matters for property tax assessment, recording fees, permit and inspection processes, and the public records you will rely on during diligence — Mia coordinates the right county-specific resources for each transaction.`,
+    },
+    {
       question: `Does Mia have off-market access in ${market.name}?`,
-      answer: `Yes. Off-market and pre-market access in ${market.name} is sourced through brokerage and ownership relationships. The brief is the access — every conversation begins privately.`,
+      answer: `Yes. Off-market and pre-market access in ${market.name} is sourced through brokerage and ownership relationships built over time in ${market.county}. Every conversation begins privately, and a clearly written brief is what unlocks the right introductions.`,
     },
   ];
 

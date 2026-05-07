@@ -9,7 +9,7 @@ export function OrganizationSchema() {
     "@type": "Organization",
     "@id": `${SITE.url}/#organization`,
     name: MIA.brokerage.legal,
-    alternateName: `${MIA.name.marketing} — ${MIA.brokerage.display}`,
+    alternateName: MIA.brokerage.display,
     url: SITE.url,
     logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` },
     sameAs: [

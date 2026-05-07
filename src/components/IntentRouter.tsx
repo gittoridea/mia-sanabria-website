@@ -1,24 +1,23 @@
 import Link from "next/link";
-import { Compass, Key, BadgeDollarSign } from "lucide-react";
+import { Compass, Home, BadgeDollarSign } from "lucide-react";
 
 const INTENTS = [
   {
-    href: "/buyers/",
-    label: "I am buying",
-    blurb: "Bespoke acquisition, off-market access, white-glove discretion.",
-    Icon: Key,
-  },
-  {
-    href: "/sellers/",
-    label: "I am selling",
-    blurb:
-      "Strategic positioning, global presentation, expert closing coordination.",
+    href: "/valuation/",
+    label: "I may sell",
+    blurb: "Request a current, property-specific valuation conversation.",
     Icon: BadgeDollarSign,
   },
   {
+    href: "/buyers/",
+    label: "I am buying",
+    blurb: "Clarify markets, property criteria, timing, and next steps.",
+    Icon: Home,
+  },
+  {
     href: "/markets/",
-    label: "I am exploring",
-    blurb: "Walk Southeast Florida's most coveted markets, neighborhood by neighborhood.",
+    label: "I am researching",
+    blurb: "Compare Fort Lauderdale and South Florida market guides.",
     Icon: Compass,
   },
 ] as const;

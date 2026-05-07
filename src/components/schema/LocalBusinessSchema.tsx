@@ -8,7 +8,7 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${SITE.url}/#localbusiness`,
-    name: MIA.name.marketing,
+    name: `${MIA.name.marketing} — ${MIA.brokerage.display}`,
     image: `${SITE.url}/mia-headshot.jpg`,
     url: SITE.url,
     telephone: MIA.contact.phoneTel,

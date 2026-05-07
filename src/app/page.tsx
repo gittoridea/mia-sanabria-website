@@ -9,7 +9,6 @@ import { IdxEmbed } from "@/components/IdxEmbed";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PersonSchema } from "@/components/schema/PersonSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
-import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { MARKETS } from "@/lib/markets";
 import { SITE } from "@/lib/site";
@@ -22,48 +21,43 @@ export const metadata: Metadata = {
 
 const HOME_FAQ = [
   {
-    question: "Where does Mia practice?",
+    question: "Where does Mia serve clients?",
     answer:
-      "Mia is based in Fort Lauderdale and represents clients across Broward, Miami-Dade, and Palm Beach counties — with deepest fluency in the luxury waterfront markets of Boca Raton, Fort Lauderdale, Palm Beach, Delray Beach, Lighthouse Point, Coral Ridge, and Victoria Park.",
+      "Mia is based in Fort Lauderdale and serves clients across Broward, Miami-Dade, and Palm Beach counties, with this site focusing on Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, Palm Beach, Delray Beach, and Lighthouse Point.",
   },
   {
-    question: "What does 'concierge representation' mean in practice?",
+    question: "What does South Florida Real Estate Concierge mean?",
     answer:
-      "It means a small client list, white-glove discretion, and access to the full off-market and pre-market layer of Southeast Florida luxury inventory. Every engagement begins with a private conversation about timeline, lifestyle, and the residence — not the transaction.",
+      "It means a guided process: clarify the goal, narrow the right markets, review current comparable data, coordinate next steps, and keep the client informed from first conversation through closing.",
   },
   {
-    question: "Does Mia handle off-market and pre-market opportunities?",
+    question: "Can Mia help with a home value question before I am ready to sell?",
     answer:
-      "Yes. A meaningful share of the most desirable Southeast Florida residences trade quietly. Mia maintains relationships across the brokerage community and the high-net-worth ownership network specifically to surface the homes that never reach the open market.",
-  },
-  {
-    question: "What is the typical price range Mia represents?",
-    answer:
-      "Most engagements fall in the $1.5M–$30M range across single-family waterfront, oceanfront condominiums, and country-club estates. Larger landmark residences and commercial assets are handled on a case-by-case basis.",
+      "Yes. The valuation request is designed for owners who want a current read on their property, even if they are still early in the decision process.",
   },
   {
     question: "How do I begin?",
     answer:
-      "Send a private note via the contact form, call (954) 540-0358, or request a complimentary valuation if you are evaluating a sale. Every initial conversation is confidential.",
+      "Call (954) 540-0358, send a private inquiry, or request a home valuation. Mia or her team can then confirm the next appropriate step.",
   },
 ];
 
 const HOME_VALUE_PROPS = [
   {
-    heading: "Curated representation",
-    body: "A deliberately small client list — every engagement receives concierge attention, full presence at every showing, and direct access to Mia.",
+    heading: "Concierge representation",
+    body: "Every engagement starts with a private conversation about timing, criteria, and the residence you have in mind — not a generic IDX search.",
   },
   {
-    heading: "Off-market access",
-    body: "Relationships across the brokerage community surface pre-market and off-market residences before they ever reach a public listing.",
+    heading: "Off-market and pre-market access",
+    body: "Quiet introductions sourced through brokerage and ownership relationships across Fort Lauderdale, Boca Raton, and the Palm Beach corridor.",
   },
   {
-    heading: "Editorial presentation",
-    body: "Listings positioned as architectural objects — cinematic photography, copywriting, and global distribution that the property deserves.",
+    heading: "Current-market clarity",
+    body: "Pricing conversations are grounded in current comparable sales for the specific street, building, or block — never broad public ranges.",
   },
   {
-    heading: "Quiet rigor",
-    body: "Title work, due diligence, financing coordination, and closing execution handled with the discretion luxury transactions require.",
+    heading: "Discreet by default",
+    body: "Inquiries are handled privately. Listings, valuations, and search work proceed without unnecessary exposure of you or the property.",
   },
 ];
 
@@ -72,15 +66,14 @@ export default function HomePage() {
     <>
       <PersonSchema />
       <RealEstateAgentSchema />
-      <LocalBusinessSchema />
       <BreadcrumbSchema items={[{ name: "Home", href: "/" }]} />
 
       <Hero
-        eyebrow="Mia Sanabria · LPT Realty"
-        heading="Discover Southeast Florida's most exclusive real estate."
-        sub="A concierge practice for buyers, sellers, and investors who treat the residence as the primary asset — Boca Raton, Fort Lauderdale, Palm Beach, and the waterfronts in between."
-        ctaPrimary={{ href: "/contact/", label: "Request Private Consultation" }}
-        ctaSecondary={{ href: "/markets/", label: "Explore Featured Markets" }}
+        eyebrow="Mia Sanabria · REALTOR® with LPT Realty"
+        heading="Luxury real estate guidance for Fort Lauderdale and South Florida."
+        sub="Mia Sanabria is a South Florida Real Estate Concierge serving buyers and sellers across Fort Lauderdale, Broward, Miami-Dade, and Palm Beach."
+        ctaPrimary={{ href: "/valuation/", label: "Request Home Valuation" }}
+        ctaSecondary={{ href: "/contact/", label: "Talk With Mia" }}
       />
 
       <IntentRouter />
@@ -89,8 +82,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
             eyebrow="Featured Markets"
-            heading="The pinnacle of Southeast Florida luxury, neighborhood by neighborhood."
-            sub="Each market on the coast lives by its own architectural and social logic. Mia's representation begins with fluency in the place — the dock, the country club, the canopy, the avenue — before the first showing is ever scheduled."
+            heading="Start with the neighborhoods and property types that match the decision."
+            sub="Concise market guides for Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, Palm Beach, Delray Beach, and Lighthouse Point — written to point you toward current comparable sales and a property-specific conversation."
           />
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {MARKETS.slice(0, 6).map((market) => (
@@ -103,8 +96,8 @@ export default function HomePage() {
       </section>
 
       <ValueProps
-        eyebrow="The Concierge Difference"
-        heading="A private practice, deliberately structured."
+        eyebrow="The Practice"
+        heading="A private, deliberate way to buy and sell in Southeast Florida."
         items={HOME_VALUE_PROPS}
         background="navy"
       />
@@ -112,7 +105,6 @@ export default function HomePage() {
       <IdxEmbed />
 
       <Faq items={HOME_FAQ} />
-
       <CTAStrip />
     </>
   );

@@ -20,7 +20,7 @@ export const SITE = {
   anchorLine: "If I don't know the answer, I will find it.",
   url: SITE_URL,
   productionUrl: PRODUCTION_URL,
-  ogImage: `${SITE_URL}/og-default.svg`,
+  ogImage: `${SITE_URL}/og-default.jpg`,
   themeColor: "#0F2A44",
   locale: "en-US",
   twitter: { card: "summary_large_image" as const },

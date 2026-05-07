@@ -15,10 +15,8 @@ export function PersonSchema() {
     image: `${SITE.url}/mia-headshot.jpg`,
     telephone: MIA.contact.phoneTel,
     email: MIA.contact.email,
-    knowsLanguage: [...MIA.unverified.languages],
     worksFor: { "@id": `${SITE.url}/#organization` },
     sameAs: [
-      `${SITE.url}/#realestate-agent`,
       MIA.social.facebook,
       MIA.social.instagram,
       MIA.social.linkedin,

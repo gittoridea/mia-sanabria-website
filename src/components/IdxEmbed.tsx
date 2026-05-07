@@ -6,20 +6,20 @@ export function IdxEmbed() {
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="luxury-divider mb-5">
-          <span>Live MLS Inventory</span>
+          <span>Property Search</span>
         </div>
         <h2 id="idx-heading" className="font-display text-3xl text-navy-800 sm:text-4xl">
-          Exclusive listings, refreshed in real time.
+          Search available Southeast Florida listings.
         </h2>
         <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-navy-800/80">
-          Search Southeast Florida's most desirable inventory through the regional MLS.
-          For off-market and pre-market opportunities, the conversation happens privately.
+          Use the embedded search as a starting point, then contact Mia for a property-specific review,
+          current comparable sales, and next-step guidance.
         </p>
         <div className="mt-10 overflow-hidden rounded-sm border border-navy-800/10 bg-white shadow-card">
           <iframe
-            title="Southeast Florida MLS Inventory"
+            title="Southeast Florida property search"
             src="https://sef.mlsmatrix.com/Matrix/Public/IDXSearch.aspx?count=1&idx=10bd1eab&pv=&or="
-            className="h-[800px] w-full"
+            className="h-[1100px] w-full sm:h-[900px] lg:h-[800px]"
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
           />

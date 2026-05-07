@@ -36,11 +36,23 @@ export function Hero({
             {eyebrow}
           </p>
         ) : null}
-        <h1 className="mt-5 max-w-4xl text-balance font-display font-semibold text-cream-50 [text-wrap:balance]">
+        <h1
+          className={
+            background === "navy" || background === "image"
+              ? "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance]"
+              : "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl [text-wrap:balance]"
+          }
+        >
           {heading}
         </h1>
         {sub ? (
-          <p className="mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl">
+          <p
+            className={
+              background === "navy" || background === "image"
+                ? "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
+                : "mt-6 max-w-2xl text-lg text-navy-800/80 [text-wrap:pretty] sm:text-xl"
+            }
+          >
             {sub}
           </p>
         ) : null}

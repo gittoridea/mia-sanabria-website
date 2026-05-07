@@ -26,10 +26,16 @@ export function RealEstateAgentSchema() {
       "@type": "AdministrativeArea",
       name: county,
     })),
-    parentOrganization: {
-      "@type": "Organization",
-      name: MIA.brokerage.legal,
-    },
+    parentOrganization: { "@id": `${SITE.url}/#organization` },
+    knowsAbout: [
+      "Luxury real estate",
+      "Waterfront properties",
+      "Off-market acquisitions",
+      "Concierge representation",
+      "Fort Lauderdale real estate",
+      "Boca Raton real estate",
+      "Palm Beach real estate",
+    ],
     sameAs: [
       MIA.social.facebook,
       MIA.social.instagram,
