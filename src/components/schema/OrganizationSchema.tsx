@@ -8,9 +8,10 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${SITE.url}/#organization`,
-    name: `${MIA.name.marketing} — ${MIA.brokerage.display}`,
+    name: MIA.brokerage.legal,
+    alternateName: `${MIA.name.marketing} — ${MIA.brokerage.display}`,
     url: SITE.url,
-    logo: { "@type": "ImageObject", url: `${SITE.url}/logo.svg` },
+    logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` },
     sameAs: [
       MIA.social.facebook,
       MIA.social.instagram,

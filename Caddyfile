@@ -11,7 +11,11 @@
     @media path *.svg *.jpg *.jpeg *.png *.webp *.avif *.woff2
     header @media Cache-Control "public, max-age=2592000, must-revalidate"
 
-    @html path *.html /
+    @html {
+        path *.html
+        path /
+        path */
+    }
     header @html Cache-Control "public, max-age=300, s-maxage=600, must-revalidate"
 
     header {
@@ -20,6 +24,7 @@
         Referrer-Policy "strict-origin-when-cross-origin"
         Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=()"
         Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+        Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'self' https://sef.mlsmatrix.com https://www.google.com https://maps.google.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
         -Server
     }
 

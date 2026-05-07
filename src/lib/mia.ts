@@ -1,7 +1,7 @@
 /**
  * Verified facts from PUBLIC_FACT_LEDGER v2 (~/.claude/PAI/USER/PROJECTS/MiaSanabria/).
- * Candidate / unverified fields are typed `string | null` and stay `null` in production
- * until Mia confirms in writing. Schema components must read from this file — never inline.
+ * Candidate / unverified fields stay null or empty until Mia confirms in writing.
+ * Schema components must read from this file — never inline unverified facts.
  */
 
 export const MIA = {
@@ -22,7 +22,6 @@ export const MIA = {
     phone: "(954) 540-0358",
     phoneTel: "+19545400358",
     email: "mia@miasanabriarealtor.com",
-    emailLegacy: "msanabriarea@gmail.com",
     addressFormatted: "Fort Lauderdale, FL 33305",
     serviceCore: { city: "Fort Lauderdale", region: "FL", postalCode: "33305" },
   },
@@ -45,20 +44,20 @@ export const MIA = {
     yearsLicensed: null as string | null,
     displayOffice: null as string | null,
   },
-  experience: { since: 2017 },
+  experience: { since: null as string | null },
   serviceArea: {
     administrative: ["Broward County", "Miami-Dade County", "Palm Beach County"],
   },
 } as const;
 
 export const FEATURED_MARKETS = [
-  "boca-raton",
   "fort-lauderdale",
+  "coral-ridge",
+  "victoria-park",
+  "boca-raton",
   "palm-beach",
   "delray-beach",
   "lighthouse-point",
-  "victoria-park",
-  "coral-ridge",
 ] as const;
 
 export type MarketSlug = (typeof FEATURED_MARKETS)[number];

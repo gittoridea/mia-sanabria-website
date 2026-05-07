@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     title: SITE.title,
     description: SITE.description,
     siteName: SITE.name,
-    images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.title }],
+    images: [{ url: `${SITE.url}/og-default.jpg`, width: 1200, height: 630, alt: SITE.title }],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE.title,
     description: SITE.description,
-    images: [SITE.ogImage],
+    images: [`${SITE.url}/og-default.jpg`],
   },
   alternates: { canonical: SITE.url },
   robots: {
@@ -81,11 +81,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-US" className={`${cinzel.variable} ${montserrat.variable}`}>
-      <head>
+      <body>
         <OrganizationSchema />
         <WebSiteSchema />
-      </head>
-      <body>
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

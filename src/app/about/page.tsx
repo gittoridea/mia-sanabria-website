@@ -61,7 +61,7 @@ export default function AboutPage() {
               className="aspect-[4/5] w-full rounded-sm border border-navy-800/10 bg-cover bg-center shadow-card"
               style={{
                 backgroundImage:
-                  "linear-gradient(180deg, rgba(15,42,68,0.05) 0%, rgba(15,42,68,0.55) 100%), url(/mia-headshot.svg)",
+                  "linear-gradient(180deg, rgba(15,42,68,0.05) 0%, rgba(15,42,68,0.55) 100%), url(/mia-headshot.jpg)",
               }}
             />
             <p className="mt-5 text-xs uppercase tracking-[0.3em] text-brass-500">
@@ -158,10 +158,12 @@ export default function AboutPage() {
               <dt className="text-xs uppercase tracking-[0.3em] text-brass-300">Brokerage</dt>
               <dd className="mt-2 font-display text-xl">{MIA.brokerage.display}</dd>
             </div>
-            <div>
-              <dt className="text-xs uppercase tracking-[0.3em] text-brass-300">Practicing since</dt>
-              <dd className="mt-2 font-display text-xl">{MIA.experience.since}</dd>
-            </div>
+            {MIA.experience.since ? (
+              <div>
+                <dt className="text-xs uppercase tracking-[0.3em] text-brass-300">Practicing since</dt>
+                <dd className="mt-2 font-display text-xl">{MIA.experience.since}</dd>
+              </div>
+            ) : null}
             <div>
               <dt className="text-xs uppercase tracking-[0.3em] text-brass-300">Service area</dt>
               <dd className="mt-2 font-display text-base">

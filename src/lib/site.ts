@@ -1,6 +1,6 @@
 /**
  * Single source of truth for site-wide configuration.
- * Production URL flips to miasanabriarealtor.com at cutover; staging stays on trueidea.com.
+ * Production URL flips to miasanabriarealtor.com at cutover; staging can be overridden with NEXT_PUBLIC_SITE_URL.
  */
 
 const STAGING_URL = "https://miasanabriarealtor.trueidea.com";
@@ -11,10 +11,10 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? STAGING_URL;
 export const SITE = {
   name: "Mia Sanabria",
   fullName: "Mia Mary Sanabria",
-  title: "Mia Sanabria | Luxury Real Estate in Southeast Florida",
-  shortTitle: "Mia Sanabria | Luxury Realtor",
+  title: "Mia Sanabria | Fort Lauderdale Luxury Real Estate",
+  shortTitle: "Mia Sanabria | REALTOR®",
   description:
-    "Southeast Florida's luxury real estate concierge. Mia Sanabria curates exclusive waterfront estates in Boca Raton, Fort Lauderdale, and Palm Beach with white-glove discretion.",
+    "Mia Sanabria is a REALTOR® with LPT Realty and a South Florida Real Estate Concierge serving Fort Lauderdale, Broward, Miami-Dade, and Palm Beach buyers and sellers.",
   tagline: "Building Relationships for Life",
   positioning: "South Florida Real Estate Concierge",
   anchorLine: "If I don't know the answer, I will find it.",

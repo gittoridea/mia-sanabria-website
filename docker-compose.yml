@@ -14,6 +14,7 @@ services:
       - "80"
     labels:
       - traefik.enable=true
+      - traefik.docker.network=dokploy-network
       - traefik.http.routers.mia-website.rule=Host(`miasanabriarealtor.trueidea.com`)
       - traefik.http.routers.mia-website.entrypoints=websecure
       - traefik.http.routers.mia-website.tls=true

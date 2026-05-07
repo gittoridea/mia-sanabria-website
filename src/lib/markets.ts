@@ -33,7 +33,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Country-club residences begin in the seven figures; oceanfront and Royal Palm waterfront properties move comfortably into the eight figures.",
     latitude: 26.3683,
     longitude: -80.1289,
-    heroImage: "/markets/boca-raton.svg",
+    heroImage: "/markets/boca-raton.jpg",
   },
   {
     slug: "fort-lauderdale",
@@ -54,7 +54,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Las Olas Isles waterfront estates trade from $4M into $30M+; Harbor Beach compounds clear $10M; well-positioned non-waterfront in Rio Vista and Victoria Park range from low seven figures upward.",
     latitude: 26.1224,
     longitude: -80.1373,
-    heroImage: "/markets/fort-lauderdale.svg",
+    heroImage: "/markets/fort-lauderdale.jpg",
   },
   {
     slug: "palm-beach",
@@ -75,7 +75,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Entry oceanfront condominiums begin in the low eight figures; landmark Estate Section properties trade routinely above $30M and into nine figures for direct-oceanfront compounds.",
     latitude: 26.7056,
     longitude: -80.0364,
-    heroImage: "/markets/palm-beach.svg",
+    heroImage: "/markets/palm-beach.jpg",
   },
   {
     slug: "delray-beach",
@@ -96,7 +96,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Oceanfront residences trade from the mid seven figures into the mid eight figures; country-club estates west of I-95 range broadly from the $1.5M cap range up to high seven figures.",
     latitude: 26.4615,
     longitude: -80.0728,
-    heroImage: "/markets/delray-beach.svg",
+    heroImage: "/markets/delray-beach.jpg",
   },
   {
     slug: "lighthouse-point",
@@ -117,7 +117,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Canal-front and point-lot residences typically trade from $2.5M into the high seven figures; new-construction deepwater estates clear $8M with regularity.",
     latitude: 26.2756,
     longitude: -80.0875,
-    heroImage: "/markets/lighthouse-point.svg",
+    heroImage: "/markets/lighthouse-point.jpg",
   },
   {
     slug: "victoria-park",
@@ -138,7 +138,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Renovated historic cottages range from the low to mid seven figures; new-construction Victoria Park homes trade in the high seven figures and into the low eight figures for premium lots.",
     latitude: 26.1303,
     longitude: -80.1244,
-    heroImage: "/markets/victoria-park.svg",
+    heroImage: "/markets/victoria-park.jpg",
   },
   {
     slug: "coral-ridge",
@@ -159,7 +159,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Renovated waterfront residences trade from the mid seven figures; new-construction deepwater Coral Ridge estates routinely clear $8M and reach into the low eight figures for premium lots.",
     latitude: 26.1638,
     longitude: -80.1136,
-    heroImage: "/markets/coral-ridge.svg",
+    heroImage: "/markets/coral-ridge.jpg",
   },
 ];
 

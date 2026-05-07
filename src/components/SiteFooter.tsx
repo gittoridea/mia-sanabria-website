@@ -85,7 +85,7 @@ export function SiteFooter() {
           <address className="mt-4 not-italic text-sm leading-relaxed">
             {MIA.name.legal}
             <br />
-            {MIA.title}, {MIA.brokerage.display}
+            {MIA.title}, {MIA.brokerage.legal}
             <br />
             {MIA.contact.serviceCore.city}, {MIA.contact.serviceCore.region}{" "}
             {MIA.contact.serviceCore.postalCode}
