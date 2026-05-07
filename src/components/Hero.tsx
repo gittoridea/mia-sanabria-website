@@ -32,9 +32,15 @@ export function Hero({
       />
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:py-32 lg:px-8 lg:py-40">
         {eyebrow ? (
-          <p className="font-display text-xs uppercase tracking-[0.4em] text-brass-300">
-            {eyebrow}
-          </p>
+          <>
+            <span
+              aria-hidden
+              className="block h-px w-10 bg-gradient-to-r from-transparent via-brass-300 to-transparent"
+            />
+            <p className="mt-5 font-display text-xs uppercase tracking-[0.4em] text-brass-300">
+              {eyebrow}
+            </p>
+          </>
         ) : null}
         <h1
           className={

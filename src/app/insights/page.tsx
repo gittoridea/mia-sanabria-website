@@ -107,7 +107,10 @@ export default function InsightsPage() {
         </div>
       </article>
 
-      <CTAStrip />
+      <CTAStrip
+        heading="Join the private list."
+        sub="A small, infrequent dispatch on Southeast Florida's luxury market — written by Mia, sent only when there is something specific worth saying."
+      />
     </>
   );
 }

@@ -35,7 +35,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${SITE.url}/markets/${market.slug}/`,
-      images: [{ url: `${SITE.url}${market.heroImage}`, width: 1200, height: 630, alt: market.name }],
+      images: [{ url: `${SITE.url}/og-markets/${market.slug}.jpg`, width: 1200, height: 630, alt: `${market.name} — Mia Sanabria, Luxury Real Estate Concierge` }],
     },
   };
 }
@@ -164,7 +164,10 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
         </div>
       </section>
 
-      <CTAStrip />
+      <CTAStrip
+        heading={`Inquire about ${market.name}.`}
+        sub="A short conversation establishes the brief — and from there the right residences are sourced privately, including those that never reach a public listing."
+      />
     </>
   );
 }

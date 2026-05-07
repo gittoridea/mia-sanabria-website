@@ -95,8 +95,28 @@ export function SiteFooter() {
               FL License #{MIA.unverified.licenseNumber}
             </p>
           ) : null}
-          <p className="mt-3 text-xs text-cream-200/80">
-            All information is deemed reliable but not guaranteed. Equal Housing Opportunity.
+          <p className="mt-3 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-cream-200/80">
+            All information is deemed reliable but not guaranteed.
+            <span className="inline-flex items-center gap-1.5">
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="shrink-0 text-cream-200/80"
+              >
+                <path d="M3 11 L12 4 L21 11" />
+                <path d="M5 10 V20 H19 V10" />
+                <line x1="9" y1="14" x2="15" y2="14" />
+                <line x1="9" y1="17" x2="15" y2="17" />
+              </svg>
+              Equal Housing Opportunity.
+            </span>
           </p>
         </div>
       </div>

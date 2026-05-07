@@ -77,7 +77,7 @@ export default function BuyersPage() {
       <Hero
         eyebrow="For Buyers"
         heading="Bespoke acquisition: curating your perfect Southeast Florida lifestyle."
-        sub="We understand that acquiring a luxury property is about more than real estate — it is about securing a legacy. Absolute discretion, tailored advisory services, and access to the most exclusive off-market opportunities."
+        sub="Mia represents buyers across Fort Lauderdale, Boca Raton, and Palm Beach with a deliberately small client list each quarter — every brief written before the first showing, every closing attended in person."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
       />

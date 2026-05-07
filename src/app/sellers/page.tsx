@@ -77,7 +77,7 @@ export default function SellersPage() {
       <Hero
         eyebrow="For Sellers"
         heading="Elevating your property's global presence."
-        sub="A bespoke approach to marketing Southeast Florida's most distinguished estates. Partnering with Mia Sanabria positions your residence at the pinnacle of the market."
+        sub="Pricing, presentation, and quiet pre-market introduction — sequenced by Mia personally for residences from Las Olas Isles to the Palm Beach Estate Section."
         ctaPrimary={{ href: "/valuation/", label: "Request Valuation" }}
         ctaSecondary={{ href: "/contact/", label: "Begin a Private Conversation" }}
       />
