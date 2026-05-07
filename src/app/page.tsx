@@ -48,7 +48,7 @@ const HOME_VALUE_PROPS = [
     body: "Every engagement starts with a private conversation about timing, criteria, and the residence you have in mind — not a generic IDX search.",
   },
   {
-    heading: "Off-market and pre-market access",
+    heading: "Private brokerage access",
     body: "Quiet introductions sourced through brokerage and ownership relationships across Fort Lauderdale, Boca Raton, and the Palm Beach corridor.",
   },
   {

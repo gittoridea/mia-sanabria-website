@@ -14,20 +14,20 @@ import { MIA } from "@/lib/mia";
 export const metadata: Metadata = {
   title: "Contact Mia Sanabria — Private Consultation",
   description:
-    "Begin a confidential conversation with Mia Sanabria — SE Florida's luxury concierge. Private consultations: Boca Raton, Fort Lauderdale, Palm Beach.",
+    "Begin a confidential conversation with Mia Sanabria — SE Florida REALTOR® with LPT Realty. Private consultations: Boca Raton, Fort Lauderdale, Palm Beach.",
   alternates: { canonical: `${SITE.url}/contact/` },
 };
 
 const CONTACT_FAQ = [
   {
-    question: "How quickly does Mia respond to a private inquiry?",
+    question: "How does Mia handle a private inquiry?",
     answer:
-      "Inquiries received during business hours are responded to within two hours. After-hours messages are returned the following morning. For urgent matters, call (954) 540-0358 directly.",
+      "Inquiries received during business hours are reviewed and replied to during the same business day; after-hours messages are returned the following morning. For urgent matters, call (954) 540-0358 directly.",
   },
   {
     question: "Is the initial consultation confidential?",
     answer:
-      "Yes — every initial conversation is treated as confidential. Off-market discussions, valuation conversations, and acquisition planning are handled discreetly and never appear on any marketing list.",
+      "Yes — every initial conversation is treated as confidential. Private listing discussions, valuation conversations, and acquisition planning are handled discreetly and never appear on any marketing list.",
   },
   {
     question: "What information helps Mia prepare for a first conversation?",
@@ -53,7 +53,7 @@ export default function ContactPage() {
       <Hero
         eyebrow="Connect With Mia"
         heading="Begin a private conversation."
-        sub="Experience the highest level of service and discretion. Reach out to discuss your luxury real estate goals."
+        sub="A confidential consultation with a REALTOR® who serves Fort Lauderdale, Broward, Miami-Dade, and Palm Beach. Reach out to discuss your real estate goals."
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
@@ -90,7 +90,7 @@ export default function ContactPage() {
               <ContactRow
                 Icon={Clock}
                 heading="Response Window"
-                value="Within 2 hours, business hours"
+                value="Same business day"
                 hint="After-hours inquiries returned the following morning"
               />
             </ul>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                 <option>Buying — Other Market</option>
                 <option>Selling — Home Valuation</option>
                 <option>Selling — Listing Conversation</option>
-                <option>Investment / Off-Market</option>
+                <option>Investment / Private Listings</option>
                 <option>General Inquiry</option>
               </select>
             </div>

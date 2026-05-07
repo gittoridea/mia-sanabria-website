@@ -12,15 +12,15 @@ import { MIA } from "@/lib/mia";
 export const metadata: Metadata = {
   title: "About Mia — Southeast Florida Luxury Realtor",
   description:
-    "Mia Sanabria is a Fort Lauderdale–based luxury concierge representing buyers, sellers, and investors across Boca Raton, Fort Lauderdale, and Palm Beach.",
+    "Mia Sanabria is a Fort Lauderdale–based REALTOR® with LPT Realty representing buyers, sellers, and investors across Boca Raton, Fort Lauderdale, and Palm Beach.",
   alternates: { canonical: `${SITE.url}/about/` },
 };
 
 const ABOUT_FAQ = [
   {
-    question: "How long has Mia been representing clients in Southeast Florida?",
+    question: "How does Mia structure her practice?",
     answer:
-      "Mia has practiced real estate in Southeast Florida since 2017, building a luxury concierge practice grounded in long relationships rather than transaction count.",
+      "Mia's practice is grounded in long relationships rather than transaction count — a deliberately small client list so every engagement receives direct attention.",
   },
   {
     question: "Which markets does Mia know most deeply?",
@@ -93,9 +93,9 @@ export default function AboutPage() {
             </p>
             <p>
               She is fluent in Fort Lauderdale's deepwater Las Olas Isles geography, Boca Raton's
-              country-club estate market, Palm Beach's landmark Estate Section, and the off-market
-              networks that quietly move the most desirable residences. The Hispanic community of
-              Southeast Florida has been part of her network since she began.
+              country-club estate market, Palm Beach's landmark Estate Section, and the private
+              brokerage relationships that quietly move desirable residences. The Hispanic community
+              of Southeast Florida has been part of her network since she began.
             </p>
           </div>
         </div>
@@ -114,9 +114,9 @@ export default function AboutPage() {
                 Privacy as a default, not an upgrade.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-navy-800/80">
-                Off-market networks, NDA-style consultations, photography that respects the
-                residence, and a client roster that never appears on a marketing list. Discretion is
-                the standard — not a service tier.
+                Private brokerage relationships, NDA-style consultations, photography that respects
+                the residence, and a client roster that never appears on a marketing list.
+                Discretion is the standard — not a service tier.
               </p>
             </li>
             <li>
@@ -125,9 +125,9 @@ export default function AboutPage() {
                 Title, due diligence, structure, financing.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-navy-800/80">
-                Luxury transactions reward precision. Every closing is scaffolded by experienced
-                title, escrow, financing, and tax-structuring partners — and Mia stays present
-                across every milestone.
+                Higher-priced transactions reward precision. Every closing is scaffolded by
+                experienced title, escrow, financing, and tax-structuring partners — and Mia stays
+                present across every milestone.
               </p>
             </li>
             <li>

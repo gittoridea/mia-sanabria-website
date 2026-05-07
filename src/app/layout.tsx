@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { WebSiteSchema } from "@/components/schema/WebSiteSchema";
-import { SITE } from "@/lib/site";
+import { SITE, IS_STAGING } from "@/lib/site";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -21,13 +21,12 @@ export const metadata: Metadata = {
   applicationName: SITE.name,
   authors: [{ name: SITE.fullName }],
   keywords: [
-    "luxury real estate",
-    "Southeast Florida",
+    "Southeast Florida real estate",
     "Fort Lauderdale realtor",
-    "Boca Raton luxury homes",
+    "Boca Raton homes",
     "Palm Beach realtor",
-    "waterfront estates",
-    "luxury concierge",
+    "waterfront homes",
+    "REALTOR",
     "LPT Realty",
   ],
   openGraph: {
@@ -49,17 +48,24 @@ export const metadata: Metadata = {
     canonical: SITE.url,
     languages: { "en-US": SITE.url, "x-default": SITE.url },
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  robots: IS_STAGING
+    ? {
+        index: false,
+        follow: false,
+        nocache: true,
+        googleBot: { index: false, follow: false, noimageindex: true },
+      }
+    : {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },

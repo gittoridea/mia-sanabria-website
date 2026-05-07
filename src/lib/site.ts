@@ -8,6 +8,13 @@ const PRODUCTION_URL = "https://miasanabriarealtor.com";
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? STAGING_URL;
 
+/**
+ * Staging gate — drives noindex/nofollow on robots metadata until a separate
+ * production-cutover packet authorizes indexable production. Anything other
+ * than the canonical production hostname is treated as staging.
+ */
+export const IS_STAGING = !SITE_URL.startsWith(PRODUCTION_URL);
+
 export const SITE = {
   name: "Mia Sanabria",
   fullName: "Mia Mary Sanabria",

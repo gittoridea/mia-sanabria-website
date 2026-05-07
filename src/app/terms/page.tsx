@@ -7,7 +7,7 @@ import { MIA } from "@/lib/mia";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms governing use of the Mia Sanabria luxury real estate website and the relationship between visitors and the practice.",
+    "Terms governing use of the Mia Sanabria real estate website and the relationship between visitors and the practice.",
   alternates: { canonical: `${SITE.url}/terms/` },
 };
 

@@ -15,7 +15,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <Link
           href="/"
-          aria-label="Mia Sanabria — luxury real estate, return to homepage"
+          aria-label="Mia Sanabria — REALTOR® with LPT Realty, return to homepage"
           className="flex items-center gap-3"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brass-400 bg-navy-800 text-brass-200 font-display text-sm tracking-widest">
@@ -26,7 +26,7 @@ export function SiteHeader() {
               MIA SANABRIA
             </div>
             <div className="text-[10px] uppercase tracking-[0.3em] text-brass-500">
-              Luxury Real Estate
+              REALTOR® · LPT Realty
             </div>
           </div>
         </Link>

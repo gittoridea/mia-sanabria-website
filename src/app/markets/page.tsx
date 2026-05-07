@@ -8,9 +8,9 @@ import { MARKETS } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Featured Markets — Southeast Florida Luxury",
+  title: "Featured Markets — Southeast Florida",
   description:
-    "Southeast Florida's most coveted luxury markets — Boca Raton, Fort Lauderdale, Palm Beach, Delray Beach, Lighthouse Point, Coral Ridge, and Victoria Park.",
+    "Featured Southeast Florida markets — Boca Raton, Fort Lauderdale, Palm Beach, Delray Beach, Lighthouse Point, Coral Ridge, and Victoria Park.",
   alternates: { canonical: `${SITE.url}/markets/` },
 };
 

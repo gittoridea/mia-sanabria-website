@@ -12,34 +12,34 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Selling — Elevated Marketing & Strategy",
   description:
-    "Bespoke marketing for Southeast Florida's distinguished estates — editorial photography, off-market networks, and strategic pricing for market velocity.",
+    "Tailored marketing for Southeast Florida residences — editorial photography, private brokerage relationships, and strategic pricing for market velocity.",
   alternates: { canonical: `${SITE.url}/sellers/` },
 };
 
 const SELLER_PROCESS = [
   {
     heading: "Strategic valuation & pricing",
-    body: "Pricing a luxury asset requires sophisticated understanding of micro-market dynamics, comparable transactions, and global economic context. Strategy is set before the residence touches the market.",
+    body: "Pricing a higher-priced residence requires careful understanding of micro-market dynamics, comparable transactions, and broader economic context. Strategy is set before the residence touches the market.",
   },
   {
     heading: "Property curation",
-    body: "Architectural staging, landscape refinement, and a meticulous, white-glove presentation that frames the residence as the cultural object it is.",
+    body: "Architectural staging, landscape refinement, and a meticulous, considered presentation that frames the residence as the cultural object it is.",
   },
   {
     heading: "Editorial marketing",
-    body: "Cinematic photography, video, copywriting, and global distribution through luxury portals — alongside discreet off-market networking with high-net-worth buyers.",
+    body: "Cinematic photography, video, copywriting, and global distribution through real estate portals — alongside discreet private brokerage outreach to qualified buyers.",
   },
   {
     heading: "Closing coordination",
-    body: "Navigating the financial mechanics of a luxury transaction — title, escrow, financing, and tax considerations — with precision and the right partners at every step.",
+    body: "Navigating the financial mechanics of a higher-priced transaction — title, escrow, financing, and tax considerations — with precision and the right partners at every step.",
   },
 ];
 
 const SELLER_FAQ = [
   {
-    question: "Should I list publicly or pursue an off-market sale?",
+    question: "Should I list publicly or pursue a private sale?",
     answer:
-      "Both have a place. Public listing maximizes exposure and tends to produce the strongest pricing in active markets; off-market sales preserve privacy and often appeal to owners who value discretion above marginal price. Strategy is set together based on the residence and the market.",
+      "Both have a place. Public listing maximizes exposure and tends to produce the strongest pricing in active markets; a privately marketed sale preserves privacy and often appeals to owners who value discretion above marginal price. Strategy is set together based on the residence and the market.",
   },
   {
     question: "What is the typical commission structure?",
@@ -47,14 +47,14 @@ const SELLER_FAQ = [
       "Commission is set in writing at engagement and reflects the property, the marketing scope, and the cooperating brokerage commission. Mia's listings receive editorial-tier photography, video, and global distribution as part of the engagement.",
   },
   {
-    question: "How long does a luxury sale take?",
+    question: "How long does a higher-priced sale take?",
     answer:
       "Highly market-dependent. Well-positioned waterfront and country-club estates frequently move within 60-120 days; landmark Estate Section properties can take longer by design. Your timeline shapes the strategy.",
   },
   {
     question: "What does the marketing scope include?",
     answer:
-      "Editorial photography and twilight imagery, cinematic video, drone, copywriting, dedicated property page, MLS distribution, global portal distribution, and discreet off-market introduction to the high-net-worth buyer network.",
+      "Editorial photography and twilight imagery, cinematic video, drone, copywriting, dedicated property page, MLS distribution, global portal distribution, and discreet private introduction to qualified buyers via brokerage relationships.",
   },
 ];
 
@@ -63,8 +63,8 @@ export default function SellersPage() {
     <>
       <RealEstateAgentSchema />
       <ServiceSchema
-        name="Luxury Listing & Seller Representation"
-        description="Editorial-tier marketing, strategic pricing, off-market networking, and full closing coordination for Southeast Florida luxury sellers."
+        name="Listing & Seller Representation"
+        description="Editorial-tier marketing, strategic pricing, private brokerage outreach, and full closing coordination for Southeast Florida sellers."
         serviceType="Real Estate Seller Representation"
       />
       <BreadcrumbSchema
@@ -86,7 +86,7 @@ export default function SellersPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
             eyebrow="Listing Concierge"
-            heading="Four phases of bespoke representation."
+            heading="Four phases of considered representation."
           />
           <ol className="mt-12 grid gap-10 lg:grid-cols-2">
             {SELLER_PROCESS.map((step, i) => (
@@ -112,8 +112,8 @@ export default function SellersPage() {
             body: "Cinematic photography, twilight imagery, video, drone, and copywriting that present the residence as the architectural object it is.",
           },
           {
-            heading: "Off-market networking",
-            body: "Discrete pre-market introduction to high-net-worth buyers and a tightly held brokerage network across Southeast Florida.",
+            heading: "Private brokerage networking",
+            body: "Discreet pre-market introduction to qualified buyers through a tightly held brokerage network across Southeast Florida.",
           },
           {
             heading: "Strategic pricing",
@@ -121,7 +121,7 @@ export default function SellersPage() {
           },
           {
             heading: "Closing precision",
-            body: "Title, escrow, financing, and tax-structuring partners aligned with the discretion and complexity luxury transactions demand.",
+            body: "Title, escrow, financing, and tax-structuring partners aligned with the discretion and complexity higher-priced transactions demand.",
           },
         ]}
       />
@@ -130,7 +130,7 @@ export default function SellersPage() {
 
       <CTAStrip
         heading="Begin with a complimentary valuation."
-        sub="Pricing a luxury residence well begins with the right valuation — sophisticated, private, and grounded in current micro-market dynamics."
+        sub="Pricing a residence well begins with the right valuation — careful, private, and grounded in current micro-market dynamics."
       />
     </>
   );

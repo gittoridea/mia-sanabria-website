@@ -12,7 +12,6 @@ export function LocalBusinessSchema() {
     image: `${SITE.url}/mia-headshot.jpg`,
     url: SITE.url,
     telephone: MIA.contact.phoneTel,
-    priceRange: "$$$$",
     address: {
       "@type": "PostalAddress",
       addressLocality: MIA.contact.serviceCore.city,

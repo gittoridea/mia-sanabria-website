@@ -55,6 +55,20 @@ const FORBIDDEN: ReadonlyArray<Pattern> = [
   { term: "family-friendly", ci: true, reason: "Fair Housing steering risk", safeReplacement: "describe physical features (parks, playgrounds) without familial-status framing" },
   { term: "bachelor pad", ci: true, reason: "Fair Housing steering risk on familial status", safeReplacement: "describe property type" },
   { term: "kid-friendly", ci: true, reason: "Fair Housing steering risk on familial status", safeReplacement: "describe property feature" },
+  // Mia VPS gap-closure packet 2026-05-07 — luxury-as-practice claim risk + GATED_MIA gates.
+  // These terms either claim a service tier Mia has not verified ("luxury concierge",
+  // "white-glove", "bespoke") or reference gated/unverified practice attributes
+  // ("off-market" access, "high-net-worth" network, "since 2017", a public SLA).
+  { term: "luxury concierge", ci: true, reason: "luxury-as-practice claim risk (gap closure)", safeReplacement: "use 'real estate concierge' or 'REALTOR® with LPT Realty'" },
+  { term: "white-glove", ci: true, reason: "luxury-as-practice claim risk (gap closure)", safeReplacement: "use 'considered' or 'thoughtful'" },
+  { term: "high-net-worth", ci: true, reason: "GATED_MIA: HNW-network claim is unverified", safeReplacement: "use 'qualified' or remove network claim" },
+  { term: "HNW", reason: "GATED_MIA: HNW-network claim is unverified", safeReplacement: "use 'qualified' or remove network claim" },
+  { term: "bespoke", ci: true, reason: "luxury-as-practice claim risk (gap closure)", safeReplacement: "use 'tailored' or 'private'" },
+  { term: "off-market", ci: true, reason: "GATED_MIA: off-market access is unverified", safeReplacement: "use 'private listings' or 'pre-market via brokerage relationships'" },
+  { term: "most exclusive", ci: true, reason: "FREC superlative + luxury-as-practice claim risk", safeReplacement: "remove the superlative or cite source" },
+  { term: "priceRange", reason: "schema priceRange tier claim has no verified source", safeReplacement: "remove priceRange from JSON-LD" },
+  { term: "since 2017", ci: true, reason: "GATED_MIA: practice-history claim unverified in fact ledger", safeReplacement: "remove year claim until Mia confirms" },
+  { term: "within two hours", ci: true, reason: "GATED_MIA: response-SLA claim unverified", safeReplacement: "use 'same business day' without specific SLA" },
 ];
 
 async function* walk(dir: string): AsyncGenerator<string> {

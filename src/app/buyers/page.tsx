@@ -10,9 +10,9 @@ import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Buying — Bespoke Acquisition",
+  title: "Buying — Private Buyer Representation",
   description:
-    "Bespoke acquisition for Southeast Florida's luxury market — discreet, off-market opportunities in Boca Raton, Fort Lauderdale, and Palm Beach.",
+    "Private buyer representation across Southeast Florida — discreet acquisition guidance in Boca Raton, Fort Lauderdale, and Palm Beach.",
   alternates: { canonical: `${SITE.url}/buyers/` },
 };
 
@@ -22,8 +22,8 @@ const BUYER_PROCESS = [
     body: "A confidential conversation about preferred markets, architectural style, lifestyle requirements, and timeline. The brief is shaped before any showing is scheduled.",
   },
   {
-    heading: "Off-market sourcing",
-    body: "Mia activates her brokerage and high-net-worth ownership networks to surface pre-market and off-market residences before they ever reach a public listing.",
+    heading: "Private brokerage sourcing",
+    body: "Mia activates her brokerage and ownership relationships to surface pre-market and privately offered residences before they ever reach a public listing.",
   },
   {
     heading: "Curated showings",
@@ -47,12 +47,12 @@ const BUYER_FAQ = [
       "In most Southeast Florida transactions, buyer representation is compensated through the cooperating brokerage commission paid by the seller's side at closing. Specifics are reviewed in writing before any engagement.",
   },
   {
-    question: "Will I see off-market residences before they list?",
+    question: "Will I see privately offered residences before they list?",
     answer:
-      "Yes — when Mia knows your brief in detail, off-market and pre-market opportunities are surfaced through her brokerage network. The relationship is the access.",
+      "When Mia knows your brief in detail, pre-market and privately offered opportunities are surfaced through her brokerage relationships. The relationship is the access.",
   },
   {
-    question: "How long does a luxury acquisition typically take?",
+    question: "How long does an acquisition typically take?",
     answer:
       "From engagement to closing, six to twelve weeks is typical when the brief is clear and the right residence surfaces. Some clients work over twelve to eighteen months for a specific residence to come to market.",
   },
@@ -63,8 +63,8 @@ export default function BuyersPage() {
     <>
       <RealEstateAgentSchema />
       <ServiceSchema
-        name="Bespoke Luxury Buyer Representation"
-        description="White-glove acquisition advisory for Southeast Florida luxury real estate. Off-market access, curated showings, full closing coordination."
+        name="Private Buyer Representation"
+        description="Tailored acquisition advisory for Southeast Florida real estate. Private brokerage sourcing, curated showings, and full closing coordination."
         serviceType="Real Estate Buyer Representation"
       />
       <BreadcrumbSchema
@@ -76,7 +76,7 @@ export default function BuyersPage() {
 
       <Hero
         eyebrow="For Buyers"
-        heading="Bespoke acquisition: curating your perfect Southeast Florida lifestyle."
+        heading="Private buyer representation across Southeast Florida."
         sub="Mia represents buyers across Fort Lauderdale, Boca Raton, and Palm Beach with a deliberately small client list each quarter — every brief written before the first showing, every closing attended in person."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
@@ -108,8 +108,8 @@ export default function BuyersPage() {
         background="navy"
         items={[
           {
-            heading: "Off-market access",
-            body: "Pre-market and never-listed residences surfaced through the brokerage and ownership network.",
+            heading: "Private brokerage access",
+            body: "Pre-market and privately offered residences surfaced through the brokerage and ownership relationships Mia has built over time.",
           },
           {
             heading: "Architectural literacy",
@@ -130,7 +130,7 @@ export default function BuyersPage() {
 
       <CTAStrip
         heading="Tell Mia what you're looking for."
-        sub="A short private conversation is the first step. From there, the right residences are sourced — many before they ever appear on the market."
+        sub="A short private conversation is the first step. From there, the right residences are sourced — including many before they ever appear on a public listing site."
       />
     </>
   );

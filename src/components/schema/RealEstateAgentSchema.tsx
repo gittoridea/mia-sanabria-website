@@ -14,7 +14,6 @@ export function RealEstateAgentSchema() {
     image: `${SITE.url}/mia-headshot.jpg`,
     telephone: MIA.contact.phoneTel,
     email: MIA.contact.email,
-    priceRange: "$$$$",
     address: {
       "@type": "PostalAddress",
       addressLocality: MIA.contact.serviceCore.city,
@@ -28,10 +27,10 @@ export function RealEstateAgentSchema() {
     })),
     parentOrganization: { "@id": `${SITE.url}/#organization` },
     knowsAbout: [
-      "Luxury real estate",
+      "Residential real estate",
       "Waterfront properties",
-      "Off-market acquisitions",
-      "Concierge representation",
+      "Buyer representation",
+      "Seller representation",
       "Fort Lauderdale real estate",
       "Boca Raton real estate",
       "Palm Beach real estate",

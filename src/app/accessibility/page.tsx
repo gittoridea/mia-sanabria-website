@@ -7,7 +7,7 @@ import { MIA } from "@/lib/mia";
 export const metadata: Metadata = {
   title: "Accessibility Statement",
   description:
-    "Mia Sanabria's commitment to a digitally accessible luxury real estate experience for every visitor — and how to report any barrier you encounter.",
+    "Mia Sanabria's commitment to a digitally accessible real estate website for every visitor — and how to report any barrier you encounter.",
   alternates: { canonical: `${SITE.url}/accessibility/` },
 };
 

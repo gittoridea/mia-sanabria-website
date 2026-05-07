@@ -76,9 +76,9 @@ export default function InsightsPage() {
             Before showings, before pricing exercises, before any IDX search: a private conversation that captures what the residence actually needs to do. Lifestyle, timing, architectural preference, water access, school proximity, building rules, association profile, renovation tolerance. The brief is the access — every introduction Mia makes downstream traces back to it.
           </p>
 
-          <h3 className="mt-10 font-display text-2xl text-navy-800">Off-market and pre-market are relationships, not databases.</h3>
+          <h3 className="mt-10 font-display text-2xl text-navy-800">Pre-market access is relationships, not databases.</h3>
           <p className="mt-3 text-[15px] leading-relaxed text-navy-800/85">
-            Quiet inventory in Coral Ridge, Boca Raton, Lighthouse Point, the Palm Beach barrier island, and the Delray Beach grid moves through brokerage and ownership relationships built over time. There is no public feed for it. A clearly written brief is what unlocks the right introduction at the right moment.
+            Quietly available residences in Coral Ridge, Boca Raton, Lighthouse Point, the Palm Beach barrier island, and the Delray Beach grid move through brokerage and ownership relationships built over time. There is no public feed for it. A clearly written brief is what unlocks the right introduction at the right moment.
           </p>
 
           <h3 className="mt-10 font-display text-2xl text-navy-800">Pricing is current, specific, and earned.</h3>

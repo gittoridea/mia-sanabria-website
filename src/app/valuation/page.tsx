@@ -7,9 +7,9 @@ import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Home Valuation — Luxury Real Estate",
+  title: "Home Valuation — Southeast Florida",
   description:
-    "Receive a complimentary, bespoke valuation of your Southeast Florida luxury property. Sophisticated, confidential, and grounded in micro-market dynamics.",
+    "Receive a complimentary, tailored valuation of your Southeast Florida property. Careful, confidential, and grounded in micro-market dynamics.",
   alternates: { canonical: `${SITE.url}/valuation/` },
 };
 
@@ -22,7 +22,7 @@ const VALUATION_FAQ = [
   {
     question: "How is the valuation conducted?",
     answer:
-      "An on-site walk-through (or virtual equivalent) combined with a deep micro-market comparable analysis, recent off-market transaction context, and a strategic positioning conversation.",
+      "An on-site walk-through (or virtual equivalent) combined with a deep micro-market comparable analysis, recent transaction context where available, and a strategic positioning conversation.",
   },
   {
     question: "Will my information be shared?",
@@ -40,8 +40,8 @@ export default function ValuationPage() {
   return (
     <>
       <ServiceSchema
-        name="Complimentary Luxury Property Valuation"
-        description="Confidential, bespoke valuation of Southeast Florida luxury residences with strategic pricing analysis."
+        name="Complimentary Property Valuation"
+        description="Confidential, tailored valuation of Southeast Florida residences with strategic pricing analysis."
         serviceType="Real Estate Valuation"
       />
       <BreadcrumbSchema
@@ -54,7 +54,7 @@ export default function ValuationPage() {
       <Hero
         eyebrow="Home Valuation"
         heading="Discover your home's value."
-        sub="Receive a complimentary, bespoke valuation of your luxury property based on current market dynamics and exclusive insights."
+        sub="Receive a complimentary, tailored valuation of your Southeast Florida property based on current market dynamics and recent comparable activity."
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
@@ -142,8 +142,8 @@ export default function ValuationPage() {
             body: "A pulled set of recent comparable transactions in your specific market — not a regional approximation.",
           },
           {
-            heading: "Off-market context",
-            body: "Recent quietly-traded residences that public data feeds miss, sourced through Mia's brokerage network.",
+            heading: "Private brokerage context",
+            body: "Recent quietly-traded residences that public data feeds miss, sourced through Mia's brokerage relationships where available.",
           },
           {
             heading: "Strategic positioning",
