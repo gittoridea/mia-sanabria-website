@@ -1,0 +1,13 @@
+.git
+.github
+node_modules
+.next
+out
+.env*
+*.log
+README.md
+ISA.md
+screenshots
+audit-reports
+.DS_Store
+docker-compose.yml

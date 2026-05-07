@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#142E4D"/>
+      <stop offset="1" stop-color="#2E5683"/>
+    </linearGradient>
+    <radialGradient id="r" cx="50%" cy="35%" r="55%">
+      <stop offset="0" stop-color="#B89B5E" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#B89B5E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#g)"/>
+  <rect width="1200" height="1500" fill="url(#r)"/>
+  <text x="600" y="780" text-anchor="middle" font-family="Cinzel, 'Times New Roman', serif"
+    font-size="56" font-weight="600" letter-spacing="6" fill="#F5EFE6">PALM BEACH</text>
+  <text x="600" y="840" text-anchor="middle" font-family="Cinzel, serif"
+    font-size="18" letter-spacing="4" fill="#B89B5E">SOUTHEAST FLORIDA</text>
+</svg>

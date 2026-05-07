@@ -1,0 +1,32 @@
+# Docker Compose for Dokploy.
+# Dokploy injects the network + Traefik labels via its UI; this file is the
+# fallback / reference manifest for local testing and clean reproduction.
+services:
+  mia-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://miasanabriarealtor.trueidea.com}
+    container_name: mia-website
+    restart: unless-stopped
+    expose:
+      - "80"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.mia-website.rule=Host(`miasanabriarealtor.trueidea.com`)
+      - traefik.http.routers.mia-website.entrypoints=websecure
+      - traefik.http.routers.mia-website.tls=true
+      - traefik.http.routers.mia-website.tls.certresolver=letsencrypt
+      - traefik.http.services.mia-website.loadbalancer.server.port=80
+      - traefik.http.routers.mia-website-http.rule=Host(`miasanabriarealtor.trueidea.com`)
+      - traefik.http.routers.mia-website-http.entrypoints=web
+      - traefik.http.routers.mia-website-http.middlewares=mia-website-redirect@docker
+      - traefik.http.middlewares.mia-website-redirect.redirectscheme.scheme=https
+      - traefik.http.middlewares.mia-website-redirect.redirectscheme.permanent=true
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true

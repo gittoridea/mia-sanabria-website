@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="#0F2A44"/>
+  <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle"
+    font-family="Cinzel, 'Times New Roman', serif" font-weight="600" font-size="22"
+    letter-spacing="2" fill="#B89B5E">MS</text>
+</svg>

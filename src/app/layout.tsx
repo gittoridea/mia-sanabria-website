@@ -1,0 +1,98 @@
+import type { Metadata, Viewport } from "next";
+import { Cinzel, Montserrat } from "next/font/google";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
+import { WebSiteSchema } from "@/components/schema/WebSiteSchema";
+import { SITE } from "@/lib/site";
+import "./globals.css";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-cinzel",
+  weight: ["400", "500", "600", "700"],
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
+
+export const viewport: Viewport = {
+  themeColor: SITE.themeColor,
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  colorScheme: "light",
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
+  title: { default: SITE.title, template: `%s | ${SITE.name}` },
+  description: SITE.description,
+  applicationName: SITE.name,
+  authors: [{ name: SITE.fullName }],
+  keywords: [
+    "luxury real estate",
+    "Southeast Florida",
+    "Fort Lauderdale realtor",
+    "Boca Raton luxury homes",
+    "Palm Beach realtor",
+    "waterfront estates",
+    "luxury concierge",
+    "LPT Realty",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE.url,
+    title: SITE.title,
+    description: SITE.description,
+    siteName: SITE.name,
+    images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.title,
+    description: SITE.description,
+    images: [SITE.ogImage],
+  },
+  alternates: { canonical: SITE.url },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
+  manifest: "/manifest.webmanifest",
+  formatDetection: { telephone: true, address: true, email: true },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en-US" className={`${cinzel.variable} ${montserrat.variable}`}>
+      <head>
+        <OrganizationSchema />
+        <WebSiteSchema />
+      </head>
+      <body>
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
+        <SiteHeader />
+        <main id="main">{children}</main>
+        <SiteFooter />
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#142E4D"/>
+      <stop offset="1" stop-color="#0A1D30"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <g font-family="Cinzel, 'Times New Roman', serif" fill="#B89B5E">
+    <circle cx="400" cy="430" r="180" fill="none" stroke="#B89B5E" stroke-width="2" opacity="0.3"/>
+    <text x="400" y="445" text-anchor="middle" font-size="72" letter-spacing="6" font-weight="600">MS</text>
+    <text x="400" y="780" text-anchor="middle" font-size="28" letter-spacing="6" fill="#F5EFE6">MIA SANABRIA</text>
+    <text x="400" y="820" text-anchor="middle" font-size="14" letter-spacing="4" fill="#B89B5E">REALTOR · LPT REALTY</text>
+    <text x="400" y="870" text-anchor="middle" font-size="12" letter-spacing="3" fill="#E8DAB7" opacity="0.6">[Headshot placeholder — pending Mia photography]</text>
+  </g>
+</svg>
