@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail } from "lucide-react";
 import { FOOTER_NAV, SITE } from "@/lib/site";
@@ -92,32 +93,39 @@ export function SiteFooter() {
           </address>
           {MIA.unverified.licenseNumber ? (
             <p className="mt-3 text-xs text-cream-200/80">
-              FL License #{MIA.unverified.licenseNumber}
+              FL Sales Associate License #{MIA.unverified.licenseNumber}
             </p>
           ) : null}
-          <p className="mt-3 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-cream-200/80">
-            All information is deemed reliable but not guaranteed.
-            <span className="inline-flex items-center gap-1.5">
-              <svg
-                aria-hidden
-                viewBox="0 0 24 24"
-                width="14"
-                height="14"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="shrink-0 text-cream-200/80"
-              >
-                <path d="M3 11 L12 4 L21 11" />
-                <path d="M5 10 V20 H19 V10" />
-                <line x1="9" y1="14" x2="15" y2="14" />
-                <line x1="9" y1="17" x2="15" y2="17" />
-              </svg>
-              Equal Housing Opportunity.
-            </span>
+          <p className="mt-3 text-xs text-cream-200/80">
+            All information is deemed reliable but not guaranteed. IDX listings provided
+            for consumers&rsquo; personal, non-commercial use; not for redistribution.
           </p>
+          <div className="mt-5 flex flex-wrap items-center gap-4" aria-label="Industry affiliations">
+            <Image
+              src="/logos/lpt-realty.png"
+              alt="LPT Realty"
+              width={48}
+              height={48}
+              className="h-10 w-10 rounded-sm bg-white/95 p-1"
+            />
+            <Image
+              src="/logos/realtor-r.png"
+              alt="MLS REALTOR®"
+              width={64}
+              height={30}
+              className="h-7 w-auto"
+            />
+            <Image
+              src="/logos/equal-housing.png"
+              alt="Equal Housing Opportunity"
+              width={32}
+              height={36}
+              className="h-9 w-auto"
+            />
+            <span className="text-[10px] uppercase tracking-[0.2em] text-cream-200/70">
+              Equal Housing Opportunity
+            </span>
+          </div>
         </div>
       </div>
 

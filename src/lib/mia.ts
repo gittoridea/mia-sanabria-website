@@ -37,7 +37,11 @@ export const MIA = {
   },
   tracking: { ga4Id: "G-PYYSF87G8K", userwayId: "vVNkJJLvR4" },
   unverified: {
-    // TODO: verify on https://www.myfloridalicense.com/wl11.asp before production cutover
+    // SL3405877 cited across multiple public-web sources (LPT Realty agent listing pages, MLS profile pages,
+    // Klein Morgan agent legacy page) as Mia's Florida Sales Associate license number. NAR / Florida Realtors /
+    // Broward, Palm Beaches & St. Lucie REALTORS® membership cited in the same sources — satisfies the NAR
+    // Membership Marks Manual prerequisite for REALTOR® R logo display. DBPR primary-source confirmation by
+    // Mia is the final pre-.com-cutover gate; placeholder remains `unverified.*` until then.
     licenseNumber: "SL3405877" as string | null,
     designations: [] as string[],
     languages: ["English"] as const,

@@ -15,6 +15,11 @@ export type Market = {
   readonly localContext: string;
   /** County the market sits in — used in schema and copy. */
   readonly county: "Broward County" | "Palm Beach County";
+  /**
+   * §1-verified hero quote sourced from miasanabria.com (PUBLIC_FACT_LEDGER §1).
+   * Optional — Coral Ridge has no source quote on the live .com.
+   */
+  readonly miaQuote?: string;
 };
 
 export const MARKETS: ReadonlyArray<Market> = [
@@ -41,6 +46,8 @@ export const MARKETS: ReadonlyArray<Market> = [
     localContext:
       "Fort Lauderdale stretches from the Atlantic across the Intracoastal to the New River and downtown — buyer briefs typically segment by water access (deep-water dockage vs. fixed-bridge), proximity to Las Olas, and beach corridor.",
     county: "Broward County",
+    miaQuote:
+      "Known globally as the 'Venice of America,' Fort Lauderdale is the undisputed yachting capital of the world.",
   },
   {
     slug: "coral-ridge",
@@ -113,6 +120,8 @@ export const MARKETS: ReadonlyArray<Market> = [
     localContext:
       "Boca Raton spans from the Atlantic west into central Palm Beach County, with distinct micro-markets along A1A, the East Boca grid, the Royal Palm and Boca Bay Colony estate sections, and the gated club communities west of I-95. Each set has its own buyer profile, fee structure, and resale dynamics.",
     county: "Palm Beach County",
+    miaQuote:
+      "Boca Raton represents the absolute zenith of South Florida luxury living — renowned globally for its pristine beaches, Mediterranean Revival architecture, and an unparalleled standard of living.",
   },
   {
     slug: "palm-beach",
@@ -137,6 +146,8 @@ export const MARKETS: ReadonlyArray<Market> = [
     localContext:
       "The Town of Palm Beach is a barrier island with strict building review, established estate sections in the North End and South End, and the Worth Avenue / Mid-Town corridor in between. Off-island, the Palm Beach area extends through West Palm Beach and the Intracoastal communities — buyer briefs need to specify which side of the bridges.",
     county: "Palm Beach County",
+    miaQuote:
+      "Palm Beach stands as the absolute pinnacle of generational wealth and exclusivity.",
   },
   {
     slug: "delray-beach",
@@ -161,6 +172,8 @@ export const MARKETS: ReadonlyArray<Market> = [
     localContext:
       "Delray Beach centers on Atlantic Avenue, with beach blocks east of A1A, the historic Marina District and Pineapple Grove just inland, and established residential pockets like Lake Ida and Tropic Isle pushing west and south. The walkable downtown is the demand driver — distance to it shapes pricing as much as the property itself.",
     county: "Palm Beach County",
+    miaQuote:
+      "Delray Beach perfectly captures the essence of vibrant coastal luxury. Known as the 'Village by the Sea,' this dynamic enclave seamlessly blends the energetic, culturally rich atmosphere of a world-class downtown with the secluded, ultra-luxurious lifestyle of South Florida's most coveted coastlines.",
   },
   {
     slug: "lighthouse-point",
@@ -185,6 +198,8 @@ export const MARKETS: ReadonlyArray<Market> = [
     localContext:
       "Lighthouse Point is a small Broward city north of Pompano Beach with a network of finger isles and ocean-access canals. Property evaluation hinges on the canal — bridge clearances, water depth, seawall condition, and dockage capacity vary block by block and have a larger pricing impact than square footage.",
     county: "Broward County",
+    miaQuote:
+      "Lighthouse Point is the ultimate sanctuary for the avid boater and yachtsman — an exclusive nautical enclave globally recognized for its pristine deep-water canals, offering seamless, no-fixed-bridge access to the Atlantic Ocean via the Hillsboro Inlet.",
   },
 ];
 

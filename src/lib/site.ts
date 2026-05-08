@@ -18,7 +18,7 @@ export const IS_STAGING = !SITE_URL.startsWith(PRODUCTION_URL);
 export const SITE = {
   name: "Mia Sanabria",
   fullName: "Mia Mary Sanabria",
-  title: "Fort Lauderdale REALTOR® | Waterfront & Luxury Homes — Mia Sanabria",
+  title: "Fort Lauderdale REALTOR® | Waterfront & Luxury Homes",
   shortTitle: "Mia Sanabria | REALTOR®",
   description:
     "Fort Lauderdale REALTOR® Mia Sanabria helps families find waterfront, luxury, and family homes where memories are made. Trusted local real estate guidance.",
@@ -59,5 +59,6 @@ export const FOOTER_NAV = {
     { href: "/privacy/", label: "Privacy Policy" },
     { href: "/terms/", label: "Terms of Service" },
     { href: "/accessibility/", label: "Accessibility" },
+    { href: "/dmca/", label: "DMCA" },
   ],
 } as const;
