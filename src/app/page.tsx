@@ -48,8 +48,8 @@ const HOME_VALUE_PROPS = [
     body: "Every engagement starts with a private conversation about timing, criteria, and the residence you have in mind — not a generic IDX search.",
   },
   {
-    heading: "Private brokerage access",
-    body: "Quiet introductions sourced through brokerage and ownership relationships across Fort Lauderdale, Boca Raton, and the Palm Beach corridor.",
+    heading: "Brokerage relationships",
+    body: "Quiet introductions when Mia's brokerage and ownership relationships across Fort Lauderdale, Boca Raton, and the Palm Beach corridor surface a fit. Access varies by market and timing.",
   },
   {
     heading: "Current-market clarity",
@@ -72,8 +72,8 @@ export default function HomePage() {
         eyebrow="Mia Sanabria · REALTOR® with LPT Realty"
         heading="Luxury real estate guidance for Fort Lauderdale and South Florida."
         sub="Mia Sanabria is a South Florida Real Estate Concierge serving buyers and sellers across Fort Lauderdale, Broward, Miami-Dade, and Palm Beach."
-        ctaPrimary={{ href: "/valuation/", label: "Request Home Valuation" }}
-        ctaSecondary={{ href: "/contact/", label: "Talk With Mia" }}
+        ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
+        ctaSecondary={{ href: "/valuation/", label: "Request Home Valuation" }}
       />
 
       <IntentRouter />

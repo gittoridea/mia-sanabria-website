@@ -5,6 +5,7 @@ import { Faq } from "@/components/Faq";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { SITE } from "@/lib/site";
+import { MIA } from "@/lib/mia";
 
 export const metadata: Metadata = {
   title: "Home Valuation — Southeast Florida",
@@ -61,7 +62,8 @@ export default function ValuationPage() {
         <div className="mx-auto max-w-3xl px-4 lg:px-8">
           <form
             method="post"
-            action="/api/submit-valuation"
+            action={`mailto:${MIA.contact.email}?subject=${encodeURIComponent("Valuation Request — Mia Sanabria")}`}
+            encType="text/plain"
             aria-describedby="valuation-form-helper"
             className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10"
             noValidate
@@ -69,6 +71,17 @@ export default function ValuationPage() {
             <h2 className="font-display text-2xl text-navy-800">Request Valuation</h2>
             <p className="mt-2 text-sm text-navy-800/70">
               All conversations are confidential. Most valuations are returned within five business days.
+            </p>
+            <p className="mt-3 rounded-sm border border-brass-400/30 bg-brass-400/5 px-3 py-2 text-xs text-navy-800/80">
+              This form opens your default email app to send your valuation details directly to
+              Mia. Direct lead capture is being finalized. For an immediate response, call{" "}
+              <a href={`tel:${MIA.contact.phoneTel}`} className="underline decoration-brass-400 underline-offset-2">
+                {MIA.contact.phone}
+              </a>{" "}
+              or email{" "}
+              <a href={`mailto:${MIA.contact.email}`} className="underline decoration-brass-400 underline-offset-2">
+                {MIA.contact.email}
+              </a>.
             </p>
 
             <fieldset className="mt-8">
@@ -142,8 +155,8 @@ export default function ValuationPage() {
             body: "A pulled set of recent comparable transactions in your specific market — not a regional approximation.",
           },
           {
-            heading: "Private brokerage context",
-            body: "Recent quietly-traded residences that public data feeds miss, sourced through Mia's brokerage relationships where available.",
+            heading: "Brokerage relationship context",
+            body: "Where available, Mia's brokerage relationships add color from recent quietly-traded residences that public data feeds miss.",
           },
           {
             heading: "Strategic positioning",

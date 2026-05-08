@@ -26,7 +26,7 @@ export async function generateMetadata({
   const market = getMarket(slug);
   if (!market) return {};
   const title = `${market.name} Luxury Real Estate`;
-  const description = `${market.name} luxury real estate with Mia Sanabria. ${market.tagline}`;
+  const description = `${market.name} luxury real estate with Mia Sanabria — REALTOR® with LPT Realty. ${market.tagline}`;
   return {
     title,
     description,
@@ -64,8 +64,8 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
       answer: `${market.name} is in ${market.county}. County matters for property tax assessment, recording fees, permit and inspection processes, and the public records you will rely on during diligence — Mia coordinates the right county-specific resources for each transaction.`,
     },
     {
-      question: `Does Mia have private brokerage access in ${market.name}?`,
-      answer: `Yes. Pre-market and privately offered residences in ${market.name} are sourced through brokerage and ownership relationships built over time in ${market.county}. Every conversation begins privately, and a clearly written brief is what unlocks the right introductions.`,
+      question: `Does Mia have brokerage relationships in ${market.name}?`,
+      answer: `Yes. When relevant, residences in ${market.name} can be surfaced through brokerage and ownership relationships built over time in ${market.county} — including any informally available opportunities those relationships uncover. Availability varies; a clearly written brief is what enables the right introduction at the right moment.`,
     },
   ];
 
@@ -131,7 +131,7 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
               Considering {market.name}?
             </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
-              Mia represents buyers and sellers in {market.name} with concierge access to pre-market and privately offered opportunities through her brokerage relationships. Begin with a private conversation about timeline, architectural preference, and the specifics of the residence you have in mind.
+              Mia represents buyers and sellers in {market.name} with concierge attention end-to-end — current comparable sales, brokerage-relationship context, and any relevant informally available residences her network surfaces. Begin with a private conversation about timeline, architectural preference, and the specifics of the residence you have in mind.
             </p>
             <a
               href="/contact/"

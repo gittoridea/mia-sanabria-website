@@ -49,7 +49,7 @@ const SELLER_FAQ = [
   {
     question: "How long does a higher-priced sale take?",
     answer:
-      "Highly market-dependent. Well-positioned waterfront and country-club estates frequently move within 60-120 days; landmark Estate Section properties can take longer by design. Your timeline shapes the strategy.",
+      "Highly market-dependent. Well-positioned waterfront and country-club residences often move within 60-120 days; properties in tightly defined estate sections can take longer by design. Your timeline shapes the strategy.",
   },
   {
     question: "What does the marketing scope include?",
@@ -77,9 +77,9 @@ export default function SellersPage() {
       <Hero
         eyebrow="For Sellers"
         heading="Elevating your property's global presence."
-        sub="Pricing, presentation, and quiet pre-market introduction — sequenced by Mia personally for residences from Las Olas Isles to the Palm Beach Estate Section."
-        ctaPrimary={{ href: "/valuation/", label: "Request Valuation" }}
-        ctaSecondary={{ href: "/contact/", label: "Begin a Private Conversation" }}
+        sub="Pricing, presentation, and considered introductions — sequenced by Mia personally for residences across Mia's core Fort Lauderdale, Boca Raton, and Palm Beach corridor markets."
+        ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
+        ctaSecondary={{ href: "/valuation/", label: "Request Valuation" }}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
@@ -112,8 +112,8 @@ export default function SellersPage() {
             body: "Cinematic photography, twilight imagery, video, drone, and copywriting that present the residence as the architectural object it is.",
           },
           {
-            heading: "Private brokerage networking",
-            body: "Discreet pre-market introduction to qualified buyers through a tightly held brokerage network across Southeast Florida.",
+            heading: "Brokerage relationships",
+            body: "Discreet introduction to qualified buyers through brokerage and cooperating-agent relationships across Southeast Florida — alongside the public marketing every listing receives.",
           },
           {
             heading: "Strategic pricing",

@@ -37,7 +37,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing changes block by block. Request a current market conversation before relying on public estimates or broad online ranges.",
     latitude: 26.1224,
     longitude: -80.1373,
-    heroImage: "/markets/fort-lauderdale.svg",
+    heroImage: "/markets/fort-lauderdale.jpg",
     localContext:
       "Fort Lauderdale stretches from the Atlantic across the Intracoastal to the New River and downtown — buyer briefs typically segment by water access (deep-water dockage vs. fixed-bridge), proximity to Las Olas, and beach corridor.",
     county: "Broward County",
@@ -61,7 +61,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Use a current CMA or buyer brief for pricing. Online estimates often miss condition, dockage, lot, and renovation differences.",
     latitude: 26.1638,
     longitude: -80.1136,
-    heroImage: "/markets/coral-ridge.svg",
+    heroImage: "/markets/coral-ridge.jpg",
     localContext:
       "Coral Ridge sits north of Sunrise Boulevard between the Intracoastal and Federal Highway, anchored by the Coral Ridge Country Club. The waterfront streets along the finger isles trade differently from the interior blocks — a brief that confuses the two will price wrong.",
     county: "Broward County",
@@ -85,7 +85,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing depends heavily on property type, condition, lot, and location within the neighborhood. Mia can prepare current comps for a specific address or buyer brief.",
     latitude: 26.1303,
     longitude: -80.1244,
-    heroImage: "/markets/victoria-park.svg",
+    heroImage: "/markets/victoria-park.jpg",
     localContext:
       "Victoria Park is the in-town Fort Lauderdale neighborhood immediately east of Federal Highway, framed by Sunrise Boulevard, the Middle River, and Holiday Park. Block-by-block character changes quickly — historic bungalows, mid-century cottages, contemporary new builds, and townhomes coexist within walking distance.",
     county: "Broward County",
@@ -109,7 +109,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing varies widely by property type and community. Start with current comps rather than a generic market average.",
     latitude: 26.3683,
     longitude: -80.1289,
-    heroImage: "/markets/boca-raton.svg",
+    heroImage: "/markets/boca-raton.jpg",
     localContext:
       "Boca Raton spans from the Atlantic west into central Palm Beach County, with distinct micro-markets along A1A, the East Boca grid, the Royal Palm and Boca Bay Colony estate sections, and the gated club communities west of I-95. Each set has its own buyer profile, fee structure, and resale dynamics.",
     county: "Palm Beach County",
@@ -133,7 +133,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Current comps and property-specific details matter more than broad public ranges. Request a focused review for the address or target building.",
     latitude: 26.7056,
     longitude: -80.0364,
-    heroImage: "/markets/palm-beach.svg",
+    heroImage: "/markets/palm-beach.jpg",
     localContext:
       "The Town of Palm Beach is a barrier island with strict building review, established estate sections in the North End and South End, and the Worth Avenue / Mid-Town corridor in between. Off-island, the Palm Beach area extends through West Palm Beach and the Intracoastal communities — buyer briefs need to specify which side of the bridges.",
     county: "Palm Beach County",
@@ -157,7 +157,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing changes by beach proximity, building, condition, and neighborhood. Mia can prepare a current comparison for the exact search or address.",
     latitude: 26.4615,
     longitude: -80.0728,
-    heroImage: "/markets/delray-beach.svg",
+    heroImage: "/markets/delray-beach.jpg",
     localContext:
       "Delray Beach centers on Atlantic Avenue, with beach blocks east of A1A, the historic Marina District and Pineapple Grove just inland, and established residential pockets like Lake Ida and Tropic Isle pushing west and south. The walkable downtown is the demand driver — distance to it shapes pricing as much as the property itself.",
     county: "Palm Beach County",
@@ -181,7 +181,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Use a current property-specific review. Water access, updates, lot, and condition can change the pricing story quickly.",
     latitude: 26.2756,
     longitude: -80.0875,
-    heroImage: "/markets/lighthouse-point.svg",
+    heroImage: "/markets/lighthouse-point.jpg",
     localContext:
       "Lighthouse Point is a small Broward city north of Pompano Beach with a network of finger isles and ocean-access canals. Property evaluation hinges on the canal — bridge clearances, water depth, seawall condition, and dockage capacity vary block by block and have a larger pricing impact than square footage.",
     county: "Broward County",

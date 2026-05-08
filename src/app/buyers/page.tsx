@@ -22,8 +22,8 @@ const BUYER_PROCESS = [
     body: "A confidential conversation about preferred markets, architectural style, lifestyle requirements, and timeline. The brief is shaped before any showing is scheduled.",
   },
   {
-    heading: "Private brokerage sourcing",
-    body: "Mia activates her brokerage and ownership relationships to surface pre-market and privately offered residences before they ever reach a public listing.",
+    heading: "Brokerage-relationship sourcing",
+    body: "Mia activates her brokerage and ownership relationships to surface relevant residences — including any informally available opportunities those relationships uncover. Access varies by market and timing.",
   },
   {
     heading: "Curated showings",
@@ -49,7 +49,7 @@ const BUYER_FAQ = [
   {
     question: "Will I see privately offered residences before they list?",
     answer:
-      "When Mia knows your brief in detail, pre-market and privately offered opportunities are surfaced through her brokerage relationships. The relationship is the access.",
+      "When Mia knows your brief in detail, she shares any relevant opportunities her brokerage relationships surface — including informally available residences when those exist. Availability varies by market and timing; the brief is what enables the right introduction at the right moment.",
   },
   {
     question: "How long does an acquisition typically take?",
@@ -77,7 +77,7 @@ export default function BuyersPage() {
       <Hero
         eyebrow="For Buyers"
         heading="Private buyer representation across Southeast Florida."
-        sub="Mia represents buyers across Fort Lauderdale, Boca Raton, and Palm Beach with a deliberately small client list each quarter — every brief written before the first showing, every closing attended in person."
+        sub="Mia represents buyers across Fort Lauderdale, Boca Raton, and Palm Beach with a deliberately small client list — every brief written before the first showing, every closing attended in person."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
       />
@@ -108,12 +108,12 @@ export default function BuyersPage() {
         background="navy"
         items={[
           {
-            heading: "Private brokerage access",
-            body: "Pre-market and privately offered residences surfaced through the brokerage and ownership relationships Mia has built over time.",
+            heading: "Brokerage relationships",
+            body: "Residences surfaced through the brokerage and ownership relationships Mia has built over time — including any informally available opportunities those relationships uncover. Availability varies by market and timing.",
           },
           {
             heading: "Architectural literacy",
-            body: "Fluency across Mediterranean Revival, mid-century waterfront, contemporary coastal, and landmark Estate Section.",
+            body: "Familiarity with Mediterranean Revival, mid-century waterfront, and contemporary coastal homes across Mia's core Southeast Florida markets.",
           },
           {
             heading: "Relocation-ready",
@@ -130,7 +130,7 @@ export default function BuyersPage() {
 
       <CTAStrip
         heading="Tell Mia what you're looking for."
-        sub="A short private conversation is the first step. From there, the right residences are sourced — including many before they ever appear on a public listing site."
+        sub="A short private conversation is the first step. From there, Mia sources the right residences across her core markets — including any informally available opportunities her brokerage relationships uncover."
       />
     </>
   );

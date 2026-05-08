@@ -30,7 +30,7 @@ const ABOUT_FAQ = [
   {
     question: "What types of representation does Mia accept?",
     answer:
-      "Buyer representation, seller representation, investment-portfolio acquisition, and selective relocation work. Engagement is invitation-style — a deliberately small client list per quarter.",
+      "Buyer representation, seller representation, investment-portfolio acquisition, and selective relocation work. Mia keeps a deliberately small client list so every engagement receives direct attention.",
   },
 ];
 
@@ -92,10 +92,9 @@ export default function AboutPage() {
               preference, and lifestyle — long before the first showing is scheduled.
             </p>
             <p>
-              She is fluent in Fort Lauderdale's deepwater Las Olas Isles geography, Boca Raton's
-              country-club estate market, Palm Beach's landmark Estate Section, and the private
-              brokerage relationships that quietly move desirable residences. The Hispanic community
-              of Southeast Florida has been part of her network since she began.
+              She knows Fort Lauderdale's deepwater Las Olas Isles, Boca Raton's country-club
+              neighborhoods, and the Palm Beach corridor — and the brokerage relationships that
+              quietly move desirable residences across Southeast Florida.
             </p>
           </div>
         </div>
@@ -114,9 +113,9 @@ export default function AboutPage() {
                 Privacy as a default, not an upgrade.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-navy-800/80">
-                Private brokerage relationships, NDA-style consultations, photography that respects
-                the residence, and a client roster that never appears on a marketing list.
-                Discretion is the standard — not a service tier.
+                Confidential consultations, photography that respects the residence, and a client
+                roster that never appears on a marketing list. Discretion is the standard — not a
+                service tier.
               </p>
             </li>
             <li>

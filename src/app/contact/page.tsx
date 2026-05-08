@@ -98,7 +98,8 @@ export default function ContactPage() {
 
           <form
             method="post"
-            action="/api/submit-contact"
+            action={`mailto:${MIA.contact.email}?subject=${encodeURIComponent("Private Inquiry — Mia Sanabria")}`}
+            encType="text/plain"
             aria-describedby="contact-form-helper"
             className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10"
             noValidate
@@ -106,6 +107,17 @@ export default function ContactPage() {
             <h2 className="font-display text-2xl text-navy-800">Private Inquiry</h2>
             <p className="mt-2 text-sm text-navy-800/70">
               All fields marked with an asterisk are required. Inquiries are confidential.
+            </p>
+            <p className="mt-3 rounded-sm border border-brass-400/30 bg-brass-400/5 px-3 py-2 text-xs text-navy-800/80">
+              This form opens your default email app to send your details directly to Mia. Direct
+              lead capture is being finalized. For an immediate response, call{" "}
+              <a href={`tel:${MIA.contact.phoneTel}`} className="underline decoration-brass-400 underline-offset-2">
+                {MIA.contact.phone}
+              </a>{" "}
+              or email{" "}
+              <a href={`mailto:${MIA.contact.email}`} className="underline decoration-brass-400 underline-offset-2">
+                {MIA.contact.email}
+              </a>.
             </p>
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -136,14 +148,11 @@ export default function ContactPage() {
                 <option value="" disabled>
                   Select…
                 </option>
-                <option>Buying — Boca Raton</option>
                 <option>Buying — Fort Lauderdale</option>
+                <option>Buying — Boca Raton</option>
                 <option>Buying — Palm Beach</option>
-                <option>Buying — Other Market</option>
                 <option>Selling — Home Valuation</option>
                 <option>Selling — Listing Conversation</option>
-                <option>Investment / Private Listings</option>
-                <option>General Inquiry</option>
               </select>
             </div>
             <div className="mt-5">
@@ -179,19 +188,19 @@ export default function ContactPage() {
       <section className="bg-cream-100 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
-            eyebrow="Office Location"
-            heading="Fort Lauderdale, Florida — by appointment."
-            sub="Private consultations are scheduled at the office, on-site at the residence, or virtually as preferred."
+            eyebrow="Service Area"
+            heading="Fort Lauderdale and Southeast Florida."
+            sub="Consultations are scheduled on-site at the residence, virtually, or at a mutually convenient location in Fort Lauderdale."
           />
           <div className="mt-10 overflow-hidden rounded-sm border border-navy-800/10 bg-white shadow-card">
             <iframe
               title="Fort Lauderdale, Florida map"
               src="https://www.google.com/maps?q=Fort+Lauderdale,+FL+33305&hl=en&output=embed"
               width="1200"
-              height="420"
+              height="300"
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
-              className="h-[420px] w-full"
+              className="h-[300px] w-full"
             />
             <noscript>
               <a
