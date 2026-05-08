@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-08T20:07:31.718Z
+**Generated:** 2026-05-08T21:13:09.502Z
 
 **Summary:** 14 PASS · 2 WARN · 0 FAIL · 0 SKIP
 
@@ -24,8 +24,8 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 19 pages |
-| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 19 unique titles across 19 pages |
+| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 25 pages |
+| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 25 unique titles across 25 pages |
 | `completeness.metadata.uniqueDescriptions` | ✅ | Each core/legal/market page has unique <meta description> | all descriptions unique |
 | `completeness.og.imagesResolve` | ✅ | Every page's og:image resolves to a local file in out/ | all og:images resolve |
 
@@ -33,7 +33,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 7 market pages exceed 200-word floor |
+| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 13 market pages exceed 200-word floor |
 
 ### Design/Display Integrity
 
@@ -60,7 +60,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 108 JSON-LD blocks across 19 pages · 0 broken |
+| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 144 JSON-LD blocks across 25 pages · 0 broken |
 
 ## Failures and warnings — details
 

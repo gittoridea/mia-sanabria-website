@@ -50,6 +50,8 @@ const CORE_PAGES = [
 
 const LEGAL_PAGES = ["/privacy/", "/terms/", "/dmca/", "/accessibility/"] as const;
 
+// Updated 2026-05-08 cycle 3 (Team F): list now matches all 13 market routes.
+// Future improvement: derive dynamically from src/lib/markets.ts at audit time.
 const MARKET_PAGES = [
   "/markets/",
   "/markets/fort-lauderdale/",
@@ -59,6 +61,12 @@ const MARKET_PAGES = [
   "/markets/delray-beach/",
   "/markets/palm-beach/",
   "/markets/lighthouse-point/",
+  "/markets/rio-vista/",
+  "/markets/harbor-beach/",
+  "/markets/las-olas-isles/",
+  "/markets/seven-isles/",
+  "/markets/sea-ranch-lakes/",
+  "/markets/hillsboro-mile/",
 ] as const;
 
 const SAMPLED_FOOTER_PAGES = [
@@ -296,10 +304,12 @@ async function checkPerPageMetadata(): Promise<CheckResult[]> {
 
 async function checkMarketWordFloor(): Promise<CheckResult> {
   const issues: { route: string; words: number }[] = [];
+  let checked = 0;
   for (const route of MARKET_PAGES) {
     if (route === "/markets/") continue; // index page
     const html = await readBuiltHtml(route);
     if (!html) continue;
+    checked++;
     const words = countVisibleWords(html);
     if (words < MARKET_VISIBLE_WORD_FLOOR) issues.push({ route, words });
   }
@@ -310,9 +320,9 @@ async function checkMarketWordFloor(): Promise<CheckResult> {
     status: issues.length === 0 ? "PASS" : "WARN",
     evidence:
       issues.length === 0
-        ? `all 7 market pages exceed ${MARKET_VISIBLE_WORD_FLOOR}-word floor`
-        : `${issues.length} below floor`,
-    details: { thinPages: issues },
+        ? `all ${checked} market pages exceed ${MARKET_VISIBLE_WORD_FLOOR}-word floor`
+        : `${issues.length}/${checked} below floor`,
+    details: { thinPages: issues, marketsChecked: checked },
   };
 }
 

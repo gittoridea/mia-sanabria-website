@@ -2,12 +2,13 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: verify
-progress: 220/225
+phase: observe
+progress: 253/290
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-08T18:55:00Z
+updated: 2026-05-08T20:50:00Z
 algorithm_version: 6.4.0
+active_mission: 2026-05-08-pm-cycle-3-codex-spark-expert-team-audit
 ---
 
 # Mia Sanabria Realtor Site — ISA
@@ -793,3 +794,119 @@ Promote the markets cluster from 7 routes (informational tone) to 13 routes (lux
 - ISC-246: `/tmp/mia-markets-v3-shots/` contains 75 PNG screenshots (15 routes × 5 viewports) generated via google-chrome headless --virtual-time-budget=20000.
 - ISC-247 to ISC-249: Documents written at `docs/SEO_AEO_MARKET_AUTHORITY_MATRIX.md`, `docs/MARKET_PAGE_COMPLETION_SCORECARD.md`, and append to `docs/WORLD_CLASS_REALTOR_SITE_GAP_MATRIX.md`.
 - ISC-250 to ISC-253 (anti-criteria): Confirmed by Forge's self-audit + Cato cross-vendor audit; verdict line attached after Cato completion.
+
+---
+
+## Mission 2026-05-08 PM cycle 3 — Codex-Spark Expert Team Audit + Upgrade + Loop Skill
+
+**Effort:** E5 | **Phase:** observe → execute | **Started:** 2026-05-08 PM cycle 3 | **Cycle goal:** comprehensive multi-team audit of everything shipped to date, synthesis into high-impact upgrade plan, safe implementation pass, Gemini blindspot check, and distillation into a reusable Website Production Loop skill — Claude Code as orchestrator/verifier, OpenAI Codex (Spark/5.4/5.5) as expert specialists.
+
+### Goal (this mission)
+
+Use Claude Code as lead orchestrator and verifier; use OpenAI Codex / GPT-5.3-Codex-Spark to run 7 expert specialist audit teams in parallel; synthesize findings into a tiered upgrade plan; safely implement the highest-confidence low-risk improvements; run a Gemini blindspot check; and produce a reusable Website Production Loop skill that gets smarter each pass — without fabricating facts, without DNS/Cloudflare/GHL prod writes, without lead-magnet build, without Brand System Contract drift.
+
+### Criteria (this mission)
+
+Phase 1 — Codex/Spark capability harness:
+
+- [x] ISC-254: codex CLI 0.129.0 verified at `~/.local/bin/codex`; `~/.codex/auth.json` present; oauth working.
+- [x] ISC-255: All three Codex models probed responsive: `gpt-5.3-codex-spark`, `gpt-5.4`, `gpt-5.5` each replied to a directed prompt under sandbox=read-only, approval=never, reasoning_effort=xhigh.
+- [x] ISC-256: `docs/CODEX_SPARK_CAPABILITY_PROBE.md` exists documenting model availability, dispatch pattern, parallel-safety rules, fallback ladder, evidence-logging format.
+- [x] ISC-257: `docs/codex-spark-audits/` directory created and writable.
+
+Phase 2 — 7 expert teams (each writes to `docs/codex-spark-audits/`):
+
+- [x] ISC-258: Team A (Brand / Visual Design Director) → `brand-ux-audit.md` produced with verdict + findings.
+- [x] ISC-259: Team B (World-Class Realtor Website Strategist) → `realtor-strategy-audit.md` produced.
+- [x] ISC-260: Team C (SEO / AEO / Schema Expert) → `seo-aeo-schema-audit.md` produced with route-by-route punchlist.
+- [x] ISC-261: Team D (South Florida Luxury Content Editor) → `content-editor-audit.md` produced.
+- [x] ISC-262: Team E (Compliance / Risk Guardrail) → `compliance-risk-audit.md` produced with PASS/PARTIAL/FAIL/REVIEW table.
+- [x] ISC-263: Team F (QA / Regression Engineer) → `qa-regression-audit.md` produced.
+- [x] ISC-264: Team G (Production Loop Architect) → `production-loop-architecture.md` produced.
+- [x] ISC-265: Each audit logs `model_used` in evidence appendix. Honesty note: Team E (configured `gpt-5.4`) declined to self-attest model identity ("I cannot truthfully claim `gpt-5.4` from this environment") — the `--config model=` flag is authoritative; team self-attestation is corroborating only. No model misrepresentation.
+
+Phase 3 — Synthesis:
+
+- [x] ISC-266: `docs/CODEX_SPARK_SYNTHESIS_REPORT.md` exists — 12-section synthesis covering convergence, contradictions, advisor §8.5 (statutory-vs-policy triage + rollback + Cycle-4 owner/date), Cato §11 cross-vendor audit, license-rendering principal-decision §12, anti-criteria.
+- [x] ISC-267: `docs/MIA_SITE_HIGH_IMPACT_UPGRADE_PLAN.md` exists — 5 tiers (Immediate 0-2h / Near-term 2-6h / Strategic 1-2d / Gated-external / World-class polish).
+- [DEFERRED-VERIFY] ISC-268: `docs/WORLD_CLASS_REALTOR_SITE_GAP_MATRIX.md` cycle-3 deltas captured in synthesis report §10 + upgrade-plan §"What this cycle shipped"; standalone matrix file not edited this cycle (no scorecard cells moved per §10). Follow-up: refresh in next-cycle handoff.
+- [DEFERRED-VERIFY] ISC-269: `docs/SEO_AEO_MARKET_AUTHORITY_MATRIX.md` + `docs/MARKET_PAGE_COMPLETION_SCORECARD.md` standalone updates deferred — no scorecard cells moved this cycle (cycle-3 was infra + docs, not pillar-shifting feature work). Follow-up: refresh after next-cycle content sprint.
+
+Phase 4 — Safe implementation pass:
+
+- [x] ISC-270: 5 high-confidence low-risk improvements implemented (404 canonical fix; legal-page og:image dims; audit-completeness MARKET_PAGES 7→13 + dynamic count; deploy-and-verify j.counts vs j.summary fix; TCPA-disclosure prose on /contact + /valuation forms).
+- [x] ISC-271: `bun run typecheck` exit 0 (`tsc --noEmit`).
+- [x] ISC-272: `bun run lint` exit 0 (`✔ No ESLint warnings or errors`).
+- [x] ISC-273: `bun run build` exit 0; 25 routes prerendered.
+- [x] ISC-274: `bun run audit:all` exit 0; 14 PASS · 2 WARN · 0 FAIL · 0 SKIP.
+
+Phase 5 — Gemini blindspot:
+
+- [x] ISC-275: `docs/GEMINI_BLINDSPOT_CHECK_2026-05-08.md` exists — 5 distinct blindspots, confidence 9/10, model gemini-3.1-pro-preview / reported gemini-2.5-pro.
+- [x] ISC-276: Used Gemini family (different from Anthropic/OpenAI) via `Inference.ts --level expert-long`.
+
+Phase 6 — Website Production Loop skill:
+
+- [x] ISC-277: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` exists with all 7 spec sections (mission intake, baseline, expert lanes, implementation, verification, learning, DoD) plus 8 hard decision gates + 4 soft + 7 lanes + vertical-adaptation rules + universal anti-criteria. **Cato §11.5 finding noted:** spec is partially Mia-specific in workflow primitive filenames; full parameterization queued for first non-realtor invocation.
+- [x] ISC-278: `docs/skills/WEBSITE_PRODUCTION_LOOP_NEXT_SESSION_PROMPT.md` exists as paste-ready prompt.
+
+Phase 7 — Final verification:
+
+- [x] ISC-279: Cato cross-vendor audit ran (foreground, schema-enforced verdict per Algorithm v6.4.0 R9). **Verdict: concerns** (8 findings — 4 high-severity). Findings logged in synthesis §11; 4 high-severity items partially addressed inline (Team E flattening, TCPA-claim precision, license-rendering principal-decision § surfacing).
+- [x] ISC-280: Advisor commitment-boundary call ran. **Verdict: Conditionally done.** Three asks integrated into synthesis §8.5 (statutory-vs-policy triage; rollback procedure; Cycle 4 owner/date table).
+- [x] ISC-281: Re-read check at SUMMARY block — every explicit ask in user's mission addressed or marked SKIP with reason.
+
+Phase 8 — Closeout:
+
+- [x] ISC-282: `docs/PRODUCTION_READINESS_HANDOFF_CODEX_SPARK_2026-05-08.md` exists with all 14 spec sections.
+- [x] ISC-283: Reflection JSONL written with `schema_version: "6.4.0"` to `~/.claude/PAI/MEMORY/LEARNING/REFLECTIONS/algorithm-reflections.jsonl`.
+- [x] ISC-284: Commits made covering all docs and code changes; push deferred to principal direction.
+
+Anti-criteria + antecedent:
+
+- [x] ISC-285: Anti — NO fabricated facts introduced through expert-team output. Verified by each team's anti-criteria check + Cato §11 review.
+- [x] ISC-286: Anti — NO Brand System Contract drift. Files modified scope: `src/app/not-found.tsx` + `src/app/{privacy,terms,accessibility,dmca}/page.tsx` + `src/app/{contact,valuation}/page.tsx` + `scripts/{audit-completeness,deploy-and-verify}.ts`. Zero edits to `src/components/`, `src/app/globals.css`, or core Brand-Contract-locked surfaces.
+- [x] ISC-287: Anti — NO DNS / Cloudflare / GHL prod writes / lead magnet build / .com cutover. Staging deploy NOT run this cycle (documented in closeout §"Deployment status" + advisor recommendation for next-cycle).
+- [x] ISC-288: Anti — NO model misrepresentation. Capability probe doc cites direct probe transcripts (SPARK-PONG / GPT54-PONG); team-self-attestations corroborated by `--config model=` flag; one team explicitly declined to self-attest (exemplary honesty).
+- [x] ISC-289: Anti — NO PAI infrastructure edits. `~/.claude/`, `~/forge/`, `~/trueops/` untouched outside this project.
+- [x] ISC-290: Antecedent — Staging baseline preserved: typecheck/lint/build/audit:all green both pre-cycle and post-cycle.
+
+## Decisions (continued — 2026-05-08 PM cycle 3)
+
+- 2026-05-08 PM cycle 3 — **Codex/Spark capability harness verified**. `gpt-5.3-codex-spark` IS available alongside `gpt-5.4` and `gpt-5.5`. Direct ping/pong probes captured (`SPARK-PONG`, `GPT54-PONG`). Codex CLI 0.129.0 at `~/.local/bin/codex` with oauth via `~/.codex/auth.json`. Documented in `docs/CODEX_SPARK_CAPABILITY_PROBE.md`.
+- 2026-05-08 PM cycle 3 — **7-team parallel-dispatch concurrency cap observed.** First batch of 4 simultaneous Spark dispatches stalled at the codex CLI's stdin probe; lower-concurrency re-dispatch with `< /dev/null` succeeded. Rule: max 3 same-model concurrent; mix model families to spread rate-limit pressure.
+- 2026-05-08 PM cycle 3 — **`codex --sandbox read-only` cannot write files.** Even with explicit "write to docs/codex-spark-audits/X.md" instructions, codex emits the audit content inline. Mitigation: `<<AUDIT_START>>`/`<<AUDIT_END>>` delimiters in the brief + post-completion log extraction.
+- 2026-05-08 PM cycle 3 — **Team E (Compliance) declined to self-attest model identity.** Configured as `gpt-5.4`; in evidence appendix said "I cannot truthfully claim `gpt-5.4` from this environment." This is exemplary — `--config model=` flag is authoritative; team self-attestation is corroborating only. Future cycles should treat this as the canonical pattern.
+- 2026-05-08 PM cycle 3 — **License-rendering interpretation surfaced as principal-decision.** Two coherent readings of ISA §Constraints line 54 ("license # / designations / languages / display office stay placeholder until Mia confirms in writing"): (A) `unverified.*` namespace counts as "placeholder" — current state OK; (B) rendered HTML must be null until DBPR primary-source confirmation — current state non-compliant. 4 codex teams + Cato hold reading B; the file's own comment encodes reading A. Cycle-3 does not silently resolve. Surfaced in synthesis §12 + closeout §11.4. Principal interpretation needed before next-cycle content sprint.
+- 2026-05-08 PM cycle 3 — **TCPA disclosure prose added (mechanics deferred).** `/contact/` and `/valuation/` form helpers now carry consent disclosure language. Cato §11 caught that this is **prose only**, not affirmative-consent mechanics (no checkbox / signature / timestamp / number-specific authorization required by Florida § 501.059 + 2024 FCC one-to-one consent rule). Synthesis §5 + §11 corrected to "TCPA-disclosure prose added (mechanics deferred to GHL form-wiring cycle)" — does NOT claim TCPA-compliant.
+- 2026-05-08 PM cycle 3 — **Live staging not re-deployed.** All "FIXED in this cycle" claims are build-time only; live URL still serves cycle-2 commit. Cato §11 + advisor flagged as recommended next-cycle action #1. Recurring failure pattern per `feedback_caddy_dokploy_cache_bust.md`.
+- 2026-05-08 PM cycle 3 — **Cato cross-vendor verdict: concerns** (8 findings, 4 high-severity). Schema-enforced output captured (Algorithm v6.4.0 R9 errata). 4 high-severity findings: TCPA-claim precision (corrected inline), license-rendering interpretation (surfaced as principal-decision §12), live-staging not re-verified (next-cycle action), synthesis Team E flattening (corrected inline §1).
+- 2026-05-08 PM cycle 3 — **Three Cato non-corpus blind spots queued for next cycle:** (a) Spanish hreflang for Broward+Palm Beach (50%+ Hispanic markets, currently zero `hreflang="es"`), (b) Cuban-American HNWI cultural codes for SE FL luxury (no team raised), (c) hurricane-season operational signaling (every other top-100 SE FL site has a hurricane-prep page).
+
+## Changelog (continued — 2026-05-08 PM cycle 3)
+
+- **2026-05-08 PM cycle 3 — conjecture:** "Running 4 parallel Spark dispatches concurrently is safe; codex sessions are independent." → **refuted-by:** first batch stalled at the stdin probe stage; only 3 of 4 reached the codex banner. → **learned:** xhigh-reasoning Spark calls have a concurrency cap (likely OpenAI rate-limit on simultaneous high-reasoning calls per account). Mitigation: max 3 same-model concurrent, mix model families, dispatch with `< /dev/null` for stdin closure. Documented in `CODEX_SPARK_CAPABILITY_PROBE.md` and `WEBSITE_PRODUCTION_LOOP_SKILL.md`.
+- **2026-05-08 PM cycle 3 — conjecture:** "Adding TCPA-compliant prose to form helpers is sufficient to claim TCPA compliance." → **refuted-by:** Cato §11.1 — Florida § 501.059 + 2024 FCC one-to-one consent rule require an affirmative consent mechanism (checkbox, signature, timestamp, number-specific authorization) — prose alone is contested case law. → **learned:** Distinguish "compliance disclosure" (prose) from "compliance mechanics" (affirmative consent). Cycle-3 shipped only disclosure; mechanics gated on GHL form-wiring. Synthesis correction inline.
+- **2026-05-08 PM cycle 3 — conjecture:** "ISA §Constraints line 54 'placeholder until Mia confirms' allows the `unverified.*` namespace flag to count as placeholder." → **refuted-by:** Cato §11.2 + Teams A/B/D/E — the visible HTML implies certainty regardless of the unverified.* prefix. → **learned:** Two coherent PAI-internal readings exist; the constraint is ambiguous as written. Surface as principal-decision rather than silently resolve. Decision logged in §12 of synthesis.
+- **2026-05-08 PM cycle 3 — conjecture:** "5 OpenAI-corpus teams + 1 Gemini blindspot = adequate cross-vendor diversity." → **refuted-by:** Cato §11.6 — OpenAI corpus produced homogeneous "luxury realtor playbook" recommendations (6/7 mailto-form, 4/7 license-rendering, 5/7 AEO-funnel). Three truly-non-corpus angles even Gemini missed: Spanish hreflang for SE FL, Cuban-American HNWI codes, hurricane-season signaling. → **learned:** "Cross-vendor diversity" requires explicit measurement, not just family count. Future cycles should include a homogeneity check on audit-team recommendation overlap.
+- **2026-05-08 PM cycle 3 — conjecture:** "audit-completeness MARKET_PAGES = 7 hardcoded list works because it predates cycle-2 markets-V3." → **refuted-by:** Team F + Team C empirical drift — script reports 'all 7 market pages' even though 13 are built. → **learned:** Static route lists in audit scripts drift silently. Mitigation: extend manually each cycle (cycle-3 fix); structural improvement queued — derive route list dynamically from `src/lib/markets.ts` at audit time.
+- **2026-05-08 PM cycle 3 — conjecture:** "deploy-and-verify FAIL gate is reading the right field name." → **refuted-by:** Team F — script reads `j.summary` but JSON ships under `j.counts`; FAIL gate has been silently always-zero. → **learned:** Field-name drift between report producer and consumer is a class of bug audit chains miss. Mitigation: backward-compatible read (`j.counts ?? j.summary`) shipped this cycle. Structural improvement: type-share between producer and consumer.
+
+## Verification (continued — 2026-05-08 PM cycle 3)
+
+- ISC-254 to ISC-257: state-probe — already passed pre-BUILD (codex CLI verified, models pinged, capability probe doc written, audits dir created). Evidence: direct probe transcripts at `docs/CODEX_SPARK_CAPABILITY_PROBE.md`.
+- ISC-258 to ISC-264: each audit file exists at `docs/codex-spark-audits/{brand-ux,realtor-strategy,seo-aeo-schema,content-editor,compliance-risk,qa-regression,production-loop-architecture}-audit.md`; line counts 76-169; each ends with structured verdict JSON.
+- ISC-265: each audit cites `Model used:` in evidence appendix (Team A: `gpt-5.3-codex-spark`, B: `gpt-5.3-codex-spark`, C: `gpt-5.3-codex-spark`, D: `gpt-5.5`, E: declined-self-attest, F: `gpt-5.3-codex-spark`, G: `gpt-5.5`). The `--config model=` flag is authoritative.
+- ISC-266 / ISC-267: synthesis report (12 sections) + upgrade plan (5 tiers) at `docs/CODEX_SPARK_SYNTHESIS_REPORT.md` + `docs/MIA_SITE_HIGH_IMPACT_UPGRADE_PLAN.md`.
+- ISC-270 to ISC-274: 5 implementations verified; `bun run typecheck` exit 0; `bun run lint` exit 0; `bun run build` exit 0 (25 routes); `bun run audit:all` 14 PASS / 2 WARN / 0 FAIL preserved.
+- ISC-275 / ISC-276: Gemini blindspot at `docs/GEMINI_BLINDSPOT_CHECK_2026-05-08.md` (65 lines, gemini-3.1-pro-preview).
+- ISC-277 / ISC-278: skill spec + paste-ready next-session prompt at `docs/skills/`.
+- ISC-279: Cato verdict captured (concerns, 8 findings, schema-enforced).
+- ISC-280: Advisor verdict captured (Conditionally done, 3 asks integrated into synthesis §8.5).
+- ISC-281: Re-read check passes — see SUMMARY block.
+- ISC-282: closeout doc at `docs/PRODUCTION_READINESS_HANDOFF_CODEX_SPARK_2026-05-08.md` (14 sections + process improvements + anti-criteria + evidence paths + deployment status).
+- ISC-283: reflection JSONL appended.
+- ISC-284: commits staged for push (audit reports, doc deliverables, code changes); see `git log --oneline -5` post-commit.
+- ISC-285 to ISC-290: anti-criteria + antecedent verified — no fabricated facts (Cato §10 anti-criteria pass), no Brand Contract drift (only metadata + scripts + form-helper text edited; src/components untouched), no DNS/Cloudflare/GHL/lead-magnet, no model misrepresentation (probe transcripts cited; one team declined-to-self-attest), no PAI infra edits, baseline preserved (14/2/0/0 pre and post).
+
+

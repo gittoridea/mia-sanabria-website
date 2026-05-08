@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T20:07:31.718Z",
+  "timestamp": "2026-05-08T21:13:09.502Z",
   "counts": {
     "PASS": 14,
     "WARN": 2,
@@ -44,7 +44,7 @@
       "category": "SEO/AEO",
       "description": "Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image",
       "status": "PASS",
-      "evidence": "0 field issues across 19 pages",
+      "evidence": "0 field issues across 25 pages",
       "details": {
         "issues": []
       }
@@ -54,7 +54,7 @@
       "category": "SEO/AEO",
       "description": "Each core/legal/market page has unique <title>",
       "status": "PASS",
-      "evidence": "19 unique titles across 19 pages",
+      "evidence": "25 unique titles across 25 pages",
       "details": {
         "duplicates": []
       }
@@ -74,9 +74,10 @@
       "category": "Local Authority",
       "description": "Market pages have ≥200 visible words",
       "status": "PASS",
-      "evidence": "all 7 market pages exceed 200-word floor",
+      "evidence": "all 13 market pages exceed 200-word floor",
       "details": {
-        "thinPages": []
+        "thinPages": [],
+        "marketsChecked": 13
       }
     },
     {
@@ -305,7 +306,7 @@
       "category": "Schema",
       "description": "All JSON-LD blocks parse and carry @type",
       "status": "PASS",
-      "evidence": "108 JSON-LD blocks across 19 pages · 0 broken",
+      "evidence": "144 JSON-LD blocks across 25 pages · 0 broken",
       "details": {
         "issues": []
       }

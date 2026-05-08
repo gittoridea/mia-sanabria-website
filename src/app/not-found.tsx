@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: { absolute: "Page Not Found · Mia Sanabria, REALTOR®" },
+  description:
+    "The page you requested isn't on this website. Return home, walk the markets, or begin a private conversation with Mia Sanabria.",
+  alternates: { canonical: `${SITE.url}/404/` },
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: { index: false, follow: false, noimageindex: true },
+  },
+};
 
 export default function NotFound() {
   return (

@@ -107,15 +107,17 @@ function preflightStage(name: string, cmd: string): void {
 async function preflightAuditCompleteness(): Promise<void> {
   console.log("\n▶ pre-flight audit:completeness gate");
   // audit:all already invoked above; re-read the structured JSON to enforce FAIL=block / WARN=allow.
+  // The audit script writes counts under `counts`, not `summary` — Team F (codex-spark cycle 3) caught the field-name drift.
   try {
     const raw = await readFile("reports/audit-completeness.json", "utf-8");
     const j = JSON.parse(raw) as {
+      counts?: { fail?: number; warn?: number; pass?: number; skip?: number };
       summary?: { fail?: number; warn?: number; pass?: number; skip?: number };
     };
-    const summary = j.summary ?? {};
-    console.log(`  pass=${summary.pass ?? 0} warn=${summary.warn ?? 0} fail=${summary.fail ?? 0} skip=${summary.skip ?? 0}`);
-    if ((summary.fail ?? 0) > 0) {
-      console.error(`✗ DEPLOY-ABORT (audit-completeness): ${summary.fail} FAIL(s) — see reports/audit-completeness.md`);
+    const counts = j.counts ?? j.summary ?? {};
+    console.log(`  pass=${counts.pass ?? 0} warn=${counts.warn ?? 0} fail=${counts.fail ?? 0} skip=${counts.skip ?? 0}`);
+    if ((counts.fail ?? 0) > 0) {
+      console.error(`✗ DEPLOY-ABORT (audit-completeness): ${counts.fail} FAIL(s) — see reports/audit-completeness.md`);
       process.exit(1);
     }
   } catch (e) {

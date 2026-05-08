@@ -188,7 +188,10 @@ export default function ContactPage() {
               Send Private Inquiry
             </button>
             <p id="contact-form-helper" className="mt-3 text-xs text-navy-800/80">
-              By submitting you agree to receive a private response from Mia or her team. We never share contact details.
+              By submitting, you agree to receive a private response from Mia or her team at the
+              email or phone number you provide. Consent to receive calls or text messages is not a
+              condition of any service. We never share your information. Standard message and data
+              rates may apply.
             </p>
           </form>
         </div>
