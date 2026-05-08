@@ -3,10 +3,10 @@ project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
 phase: verify
-progress: 192/200
+progress: 203/210
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-08T17:15:00Z
+updated: 2026-05-08T17:42:00Z
 algorithm_version: 6.4.0
 ---
 
@@ -628,4 +628,43 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 - [x] CSP frame-src allow-list for `sef.mlsmatrix.com` confirmed via live response Content-Security-Policy header (Caddyfile-driven).
 - [x] EHO sentinel: 11/11 sampled built routes carry "Equal Housing Opportunity" string.
 - [x] audit:stale + audit:seo + audit:schema + audit:links + typecheck + lint + build all exit 0 on commit 3c09565.
+
+## ISC additions (2026-05-08 — production readiness audit cycle, commit a521e4a)
+
+### Fresh re-probe findings (no memory reliance per principal directive)
+
+- [x] ISC-201: Phase 1 capability discovery completed — Forge ✅, Cato ✅, Anvil ❌, Perplexity ✅; 3 URL surfaces probed (staging, .com live, miasanabria.com); 25+ Mia project artifacts inventoried; 16 repo docs catalogued.
+- [x] ISC-202: Phase 2 source-of-truth captured — PUBLIC_FACT_LEDGER §1 confirms 25+ verified facts; HERMES_GHL_ACCESS_MAP confirms `ghl_bss` + `ghl_bss_company` MCP servers exist but Mia's sub-account NOT yet wired; LIVE_SITE_PATCH_CHECKLIST flags 5-min Direct Axess defects (D1-D11).
+- [x] ISC-203: Phase 3 site crawl baseline — sitemap 18 routes, /dmca/ + /404/ MISSING; 17 representative images render HTTP 200; 7 market pages render 700-731 visible words (well above 150 floor); IDX iframe sef.mlsmatrix.com renders; forms POST mailto: (no GHL endpoint); GA4 NOT firing (intentional staging); 112 JSON-LD blocks valid; per-page titles correct (earlier probe regex was buggy).
+- [x] ISC-204: Phase 3 — discovered TWO silent regressions: /about/ + /insights/ pages had NO `openGraph` block, silently inheriting site-default homepage og:title via Next.js metadata template fallback.
+- [x] ISC-205: Phase 4 — 22-pillar scorecard composed: 18 PASS · 3 PARTIAL · 1 FAIL · 0 UNVERIFIED. Output at `docs/PRODUCTION_READINESS_AUDIT_2026_05_08.md`.
+
+### Phase 5 fixes shipped (commit a521e4a)
+
+- [x] ISC-206: `src/app/sitemap.ts` — added `/dmca/` route (sitemap 18 → 19). Verified live: `curl https://miasanabriarealtor.trueidea.com/sitemap.xml` returns 19 routes including `<loc>https://miasanabriarealtor.trueidea.com/dmca/</loc>`.
+- [x] ISC-207: `src/app/about/page.tsx` — added explicit `openGraph` block. Was inheriting `Fort Lauderdale REALTOR® | Waterfront & Luxury Homes` site default. Now: `og:title="About Mia Sanabria — Fort Lauderdale REALTOR®"`, `og:image=/mia-headshot.jpg` (1024×1024). Verified live.
+- [x] ISC-208: `src/app/insights/page.tsx` — added explicit `openGraph` block. Now: `og:title="Insights — Mia Sanabria, Fort Lauderdale REALTOR®"`, `og:image=/og-default.jpg` (1200×630). Verified live.
+
+### Phase 6 verification — Caddy flipped commit a521e4a
+
+- [x] ISC-209: Caddy flipped at `last-modified: Fri, 08 May 2026 17:41:34 GMT` ETag `didhaw8oxgxs22tt` — commit a521e4a is live ~10 min post-deploy per memory `feedback_caddy_dokploy_cache_bust.md`.
+- [x] ISC-210: Phase 5 fixes confirmed live: `/dmca/` HTTP 200 + in sitemap.xml; `/about/` og:title flipped to page-specific; `/insights/` og:title flipped to page-specific.
+
+### 22-pillar scorecard verdict (Phase 4 output)
+
+- [x] Pillars 1-5, 8-9, 11-19, 21-22 all PASS with cited evidence. Pillars 6 (Forms), 7 (GHL), 10 (DMCA), 21 (Analytics) PARTIAL with documented external-blocker dependencies. Pillar 20 (Conversion Offers) FAIL — strategic gap (no lead magnets, no gated downloads, no newsletter signup); next-cycle deliverable.
+- [x] Production readiness verdict: shippable to .com cutover once 4 external blockers clear (Mia review, GHL webhook URL, USCO DMCA registration, Cloudflare account). 8 blockers ranked by impact × effort in audit doc.
+
+## Decisions (continued — 2026-05-08 audit cycle)
+
+- 2026-05-08 — **Mission interpretation (no-memory-reliance fresh probe)**: principal's "GoHighLevel real estate site" = our Next.js staging that REPLACES Mia's current Apache/GHL production. Continuing project ISA, not new task ISA. Effort tier override to E5 per mission shape (7 phases × 22 pillars × sub-agents); classifier returned E3 fail-safe twice this session — context-override applied per v6.4.0 doctrine.
+- 2026-05-08 — **Three silent-drift regressions discovered + fixed**: prior cycles' audit scripts (audit:stale + audit:seo + audit:schema + audit:links) all exit 0 but missed (a) sitemap.ts hardcoded route list not updating when Forge added /dmca/, (b) /about/ + /insights/ openGraph absent + silently inheriting site default. Process-improvement note: write `scripts/audit-completeness.ts` to probe structural drift the existing chain misses.
+- 2026-05-08 — **Conversion Offers FAIL (Pillar 20) is strategic, not technical**: zero lead magnets, zero gated downloads, zero newsletter signups. Shipped state is "contact-us intent funnel only." Recommend (post-cutover): 1 PDF buyer's guide gated on email + monthly market newsletter via GHL. Surfaced as next-3-actions priority.
+- 2026-05-08 — **External blockers ranked by impact × effort**: (1) Mia review session (license/designations/Spanish/photography/testimonials) HIGH × 30-60min; (2) GHL BSS sub-account webhook URL HIGH × 5min; (3) DMCA USCO registration MED × $6+15min; (4) Cloudflare account decision MED × 30min; (5-7) photography handoff, branded email, LinkedIn cleanup all LOW. Documented in audit doc §External blockers.
+
+## Changelog (continued — 2026-05-08 audit cycle)
+
+- **2026-05-08 — conjecture:** "The audit chain (typecheck + lint + audit:stale + audit:seo + audit:schema + audit:links + build) is sufficient to detect structural completeness regressions." → **refuted-by:** all 6 audits exit 0 on the post-Forge commit set, but fresh re-probe surfaced /dmca/ missing from sitemap, /about/ + /insights/ missing per-page openGraph, and a market-page word-count probe regex bug that earlier cycles had reported as "0 words" when proper extraction shows 700+. → **learned:** the audit chain probes BUILT artifacts (out/), not the SOURCE-TO-OUTPUT mapping consistency. New audit script needed: `scripts/audit-completeness.ts` that probes (a) every out/<route>/index.html is in out/sitemap.xml, (b) every <page>.tsx exports `openGraph` (warn if absent and SITE-default fallback would inherit), (c) per-page og:title is unique vs site default, (d) per-page og:url matches canonical, (e) every market page has ≥150 verbatim visible words via real Python text-extractor (not naive sed). This script must run as part of `bun run audit:all` so structural drift is caught before deploy.
+- **2026-05-08 — conjecture:** "Re-verifying with fresh probe but trusting the prior cycle's success markers is sufficient state confirmation." → **refuted-by:** principal explicitly directed "Do not rely on memory. Re-verify current state." Fresh probe via `curl -sL` + proper Python word-extraction caught 3 silent regressions that audit:* and the prior-cycle ISA marked as `[x] passed`. → **learned:** "memory" includes prior ISA `[x]` markers. The principal's no-memory-reliance directive maps to: re-run the actual probes against the current artifact state, don't trust marker-state. The fresh probe pattern in this audit is the right cadence for any pre-cutover mission.
+- **2026-05-08 — conjecture:** "Conversion Offers can be deferred indefinitely; the staging is 'production-ready' without lead magnets." → **refuted-by:** for a luxury-realtor practice positioned around "Building Relationships for Life" voice anchor + a 30-60min Mia-review-session conversion model, the absence of any lead magnet means every visitor must self-select into a contact form to enter the funnel. That's a high-friction conversion model. → **learned:** the 22-pillar scorecard's separation of "compliance" from "conversion offers" is the right lens — a site can pass all 10 Compliance Gate axes AND score 18/22 pillars and still leak revenue at the funnel entry point. Recommend Pillar 20 as next-cycle priority alongside GHL form wiring (the two reinforce each other: lead magnet captures email → GHL nurtures → Mia-review session converts).
 
