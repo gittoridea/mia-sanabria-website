@@ -21,8 +21,7 @@ export const MIA = {
   contact: {
     phone: "(954) 540-0358",
     phoneTel: "+19545400358",
-    email: "mia@miasanabriarealtor.com",
-    addressFormatted: "Fort Lauderdale, FL 33305",
+    email: "msanabriarea@gmail.com",
     serviceCore: { city: "Fort Lauderdale", region: "FL", postalCode: "33305" },
   },
   social: {
@@ -32,13 +31,14 @@ export const MIA = {
     youtube: "https://www.youtube.com/channel/UCXQwnpWflWRRtYuO9QX1jvg",
   },
   voice: {
-    tagline: "Building Relationships for Life",
-    positioning: "South Florida Realtor",
+    tagline: "Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made",
+    positioning: "Fort Lauderdale REALTOR®",
     anchorLine: "If I don't know the answer, I will find it.",
   },
   tracking: { ga4Id: "G-PYYSF87G8K", userwayId: "vVNkJJLvR4" },
   unverified: {
-    licenseNumber: null as string | null,
+    // TODO: verify on https://www.myfloridalicense.com/wl11.asp before production cutover
+    licenseNumber: "SL3405877" as string | null,
     designations: [] as string[],
     languages: ["English"] as const,
     yearsLicensed: null as string | null,
@@ -46,11 +46,11 @@ export const MIA = {
   },
   experience: { since: null as string | null },
   serviceArea: {
-    administrative: ["Broward County", "Miami-Dade County", "Palm Beach County"],
+    administrative: ["Eastern Fort Lauderdale", "Eastern Boca Raton", "Eastern Delray Beach"],
   },
 } as const;
 
-export const FEATURED_MARKETS = [
+const ALL_MARKET_SLUGS = [
   "fort-lauderdale",
   "coral-ridge",
   "victoria-park",
@@ -60,4 +60,8 @@ export const FEATURED_MARKETS = [
   "lighthouse-point",
 ] as const;
 
-export type MarketSlug = (typeof FEATURED_MARKETS)[number];
+export type MarketSlug = (typeof ALL_MARKET_SLUGS)[number];
+
+export const FEATURED_MARKETS: ReadonlyArray<MarketSlug> = ALL_MARKET_SLUGS.filter(
+  (slug) => slug !== "palm-beach" && slug !== "lighthouse-point"
+);

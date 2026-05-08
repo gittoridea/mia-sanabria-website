@@ -11,9 +11,9 @@ import { SITE } from "@/lib/site";
 import { MIA } from "@/lib/mia";
 
 export const metadata: Metadata = {
-  title: "About Mia — Southeast Florida Luxury Realtor",
+  title: "About Mia — Southeast Florida Luxury REALTOR®",
   description:
-    "Mia Sanabria is a Fort Lauderdale–based REALTOR® with LPT Realty representing buyers, sellers, and investors across Boca Raton, Fort Lauderdale, and Palm Beach.",
+    "Mia Sanabria is a Fort Lauderdale REALTOR® with LPT Realty representing buyers and sellers across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
   alternates: { canonical: `${SITE.url}/about/` },
 };
 
@@ -26,7 +26,7 @@ const ABOUT_FAQ = [
   {
     question: "Which markets does Mia know most deeply?",
     answer:
-      "Fort Lauderdale's Las Olas Isles, Harbor Beach, Victoria Park, and Coral Ridge are her home turf. She represents actively across Boca Raton, Palm Beach, Delray Beach, and Lighthouse Point.",
+      "Fort Lauderdale's Las Olas Isles, Harbor Beach, Victoria Park, and Coral Ridge are her home turf. She represents actively across Boca Raton and Delray Beach.",
   },
   {
     question: "What types of representation does Mia accept?",
@@ -49,7 +49,7 @@ export default function AboutPage() {
 
       <Hero
         eyebrow="About Mia"
-        heading="South Florida's personal Realtor — a practice built on relationships, not transactions."
+        heading="South Florida's personal REALTOR® — a practice built on relationships, not transactions."
         sub={MIA.voice.anchorLine}
         background="navy"
       />
@@ -96,8 +96,8 @@ export default function AboutPage() {
             </p>
             <p>
               She knows Fort Lauderdale's deepwater Las Olas Isles, Boca Raton's country-club
-              neighborhoods, and the Palm Beach corridor — and the brokerage relationships that
-              quietly move desirable residences across Southeast Florida.
+              neighborhoods, and Delray Beach — and the brokerage relationships that quietly move
+              desirable residences across Eastern Southeast Florida.
             </p>
           </div>
         </div>
@@ -138,8 +138,8 @@ export default function AboutPage() {
                 The residence after the transaction.
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-navy-800/80">
-                The most-quoted line in Mia's practice — &ldquo;Building Relationships for Life.&rdquo; A meaningful share of new
-                business arrives by introduction from former clients, neighbors, and partners.
+                Mia's practice is built on the trust she earns — a meaningful share of new business
+                arrives by introduction from former clients, neighbors, and partners.
               </p>
             </li>
           </ul>
@@ -169,7 +169,7 @@ export default function AboutPage() {
             <div>
               <dt className="text-xs uppercase tracking-[0.3em] text-brass-300">Service area</dt>
               <dd className="mt-2 font-display text-base">
-                Broward · Miami-Dade · Palm Beach
+                Eastern Fort Lauderdale · Eastern Boca Raton · Eastern Delray Beach
               </dd>
             </div>
           </dl>

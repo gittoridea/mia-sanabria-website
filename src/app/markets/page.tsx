@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Featured Markets — Southeast Florida",
   description:
-    "Featured Southeast Florida markets — Boca Raton, Fort Lauderdale, Palm Beach, Delray Beach, Lighthouse Point, Coral Ridge, and Victoria Park.",
+    "Featured Southeast Florida markets — Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach.",
   alternates: { canonical: `${SITE.url}/markets/` },
 };
 

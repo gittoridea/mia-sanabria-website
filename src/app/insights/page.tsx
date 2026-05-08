@@ -45,9 +45,9 @@ export default function InsightsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${SITE.url}/insights/#article-realtor-model`,
-    headline: "What Working with a South Florida Realtor Means in Practice",
+    headline: "What Working with a Fort Lauderdale REALTOR® Means in Practice",
     description:
-      "A working definition of the personal-representation model Mia Sanabria uses for buyers and sellers across Fort Lauderdale, Boca Raton, and the Palm Beach corridor.",
+      "A working definition of the personal-representation model Mia Sanabria uses for buyers and sellers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach.",
     author: { "@id": `${SITE.url}/#person` },
     publisher: { "@id": `${SITE.url}/#organization` },
     datePublished: PUBLISHED_ISO_PRACTICE,
@@ -60,7 +60,7 @@ export default function InsightsPage() {
       { "@type": "Thing", name: "Personal representation" },
       { "@type": "Place", name: "Fort Lauderdale, Florida" },
       { "@type": "Place", name: "Boca Raton, Florida" },
-      { "@type": "Place", name: "Palm Beach, Florida" },
+      { "@type": "Place", name: "Delray Beach, Florida" },
     ],
   };
 
@@ -121,13 +121,13 @@ export default function InsightsPage() {
             <span>The Practice</span>
           </div>
           <h2 className="font-display text-3xl text-navy-800 sm:text-4xl">
-            What working with a South Florida Realtor means in practice.
+            What working with a Fort Lauderdale REALTOR® means in practice.
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-navy-800/85">
-            Most luxury buyers and sellers in Fort Lauderdale, Boca Raton, and the Palm Beach corridor do not actually need more listings. They need fewer — the right ones, framed clearly, against current comparable sales, with a representative who treats the conversation as private from the first call.
+            Most luxury buyers and sellers in Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach do not actually need more listings. They need fewer — the right ones, framed clearly, against current comparable sales, with a representative who treats the conversation as private from the first call.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
-            That is the working definition of a personal Realtor practice. Not a service tier or a marketing label — a different shape of engagement.
+            That is the working definition of a personal REALTOR® practice. Not a service tier or a marketing label — a different shape of engagement.
           </p>
 
           <h3 className="mt-12 font-display text-2xl text-navy-800">A clearly written brief comes first.</h3>

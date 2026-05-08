@@ -10,7 +10,8 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { PersonSchema } from "@/components/schema/PersonSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
-import { MARKETS } from "@/lib/markets";
+import { getMarket, type Market } from "@/lib/markets";
+import { FEATURED_MARKETS } from "@/lib/mia";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -23,10 +24,10 @@ const HOME_FAQ = [
   {
     question: "Where does Mia serve clients?",
     answer:
-      "Mia is based in Fort Lauderdale and serves clients across Broward, Miami-Dade, and Palm Beach counties, with this site focusing on Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, Palm Beach, Delray Beach, and Lighthouse Point.",
+      "Mia is based in Fort Lauderdale and serves clients across luxury Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach, with featured market guides for Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach.",
   },
   {
-    question: "What sets Mia Sanabria apart as a South Florida Realtor?",
+    question: "What sets Mia Sanabria apart as a Fort Lauderdale REALTOR®?",
     answer:
       "It means a guided process: clarify the goal, narrow the right markets, review current comparable data, coordinate next steps, and keep the client informed from first conversation through closing.",
   },
@@ -49,7 +50,7 @@ const HOME_VALUE_PROPS = [
   },
   {
     heading: "Brokerage relationships",
-    body: "Quiet introductions when Mia's brokerage and ownership relationships across Fort Lauderdale, Boca Raton, and the Palm Beach corridor surface a fit. Access varies by market and timing.",
+    body: "Quiet introductions when Mia's brokerage and ownership relationships across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach surface a fit. Access varies by market and timing.",
   },
   {
     heading: "Current-market clarity",
@@ -61,6 +62,10 @@ const HOME_VALUE_PROPS = [
   },
 ];
 
+const featuredMarkets: ReadonlyArray<Market> = FEATURED_MARKETS.map(getMarket).filter(
+  (market): market is Market => Boolean(market)
+);
+
 export default function HomePage() {
   return (
     <>
@@ -70,8 +75,8 @@ export default function HomePage() {
 
       <Hero
         eyebrow="Mia Sanabria · REALTOR® with LPT Realty"
-        heading="Luxury real estate guidance for Fort Lauderdale and South Florida."
-        sub="Mia Sanabria is a South Florida Realtor serving buyers and sellers across Fort Lauderdale, Broward, Miami-Dade, and Palm Beach."
+        heading="Fort Lauderdale REALTOR® — Waterfront, Luxury, and Family Homes Where Memories Are Made."
+        sub="Mia Sanabria is a Fort Lauderdale REALTOR® serving buyers and sellers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/valuation/", label: "Request Home Valuation" }}
         background="image"
@@ -86,10 +91,10 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Featured Markets"
             heading="Start with the neighborhoods and property types that match the decision."
-            sub="Market guides for Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, Palm Beach, Delray Beach, and Lighthouse Point — written to point you toward current comparable sales and a property-specific conversation."
+            sub="Market guides for Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach — written to point you toward current comparable sales and a property-specific conversation."
           />
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {MARKETS.slice(0, 6).map((market) => (
+            {featuredMarkets.map((market) => (
               <li key={market.slug}>
                 <MarketCard market={market} />
               </li>

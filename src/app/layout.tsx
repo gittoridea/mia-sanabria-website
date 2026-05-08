@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "Southeast Florida real estate",
     "Fort Lauderdale realtor",
     "Boca Raton homes",
-    "Palm Beach realtor",
+    "Delray Beach realtor",
     "waterfront homes",
     "REALTOR",
     "LPT Realty",

@@ -33,7 +33,7 @@ export function RealEstateAgentSchema() {
       "Seller representation",
       "Fort Lauderdale real estate",
       "Boca Raton real estate",
-      "Palm Beach real estate",
+      "Delray Beach real estate",
     ],
     sameAs: [
       MIA.social.facebook,

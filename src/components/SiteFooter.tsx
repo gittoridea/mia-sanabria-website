@@ -18,7 +18,7 @@ export function SiteFooter() {
             {SITE.positioning}
           </div>
           <p className="mt-5 text-sm text-cream-200/90 max-w-xs">
-            {SITE.tagline}. Real estate guidance for Boca Raton, Fort Lauderdale, and Palm Beach buyers and sellers, delivered with discretion and rigor.
+            {SITE.tagline}. Real estate guidance for luxury Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach buyers and sellers, delivered with discretion and rigor.
           </p>
           <div className="mt-6 flex items-center gap-3">
             <FooterSocial href={MIA.social.facebook} label="Facebook">

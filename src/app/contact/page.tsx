@@ -13,7 +13,7 @@ import { MIA } from "@/lib/mia";
 export const metadata: Metadata = {
   title: "Contact Mia Sanabria — Private Consultation",
   description:
-    "Begin a confidential conversation with Mia Sanabria — SE Florida REALTOR® with LPT Realty. Private consultations: Boca Raton, Fort Lauderdale, Palm Beach.",
+    "Begin a private conversation with Mia Sanabria — Fort Lauderdale REALTOR® with LPT Realty. Eastern Fort Lauderdale, Boca Raton, Delray Beach.",
   alternates: { canonical: `${SITE.url}/contact/` },
   openGraph: {
     title: "Contact Mia Sanabria — Private Consultation",
@@ -59,7 +59,7 @@ export default function ContactPage() {
       <Hero
         eyebrow="Connect With Mia"
         heading="Begin a private conversation."
-        sub="A confidential consultation with a REALTOR® who serves Fort Lauderdale, Broward, Miami-Dade, and Palm Beach. Reach out to discuss your real estate goals."
+        sub="A confidential consultation with a REALTOR® who serves Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach. Reach out to discuss your real estate goals."
         background="image"
         imageSrc="/services/contact.jpg"
         imageAlt="Private outdoor terrace at a Florida coastal mansion at twilight with teak chairs, brass lanterns, and ocean horizon"
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 Icon={MapPin}
                 heading="Service Area"
                 value={`${MIA.contact.serviceCore.city}, ${MIA.contact.serviceCore.region} ${MIA.contact.serviceCore.postalCode}`}
-                hint="Representing Broward, Miami-Dade, and Palm Beach counties"
+                hint="Representing Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach"
               />
               <ContactRow
                 Icon={Clock}
@@ -159,7 +159,7 @@ export default function ContactPage() {
                 </option>
                 <option>Buying — Fort Lauderdale</option>
                 <option>Buying — Boca Raton</option>
-                <option>Buying — Palm Beach</option>
+                <option>Buying — Delray Beach</option>
                 <option>Selling — Home Valuation</option>
                 <option>Selling — Listing Conversation</option>
               </select>

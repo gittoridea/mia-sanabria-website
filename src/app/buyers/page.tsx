@@ -13,12 +13,12 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Buying — Private Buyer Representation",
   description:
-    "Private buyer representation across Southeast Florida — discreet acquisition guidance in Boca Raton, Fort Lauderdale, and Palm Beach.",
+    "Private buyer representation across Southeast Florida — discreet acquisition guidance in Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach.",
   alternates: { canonical: `${SITE.url}/buyers/` },
   openGraph: {
     title: "Buying — Private Buyer Representation",
     description:
-      "Private buyer representation across Southeast Florida — discreet acquisition guidance in Boca Raton, Fort Lauderdale, and Palm Beach.",
+      "Private buyer representation across Southeast Florida — discreet acquisition guidance in Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach.",
     url: `${SITE.url}/buyers/`,
     images: [{ url: `${SITE.url}/og-buyers.jpg`, width: 1200, height: 630 }],
   },
@@ -110,7 +110,7 @@ export default function BuyersPage() {
       <Hero
         eyebrow="For Buyers"
         heading="Private buyer representation across Southeast Florida."
-        sub="Mia represents buyers across Fort Lauderdale, Boca Raton, and Palm Beach with a deliberately small client list — every brief written before the first showing, every closing attended in person."
+        sub="Mia represents buyers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach with a deliberately small client list — every brief written before the first showing, every closing attended in person."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
         background="image"
@@ -122,7 +122,7 @@ export default function BuyersPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
             eyebrow="The Acquisition Process"
-            heading="Four phases. One Realtor throughout."
+            heading="Four phases. One REALTOR® throughout."
           />
           <ol className="mt-12 grid gap-10 lg:grid-cols-4">
             {BUYER_PROCESS.map((step, i) => (

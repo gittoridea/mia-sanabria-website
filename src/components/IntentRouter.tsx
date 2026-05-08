@@ -30,7 +30,7 @@ export function IntentRouter() {
           <span>Where would you like to begin?</span>
         </div>
         <h2 className="max-w-3xl font-display text-3xl text-navy-800 sm:text-4xl">
-          Three intents. Three private paths. One Realtor.
+          Three intents. Three private paths. One REALTOR®.
         </h2>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
           {INTENTS.map(({ href, label, blurb, Icon }) => (

@@ -14,7 +14,7 @@ export type Market = {
   /** One concrete neighborhood/landmark fact used for AEO differentiation in FAQ. */
   readonly localContext: string;
   /** County the market sits in — used in schema and copy. */
-  readonly county: "Broward County" | "Palm Beach County" | "Miami-Dade County";
+  readonly county: "Broward County" | "Palm Beach County";
 };
 
 export const MARKETS: ReadonlyArray<Market> = [

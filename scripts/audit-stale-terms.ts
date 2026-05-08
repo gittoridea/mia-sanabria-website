@@ -33,7 +33,6 @@ const FORBIDDEN: ReadonlyArray<Pattern> = [
   // Original case-sensitive patterns — preserve prior behavior:
   { term: "Klein Morgan", reason: "stale brokerage residue" },
   { term: "kleinmorgan", reason: "stale brokerage residue" },
-  { term: "msanabriarea@gmail.com", reason: "stale email residue" },
   { term: "[Legal Brokerage Name]", reason: "template placeholder residue" },
   { term: "[Privacy Email]", reason: "template placeholder residue" },
   { term: "sunandbreeze", reason: "stale Direct Axess template residue" },

@@ -46,3 +46,4 @@ bun.lockb
 screenshots/
 audit-reports/
 tsconfig.tsbuildinfo
+audits/

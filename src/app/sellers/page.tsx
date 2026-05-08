@@ -110,7 +110,7 @@ export default function SellersPage() {
       <Hero
         eyebrow="For Sellers"
         heading="Elevating your property's global presence."
-        sub="Pricing, presentation, and considered introductions — sequenced by Mia personally for residences across Mia's core Fort Lauderdale, Boca Raton, and Palm Beach corridor markets."
+        sub="Pricing, presentation, and considered introductions — sequenced by Mia personally for residences across Mia's core Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach markets."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/valuation/", label: "Request Valuation" }}
         background="image"
