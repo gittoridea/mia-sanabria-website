@@ -3,7 +3,7 @@ project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
 phase: verify
-progress: 97/141
+progress: 113/157
 mode: algorithm
 started: 2026-05-06
 updated: 2026-05-08T15:00:00Z
@@ -473,7 +473,58 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
   - **ISA-T27: REALTOR® trademark hygiene sweep** — Cato + RedTeam both flagged 8+ body-copy/H1/schema occurrences of "Realtor" without proper REALTOR® rendering (NAR rule: all-caps + ® in all media including websites except domain/username contexts). Single-string-replace pass; gated on T26 anchor decision so it ships in one diff.
   - **ISA-T28: Home LCP optimization (post-cutover via Cloudflare Polish)** — home LCP 6.2-6.4s on staging Lighthouse, root cause is unoptimized 99KB JPEG hero (next.config `images: { unoptimized: true }` is mandatory for static export, no Next.js-side AVIF/WebP/srcset). Best fix per CDN_PREFLIGHT.md: enable Cloudflare Polish at cutover (auto-WebP, lossy 48% file-size reduction). Local-side alternative: pre-derive AVIF + manually-coded srcset via `<picture>` element.
   - **ISA-T29: Migrate principal-confirm round** — surface 3 mismatches between repo and miasanabria.com to Mia: (1) email `mia@miasanabriarealtor.com` vs `msanabriarea@gmail.com`; (2) tagline "Building Relationships for Life" vs "Elevating the standard of luxury real estate in Southeast Florida"; (3) Miami-Dade in service area or just Boca/FTL/Palm Beach. Plus optional `miaQuote` field on `markets.ts` with 6 §1-verified hero quotes (Coral Ridge has no source on her .com — flag).
-  - **ISA-T30: GHL endpoint URL** — principal selected GHL at T19; awaiting BSS sub-account webhook URL before form wiring proceeds.
+  - **ISA-T30: GHL endpoint URL** — principal selected GHL at T19; awaiting BSS sub-account webhook URL before form wiring proceeds. **Optimal-pattern research delivered:** docs/GHL_INTEGRATION_OPTIMAL.md — GHL Inbound Workflow Webhook + Cloudflare Pages Function proxy (CORS-safe, secret-hygiene, brand-fidelity). 5-step implementation checklist + TCPA-2026 / Florida-§501.059 / CCPA consent text included. Implementation deferred until URL provided.
+
+## ISC additions (2026-05-08 — principal-answers cycle)
+
+### Voice / brand pivot (Q1 + Q3b refined)
+
+- [x] ISC-162: Positioning anchor narrowed from "South Florida Realtor" → "Fort Lauderdale REALTOR®" sitewide. 28 occurrences on home page alone (verified live). All "South Florida REALTOR®" body-copy/H1/schema strings flipped including insights essay headline + H2.
+- [x] ISC-163: Tagline replaced sitewide. "Building Relationships for Life" → "Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made". `MIA.voice.tagline` + `SITE.tagline` updated. Forge sweep first applied "Trusted Southeast Florida REALTOR®" (intermediate); follow-up edit applied principal's refined long-form line.
+- [x] ISC-164: Meta title updated to `"Fort Lauderdale REALTOR® | Waterfront & Luxury Homes — Mia Sanabria"`. Audit:seo flags 71c HTML-encoded (67c rendered) over the 60c principal-stated target — surfaced as Q-T31 follow-up; not auto-trimmed (principal directive verbatim).
+- [x] ISC-165: Meta description updated to `"Fort Lauderdale REALTOR® Mia Sanabria helps families find waterfront, luxury, and family homes where memories are made. Trusted local real estate guidance."` — 156c, under budget. Per-page descriptions on /contact + /about trimmed by 25-30c each to fit ≤160c.
+- [x] ISC-166: Home page Hero heading set to long-form tagline: `"Fort Lauderdale REALTOR® — Waterfront, Luxury, and Family Homes Where Memories Are Made."`. Live-fetched + visually verified on staging.
+
+### REALTOR® trademark hygiene (Q1 = A — "keep anchor, fix rendering")
+
+- [x] ISC-167: Sitewide REALTOR® rendering applied. `grep -E 'Realtor[^®]' src/ -r` returns ZERO matches (excluding domain-name `miasanabriarealtor.com` references, which per NAR rules are exempt). 12 prior occurrences flipped: mia.ts, site.ts, IntentRouter.tsx, page.tsx (FAQ + Hero), insights.tsx (headline + 2 prose), buyers.tsx (SectionHeading), about.tsx (title + body).
+
+### Service area narrowing (Q3c)
+
+- [x] ISC-168: `MIA.serviceArea.administrative` narrowed from `["Broward County", "Miami-Dade County", "Palm Beach County"]` → `["Eastern Fort Lauderdale", "Eastern Boca Raton", "Eastern Delray Beach"]`. JSON-LD live-fetch confirms 12 mentions of each new neighborhood, ZERO Miami-Dade mentions sitewide.
+- [x] ISC-169: `FEATURED_MARKETS` narrowed from 7 slugs → 5 slugs (`fort-lauderdale`, `coral-ridge`, `victoria-park`, `boca-raton`, `delray-beach`). Forge introduced `ALL_MARKET_SLUGS` private const + filtered `FEATURED_MARKETS: ReadonlyArray<MarketSlug>` derivation. `palm-beach` + `lighthouse-point` /markets/[slug]/ pages remain routable (Lighthouse Point insights essay still links there).
+- [x] ISC-170: `Market.county` union narrowed from 3 counties → 2 ("Broward County" | "Palm Beach County"). No data entry referenced Miami-Dade.
+- [x] ISC-171: Body-copy service-area phrasing updated across 8 files: "Fort Lauderdale, Boca Raton, and Palm Beach" / "Broward, Miami-Dade, and Palm Beach" → "Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach" or county-narrowed variants. Forge re-flow handled grammar; about/page.tsx:141 quote-framing replaced with "Mia's practice is built on the trust she earns" (the new long-form tagline doesn't fit "most-quoted line" framing).
+
+### Email + license # + GHL (Q3a, Q5, Q2)
+
+- [x] ISC-172: Email updated `mia@miasanabriarealtor.com` → `msanabriarea@gmail.com` in `src/lib/mia.ts` + audit-stale-terms exception removed. Live-fetch confirms /contact/ renders new email in tel/mailto/visible-text positions.
+- [x] ISC-173: License number `SL3405877` (Florida Sales Associate, AI-search-discovered) landed in `MIA.unverified.licenseNumber`. TODO comment immediately above flags primary-source DBPR verification at https://www.myfloridalicense.com/wl11.asp before production cutover. Live-fetched in /about/ JSON-LD.
+- [x] ISC-174: GHL optimal-pattern research delivered: `docs/GHL_INTEGRATION_OPTIMAL.md` (160 lines, 15.9KB, 18 cited sources). Recommendation: GHL Inbound Workflow Webhook + Cloudflare Pages Function proxy. CORS limitation on `services.leadconnectorhq.com/hooks/...` confirmed across 3 sources — direct browser fetch blocked, proxy mandatory. TCPA-2026 + Florida § 501.059 + CCPA hybrid consent text included verbatim.
+
+### Verification (post-deploy commit ea30098 — 2026-05-08T15:56:09Z)
+
+- [x] ISC-175: Live staging fetch confirms title = `"Fort Lauderdale REALTOR® | Waterfront & Luxury Homes — Mia Sanabria"`, description = principal's exact wording, 28 occurrences of `"Fort Lauderdale REALTOR"` on home, 12 of each Eastern-neighborhood name, 0 of `"Miami-Dade"`, email = `msanabriarea@gmail.com`, license = `SL3405877` in About JSON-LD.
+- [x] ISC-176: Caddy cache flipped after ~7 minutes per memory `feedback_caddy_dokploy_cache_bust.md` — `last-modified` header advanced from prior `14:49:18` to `15:56:09`. ETag flipped `diddmzy5eayo2421` → `didf26kr8idc228b`. Verified via direct `curl ?_=$(date +%s)` probe with explicit no-cache headers.
+- [x] ISC-177: Build/audit chain at commit ea30098: typecheck clean, build 24/24 routes, audit:schema 105 JSON-LD blocks valid, audit:stale clean. **audit:seo flags 3 title-length warnings (home + 404 + 404 fallback all serve the principal's 67-char title — over 60c target, surfaced for principal review at follow-up T31).**
+
+## Follow-up tasks (added 2026-05-08 principal-answers cycle)
+
+- **T31: Title length over budget — principal review** — SITE.title set to `"Fort Lauderdale REALTOR® | Waterfront & Luxury Homes — Mia Sanabria"` per principal direction (67c rendered, 71c HTML-encoded). audit:seo SERP-display target was 60c. Either accept the slight over-budget (Google will truncate at SERP display but full title still in `<head>`) OR trim. Possible trims: drop "& Luxury" → 53c; drop "— Mia Sanabria" tail → 52c (relies on shortTitle/header for brand). Surface for principal selection.
+
+## Decisions (continued — 2026-05-08 principal-answers cycle)
+
+- 2026-05-08 — **Q1 anchor decision (REVISED in-flight):** principal initially answered Q1=A ("keep South Florida Realtor + add ®"). Mid-cycle, principal supplied refined directive narrowing positioning anchor to "Fort Lauderdale REALTOR®" via the tagline+title+description bundle. Treated the refinement as superseding Q1=A. Net effect: positioning narrowed geographically AND ® rendered correctly. Both objectives met in one diff.
+- 2026-05-08 — **License # discovery without DBPR primary-source verification:** AI web search returned `SL3405877` as Mia's Florida Sales Associate license. DBPR public-search portal returned errors during attempted primary-source confirmation (license relationship page returned "request cannot be processed at this time"). Landed the value with a `// TODO: verify on https://www.myfloridalicense.com/wl11.asp before production cutover` comment per Compliance Gate axis 8. Principal directive ("locate her license number as it should be public") + their stated tolerance ("all of these can be done the day of launch giving Mia time to reply") = land-now-with-flag is correct posture.
+- 2026-05-08 — **FEATURED_MARKETS narrowing without page deletion:** dropped palm-beach + lighthouse-point from the home-page featured grid + nav, but kept their /markets/[slug]/ pages routable. Rationale: (a) the just-shipped Lighthouse Point insights essay links to /markets/lighthouse-point/, and (b) the principal said "for now" — "for now" suggests scope tightening, not page deletion.
+- 2026-05-08 — **Title 67c over 60c target NOT auto-trimmed:** principal supplied the exact 67-char string AND stated "60 chars". Two interpretations: (a) principal arithmetic error on count, (b) principal accepted the slight over-budget. Default to applying their string verbatim; surface as T31 follow-up. Auto-trim would override their explicit directive.
+- 2026-05-08 — **Caddy cache flip lag:** observed ~7-minute delay between deploy completing (15:49) and Caddy serving fresh content (15:56) on this cycle. Per memory `feedback_caddy_dokploy_cache_bust.md` — wait-then-re-probe pattern is the verification path. Deploy-and-verify script's "stale" warning was a script-level false alarm (probed too quickly post-deploy).
+
+## Changelog (continued — 2026-05-08 principal-answers cycle)
+
+- **2026-05-08 — conjecture:** "AI web search will reliably surface a Florida real-estate license number." → **partially-confirmed:** Bing/web-search returned `SL3405877` as Mia's Sales Associate license, with a credibly-citable summary. → **refuted-by:** DBPR primary-source portal returned errors during attempted independent verification. → **learned:** AI search is sufficient to *propose* a license number (low risk if flagged with TODO), but production-grade landing requires DBPR primary-source confirmation. The TODO-comment-with-cutover-deadline pattern is the right hedge.
+- **2026-05-08 — conjecture:** "Forge will apply principal's tagline values verbatim from the prompt." → **partially-confirmed:** Forge applied "Trusted Southeast Florida REALTOR®" (the prompt's stated tagline) cleanly across 15 files. **In-flight, the principal supplied a refined longer tagline** ("Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made") — Forge had already finished and was not re-dispatched. → **learned:** for principal in-flight refinements during a Forge multi-file sweep, the cleanest pattern is (a) let Forge complete the in-flight scope, then (b) apply the refinement as targeted Edit-tool follow-ups in the main thread. SendMessage to a still-running Forge introduces ambiguity about which version of the directive should hold; targeted post-Forge edits are deterministic.
+- **2026-05-08 — conjecture:** "Caddy cache will flip immediately after Dokploy deploy reports `done`." → **refuted-by repeat:** observed ~7-minute Caddy-cache lag (was ~10 mins in prior cycle). → **learned:** the deploy-and-verify script's cache-bust check fires too soon (immediately post-`done`). The script should poll the live URL with a `last-modified` comparison loop until the header advances, with a 15-minute timeout. Codified as a follow-up improvement to scripts/deploy-and-verify.ts.
 
 ## Decisions (continued — 2026-05-08 T16-T22 cycle)
 
