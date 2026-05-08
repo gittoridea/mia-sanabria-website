@@ -1,103 +1,117 @@
-# Website Production Loop — Next Session Prompt
+# Website Production Loop — Cycle 5 Next-Session Prompt
 
-> Paste-ready prompt for a future session that continues levelling up `~/code/mia-sanabria-website/` (or any other website where this skill is invoked). Feed this verbatim to a fresh Claude Code session at the start of the next cycle.
+> Paste-ready prompt for cycle 5 of `~/code/mia-sanabria-website/`. Replaces the cycle-3 prompt at v0.1.0; updated cycle-4 alongside skill v0.2.0.
 
 ---
 
 ```
 /effort max
 
-MISSION: Mia Sanabria Website — Cycle 4 (Post-Codex-Spark Implementation Sprint + GHL Integration if URL available)
+MISSION: Mia Sanabria Website — Cycle 5 (Statutory Compliance + AEO Funnel Sprint + Skill v0.3.0 Stress-Test)
+
+Continue ~/code/mia-sanabria-website/ ISA. Do NOT start a new ISA.
 
 Primary objective:
-Continue the cycle-3 work captured in ~/code/mia-sanabria-website/ — implement the highest-leverage tier-1 items the Codex-Spark expert teams identified, run the verification + Cato + Gemini chain, and refresh the gap matrices. If the GHL BSS sub-account webhook URL has arrived since cycle-3, wire the contact + valuation forms (single biggest conversion lift on the table).
+Resolve the open principal-decisions surfaced in cycle-3/4, ship the highest-leverage Tier-1/Tier-2 items from the upgrade plan, run a non-realtor-vertical stress test of WEBSITE_PRODUCTION_LOOP_SKILL.md v0.2.0 (test the parameterization), and decide whether to promote the skill to ~/.claude/skills/WebsiteProductionLoop/.
 
-Read this first to anchor:
-1. ~/code/mia-sanabria-website/ISA.md (entire mission-3 section: Decisions / Changelog / Verification for cycle-3)
-2. docs/PRODUCTION_READINESS_HANDOFF_CODEX_SPARK_2026-05-08.md (cycle-3 closeout — §12 remaining blockers + §13 next 3 actions are the cycle-4 starting point)
-3. docs/CODEX_SPARK_SYNTHESIS_REPORT.md (read §8.5 advisor + §11 Cato findings + §12 license-rendering principal-decision)
-4. docs/MIA_SITE_HIGH_IMPACT_UPGRADE_PLAN.md (Tier 1 + Tier 2 items are this cycle's surface)
-5. docs/GEMINI_BLINDSPOT_CHECK_2026-05-08.md (5 blindspots + 2026 features missing)
-6. docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md (the loop skill spec — re-probe codex/Spark capability if older than 30 days)
+Read first to anchor:
+1. ISA.md (cycle-3 + cycle-4 sections — Decisions / Changelog / Verification)
+2. docs/PRODUCTION_READINESS_HANDOFF_SPARK_ONLY_CYCLE_4_2026-05-08.md (cycle-4 closeout)
+3. docs/PRINCIPAL_DECISION_REGISTER.md (6 cards — RESOLVE in cycle-5 OBSERVE phase before any other work)
+4. docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md v0.2.0
+5. docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md (v0.1.0 → v0.2.0 evolution)
+6. docs/skills/SKILL_CREATOR_PROCESSING_NOTES.md (cycle-4 CreateSkill integration notes)
+7. docs/CODEX_SPARK_SYNTHESIS_REPORT.md (cycle-3) + cycle-4 closeout
+8. docs/MIA_SITE_HIGH_IMPACT_UPGRADE_PLAN.md (Tier 1+2 are this cycle's surface)
+9. docs/BRAND_AND_VISUAL_PRODUCTION_QA_MATRIX.md (cycle-4 — see ⚠️ + 🔒 cells)
+10. docs/codex-spark-audits/cycle-4/ (6 Spark audits — read team-E + team-F especially)
+11. reports/audit-completeness.md, reports/audit-images.md, reports/audit-brand-consistency.md (current baseline)
 
-Cycle 4 deliverable manifest (in priority order):
+Cycle 5 deliverables (ranked by leverage × principal-gate-status):
 
-D1. Principal-decision resolution on license-rendering (synthesis §12). Two readings of ISA §Constraints line 54 are in tension; ask the principal which governs and act on the answer.
+PHASE 0 — Principal-decision register triage (FIRST, BEFORE ALL OTHER WORK):
+D1. Walk through PRINCIPAL_DECISION_REGISTER.md cards 1-6 with the principal. Resolve at least Cards 1 (license rendering) + 4 (REALTOR® usage) + 5 (combined logo) before code work. Status field on each card moves to DECIDED.
 
-D2. If GHL webhook URL available: wire contact + valuation forms via Cloudflare/Netlify Pages Function proxy per docs/GHL_INTEGRATION_OPTIMAL.md. Add affirmative-consent mechanics (checkbox + timestamp + audit log) to fully ship TCPA compliance — cycle-3 only added prose. If GHL webhook URL NOT available: skip D2 and surface the gating in handoff.
+PHASE 1 — Statutory-binary compliance (gated on D1):
+D2. Brokerage-adjacency component refactor (Team E cycle-3+4 statutory-binary blocker). Add LPT Realty disclosure adjacent to every contact point (phone tel, email mailto, form helper) in SiteHeader.tsx + SiteFooter.tsx + form pages.
+D3. License rendering: implement Card 1 decision (likely Reading B = null until Mia confirms in writing).
+D4. REALTOR® mark cleanup per Card 4: replace descriptive phrasing with member-name-adjacent usage; capitalize keywords metadata.
+D5. Combined REALTOR®+MLS footer graphic per Card 5: source pure NAR REALTOR® mark; remove MLS attribution until Mia confirms MLS affiliation in writing.
 
-D3. Brokerage-adjacency component refactor (Team E statutory blocker #4). Add LPT Realty disclosure adjacent to every contact point (phone tel, email mailto, form helper). Component-level fix in src/components/SiteHeader.tsx + src/components/SiteFooter.tsx + form pages.
+PHASE 2 — GHL form wiring (only if URL has arrived):
+D6. If GHL BSS sub-account webhook URL is supplied: wire contact + valuation forms via Cloudflare/Netlify Pages Function proxy per docs/GHL_INTEGRATION_OPTIMAL.md. Add affirmative-consent mechanics (checkbox + timestamp + IP audit log + number-specific authorization) to fully ship TCPA per Florida § 501.059 + 2024 FCC one-to-one consent rule. If URL not supplied: skip D6 and document gating in handoff.
 
-D4. Answer-first AEO + market-anchored proof on the 5 non-market funnel pages (4-team convergence). For /buyers/, /sellers/, /valuation/, /about/: add a 75-125 word AEO answer block before the existing structure; include 3 internal links to relevant market pages. /contact/ skips the AEO block.
+PHASE 3 — AEO funnel sprint (4-team convergence finding from cycle-3):
+D7. Answer-first AEO + market-anchored proof on /buyers/, /sellers/, /valuation/, /about/. Each adds a 75-125 word answer block before existing content. Internal-link to 3 relevant market pages. Use Brand-Contract-compliant typography.
+D8. Discretion / advisory AEO vocabulary on /about/ + /buyers/ + /sellers/. Add 2-3 phrases per Gemini blindspot: "off-market access," "strict client confidentiality," "discreet representation," "investment-grade waterfront analysis." Centralize in MIA.voice.advisoryPhrases.
+D9. Concierge-vs-Contact intake repositioning (Gemini blindspot). Change /contact/ H1 to "Private Consultation Request" or "Client Intake"; add 1 luxury-qualifying dropdown.
 
-D5. Steering-language audit + neutralization on 13 market pages. Grep src/lib/markets.ts for school/family/kids/children references; substitute neutral alternatives. Update audit-stale-terms.ts with steering-language sentinels.
+PHASE 4 — Steering language audit + neutralization:
+D10. Grep src/lib/markets.ts for school/family/kids/children/student references. Substitute with neutral alternatives ("residents enjoy," "the neighborhood lifestyle," "households," "the community"). Update audit-stale-terms.ts with steering-language sentinels.
 
-D6. LAST_UPDATED build-time stamp on market pages + homepage hero (Gemini static-atrophy lever).
+PHASE 5 — Skill stress-test (the IMPORTANT meta-cycle work):
+D11. Pick a non-realtor candidate vertical (HVAC mock site OR existing Sunrise Paddleboards client OR a fabricated "professional services" trial) and ATTEMPT to invoke WEBSITE_PRODUCTION_LOOP_SKILL.md v0.2.0 against it. Document where the parameterization breaks down. The output is NOT a fully-built second site — it's a stress-test report showing which v0.2.0 fields are still realtor-leaky.
+D12. Based on D11 + cycle-4 Team F's "v0.3.0 warranted: yes" verdict, write the spec for WEBSITE_PRODUCTION_LOOP_SKILL v0.3.0 (don't ship yet — write the spec).
+D13. Decide: promote skill to ~/.claude/skills/WebsiteProductionLoop/? (Yes if D11 stress-test passed; defer if v0.3.0 spec is needed first.)
 
-D7. Concierge-vs-Contact intake repositioning (Gemini blindspot top concern) — change /contact/ H1 to "Private Consultation Request"; add 1 luxury-qualifying dropdown.
-
-D8. Discretion / advisory AEO vocabulary injection on /about/ + /buyers/ + /sellers/.
-
-D9. Spanish hreflang for SE FL Hispanic markets (Cato §11.6 non-corpus angle). Emit hreflang="es" pointing self-referentially to English routes; flip to /es/ routes once Mia confirms language status.
-
-D10. Lighthouse-mobile threshold gate in scripts/deploy-and-verify.ts (Team F).
-
-D11. Refresh docs/WORLD_CLASS_REALTOR_SITE_GAP_MATRIX.md, docs/SEO_AEO_MARKET_AUTHORITY_MATRIX.md, docs/MARKET_PAGE_COMPLETION_SCORECARD.md with cycle-4 cell deltas (cycle-3 deferred refresh — synthesis §10).
-
-D12. Run staging deploy + external validators (FB Sharing Debugger, Twitter Card Validator, Google Rich Results) on the 5 changed page types (cycle-3 deferred per advisor recommendation).
-
-D13. Re-run Cato cross-vendor audit on cycle-4 deliverables; capture verdict.
-
-D14. Closeout doc (docs/PRODUCTION_READINESS_HANDOFF_CYCLE_4_<date>.md) + ISA append.
+PHASE 6 — Verification + deploy + closeout:
+D14. Audit chain green: typecheck + lint + build + audit:all (incl. images + brand) + audit-completeness FAIL gate.
+D15. Run staging deploy via bun scripts/deploy-and-verify.ts. Verify Caddy flip + cache-bust curl on changed routes. Capture screenshots before/after at /tmp/mia-cycle5-*-qa-{before,after}/.
+D16. Cycle-5 closeout doc + ISA append + commit + push.
 
 Mission boundaries:
-- Do not modify DNS, .com production routing, Cloudflare, or live GHL production surfaces without explicit principal approval.
-- Do not fabricate facts, sales claims, awards, designations, Spanish-language status, MLS membership, DBPR verification.
-- Do not treat Boca Raton or Delray Beach as Broward County — they are Palm Beach County.
-- Do not violate the Brand System Contract (no new color, font, glassmorphism, etc.).
-- Do not skip audit-completeness or any audit chain step.
-- Do not mark complete without evidence.
-- Honor ISA §Constraints line 54 once the principal interpretation lands.
+- Do NOT modify DNS, .com production routing, Cloudflare, or live GHL production surfaces without explicit principal approval.
+- Do NOT fabricate facts about Mia (license, designations, MLS, Spanish, awards, sales).
+- Do NOT treat Boca Raton or Delray Beach as Broward County.
+- Do NOT violate the Brand System Contract (no new color, font, glassmorphism — Brand System Contract is locked).
+- Do NOT skip audit-completeness, audit:images, audit:brand.
+- Do NOT mark complete without evidence.
+- Do NOT silently resolve any PRINCIPAL_DECISION_REGISTER card.
+- Do NOT downgrade a statutory-binary compliance finding to "concerns" by averaging across audit teams.
+- Do NOT claim TCPA-compliant in any synthesis or marketing copy unless full mechanics ship.
+- Do NOT claim the skill is generic until D11 stress-test passes.
 
-Algorithm: PAI v6.4.0 (or LATEST). The Website Production Loop skill spec at docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md governs how the cycle composes with the Algorithm.
+Algorithm: PAI v6.4.0. WEBSITE_PRODUCTION_LOOP_SKILL.md v0.2.0 governs the cycle composition.
+
+Model lane:
+- Default: multi-family lane (Spark for most teams + Cato for cross-vendor verify + Gemini for blindspot + advisor for commitment-boundary). Cycle-4 was Spark-only; cycle-5 returns to multi-family unless principal directs otherwise.
+- Concurrency cap: ≤3 same-model concurrent (multi-family) per skill v0.2.0.
 
 Verification:
 - bun run typecheck && bun run lint && bun run build
-- bun run audit:all (must end 14+ PASS / 0 FAIL; WARN preserved or reduced)
-- Cato cross-vendor audit (E5-mandatory at VERIFY)
-- Advisor commitment-boundary call before closeout
+- bun run audit:all (now includes audit:images + audit:brand)
+- Cato cross-vendor schema-enforced verdict (E5-mandatory at VERIFY)
+- Gemini blindspot review
+- Advisor commitment-boundary call
 - Re-read check at closeout
 
-Anti-criteria:
-- No PAI infrastructure edits outside this project
-- No Brand System Contract drift
-- No fabricated facts
-- No statutory-binary compliance items left as "concerns" — they are launch-blocking by definition
-- No silent contradiction-resolution between authority layers (every contradiction → ## Decisions entry)
-
 Final response should include:
-1. Cycle-4 result
-2. Which deliverables shipped vs deferred (with reasons)
-3. Cato verdict
-4. Advisor verdict
-5. Verification results
-6. Updated scorecards
-7. Remaining blockers
-8. Next-cycle prompt (auto-update this file)
+1. Cycle-5 result
+2. Each D1-D16 deliverable status (shipped / deferred with reason / blocked-by-X)
+3. PRINCIPAL_DECISION_REGISTER status changes (which cards moved DECIDED)
+4. Cato + Gemini + advisor verdicts
+5. audit:all + audit:images + audit:brand chain results
+6. Updated matrices
+7. Skill v0.3.0 spec (if written) + promotion decision
+8. Remaining blockers for public launch
+9. Next-cycle prompt
 
 Success criteria:
-- D1 (license-rendering principal-decision) resolved
-- At least D3 + D4 + D5 + D6 + D11 shipped this cycle
-- D2 + D9 if dependencies clear
-- Audit chain green
-- The next session is materially smarter than this one.
+- At least D1 + D2 + D3 (the statutory-binary remediation) shipped this cycle
+- D7-D10 shipped (the AEO funnel sprint)
+- D11 stress-test attempted with documented result (pass/partial/fail)
+- D14 audit chain green; D15 deploy + live verify
+- The next session is materially smarter than this one
+- The site moves visibly closer to "world-class luxury realtor production-grade" by Team C's agency-ship-score axis (cycle-4 was 4/10; cycle-5 target is 6+/10)
 ```
 
 ---
 
-## Notes for the cycle-4 operator
+## Notes for the cycle-5 operator
 
-- Cycle 3 surfaced a pattern of "Anthropic-family completeness-claim bias" (Cato §11) — when the audit chain says PASS, both Claude Code and the OpenAI Codex teams tend to characterize "concerns" as "next-cycle work" without distinguishing statutory-binary from policy-judgment. Cycle 4 should explicitly maintain that distinction at every gate.
-- The advisor (Claude-family) is excellent at commitment-boundary review but shares Anthropic-family blind spots. Cato (cross-vendor) is the formal counterweight; treat its verdict as authoritative on completeness-claim semantics.
-- Spark concurrency cap (max 3 same-model concurrent) is documented in the capability probe; honor it in cycle-4's parallel dispatch.
-- The 7 audit reports + Gemini blindspot are read-once substrate — cycle 4 should NOT re-run all 7 teams. Re-run is appropriate when (a) ≥6 weeks have passed, (b) major Brand System Contract or vertical-profile change, (c) audit-chain regression happens. For "did cycle-4 fix what cycle-3 caught?" — that's a Cato-only re-audit on the diff.
+- **Cycle-4 caught a real Brand Contract violation.** `backdrop-blur` glassmorphism was shipping in `SiteHeader.tsx` since cycle-1; cycle-3 audit teams missed it; the cycle-4 `audit:brand` sentinel caught it. The new sentinels are load-bearing — keep them green.
+- **The Spark-only lane works at ≤2 concurrent.** Cycle-4 ran 6 Spark teams in 3 batches of 2 with no stdin-stage stalls. The rate-limit cap rule in skill v0.2.0 §1a is empirical, not aspirational.
+- **The deploy preflight gate had TWO bugs that took two cycles to find.** Cycle-3 caught the field-name (`summary→counts`); cycle-4 caught the casing (`pass→PASS`). Both fixes shipped. Watch for similar producer-consumer-shape mismatches in any new audit script — type-share between producer and consumer is the structural fix.
+- **The principal-decision register is load-bearing.** Cycle-3 left license-rendering and TCPA mechanics ambiguous; cycle-4 surfaced 6 cards. Cycle-5 starts by walking the cards with the principal. Do NOT silently advance past an OPEN card.
+- **The skill v0.2.0 cleared its own gate during cycle-4.** v0.2.0 was written via CreateSkill UpdateSkill; cycle-4 Team F (Loop Improvement Architect) audited the v0.2.0 spec and found it "partial" on closing cycle-3 gaps. Cycle-5 D11 stress-test on a non-realtor vertical is the next quality gate; v0.3.0 spec is the write-up that closes the partial.
+- **Audit chain coverage now spans 28 PASS** (14 audit:all + 7 audit:images + 7 audit:brand) across 25 routes + sentinel scripts. Cycle-5 should ADD coverage (e.g. Lighthouse-mobile threshold gate per Team F cycle-3 + Team F cycle-4) rather than deepening into single dimensions.

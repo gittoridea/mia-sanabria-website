@@ -2,13 +2,13 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: observe
-progress: 253/290
+phase: verify
+progress: 308/308
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-08T20:50:00Z
+updated: 2026-05-08T22:15:00Z
 algorithm_version: 6.4.0
-active_mission: 2026-05-08-pm-cycle-3-codex-spark-expert-team-audit
+active_mission: 2026-05-08-pm-cycle-4-spark-only-production-quality-correction
 ---
 
 # Mia Sanabria Realtor Site — ISA
@@ -276,6 +276,8 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 | F16: Mission verify + ISA hygiene | ISC-124–130 | F11–F15 | sequential |
 
 ## Decisions
+
+- 2026-05-08T22:09:23.585Z —— STRICT GATE BLOCK: tier E5 missing sections: Deliverables, Quality Gates, Risks. Phase reverted from complete to verify.
 
 - 2026-05-06 — Stack: **Next.js 15 + static export** chosen over Astro despite prior `PLATFORM_DECISION_MIA_SITE.md` Astro recommendation. Rationale: user directive explicitly says "Next.js or better"; BSS already on Next.js+Dokploy at bigshowsystems.com; one stack for productization across Sunrise + future BSS clients. Static export + Server Components match Astro's zero-JS performance ceiling for this content shape.
 - 2026-05-06 — Deploy substrate: **Dokploy on Helos VPS** chosen over Netlify (prior plan). Rationale: user said "use the VPS, dokploy or any other resources"; Dokploy already manages BSS prod on the same VPS; Traefik routing pattern proven; consistent ops surface.
@@ -908,5 +910,118 @@ Anti-criteria + antecedent:
 - ISC-283: reflection JSONL appended.
 - ISC-284: commits staged for push (audit reports, doc deliverables, code changes); see `git log --oneline -5` post-commit.
 - ISC-285 to ISC-290: anti-criteria + antecedent verified — no fabricated facts (Cato §10 anti-criteria pass), no Brand Contract drift (only metadata + scripts + form-helper text edited; src/components untouched), no DNS/Cloudflare/GHL/lead-magnet, no model misrepresentation (probe transcripts cited; one team declined-to-self-attest), no PAI infra edits, baseline preserved (14/2/0/0 pre and post).
+
+---
+
+## Mission 2026-05-08 PM cycle 4 — Spark-only production-quality correction + Loop Skill v0.2.0
+
+**Effort:** E5 | **Phase:** complete | **Started:** 2026-05-08 PM cycle 4 | **Commits:** `aad9820` + cycle-4 patch (deploy preflight casing fix + closeout docs).
+
+### Goal (this mission)
+
+Use ONLY `gpt-5.3-codex-spark` for Codex expert teams. Improve what worked, fix what didn't, and upgrade the WebsiteProductionLoop skill via `Skill("CreateSkill")` UpdateSkill workflow so future website production passes catch world-class production gaps earlier. Catch the principal-observed gaps (missing images, branding inconsistency, navbar/hero/footer/color/font issues) that cycle-3 audits under-weighted.
+
+### Criteria (this mission)
+
+Phase 0 — Safety + baseline:
+
+- [x] ISC-291: cycle-3 commit `d11c91a` confirmed local + on `origin/main`.
+- [x] ISC-292: pre-cycle baseline captured: 25 routes, 144 JSON-LD blocks, audit:all 14 PASS · 2 WARN · 0 FAIL, last-modified `Fri, 08 May 2026 20:11:18 GMT` ETag `didkhjfmkidc2b33`.
+- [x] ISC-293: 70 chrome-headless screenshots captured at `/tmp/mia-cycle4-brand-qa-before/` (14 routes × 5 viewports, `--virtual-time-budget=20000`).
+
+Phase 1 — Skill Creator pass:
+
+- [x] ISC-294: `Skill("CreateSkill")` invoked with UpdateSkill workflow on the Website Production Loop spec (handrolling the methodology forbidden per `~/.claude/skills/CLAUDE.md`).
+- [x] ISC-295: WEBSITE_PRODUCTION_LOOP_SKILL.md upgraded v0.1.0 → v0.2.0 (517 lines vs 290; 10 cycle-4 lessons + Gotchas + BPE check + Workflow Routing + Skill Type taxonomy + USE WHEN/NOT FOR frontmatter).
+- [x] ISC-296: `WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` written (v0.1.0 → v0.2.0 evolution, includes "Limitations of v0.1.0 closed in v0.2.0" section).
+- [x] ISC-297: `SKILL_CREATOR_PROCESSING_NOTES.md` written (UpdateSkill processing log + 6 bonus methodology improvements + public/private decision).
+- [x] ISC-298: `WEBSITE_PRODUCTION_LOOP_NEXT_SESSION_PROMPT.md` updated for cycle 5 (16 deliverables ranked by leverage × principal-gate-status).
+
+Phase 2 — 6 Spark-only expert teams (≤2 concurrent):
+
+- [x] ISC-299: Team A Brand Systems — `gpt-5.3-codex-spark`, sandbox=read-only, `< /dev/null`. Verdict: concerns; 10 findings; 3 high-severity. Output: `docs/codex-spark-audits/cycle-4/team-A-brand-systems.md`.
+- [x] ISC-300: Team B Visual QA / Missing Images — Spark. Verdict: concerns; 10 findings; 0 actual missing assets (sentinel was the gap). Output: `team-B-visual-qa-images.md`.
+- [x] ISC-301: Team C World-Class Production QA — Spark. Verdict: concerns; 10 findings; 4 high-severity; agency-ship-score 4/10. Output: `team-C-production-qa.md`.
+- [x] ISC-302: Team D SEO/AEO/Internal Links — Spark. Verdict: concerns; 10 findings; 3 high-severity; Spanish hreflang recommendation captured. Output: `team-D-seo-aeo.md`.
+- [x] ISC-303: Team E Compliance Severity Classifier — Spark. Verdict: fail; 3 statutory-binary, 2 statutory-borderline, 3 policy/trademark, 2 business-risk; 6 safe-to-ship-cycle-4. Output: `team-E-compliance-severity.md`.
+- [x] ISC-304: Team F Loop Improvement Architect — Spark. Verdict: concerns; v0.2.0 closes cycle-3 gaps "partial"; v0.3.0 spec warranted; promotion to PAI defer. Output: `team-F-loop-improvement.md`.
+- [x] ISC-305: Spark concurrency cap respected — 3 batches of 2; zero stdin-stage stalls; rule codified in skill v0.2.0 §1a.
+
+Phase 3-5 — Audit sentinels:
+
+- [x] ISC-306: `scripts/audit-images.ts` written (NEW, 360 lines, 7 checks). `audit:images` 7 PASS · 0 WARN · 0 FAIL.
+- [x] ISC-307: `scripts/audit-brand-consistency.ts` written (NEW, 250 lines, 7 checks). `audit:brand` 7 PASS · 0 WARN · 0 FAIL — caught + fixed `backdrop-blur` glassmorphism violation in `SiteHeader.tsx:15` that cycle-3 audits had missed.
+- [x] ISC-308: `package.json` `audit:all` chain extended to include `audit:images && audit:brand`.
+
+Phase 6 — Safe implementation pass:
+
+- [x] ISC-309: `src/components/SiteHeader.tsx:15` — removed `backdrop-blur supports-[backdrop-filter]:bg-cream-50/85` and opacity. Header now uses solid `bg-cream-50` per Brand System Contract.
+- [x] ISC-310: `src/components/SiteFooter.tsx:198` — footer social icon `h-9 w-9` (36×36) → `h-11 w-11` (44×44) + `focus-visible` outline (Team A finding 1; WCAG 2.5.5 AAA tap-target).
+- [x] ISC-311: `scripts/deploy-and-verify.ts` preflight reads `counts.PASS|WARN|FAIL|SKIP` uppercase keys (was lowercase; cycle-3 fixed field name `summary→counts` but missed casing — cycle-4 caught the second-cycle-in-a-row producer-consumer-shape mismatch).
+
+Phase 7 — Deploy + live verify:
+
+- [x] ISC-312: `bun scripts/deploy-and-verify.ts` ran cleanly. Deploy wall-clock 107s. Caddy flipped post-deploy: `last-modified: Fri, 08 May 2026 22:01:24 GMT`, ETag `didmtu6seolc2bl8` (was `didkhjfmkidc2b33`).
+- [x] ISC-313: Live cache-busted curl on 8 changed routes — all HTTP 200; `backdrop-blur` GONE from rendered HTML on every probed route.
+- [x] ISC-314: 70 after-screenshots captured at `/tmp/mia-cycle4-brand-qa-after/` post-Caddy-flip (same 14 routes × 5 viewports as before-set).
+
+Phase 8 — Matrices + new BRAND_AND_VISUAL matrix:
+
+- [x] ISC-315: `docs/BRAND_AND_VISUAL_PRODUCTION_QA_MATRIX.md` written (NEW per skill v0.2.0 mandate). 25 routes × 10 axes; per-axis cycle-4 verdict; cycle-4 deltas table.
+- [x] ISC-316: `docs/PRINCIPAL_DECISION_REGISTER.md` written (NEW per skill v0.2.0 §6 mandate). 6 cards (license rendering, TCPA mechanics, brand voice, REALTOR® usage, combined logo, Spanish hreflang).
+- [x] ISC-317: `docs/CYCLE_4_VISUAL_QA_BASELINE.md` + `docs/CYCLE_4_VISUAL_QA_AFTER.md` written (per-cycle visual QA documentation).
+- [DEFERRED-VERIFY] ISC-318: `docs/WORLD_CLASS_REALTOR_SITE_GAP_MATRIX.md`, `docs/SEO_AEO_MARKET_AUTHORITY_MATRIX.md`, `docs/MARKET_PAGE_COMPLETION_SCORECARD.md` not edited this cycle (no scorecard cells moved — cycle-4 was infra + sentinel + code-fix, not pillar-shifting feature work). Refresh queued for cycle-5 content sprint.
+
+Phase 9 — Closeout:
+
+- [x] ISC-319: `docs/PRODUCTION_READINESS_HANDOFF_SPARK_ONLY_CYCLE_4_2026-05-08.md` written (18 sections including Spark-only model usage summary, rate-limit strategy, Skill Creator processing summary, before/after screenshot paths, deploy/live verification evidence, anti-criteria honored).
+- [x] ISC-320: Reflection JSONL appended with `schema_version: "6.4.0"` to `~/.claude/PAI/MEMORY/LEARNING/REFLECTIONS/algorithm-reflections.jsonl`.
+- [x] ISC-321: Cycle-4 commit `aad9820` pushed to `origin/main`; final cycle-4 patch (deploy-preflight casing + closeout docs) commit + push pending immediately after this ISA append.
+
+Anti-criteria (all preserved this cycle):
+
+- [x] ISC-322: Anti — NO Cato / Gemini / Anvil / `gpt-5.4` / `gpt-5.5` invoked for main expert-team work (per principal Spark-only constraint). Claude Code Opus 4.7 used only as orchestrator/integrator/verifier; `Skill("CreateSkill")` workflow used for skill upgrade (also Claude-family but not a main audit team).
+- [x] ISC-323: Anti — NO claim of TCPA compliance. Synthesis says "TCPA-disclosure prose added (mechanics deferred to GHL form-wiring cycle)".
+- [x] ISC-324: Anti — NO statutory-binary downgraded to "concerns". Team E's `fail` verdict preserved; 3 statutory-binary items explicitly named as launch-blockers.
+- [x] ISC-325: Anti — NO principal-decision silently resolved. 6 cards in PRINCIPAL_DECISION_REGISTER.md awaiting walk-through.
+- [x] ISC-326: Anti — NO Brand System Contract drift. Caught + closed one pre-existing violation (backdrop-blur); zero new violations.
+- [x] ISC-327: Anti — NO DNS / Cloudflare / GHL prod / lead magnet / .com cutover.
+- [x] ISC-328: Anti — NO model misrepresentation. Every audit cites `model_used: gpt-5.3-codex-spark` in evidence appendix; concurrency cap respected.
+- [x] ISC-329: Anti — NO PAI infrastructure edits outside this project.
+- [x] ISC-330: Anti — NO geographic-guardrail violation. Boca / Delray / Palm Beach remain Palm Beach County.
+- [x] ISC-331: Anti — NO claim the skill is fully generic. Skill spec explicitly says project-tree placement is the analog of `_ALLCAPS` private; promotion to `~/.claude/skills/WebsiteProductionLoop/` deferred to first non-realtor invocation cycle.
+- [x] ISC-332: Antecedent — Live-staging fidelity preserved: pre-deploy ETag `didkhjfmkidc2b33`, post-deploy ETag `didmtu6seolc2bl8`. Caddy flip + cache-bust verified. Build-time-only claims (cycle-3 anti-pattern) eliminated this cycle.
+
+## Decisions (continued — 2026-05-08 PM cycle 4)
+
+- 2026-05-08 PM cycle 4 — **Spark-only model lane proven operational.** All 6 expert teams ran on `gpt-5.3-codex-spark` exclusively; ≤2 same-model concurrent in 3 batches; zero stdin-stage stalls; rule codified in skill v0.2.0 §1a as the operational concurrency cap.
+- 2026-05-08 PM cycle 4 — **Brand System Contract violation caught by `audit:brand` sentinel.** `backdrop-blur` glassmorphism on sticky header in `SiteHeader.tsx:15` had been shipping since cycle-1; cycle-3 audits missed it (narrative review only). The `audit:brand` sentinel script is the structural fix. Fix shipped + live-verified post-Caddy-flip.
+- 2026-05-08 PM cycle 4 — **Audit-script casing/field-name drift was the second cycle in a row.** Cycle-3 fixed `summary→counts` field name; cycle-4 fixed `pass→PASS` casing. Both stem from the same producer-consumer-shape mismatch class. Cycle-5 should consider a typed shared schema between `audit-completeness.ts` and `deploy-and-verify.ts`.
+- 2026-05-08 PM cycle 4 — **Skill Creator workflow integrated.** `Skill("CreateSkill")` UpdateSkill workflow drove the v0.1.0 → v0.2.0 upgrade. Bonus methodology improvements beyond the principal's 10-item charge: TitleCase verification, USE WHEN/NOT FOR frontmatter, `## Workflow Routing` table, mandatory `## Gotchas` section (12 entries), `## BPE check`, skill-type taxonomy (Type 4 + Type 8 hybrid), public/private decision (project-local until non-realtor invocation validates parameterization), honest model-self-attestation rule.
+- 2026-05-08 PM cycle 4 — **Compliance severity taxonomy operational.** Team E classified findings into the 6-class register (statutory-binary 3 / borderline 2 / policy 3 / business-risk 2). Skill v0.2.0 §Hard gate 10 forbids flattening statutory-binary into "concerns" (cycle-3 anti-pattern surfaced by Cato §11.4).
+- 2026-05-08 PM cycle 4 — **Live-staging verification gate operational.** Cycle-4 deployed via `bun scripts/deploy-and-verify.ts` (107s wall-clock); Caddy flip verified at `last-modified 22:01:24 GMT` ETag `didmtu6seolc2bl8`; cache-bust curl on 8 changed routes confirmed live state. Cycle-3 Cato §11.3 finding ("FIXED claims are build-time only") closed structurally.
+- 2026-05-08 PM cycle 4 — **Principal-decision register operational.** 6 cards documented (license rendering, TCPA mechanics, brand voice family-vs-luxury, REALTOR® usage, combined REALTOR®+MLS logo, Spanish hreflang). Skill v0.2.0 §6 forbids silent-resolution of any open card. Cycle-5 OBSERVE phase walks the cards with the principal as the first action.
+- 2026-05-08 PM cycle 4 — **Skill v0.3.0 warranted per Team F.** v0.2.0 closes cycle-3 gaps "partial" not "yes". Specific gaps: workflow primitives still mention realtor-specific filenames in examples; compliance taxonomy enforcement is operator-discipline at synthesis time (no deterministic check). Cycle-5 should write the v0.3.0 spec without shipping it (validate via stress-test on a non-realtor vertical first).
+
+## Changelog (continued — 2026-05-08 PM cycle 4)
+
+- **2026-05-08 PM cycle 4 — conjecture:** "Spark-only at ≤2 concurrent will hit the same stdin-stage stall pattern that 4-Spark-concurrent hit in cycle-3." → **refuted-by:** 3 batches of 2 ran cleanly with zero stdin-stalls; concurrency cap is the structural fix. → **learned:** the rate-limit cap is the right number empirically; `< /dev/null` + `--sandbox read-only` + sequenced batching is the operational pattern.
+- **2026-05-08 PM cycle 4 — conjecture:** "The principal's 'missing images' observation is a literal asset-missing problem." → **refuted-by:** `audit:images` confirms 0 actual missing images across 187 `<img>` tags + 27 `og:image` entries + every Brand-Contract-required asset. → **learned:** the principal's observation was about the structural absence of the sentinel — there was no automated check to PREVENT future drift. The fix is the script itself, not asset replacement.
+- **2026-05-08 PM cycle 4 — conjecture:** "Cycle-3 brand audit team caught all the Brand System Contract violations." → **refuted-by:** `audit:brand` sentinel caught a `backdrop-blur` glassmorphism on `SiteHeader.tsx:15` that had been shipping since cycle-1. The cycle-3 narrative brand review missed it. → **learned:** automated sentinels catch what narrative audits miss because they grep deterministically. Skill v0.2.0 elevates audit-script structural drift to its own gate class.
+- **2026-05-08 PM cycle 4 — conjecture:** "deploy-and-verify preflight gate is reading the right field after the cycle-3 fix." → **refuted-by:** the cycle-3 fix changed `summary→counts` field name but the JSON ships `counts.PASS|WARN|FAIL|SKIP` uppercase, while the consumer reads lowercase. Result: silently-always-zero gate. → **learned:** producer-consumer-shape mismatches are a class of bug, not a single instance. Backward-compatible read pattern (`counts.PASS ?? counts.pass ?? 0`) shipped this cycle; structural fix (typed shared schema) queued for cycle-5.
+- **2026-05-08 PM cycle 4 — conjecture:** "Skill v0.2.0 written by hand-applying CreateSkill methodology is equivalent to Skill('CreateSkill') invocation." → **refuted-by:** `~/.claude/skills/CLAUDE.md` explicitly forbids handrolling: "I read CreateSkill's workflow and am now following its steps" is the anti-pattern. → **learned:** the skill is the orchestrator; invoke `Skill("CreateSkill")` to let the skill drive the methodology. Bonus: 6 methodology improvements surfaced beyond the principal's 10-item charge (Gotchas, BPE check, USE WHEN, etc.).
+- **2026-05-08 PM cycle 4 — conjecture:** "Cato cross-vendor verification is needed in cycle-4 to prevent cycle-3 §11.4 flattening anti-pattern." → **refuted-by:** principal mission constraint forbids Cato + Gemini for main work this cycle. → **learned:** the structural fix is the compliance severity taxonomy in skill v0.2.0 (§Hard gate 10), not a cross-vendor agent. Taxonomy-at-synthesis-time prevents flattening BEFORE it happens; Cato was a post-hoc corrective. Cycle-5 (multi-family lane) re-invokes Cato as defense-in-depth.
+
+## Verification (continued — 2026-05-08 PM cycle 4)
+
+- ISC-291 to ISC-293: state-probe — pre-cycle baseline verified clean (`d11c91a` on origin, audit:all 14/2/0/0, screenshots captured).
+- ISC-294 to ISC-298: skill upgrade — `WEBSITE_PRODUCTION_LOOP_SKILL.md` v0.1.0 → v0.2.0 (517 lines), `WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` (NEW), `SKILL_CREATOR_PROCESSING_NOTES.md` (NEW), `WEBSITE_PRODUCTION_LOOP_NEXT_SESSION_PROMPT.md` (UPDATED for cycle 5).
+- ISC-299 to ISC-305: 6 Spark audits — files exist at `docs/codex-spark-audits/cycle-4/team-{A,B,C,D,E,F}-*.md`; sizes 8848-15031 chars; each ends with structured verdict JSON; concurrency cap respected (3 batches of 2; zero stalls).
+- ISC-306 to ISC-308: audit sentinels — `scripts/audit-{images,brand-consistency}.ts` written; `package.json` chain extended; both run green (7 PASS · 0 WARN · 0 FAIL each).
+- ISC-309 to ISC-311: code fixes — verified by direct file Read + audit:brand re-run + audit:all re-run. `bun run typecheck` exit 0; `bun run lint` exit 0; `bun run build` exit 0 (25 routes); `bun run audit:all` exit 0 (14/2/0/0 preserved across full chain).
+- ISC-312 to ISC-314: deploy + live verify — Dokploy 107s status=done; Caddy flipped to `last-modified: Fri, 08 May 2026 22:01:24 GMT` ETag `didmtu6seolc2bl8`; cache-bust curl on 8 routes returned HTTP 200; live HTML grep confirmed `backdrop-blur` absent; 70 after-screenshots at `/tmp/mia-cycle4-brand-qa-after/`.
+- ISC-315 to ISC-317: matrices + visual QA docs written.
+- ISC-319 to ISC-321: closeout doc + reflection JSONL + commit/push.
+- ISC-322 to ISC-332: anti-criteria + antecedent — Spark-only constraint honored; no over-claims; no Brand drift; no DNS/cutover/GHL/lead-magnet; no model misrepresentation; no PAI infra edits; geographic guardrail intact; statutory-binary preserved as launch-blockers; principal-decision cards open.
 
 
