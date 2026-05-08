@@ -13,19 +13,18 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-cream-300 bg-cream-50/95 backdrop-blur supports-[backdrop-filter]:bg-cream-50/85">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-        <Link
-          href="/"
-          aria-label="Mia Sanabria — REALTOR® with LPT Realty, return to homepage"
-          className="flex items-center gap-3"
-        >
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brass-400 bg-navy-800 text-brass-200 font-display text-sm tracking-widest">
+        <Link href="/" className="flex items-center gap-3">
+          <div
+            aria-hidden="true"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-brass-400 bg-navy-800 text-brass-200 font-display text-sm tracking-widest"
+          >
             MS
           </div>
           <div className="leading-tight">
             <div className="font-display text-base tracking-[0.2em] text-navy-800">
               MIA SANABRIA
             </div>
-            <div className="text-[10px] uppercase tracking-[0.3em] text-brass-500">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-brass-700">
               REALTOR® · LPT Realty
             </div>
           </div>
@@ -37,7 +36,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm tracking-wide text-navy-800 transition-colors hover:text-brass-500"
+                  className="text-sm tracking-wide text-navy-800 transition-colors hover:text-brass-700"
                 >
                   {item.label}
                 </Link>
@@ -82,7 +81,7 @@ export function SiteHeader() {
               <Link
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block py-3 text-base text-navy-800 hover:text-brass-500"
+                className="block py-3 text-base text-navy-800 hover:text-brass-700"
               >
                 {item.label}
               </Link>

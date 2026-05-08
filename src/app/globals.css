@@ -24,6 +24,7 @@
   --color-brass-500: #a4884f;
   --color-brass-600: #8b7142;
   --color-brass-700: #6f5a35;
+  --color-brass-800: #5a4929;
   --color-soft-black: #1a1a1a;
 
   --font-display: var(--font-cinzel), "Cinzel", "Times New Roman", serif;
@@ -40,8 +41,6 @@
 
 :root {
   color-scheme: light;
-  --font-cinzel: "Cinzel";
-  --font-montserrat: "Montserrat";
 }
 
 html {
@@ -90,11 +89,6 @@ p {
   max-width: 70ch;
 }
 
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -136,7 +130,7 @@ iframe:focus-visible,
   gap: 0.75rem;
   font-family: var(--font-display);
   letter-spacing: 0.25em;
-  color: var(--color-brass-400);
+  color: var(--color-brass-700);
   font-size: 0.75rem;
   text-transform: uppercase;
 }

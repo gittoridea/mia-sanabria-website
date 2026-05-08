@@ -48,7 +48,7 @@ export function IntentRouter() {
                     {blurb}
                   </p>
                 </div>
-                <span className="mt-auto text-xs uppercase tracking-[0.3em] text-brass-500 group-hover:text-brass-600">
+                <span className="mt-auto text-xs uppercase tracking-[0.3em] text-brass-700 group-hover:text-brass-800">
                   Begin →
                 </span>
               </Link>

@@ -64,7 +64,7 @@ export default function AboutPage() {
                   "linear-gradient(180deg, rgba(15,42,68,0.05) 0%, rgba(15,42,68,0.55) 100%), url(/mia-headshot.jpg)",
               }}
             />
-            <p className="mt-5 text-xs uppercase tracking-[0.3em] text-brass-500">
+            <p className="mt-5 text-xs uppercase tracking-[0.3em] text-brass-700">
               {MIA.title} · {MIA.brokerage.display}
             </p>
             <p className="mt-1 text-sm text-navy-800/70">
@@ -108,7 +108,7 @@ export default function AboutPage() {
           />
           <ul className="mt-12 grid gap-12 lg:grid-cols-3">
             <li>
-              <div className="font-display text-xs tracking-[0.3em] text-brass-500">01 · DISCRETION</div>
+              <div className="font-display text-xs tracking-[0.3em] text-brass-700">01 · DISCRETION</div>
               <h3 className="mt-3 font-display text-xl text-navy-800">
                 Privacy as a default, not an upgrade.
               </h3>
@@ -119,7 +119,7 @@ export default function AboutPage() {
               </p>
             </li>
             <li>
-              <div className="font-display text-xs tracking-[0.3em] text-brass-500">02 · RIGOR</div>
+              <div className="font-display text-xs tracking-[0.3em] text-brass-700">02 · RIGOR</div>
               <h3 className="mt-3 font-display text-xl text-navy-800">
                 Title, due diligence, structure, financing.
               </h3>
@@ -130,7 +130,7 @@ export default function AboutPage() {
               </p>
             </li>
             <li>
-              <div className="font-display text-xs tracking-[0.3em] text-brass-500">03 · RELATIONSHIPS</div>
+              <div className="font-display text-xs tracking-[0.3em] text-brass-700">03 · RELATIONSHIPS</div>
               <h3 className="mt-3 font-display text-xl text-navy-800">
                 The residence after the transaction.
               </h3>

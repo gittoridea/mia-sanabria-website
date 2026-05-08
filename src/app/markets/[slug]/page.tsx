@@ -124,7 +124,7 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
           </div>
 
           <aside className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10">
-            <div className="font-display text-xs tracking-[0.3em] text-brass-500">
+            <div className="font-display text-xs tracking-[0.3em] text-brass-700">
               CONCIERGE BRIEF
             </div>
             <h3 className="mt-3 font-display text-2xl text-navy-800">

@@ -85,7 +85,7 @@ export default function ValuationPage() {
             </p>
 
             <fieldset className="mt-8">
-              <legend className="font-display text-sm tracking-[0.25em] text-brass-500">
+              <legend className="font-display text-sm tracking-[0.25em] text-brass-700">
                 THE PROPERTY
               </legend>
               <div className="mt-4 grid gap-5">
@@ -114,7 +114,7 @@ export default function ValuationPage() {
             </fieldset>
 
             <fieldset className="mt-8">
-              <legend className="font-display text-sm tracking-[0.25em] text-brass-500">
+              <legend className="font-display text-sm tracking-[0.25em] text-brass-700">
                 YOU
               </legend>
               <div className="mt-4 grid gap-5 sm:grid-cols-2">

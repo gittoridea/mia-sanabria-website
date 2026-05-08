@@ -27,7 +27,7 @@ export default function AccessibilityPage() {
 
       <article className="bg-cream-50 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl space-y-7 px-4 text-[15px] leading-relaxed text-navy-800/85 lg:px-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-brass-500">
+          <p className="text-xs uppercase tracking-[0.3em] text-brass-700">
             Last updated · {LAST_UPDATED}
           </p>
 

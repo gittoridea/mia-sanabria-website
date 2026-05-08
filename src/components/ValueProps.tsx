@@ -35,7 +35,7 @@ export function ValueProps({
         <ul className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <li key={i}>
-              <div className={`font-display text-sm tracking-[0.3em] ${isNavy ? "text-brass-300" : "text-brass-500"}`}>
+              <div className={`font-display text-sm tracking-[0.3em] ${isNavy ? "text-brass-300" : "text-brass-700"}`}>
                 {String(i + 1).padStart(2, "0")}
               </div>
               <h3 className={`mt-3 font-display text-xl ${isNavy ? "text-cream-50" : "text-navy-800"}`}>

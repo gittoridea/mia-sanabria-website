@@ -91,7 +91,7 @@ export default function BuyersPage() {
           <ol className="mt-12 grid gap-10 lg:grid-cols-4">
             {BUYER_PROCESS.map((step, i) => (
               <li key={step.heading} className="border-t-2 border-brass-400 pt-6">
-                <div className="font-display text-xs tracking-[0.3em] text-brass-500">
+                <div className="font-display text-xs tracking-[0.3em] text-brass-700">
                   PHASE {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="mt-3 font-display text-xl text-navy-800">{step.heading}</h3>

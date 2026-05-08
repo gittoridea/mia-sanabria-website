@@ -1,10 +1,25 @@
 import type { Metadata, Viewport } from "next";
+import { Cinzel, Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { WebSiteSchema } from "@/components/schema/WebSiteSchema";
 import { SITE, IS_STAGING } from "@/lib/site";
 import "./globals.css";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  display: "swap",
+  variable: "--font-cinzel",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
 export const viewport: Viewport = {
   themeColor: SITE.themeColor,
@@ -81,21 +96,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US">
+    <html lang="en-US" className={`${cinzel.variable} ${montserrat.variable}`}>
       <head>
         <meta name="color-scheme" content="light" />
         <link rel="alternate" hrefLang="en-US" href={SITE.url} />
         <link rel="alternate" hrefLang="x-default" href={SITE.url} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-        />
       </head>
       <body>
         <OrganizationSchema />

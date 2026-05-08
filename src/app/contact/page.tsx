@@ -178,7 +178,7 @@ export default function ContactPage() {
             >
               Send Private Inquiry
             </button>
-            <p id="contact-form-helper" className="mt-3 text-xs text-navy-800/60">
+            <p id="contact-form-helper" className="mt-3 text-xs text-navy-800/80">
               By submitting you agree to receive a private response from Mia or her team. We never share contact details.
             </p>
           </form>
@@ -272,7 +272,7 @@ function ContactRow({
         <Icon className="h-4 w-4" aria-hidden />
       </span>
       <div>
-        <div className="text-xs uppercase tracking-[0.3em] text-brass-500">{heading}</div>
+        <div className="text-xs uppercase tracking-[0.3em] text-brass-700">{heading}</div>
         <div className="mt-1 font-display text-lg text-navy-800">{value}</div>
         {hint ? <div className="mt-1 text-sm text-navy-800/70">{hint}</div> : null}
       </div>
