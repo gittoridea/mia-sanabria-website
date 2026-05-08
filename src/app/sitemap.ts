@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/privacy/`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/terms/`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/accessibility/`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/dmca/`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
   const marketRoutes: MetadataRoute.Sitemap = MARKETS.map((m) => ({
     url: `${base}/markets/${m.slug}/`,

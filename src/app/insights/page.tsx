@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   description:
     "Notes on the Southeast Florida luxury market from Mia Sanabria — neighborhood reads, lot-profile primers, and reflections on the personal-representation model.",
   alternates: { canonical: `${SITE.url}/insights/` },
+  openGraph: {
+    title: "Insights — Mia Sanabria, Fort Lauderdale REALTOR®",
+    description:
+      "Editorial market commentary from Mia Sanabria on Southeast Florida luxury real estate. Neighborhood reads and lot-profile primers.",
+    url: `${SITE.url}/insights/`,
+    images: [{ url: `${SITE.url}/og-default.jpg`, width: 1200, height: 630, alt: "Southeast Florida luxury real estate market commentary" }],
+  },
 };
 
 const PUBLISHED_ISO_PRACTICE = "2026-05-07";

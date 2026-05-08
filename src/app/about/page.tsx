@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   description:
     "Mia Sanabria is a Fort Lauderdale REALTOR® with LPT Realty representing buyers and sellers across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
   alternates: { canonical: `${SITE.url}/about/` },
+  openGraph: {
+    title: "About Mia Sanabria — Fort Lauderdale REALTOR®",
+    description:
+      "REALTOR® with LPT Realty serving Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Long-relationship practice; small client list by design.",
+    url: `${SITE.url}/about/`,
+    images: [{ url: `${SITE.url}/mia-headshot.jpg`, width: 1024, height: 1024, alt: "Mia Sanabria, REALTOR® with LPT Realty" }],
+  },
 };
 
 const ABOUT_FAQ = [
