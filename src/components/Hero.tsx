@@ -42,7 +42,7 @@ export function Hero({
           />
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-b from-navy-800/65 via-navy-800/55 to-navy-800/85"
+            className="absolute inset-0 bg-gradient-to-b from-navy-800/80 via-navy-800/70 to-navy-800/90"
           />
         </>
       ) : null}

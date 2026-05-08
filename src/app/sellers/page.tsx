@@ -5,6 +5,7 @@ import { Faq } from "@/components/Faq";
 import { CTAStrip } from "@/components/CTAStrip";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
+import { OfferCatalogSchema } from "@/components/schema/OfferCatalogSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { SITE } from "@/lib/site";
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
   description:
     "Tailored marketing for Southeast Florida residences — editorial photography, private brokerage relationships, and strategic pricing for market velocity.",
   alternates: { canonical: `${SITE.url}/sellers/` },
+  openGraph: {
+    title: "Selling — Elevated Marketing & Strategy",
+    description:
+      "Tailored marketing for Southeast Florida residences — editorial photography, private brokerage relationships, and strategic pricing for market velocity.",
+    url: `${SITE.url}/sellers/`,
+    images: [{ url: `${SITE.url}/og-sellers.jpg`, width: 1200, height: 630 }],
+  },
 };
 
 const SELLER_PROCESS = [
@@ -67,6 +75,31 @@ export default function SellersPage() {
         description="Editorial-tier marketing, strategic pricing, private brokerage outreach, and full closing coordination for Southeast Florida sellers."
         serviceType="Real Estate Seller Representation"
       />
+      <OfferCatalogSchema
+        catalogName="Listing & Seller Representation"
+        items={[
+          {
+            name: "Strategic Valuation & Pricing",
+            description:
+              "micro-market analysis, comparables, and pricing strategy set before market entry.",
+          },
+          {
+            name: "Property Curation",
+            description:
+              "architectural staging, landscape refinement, considered presentation framing the residence as a cultural object.",
+          },
+          {
+            name: "Editorial Marketing",
+            description:
+              "cinematic photography, video, copywriting, MLS + global portal distribution, discreet private brokerage outreach.",
+          },
+          {
+            name: "Closing Coordination",
+            description:
+              "title, escrow, financing, tax considerations handled with precision.",
+          },
+        ]}
+      />
       <BreadcrumbSchema
         items={[
           { name: "Home", href: "/" },
@@ -80,6 +113,9 @@ export default function SellersPage() {
         sub="Pricing, presentation, and considered introductions — sequenced by Mia personally for residences across Mia's core Fort Lauderdale, Boca Raton, and Palm Beach corridor markets."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/valuation/", label: "Request Valuation" }}
+        background="image"
+        imageSrc="/services/sellers.jpg"
+        imageAlt="Editorial twilight exterior of a meticulously staged Florida luxury home with brass-lit entry and uplit royal palms"
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

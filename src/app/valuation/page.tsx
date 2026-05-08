@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ValueProps } from "@/components/ValueProps";
 import { Faq } from "@/components/Faq";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
+import { OfferCatalogSchema } from "@/components/schema/OfferCatalogSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { SITE } from "@/lib/site";
 import { MIA } from "@/lib/mia";
@@ -12,6 +13,13 @@ export const metadata: Metadata = {
   description:
     "Receive a complimentary, tailored valuation of your Southeast Florida property. Careful, confidential, and grounded in micro-market dynamics.",
   alternates: { canonical: `${SITE.url}/valuation/` },
+  openGraph: {
+    title: "Home Valuation — Southeast Florida",
+    description:
+      "Receive a complimentary, tailored valuation of your Southeast Florida property. Careful, confidential, and grounded in micro-market dynamics.",
+    url: `${SITE.url}/valuation/`,
+    images: [{ url: `${SITE.url}/og-valuation.jpg`, width: 1200, height: 630 }],
+  },
 };
 
 const VALUATION_FAQ = [
@@ -45,6 +53,25 @@ export default function ValuationPage() {
         description="Confidential, tailored valuation of Southeast Florida residences with strategic pricing analysis."
         serviceType="Real Estate Valuation"
       />
+      <OfferCatalogSchema
+        catalogName="Complimentary Property Valuation"
+        items={[
+          {
+            name: "On-Site Property Brief",
+            description:
+              "walk-through (or virtual equivalent) assessing condition, finishes, and unique features.",
+          },
+          {
+            name: "Comparative Market Analysis",
+            description:
+              "recent transaction context, micro-market dynamics, strategic positioning conversation.",
+          },
+          {
+            name: "Strategic Pricing Recommendation",
+            description: "written valuation deliverable with positioning rationale.",
+          },
+        ]}
+      />
       <BreadcrumbSchema
         items={[
           { name: "Home", href: "/" },
@@ -56,6 +83,9 @@ export default function ValuationPage() {
         eyebrow="Home Valuation"
         heading="Discover your home's value."
         sub="Receive a complimentary, tailored valuation of your Southeast Florida property based on current market dynamics and recent comparable activity."
+        background="image"
+        imageSrc="/services/valuation.jpg"
+        imageAlt="Panoramic Florida deepwater canal vista with moored yachts and a contemporary waterfront mansion at golden hour"
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

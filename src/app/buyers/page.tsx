@@ -5,6 +5,7 @@ import { Faq } from "@/components/Faq";
 import { CTAStrip } from "@/components/CTAStrip";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
+import { OfferCatalogSchema } from "@/components/schema/OfferCatalogSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { SITE } from "@/lib/site";
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
   description:
     "Private buyer representation across Southeast Florida — discreet acquisition guidance in Boca Raton, Fort Lauderdale, and Palm Beach.",
   alternates: { canonical: `${SITE.url}/buyers/` },
+  openGraph: {
+    title: "Buying — Private Buyer Representation",
+    description:
+      "Private buyer representation across Southeast Florida — discreet acquisition guidance in Boca Raton, Fort Lauderdale, and Palm Beach.",
+    url: `${SITE.url}/buyers/`,
+    images: [{ url: `${SITE.url}/og-buyers.jpg`, width: 1200, height: 630 }],
+  },
 };
 
 const BUYER_PROCESS = [
@@ -67,6 +75,31 @@ export default function BuyersPage() {
         description="Tailored acquisition advisory for Southeast Florida real estate. Private brokerage sourcing, curated showings, and full closing coordination."
         serviceType="Real Estate Buyer Representation"
       />
+      <OfferCatalogSchema
+        catalogName="Private Buyer Representation"
+        items={[
+          {
+            name: "Private Discovery Brief",
+            description:
+              "confidential conversation about preferred markets, architectural style, lifestyle requirements, and timeline.",
+          },
+          {
+            name: "Brokerage-Relationship Sourcing",
+            description:
+              "activation of Mia's brokerage and ownership relationships to surface relevant residences, including informally available opportunities.",
+          },
+          {
+            name: "Curated Showings",
+            description:
+              "three to five carefully matched residences accompanied by Mia personally.",
+          },
+          {
+            name: "Closing Coordination",
+            description:
+              "title, escrow, inspection, financing, and closing handled by experienced partners with Mia present.",
+          },
+        ]}
+      />
       <BreadcrumbSchema
         items={[
           { name: "Home", href: "/" },
@@ -80,6 +113,9 @@ export default function BuyersPage() {
         sub="Mia represents buyers across Fort Lauderdale, Boca Raton, and Palm Beach with a deliberately small client list — every brief written before the first showing, every closing attended in person."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
+        background="image"
+        imageSrc="/services/buyers.jpg"
+        imageAlt="Sunlit luxury Florida home interior with floor-to-ceiling glass overlooking a deepwater canal"
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

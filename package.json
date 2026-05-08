@@ -16,15 +16,17 @@
     "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo"
   },
   "dependencies": {
+    "@img/sharp-libvips-linux-x64": "^1.2.4",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.460.0",
     "next": "15.1.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "lucide-react": "^0.460.0",
     "schema-dts": "^1.1.5",
-    "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
+    "@img/sharp-linux-x64": "^0.34.5",
     "@tailwindcss/postcss": "^4.0.0-beta.7",
     "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",

@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   description:
     "Begin a confidential conversation with Mia Sanabria — SE Florida REALTOR® with LPT Realty. Private consultations: Boca Raton, Fort Lauderdale, Palm Beach.",
   alternates: { canonical: `${SITE.url}/contact/` },
+  openGraph: {
+    title: "Contact Mia Sanabria — Private Consultation",
+    description:
+      "Begin a confidential conversation with Mia Sanabria — SE Florida REALTOR® with LPT Realty.",
+    url: `${SITE.url}/contact/`,
+    images: [{ url: `${SITE.url}/og-contact.jpg`, width: 1200, height: 630 }],
+  },
 };
 
 const CONTACT_FAQ = [
@@ -53,6 +60,9 @@ export default function ContactPage() {
         eyebrow="Connect With Mia"
         heading="Begin a private conversation."
         sub="A confidential consultation with a REALTOR® who serves Fort Lauderdale, Broward, Miami-Dade, and Palm Beach. Reach out to discuss your real estate goals."
+        background="image"
+        imageSrc="/services/contact.jpg"
+        imageAlt="Private outdoor terrace at a Florida coastal mansion at twilight with teak chairs, brass lanterns, and ocean horizon"
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
