@@ -50,7 +50,7 @@ export function Hero({
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-30 [background:radial-gradient(60%_60%_at_50%_30%,rgba(184,155,94,0.18),transparent_70%)]"
       />
-      <div className="relative mx-auto max-w-7xl px-4 py-24 sm:py-32 lg:px-8 lg:py-40">
+      <div className="relative mx-auto max-w-7xl px-4 py-28 sm:py-32 lg:px-8 lg:py-40">
         {eyebrow ? (
           <>
             <span
@@ -91,7 +91,7 @@ export function Hero({
             {ctaPrimary ? (
               <Link
                 href={ctaPrimary.href}
-                className="inline-flex items-center gap-2 rounded-full bg-brass-400 px-7 py-3 text-sm font-medium tracking-wide text-navy-900 transition-colors hover:bg-brass-300"
+                className="inline-flex items-center gap-2 rounded-full bg-brass-400 px-8 py-3.5 text-sm font-semibold tracking-wide text-navy-900 transition-colors hover:bg-brass-300"
               >
                 {ctaPrimary.label}
                 <ArrowRight className="h-4 w-4" aria-hidden />

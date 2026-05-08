@@ -64,17 +64,23 @@ export default function AboutPage() {
       <section className="bg-cream-50 py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-14 px-4 lg:grid-cols-[1fr_1.4fr] lg:gap-20 lg:px-8">
           <div>
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-navy-800/10 shadow-card">
-              <Image
-                src="/mia-headshot.jpg"
-                alt="Mia Sanabria, REALTOR® with LPT Realty"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-top"
-                priority
+            <div className="relative isolate pb-3 pr-3">
+              <div
+                aria-hidden
+                className="absolute inset-0 translate-x-3 translate-y-3 rounded-sm bg-brass-100 -z-10"
               />
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-brass-300/60 shadow-card">
+                <Image
+                  src="/mia-headshot.jpg"
+                  alt="Mia Sanabria, REALTOR® with LPT Realty"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
             </div>
-            <p className="mt-5 text-xs uppercase tracking-[0.3em] text-brass-700">
+            <p className="mt-6 text-xs uppercase tracking-[0.3em] text-brass-700">
               {MIA.title} · {MIA.brokerage.display}
             </p>
             <p className="mt-1 text-sm text-navy-800/70">

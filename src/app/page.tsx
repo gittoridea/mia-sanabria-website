@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
+import { MeetMia } from "@/components/MeetMia";
 import { IntentRouter } from "@/components/IntentRouter";
 import { MarketCard } from "@/components/MarketCard";
 import { ValueProps } from "@/components/ValueProps";
@@ -83,6 +84,8 @@ export default function HomePage() {
         imageSrc="/og-default.jpg"
         imageAlt="Luxury waterfront residence at twilight, Southeast Florida"
       />
+
+      <MeetMia />
 
       <IntentRouter />
 

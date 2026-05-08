@@ -100,32 +100,38 @@ export function SiteFooter() {
             All information is deemed reliable but not guaranteed. IDX listings provided
             for consumers&rsquo; personal, non-commercial use; not for redistribution.
           </p>
-          <div className="mt-5 flex flex-wrap items-center gap-4" aria-label="Industry affiliations">
-            <Image
-              src="/logos/lpt-realty.png"
-              alt="LPT Realty"
-              width={48}
-              height={48}
-              className="h-10 w-10 rounded-sm bg-white/95 p-1"
-            />
-            <Image
-              src="/logos/realtor-r.png"
-              alt="MLS REALTOR®"
-              width={64}
-              height={30}
-              className="h-7 w-auto"
-            />
-            <Image
-              src="/logos/equal-housing.png"
-              alt="Equal Housing Opportunity"
-              width={32}
-              height={36}
-              className="h-9 w-auto"
-            />
-            <span className="text-[10px] uppercase tracking-[0.2em] text-cream-200/70">
-              Equal Housing Opportunity
-            </span>
-          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-cream-300/15">
+        <div
+          className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 px-4 py-8 text-center lg:flex-row lg:items-center lg:justify-center lg:gap-10 lg:px-8"
+          aria-label="Industry affiliations"
+        >
+          <FooterTrustMark
+            src="/logos/lpt-realty.png"
+            alt="LPT Realty"
+            width={48}
+            height={48}
+            imageClassName="h-10 w-10 rounded-sm bg-white/95 p-1"
+            label="LPT Realty"
+          />
+          <FooterTrustMark
+            src="/logos/realtor-r.png"
+            alt="REALTOR®"
+            width={64}
+            height={30}
+            imageClassName="h-7 w-auto"
+            label="REALTOR®"
+          />
+          <FooterTrustMark
+            src="/logos/equal-housing.png"
+            alt="Equal Housing Opportunity"
+            width={32}
+            height={36}
+            imageClassName="h-9 w-auto"
+            label="Equal Housing Opportunity"
+          />
         </div>
       </div>
 
@@ -146,6 +152,31 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterTrustMark({
+  src,
+  alt,
+  width,
+  height,
+  imageClassName,
+  label,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  imageClassName: string;
+  label: string;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-3 text-center lg:flex-row lg:text-left">
+      <Image src={src} alt={alt} width={width} height={height} className={imageClassName} />
+      <span className="font-display text-[10px] uppercase tracking-[0.3em] text-cream-200/80">
+        {label}
+      </span>
+    </div>
   );
 }
 

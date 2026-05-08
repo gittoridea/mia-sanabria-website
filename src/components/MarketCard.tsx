@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Market } from "@/lib/markets";
 
 export function MarketCard({ market }: { market: Market }) {
   return (
     <Link
       href={`/markets/${market.slug}/`}
-      className="group relative block overflow-hidden rounded-sm border border-navy-800/10 bg-cream-100 shadow-card transition-shadow hover:shadow-luxury"
+      className="group relative block overflow-hidden rounded-sm border border-navy-800/10 bg-cream-100 shadow-card transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-luxury"
     >
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-navy-700">
         <Image
@@ -29,7 +29,7 @@ export function MarketCard({ market }: { market: Market }) {
         <p className="mt-2 text-sm text-cream-200/90">{market.tagline}</p>
         <div className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-brass-300">
           Explore Area
-          <ArrowUpRight className="h-3 w-3" aria-hidden />
+          <ArrowRight className="h-3 w-3" aria-hidden />
         </div>
       </div>
     </Link>

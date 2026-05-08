@@ -4,7 +4,7 @@ import { MIA } from "@/lib/mia";
 
 export function CTAStrip({
   heading = "Begin a private conversation.",
-  sub = "Every engagement starts with a confidential conversation about timeline, market, and the residence — not the transaction.",
+  sub = "Every engagement starts with a confidential conversation about timeline, market, and the residence.",
 }: {
   heading?: string;
   sub?: string;

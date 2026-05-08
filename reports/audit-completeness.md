@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-08T18:18:40.597Z
+**Generated:** 2026-05-08T18:32:23.823Z
 
 **Summary:** 14 PASS · 2 WARN · 0 FAIL · 0 SKIP
 
@@ -39,7 +39,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.images.dimsAltPlaceholder` | ⚠️ | Core-page <img> tags have alt + width/height + no placeholder names | 23 img attribute issues |
+| `completeness.images.dimsAltPlaceholder` | ⚠️ | Core-page <img> tags have alt + width/height + no placeholder names | 24 img attribute issues |
 | `completeness.images.localFilesExist` | ✅ | Local image references resolve to files in out/ | all referenced local images exist |
 
 ### Forms/CTAs
@@ -68,7 +68,7 @@
 
 **Description:** Core-page <img> tags have alt + width/height + no placeholder names
 
-**Evidence:** 23 img attribute issues
+**Evidence:** 24 img attribute issues
 
 ```json
 {
@@ -76,6 +76,11 @@
     {
       "route": "/",
       "img": "/og-default.jpg",
+      "problem": "missing width/height"
+    },
+    {
+      "route": "/",
+      "img": "/mia-headshot.jpg",
       "problem": "missing width/height"
     },
     {

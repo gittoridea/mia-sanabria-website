@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T18:18:40.597Z",
+  "timestamp": "2026-05-08T18:32:23.823Z",
   "counts": {
     "PASS": 14,
     "WARN": 2,
@@ -94,12 +94,17 @@
       "category": "Design/Display Integrity",
       "description": "Core-page <img> tags have alt + width/height + no placeholder names",
       "status": "WARN",
-      "evidence": "23 img attribute issues",
+      "evidence": "24 img attribute issues",
       "details": {
         "issues": [
           {
             "route": "/",
             "img": "/og-default.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/mia-headshot.jpg",
             "problem": "missing width/height"
           },
           {
