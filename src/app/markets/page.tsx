@@ -28,7 +28,7 @@ export default function MarketsIndex() {
       <Hero
         eyebrow="Featured Markets"
         heading="Southeast Florida's most coveted coastal communities."
-        sub="Each market lives by its own architectural and social logic. Concierge representation begins with fluency in the place — the dock, the country club, the canopy, the avenue."
+        sub="Each market lives by its own architectural and social logic. Representation begins with fluency in the place — the dock, the country club, the canopy, the avenue."
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

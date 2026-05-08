@@ -86,7 +86,7 @@ export default function BuyersPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
             eyebrow="The Acquisition Process"
-            heading="Four phases. One concierge throughout."
+            heading="Four phases. One Realtor throughout."
           />
           <ol className="mt-12 grid gap-10 lg:grid-cols-4">
             {BUYER_PROCESS.map((step, i) => (
@@ -103,7 +103,7 @@ export default function BuyersPage() {
       </section>
 
       <ValueProps
-        eyebrow="Buyer Concierge"
+        eyebrow="Buyer Representation"
         heading="Why clients choose this practice."
         background="navy"
         items={[

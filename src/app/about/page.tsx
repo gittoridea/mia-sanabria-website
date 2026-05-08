@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Hero } from "@/components/Hero";
 import { CTAStrip } from "@/components/CTAStrip";
 import { Faq } from "@/components/Faq";
@@ -48,7 +49,7 @@ export default function AboutPage() {
 
       <Hero
         eyebrow="About Mia"
-        heading="South Florida's real estate concierge — a practice built on relationships, not transactions."
+        heading="South Florida's personal Realtor — a practice built on relationships, not transactions."
         sub={MIA.voice.anchorLine}
         background="navy"
       />
@@ -56,14 +57,16 @@ export default function AboutPage() {
       <section className="bg-cream-50 py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-14 px-4 lg:grid-cols-[1fr_1.4fr] lg:gap-20 lg:px-8">
           <div>
-            <div
-              aria-hidden
-              className="aspect-[4/5] w-full rounded-sm border border-navy-800/10 bg-cover bg-center shadow-card"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, rgba(15,42,68,0.05) 0%, rgba(15,42,68,0.55) 100%), url(/mia-headshot.jpg)",
-              }}
-            />
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-navy-800/10 shadow-card">
+              <Image
+                src="/mia-headshot.jpg"
+                alt="Mia Sanabria, REALTOR® with LPT Realty"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-top"
+                priority
+              />
+            </div>
             <p className="mt-5 text-xs uppercase tracking-[0.3em] text-brass-700">
               {MIA.title} · {MIA.brokerage.display}
             </p>
@@ -77,12 +80,12 @@ export default function AboutPage() {
               <span>{MIA.voice.positioning}</span>
             </div>
             <h2 className="font-display text-3xl text-navy-800 sm:text-4xl">
-              Concierge by design, not by claim.
+              Personal by design, not by claim.
             </h2>
             <p>
               Mia Sanabria represents buyers, sellers, and investors across Southeast Florida's most
               coveted coastal markets. Her practice is structured around a deliberately small client
-              list each quarter — every engagement receives concierge attention, direct access, and
+              list each quarter — every engagement receives personal attention, direct access, and
               full presence at every showing, every consultation, every closing table.
             </p>
             <p>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Market } from "@/lib/markets";
@@ -8,12 +9,17 @@ export function MarketCard({ market }: { market: Market }) {
       href={`/markets/${market.slug}/`}
       className="group relative block overflow-hidden rounded-sm border border-navy-800/10 bg-cream-100 shadow-card transition-shadow hover:shadow-luxury"
     >
-      <div className="aspect-[4/5] w-full overflow-hidden bg-navy-700">
+      <div className="relative aspect-[4/5] w-full overflow-hidden bg-navy-700">
+        <Image
+          src={market.heroImage}
+          alt={`${market.name} luxury real estate`}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        />
         <div
-          className="h-full w-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
-          style={{
-            backgroundImage: `linear-gradient(180deg, rgba(15,42,68,0.05) 0%, rgba(15,42,68,0.65) 100%), url(${market.heroImage})`,
-          }}
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-b from-navy-800/5 to-navy-800/65"
         />
       </div>
       <div className="absolute inset-x-0 bottom-0 p-6 text-cream-50">

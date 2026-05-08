@@ -29,7 +29,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Access to Las Olas, downtown Fort Lauderdale, the beach, FLL, and Port Everglades",
       "Buyer conversations that start with lifestyle, timing, and preferred property type",
       "Seller conversations grounded in neighborhood-specific preparation and pricing",
-      "Concierge guidance from first consultation through closing coordination",
+      "REALTOR® guidance from first consultation through closing coordination",
     ],
     lifestyle:
       "Fort Lauderdale combines boating, beach access, downtown dining, and established residential neighborhoods. Mia helps clients compare the tradeoffs between water access, walkability, renovation needs, and long-term fit.",

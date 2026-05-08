@@ -93,6 +93,9 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
         sub={market.intro}
         ctaPrimary={{ href: "/contact/", label: `Inquire About ${market.name}` }}
         ctaSecondary={{ href: "/markets/", label: "Other Markets" }}
+        background="image"
+        imageSrc={market.heroImage}
+        imageAlt={`${market.name} luxury real estate`}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
@@ -125,13 +128,13 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
 
           <aside className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10">
             <div className="font-display text-xs tracking-[0.3em] text-brass-700">
-              CONCIERGE BRIEF
+              MARKET BRIEF
             </div>
             <h3 className="mt-3 font-display text-2xl text-navy-800">
               Considering {market.name}?
             </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
-              Mia represents buyers and sellers in {market.name} with concierge attention end-to-end — current comparable sales, brokerage-relationship context, and any relevant informally available residences her network surfaces. Begin with a private conversation about timeline, architectural preference, and the specifics of the residence you have in mind.
+              Mia represents buyers and sellers in {market.name} with full attention end-to-end — current comparable sales, brokerage-relationship context, and any relevant informally available residences her network surfaces. Begin with a private conversation about timeline, architectural preference, and the specifics of the residence you have in mind.
             </p>
             <a
               href="/contact/"

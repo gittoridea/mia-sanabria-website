@@ -33,7 +33,7 @@ export const MIA = {
   },
   voice: {
     tagline: "Building Relationships for Life",
-    positioning: "South Florida Real Estate Concierge",
+    positioning: "South Florida Realtor",
     anchorLine: "If I don't know the answer, I will find it.",
   },
   tracking: { ga4Id: "G-PYYSF87G8K", userwayId: "vVNkJJLvR4" },

@@ -21,9 +21,9 @@ export const SITE = {
   title: "Mia Sanabria | Fort Lauderdale Luxury Real Estate",
   shortTitle: "Mia Sanabria | REALTOR®",
   description:
-    "Mia Sanabria — REALTOR® with LPT Realty. South Florida Real Estate Concierge for Fort Lauderdale, Broward, Miami-Dade, and Palm Beach buyers and sellers.",
+    "Mia Sanabria — REALTOR® with LPT Realty. South Florida Realtor for Fort Lauderdale, Broward, Miami-Dade, and Palm Beach buyers and sellers.",
   tagline: "Building Relationships for Life",
-  positioning: "South Florida Real Estate Concierge",
+  positioning: "South Florida Realtor",
   anchorLine: "If I don't know the answer, I will find it.",
   url: SITE_URL,
   productionUrl: PRODUCTION_URL,

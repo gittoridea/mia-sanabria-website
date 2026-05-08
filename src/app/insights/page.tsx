@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Insights — SE Florida Luxury Real Estate",
   description:
-    "What South Florida real estate concierge means in practice — how Mia Sanabria represents buyers and sellers in Fort Lauderdale, Boca Raton, and Palm Beach.",
+    "What working with a South Florida Realtor means in practice — how Mia Sanabria represents buyers and sellers in Fort Lauderdale, Boca Raton, and Palm Beach.",
   alternates: { canonical: `${SITE.url}/insights/` },
 };
 
@@ -20,10 +20,10 @@ export default function InsightsPage() {
   const article: WithContext<Article> = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": `${SITE.url}/insights/#article-concierge-model`,
-    headline: "What South Florida Real Estate Concierge Means in Practice",
+    "@id": `${SITE.url}/insights/#article-realtor-model`,
+    headline: "What Working with a South Florida Realtor Means in Practice",
     description:
-      "A working definition of the concierge model Mia Sanabria uses for buyers and sellers across Fort Lauderdale, Boca Raton, and the Palm Beach corridor.",
+      "A working definition of the personal-representation model Mia Sanabria uses for buyers and sellers across Fort Lauderdale, Boca Raton, and the Palm Beach corridor.",
     author: { "@id": `${SITE.url}/#person` },
     publisher: { "@id": `${SITE.url}/#organization` },
     datePublished: PUBLISHED_ISO,
@@ -33,7 +33,7 @@ export default function InsightsPage() {
     inLanguage: "en-US",
     about: [
       { "@type": "Thing", name: "Luxury real estate" },
-      { "@type": "Thing", name: "Concierge representation" },
+      { "@type": "Thing", name: "Personal representation" },
       { "@type": "Place", name: "Fort Lauderdale, Florida" },
       { "@type": "Place", name: "Boca Raton, Florida" },
       { "@type": "Place", name: "Palm Beach, Florida" },
@@ -62,13 +62,13 @@ export default function InsightsPage() {
             <span>The Practice</span>
           </div>
           <h2 className="font-display text-3xl text-navy-800 sm:text-4xl">
-            What South Florida real estate concierge means in practice.
+            What working with a South Florida Realtor means in practice.
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-navy-800/85">
             Most luxury buyers and sellers in Fort Lauderdale, Boca Raton, and the Palm Beach corridor do not actually need more listings. They need fewer — the right ones, framed clearly, against current comparable sales, with a representative who treats the conversation as private from the first call.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
-            That is the working definition of a concierge practice. Not a service tier or a marketing label — a different shape of engagement.
+            That is the working definition of a personal Realtor practice. Not a service tier or a marketing label — a different shape of engagement.
           </p>
 
           <h3 className="mt-12 font-display text-2xl text-navy-800">A clearly written brief comes first.</h3>
@@ -83,7 +83,7 @@ export default function InsightsPage() {
 
           <h3 className="mt-10 font-display text-2xl text-navy-800">Pricing is current, specific, and earned.</h3>
           <p className="mt-3 text-[15px] leading-relaxed text-navy-800/85">
-            Online estimates broadcast averages. Concierge pricing answers a different question — what should this specific street, building, lot, condition, and dockage profile transact at this month, against the buyers actually in the market. The answer requires comparable sales pulled and reviewed for the address, not a generic range.
+            Online estimates broadcast averages. A property-specific pricing analysis answers a different question — what should this specific street, building, lot, condition, and dockage profile transact at this month, against the buyers actually in the market. The answer requires comparable sales pulled and reviewed for the address, not a generic range.
           </p>
 
           <h3 className="mt-10 font-display text-2xl text-navy-800">Discretion is the default, not a feature.</h3>

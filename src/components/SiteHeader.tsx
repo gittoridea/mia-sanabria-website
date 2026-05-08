@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
@@ -14,12 +15,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-cream-300 bg-cream-50/95 backdrop-blur supports-[backdrop-filter]:bg-cream-50/85">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <div
+          <Image
+            src="/logo-lpt.png"
+            alt=""
             aria-hidden="true"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-brass-400 bg-navy-800 text-brass-200 font-display text-sm tracking-widest"
-          >
-            MS
-          </div>
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full bg-navy-800 p-1"
+            priority
+          />
           <div className="leading-tight">
             <div className="font-display text-base tracking-[0.2em] text-navy-800">
               MIA SANABRIA

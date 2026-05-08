@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Faq } from "@/components/Faq";
-import { SectionHeading } from "@/components/SectionHeading";
 import { PersonSchema } from "@/components/schema/PersonSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
@@ -182,35 +181,6 @@ export default function ContactPage() {
               By submitting you agree to receive a private response from Mia or her team. We never share contact details.
             </p>
           </form>
-        </div>
-      </section>
-
-      <section className="bg-cream-100 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <SectionHeading
-            eyebrow="Service Area"
-            heading="Fort Lauderdale and Southeast Florida."
-            sub="Consultations are scheduled on-site at the residence, virtually, or at a mutually convenient location in Fort Lauderdale."
-          />
-          <div className="mt-10 overflow-hidden rounded-sm border border-navy-800/10 bg-white shadow-card">
-            <iframe
-              title="Fort Lauderdale, Florida map"
-              src="https://www.google.com/maps?q=Fort+Lauderdale,+FL+33305&hl=en&output=embed"
-              width="1200"
-              height="300"
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              className="h-[300px] w-full"
-            />
-            <noscript>
-              <a
-                href="https://www.google.com/maps?q=Fort+Lauderdale,+FL+33305"
-                className="block px-6 py-5 text-sm font-medium text-navy-800 underline decoration-brass-400 underline-offset-4"
-              >
-                Open the Fort Lauderdale map.
-              </a>
-            </noscript>
-          </div>
         </div>
       </section>
 

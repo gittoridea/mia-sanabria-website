@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -8,6 +9,8 @@ export function Hero({
   ctaPrimary,
   ctaSecondary,
   background = "navy",
+  imageSrc,
+  imageAlt,
 }: {
   eyebrow?: string;
   heading: string;
@@ -15,17 +18,34 @@ export function Hero({
   ctaPrimary?: { href: string; label: string };
   ctaSecondary?: { href: string; label: string };
   background?: "navy" | "cream" | "image";
+  imageSrc?: string;
+  imageAlt?: string;
 }) {
+  const useImage = background === "image" && imageSrc;
   return (
     <section
       className={
-        background === "navy"
-          ? "relative bg-navy-800 text-cream-100"
-          : background === "cream"
-            ? "relative bg-cream-100 text-navy-800"
-            : "relative bg-navy-800 text-cream-100"
+        background === "cream"
+          ? "relative overflow-hidden bg-cream-100 text-navy-800"
+          : "relative overflow-hidden bg-navy-800 text-cream-100"
       }
     >
+      {useImage ? (
+        <>
+          <Image
+            src={imageSrc}
+            alt={imageAlt ?? ""}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-b from-navy-800/65 via-navy-800/55 to-navy-800/85"
+          />
+        </>
+      ) : null}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-30 [background:radial-gradient(60%_60%_at_50%_30%,rgba(184,155,94,0.18),transparent_70%)]"
@@ -44,9 +64,9 @@ export function Hero({
         ) : null}
         <h1
           className={
-            background === "navy" || background === "image"
-              ? "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance]"
-              : "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl [text-wrap:balance]"
+            background === "cream"
+              ? "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl [text-wrap:balance]"
+              : "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance]"
           }
         >
           {heading}
@@ -54,9 +74,9 @@ export function Hero({
         {sub ? (
           <p
             className={
-              background === "navy" || background === "image"
-                ? "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
-                : "mt-6 max-w-2xl text-lg text-navy-800/80 [text-wrap:pretty] sm:text-xl"
+              background === "cream"
+                ? "mt-6 max-w-2xl text-lg text-navy-800/80 [text-wrap:pretty] sm:text-xl"
+                : "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
             }
           >
             {sub}
