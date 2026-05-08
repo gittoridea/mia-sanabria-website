@@ -198,10 +198,14 @@ export default function PrivacyPage() {
             affect how forms or accessibility features function.
           </p>
 
-          <h2 className="font-display text-2xl text-navy-800">Do Not Track</h2>
+          <h2 className="font-display text-2xl text-navy-800">Do Not Track and Global Privacy Control</h2>
           <p>
-            Browser-based Do Not Track signals are not yet subject to a uniform industry standard. For
-            that reason, this website does not currently respond differently to Do Not Track signals.
+            Browser-based Do Not Track (DNT) signals are not yet subject to a uniform industry standard,
+            and this website does not currently respond differently to DNT signals. We do, however, treat
+            a Global Privacy Control (GPC) signal as a valid opt-out request to limit the sale or sharing
+            of personal information for California residents under the CCPA / CPRA, where applicable to
+            the data we hold. If you are a California resident and your browser sends a GPC signal, we
+            will apply that signal to data collected by this website to the extent required by law.
           </p>
 
           <h2 className="font-display text-2xl text-navy-800">Data retention</h2>

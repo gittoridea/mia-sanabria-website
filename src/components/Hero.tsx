@@ -66,7 +66,9 @@ export function Hero({
           className={
             background === "cream"
               ? "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl [text-wrap:balance]"
-              : "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance]"
+              : useImage
+                ? "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance] [text-shadow:0_2px_18px_rgba(15,42,68,0.85),0_1px_3px_rgba(0,0,0,0.65)]"
+                : "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance]"
           }
         >
           {heading}
@@ -76,7 +78,9 @@ export function Hero({
             className={
               background === "cream"
                 ? "mt-6 max-w-2xl text-lg text-navy-800/80 [text-wrap:pretty] sm:text-xl"
-                : "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
+                : useImage
+                  ? "mt-6 max-w-2xl text-lg text-cream-200/95 [text-wrap:pretty] sm:text-xl [text-shadow:0_1px_12px_rgba(15,42,68,0.8)]"
+                  : "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
             }
           >
             {sub}
