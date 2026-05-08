@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-05-08T21:55:23.274Z",
+  "counts": {
+    "pass": 7,
+    "warn": 0,
+    "fail": 0,
+    "skip": 0
+  },
+  "results": [
+    {
+      "id": "images.localFilesResolve",
+      "category": "Image Resolution",
+      "description": "Every <img> referencing a local /public/* path resolves to an actual file",
+      "status": "PASS",
+      "evidence": "187 <img> tags across 27 pages — all local references resolve"
+    },
+    {
+      "id": "images.ogImagesResolve",
+      "category": "Image Resolution",
+      "description": "Every og:image referencing a local /public/* path resolves to an actual file",
+      "status": "PASS",
+      "evidence": "27 og:image entries across 27 pages — all local references resolve"
+    },
+    {
+      "id": "images.twitterImagesResolve",
+      "category": "Image Resolution",
+      "description": "Every twitter:image referencing a local /public/* path resolves to an actual file",
+      "status": "PASS",
+      "evidence": "0 broken twitter:image references"
+    },
+    {
+      "id": "images.noPlaceholderFilenames",
+      "category": "Production Polish",
+      "description": "No images use placeholder/lorem/todo/sample/untitled filenames",
+      "status": "PASS",
+      "evidence": "no placeholder filenames detected"
+    },
+    {
+      "id": "images.altPresent",
+      "category": "Accessibility",
+      "description": "Every <img> has an alt attribute (empty alt for decorative is acceptable)",
+      "status": "PASS",
+      "evidence": "187 <img> tags — all have alt attribute"
+    },
+    {
+      "id": "images.noUnresolvableRemote",
+      "category": "Static Export Integrity",
+      "description": "No <img> uses a remote URL that bypasses the static-export pipeline (warns; does not fail)",
+      "status": "PASS",
+      "evidence": "no remote <img> URLs detected"
+    },
+    {
+      "id": "images.requiredAssetsExist",
+      "category": "Asset Inventory",
+      "description": "Every Brand-Contract-required asset (headshot, logos, OG defaults, 13 market heroes) exists in public/",
+      "status": "PASS",
+      "evidence": "all required assets present"
+    }
+  ]
+}

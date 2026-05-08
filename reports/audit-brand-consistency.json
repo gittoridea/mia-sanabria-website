@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-05-08T21:55:23.323Z",
+  "counts": {
+    "pass": 7,
+    "warn": 0,
+    "fail": 0,
+    "skip": 0
+  },
+  "results": [
+    {
+      "id": "brand.noForbiddenColors",
+      "category": "Color System",
+      "description": "No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/",
+      "status": "PASS",
+      "evidence": "no off-brand color tokens"
+    },
+    {
+      "id": "brand.noForbiddenFonts",
+      "category": "Typography",
+      "description": "Only Cinzel display + Montserrat body (font-display / font-sans / font-cinzel / font-montserrat); no font-mono / font-serif / font-cursive / font-fantasy",
+      "status": "PASS",
+      "evidence": "no forbidden font families"
+    },
+    {
+      "id": "brand.noForbiddenInBuilt",
+      "category": "Built Output",
+      "description": "Built HTML across 8 sampled pages contains no off-brand color/effect classes",
+      "status": "PASS",
+      "evidence": "0 off-brand classes in built output"
+    },
+    {
+      "id": "brand.footerTrustElements",
+      "category": "Footer Discipline",
+      "description": "Every sampled page renders LPT / REALTOR® / EHO trust sentinels + 4 legal links in footer",
+      "status": "PASS",
+      "evidence": "8 sampled pages carry full footer trust set"
+    },
+    {
+      "id": "brand.siteFooterStructure",
+      "category": "Component Discipline",
+      "description": "SiteFooter.tsx renders the 4-col grid (brand + EXPLORE + ABOUT + BROKERAGE) per Brand System Contract",
+      "status": "PASS",
+      "evidence": "all 3 named footer columns present"
+    },
+    {
+      "id": "brand.siteFooterTrustStripAria",
+      "category": "Component Discipline",
+      "description": "SiteFooter trust strip carries aria-label=\"Industry affiliations\"",
+      "status": "PASS",
+      "evidence": "trust-strip aria-label present"
+    },
+    {
+      "id": "brand.mobileNavPresent",
+      "category": "Mobile Discipline",
+      "description": "SiteHeader.tsx renders a mobile-nav affordance (drawer, hamburger, or hidden-on-desktop nav)",
+      "status": "PASS",
+      "evidence": "mobile nav toggle + breakpoint visibility classes detected"
+    }
+  ]
+}

@@ -14,7 +14,9 @@
     "audit:links": "bun run scripts/audit-links.ts",
     "audit:seo": "bun run scripts/audit-seo.ts",
     "audit:completeness": "bun run scripts/audit-completeness.ts",
-    "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness"
+    "audit:images": "bun run scripts/audit-images.ts",
+    "audit:brand": "bun run scripts/audit-brand-consistency.ts",
+    "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand"
   },
   "dependencies": {
     "@img/sharp-libvips-linux-x64": "^1.2.4",
