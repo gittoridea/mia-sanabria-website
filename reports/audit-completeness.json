@@ -1,0 +1,294 @@
+{
+  "timestamp": "2026-05-08T18:18:40.597Z",
+  "counts": {
+    "PASS": 14,
+    "WARN": 2,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "results": [
+    {
+      "id": "completeness.sitemap.builtInSitemap",
+      "category": "Sitemap coverage",
+      "description": "Every public built route is in sitemap.xml",
+      "status": "PASS",
+      "evidence": "19 built · 19 in sitemap · 0 missing",
+      "details": {
+        "missing": [],
+        "builtCount": 19,
+        "sitemapCount": 19
+      }
+    },
+    {
+      "id": "completeness.sitemap.sitemapInBuilt",
+      "category": "Sitemap coverage",
+      "description": "Every sitemap route resolves to a built page",
+      "status": "PASS",
+      "evidence": "0 unresolved",
+      "details": {
+        "unresolved": []
+      }
+    },
+    {
+      "id": "completeness.legal.routesExist",
+      "category": "Compliance",
+      "description": "Required legal routes /privacy/, /terms/, /dmca/, /accessibility/ are built",
+      "status": "PASS",
+      "evidence": "all 4 legal routes built",
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "id": "completeness.metadata.allPresent",
+      "category": "SEO/AEO",
+      "description": "Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image",
+      "status": "PASS",
+      "evidence": "0 field issues across 19 pages",
+      "details": {
+        "issues": []
+      }
+    },
+    {
+      "id": "completeness.metadata.uniqueTitles",
+      "category": "SEO/AEO",
+      "description": "Each core/legal/market page has unique <title>",
+      "status": "PASS",
+      "evidence": "19 unique titles across 19 pages",
+      "details": {
+        "duplicates": []
+      }
+    },
+    {
+      "id": "completeness.metadata.uniqueDescriptions",
+      "category": "SEO/AEO",
+      "description": "Each core/legal/market page has unique <meta description>",
+      "status": "PASS",
+      "evidence": "all descriptions unique",
+      "details": {
+        "duplicates": []
+      }
+    },
+    {
+      "id": "completeness.markets.wordFloor",
+      "category": "Local Authority",
+      "description": "Market pages have ≥200 visible words",
+      "status": "PASS",
+      "evidence": "all 7 market pages exceed 200-word floor",
+      "details": {
+        "thinPages": []
+      }
+    },
+    {
+      "id": "completeness.footer.trust",
+      "category": "Compliance",
+      "description": "Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on sampled pages",
+      "status": "PASS",
+      "evidence": "all 7 sampled pages carry full footer trust set",
+      "details": {
+        "failsByRoute": {}
+      }
+    },
+    {
+      "id": "completeness.images.dimsAltPlaceholder",
+      "category": "Design/Display Integrity",
+      "description": "Core-page <img> tags have alt + width/height + no placeholder names",
+      "status": "WARN",
+      "evidence": "23 img attribute issues",
+      "details": {
+        "issues": [
+          {
+            "route": "/",
+            "img": "/og-default.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/markets/fort-lauderdale.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/markets/coral-ridge.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/markets/victoria-park.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/markets/boca-raton.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/markets/delray-beach.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/about/",
+            "img": "/mia-headshot.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/contact/",
+            "img": "/services/contact.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/buyers/",
+            "img": "/services/buyers.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/sellers/",
+            "img": "/services/sellers.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/valuation/",
+            "img": "/services/valuation.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/fort-lauderdale/",
+            "img": "/markets/fort-lauderdale.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/fort-lauderdale/",
+            "img": "/markets/coral-ridge.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/fort-lauderdale/",
+            "img": "/markets/victoria-park.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/fort-lauderdale/",
+            "img": "/markets/boca-raton.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/coral-ridge/",
+            "img": "/markets/coral-ridge.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/coral-ridge/",
+            "img": "/markets/fort-lauderdale.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/coral-ridge/",
+            "img": "/markets/victoria-park.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/coral-ridge/",
+            "img": "/markets/boca-raton.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/victoria-park/",
+            "img": "/markets/victoria-park.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/victoria-park/",
+            "img": "/markets/fort-lauderdale.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/victoria-park/",
+            "img": "/markets/coral-ridge.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/victoria-park/",
+            "img": "/markets/boca-raton.jpg",
+            "problem": "missing width/height"
+          }
+        ]
+      }
+    },
+    {
+      "id": "completeness.images.localFilesExist",
+      "category": "Design/Display Integrity",
+      "description": "Local image references resolve to files in out/",
+      "status": "PASS",
+      "evidence": "all referenced local images exist",
+      "details": {
+        "broken": []
+      }
+    },
+    {
+      "id": "completeness.og.imagesResolve",
+      "category": "SEO/AEO",
+      "description": "Every page's og:image resolves to a local file in out/",
+      "status": "PASS",
+      "evidence": "all og:images resolve",
+      "details": {
+        "broken": []
+      }
+    },
+    {
+      "id": "completeness.forms.classification",
+      "category": "Forms/CTAs",
+      "description": "Form actions classified: live-ghl / mailto / disabled / other",
+      "status": "WARN",
+      "evidence": "2 forms · 0 live-ghl · 2 mailto · 0 disabled · 0 other",
+      "details": {
+        "live-ghl": [],
+        "mailto": [
+          {
+            "route": "/contact/",
+            "action": "mailto:msanabriarea@gmail.com?subject=Private%20Inquiry%20%E2%80%94%20Mia%20Sanabria",
+            "type": "mailto"
+          },
+          {
+            "route": "/valuation/",
+            "action": "mailto:msanabriarea@gmail.com?subject=Valuation%20Request%20%E2%80%94%20Mia%20Sanabria",
+            "type": "mailto"
+          }
+        ],
+        "disabled": [],
+        "other": []
+      }
+    },
+    {
+      "id": "completeness.blog.inNav",
+      "category": "Blog",
+      "description": "Insights/blog link present in homepage nav (header or footer)",
+      "status": "PASS",
+      "evidence": "insights linked from homepage"
+    },
+    {
+      "id": "completeness.blog.inSitemap",
+      "category": "Blog",
+      "description": "/insights/ in sitemap.xml",
+      "status": "PASS",
+      "evidence": "/insights/ in sitemap"
+    },
+    {
+      "id": "completeness.blog.articleSchema",
+      "category": "Blog",
+      "description": "/insights/ emits at least one Article JSON-LD",
+      "status": "PASS",
+      "evidence": "Article schema present"
+    },
+    {
+      "id": "completeness.schema.valid",
+      "category": "Schema",
+      "description": "All JSON-LD blocks parse and carry @type",
+      "status": "PASS",
+      "evidence": "108 JSON-LD blocks across 19 pages · 0 broken",
+      "details": {
+        "issues": []
+      }
+    }
+  ]
+}

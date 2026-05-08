@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description:
       "REALTOR® with LPT Realty serving Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Long-relationship practice; small client list by design.",
     url: `${SITE.url}/about/`,
-    images: [{ url: `${SITE.url}/mia-headshot.jpg`, width: 1024, height: 1024, alt: "Mia Sanabria, REALTOR® with LPT Realty" }],
+    images: [{ url: `${SITE.url}/mia-og.jpg`, width: 1200, height: 630, alt: "Mia Sanabria, REALTOR® with LPT Realty" }],
   },
 };
 

@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   description:
     "Featured Southeast Florida markets — Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach.",
   alternates: { canonical: `${SITE.url}/markets/` },
+  openGraph: {
+    title: "Featured Markets — Mia Sanabria, Fort Lauderdale REALTOR®",
+    description:
+      "Eastern Fort Lauderdale, Boca Raton, Delray Beach, Coral Ridge, Victoria Park — neighborhood-by-neighborhood luxury real estate guidance.",
+    url: `${SITE.url}/markets/`,
+    images: [{ url: `${SITE.url}/og-default.jpg`, width: 1200, height: 630, alt: "Southeast Florida luxury markets" }],
+  },
 };
 
 export default function MarketsIndex() {
