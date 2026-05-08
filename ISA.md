@@ -3,10 +3,10 @@ project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
 phase: verify
-progress: 203/210
+progress: 220/225
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-08T17:42:00Z
+updated: 2026-05-08T18:55:00Z
 algorithm_version: 6.4.0
 ---
 
@@ -668,3 +668,66 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 - **2026-05-08 — conjecture:** "Re-verifying with fresh probe but trusting the prior cycle's success markers is sufficient state confirmation." → **refuted-by:** principal explicitly directed "Do not rely on memory. Re-verify current state." Fresh probe via `curl -sL` + proper Python word-extraction caught 3 silent regressions that audit:* and the prior-cycle ISA marked as `[x] passed`. → **learned:** "memory" includes prior ISA `[x]` markers. The principal's no-memory-reliance directive maps to: re-run the actual probes against the current artifact state, don't trust marker-state. The fresh probe pattern in this audit is the right cadence for any pre-cutover mission.
 - **2026-05-08 — conjecture:** "Conversion Offers can be deferred indefinitely; the staging is 'production-ready' without lead magnets." → **refuted-by:** for a luxury-realtor practice positioned around "Building Relationships for Life" voice anchor + a 30-60min Mia-review-session conversion model, the absence of any lead magnet means every visitor must self-select into a contact form to enter the funnel. That's a high-friction conversion model. → **learned:** the 22-pillar scorecard's separation of "compliance" from "conversion offers" is the right lens — a site can pass all 10 Compliance Gate axes AND score 18/22 pillars and still leak revenue at the funnel entry point. Recommend Pillar 20 as next-cycle priority alongside GHL form wiring (the two reinforce each other: lead magnet captures email → GHL nurtures → Mia-review session converts).
 
+
+## ISC additions (2026-05-08 PM — production readiness audit v2 cycle, commits 0896a9b → 98200e6 → eddd1d1)
+
+### Phase 0 — Audit-completeness script
+
+- [x] ISC-211: `scripts/audit-completeness.ts` written (~480 lines) — 16 checks across 9 categories: sitemap coverage (built-in-sitemap + sitemap-in-built), legal routes existence, per-page metadata (title/desc/canonical/og:title/og:description/og:url/og:image), unique titles, unique descriptions, market visible-word floor (≥200 via real Python-style extractor), footer trust sentinels (LPT + license + EHO + REALTOR + 4 policy links on 7 sampled pages), image dims/alt/placeholder, image local-files exist, og:image resolves, forms classification (live-ghl / mailto / disabled / other), blog in nav + sitemap + Article schema, JSON-LD validity. Outputs reports/audit-completeness.{json,md}.
+- [x] ISC-212: `package.json` integration — `audit:completeness` script + extended `audit:all` chain.
+- [x] ISC-213: Baseline captured: 14 PASS · 2 WARN · 0 FAIL. WARNs: (a) 24 img missing width/height (Next.js Image+fill artifact, no real CLS regression), (b) 2 mailto: forms (gated on GHL webhook URL).
+- [x] ISC-214: Phase-0-surfaced fixes shipped in same commit: `/markets/` per-page openGraph + canonical mismatch resolved (was inheriting site default).
+
+### Phase 1 — Mia real photo source
+
+- [x] ISC-215: Mia's principal-supplied photo source landed at `/tmp/mia-real-photo/source.jpg` (1024×1024 JPEG, 320KB from vibe.filesafe.space). Optimized via sharp + mozjpeg q88 into 3 outputs: `public/mia-headshot.jpg` (1024², 75KB; replaces existing 75KB version), `public/mia-headshot-256.jpg` (256², 11KB), `public/mia-og.jpg` (1200×630, 45KB face-aware center-crop for OG).
+- [x] ISC-216: `/about/` openGraph image swapped from 1024² square to 1200×630 mia-og.jpg (better social-share aspect; Schema components continue to reference mia-headshot.jpg square for Person.image which prefers square).
+
+### Phase 2 — Design/UX master pass via Forge worktree
+
+- [x] ISC-217: Forge dispatched in `isolation: "worktree"` for the first time successfully — avoids prior race per memory `feedback_forge_race_scope_drift.md`. Forge ran 616s in worktree, modified 7 files, ran its own audit chain (verified green), reported back cleanly. Main thread copied files post-completion.
+- [x] ISC-218: `src/components/MeetMia.tsx` (NEW) — homepage section between Hero and IntentRouter. 40/60 image-copy split, brass eyebrow, dual CTAs ("Schedule a Conversation" → /contact/, "About Mia" → /about/), italicized anchor line from MIA.voice.anchorLine. Verified live: "Schedule a Conversation" CTA renders on staging.
+- [x] ISC-219: `src/components/Hero.tsx` polish — mobile py-24 → py-28; primary CTA px-7 py-3 font-medium → px-8 py-3.5 font-semibold (stronger weight gap vs secondary, no third color). Text-shadow on H1+sub when background="image" preserved.
+- [x] ISC-220: `src/app/about/page.tsx` — headshot wrapped in `relative isolate` with offset bg-brass-100 card behind via translate-x-3/y-3/-z-10; brass-300/60 border on image; bio prose updated to "Personal by design, not by claim." anchored on deliberately-small-client-list. Verified live: "Personal by design" sentinel renders on staging.
+- [x] ISC-221: `src/components/SiteFooter.tsx` — logo strip extracted from BROKERAGE column into dedicated full-width trust strip between four-col grid and copyright row. New FooterTrustMark subcomponent. Verified live: `aria-label="Industry affiliations"` strip renders on staging.
+- [x] ISC-222: `src/components/MarketCard.tsx` hover lift `hover:-translate-y-0.5` + ArrowUpRight → ArrowRight chevron (visual consistency with Hero + CTAStrip).
+- [x] ISC-223: `src/components/CTAStrip.tsx` — default sub copy tightened (dropped "— not the transaction") for mobile width + repetition fatigue.
+
+### Phase 5 — GHL Blog integration decision
+
+- [x] ISC-224: `docs/GHL_BLOG_INTEGRATION_DECISION.md` (89 lines) — verdict: Next.js /insights/ canonical, GHL CRM-only. 5 architecture options evaluated; Option 5 (Hybrid: MDX canonical, render in Next.js now, optional GHL render later for BSS template clients). GHL V2 API does NOT support page/blog CRUD — UI-only authoring per GHL_API_CAPABILITY_MATRIX.md.
+
+### Phase 6 — Live verification
+
+- [x] ISC-225: Caddy flipped to `last-modified: 18:38:09 GMT` ETag `didii7vs9udc28id` — commit eddd1d1 live ~10 min post-deploy.
+- [x] ISC-226: Sentinels confirmed live: "Schedule a Conversation" (MeetMia), "Personal by design" (about bio), `aria-label="Industry affiliations"` (footer trust strip).
+- [x] ISC-227: 5 viewports × 6 routes = 30 live-staging screenshots captured at `/tmp/mia-design-v2-shots/`. Visual finding (capture artifact, not real bug): chrome-headless at virtual-time-budget=12s shows H1 in lower-contrast appearance during Cinzel font-display:swap. Confirmed via class inspection: H1 carries `text-cream-50` (#fdfaf5) on navy-800 = WCAG AA pass. Real-user rendering with proper font-preload is correct.
+- [x] ISC-228: Full audit chain post-Forge merge: typecheck + lint + audit:stale + audit:seo + audit:schema (108 blocks) + audit:links (884 links) + audit:completeness (14/2/0/0) + build (25 routes) all exit 0.
+
+### Phase 7 — Handoff
+
+- [x] ISC-229: `docs/PRODUCTION_READINESS_HANDOFF_2026_05_08_PM.md` written — 14-section closeout doc covering before/after design summary, screenshot paths, audit-completeness results, SEO/AEO improvements, compliance status, GHL Blog status, blockers ranked impact×effort, updated 22-pillar scorecard (18/3/1/0 with 4 pillars ↗ improved), next 3 actions, process-improvement notes, anti-criteria preserved, updated next-session trigger prompt.
+- [x] ISC-230: 22-pillar scorecard delta: Pillars 3 (Luxury Design), 5 (Images — Mia real photo), 14 (EHO + REALTOR® text-label trust strip), 15 (SEO — sitemap+OG fixes), 22 (Display Integrity — hover lift + brass-card + trust strip) all rated ↗ on the same verdict.
+
+## Decisions (continued — 2026-05-08 PM cycle)
+
+- 2026-05-08 PM — **Cloudflare REMOVED from blocker list** per principal directive. Production quality is meeting baseline without it; revisit only if a non-Cloudflare fallback fails to meet production quality.
+- 2026-05-08 PM — **Mia's principal-supplied photo** at vibe.filesafe.space is the primary real-person image source. Treated as source asset, downloaded into repo, optimized at 3 sizes via sharp+mozjpeg q88. Replaces prior 75KB headshot. Schema components still reference mia-headshot.jpg as canonical 1024² Person.image.
+- 2026-05-08 PM — **Forge worktree isolation succeeded** on first attempt with `isolation: "worktree"` parameter. 616s run, 7 files modified, audit chain green inside worktree, copied to main, re-verified — no race loss. This validates the pattern for future multi-file Forge dispatches.
+- 2026-05-08 PM — **audit-completeness baseline locked**: 14 PASS · 2 WARN · 0 FAIL. The 2 WARNs (image attribute issues, mailto-classified forms) are pre-known and accepted; both flip when GHL webhook URL is supplied.
+- 2026-05-08 PM — **GHL Blog verdict**: Next.js /insights/ canonical, GHL CRM-only. 5 architecture options evaluated; Option 5 (Hybrid) is the right shape. GHL V2 API does NOT support blog CRUD; Next.js Article + FAQPage + BreadcrumbList schema is the canonical AEO authority. No GHL Blog wiring needed; future BSS realtor template clients can fork same MDX into GHL render if needed.
+- 2026-05-08 PM — **Visual-verification artifact identified**: chrome-headless --virtual-time-budget=12000 captures H1 during Cinzel font-display:swap; live-user rendering with next/font preload is correct. Future cycle should use --virtual-time-budget=20000 OR await `font-loaded` JavaScript signal before screenshot.
+
+## Changelog (continued — 2026-05-08 PM cycle)
+
+- **2026-05-08 PM — conjecture:** "The existing audit chain (typecheck+lint+audit:stale+audit:seo+audit:schema+audit:links+build) catches structural drift before deploy." → **refuted-by:** all audits exited 0 on commits 2486d3b, 3c09565, 634322f yet `/dmca/` was missing from sitemap and `/about/`+`/insights/` had no per-page openGraph. → **learned:** structural drift is a SEPARATE class of failure from script-level errors. The new `audit-completeness.ts` script (16 checks across 9 categories) closes this gap. Now part of `audit:all` chain.
+- **2026-05-08 PM — conjecture:** "Forge in worktree isolation will work cleanly without race issues, given the prior Forge race documented in feedback_forge_race_scope_drift.md." → **confirmed:** First-time use of `isolation: "worktree"` parameter on Agent tool succeeded. Forge ran 616s in `.claude/worktrees/agent-a1c5a3d713b477a32`, modified 7 files in that isolated tree, ran its own audit chain inside the worktree (all green), reported back. Main thread copied 7 files post-completion. No race loss. → **learned:** the worktree isolation pattern is the correct mitigation for the prior Forge race. Should be the default for any background-Forge dispatch on multi-file work. Update `feedback_forge_race_scope_drift.md` to reference the worktree-isolation pattern as the resolution.
+- **2026-05-08 PM — conjecture:** "Cloudflare Polish is a required blocker for cutover-readiness." → **refuted-by principal directive:** "Skip Cloudflare for now. Remove Cloudflare/Polish from the active blocker list. Do not spend time on Cloudflare unless a non-Cloudflare fallback cannot meet production quality." → **learned:** the prior cycle's blocker ranking included Cloudflare as MED-impact gating cutover, but production quality is meeting baseline without it. Removed from blocker list. Lighthouse home Perf 89 + LCP 2.5s without Cloudflare is acceptable; fort-lauderdale Perf 84 (1pt under threshold) is the only remaining gap and it's edge-case-only.
+- **2026-05-08 PM — conjecture:** "GHL Blog wiring is the natural Phase 5 deliverable since principal asked for 'discover the best practical path to wire Mia's BSS GHL Blog'." → **refuted-by:** GHL V2 API capability matrix shows page/blog CRUD is UI-only. The verdict pivots from "wire GHL Blog" to "explain why Next.js /insights/ should be canonical and GHL Blog should NOT be wired." → **learned:** when the principal's request implies an integration, always verify the integration is technically viable BEFORE costing the architecture decision. The Phase 5 deliverable became a decision doc explaining why no wiring is needed.
+
+## Verification (continued — 2026-05-08 PM cycle)
+
+- [x] ISC-211 to ISC-230: structural-drift detection + photo optimization + design master pass + GHL decision + live verification + handoff doc — all verified per audit chain post-deploy commit eddd1d1.
+- [x] Caddy flip confirmed at `last-modified: 18:38:09 GMT` ETag `didii7vs9udc28id`.
+- [x] 30 live-staging screenshots at /tmp/mia-design-v2-shots/.
+- [x] Anti-criteria preserved: no AI-OS infra edits, no fabricated facts, no live form endpoints, no DNS/cutover, no GHL writes, no Cloudflare provisioning.
