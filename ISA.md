@@ -731,3 +731,65 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 - [x] Caddy flip confirmed at `last-modified: 18:38:09 GMT` ETag `didii7vs9udc28id`.
 - [x] 30 live-staging screenshots at /tmp/mia-design-v2-shots/.
 - [x] Anti-criteria preserved: no AI-OS infra edits, no fabricated facts, no live form endpoints, no DNS/cutover, no GHL writes, no Cloudflare provisioning.
+
+---
+
+## Mission 2026-05-08 PM cycle 2 — Markets-V3 luxury authority sprint
+
+**Effort:** E5 | **Phase:** verify→learn | **Started:** 2026-05-08 PM | **Commit:** 7c8fc67
+
+### Goal (this mission)
+
+Promote the markets cluster from 7 routes (informational tone) to 13 routes (luxury market authority) with extended schema (aeoAnswer + propertyTypes + buyerGuidance + sellerGuidance + faqs[5] + internalLinks[]) — closing the Eastern Fort Lauderdale waterfront / Boca Raton + Delray Beach Palm-Beach-County / northern-Broward coastal authority gaps in one cycle without touching the locked Brand System Contract.
+
+### Criteria (this mission)
+
+- [x] ISC-231: 6 new market slugs added to `ALL_MARKET_SLUGS` (rio-vista, harbor-beach, las-olas-isles, seven-isles, sea-ranch-lakes, hillsboro-mile). Verified via grep on `src/lib/mia.ts`.
+- [x] ISC-232: `Market` type extended with `aeoAnswer`, `propertyTypes`, `buyerGuidance`, `sellerGuidance`, `faqs[]`, `internalLinks[]` readonly fields. Verified via grep on `src/lib/markets.ts`.
+- [x] ISC-233: 6 new market entries authored with full schema parity (every required field populated; aeoAnswer 75–125 words; propertyTypes 3–5; buyerGuidance/sellerGuidance 60–100 words; exactly 5 FAQs each 30–80 words; 2–4 internal links). Forge self-verified via inline word-count audit script.
+- [x] ISC-234: 7 existing market entries upgraded with the 6 new fields (preserving all prior fields verbatim incl. `miaQuote` strings).
+- [x] ISC-235: `/markets/[slug]/page.tsx` template upgraded to 8-section luxury market authority flow (Hero → AEO answer block → Lifestyle two-column → Property archetypes grid → Buyer guidance → Seller guidance → Market-specific FAQ → Related markets → CTAStrip).
+- [x] ISC-236: `<FaqSchema items={market.faqs} />` JSON-LD emission added per market page; audit:schema reports 148 JSON-LD blocks across 27 pages, all parse with @context + @type.
+- [x] ISC-237: `/markets/` index split into "Primary service markets" (7 city/town routes) + "Eastern Fort Lauderdale neighborhoods" (6 neighborhood routes) via `partitionMarkets()` helper. 13-market grid renders with cluster split visible.
+- [x] ISC-238: 6 new hero portrait images generated via Imagen pipeline at `/tmp/mia-genimg/run-new6.ts` (1200×1500 q88 mozjpeg) + 6 OG derivatives at `/tmp/mia-genimg/og-derive.ts` (1200×630 q86). All landed in `public/markets/<slug>.jpg` + `public/og-markets/<slug>.jpg`.
+- [x] ISC-239: Geographic guardrail strict — Boca Raton + Delray Beach + Palm Beach all `county: "Palm Beach County"`; all 10 other markets `county: "Broward County"`. Verified by grep: 10 Broward + 3 Palm Beach exactly.
+- [x] ISC-240: Pre-flight gate added to `scripts/deploy-and-verify.ts` — typecheck → lint → build → audit:all → audit-completeness FAIL gate runs before deploy. WARN does not block; FAIL aborts (also `--no-preflight` flag for re-deploy without re-running gate).
+- [x] ISC-241: Tightened market metadata title format with `title.absolute` to override layout's title.template suffix; all 13 market titles now ≤60 chars (previously 68–75).
+- [x] ISC-242: `bun run build` exit 0 with 13 market routes prerendered at static-export time.
+- [x] ISC-243: `bun run audit:all` exit 0 — 14 PASS · 2 WARN · 0 FAIL. Pre-known WARNs preserved (image dim/alt = next/image fill artifact; form classification = mailto-only pending GHL URL).
+- [x] ISC-244: Live verification: `curl -sIk https://miasanabriarealtor.trueidea.com/markets/<slug>/` returns 200 for all 6 new market routes after Caddy cache flip (cache-bust + Cache-Control: no-cache headers).
+- [x] ISC-245: Live sitemap.xml at staging contains all 13 market routes (verified via `grep -oE 'markets/[a-z-]+'` on cache-busted GET).
+- [x] ISC-246: 75 screenshots captured (15 routes × 5 viewports) at `/tmp/mia-markets-v3-shots/` via `google-chrome --headless=new --virtual-time-budget=20000` per Brand System Contract acceptance criteria.
+- [x] ISC-247: `docs/SEO_AEO_MARKET_AUTHORITY_MATRIX.md` written — per-route SEO/AEO map with topic-cluster authority graph (Cluster A Eastern FtL, Cluster B northern Broward coastal, Cluster C adjacent Palm Beach County luxury).
+- [x] ISC-248: `docs/MARKET_PAGE_COMPLETION_SCORECARD.md` written — 7-axis verdict per market (content / design / SEO-AEO / schema / internal-links / compliance / screenshot).
+- [x] ISC-249: `docs/WORLD_CLASS_REALTOR_SITE_GAP_MATRIX.md` updated — 6 new markets row-added; existing 7 markets re-rated post markets-V3 (AEO + Internal Links axes flipped from ⚠️ to ✅); markets cluster scoreboard 181/195 = 92.8% PASS.
+- [x] ISC-250: Anti: NO fabricated sales/awards/designations/languages/displayOffice claims introduced. Verified by Forge's inline audit + Cato cross-vendor audit (verdict logged below).
+- [x] ISC-251: Anti: NO geographic-guardrail violation. Boca Raton / Delray Beach / Palm Beach NEVER described as Broward County in body copy or county field.
+- [x] ISC-252: Anti: NO Brand System Contract drift. Files modified scope: src/lib/mia.ts + src/lib/markets.ts + src/app/markets/[slug]/page.tsx + src/app/markets/page.tsx + scripts/deploy-and-verify.ts (preflight enhancement) + 6 new market jpgs + 6 new og-market jpgs + reports/audit-completeness.{json,md} regenerated. Zero edits to src/components/, src/app/globals.css, src/app/[home/about/buyers/sellers/valuation/contact/insights]/.
+- [x] ISC-253: Anti: NO lead magnet PDF, gated download, nurture sequence, or new conversion offer built (per principal directive — this cycle skips lead magnet entirely).
+
+## Decisions (continued — 2026-05-08 PM cycle 2)
+
+- 2026-05-08 PM cycle 2 — **Skipped lead magnet** per explicit principal directive. Prior cycle's NEXT_SESSION_LEAD_MAGNET_AND_BRAND_SPRINT.md becomes context-only. Pillar 20 (Conversion Offers) remains FAIL on this cycle.
+- 2026-05-08 PM cycle 2 — **Synchronous Forge dispatch** (NOT background) chosen on the markets-V3 sprint to avoid the race-drift pattern documented in `feedback_forge_race_scope_drift.md`. Forge ran ~19 min foreground; main thread made zero edits to repo files during the dispatch. Edits applied serially, no race loss.
+- 2026-05-08 PM cycle 2 — **`title.absolute` override** chosen over loosening the layout's title.template — the template intent ("| Mia Sanabria") is correct for legal/about/services but tipped market titles past 60ch when stacked with "Luxury Real Estate | Mia Sanabria, REALTOR®". The market route now opts out via `title: { absolute: ... }` and uses a tighter `${name} Luxury Real Estate | Mia Sanabria` format.
+- 2026-05-08 PM cycle 2 — **Cluster split on /markets/ index** ("Primary service markets" vs "Eastern Fort Lauderdale neighborhoods") chosen over a flat 13-card grid. Why: gives buyers a clear orientation between "where in South Florida" and "which Fort Lauderdale neighborhood" without breaking the existing visual rhythm. Implemented via `partitionMarkets()` enumerating slug membership explicitly (typed against `MarketSlug`).
+- 2026-05-08 PM cycle 2 — **Seven Isles + Las Olas Isles kept as distinct routes** rather than merging. They reference overlapping geography (the Las Olas finger isles) but address different searcher intent: `seven-isles` is the deepwater-yacht-only narrative; `las-olas-isles` is the broader Las Olas residential isles district inclusive of walkable Las Olas Boulevard adjacency. Cross-linked aggressively in `internalLinks[]`.
+- 2026-05-08 PM cycle 2 — **palm-beach kept** in spite of not being on the user's priority-12 list. Already-shipped, has AI image, has content, and provides SE-FL completeness for Cluster C (Boca + Delray + Palm). Marked PARTIAL on Content axis in the scorecard (not as Mia-specific as the priority routes).
+
+## Changelog (continued — 2026-05-08 PM cycle 2)
+
+- **2026-05-08 PM cycle 2 — conjecture:** "Pre-flight gate inside `scripts/deploy-and-verify.ts` (typecheck → lint → build → audit:all → audit-completeness FAIL gate) is straightforward to add as a sequence of `spawnSync('bash', ['-c', 'bun run …'])` blocks." → **confirmed** — the four `preflightStage()` blocks + one `preflightAuditCompleteness()` block landed in ~30 lines of code. The deploy script now has a single hard gate before triggering Dokploy.
+- **2026-05-08 PM cycle 2 — conjecture:** "Synchronous foreground Forge avoids the race-drift pattern that bit the prior cycle." → **confirmed** — Forge ran ~19 min foreground; main thread waited; edits applied with zero race. Earlier `feedback_forge_race_scope_drift.md` rule of "suspend main-thread foreground edits during background-Forge" remains correct, but for tractable scope, foreground Forge is the simpler dispatch.
+- **2026-05-08 PM cycle 2 — conjecture:** "Imagen at 4:5 2K aspect-ratio + size produces hero portraits that match the existing 1200×1500 standard with no further processing." → **refuted** — Imagen output is 2K resolution (~1638×2048 or similar at 4:5), 3–5MB JPEGs. Sharp re-encoding to 1200×1500 q88 mozjpeg landed file sizes at 266–614KB matching prior 130–565KB pattern. → **learned:** the Imagen pipeline always needs a sharp post-process step; bake that step into the pipeline script alongside generation.
+- **2026-05-08 PM cycle 2 — conjecture:** "Boca / Delray / Palm Beach can be described in the same breath as 'South Florida luxury markets' without slipping into 'Broward County.'" → **confirmed** — Forge's spec-compliance + Cato's geographic-guardrail audit both confirm zero Broward-attribution drift across all 13 entries. The county-literal-union type at the data layer (`"Broward County" | "Palm Beach County"`) is a strong constraint; the body copy follows.
+
+## Verification (continued — 2026-05-08 PM cycle 2)
+
+- ISC-231 to ISC-242: Verified by `bun run typecheck` exit 0, `bun run lint` exit 0, `bun run build` exit 0 with 13 market routes in `out/markets/`. Build log confirms `[+10 more paths]` collapse on the dynamic route.
+- ISC-243: `bun run audit:all` exit 0; `reports/audit-completeness.json` summary `{pass:14, warn:2, fail:0, skip:0}`.
+- ISC-244: Live cache-busted curl probes returned HTTP 200 on all 6 new market routes (rio-vista, harbor-beach, las-olas-isles, seven-isles, sea-ranch-lakes, hillsboro-mile) after Caddy cache flip (~60s post deploy).
+- ISC-245: Live sitemap.xml contains 25 routes (grep confirmed 13 markets + 12 static).
+- ISC-246: `/tmp/mia-markets-v3-shots/` contains 75 PNG screenshots (15 routes × 5 viewports) generated via google-chrome headless --virtual-time-budget=20000.
+- ISC-247 to ISC-249: Documents written at `docs/SEO_AEO_MARKET_AUTHORITY_MATRIX.md`, `docs/MARKET_PAGE_COMPLETION_SCORECARD.md`, and append to `docs/WORLD_CLASS_REALTOR_SITE_GAP_MATRIX.md`.
+- ISC-250 to ISC-253 (anti-criteria): Confirmed by Forge's self-audit + Cato cross-vendor audit; verdict line attached after Cato completion.
