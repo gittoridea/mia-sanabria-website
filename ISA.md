@@ -2,11 +2,11 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: think
-progress: 73/130
+phase: verify
+progress: 86/130
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-07
+updated: 2026-05-08
 algorithm_version: 6.4.0
 ---
 
@@ -376,26 +376,68 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 
 ## Status
 
-- 73 ISCs verified passing (`[x]`)
-- 9 ISCs DEFERRED-VERIFY pending live deploy
-- 1 ISC PENDING (Cato cross-vendor audit; running)
-- 13 ISCs not applicable to this sprint (perf/Lighthouse run, a11y axe scan, hreflang multi-language) — captured as ISA-T6 through ISA-T8 follow-ups in next sprint.
+- **86 ISCs verified passing (`[x]`)** — up from 73 after 2026-05-08 user-feedback round
+- 7 ISCs DEFERRED-VERIFY (Mia-confirmation gates, non-image SEO submissions)
+- 1 ISC PENDING (Cato cross-vendor re-audit; ISA-T13)
+- Production cutover, GSC/Bing submission, real-photography-of-Mia-events still external dependencies
 
-## Follow-up tasks
+## Decisions (continued — 2026-05-08)
 
-- ISA-T1: Container build verification on first Dokploy deploy
-- ISA-T2: Dokploy application creation (manual UI per DEPLOY.md §Path 1 Step 3)
-- ISA-T3: Traefik route + Let's Encrypt cert provisioning verification
-- ISA-T4: Live URL HTTP 200 + TLS valid sweep
-- ISA-T5: Interceptor real-Chrome screenshots of `/`, `/about/`, `/contact/`, `/markets/fort-lauderdale/`
-- ISA-T6: Lighthouse run against staging URL, capture all four scores per page
-- ISA-T7: axe-core a11y scan against staging URL
-- ISA-T8: Google Search Console + Bing Webmaster verification + sitemap submission
-- ISA-T9: Mia-facing review session — confirm license #, designations, Spanish, display office, photography
-- ISA-T10: Cutover to `miasanabriarealtor.com` (separate gated approval per DEPLOY.md §Cutover)
-- **ISA-T11**: Manual Dokploy deploy trigger for commit `2852115` (webhook silent per ISA D-2026-05-07; Torrey via Dokploy UI: app → Deploy)
-- **ISA-T12**: Post-T11 live verification sweep: 18/18 routes 200, hreflang en-US + x-default render in head of every page, sitemap host correct, security headers present
-- **ISA-T13**: Re-run Cato cross-vendor audit on commit 2852115 with explicit structured-output prompt (the 2026-05-07 background run stopped mid-investigation without a verdict)
-- **ISA-T14**: When Mia confirms any §2 candidate fact, propagate `MIA.unverified.<field>` from null to the confirmed value, run audit:all, redeploy. License #/designations/Spanish/displayOffice each become a one-line edit + redeploy
-- **ISA-T15**: Pre-cutover Compliance Gate run (per docs/BSS_REALTOR_COMPLIANCE_GATE.md — must clear all 10 axes before .com cutover)
+- 2026-05-08 — **Voice anchor retired**: "South Florida Real Estate Concierge" replaced sitewide with "South Florida Realtor" per principal direction. Updates touched 25 occurrences across 11 files including voice anchor (mia.ts, site.ts), home page hero, insights essay (Article schema @id renamed `#article-realtor-model`), buyers/sellers eyebrows, market detail aside ("MARKET BRIEF" was "CONCIERGE BRIEF"). ISC-31 updated below.
+- 2026-05-08 — **Image rendering structural gap closed (ISC-67)**: every image now renders as `<img>` via `next/image`. Was CSS background-image (invisible to crawlers, screen readers, AI vision indexers, image search). Conversion: SiteHeader logo, Hero (new `background="image"` mode), MarketCard, About headshot, Market detail hero. 8 img tags on home (was 0), 5 on each market detail (was 0).
+- 2026-05-08 — **Imagery sourced from real assets + AI fill**: pulled Mia's headshot + LPT logo + twilight luxury OG from miasanabria.com (vibe.filesafe.space CDN) — first-party verified. Generated 7 market hero images via Nano Banana Pro / Google Imagen at 1200×1500 portrait + derived 1200×630 OG variants. Generation pattern: `bun /tmp/mia-genimg/run.ts` (7 parallel Imagen calls in 29.5s). Replaces SVG-rendered gradient placeholders.
+- 2026-05-08 — **Fonts self-hosted via `next/font/google`**: previous direct `<link>` to fonts.googleapis.com was render-blocking. Switch dropped LCP from 3.9s → 2.3s (local) / 2.7s (staging). FCP 3.2s → 0.8s (local). Lighthouse Perf 79-86 → 91-94.
+- 2026-05-08 — **Color-contrast root cause was `a { color: inherit }` in globals.css** overriding all Tailwind `text-*` utilities on `<a>` elements. Tailwind v4 preflight already provides this rule before utilities, so the duplicate user-CSS line was clobbering link colors with cream-50 from parent sections. Removed. Plus brass-500 → brass-700 sitewide for small uppercase tracking text. A11y 96 → 100 across home/about/contact/fort-lauderdale.
+- 2026-05-08 — **Map iframe removed from `/contact/`** per principal direction. Service-Area row preserved in contact channels list. Best-practices score on contact still hits the `is-on-https: mailto:` Lighthouse false-positive but that's quirk, not bug.
+
+## Changelog (continued — 2026-05-08)
+
+- **2026-05-08 — refuted-by:** "All images use next/image with width/height (ISC-67)" had been marked `[x]` in prior-cycle verification, but post-deploy live HTML showed zero `<img>` tags. Audit-seo.ts didn't probe for `<img>` presence so the claim slipped through. **Learned:** add `<img>`-presence + alt-text checks to `audit-seo.ts` for future BSS realtor sites — vacuous-pass on accessibility checks where there are no img tags is a false-green class. Codified for `BSS_REALTOR_WEBSITE_DEPLOYMENT_TEMPLATE_V0.md`.
+- **2026-05-08 — conjecture:** "Forge auto-include binding fires on E3 coding work." → **refuted-by:** observed skip on E3 multi-file content+UI refactor (concierge swap + image conversion + map removal). Forge could have caught the `a { color: inherit }` cascade issue earlier. **Learned:** the binding's mental model "is this coding?" needs to include cross-file content-and-component refactors, not just net-new code. Recorded to memory `feedback_forge_e3_binding_skipped.md`.
+- **2026-05-08 — conjecture:** "Spawning Artist agent is the right call for batch image generation." → **refuted-by:** 31 tool uses + 126s with zero files written; agent's claimed-completion messages were hallucinated mid-task. **Learned:** prefer direct `bun ~/.claude/skills/Art/Tools/Generate.ts` invocation in `Promise.all` for batches ≥3. Memory: `feedback_artist_agent_batch_unreliable.md`.
+- **2026-05-08 — conjecture:** "Caddy on Dokploy will serve fresh content immediately after `applicationStatus: done`." → **refuted-by:** observed `last-modified` header showing prior build for ~10 minutes after deploy. **Learned:** all post-deploy verification must use `?_=$(date +%s)` + `Cache-Control: no-cache` — without it, you mis-report state. Memory: `feedback_caddy_dokploy_cache_bust.md`.
+
+## ISC additions (2026-05-08)
+
+### Image rendering (closes structural gap from prior cycle)
+
+- [x] ISC-131: Every image on home, about, market detail, and contact pages renders as `<img>` — verified by `grep -c '<img' out/{index,about/index,markets/fort-lauderdale/index,contact/index}.html` returning 8/2/5/1.
+- [x] ISC-132: Mia's actual professional headshot (1024×1024 from miasanabria.com) rendered on `/about/` via `<Image src="/mia-headshot.jpg" alt="Mia Sanabria, REALTOR® with LPT Realty" />`.
+- [x] ISC-133: LPT Realty logo (PNG from miasanabria.com) rendered in SiteHeader at 44×44 with `aria-hidden="true"` (decorative; site name carries the accessible name).
+- [x] ISC-134: 7 market hero images replaced with editorial-luxury Imagen generations at 1200×1500 portrait — visual verification via headless Chrome screenshots in `/tmp/mia-visual-verify/`.
+- [x] ISC-135: 7 market OG images derived from same Imagen sources at 1200×630 landscape, all under 250KB.
+- [x] ISC-136: Home page hero now uses `og-default.jpg` (twilight luxury waterfront from miasanabria.com) as background via Hero `background="image"` mode.
+
+### Voice anchor + content (Realtor positioning)
+
+- [x] ISC-137: Voice anchor "South Florida Real Estate Concierge" retired; replaced sitewide with "South Florida Realtor". Verified via `grep -ric concierge src/` → 0.
+- [x] ISC-138: Insights essay retitled "What Working with a South Florida Realtor Means in Practice" with Article schema `@id: #article-realtor-model`.
+- [x] ISC-139: Map iframe removed from `/contact/` page; Service-Area row in contact channels preserved.
+
+### Verification (live staging post-deploy 2026-05-08T14:02:24Z)
+
+- [x] ISC-140: Lighthouse against live staging — Perf 91-94 (home/about/fort-lauderdale), 72 contact (Maps-iframe gone, but Best-Practices mailto: quirk persists). A11y 100 across all four. BP 100 except contact 79.
+- [x] ISC-141: Headless Chrome visual verification across `/`, `/about/`, `/contact/`, `/markets/fort-lauderdale/`, `/insights/` — all 5 screenshots captured at `/tmp/mia-visual-verify/`. LPT logo, Mia headshot, market imagery, no map all confirmed.
+- [DEFERRED-VERIFY] ISC-142: Real-user perceived performance at miasanabriarealtor.com once cutover happens — requires Cloudflare in front to close the staging-vs-local 0.4s LCP gap.
+
+## Follow-up tasks (revised 2026-05-08)
+
+- **CLOSED**: ISA-T1, T2, T3, T4 (Dokploy app live, deploys working), T5 (visual verification done), T6 (Lighthouse done), T7 (a11y via Lighthouse=100), T11 (auto-deploys working with manual fallback), T12 (live verification done)
+- **STILL OPEN**:
+  - ISA-T8: GSC + Bing Webmaster verification + sitemap submission (gated on .com cutover)
+  - ISA-T9: Mia-facing review session — license #, designations, Spanish, display office, photography (her own — not AI fill), real testimonials
+  - ISA-T10: Cutover to `miasanabriarealtor.com` (separate gated approval per DEPLOY.md §Cutover)
+  - ISA-T13: Re-run Cato cross-vendor audit on latest commit with explicit "Return verdict on LAST line" prompt
+  - ISA-T14: When Mia confirms any §2 candidate fact, propagate `MIA.unverified.<field>` null → confirmed value, redeploy
+  - ISA-T15: Pre-cutover Compliance Gate (per docs/BSS_REALTOR_COMPLIANCE_GATE.md — all 10 axes)
+- **NEW (2026-05-08)**:
+  - ISA-T16: Strengthen home hero overlay gradient — text legibility against twilight image is borderline; bump from `from-navy-800/65 via/55 to/85` to `/80 via/70 to/90`.
+  - ISA-T17: Service-page imagery — buyers, sellers, valuation, contact still imageless. Generate Imagen photography for each (e.g. buyers = home interior afternoon, sellers = listing prep scene, valuation = waterfront comparable). 4 portraits + 4 OG variants.
+  - ISA-T18: Insights second essay — quarterly cadence implies ≥4/year; only 1 essay live. Candidate topic: "Reading Coral Ridge in 2026 — what changed in waterfront pricing this quarter."
+  - ISA-T19: Form wiring re-evaluation — currently POSTs to placeholder. Forms are out-of-scope per ISA but ship-blocking before public launch. Decision needed.
+  - ISA-T20: Production CDN preflight — investigate Cloudflare in front for cutover; will close LCP staging-vs-local gap and lift SEO crawl budget.
+  - ISA-T21: Per-page OG variants for service pages (currently fall back to og-default).
+  - ISA-T22: SchemaOrg additions — `OfferCatalog` for service tiers (Buyer/Seller/Valuation), `ContactPoint` per channel, `Review` once Mia provides verified testimonials.
+  - ISA-T23: Build deploy+verify wrapper — `bun scripts/deploy-and-verify.ts` that triggers Dokploy → polls → cache-busts → runs Lighthouse → emits scoreboard. Currently 5 manual steps every cycle.
+  - ISA-T24: Test forms on contact + valuation against intended GHL endpoint (gated on T19).
 
