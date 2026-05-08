@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-08T18:49:11.553Z
+**Generated:** 2026-05-08T20:07:31.718Z
 
 **Summary:** 14 PASS · 2 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 19 built · 19 in sitemap · 0 missing |
+| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 25 built · 25 in sitemap · 0 missing |
 | `completeness.sitemap.sitemapInBuilt` | ✅ | Every sitemap route resolves to a built page | 0 unresolved |
 
 ### Compliance
@@ -39,7 +39,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.images.dimsAltPlaceholder` | ⚠️ | Core-page <img> tags have alt + width/height + no placeholder names | 24 img attribute issues |
+| `completeness.images.dimsAltPlaceholder` | ⚠️ | Core-page <img> tags have alt + width/height + no placeholder names | 27 img attribute issues |
 | `completeness.images.localFilesExist` | ✅ | Local image references resolve to files in out/ | all referenced local images exist |
 
 ### Forms/CTAs
@@ -68,7 +68,7 @@
 
 **Description:** Core-page <img> tags have alt + width/height + no placeholder names
 
-**Evidence:** 24 img attribute issues
+**Evidence:** 27 img attribute issues
 
 ```json
 {
@@ -90,11 +90,6 @@
     },
     {
       "route": "/",
-      "img": "/markets/coral-ridge.jpg",
-      "problem": "missing width/height"
-    },
-    {
-      "route": "/",
       "img": "/markets/victoria-park.jpg",
       "problem": "missing width/height"
     },
@@ -106,6 +101,16 @@
     {
       "route": "/",
       "img": "/markets/delray-beach.jpg",
+      "problem": "missing width/height"
+    },
+    {
+      "route": "/",
+      "img": "/markets/harbor-beach.jpg",
+      "problem": "missing width/height"
+    },
+    {
+      "route": "/",
+      "img": "/markets/las-olas-isles.jpg",
       "problem": "missing width/height"
     },
     {
@@ -140,7 +145,12 @@
     },
     {
       "route": "/markets/fort-lauderdale/",
-      "img": "/markets/coral-ridge.jpg",
+      "img": "/markets/las-olas-isles.jpg",
+      "problem": "missing width/height"
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "img": "/markets/harbor-beach.jpg",
       "problem": "missing width/height"
     },
     {
@@ -150,7 +160,7 @@
     },
     {
       "route": "/markets/fort-lauderdale/",
-      "img": "/markets/boca-raton.jpg",
+      "img": "/markets/coral-ridge.jpg",
       "problem": "missing width/height"
     },
     {
@@ -170,7 +180,7 @@
     },
     {
       "route": "/markets/coral-ridge/",
-      "img": "/markets/boca-raton.jpg",
+      "img": "/markets/lighthouse-point.jpg",
       "problem": "missing width/height"
     },
     {
@@ -185,12 +195,17 @@
     },
     {
       "route": "/markets/victoria-park/",
-      "img": "/markets/coral-ridge.jpg",
+      "img": "/markets/rio-vista.jpg",
       "problem": "missing width/height"
     },
     {
       "route": "/markets/victoria-park/",
-      "img": "/markets/boca-raton.jpg",
+      "img": "/markets/las-olas-isles.jpg",
+      "problem": "missing width/height"
+    },
+    {
+      "route": "/markets/victoria-park/",
+      "img": "/markets/coral-ridge.jpg",
       "problem": "missing width/height"
     }
   ]

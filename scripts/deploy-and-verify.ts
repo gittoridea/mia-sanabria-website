@@ -14,7 +14,7 @@
  *   bun scripts/deploy-and-verify.ts --pages=home,insights
  */
 import { readFile, mkdir } from "node:fs/promises";
-import { spawn } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 
 const APP_ID = "XJSRlvH-91ZtUsh0RPGvo";
 const STAGING_BASE = "https://miasanabriarealtor.trueidea.com";
@@ -95,19 +95,61 @@ async function lighthouseRun(url: string, outPath: string): Promise<{ perf: numb
   });
 }
 
+function preflightStage(name: string, cmd: string): void {
+  console.log(`\n▶ pre-flight ${name}`);
+  const r = spawnSync("bash", ["-c", cmd], { stdio: "inherit" });
+  if (r.status !== 0) {
+    console.error(`\n✗ DEPLOY-ABORT (${name}): exit ${r.status}`);
+    process.exit(1);
+  }
+}
+
+async function preflightAuditCompleteness(): Promise<void> {
+  console.log("\n▶ pre-flight audit:completeness gate");
+  // audit:all already invoked above; re-read the structured JSON to enforce FAIL=block / WARN=allow.
+  try {
+    const raw = await readFile("reports/audit-completeness.json", "utf-8");
+    const j = JSON.parse(raw) as {
+      summary?: { fail?: number; warn?: number; pass?: number; skip?: number };
+    };
+    const summary = j.summary ?? {};
+    console.log(`  pass=${summary.pass ?? 0} warn=${summary.warn ?? 0} fail=${summary.fail ?? 0} skip=${summary.skip ?? 0}`);
+    if ((summary.fail ?? 0) > 0) {
+      console.error(`✗ DEPLOY-ABORT (audit-completeness): ${summary.fail} FAIL(s) — see reports/audit-completeness.md`);
+      process.exit(1);
+    }
+  } catch (e) {
+    console.error(`✗ DEPLOY-ABORT (audit-completeness): cannot read reports/audit-completeness.json — ${(e as Error).message}`);
+    process.exit(1);
+  }
+}
+
 async function main() {
   const args = process.argv.slice(2);
   if (args.includes("--help") || args.includes("-h")) {
-    console.log(`Usage: bun scripts/deploy-and-verify.ts [--no-lighthouse] [--pages=slug,slug]
-  Triggers Dokploy deploy of the Mia website, polls until done, cache-bust
-  verifies the live URL, and runs Lighthouse on critical pages by default.`);
+    console.log(`Usage: bun scripts/deploy-and-verify.ts [--no-preflight] [--no-lighthouse] [--pages=slug,slug]
+  Pre-flight gates (typecheck → lint → build → audit:all → audit-completeness FAIL gate),
+  triggers Dokploy deploy, polls until done, cache-bust verifies the live URL, and runs
+  Lighthouse on critical pages by default.`);
     return;
   }
+  const skipPreflight = args.includes("--no-preflight");
   const skipLh = args.includes("--no-lighthouse");
   const pagesArg = args.find((a) => a.startsWith("--pages="));
   const pages = pagesArg
     ? Object.fromEntries(pagesArg.slice("--pages=".length).split(",").map((slug) => [slug, DEFAULT_PAGES[slug] ?? `/${slug}/`]))
     : DEFAULT_PAGES;
+
+  if (!skipPreflight) {
+    preflightStage("typecheck", "bun run typecheck");
+    preflightStage("lint", "bun run lint");
+    preflightStage("build", "bun run build");
+    preflightStage("audit:all", "bun run audit:all");
+    await preflightAuditCompleteness();
+    console.log("\n✓ pre-flight passed — proceeding to deploy.");
+  } else {
+    console.log("⚠ --no-preflight passed — skipping typecheck/lint/build/audit gates.");
+  }
 
   await loadEnv();
 

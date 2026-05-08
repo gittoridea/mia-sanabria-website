@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T18:49:11.553Z",
+  "timestamp": "2026-05-08T20:07:31.718Z",
   "counts": {
     "PASS": 14,
     "WARN": 2,
@@ -12,11 +12,11 @@
       "category": "Sitemap coverage",
       "description": "Every public built route is in sitemap.xml",
       "status": "PASS",
-      "evidence": "19 built · 19 in sitemap · 0 missing",
+      "evidence": "25 built · 25 in sitemap · 0 missing",
       "details": {
         "missing": [],
-        "builtCount": 19,
-        "sitemapCount": 19
+        "builtCount": 25,
+        "sitemapCount": 25
       }
     },
     {
@@ -94,7 +94,7 @@
       "category": "Design/Display Integrity",
       "description": "Core-page <img> tags have alt + width/height + no placeholder names",
       "status": "WARN",
-      "evidence": "24 img attribute issues",
+      "evidence": "27 img attribute issues",
       "details": {
         "issues": [
           {
@@ -114,11 +114,6 @@
           },
           {
             "route": "/",
-            "img": "/markets/coral-ridge.jpg",
-            "problem": "missing width/height"
-          },
-          {
-            "route": "/",
             "img": "/markets/victoria-park.jpg",
             "problem": "missing width/height"
           },
@@ -130,6 +125,16 @@
           {
             "route": "/",
             "img": "/markets/delray-beach.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/markets/harbor-beach.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/",
+            "img": "/markets/las-olas-isles.jpg",
             "problem": "missing width/height"
           },
           {
@@ -164,7 +169,12 @@
           },
           {
             "route": "/markets/fort-lauderdale/",
-            "img": "/markets/coral-ridge.jpg",
+            "img": "/markets/las-olas-isles.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/fort-lauderdale/",
+            "img": "/markets/harbor-beach.jpg",
             "problem": "missing width/height"
           },
           {
@@ -174,7 +184,7 @@
           },
           {
             "route": "/markets/fort-lauderdale/",
-            "img": "/markets/boca-raton.jpg",
+            "img": "/markets/coral-ridge.jpg",
             "problem": "missing width/height"
           },
           {
@@ -194,7 +204,7 @@
           },
           {
             "route": "/markets/coral-ridge/",
-            "img": "/markets/boca-raton.jpg",
+            "img": "/markets/lighthouse-point.jpg",
             "problem": "missing width/height"
           },
           {
@@ -209,12 +219,17 @@
           },
           {
             "route": "/markets/victoria-park/",
-            "img": "/markets/coral-ridge.jpg",
+            "img": "/markets/rio-vista.jpg",
             "problem": "missing width/height"
           },
           {
             "route": "/markets/victoria-park/",
-            "img": "/markets/boca-raton.jpg",
+            "img": "/markets/las-olas-isles.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/markets/victoria-park/",
+            "img": "/markets/coral-ridge.jpg",
             "problem": "missing width/height"
           }
         ]

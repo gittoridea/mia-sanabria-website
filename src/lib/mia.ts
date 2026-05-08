@@ -62,10 +62,25 @@ const ALL_MARKET_SLUGS = [
   "palm-beach",
   "delray-beach",
   "lighthouse-point",
+  "rio-vista",
+  "harbor-beach",
+  "las-olas-isles",
+  "seven-isles",
+  "sea-ranch-lakes",
+  "hillsboro-mile",
 ] as const;
 
 export type MarketSlug = (typeof ALL_MARKET_SLUGS)[number];
 
+const FEATURED_SET: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
+  "fort-lauderdale",
+  "las-olas-isles",
+  "harbor-beach",
+  "victoria-park",
+  "boca-raton",
+  "delray-beach",
+]);
+
 export const FEATURED_MARKETS: ReadonlyArray<MarketSlug> = ALL_MARKET_SLUGS.filter(
-  (slug) => slug !== "palm-beach" && slug !== "lighthouse-point"
+  (slug) => FEATURED_SET.has(slug)
 );
