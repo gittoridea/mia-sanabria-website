@@ -1,0 +1,2409 @@
+{
+  "generator": "route-viewport deterministic matrix v1",
+  "input_dir": "/tmp/mia-cycle9-live-after",
+  "label": "live-after",
+  "generated_at": "2026-05-09T22:58:42.856Z",
+  "summary": {
+    "routes": 15,
+    "viewports": 5,
+    "records": 75
+  },
+  "axis": {
+    "h1_clipping": "PASS/PARTIAL/FAIL",
+    "cta_above_fold": "PASS/PARTIAL/FAIL",
+    "contrast": "PASS/PARTIAL/FAIL",
+    "visual_quality": "derived"
+  },
+  "matrix": {
+    "headers": [
+      "route",
+      "320x568 H1 clipping",
+      "320x568 CTA above-fold",
+      "320x568 Contrast",
+      "320x568 Visual quality",
+      "375x812 H1 clipping",
+      "375x812 CTA above-fold",
+      "375x812 Contrast",
+      "375x812 Visual quality",
+      "768x1024 H1 clipping",
+      "768x1024 CTA above-fold",
+      "768x1024 Contrast",
+      "768x1024 Visual quality",
+      "1280x800 H1 clipping",
+      "1280x800 CTA above-fold",
+      "1280x800 Contrast",
+      "1280x800 Visual quality",
+      "1440x900 H1 clipping",
+      "1440x900 CTA above-fold",
+      "1440x900 Contrast",
+      "1440x900 Visual quality"
+    ],
+    "columns": [
+      "route",
+      "320x568 H1 clipping",
+      "320x568 CTA above-fold",
+      "320x568 Contrast",
+      "320x568 Visual quality",
+      "375x812 H1 clipping",
+      "375x812 CTA above-fold",
+      "375x812 Contrast",
+      "375x812 Visual quality",
+      "768x1024 H1 clipping",
+      "768x1024 CTA above-fold",
+      "768x1024 Contrast",
+      "768x1024 Visual quality",
+      "1280x800 H1 clipping",
+      "1280x800 CTA above-fold",
+      "1280x800 Contrast",
+      "1280x800 Visual quality",
+      "1440x900 H1 clipping",
+      "1440x900 CTA above-fold",
+      "1440x900 Contrast",
+      "1440x900 Visual quality"
+    ],
+    "rows": [
+      {
+        "route": "/",
+        "route_safe": "root",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "FAIL",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/about/",
+        "route_safe": "about",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "FAIL",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "PARTIAL",
+          "375x812 CTA above-fold": "FAIL",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "PARTIAL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "PARTIAL",
+          "1280x800 CTA above-fold": "FAIL",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "PARTIAL",
+          "1440x900 CTA above-fold": "FAIL",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/buyers/",
+        "route_safe": "buyers",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/contact/",
+        "route_safe": "contact",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "FAIL",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "FAIL",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "FAIL",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "FAIL",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/",
+        "route_safe": "markets",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "FAIL",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/boca-raton/",
+        "route_safe": "markets_boca-raton",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "PASS",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/delray-beach/",
+        "route_safe": "markets_delray-beach",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/fort-lauderdale/",
+        "route_safe": "markets_fort-lauderdale",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/harbor-beach/",
+        "route_safe": "markets_harbor-beach",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "PASS",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "PARTIAL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "PARTIAL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/las-olas-isles/",
+        "route_safe": "markets_las-olas-isles",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "PASS",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "PARTIAL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "PARTIAL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/sea-ranch-lakes/",
+        "route_safe": "markets_sea-ranch-lakes",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/seven-isles/",
+        "route_safe": "markets_seven-isles",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "PASS",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "PARTIAL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "PARTIAL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/markets/victoria-park/",
+        "route_safe": "markets_victoria-park",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "PASS",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "PARTIAL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "PARTIAL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/sellers/",
+        "route_safe": "sellers",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "PASS",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "PASS",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "PASS",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "PASS",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      },
+      {
+        "route": "/valuation/",
+        "route_safe": "valuation",
+        "columns": {
+          "320x568 H1 clipping": "FAIL",
+          "320x568 CTA above-fold": "FAIL",
+          "320x568 Contrast": "PASS",
+          "320x568 Visual quality": "FAIL",
+          "375x812 H1 clipping": "FAIL",
+          "375x812 CTA above-fold": "FAIL",
+          "375x812 Contrast": "PASS",
+          "375x812 Visual quality": "FAIL",
+          "768x1024 H1 clipping": "FAIL",
+          "768x1024 CTA above-fold": "FAIL",
+          "768x1024 Contrast": "PASS",
+          "768x1024 Visual quality": "FAIL",
+          "1280x800 H1 clipping": "FAIL",
+          "1280x800 CTA above-fold": "FAIL",
+          "1280x800 Contrast": "PASS",
+          "1280x800 Visual quality": "FAIL",
+          "1440x900 H1 clipping": "FAIL",
+          "1440x900 CTA above-fold": "FAIL",
+          "1440x900 Contrast": "PASS",
+          "1440x900 Visual quality": "FAIL"
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "file": "/tmp/mia-cycle9-live-after/root__1280x800.png",
+      "route": "root",
+      "route_display": "/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3333333333333333,
+        "reason": "Right-edge run 120 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9053746928746929,
+        "reason": "Found pill-like brass region 296x44, density 84.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.208984693529246,
+        "reason": "Estimated contrast 16.21:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/root__1440x900.png",
+      "route": "root",
+      "route_display": "/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5432098765432098,
+        "reason": "Right-edge run 220 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9053746928746929,
+        "reason": "Found pill-like brass region 296x44, density 84.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.233887148113766,
+        "reason": "Estimated contrast 16.23:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/root__320x568.png",
+      "route": "root",
+      "route_display": "/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.934196053057263,
+        "reason": "Found pill-like brass region 281x44, density 89.0%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.339551986661736,
+        "reason": "Estimated contrast 16.34:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/root__768x1024.png",
+      "route": "root",
+      "route_display": "/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.19272015585314,
+        "reason": "Estimated contrast 16.19:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/root__375x812.png",
+      "route": "root",
+      "route_display": "/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.273972602739726,
+        "reason": "Right-edge run 100 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.32475437418453,
+        "reason": "Estimated contrast 16.32:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/about__320x568.png",
+      "route": "about",
+      "route_display": "/about/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.639382054943779,
+        "reason": "Estimated contrast 14.64:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/about__375x812.png",
+      "route": "about",
+      "route_display": "/about/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.23835616438356164,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.678110034692462,
+        "reason": "Estimated contrast 14.68:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/about__768x1024.png",
+      "route": "about",
+      "route_display": "/about/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.1891304347826087,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.580759454404864,
+        "reason": "Estimated contrast 14.58:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/about__1280x800.png",
+      "route": "about",
+      "route_display": "/about/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.24166666666666667,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.476741496927904,
+        "reason": "Estimated contrast 14.48:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/about__1440x900.png",
+      "route": "about",
+      "route_display": "/about/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.21481481481481482,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.311709000962521,
+        "reason": "Estimated contrast 14.31:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/buyers__320x568.png",
+      "route": "buyers",
+      "route_display": "/buyers/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9312221672439386,
+        "reason": "Found pill-like brass region 282x43, density 88.5%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.148886739659112,
+        "reason": "Estimated contrast 16.15:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/buyers__375x812.png",
+      "route": "buyers",
+      "route_display": "/buyers/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.2876712328767123,
+        "reason": "Right-edge run 105 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.98937125748503,
+        "reason": "Found pill-like brass region 334x12, density 98.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.162159345255514,
+        "reason": "Estimated contrast 16.16:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/buyers__768x1024.png",
+      "route": "buyers",
+      "route_display": "/buyers/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.049262623721567,
+        "reason": "Estimated contrast 16.05:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/buyers__1280x800.png",
+      "route": "buyers",
+      "route_display": "/buyers/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4222222222222222,
+        "reason": "Right-edge run 152 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9053746928746929,
+        "reason": "Found pill-like brass region 296x44, density 84.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.04998824164126,
+        "reason": "Estimated contrast 16.05:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/buyers__1440x900.png",
+      "route": "buyers",
+      "route_display": "/buyers/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.6222222222222222,
+        "reason": "Right-edge run 252 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9053746928746929,
+        "reason": "Found pill-like brass region 296x44, density 84.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.033778498030735,
+        "reason": "Estimated contrast 16.03:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/contact__320x568.png",
+      "route": "contact",
+      "route_display": "/contact/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.07308936202374,
+        "reason": "Estimated contrast 15.07:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/contact__375x812.png",
+      "route": "contact",
+      "route_display": "/contact/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5506849315068493,
+        "reason": "Right-edge run 201 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.009763007570378,
+        "reason": "Estimated contrast 15.01:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/contact__768x1024.png",
+      "route": "contact",
+      "route_display": "/contact/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.866770616418544,
+        "reason": "Estimated contrast 14.87:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/contact__1280x800.png",
+      "route": "contact",
+      "route_display": "/contact/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4527777777777778,
+        "reason": "Right-edge run 163 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.068465657461596,
+        "reason": "Estimated contrast 15.07:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/contact__1440x900.png",
+      "route": "contact",
+      "route_display": "/contact/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.6493827160493827,
+        "reason": "Right-edge run 263 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.028630617249977,
+        "reason": "Estimated contrast 15.03:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets__320x568.png",
+      "route": "markets",
+      "route_display": "/markets/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.936282756389518,
+        "reason": "Found pill-like brass region 281x44, density 89.4%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.32146672244241,
+        "reason": "Estimated contrast 16.32:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets__375x812.png",
+      "route": "markets",
+      "route_display": "/markets/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.7972602739726027,
+        "reason": "Right-edge run 291 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.337838103311118,
+        "reason": "Estimated contrast 16.34:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets__768x1024.png",
+      "route": "markets",
+      "route_display": "/markets/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.17338933350145,
+        "reason": "Estimated contrast 16.17:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets__1280x800.png",
+      "route": "markets",
+      "route_display": "/markets/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4527777777777778,
+        "reason": "Right-edge run 163 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9023038605230386,
+        "reason": "Found pill-like brass region 292x44, density 83.7%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.25292043745289,
+        "reason": "Estimated contrast 16.25:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets__1440x900.png",
+      "route": "markets",
+      "route_display": "/markets/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.6493827160493827,
+        "reason": "Right-edge run 263 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9023038605230386,
+        "reason": "Found pill-like brass region 292x44, density 83.7%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.263972957674873,
+        "reason": "Estimated contrast 16.26:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_boca-raton__320x568.png",
+      "route": "markets_boca-raton",
+      "route_display": "/markets/boca-raton/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9346363186541315,
+        "reason": "Found pill-like brass region 282x43, density 89.1%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.620019734518827,
+        "reason": "Estimated contrast 15.62:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_boca-raton__375x812.png",
+      "route": "markets_boca-raton",
+      "route_display": "/markets/boca-raton/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4,
+        "reason": "Right-edge run 146 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9407080256711062,
+        "reason": "Found pill-like brass region 337x43, density 90.1%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.358249964421635,
+        "reason": "Estimated contrast 16.36:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_boca-raton__768x1024.png",
+      "route": "markets_boca-raton",
+      "route_display": "/markets/boca-raton/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.908695652173913,
+        "reason": "Right-edge run 418 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9062298603651987,
+        "reason": "Found pill-like brass region 266x21, density 84.4%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.272436784031946,
+        "reason": "Estimated contrast 16.27:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_boca-raton__1280x800.png",
+      "route": "markets_boca-raton",
+      "route_display": "/markets/boca-raton/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.34444444444444444,
+        "reason": "Right-edge run 124 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9075315195753152,
+        "reason": "Found pill-like brass region 274x44, density 84.6%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.54501045855807,
+        "reason": "Estimated contrast 16.55:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_boca-raton__1440x900.png",
+      "route": "markets_boca-raton",
+      "route_display": "/markets/boca-raton/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5530864197530864,
+        "reason": "Right-edge run 224 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9075315195753152,
+        "reason": "Found pill-like brass region 274x44, density 84.6%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.548096345936194,
+        "reason": "Estimated contrast 16.55:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_delray-beach__320x568.png",
+      "route": "markets_delray-beach",
+      "route_display": "/markets/delray-beach/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9321622958931223,
+        "reason": "Found pill-like brass region 282x43, density 88.7%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.44850788998926,
+        "reason": "Estimated contrast 16.45:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_delray-beach__375x812.png",
+      "route": "markets_delray-beach",
+      "route_display": "/markets/delray-beach/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4684931506849315,
+        "reason": "Right-edge run 171 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9203820474777448,
+        "reason": "Found pill-like brass region 337x32, density 86.7%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.33081561378827,
+        "reason": "Estimated contrast 16.33:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_delray-beach__768x1024.png",
+      "route": "markets_delray-beach",
+      "route_display": "/markets/delray-beach/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.130266175573286,
+        "reason": "Estimated contrast 16.13:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_delray-beach__1280x800.png",
+      "route": "markets_delray-beach",
+      "route_display": "/markets/delray-beach/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3,
+        "reason": "Right-edge run 108 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9059281627463446,
+        "reason": "Found pill-like brass region 286x44, density 84.3%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.123971164422635,
+        "reason": "Estimated contrast 16.12:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_delray-beach__1440x900.png",
+      "route": "markets_delray-beach",
+      "route_display": "/markets/delray-beach/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5135802469135803,
+        "reason": "Right-edge run 208 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9059281627463446,
+        "reason": "Found pill-like brass region 286x44, density 84.3%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.114953446923774,
+        "reason": "Estimated contrast 16.11:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_fort-lauderdale__320x568.png",
+      "route": "markets_fort-lauderdale",
+      "route_display": "/markets/fort-lauderdale/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9304304799604156,
+        "reason": "Found pill-like brass region 282x43, density 88.4%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.48293794825703,
+        "reason": "Estimated contrast 16.48:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_fort-lauderdale__375x812.png",
+      "route": "markets_fort-lauderdale",
+      "route_display": "/markets/fort-lauderdale/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4465753424657534,
+        "reason": "Right-edge run 163 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9289614243323442,
+        "reason": "Found pill-like brass region 337x40, density 88.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.347178092571628,
+        "reason": "Estimated contrast 16.35:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_fort-lauderdale__768x1024.png",
+      "route": "markets_fort-lauderdale",
+      "route_display": "/markets/fort-lauderdale/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.187243781227963,
+        "reason": "Estimated contrast 16.19:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_fort-lauderdale__1280x800.png",
+      "route": "markets_fort-lauderdale",
+      "route_display": "/markets/fort-lauderdale/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.34444444444444444,
+        "reason": "Right-edge run 124 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9088095943144804,
+        "reason": "Found pill-like brass region 307x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.197486874517192,
+        "reason": "Estimated contrast 16.20:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_fort-lauderdale__1440x900.png",
+      "route": "markets_fort-lauderdale",
+      "route_display": "/markets/fort-lauderdale/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5530864197530864,
+        "reason": "Right-edge run 224 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9088095943144804,
+        "reason": "Found pill-like brass region 307x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.221831049607644,
+        "reason": "Estimated contrast 16.22:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_harbor-beach__320x568.png",
+      "route": "markets_harbor-beach",
+      "route_display": "/markets/harbor-beach/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9114893617021277,
+        "reason": "Found pill-like brass region 282x30, density 85.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.548870069876692,
+        "reason": "Estimated contrast 15.55:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_harbor-beach__375x812.png",
+      "route": "markets_harbor-beach",
+      "route_display": "/markets/harbor-beach/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5698630136986301,
+        "reason": "Right-edge run 208 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9366089296804914,
+        "reason": "Found pill-like brass region 337x43, density 89.4%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.344937570524166,
+        "reason": "Estimated contrast 16.34:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_harbor-beach__768x1024.png",
+      "route": "markets_harbor-beach",
+      "route_display": "/markets/harbor-beach/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.908695652173913,
+        "reason": "Right-edge run 418 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9066869300911854,
+        "reason": "Found pill-like brass region 282x21, density 84.4%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.21656036803586,
+        "reason": "Estimated contrast 16.22:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_harbor-beach__1280x800.png",
+      "route": "markets_harbor-beach",
+      "route_display": "/markets/harbor-beach/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.24166666666666667,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.907601880877743,
+        "reason": "Found pill-like brass region 290x44, density 84.6%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.24253910246917,
+        "reason": "Estimated contrast 16.24:1"
+      },
+      "visual_quality": {
+        "verdict": "PARTIAL",
+        "score": 0.5,
+        "reason": "At least one mandatory axis is partial"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_harbor-beach__1440x900.png",
+      "route": "markets_harbor-beach",
+      "route_display": "/markets/harbor-beach/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4444444444444444,
+        "reason": "Right-edge run 180 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.907601880877743,
+        "reason": "Found pill-like brass region 290x44, density 84.6%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.193514313143297,
+        "reason": "Estimated contrast 16.19:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_las-olas-isles__320x568.png",
+      "route": "markets_las-olas-isles",
+      "route_display": "/markets/las-olas-isles/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9868345323741008,
+        "reason": "Found pill-like brass region 278x10, density 97.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.623059118468442,
+        "reason": "Estimated contrast 15.62:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_las-olas-isles__375x812.png",
+      "route": "markets_las-olas-isles",
+      "route_display": "/markets/las-olas-isles/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5150684931506849,
+        "reason": "Right-edge run 188 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9371057898005658,
+        "reason": "Found pill-like brass region 337x43, density 89.5%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.35180526274789,
+        "reason": "Estimated contrast 16.35:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_las-olas-isles__768x1024.png",
+      "route": "markets_las-olas-isles",
+      "route_display": "/markets/las-olas-isles/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.8478260869565217,
+        "reason": "Right-edge run 390 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.906158357771261,
+        "reason": "Found pill-like brass region 279x44, density 84.4%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.230611412675703,
+        "reason": "Estimated contrast 16.23:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_las-olas-isles__1280x800.png",
+      "route": "markets_las-olas-isles",
+      "route_display": "/markets/las-olas-isles/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.24166666666666667,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9087741526765917,
+        "reason": "Found pill-like brass region 287x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.15203092293118,
+        "reason": "Estimated contrast 16.15:1"
+      },
+      "visual_quality": {
+        "verdict": "PARTIAL",
+        "score": 0.5,
+        "reason": "At least one mandatory axis is partial"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_las-olas-isles__1440x900.png",
+      "route": "markets_las-olas-isles",
+      "route_display": "/markets/las-olas-isles/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.37530864197530867,
+        "reason": "Right-edge run 152 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9087741526765917,
+        "reason": "Found pill-like brass region 287x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.156772744148956,
+        "reason": "Estimated contrast 16.16:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_sea-ranch-lakes__320x568.png",
+      "route": "markets_sea-ranch-lakes",
+      "route_display": "/markets/sea-ranch-lakes/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9300346363186541,
+        "reason": "Found pill-like brass region 282x43, density 88.3%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.629780828718435,
+        "reason": "Estimated contrast 15.63:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_sea-ranch-lakes__375x812.png",
+      "route": "markets_sea-ranch-lakes",
+      "route_display": "/markets/sea-ranch-lakes/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3698630136986301,
+        "reason": "Right-edge run 135 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9312676833896901,
+        "reason": "Found pill-like brass region 337x43, density 88.5%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.31523664869432,
+        "reason": "Estimated contrast 16.32:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_sea-ranch-lakes__768x1024.png",
+      "route": "markets_sea-ranch-lakes",
+      "route_display": "/markets/sea-ranch-lakes/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.102100029856476,
+        "reason": "Estimated contrast 16.10:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_sea-ranch-lakes__1280x800.png",
+      "route": "markets_sea-ranch-lakes",
+      "route_display": "/markets/sea-ranch-lakes/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.34444444444444444,
+        "reason": "Right-edge run 124 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9086842869590473,
+        "reason": "Found pill-like brass region 313x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.12628358248926,
+        "reason": "Estimated contrast 16.13:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_sea-ranch-lakes__1440x900.png",
+      "route": "markets_sea-ranch-lakes",
+      "route_display": "/markets/sea-ranch-lakes/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5530864197530864,
+        "reason": "Right-edge run 224 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9086842869590473,
+        "reason": "Found pill-like brass region 313x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.11511010996888,
+        "reason": "Estimated contrast 16.12:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_seven-isles__320x568.png",
+      "route": "markets_seven-isles",
+      "route_display": "/markets/seven-isles/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9153191489361702,
+        "reason": "Found pill-like brass region 282x30, density 85.9%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.470821059717439,
+        "reason": "Estimated contrast 15.47:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_seven-isles__375x812.png",
+      "route": "markets_seven-isles",
+      "route_display": "/markets/seven-isles/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3150684931506849,
+        "reason": "Right-edge run 115 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9415361258712304,
+        "reason": "Found pill-like brass region 337x43, density 90.3%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.31671368248003,
+        "reason": "Estimated contrast 16.32:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_seven-isles__768x1024.png",
+      "route": "markets_seven-isles",
+      "route_display": "/markets/seven-isles/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.908695652173913,
+        "reason": "Right-edge run 418 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9071973827699018,
+        "reason": "Found pill-like brass region 262x21, density 84.5%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.093783337634683,
+        "reason": "Estimated contrast 16.09:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_seven-isles__1280x800.png",
+      "route": "markets_seven-isles",
+      "route_display": "/markets/seven-isles/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.24166666666666667,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9092424242424243,
+        "reason": "Found pill-like brass region 270x44, density 84.9%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.11076435838934,
+        "reason": "Estimated contrast 16.11:1"
+      },
+      "visual_quality": {
+        "verdict": "PARTIAL",
+        "score": 0.5,
+        "reason": "At least one mandatory axis is partial"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_seven-isles__1440x900.png",
+      "route": "markets_seven-isles",
+      "route_display": "/markets/seven-isles/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4444444444444444,
+        "reason": "Right-edge run 180 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9092424242424243,
+        "reason": "Found pill-like brass region 270x44, density 84.9%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.123092538195426,
+        "reason": "Estimated contrast 16.12:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_victoria-park__320x568.png",
+      "route": "markets_victoria-park",
+      "route_display": "/markets/victoria-park/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9291713325867861,
+        "reason": "Found pill-like brass region 282x38, density 88.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 15.480774520883637,
+        "reason": "Estimated contrast 15.48:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_victoria-park__375x812.png",
+      "route": "markets_victoria-park",
+      "route_display": "/markets/victoria-park/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.5917808219178082,
+        "reason": "Right-edge run 216 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9382651300807398,
+        "reason": "Found pill-like brass region 337x43, density 89.7%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.275256965184347,
+        "reason": "Estimated contrast 16.28:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_victoria-park__768x1024.png",
+      "route": "markets_victoria-park",
+      "route_display": "/markets/victoria-park/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.8326086956521739,
+        "reason": "Right-edge run 383 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9062747035573122,
+        "reason": "Found pill-like brass region 276x44, density 84.4%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.150622219853442,
+        "reason": "Estimated contrast 16.15:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_victoria-park__1280x800.png",
+      "route": "markets_victoria-park",
+      "route_display": "/markets/victoria-park/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "PARTIAL",
+        "score": 0.24166666666666667,
+        "reason": "Localized right-edge clipping pattern detected"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9089148527528809,
+        "reason": "Found pill-like brass region 284x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.163180007348476,
+        "reason": "Estimated contrast 16.16:1"
+      },
+      "visual_quality": {
+        "verdict": "PARTIAL",
+        "score": 0.5,
+        "reason": "At least one mandatory axis is partial"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/markets_victoria-park__1440x900.png",
+      "route": "markets_victoria-park",
+      "route_display": "/markets/victoria-park/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4444444444444444,
+        "reason": "Right-edge run 180 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9089148527528809,
+        "reason": "Found pill-like brass region 284x44, density 84.8%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.171869367665106,
+        "reason": "Estimated contrast 16.17:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/sellers__320x568.png",
+      "route": "sellers",
+      "route_display": "/sellers/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9312221672439386,
+        "reason": "Found pill-like brass region 282x43, density 88.5%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.273889120502893,
+        "reason": "Estimated contrast 16.27:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/sellers__375x812.png",
+      "route": "sellers",
+      "route_display": "/sellers/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.2876712328767123,
+        "reason": "Right-edge run 105 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.98937125748503,
+        "reason": "Found pill-like brass region 334x12, density 98.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.29594762773354,
+        "reason": "Estimated contrast 16.30:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/sellers__768x1024.png",
+      "route": "sellers",
+      "route_display": "/sellers/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.126681654790758,
+        "reason": "Estimated contrast 16.13:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/sellers__1280x800.png",
+      "route": "sellers",
+      "route_display": "/sellers/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4527777777777778,
+        "reason": "Right-edge run 163 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9053746928746929,
+        "reason": "Found pill-like brass region 296x44, density 84.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.08330074647622,
+        "reason": "Estimated contrast 16.08:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/sellers__1440x900.png",
+      "route": "sellers",
+      "route_display": "/sellers/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.6493827160493827,
+        "reason": "Right-edge run 263 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "PASS",
+        "score": 0.9053746928746929,
+        "reason": "Found pill-like brass region 296x44, density 84.2%"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 16.090751119554326,
+        "reason": "Estimated contrast 16.09:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/valuation__320x568.png",
+      "route": "valuation",
+      "route_display": "/valuation/",
+      "viewport": "320x568",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3411764705882353,
+        "reason": "Right-edge run 87 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.598306799415335,
+        "reason": "Estimated contrast 14.60:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/valuation__375x812.png",
+      "route": "valuation",
+      "route_display": "/valuation/",
+      "viewport": "375x812",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.3643835616438356,
+        "reason": "Right-edge run 133 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.54118237354939,
+        "reason": "Estimated contrast 14.54:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/valuation__768x1024.png",
+      "route": "valuation",
+      "route_display": "/valuation/",
+      "viewport": "768x1024",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.9630434782608696,
+        "reason": "Right-edge run 443 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 14.348842808140194,
+        "reason": "Estimated contrast 14.35:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/valuation__1280x800.png",
+      "route": "valuation",
+      "route_display": "/valuation/",
+      "viewport": "1280x800",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.4527777777777778,
+        "reason": "Right-edge run 163 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 13.955247506546383,
+        "reason": "Estimated contrast 13.96:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    },
+    {
+      "file": "/tmp/mia-cycle9-live-after/valuation__1440x900.png",
+      "route": "valuation",
+      "route_display": "/valuation/",
+      "viewport": "1440x900",
+      "h1_clipping": {
+        "verdict": "FAIL",
+        "score": 0.6493827160493827,
+        "reason": "Right-edge run 263 rows with hero-like cream cluster at viewport edge"
+      },
+      "cta_above_fold": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "No qualifying solid brass pill CTA in expected viewport area"
+      },
+      "contrast": {
+        "verdict": "PASS",
+        "score": 13.877013981107826,
+        "reason": "Estimated contrast 13.88:1"
+      },
+      "visual_quality": {
+        "verdict": "FAIL",
+        "score": 0,
+        "reason": "At least one mandatory axis failed"
+      }
+    }
+  ]
+}

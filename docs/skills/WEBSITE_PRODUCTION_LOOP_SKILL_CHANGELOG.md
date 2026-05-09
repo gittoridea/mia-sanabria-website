@@ -2,6 +2,45 @@
 
 Version-by-version evolution of `WEBSITE_PRODUCTION_LOOP_SKILL.md`. Updated each cycle by the SkillImprovementLoop workflow.
 
+## v0.3.1 — 2026-05-09 (Mia Sanabria cycle 9 — acceptance-driven visual completion)
+
+**Driver:** Cycle 8's GPT-5.5 live acceptance review returned **PASS on contrast root cause + FAIL on layout polish** simultaneously: the cream H1 on navy panel hit ≥14:1 contrast (`audit:hero-contrast` 95 PASS · 0 FAIL) AND the hero still right-clipped on 320×568 / 375×812 mobile (long-text routes) AND the desktop CTAs sat below the 1280×800 / 1440×900 fold (because lg:min-h-[680px] + lg:py-32 = ~768px section vs. 712-812 visible viewport after 88px sticky header). Plus `audit:hero-contrast --live` returned 0 PASS · 95 WARN — the live mode was structurally broken because the audit-CSS injection only fires through the local Bun static server. Cycle 9 closed all three gaps. The structural lesson: **layout-acceptance and contrast-acceptance are different gates**. A hero can pass one and fail the other; conflating them lets a real defect ship.
+
+The fix was structural in three places: (a) Hero.tsx uses GPT-5.5 xhigh's "Approach C-refined" — CTAs render INSIDE `[data-hero-copy-panel]` for image-mode heroes, hero shell drops to `lg:min-h-[560px] lg:py-16` (was 680/32), H1 image-mode font scale tightened to 16/17/26/32/40 (was 18/28/38/48/60), `<wbr/>` proper-noun-cluster wrap hints in the locked Card-3 homepage heading, mobile CTAs at `text-[11px] tracking-normal whitespace-nowrap px-2.5` (with `min-[375px]` step-up to spec values); (b) `scripts/audit-hero-pixel-contrast.ts` `--live` mode now routes the live URL through a local Bun reverse-proxy that injects audit CSS into HTML responses (Spark Team B's spec); (c) new `scripts/audit-screenshot-verdict-matrix.ts` provides deterministic per-route × per-viewport PASS/PARTIAL/FAIL on H1 clipping / CTA above-fold / contrast / visual-quality (Spark Team C's spec; heuristic-based; documented limitations on in-panel CTA arrangements). Composite mutation in `audit:hero-contrast --mutation` was strengthened: panel BG → cream-100 + all overlays → opacity:0; mutation exit-code logic now treats `(WARN+FAIL) >= 10% of rows` as sentinel-success and `< 10%` as sentinel-failure (a fully-green mutation run = no signal).
+
+### Added
+
+- HARD gate #18 — **Layout-acceptance gate, separate from contrast** — image-mode heroes test layout per-viewport: H1 right-edge `<=` panel right-edge (mobile clipping) AND primary CTA bottom edge `<=` viewport_height − header_height − 24px buffer (desktop fold). Either failure blocks visual PASS regardless of contrast verdict.
+- HARD gate #19 — **Live-audit reverse-proxy pattern** — `--live` audits MUST route the live URL through a local Bun static server with audit-CSS injection for HTML responses. Direct URL targeting + `?auditMode=hide` fails because live URLs don't honor query params for CSS injection.
+- New per-client substrate: `scripts/audit-screenshot-verdict-matrix.ts` — deterministic verdict matrix generator (route × viewport × axis); Bun + sharp; CLI flags `--input` `--label` `--output-md` `--output-json`; reusable for any future visual capture set.
+- 4 new gotchas (#21–#24) — mutation FAILs and WARNs both count as detection; layout vs contrast acceptance separation; live-audit CSS injection requires reverse-proxy not direct URL; heuristic verdict matrices have FALSE-POSITIVE shapes that must be documented.
+
+### Changed
+
+- **Hard gate count:** 17 → 19.
+- **`audit:hero-contrast` mutation fixture:** weak-scrim → composite (panel BG → cream-100 + all overlays → opacity:0 — produces 99% non-PASS rows).
+- **`audit:hero-contrast` exit-code logic** — mutation run exits 1 on detection (≥10% non-PASS rows) AND on no-op (<10% non-PASS rows; "MUTATION SENTINEL FAILED" message). Clear separation between "audit caught the regression" and "audit isn't sensitive."
+- **Per-client substrate** updated to require: `scripts/audit-hero-pixel-contrast.ts` (with `--live` reverse-proxy mode), `scripts/audit-screenshot-verdict-matrix.ts` (NEW v0.3.1).
+
+### Process improvements caught
+
+- **Codex CLI silent-fail pattern** — gpt-5.5 xhigh dispatches with stdin + arg-prompt sometimes return ZERO model output (just echo the input). Mitigation: dispatch with stdin-only (no arg-prompt), and increase timeout to ≥720s for complex briefs. Re-dispatch with reduced reasoning_effort if xhigh stalls. Document fallback explicitly per Phase 1 honesty contract.
+- **Spark verdict matrix is "captured-vs-reviewed" not "deploy gate"** — heuristic-based pixel-cluster matrix returns false-positives on layouts that differ from its design assumptions (e.g. Cycle 9's panel-embedded CTAs trip the free-standing-pill detection). Visual review + rendered-pixel `audit:hero-contrast` are load-bearing; the matrix supplements them.
+- **Forge race scope drift** prevention held — main-thread did Hero.tsx + audit edits; Spark teams ran read-only background reviews. No race despite parallel dispatch (per `feedback_forge_race_scope_drift.md`).
+- **GPT-5.5 strategic-gate-only usage** preserved Cycle 8 doctrine: GPT-5.5 used at Phase 4 (layout decision), Phase 8 (predeploy), Phase 10 (live acceptance) only — bounded implementation work delegated to Spark teams (A/B/C/D).
+
+### Limitations of v0.3.0 closed
+
+- v0.3.0 gate #13 (rendered hero readability) was contrast-only; v0.3.1 #18 adds layout as separate axis.
+- v0.3.0 gate #15 (live visual) referenced `audit:hero-contrast --live` but the script's `--live` mode was structurally broken; v0.3.1 #19 fixes the architecture.
+- v0.3.0 gate #16 (audit-mutation) only checked exit-code; v0.3.1 #21 (gotcha) clarifies that WARN-shifted rows count as detection too.
+
+### Limitations remaining (Cycle 10 candidates)
+
+- **Layout-acceptance gate #18 lacks a runtime probe** — currently visual-review-only. Cycle 10 candidate: add a Playwright-based bounding-box probe at the 5 required viewports.
+- **Verdict matrix's CTA-above-fold heuristic mis-detects panel-embedded CTAs** — Cycle 10 should add a "panel-embedded" mode that adjusts the brass-pill detection bounds.
+- **320×568 primary CTA tail-clipping** — visually appears to clip on long labels (e.g. "Begin a Private Conversation") even though the math says 14-46px spare. Cycle 10 should DOM-probe the actual rendered text width OR add a content-shortened CTA fallback at ≤360px viewports.
+
 ## v0.3.0 — 2026-05-09 (Mia Sanabria cycle 8 — rendered hero readability failure recovery)
 
 **Driver:** principal-visible PASS-vs-FAIL pattern persisted through cycles 5, 6, 7. Token + structural audits passed (35 PASS / 11 PASS / 12 PASS chains) while the user kept seeing illegible hero H1. Root cause: `src/app/globals.css` had `h1 { color: var(--color-navy-800); }` OUTSIDE any `@layer`. In Tailwind v4, raw CSS rules without `@layer` outrank ALL utilities — even though `.text-cream-50` has higher specificity (0,1,0) than `h1` (0,0,1), `@layer` ordering is consulted FIRST. Result: every image-mode H1 with `class="text-cream-50"` rendered as navy-800 across cycles 5/6/7 — invisible navy-on-navy. Three cycles of "stronger overlay" tweaks were treating a CSS-cascade bug as a contrast-math problem. Audits passed because they grepped class strings, not computed colors.
