@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T21:59:42.876Z",
+  "timestamp": "2026-05-09T00:15:58.131Z",
   "counts": {
     "PASS": 14,
     "WARN": 2,
@@ -95,12 +95,12 @@
       "category": "Design/Display Integrity",
       "description": "Core-page <img> tags have alt + width/height + no placeholder names",
       "status": "WARN",
-      "evidence": "27 img attribute issues",
+      "evidence": "28 img attribute issues",
       "details": {
         "issues": [
           {
             "route": "/",
-            "img": "/og-default.jpg",
+            "img": "/markets/fort-lauderdale.jpg",
             "problem": "missing width/height"
           },
           {
@@ -135,6 +135,11 @@
           },
           {
             "route": "/",
+            "img": "/markets/las-olas-isles.jpg",
+            "problem": "missing width/height"
+          },
+          {
+            "route": "/about/",
             "img": "/markets/las-olas-isles.jpg",
             "problem": "missing width/height"
           },

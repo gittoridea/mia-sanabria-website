@@ -31,7 +31,7 @@ export const MIA = {
     youtube: "https://www.youtube.com/channel/UCXQwnpWflWRRtYuO9QX1jvg",
   },
   voice: {
-    tagline: "Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made",
+    tagline: "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
     positioning: "Fort Lauderdale REALTOR®",
     anchorLine: "If I don't know the answer, I will find it.",
   },

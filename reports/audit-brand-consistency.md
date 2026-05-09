@@ -1,8 +1,8 @@
 # Audit Brand Consistency Report
 
-**Generated:** 2026-05-08T21:59:42.978Z
+**Generated:** 2026-05-09T00:15:58.283Z
 
-**Summary:** 7 PASS · 0 WARN · 0 FAIL · 0 SKIP
+**Summary:** 9 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 ## Results by category
 
@@ -42,3 +42,15 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `brand.mobileNavPresent` | ✅ | SiteHeader.tsx renders a mobile-nav affordance (drawer, hamburger, or hidden-on-desktop nav) | mobile nav toggle + breakpoint visibility classes detected |
+
+### Hero Discipline
+
+| ID | Status | Description | Evidence |
+|---|:-:|---|---|
+| `brand.heroH1ContrastTokens` | ✅ | Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight | text-shadow + overlay gradient + bold weight all present in Hero.tsx |
+
+### Email Consistency
+
+| ID | Status | Description | Evidence |
+|---|:-:|---|---|
+| `brand.publicEmailConsistency` | ✅ | All emails referenced in src/ are the canonical public email (msanabriarea@gmail.com) | 1 distinct email(s) in src/, all canonical |

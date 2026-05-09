@@ -11,7 +11,7 @@ This contract is the rule book. The next session's Designer lane must respect it
 
 - **Voice:** "Personal by design, not by claim." Editorial, considered, not pushy. First-person where Mia is speaking, third-person where the site is describing her.
 - **Anchor lines:**
-  - Tagline: `Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made` (`MIA.voice.tagline`)
+  - Tagline: `Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.` (`MIA.voice.tagline`) — updated 2026-05-08 cycle 5 per principal direction; supersedes the prior "Family Homes Where Memories Are Made" tagline (PRINCIPAL_DECISION_REGISTER Card 3 → DECIDED toward luxury/waterfront positioning)
   - Positioning: `Fort Lauderdale REALTOR®` (`MIA.voice.positioning`)
   - Anchor line: `If I don't know the answer, I will find it.` (`MIA.voice.anchorLine`)
 - **Forbidden voice:** corporate jargon ("synergy", "leveraging", "best-in-class"), realtor-template clichés ("your dream home awaits", "let me find your forever home"), generic luxury platitudes ("redefining luxury", "elevated experience").

@@ -283,6 +283,81 @@ async function checkSiteFooterContractStructure(): Promise<CheckResult[]> {
   return results;
 }
 
+async function checkHeroH1ContrastTokens(): Promise<CheckResult[]> {
+  const results: CheckResult[] = [];
+  // Source-side token check: the Hero component must (a) use a text-shadow stack on image-mode H1
+  // and (b) use an overlay gradient over the image. We grep for the canonical shadow stack tokens
+  // and overlay class — if the patterns disappear, we want to know.
+  const heroPath = join(SRC_DIR, "components", "Hero.tsx");
+  if (!(await fileExists(heroPath))) {
+    results.push({
+      id: "brand.heroComponentExists",
+      category: "Hero Discipline",
+      description: "Hero.tsx exists",
+      status: "FAIL",
+      evidence: "src/components/Hero.tsx not found",
+    });
+    return results;
+  }
+  const heroSrc = await readFile(heroPath, "utf-8");
+  const hasTextShadow = /\[text-shadow:[^\]]*rgba/.test(heroSrc);
+  const hasOverlay = /from-navy-900\/\d+/.test(heroSrc) && /via-navy-900\/\d+/.test(heroSrc);
+  const hasFontWeight = /font-(?:semibold|bold|extrabold)/.test(heroSrc);
+  results.push({
+    id: "brand.heroH1ContrastTokens",
+    category: "Hero Discipline",
+    description: "Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight",
+    status: hasTextShadow && hasOverlay && hasFontWeight ? "PASS" : "WARN",
+    evidence:
+      hasTextShadow && hasOverlay && hasFontWeight
+        ? "text-shadow + overlay gradient + bold weight all present in Hero.tsx"
+        : `missing tokens (text-shadow:${hasTextShadow} overlay:${hasOverlay} bold:${hasFontWeight})`,
+  });
+  return results;
+}
+
+async function checkPublicEmailConsistency(): Promise<CheckResult[]> {
+  const results: CheckResult[] = [];
+  // Source-side check: the canonical public email is in src/lib/mia.ts MIA.contact.email.
+  // Any other email literal (matching the standard email regex) in src/ that isn't an internal allow-listed
+  // pattern (msanabriarea@gmail.com) is a violation.
+  const allowed = new Set<string>(["msanabriarea@gmail.com", "noreply@example.com", "abuse@example.com"]);
+  const files = await walkSrc(SRC_DIR, [".tsx", ".ts"]);
+  type EmailHit = { file: string; line: number; email: string };
+  const violations: EmailHit[] = [];
+  const seen = new Set<string>();
+  for (const f of files) {
+    const content = await readFile(f, "utf-8");
+    const lines = content.split("\n");
+    lines.forEach((line, idx) => {
+      // Skip comments-only lines that mention emails as future references
+      const trimmed = line.trim();
+      if (trimmed.startsWith("//") || trimmed.startsWith("*")) return;
+      for (const m of line.matchAll(/\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b/g)) {
+        if (!m[1]) continue;
+        const addr = m[1].toLowerCase();
+        seen.add(addr);
+        if (!allowed.has(addr)) {
+          violations.push({ file: relative(REPO_ROOT, f), line: idx + 1, email: addr });
+        }
+      }
+    });
+  }
+  const distinct = [...seen];
+  results.push({
+    id: "brand.publicEmailConsistency",
+    category: "Email Consistency",
+    description: "All emails referenced in src/ are the canonical public email (msanabriarea@gmail.com)",
+    status: violations.length === 0 ? "PASS" : "FAIL",
+    evidence:
+      violations.length === 0
+        ? `${distinct.length} distinct email(s) in src/, all canonical`
+        : `${violations.length} non-canonical email reference(s) in src/`,
+    details: violations.length ? { violations: violations.slice(0, 20), distinct } : undefined,
+  });
+  return results;
+}
+
 async function checkMobileNavExists(): Promise<CheckResult[]> {
   const results: CheckResult[] = [];
   const path = join(SRC_DIR, "components", "SiteHeader.tsx");
@@ -381,6 +456,8 @@ async function main() {
   results.push(...(await checkFooterTrustElements()));
   results.push(...(await checkSiteFooterContractStructure()));
   results.push(...(await checkMobileNavExists()));
+  results.push(...(await checkHeroH1ContrastTokens()));
+  results.push(...(await checkPublicEmailConsistency()));
 
   for (const r of results) {
     const icon = r.status === "PASS" ? "✓" : r.status === "WARN" ? "⚠" : r.status === "FAIL" ? "✗" : "—";

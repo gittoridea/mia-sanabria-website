@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Hero } from "@/components/Hero";
+import { AnswerFirst } from "@/components/AnswerFirst";
 import { CTAStrip } from "@/components/CTAStrip";
 import { Faq } from "@/components/Faq";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -56,9 +57,19 @@ export default function AboutPage() {
 
       <Hero
         eyebrow="About Mia"
-        heading="South Florida's personal REALTOR® — a practice built on relationships, not transactions."
+        heading="A personal practice for luxury and waterfront real estate."
         sub={MIA.voice.anchorLine}
-        background="navy"
+        background="image"
+        imageSrc="/markets/las-olas-isles.jpg"
+        imageAlt="Las Olas Isles deepwater finger islands, Eastern Fort Lauderdale"
+      />
+
+      <AnswerFirst
+        question="How does Mia Sanabria represent luxury and waterfront clients?"
+        answer="Mia represents a deliberately small client list each quarter, with personal attention at every showing, every consultation, and every closing. Her work concentrates on Eastern Fort Lauderdale's deepwater isles and in-town neighborhoods, plus adjacent Boca Raton and Delray Beach. Engagements start with a private brief — timeline, architectural preference, dock or beach access, lifestyle — long before the first showing. Listings are positioned with editorial photography and disciplined pricing built from current comparables on the specific street, building, or block. Every transaction is scaffolded by experienced title, escrow, financing, and inspection partners, and Mia stays present across each milestone."
+        relatedMarkets={["las-olas-isles", "harbor-beach", "boca-raton"]}
+        cta={{ href: "/contact/", label: "Begin a private conversation" }}
+        background="cream-tint"
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

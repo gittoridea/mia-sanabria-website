@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
+import { AnswerFirst } from "@/components/AnswerFirst";
 import { MeetMia } from "@/components/MeetMia";
 import { IntentRouter } from "@/components/IntentRouter";
 import { MarketCard } from "@/components/MarketCard";
@@ -76,13 +77,20 @@ export default function HomePage() {
 
       <Hero
         eyebrow="Mia Sanabria · REALTOR® with LPT Realty"
-        heading="Fort Lauderdale REALTOR® — Waterfront, Luxury, and Family Homes Where Memories Are Made."
-        sub="Mia Sanabria is a Fort Lauderdale REALTOR® serving buyers and sellers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach."
+        heading="Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach."
+        sub="A small, deliberate practice — private representation for buyers and sellers of distinctive coastal residences."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/valuation/", label: "Request Home Valuation" }}
         background="image"
-        imageSrc="/og-default.jpg"
-        imageAlt="Luxury waterfront residence at twilight, Southeast Florida"
+        imageSrc="/markets/fort-lauderdale.jpg"
+        imageAlt="Twilight luxury waterfront residence, Eastern Fort Lauderdale"
+      />
+
+      <AnswerFirst
+        question="What kind of real estate does Mia Sanabria specialize in?"
+        answer="Mia Sanabria represents buyers and sellers of luxury and waterfront residences across Eastern Fort Lauderdale, with adjacent primary service in Boca Raton (Palm Beach County) and Delray Beach (Palm Beach County). Her practice centers on deepwater estates and finger-isle homes along Las Olas Isles, Harbor Beach, and Rio Vista; in-town Eastern Fort Lauderdale neighborhoods such as Coral Ridge and Victoria Park; and the Mediterranean Revival, Atlantic Avenue, and beach-block trade in Boca Raton and Delray Beach. Engagements begin with a private brief — preferences, timeline, and the residence in mind — long before any showing."
+        relatedMarkets={["fort-lauderdale", "boca-raton", "delray-beach"]}
+        cta={{ href: "/markets/", label: "Walk the markets" }}
       />
 
       <MeetMia />
@@ -97,9 +105,10 @@ export default function HomePage() {
             sub="Market guides for Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach — written to point you toward current comparable sales and a property-specific conversation."
           />
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredMarkets.map((market) => (
+            {featuredMarkets.map((market, idx) => (
               <li key={market.slug}>
-                <MarketCard market={market} />
+                {/* Cycle-5 §4: first 3 cards eager-load (above-fold-on-desktop + visible-in-screenshots). */}
+                <MarketCard market={market} priority={idx < 3} />
               </li>
             ))}
           </ul>

@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-08T21:59:42.978Z",
+  "timestamp": "2026-05-09T00:15:58.283Z",
   "counts": {
-    "pass": 7,
+    "pass": 9,
     "warn": 0,
     "fail": 0,
     "skip": 0
@@ -55,6 +55,20 @@
       "description": "SiteHeader.tsx renders a mobile-nav affordance (drawer, hamburger, or hidden-on-desktop nav)",
       "status": "PASS",
       "evidence": "mobile nav toggle + breakpoint visibility classes detected"
+    },
+    {
+      "id": "brand.heroH1ContrastTokens",
+      "category": "Hero Discipline",
+      "description": "Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight",
+      "status": "PASS",
+      "evidence": "text-shadow + overlay gradient + bold weight all present in Hero.tsx"
+    },
+    {
+      "id": "brand.publicEmailConsistency",
+      "category": "Email Consistency",
+      "description": "All emails referenced in src/ are the canonical public email (msanabriarea@gmail.com)",
+      "status": "PASS",
+      "evidence": "1 distinct email(s) in src/, all canonical"
     }
   ]
 }

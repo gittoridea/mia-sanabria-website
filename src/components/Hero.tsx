@@ -40,9 +40,11 @@ export function Hero({
             sizes="100vw"
             className="object-cover object-center"
           />
+          {/* Cycle-5 principal-authorized stronger overlay for H1 contrast: from 15/35/15 to 35/65/35.
+              Brand-Contract update — overrides cycle-2 "brighter feel" directive per cycle-5 mission §3. */}
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-b from-navy-900/15 via-navy-900/35 to-navy-900/15"
+            className="absolute inset-0 bg-gradient-to-b from-navy-900/35 via-navy-900/65 to-navy-900/35"
           />
         </>
       ) : null}
@@ -67,7 +69,8 @@ export function Hero({
             background === "cream"
               ? "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy-800 sm:text-5xl lg:text-6xl [text-wrap:balance]"
               : useImage
-                ? "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance] [text-shadow:0_2px_18px_rgba(15,42,68,0.85),0_1px_3px_rgba(0,0,0,0.65)]"
+                ? // Cycle-5 §3 principal-authorized H1-visibility: stronger weight + multi-stop shadow stack.
+                  "mt-5 max-w-4xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance] [text-shadow:0_4px_24px_rgba(15,42,68,0.95),0_2px_8px_rgba(0,0,0,0.85),0_1px_2px_rgba(0,0,0,0.6)]"
                 : "mt-5 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream-50 sm:text-5xl lg:text-6xl [text-wrap:balance]"
           }
         >

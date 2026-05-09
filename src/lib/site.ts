@@ -21,7 +21,7 @@ export const SITE = {
   title: "Fort Lauderdale REALTOR® | Waterfront & Luxury Homes",
   shortTitle: "Mia Sanabria | REALTOR®",
   description:
-    "Fort Lauderdale REALTOR® Mia Sanabria helps families find waterfront, luxury, and family homes where memories are made. Trusted local real estate guidance.",
+    "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Private representation.",
   tagline: "Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made",
   positioning: "Fort Lauderdale REALTOR®",
   anchorLine: "If I don't know the answer, I will find it.",

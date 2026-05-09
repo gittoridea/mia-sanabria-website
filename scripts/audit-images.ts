@@ -323,6 +323,84 @@ async function runAuditImages(): Promise<CheckResult[]> {
     details: missingAssets.length ? { missing: missingAssets } : undefined,
   });
 
+  // ───────────────────────────────────────────────────────────────────────
+  // Cycle-5 §8 additions — featured-card image presence + hub-page hero image + public email consistency.
+  // ───────────────────────────────────────────────────────────────────────
+
+  // (1) Homepage Featured Markets — every featured-card link must render an <img src="/markets/SLUG.jpg">.
+  const homeHtml = await readFile(join(OUT_DIR, "index.html"), "utf-8").catch(() => "");
+  const featuredImgs = [...homeHtml.matchAll(/src="\/markets\/([a-z-]+)\.jpg"/g)].map((m) => m[1]);
+  const expectedFeatured = ["fort-lauderdale", "victoria-park", "boca-raton", "delray-beach", "harbor-beach", "las-olas-isles"];
+  const missingFeatured = expectedFeatured.filter((slug) => !featuredImgs.includes(slug));
+  results.push({
+    id: "images.homepageFeaturedCards",
+    category: "Featured Markets",
+    description: "Homepage Featured Markets section renders an <img> for each of the 6 featured market cards",
+    status: missingFeatured.length === 0 ? "PASS" : "FAIL",
+    evidence:
+      missingFeatured.length === 0
+        ? `all 6 featured cards render <img src="/markets/SLUG.jpg">`
+        : `${missingFeatured.length} featured cards missing img: ${missingFeatured.join(", ")}`,
+    details: missingFeatured.length ? { missingFeatured } : undefined,
+  });
+
+  // (2) Hub-page hero images — /markets/ + /about/ should render an image-mode Hero (i.e. an <img> inside the first <section>).
+  type HubResult = { route: string; hasHeroImg: boolean };
+  const hubChecks: HubResult[] = [];
+  for (const route of ["/markets/", "/about/"]) {
+    const htmlPath = join(OUT_DIR, route.replace(/^\//, "").replace(/\/$/, ""), "index.html");
+    const html = await readFile(htmlPath, "utf-8").catch(() => "");
+    if (!html) continue;
+    // Take the first <section>...</section> block (the hero section) and check for an <img> inside.
+    const firstSection = html.match(/<section\b[^>]*>([\s\S]*?)<\/section>/);
+    const hasHeroImg = firstSection ? /<img\b[^>]*src=/i.test(firstSection[1] || "") : false;
+    hubChecks.push({ route, hasHeroImg });
+  }
+  const missingHubHero = hubChecks.filter((h) => !h.hasHeroImg);
+  results.push({
+    id: "images.hubPageHeroImage",
+    category: "Hub Pages",
+    description: "/markets/ and /about/ hero sections render an <img> (image-mode Hero)",
+    status: missingHubHero.length === 0 ? "PASS" : "FAIL",
+    evidence:
+      missingHubHero.length === 0
+        ? `${hubChecks.length} hub pages — all render image-mode hero`
+        : `${missingHubHero.length} hub pages missing hero <img>: ${missingHubHero.map((h) => h.route).join(", ")}`,
+    details: missingHubHero.length ? { missingHubHero } : undefined,
+  });
+
+  // (3) Public email consistency — exactly one canonical email should appear in rendered HTML across pages.
+  // Collect all unique <name>@<domain> matches; flag if >1 distinct address rendered publicly (excluding RFC-bait).
+  const emailSet = new Set<string>();
+  const allowList = new Set<string>([
+    // Allow these meta/build/RFC noise patterns (decode none of them as "publishing additional emails to users")
+    "noreply@example.com",
+    "abuse@example.com",
+  ]);
+  for (const htmlPath of htmls) {
+    const html = await readFile(htmlPath, "utf-8");
+    // Match plausible email patterns: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+    for (const m of html.matchAll(/\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b/g)) {
+      if (!m[1]) continue;
+      const addr = m[1].toLowerCase();
+      if (!allowList.has(addr)) emailSet.add(addr);
+    }
+  }
+  const emails = [...emailSet];
+  results.push({
+    id: "images.publicEmailConsistency",
+    category: "Email Consistency",
+    description: "Exactly one canonical public email address appears in rendered HTML",
+    status: emails.length <= 1 ? "PASS" : "FAIL",
+    evidence:
+      emails.length === 1
+        ? `single canonical email: ${emails[0]}`
+        : emails.length === 0
+        ? "no email addresses found in rendered HTML"
+        : `${emails.length} distinct emails in rendered HTML — should be 1`,
+    details: emails.length > 1 ? { emails } : undefined,
+  });
+
   return results;
 }
 

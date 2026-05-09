@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Market } from "@/lib/markets";
 
-export function MarketCard({ market }: { market: Market }) {
+export function MarketCard({ market, priority = false }: { market: Market; priority?: boolean }) {
   return (
     <Link
       href={`/markets/${market.slug}/`}
@@ -16,6 +16,7 @@ export function MarketCard({ market }: { market: Market }) {
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          priority={priority}
         />
         <div
           aria-hidden

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
+import { AnswerFirst } from "@/components/AnswerFirst";
 import { ValueProps } from "@/components/ValueProps";
 import { Faq } from "@/components/Faq";
 import { CTAStrip } from "@/components/CTAStrip";
@@ -116,6 +117,13 @@ export default function SellersPage() {
         background="image"
         imageSrc="/services/sellers.jpg"
         imageAlt="Editorial twilight exterior of a meticulously staged Florida luxury home with brass-lit entry and uplit royal palms"
+      />
+
+      <AnswerFirst
+        question="How should sellers position a luxury or waterfront home in Eastern Fort Lauderdale?"
+        answer="A luxury or waterfront residence is positioned for the buyer who is already searching for it — not a generic public listing. The work begins with disciplined pricing built from current comparable sales on the same street, building, or block — never broad public ranges. Editorial photography, twilight imagery, drone, video, and copywriting present the residence as an architectural object. For dock-capable estates, dock specifications, water depth, and route to the inlet are documented as marketable infrastructure. Distribution layers private brokerage introductions on top of MLS exposure so qualified, prepared buyers see the residence first. Showings are coordinated to protect the household's privacy and the residence's condition."
+        relatedMarkets={["fort-lauderdale", "boca-raton", "delray-beach"]}
+        cta={{ href: "/valuation/", label: "Request a valuation" }}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-08T21:59:42.876Z
+**Generated:** 2026-05-09T00:15:58.131Z
 
 **Summary:** 14 PASS · 2 WARN · 0 FAIL · 0 SKIP
 
@@ -39,7 +39,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.images.dimsAltPlaceholder` | ⚠️ | Core-page <img> tags have alt + width/height + no placeholder names | 27 img attribute issues |
+| `completeness.images.dimsAltPlaceholder` | ⚠️ | Core-page <img> tags have alt + width/height + no placeholder names | 28 img attribute issues |
 | `completeness.images.localFilesExist` | ✅ | Local image references resolve to files in out/ | all referenced local images exist |
 
 ### Forms/CTAs
@@ -68,14 +68,14 @@
 
 **Description:** Core-page <img> tags have alt + width/height + no placeholder names
 
-**Evidence:** 27 img attribute issues
+**Evidence:** 28 img attribute issues
 
 ```json
 {
   "issues": [
     {
       "route": "/",
-      "img": "/og-default.jpg",
+      "img": "/markets/fort-lauderdale.jpg",
       "problem": "missing width/height"
     },
     {
@@ -110,6 +110,11 @@
     },
     {
       "route": "/",
+      "img": "/markets/las-olas-isles.jpg",
+      "problem": "missing width/height"
+    },
+    {
+      "route": "/about/",
       "img": "/markets/las-olas-isles.jpg",
       "problem": "missing width/height"
     },

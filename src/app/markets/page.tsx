@@ -83,6 +83,9 @@ export default function MarketsIndex() {
         eyebrow="Featured Markets"
         heading="Southeast Florida's most coveted coastal communities."
         sub="Each market lives by its own architectural and social logic. Representation begins with fluency in the place — the dock, the country club, the canopy, the avenue."
+        background="image"
+        imageSrc="/markets/hillsboro-mile.jpg"
+        imageAlt="Hillsboro Mile oceanfront luxury estates, Southeast Florida"
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

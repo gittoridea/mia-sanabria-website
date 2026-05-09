@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
+import { AnswerFirst } from "@/components/AnswerFirst";
 import { ValueProps } from "@/components/ValueProps";
 import { Faq } from "@/components/Faq";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
@@ -86,6 +87,13 @@ export default function ValuationPage() {
         background="image"
         imageSrc="/services/valuation.jpg"
         imageAlt="Panoramic Florida deepwater canal vista with moored yachts and a contemporary waterfront mansion at golden hour"
+      />
+
+      <AnswerFirst
+        question="What should a luxury waterfront valuation consider beyond automated estimates?"
+        answer="Automated valuation models miss the variables that decide a luxury waterfront price. A serious valuation accounts for dock specifics — length, water depth, fixed-bridge clearance, route to the inlet, and any yacht-capacity history — alongside lot orientation to prevailing winds, view corridor, hurricane shutters, generator coverage, flood-zone elevation, and HOA or country-club access. It cross-checks recent comparable sales on the same street, building, or block; reviews architectural era and renovation depth; and weighs the residence's scarcity within its sub-market. Mia delivers a confidential walk-through (or virtual equivalent) plus a written strategic positioning recommendation — useful for estate planning, refinancing, or a future sale."
+        relatedMarkets={["fort-lauderdale", "boca-raton", "lighthouse-point"]}
+        cta={{ href: "/contact/", label: "Talk through your property" }}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
