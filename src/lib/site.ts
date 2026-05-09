@@ -22,7 +22,7 @@ export const SITE = {
   shortTitle: "Mia Sanabria | REALTOR®",
   description:
     "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Private representation.",
-  tagline: "Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made",
+  tagline: "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
   positioning: "Fort Lauderdale REALTOR®",
   anchorLine: "If I don't know the answer, I will find it.",
   url: SITE_URL,
