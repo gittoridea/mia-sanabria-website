@@ -64,8 +64,10 @@ Principal acknowledges the staging-vs-production distinction; cycle-5 GHL form-w
 
 ## Card 3 — Brand voice "family-homes" framing vs HNWI luxury-first positioning
 
-- **Status:** OPEN (raised cycle-4 Team C World-Class Production QA, also implicit in cycle-4 Team D)
-- **Surface:** `MIA.voice.tagline = "Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made"` in `src/lib/mia.ts`
+- **Status:** DECIDED — 2026-05-08 (cycle 5) — luxury/waterfront tagline locked. Supersedes prior OPEN status.
+- **Decision source of truth:** `docs/BRAND_SYSTEM_CONTRACT.md` §Tone & voice. Tagline now: `"Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach."`
+- **Implementation status:** Tagline shipped cycle 5 (commits `b40a174`, `8cf6353`); audit chain enforces no `Family Homes Where Memories Are Made` regressions via `audit:stale-terms`.
+- **Historical record (preserved):** prior tagline was `"Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made"` in `src/lib/mia.ts`.
 
 ### Two coherent readings
 
@@ -81,9 +83,9 @@ This is a content-strategy call, not a technical correctness call. Possible comp
 2. Change tagline to more luxury-vector ("Eastern Fort Lauderdale waterfront, luxury, and concierge representation")
 3. Maintain dual messaging — homepage tagline soft, /buyers/ + /sellers/ + /about/ luxury-vector
 
-### Authorization required
+### Authorization (recorded)
 
-Principal + Mia decide brand-voice direction. Do not silently change Mia's tagline.
+Principal authorized cycle-5 luxury/waterfront tagline; cycle-6 design lanes preserve this decision and do not propose family-homes reversion. Cycle-9 Lane Compliance Guardrail Finding 10 surfaced the prior register-vs-contract drift; this card update closes that drift.
 
 ---
 

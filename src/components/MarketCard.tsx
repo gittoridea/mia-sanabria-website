@@ -24,11 +24,11 @@ export function MarketCard({ market, priority = false }: { market: Market; prior
         />
       </div>
       <div className="absolute inset-x-0 bottom-0 p-6 text-cream-50">
-        <h3 className="font-display text-2xl tracking-[0.05em] text-cream-50">
+        <h3 className="font-display text-2xl text-cream-50 [text-wrap:balance]">
           {market.name}
         </h3>
-        <p className="mt-2 text-sm text-cream-200/90">{market.tagline}</p>
-        <div className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-brass-300">
+        <p className="mt-2 text-sm text-cream-200/95 [text-wrap:pretty]">{market.tagline}</p>
+        <div className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-cream-50">
           Explore Area
           <ArrowRight className="h-3 w-3" aria-hidden />
         </div>

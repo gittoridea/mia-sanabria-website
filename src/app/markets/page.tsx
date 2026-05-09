@@ -86,9 +86,11 @@ export default function MarketsIndex() {
         background="image"
         imageSrc="/markets/hillsboro-mile.jpg"
         imageAlt="Hillsboro Mile oceanfront luxury estates, Southeast Florida"
+        ctaPrimary={{ href: "/contact/?intent=market-brief", label: "Begin a private market brief" }}
+        ctaSecondary={{ href: "#primary-markets", label: "Explore the markets" }}
       />
 
-      <section className="bg-cream-50 py-20 lg:py-28">
+      <section id="primary-markets" className="bg-cream-50 py-20 lg:py-28 scroll-mt-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
             eyebrow="Primary service markets"

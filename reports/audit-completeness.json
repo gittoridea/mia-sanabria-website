@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T00:21:56.037Z",
+  "timestamp": "2026-05-09T01:32:54.026Z",
   "counts": {
     "PASS": 14,
     "WARN": 2,
@@ -311,7 +311,7 @@
       "category": "Schema",
       "description": "All JSON-LD blocks parse and carry @type",
       "status": "PASS",
-      "evidence": "144 JSON-LD blocks across 25 pages · 0 broken",
+      "evidence": "149 JSON-LD blocks across 25 pages · 0 broken",
       "details": {
         "issues": []
       }

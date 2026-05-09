@@ -144,7 +144,7 @@ export default function ValuationPage() {
                     id="upgrades"
                     name="upgrades"
                     rows={4}
-                    className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-sm text-navy-800 focus:border-brass-400 focus:outline-none"
+                    className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-base text-navy-800 focus:border-brass-400 focus:outline-none"
                     placeholder="Recent renovations, dock specifications, square footage, lot, view orientation, etc."
                   />
                 </div>
@@ -243,7 +243,7 @@ function Field({
         inputMode={inputMode}
         required={required}
         aria-required={required}
-        className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-sm text-navy-800 focus:border-brass-400 focus:outline-none"
+        className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-base text-navy-800 focus:border-brass-400 focus:outline-none"
       />
     </div>
   );

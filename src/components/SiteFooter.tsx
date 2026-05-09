@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail } from "lucide-react";
 import { FOOTER_NAV, SITE } from "@/lib/site";
 import { MIA } from "@/lib/mia";
+import { NavLink } from "./NavLink";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -42,9 +42,13 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             {FOOTER_NAV.explore.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-brass-300">
+                <NavLink
+                  href={item.href}
+                  matchPrefix
+                  className="block min-h-[44px] py-2 hover:text-brass-300 aria-[current=page]:text-brass-300 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
+                >
                   {item.label}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -55,9 +59,13 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             {FOOTER_NAV.about.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-brass-300">
+                <NavLink
+                  href={item.href}
+                  matchPrefix
+                  className="block min-h-[44px] py-2 hover:text-brass-300 aria-[current=page]:text-brass-300 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
+                >
                   {item.label}
-                </Link>
+                </NavLink>
               </li>
             ))}
             <li className="pt-2">
@@ -143,9 +151,12 @@ export function SiteFooter() {
           <ul className="flex flex-wrap items-center gap-5">
             {FOOTER_NAV.legal.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-brass-300">
+                <NavLink
+                  href={item.href}
+                  className="inline-flex min-h-[28px] items-center hover:text-brass-300 aria-[current=page]:text-brass-300 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
+                >
                   {item.label}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

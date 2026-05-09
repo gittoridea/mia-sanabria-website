@@ -14,15 +14,19 @@ export function Faq({
   return (
     <section className="bg-cream-50 py-20 lg:py-28">
       <div className="mx-auto max-w-4xl px-4 lg:px-8">
-        <h2 className="font-display text-3xl text-navy-800 sm:text-4xl">{heading}</h2>
+        <h2 className="font-display text-3xl text-navy-800 sm:text-4xl [text-wrap:balance]">
+          {heading}
+        </h2>
         <div className="mt-10 divide-y divide-navy-800/10 border-y border-navy-800/10">
           {items.map((item, i) => (
             <details
               key={i}
               className="group py-5 [&_summary::-webkit-details-marker]:hidden"
             >
-              <summary className="flex cursor-pointer items-start justify-between gap-6 text-left">
-                <span className="font-display text-lg text-navy-800">{item.question}</span>
+              <summary className="flex min-h-[44px] cursor-pointer items-start justify-between gap-6 py-1 text-left">
+                <span className="font-display text-lg text-navy-800 [text-wrap:balance]">
+                  {item.question}
+                </span>
                 <span
                   aria-hidden
                   className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-800/30 text-navy-800 transition-transform group-open:rotate-45"
@@ -30,7 +34,7 @@ export function Faq({
                   +
                 </span>
               </summary>
-              <div className="mt-3 pr-12 text-[15px] leading-relaxed text-navy-800/80">
+              <div className="mt-3 pr-12 text-[15px] leading-relaxed text-navy-800/80 [text-wrap:pretty]">
                 {item.answer}
               </div>
             </details>

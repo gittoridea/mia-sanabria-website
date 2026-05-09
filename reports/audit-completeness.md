@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-09T00:21:56.037Z
+**Generated:** 2026-05-09T01:32:54.026Z
 
 **Summary:** 14 PASS · 2 WARN · 0 FAIL · 0 SKIP
 
@@ -60,7 +60,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 144 JSON-LD blocks across 25 pages · 0 broken |
+| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 149 JSON-LD blocks across 25 pages · 0 broken |
 
 ## Failures and warnings — details
 

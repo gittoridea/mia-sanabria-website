@@ -151,7 +151,7 @@ export default function ContactPage() {
               <select
                 id="interest"
                 name="interest"
-                className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-sm text-navy-800 focus:border-brass-400 focus:outline-none"
+                className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-base text-navy-800 focus:border-brass-400 focus:outline-none"
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                 id="message"
                 name="message"
                 rows={5}
-                className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-sm text-navy-800 focus:border-brass-400 focus:outline-none"
+                className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-base text-navy-800 focus:border-brass-400 focus:outline-none"
                 placeholder="A few sentences about timeline, market, and what you're looking for."
               />
             </div>
@@ -230,7 +230,7 @@ function Field({
         inputMode={inputMode}
         required={required}
         aria-required={required}
-        className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-sm text-navy-800 focus:border-brass-400 focus:outline-none"
+        className="mt-2 block w-full rounded-sm border border-navy-800/15 bg-cream-50 px-4 py-3 text-base text-navy-800 focus:border-brass-400 focus:outline-none"
       />
     </div>
   );

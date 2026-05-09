@@ -101,6 +101,7 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
         name={market.name}
         description={market.intro}
         region="FL"
+        county={market.county}
         latitude={market.latitude}
         longitude={market.longitude}
       />

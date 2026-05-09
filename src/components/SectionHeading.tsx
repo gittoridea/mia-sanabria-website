@@ -22,7 +22,7 @@ export function SectionHeading({
         </div>
       ) : null}
       <h2
-        className={`font-display text-3xl sm:text-4xl ${inverted ? "text-cream-50" : "text-navy-800"} ${center ? "mx-auto max-w-3xl" : "max-w-3xl"}`}
+        className={`font-display text-3xl sm:text-4xl [text-wrap:balance] ${inverted ? "text-cream-50" : "text-navy-800"} ${center ? "mx-auto max-w-3xl" : "max-w-3xl"}`}
       >
         {heading}
       </h2>

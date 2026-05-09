@@ -45,6 +45,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(5.25rem + env(safe-area-inset-top));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -120,8 +121,11 @@ iframe:focus-visible,
   font-size: 0.9rem;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   inset-block-start: 1rem;
+  outline: 2px solid var(--color-brass-400);
+  outline-offset: 3px;
 }
 
 .luxury-divider {

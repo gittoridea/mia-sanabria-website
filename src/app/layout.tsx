@@ -37,11 +37,12 @@ export const metadata: Metadata = {
   authors: [{ name: SITE.fullName }],
   keywords: [
     "Southeast Florida real estate",
-    "Fort Lauderdale realtor",
-    "Boca Raton homes",
-    "Delray Beach realtor",
-    "waterfront homes",
-    "REALTOR",
+    "Fort Lauderdale REALTOR®",
+    "Boca Raton waterfront homes",
+    "Delray Beach REALTOR®",
+    "luxury waterfront homes",
+    "Eastern Fort Lauderdale luxury",
+    "REALTOR®",
     "LPT Realty",
   ],
   openGraph: {

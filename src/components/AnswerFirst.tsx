@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useId } from "react";
 import { ArrowRight } from "lucide-react";
 import type { MarketSlug } from "@/lib/mia";
 import { getMarket } from "@/lib/markets";
+import { FaqSchema } from "./schema/FaqSchema";
 
 export function AnswerFirst({
   question,
@@ -9,6 +11,7 @@ export function AnswerFirst({
   relatedMarkets = [],
   cta,
   background = "cream",
+  emitFaqSchema = true,
 }: {
   /** A natural-language question that an LLM-driven search engine might ask. */
   question: string;
@@ -19,7 +22,10 @@ export function AnswerFirst({
   /** Optional small CTA at the section close. */
   cta?: { href: string; label: string };
   background?: "cream" | "cream-tint";
+  /** When true, emit a FAQPage JSON-LD entity for the Q+A so AEO citations resolve. */
+  emitFaqSchema?: boolean;
 }) {
+  const headingId = useId();
   const marketLinks = relatedMarkets
     .map((slug) => getMarket(slug))
     .filter((m): m is NonNullable<ReturnType<typeof getMarket>> => Boolean(m));
@@ -28,22 +34,24 @@ export function AnswerFirst({
     <section
       className={
         background === "cream-tint"
-          ? "bg-cream-100 py-14 lg:py-20"
-          : "bg-cream-50 py-14 lg:py-20"
+          ? "bg-cream-100 py-16 lg:py-20"
+          : "bg-cream-50 py-16 lg:py-20"
       }
-      aria-labelledby="answer-first-heading"
+      aria-labelledby={headingId}
     >
       <div className="mx-auto max-w-3xl px-4 lg:px-8">
         <div className="font-display text-xs uppercase tracking-[0.3em] text-brass-700">
           The Practice
         </div>
         <h2
-          id="answer-first-heading"
-          className="mt-3 font-display text-2xl text-navy-800 sm:text-3xl"
+          id={headingId}
+          className="mt-3 font-display text-2xl text-navy-800 sm:text-3xl [text-wrap:balance]"
         >
           {question}
         </h2>
-        <p className="mt-5 text-[17px] leading-relaxed text-navy-800/85">{answer}</p>
+        <p className="mt-5 text-[17px] leading-relaxed text-navy-800/85 [text-wrap:pretty]">
+          {answer}
+        </p>
         {marketLinks.length > 0 ? (
           <p className="mt-5 text-sm text-navy-800/75">
             Related markets:{" "}
@@ -72,6 +80,7 @@ export function AnswerFirst({
           </p>
         ) : null}
       </div>
+      {emitFaqSchema ? <FaqSchema items={[{ question, answer }]} /> : null}
     </section>
   );
 }

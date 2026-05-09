@@ -40,11 +40,17 @@ export function Hero({
             sizes="100vw"
             className="object-cover object-center"
           />
-          {/* Cycle-5 principal-authorized stronger overlay for H1 contrast: from 15/35/15 to 35/65/35.
-              Brand-Contract update — overrides cycle-2 "brighter feel" directive per cycle-5 mission §3. */}
+          {/* Cycle-5 base overlay (preserved): 35/65/35 vertical band.
+              Cycle-6 contrast hardening (Lane 7 F1+F2): adds a content-band darkening
+              layer focused on the text rendering area so eyebrow + H1 + sub clear AA
+              regardless of source-image brightness, without touching the cycle-5 H1 shadow stack. */}
           <div
             aria-hidden
             className="absolute inset-0 bg-gradient-to-b from-navy-900/35 via-navy-900/65 to-navy-900/35"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-x-0 bottom-0 top-1/4 bg-gradient-to-b from-transparent via-navy-900/35 to-navy-900/55"
           />
         </>
       ) : null}

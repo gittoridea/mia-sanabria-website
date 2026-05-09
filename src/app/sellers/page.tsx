@@ -112,7 +112,7 @@ export default function SellersPage() {
         eyebrow="For Sellers"
         heading="Elevating your property's global presence."
         sub="Pricing, presentation, and considered introductions — sequenced by Mia personally for residences across Mia's core Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach markets."
-        ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
+        ctaPrimary={{ href: "/contact/?intent=seller", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/valuation/", label: "Request Valuation" }}
         background="image"
         imageSrc="/services/sellers.jpg"

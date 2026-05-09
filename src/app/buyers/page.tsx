@@ -112,7 +112,7 @@ export default function BuyersPage() {
         eyebrow="For Buyers"
         heading="Private buyer representation across Southeast Florida."
         sub="Mia represents buyers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach with a deliberately small client list — every brief written before the first showing, every closing attended in person."
-        ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
+        ctaPrimary={{ href: "/contact/?intent=buyer", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
         background="image"
         imageSrc="/services/buyers.jpg"
@@ -123,7 +123,7 @@ export default function BuyersPage() {
         question="How should buyers approach luxury and waterfront homes in Eastern Fort Lauderdale?"
         answer="A successful luxury or waterfront acquisition in Eastern Fort Lauderdale begins with a precise brief, not a public IDX scroll. Decisions turn on dock specifics — length, water depth, fixed-bridge clearance, and the route to the inlet — plus architectural era, lot orientation, hurricane shutters, flood elevation, and HOA or country-club access. Curated showings (three to five carefully matched residences, not thirty) outperform large-list tours every time. Mia activates her brokerage and ownership relationships across Las Olas Isles, Harbor Beach, Rio Vista, and the in-town clusters to surface relevant residences — including informally available opportunities those relationships uncover. Title, financing, and inspection partners stay matched to the residence's price tier."
         relatedMarkets={["las-olas-isles", "harbor-beach", "rio-vista"]}
-        cta={{ href: "/contact/", label: "Begin a buyer brief" }}
+        cta={{ href: "/contact/?intent=buyer", label: "Begin a buyer brief" }}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
