@@ -369,6 +369,114 @@ async function runAuditImages(): Promise<CheckResult[]> {
     details: missingHubHero.length ? { missingHubHero } : undefined,
   });
 
+  // ───────────────────────────────────────────────────────────────────────
+  // Cycle Addendum 2026-05-09 — Market Image Recovery: per-market explicit
+  // checks. The "audit:images passes but principal sees missing images on
+  // /markets/lighthouse-point/, /markets/coral-ridge/, /markets/palm-beach/"
+  // pattern proved that a generic-image audit doesn't catch the principal's
+  // actual user-visible pain. Add explicit per-market checks so this can't
+  // recur silently.
+  // ───────────────────────────────────────────────────────────────────────
+
+  // (a) Every market's heroImage path appears in BOTH the markets index
+  //     /markets/index.html (as a card image) AND the corresponding market
+  //     page /markets/<slug>/index.html (as a hero image).
+  const marketsIndexHtml = await readFile(join(OUT_DIR, "markets", "index.html"), "utf-8").catch(() => "");
+  const cardImagePathsOnIndex = new Set<string>(
+    [...marketsIndexHtml.matchAll(/src="(\/markets\/[a-z-]+\.jpg)"/g)].map((m) => m[1] ?? ""),
+  );
+  const missingCardOnIndex: string[] = [];
+  const missingHeroOnPage: string[] = [];
+  for (const slug of marketSlugs) {
+    const expectedPath = `/markets/${slug}.jpg`;
+    if (!cardImagePathsOnIndex.has(expectedPath)) {
+      missingCardOnIndex.push(slug);
+    }
+    const pageHtml = await readFile(join(OUT_DIR, "markets", slug, "index.html"), "utf-8").catch(() => "");
+    if (!pageHtml.includes(`src="${expectedPath}"`)) {
+      missingHeroOnPage.push(slug);
+    }
+  }
+  results.push({
+    id: "images.everyMarketCardImagePresent",
+    category: "Featured Markets",
+    description: "Every market in MARKETS renders <img src=/markets/<slug>.jpg> on /markets/ index",
+    status: missingCardOnIndex.length === 0 ? "PASS" : "FAIL",
+    evidence:
+      missingCardOnIndex.length === 0
+        ? `all ${marketSlugs.length} markets have card images on /markets/`
+        : `${missingCardOnIndex.length} markets missing card image: ${missingCardOnIndex.join(", ")}`,
+    details: missingCardOnIndex.length ? { missingCardOnIndex } : undefined,
+  });
+  results.push({
+    id: "images.everyMarketPageHeroImagePresent",
+    category: "Market Pages",
+    description: "Every market page /markets/<slug>/ renders <img src=/markets/<slug>.jpg> in its hero",
+    status: missingHeroOnPage.length === 0 ? "PASS" : "FAIL",
+    evidence:
+      missingHeroOnPage.length === 0
+        ? `all ${marketSlugs.length} market pages have a hero image`
+        : `${missingHeroOnPage.length} market pages missing hero image: ${missingHeroOnPage.join(", ")}`,
+    details: missingHeroOnPage.length ? { missingHeroOnPage } : undefined,
+  });
+
+  // (b) Every market has an OG image at /og-markets/<slug>.jpg AND that image is referenced
+  //     on the market's page in og:image meta.
+  const missingOgFile: string[] = [];
+  const missingOgOnPage: string[] = [];
+  for (const slug of marketSlugs) {
+    const ogFile = join(PUBLIC_DIR, "og-markets", `${slug}.jpg`);
+    if (!(await fileExists(ogFile))) {
+      missingOgFile.push(slug);
+    }
+    const pageHtml = await readFile(join(OUT_DIR, "markets", slug, "index.html"), "utf-8").catch(() => "");
+    const expectedOg = `/og-markets/${slug}.jpg`;
+    if (!pageHtml.includes(expectedOg)) {
+      missingOgOnPage.push(slug);
+    }
+  }
+  results.push({
+    id: "images.everyMarketOgImageExists",
+    category: "OG Images",
+    description: "Every market has an OG image at /og-markets/<slug>.jpg AND its page emits og:image referencing it",
+    status: missingOgFile.length === 0 && missingOgOnPage.length === 0 ? "PASS" : "FAIL",
+    evidence:
+      missingOgFile.length === 0 && missingOgOnPage.length === 0
+        ? `all ${marketSlugs.length} markets have OG image asset + reference`
+        : `${missingOgFile.length} missing files (${missingOgFile.join(", ") || "none"}); ${missingOgOnPage.length} missing references (${missingOgOnPage.join(", ") || "none"})`,
+    details:
+      missingOgFile.length || missingOgOnPage.length ? { missingOgFile, missingOgOnPage } : undefined,
+  });
+
+  // (c) Explicit per-market checks for Lighthouse Point, Coral Ridge, Palm Beach
+  //     (the principal-reported defects). Redundant with (a)+(b) on a green
+  //     build but the explicit naming makes regression on these specific
+  //     surfaces impossible to miss.
+  const principalReportedMarkets = ["lighthouse-point", "coral-ridge", "palm-beach"];
+  type ExplicitCheck = { slug: string; cardOnIndex: boolean; heroOnPage: boolean; ogFile: boolean; ogOnPage: boolean };
+  const explicitChecks: ExplicitCheck[] = [];
+  for (const slug of principalReportedMarkets) {
+    const expectedCardPath = `/markets/${slug}.jpg`;
+    const cardOnIndex = cardImagePathsOnIndex.has(expectedCardPath);
+    const pageHtml = await readFile(join(OUT_DIR, "markets", slug, "index.html"), "utf-8").catch(() => "");
+    const heroOnPage = pageHtml.includes(`src="${expectedCardPath}"`);
+    const ogFile = await fileExists(join(PUBLIC_DIR, "og-markets", `${slug}.jpg`));
+    const ogOnPage = pageHtml.includes(`/og-markets/${slug}.jpg`);
+    explicitChecks.push({ slug, cardOnIndex, heroOnPage, ogFile, ogOnPage });
+  }
+  const principalFails = explicitChecks.filter((c) => !(c.cardOnIndex && c.heroOnPage && c.ogFile && c.ogOnPage));
+  results.push({
+    id: "images.principalReportedMarkets",
+    category: "Principal-Reported Markets (Cycle 9 Addendum)",
+    description: "Lighthouse Point, Coral Ridge, Palm Beach — card image on /markets/, hero image on page, OG file + OG reference",
+    status: principalFails.length === 0 ? "PASS" : "FAIL",
+    evidence:
+      principalFails.length === 0
+        ? `all 3 principal-reported markets PASS — Lighthouse Point, Coral Ridge, Palm Beach`
+        : `${principalFails.length} principal-reported markets FAIL: ${principalFails.map((c) => c.slug).join(", ")}`,
+    details: { explicitChecks },
+  });
+
   // (3) Public email consistency — exactly one canonical email should appear in rendered HTML across pages.
   // Collect all unique <name>@<domain> matches; flag if >1 distinct address rendered publicly (excluding RFC-bait).
   const emailSet = new Set<string>();

@@ -21,6 +21,14 @@ export type Market = {
   readonly latitude: number;
   readonly longitude: number;
   readonly heroImage: string;
+  /**
+   * Optional Tailwind `object-position` utility (e.g. "object-right", "object-bottom",
+   * "object-[60%_50%]") for the MarketCard image at aspect-[4/5] crop. Defaults to
+   * "object-center". Use only when the source image's most distinctive content
+   * (lighthouse + sunset estate, mid-century home under canopy) lives off-center
+   * and needs to be pulled into the visible portrait crop. Cycle Addendum 2026-05-09.
+   */
+  readonly cardObjectPosition?: string;
   /** One concrete neighborhood/landmark fact used for AEO differentiation in FAQ. */
   readonly localContext: string;
   /** County the market sits in — used in schema and copy. */
@@ -141,6 +149,14 @@ export const MARKETS: ReadonlyArray<Market> = [
     latitude: 26.1638,
     longitude: -80.1136,
     heroImage: "/markets/coral-ridge.jpg",
+    // Source image: mid-century modern home centered in the lower portion of the
+    // landscape frame, with heavy oak canopy filling the upper portion. At
+    // aspect-[4/5] portrait crop with object-center, the canopy dominates and
+    // the cream house sinks to the lower edge under the text-region gradient.
+    // Pulling the position to the bottom keeps the bright cream architecture
+    // up in the visible upper-card region where the new gradient lets the
+    // image breathe.
+    cardObjectPosition: "object-bottom",
     localContext:
       "Coral Ridge sits north of Sunrise Boulevard between the Intracoastal and Federal Highway, anchored by the Coral Ridge Country Club. The waterfront streets along the finger isles trade differently from the interior blocks — a brief that confuses the two will price wrong.",
     county: "Broward County",
@@ -352,6 +368,11 @@ export const MARKETS: ReadonlyArray<Market> = [
     latitude: 26.7056,
     longitude: -80.0364,
     heroImage: "/markets/palm-beach.jpg",
+    // Source image: Mediterranean estate on the left with palms + pool + ocean
+    // on the right. At portrait crop the estate detail is lost. Position
+    // slightly to the right pulls in the most-luxurious element (palms over
+    // the pool with ocean horizon) without dropping the architecture entirely.
+    cardObjectPosition: "object-[65%_50%]",
     localContext:
       "The Town of Palm Beach is a barrier island with strict building review, established estate sections in the North End and South End, and the Worth Avenue / Mid-Town corridor in between. Off-island, the Palm Beach area extends through West Palm Beach and the Intracoastal communities — buyer briefs need to specify which side of the bridges.",
     county: "Palm Beach County",
@@ -493,6 +514,12 @@ export const MARKETS: ReadonlyArray<Market> = [
     latitude: 26.2756,
     longitude: -80.0875,
     heroImage: "/markets/lighthouse-point.jpg",
+    // Source image: white modern estate on the left, water in the center, the
+    // namesake lighthouse + sunset sky on the right. The lighthouse is what
+    // makes this image distinctive vs the other waterfront markets and must
+    // appear in the card crop. object-right pulls the lighthouse + sunset
+    // into the portrait viewport while preserving partial estate context.
+    cardObjectPosition: "object-right",
     localContext:
       "Lighthouse Point is a small Broward city north of Pompano Beach with a network of finger isles and ocean-access canals. Property evaluation hinges on the canal — bridge clearances, water depth, seawall condition, and dockage capacity vary block by block and have a larger pricing impact than square footage.",
     county: "Broward County",

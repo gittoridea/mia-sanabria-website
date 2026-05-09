@@ -1,8 +1,8 @@
 # Audit Images Report
 
-**Generated:** 2026-05-09T22:47:10.353Z
+**Generated:** 2026-05-09T23:53:58.765Z
 
-**Summary:** 10 PASS · 0 WARN · 0 FAIL · 0 SKIP
+**Summary:** 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 ## Results by category
 
@@ -43,12 +43,31 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `images.homepageFeaturedCards` | ✅ | Homepage Featured Markets section renders an <img> for each of the 6 featured market cards | all 6 featured cards render <img src="/markets/SLUG.jpg"> |
+| `images.everyMarketCardImagePresent` | ✅ | Every market in MARKETS renders <img src=/markets/<slug>.jpg> on /markets/ index | all 13 markets have card images on /markets/ |
 
 ### Hub Pages
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `images.hubPageHeroImage` | ✅ | /markets/ and /about/ hero sections render an <img> (image-mode Hero) | 2 hub pages — all render image-mode hero |
+
+### Market Pages
+
+| ID | Status | Description | Evidence |
+|---|:-:|---|---|
+| `images.everyMarketPageHeroImagePresent` | ✅ | Every market page /markets/<slug>/ renders <img src=/markets/<slug>.jpg> in its hero | all 13 market pages have a hero image |
+
+### OG Images
+
+| ID | Status | Description | Evidence |
+|---|:-:|---|---|
+| `images.everyMarketOgImageExists` | ✅ | Every market has an OG image at /og-markets/<slug>.jpg AND its page emits og:image referencing it | all 13 markets have OG image asset + reference |
+
+### Principal-Reported Markets (Cycle 9 Addendum)
+
+| ID | Status | Description | Evidence |
+|---|:-:|---|---|
+| `images.principalReportedMarkets` | ✅ | Lighthouse Point, Coral Ridge, Palm Beach — card image on /markets/, hero image on page, OG file + OG reference | all 3 principal-reported markets PASS — Lighthouse Point, Coral Ridge, Palm Beach |
 
 ### Email Consistency
 

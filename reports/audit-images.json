@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-09T22:47:10.353Z",
+  "timestamp": "2026-05-09T23:53:58.765Z",
   "counts": {
-    "pass": 10,
+    "pass": 14,
     "warn": 0,
     "fail": 0,
     "skip": 0
@@ -69,6 +69,59 @@
       "description": "/markets/ and /about/ hero sections render an <img> (image-mode Hero)",
       "status": "PASS",
       "evidence": "2 hub pages — all render image-mode hero"
+    },
+    {
+      "id": "images.everyMarketCardImagePresent",
+      "category": "Featured Markets",
+      "description": "Every market in MARKETS renders <img src=/markets/<slug>.jpg> on /markets/ index",
+      "status": "PASS",
+      "evidence": "all 13 markets have card images on /markets/"
+    },
+    {
+      "id": "images.everyMarketPageHeroImagePresent",
+      "category": "Market Pages",
+      "description": "Every market page /markets/<slug>/ renders <img src=/markets/<slug>.jpg> in its hero",
+      "status": "PASS",
+      "evidence": "all 13 market pages have a hero image"
+    },
+    {
+      "id": "images.everyMarketOgImageExists",
+      "category": "OG Images",
+      "description": "Every market has an OG image at /og-markets/<slug>.jpg AND its page emits og:image referencing it",
+      "status": "PASS",
+      "evidence": "all 13 markets have OG image asset + reference"
+    },
+    {
+      "id": "images.principalReportedMarkets",
+      "category": "Principal-Reported Markets (Cycle 9 Addendum)",
+      "description": "Lighthouse Point, Coral Ridge, Palm Beach — card image on /markets/, hero image on page, OG file + OG reference",
+      "status": "PASS",
+      "evidence": "all 3 principal-reported markets PASS — Lighthouse Point, Coral Ridge, Palm Beach",
+      "details": {
+        "explicitChecks": [
+          {
+            "slug": "lighthouse-point",
+            "cardOnIndex": true,
+            "heroOnPage": true,
+            "ogFile": true,
+            "ogOnPage": true
+          },
+          {
+            "slug": "coral-ridge",
+            "cardOnIndex": true,
+            "heroOnPage": true,
+            "ogFile": true,
+            "ogOnPage": true
+          },
+          {
+            "slug": "palm-beach",
+            "cardOnIndex": true,
+            "heroOnPage": true,
+            "ogFile": true,
+            "ogOnPage": true
+          }
+        ]
+      }
     },
     {
       "id": "images.publicEmailConsistency",
