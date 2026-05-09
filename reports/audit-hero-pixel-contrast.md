@@ -1,12 +1,12 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-09T16:54:19.954Z
-**Mode:** live
-**Mutation:** false
-**Base:** https://miasanabriarealtor.trueidea.com
+**Generated:** 2026-05-09T22:26:39.443Z
+**Mode:** local
+**Mutation:** true
+**Base:** http://127.0.0.1:4173
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
 
-**Summary:** 0 PASS · 95 WARN · 0 FAIL · 0 SKIP
+**Summary:** 1 PASS · 94 WARN · 0 FAIL · 0 SKIP
 
 | Route | Viewport | Glyph contrast | Edge contrast | Glyph samples | Edge samples | Status | Note |
 |---|---|---:|---:|---:|---:|:-:|---|
@@ -52,7 +52,7 @@
 | `/markets/las-olas-isles/` | 1440x900 | 0.00 | 0.00 | 0 | 0 | ⚠️ WARN | low samples (glyph=0 edge=0) |
 | `/markets/sea-ranch-lakes/` | 320x568 | 0.00 | 0.00 | 0 | 0 | ⚠️ WARN | low samples (glyph=0 edge=0) |
 | `/markets/sea-ranch-lakes/` | 375x812 | 0.00 | 0.00 | 0 | 0 | ⚠️ WARN | low samples (glyph=0 edge=0) |
-| `/markets/sea-ranch-lakes/` | 768x1024 | 0.00 | 0.00 | 0 | 0 | ⚠️ WARN | low samples (glyph=0 edge=0) |
+| `/markets/sea-ranch-lakes/` | 768x1024 | 10.82 | 6.24 | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 1280x800 | 0.00 | 0.00 | 0 | 0 | ⚠️ WARN | low samples (glyph=0 edge=0) |
 | `/markets/sea-ranch-lakes/` | 1440x900 | 0.00 | 0.00 | 0 | 0 | ⚠️ WARN | low samples (glyph=0 edge=0) |
 | `/markets/seven-isles/` | 320x568 | 0.00 | 0.00 | 0 | 0 | ⚠️ WARN | low samples (glyph=0 edge=0) |

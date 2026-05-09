@@ -1,9 +1,9 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-09T16:54:19.954Z",
-  "mode": "live",
-  "mutation": false,
-  "base": "https://miasanabriarealtor.trueidea.com",
+  "generated": "2026-05-09T22:26:39.443Z",
+  "mode": "local",
+  "mutation": true,
+  "base": "http://127.0.0.1:4173",
   "thresholds": {
     "glyph": 3,
     "edge": 2.5
@@ -16,8 +16,8 @@
     "1440x900"
   ],
   "counts": {
-    "pass": 0,
-    "warn": 95,
+    "pass": 1,
+    "warn": 94,
     "fail": 0,
     "skip": 0
   },
@@ -445,12 +445,11 @@
     {
       "route": "/markets/sea-ranch-lakes/",
       "viewport": "768x1024",
-      "meanGlyphContrast": 0,
-      "meanEdgeContrast": 0,
-      "glyphSamples": 0,
-      "edgeSamples": 0,
-      "status": "WARN",
-      "note": "low samples (glyph=0 edge=0)"
+      "meanGlyphContrast": 10.82,
+      "meanEdgeContrast": 6.24,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
     },
     {
       "route": "/markets/sea-ranch-lakes/",

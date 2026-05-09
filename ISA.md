@@ -2,13 +2,13 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: state-probe
-progress: 330/350
+phase: observe
+progress: 330/375
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-09T14:42:00Z
+updated: 2026-05-09T21:40:00Z
 algorithm_version: 6.4.0
-active_mission: 2026-05-09-cycle-8-process-corrected-visual-fix
+active_mission: 2026-05-09-cycle-9-acceptance-driven-visual-completion
 ---
 
 # Mia Sanabria Realtor Site — ISA
@@ -1273,3 +1273,88 @@ Anti-criteria preserved (verified by absence):
 - No legal copy rewrite — `/privacy/`, `/terms/`, `/dmca/`, `/accessibility/` pages unchanged at content level.
 - No statutory-binary downgraded — Lane 9 F1 (license), F2 (REALTOR® descriptive), F4 (combined logo), F6 (mailto), F7 (TCPA) all stay principal-decision-gated.
 - No regression of cycle-5 fixes — luxury/waterfront tagline preserved (regression curl), hero H1 shadow stack preserved (visual diff), AEO answer-first blocks preserved (5 pages still emit AnswerFirst with the same Q+A copy).
+
+---
+
+## Mission 2026-05-09 cycle-9 — Acceptance-Driven Visual Completion
+
+**Authority:** `/effort max` (operator explicit override). Operating tier E5 (xhigh GPT-5.5 + Spark + Cato; max ≡ xhigh per Phase 1 doc).
+**Hard rule:** GPT-5.5 live acceptance FAIL = cycle FAIL. No softening.
+
+### Cycle 9 ISCs (added to project surface)
+
+- [x] ISC-327: Cycle 8 broken-pipe state recovered cleanly (no lost commits / no lost docs).
+  *Evidence:* state-probe — already passed pre-BUILD. `docs/CYCLE_9_RECOVERY_AND_INTEGRITY_CHECK.md` written. `git status --short` empty; HEAD `ae43d97` == origin/main; all 3 Cycle 8 docs present (4006 + 18483 + 7030 bytes); live ETag `dieaqofb9ngg2n9s` matches Cycle 8 deploy.
+- [x] ISC-328: GPT-5.5 max-effort capability documented honestly (max rejected; xhigh used).
+  *Evidence:* state-probe — already passed pre-BUILD. `docs/CYCLE_9_MODEL_CAPABILITY_AND_USAGE.md` written. Quoted codex-cli error: `unknown variant 'max', expected one of 'none', 'minimal', 'low', 'medium', 'high', 'xhigh'`. Operating config pinned to gpt-5.5/xhigh.
+- [x] ISC-329: BEFORE live screenshots captured at 5 viewports × 15 routes (75 PNGs).
+  *Evidence:* state-probe — already passed pre-BUILD. `/tmp/mia-cycle9-before/` contains 75 PNGs (43MB total) covering / · /about/ · /markets/ · /buyers/ · /sellers/ · /valuation/ · /contact/ · /markets/{fort-lauderdale,las-olas-isles,harbor-beach,boca-raton,delray-beach,victoria-park,sea-ranch-lakes,seven-isles}/ at 320×568, 375×812, 768×1024, 1280×800, 1440×900.
+- [ ] ISC-330: GPT-5.5 xhigh layout decision gate fires with full Hero.tsx + globals.css + failure description.
+  *Evidence target:* `docs/CYCLE_9_GPT55_MAX_HERO_LAYOUT_DECISION.md` exists with model attestation + chosen approach + copy-paste-ready spec.
+- [ ] ISC-331: Codex Spark Team A (Hero layout impl spec) output captured.
+  *Evidence target:* `docs/codex-spark-audits/cycle-9/team-A-hero-layout-impl.md`.
+- [ ] ISC-332: Codex Spark Team B (live audit engineering) output captured.
+  *Evidence target:* `docs/codex-spark-audits/cycle-9/team-B-live-audit-engineering.md`.
+- [ ] ISC-333: Codex Spark Team C (screenshot verdict matrix) output captured.
+  *Evidence target:* `docs/codex-spark-audits/cycle-9/team-C-verdict-matrix.md`.
+- [ ] ISC-334: Codex Spark Team D (brand/UX guardrail) output captured.
+  *Evidence target:* `docs/codex-spark-audits/cycle-9/team-D-brand-ux-guardrail.md`.
+- [ ] ISC-335: Anti: H1 right-edge clipping at 320×568 on `/`, `/buyers/`, `/markets/harbor-beach/` (any long-text image hero).
+- [ ] ISC-336: Anti: H1 right-edge clipping at 375×812 on `/`, `/buyers/`, `/markets/harbor-beach/`.
+- [ ] ISC-337: H1 wraps without horizontal-scroll at any breakpoint 320 / 375 / 768 / 1280 / 1440.
+- [ ] ISC-338: Hero CTA `[data-hero-cta="primary"]` visible above-the-fold at 1280×800 on `/`, `/about/`, `/markets/`, `/buyers/`, `/sellers/`, `/valuation/`, `/contact/`.
+- [ ] ISC-339: Hero CTA `[data-hero-cta="primary"]` visible above-the-fold at 1440×900 on the seven routes above.
+- [ ] ISC-340: Hero total height ≤ viewport-height − header-height − 24px buffer at 1280×800 for image-mode heroes.
+- [ ] ISC-341: `audit:hero-contrast --live` returns ≥1 PASS row (not all-WARN). Live audit's `auditMode=hide` injection works against deployed URL or an equivalent mechanism that achieves the H1-hidden second capture.
+- [ ] ISC-342: Anti: `audit:hero-contrast --live` silently passes when 0 glyph samples (a no-signal run must NOT be PASS).
+- [ ] ISC-343: `audit:hero-contrast --mutation` still FAILs ≥20 rows after Cycle 9 changes (sentinel sensitivity preserved).
+- [ ] ISC-344: Per-route × per-viewport BEFORE verdict matrix exists, scoring H1-clipping / CTA-fold / contrast / quality.
+  *Evidence target:* `docs/CYCLE_9_VISUAL_FAILURE_REPRODUCTION.md`.
+- [ ] ISC-345: Per-route × per-viewport LOCAL-AFTER verdict matrix exists with the same scoring axes.
+  *Evidence target:* `docs/CYCLE_9_LOCAL_VISUAL_VERDICT_MATRIX.md`.
+- [ ] ISC-346: Per-route × per-viewport LIVE-AFTER verdict matrix exists with the same scoring axes.
+  *Evidence target:* `docs/CYCLE_9_LIVE_VISUAL_VERDICT_MATRIX.md`.
+- [ ] ISC-347: GPT-5.5 xhigh predeploy acceptance verdict captured (PASS / PASS-WITH-MINOR-CONCERNS / FAIL).
+  *Evidence target:* `docs/CYCLE_9_GPT55_MAX_PREDEPLOY_ACCEPTANCE.md`.
+- [ ] ISC-348: GPT-5.5 xhigh live acceptance verdict captured (PASS / PASS-WITH-MINOR-CONCERNS / FAIL).
+  *Evidence target:* `docs/CYCLE_9_GPT55_MAX_LIVE_ACCEPTANCE.md`.
+- [ ] ISC-349: Anti: cycle-9 closeout claims success when GPT-5.5 live verdict is FAIL.
+- [ ] ISC-350: WebsiteProductionLoop skill v0.3.0 → v0.3.1 with Cycle 9 lessons (layout-acceptance separated from contrast-acceptance; CTA-above-fold gate; every visual sentinel ships local + live + mutation + verdict modes).
+  *Evidence target:* `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` version 0.3.1; `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.3.1 entry.
+- [ ] ISC-351: Cycle-9 closeout doc complete (≥18 sections per skill canonical).
+  *Evidence target:* `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_9_VISUAL_ACCEPTANCE_COMPLETION_2026-05-09.md`.
+
+### Cycle 9 Features
+
+| F | Name | Satisfies | Depends_on | Parallelizable |
+|---|---|---|---|---|
+| F-9.1 | Cycle 9 recovery + model probe | ISC-327, ISC-328 | — | yes |
+| F-9.2 | BEFORE screenshot capture + reproduction matrix | ISC-329, ISC-344 | F-9.1 | yes (parallel chrome processes) |
+| F-9.3 | GPT-5.5 layout decision gate | ISC-330 | F-9.2 | no (sequential gate) |
+| F-9.4 | Codex Spark teams A/B/C/D (≤2 concurrent) | ISC-331, ISC-332, ISC-333, ISC-334 | F-9.3 | yes within concurrency cap |
+| F-9.5 | Hero layout fix implementation | ISC-335..ISC-340 | F-9.3, F-9.4 (Team A) | no (single Hero.tsx file) |
+| F-9.6 | Live audit script fix (--live mode) | ISC-341, ISC-342, ISC-343 | F-9.4 (Team B) | yes (separate file from F-9.5) |
+| F-9.7 | Local verification + LOCAL-AFTER matrix | ISC-345 | F-9.5, F-9.6 | yes (parallel chrome) |
+| F-9.8 | GPT-5.5 predeploy acceptance | ISC-347 | F-9.7 | no |
+| F-9.9 | Deploy + live verify + LIVE-AFTER matrix | ISC-346 | F-9.8 PASS | partial (deploy serial, screenshots parallel) |
+| F-9.10 | GPT-5.5 live acceptance | ISC-348, ISC-349 | F-9.9 | no |
+| F-9.11 | Skill v0.3.0 → v0.3.1 process upgrade | ISC-350 | F-9.10 | yes (doc-only) |
+| F-9.12 | Cycle 9 closeout + next-session trigger | ISC-351 | F-9.11 | yes (doc-only) |
+
+### Cycle 9 Out of Scope (anti-vision)
+
+- DNS swap / .com cutover / Cloudflare changes
+- GHL form / calendar / consent-mechanism wiring beyond Cycle 8 stubs
+- Mia voice retunes (Card 3 logic protected; principal-decision territory)
+- License # / designations / Spanish hreflang / TCPA mechanics
+- New colors, fonts, glassmorphism, gradient borders
+- Lead magnet, MLS / IDX deepening, Decap / Payload migration
+- Re-running 9-lane design level-up audit (cycle 6 completed; Cycle 9 narrows to acceptance-driven)
+- audit:completeness 2 pre-existing WARN cleanup (queued for Scope C of cycle 10)
+
+
+## Decisions (continued — 2026-05-09 cycle-9 acceptance-driven)
+
+- **2026-05-09 specialist-prereq probe outcomes:** Forge ✅ available (`/home/torrey/.local/bin/codex` 0.129.0 with oauth `~/.codex/auth.json`). Cato ✅ available (same binary, `--sandbox read-only` confirmed). Perplexity ✅ available via `OPENROUTER_API_KEY`. Anvil ❌ unavailable (`kimi`/`anvil` binary missing; not required for Cycle 9). Decision: bind Forge + Cato + Spark; tombstone Anvil dependency.
+- **2026-05-09 GPT-5.5 max-effort tombstone:** `model_reasoning_effort=max` is rejected by codex-cli 0.129.0 (`unknown variant max`). Operating tier set to `gpt-5.5` with `model_reasoning_effort=xhigh` (the highest accepted variant). All Cycle 9 GPT-5.5 strategic gates use xhigh. Treat "max" and "xhigh" as synonyms in this cycle; future cycles may revisit if a CLI update introduces `max`.
+- **2026-05-09 STATE PROBE:** 3/25 cycle-9 ISCs already-passing pre-BUILD: ISC-327 (recovery), ISC-328 (model probe), ISC-329 (BEFORE screenshots). Remaining 22 ISCs need EXECUTE phase. `## Decisions` empty-section invariant satisfied.

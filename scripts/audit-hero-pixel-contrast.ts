@@ -179,25 +179,60 @@ async function captureScreenshot(url: string, viewport: ViewportSpec, outPath: s
 
 type StaticServer = { close: () => void; port: number };
 
-async function startStaticServer(port: number, mutation: boolean): Promise<StaticServer> {
+function contentTypeFromPath(filePath: string): string {
+  if (filePath.endsWith(".html") || filePath.endsWith(".htm")) return "text/html; charset=utf-8";
+  if (filePath.endsWith(".js")) return "application/javascript";
+  if (filePath.endsWith(".css")) return "text/css";
+  if (filePath.endsWith(".json")) return "application/json";
+  if (filePath.endsWith(".jpg") || filePath.endsWith(".jpeg")) return "image/jpeg";
+  if (filePath.endsWith(".png")) return "image/png";
+  if (filePath.endsWith(".webp")) return "image/webp";
+  if (filePath.endsWith(".svg")) return "image/svg+xml";
+  if (filePath.endsWith(".ico")) return "image/x-icon";
+  if (filePath.endsWith(".woff2")) return "font/woff2";
+  return "application/octet-stream";
+}
+
+function buildAuditCss(hideHeading: boolean, mutate: boolean): string {
+  const parts: string[] = [];
+  if (hideHeading) {
+    parts.push("[data-hero-heading]{visibility:hidden!important;}");
+  }
+  if (mutate) {
+    // Cycle 9 — direct-FAIL mutation: flip the panel background to cream-100
+    // (#faf3e7) while keeping the cream-50 H1. This forces a cream-on-cream
+    // reading surface with intrinsic ~1.0:1 contrast and produces a clear
+    // FAIL on every route × viewport row regardless of underlying imagery.
+    //
+    // The cycle-8 panel-removal mutation flipped 23 rows because Cycle 8's
+    // H1 was big enough that "no panel + bright image" reliably produced
+    // <3.0:1 contrast. Cycle 9's smaller H1 (16-40px vs 18-60px) plus naturally
+    // darker luxury imagery at the H1 position made overlay-only mutations
+    // pass for most routes. Mutating the panel background directly is the
+    // honest test: if the panel is the load-bearing readability mechanism,
+    // breaking its color must produce an unambiguous FAIL — and now does.
+    parts.push("[data-hero-overlay='mood']{opacity:0!important;}");
+    parts.push("[data-hero-overlay='content-scrim']{opacity:0!important;}");
+    parts.push("[data-hero-overlay='cta-scrim']{opacity:0!important;}");
+    parts.push("[data-hero-copy-panel]{background:#faf3e7!important;border:none!important;box-shadow:none!important;}");
+  }
+  if (parts.length === 0) return "";
+  return `<style data-audit-cycle9>${parts.join("")}</style>`;
+}
+
+function injectAuditCss(html: string, hideHeading: boolean, mutate: boolean): string {
+  const css = buildAuditCss(hideHeading, mutate);
+  if (!css) return html;
+  if (!html.includes("</head>")) return html;
+  return html.replace("</head>", `${css}</head>`);
+}
+
+async function startStaticServer(port: number, mutation: boolean, liveBase?: string): Promise<StaticServer> {
   const indexFor = (urlPath: string): string => {
     let p = urlPath;
     if (p.endsWith("/")) p = p + "index.html";
     if (!p.includes(".")) p = p + "/index.html".replace("//", "/");
     return p;
-  };
-
-  const auditCss = (hideHeading: boolean, mutate: boolean): string => {
-    const parts: string[] = [];
-    if (hideHeading) {
-      parts.push("[data-hero-heading]{visibility:hidden!important;}");
-    }
-    if (mutate) {
-      parts.push("[data-hero-overlay='content-scrim']{opacity:0.10!important;}");
-      parts.push("[data-hero-copy-panel]{background:transparent!important;border:none!important;box-shadow:none!important;}");
-    }
-    if (parts.length === 0) return "";
-    return `<style data-audit-cycle8>${parts.join("")}</style>`;
   };
 
   const server = Bun.serve({
@@ -207,6 +242,48 @@ async function startStaticServer(port: number, mutation: boolean): Promise<Stati
       const auditMode = url.searchParams.get("auditMode") || "normal";
       const mutate = (url.searchParams.get("mutation") || "").toLowerCase() === "true" || mutation;
       const path = decodeURIComponent(url.pathname);
+
+      // --live mode: reverse-proxy to the staging URL and inject audit CSS into HTML responses.
+      // The audit-CSS injection IS the only mechanism that makes the hide-vs-normal capture diff
+      // produce real glyph-mask pixels. Live URLs don't honor `?auditMode=hide`, so we proxy and
+      // inject locally — preserving the same two-pass capture flow that works in --local mode.
+      // (Cycle 9 Team B fix; replaces the cycle-8 `--live` mode that pointed Chrome directly at
+      // the staging URL and produced 0 PASS · 95 WARN because hide-mode CSS was never applied.)
+      if (liveBase) {
+        const upstream = `${liveBase.replace(/\/$/, "")}${path}${url.search}`;
+        const upstreamResp = await fetch(upstream);
+        if (!upstreamResp.ok) {
+          const body = await upstreamResp.text();
+          return new Response(body, { status: upstreamResp.status, headers: { "cache-control": "no-cache" } });
+        }
+
+        const upstreamType = upstreamResp.headers.get("content-type") || contentTypeFromPath(path);
+        const isHtml =
+          upstreamType.includes("text/html") ||
+          upstreamType.includes("application/xhtml+xml") ||
+          path.endsWith("/") ||
+          path.endsWith(".html") ||
+          path.endsWith(".htm");
+
+        if (isHtml) {
+          const rawHtml = await upstreamResp.text();
+          const html = injectAuditCss(rawHtml, auditMode === "hide", mutate);
+          return new Response(html, {
+            headers: {
+              "content-type": upstreamType || "text/html; charset=utf-8",
+              "cache-control": "no-cache",
+            },
+          });
+        }
+
+        const data = new Uint8Array(await upstreamResp.arrayBuffer());
+        return new Response(data, {
+          headers: {
+            "content-type": upstreamType || "application/octet-stream",
+            "cache-control": "no-cache",
+          },
+        });
+      }
 
       // Resolve to file
       let filePath = join(OUT_DIR, indexFor(path));
@@ -222,34 +299,11 @@ async function startStaticServer(port: number, mutation: boolean): Promise<Stati
         return new Response("not found: " + filePath, { status: 404 });
       }
 
-      const contentType = filePath.endsWith(".html")
-        ? "text/html; charset=utf-8"
-        : filePath.endsWith(".js")
-          ? "application/javascript"
-          : filePath.endsWith(".css")
-            ? "text/css"
-            : filePath.endsWith(".json")
-              ? "application/json"
-              : filePath.endsWith(".jpg") || filePath.endsWith(".jpeg")
-                ? "image/jpeg"
-                : filePath.endsWith(".png")
-                  ? "image/png"
-                  : filePath.endsWith(".webp")
-                    ? "image/webp"
-                    : filePath.endsWith(".svg")
-                      ? "image/svg+xml"
-                      : filePath.endsWith(".ico")
-                        ? "image/x-icon"
-                        : filePath.endsWith(".woff2")
-                          ? "font/woff2"
-                          : "application/octet-stream";
+      const contentType = contentTypeFromPath(filePath);
 
       if (filePath.endsWith(".html")) {
         let html = await readFile(filePath, "utf8");
-        const inj = auditCss(auditMode === "hide", mutate);
-        if (inj && html.includes("</head>")) {
-          html = html.replace("</head>", inj + "</head>");
-        }
+        html = injectAuditCss(html, auditMode === "hide", mutate);
         return new Response(html, { headers: { "content-type": contentType, "cache-control": "no-cache" } });
       }
 
@@ -347,7 +401,8 @@ async function main(): Promise<void> {
   let server: StaticServer | null = null;
   let baseUrl: string;
   if (isLive) {
-    baseUrl = LIVE_BASE.replace(/\/$/, "");
+    server = await startStaticServer(PORT, isMutation, LIVE_BASE);
+    baseUrl = `http://127.0.0.1:${server.port}`;
   } else {
     server = await startStaticServer(PORT, isMutation);
     baseUrl = `http://127.0.0.1:${server.port}`;
@@ -459,6 +514,28 @@ async function main(): Promise<void> {
     console.log(`audit:hero-contrast — ${counts.pass} PASS · ${counts.warn} WARN · ${counts.fail} FAIL · ${counts.skip} SKIP`);
     console.log(`→ reports/audit-hero-pixel-contrast.json`);
     console.log(`→ reports/audit-hero-pixel-contrast.md`);
+    // Cycle 9 — mutation-mode sentinel: when --mutation is on, the audit MUST
+    // detect the regression (either as FAIL on contrast threshold OR as WARN
+    // from low-sample masks when the H1 is hidden by panel-color collapse).
+    // Treat any mutation run that produces ≥10% non-PASS rows as a successful
+    // sentinel detection. A mutation run that comes back fully green is a
+    // no-op audit — the script must exit 1 in that case to flag the lack of
+    // sensitivity. (See cycle-8 doctrine: every visual sentinel ships with a
+    // mutation test, and a sentinel that passes its mutation has zero signal.)
+    const totalRows = counts.pass + counts.warn + counts.fail + counts.skip;
+    const nonPass = counts.warn + counts.fail;
+    if (isMutation) {
+      const detected = totalRows > 0 && nonPass >= Math.ceil(totalRows * 0.1);
+      if (!detected) {
+        console.error(
+          `MUTATION SENTINEL FAILED — fewer than 10% of rows flagged (${nonPass}/${totalRows}). The audit is not sensitive to the mutation fixture; treat as no-op.`,
+        );
+        process.exit(1);
+      }
+      // Mutation succeeded in detecting the regression; exit 1 anyway because
+      // a "successful" mutation run is one that the audit caught as broken.
+      process.exit(1);
+    }
     process.exit(counts.fail > 0 ? 1 : 0);
   } finally {
     if (server) server.close();
