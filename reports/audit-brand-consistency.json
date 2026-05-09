@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-09T14:10:26.413Z",
+  "timestamp": "2026-05-09T15:18:06.999Z",
   "counts": {
-    "pass": 11,
+    "pass": 12,
     "warn": 0,
     "fail": 0,
     "skip": 0
@@ -59,21 +59,28 @@
     {
       "id": "brand.heroH1ContrastTokens",
       "category": "Hero Discipline",
-      "description": "Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight",
+      "description": "Hero image-mode H1 has structural tokens for readability (panel attr + navy-9X panel bg + brass-300 left edge + bold). STRUCTURAL ONLY — rendered readability is verified by audit:hero-contrast.",
       "status": "PASS",
-      "evidence": "text-shadow + overlay gradient + bold weight all present in Hero.tsx"
+      "evidence": "panel attr + navy-9X bg + brass-300 left edge + bold weight all present in Hero.tsx"
     },
     {
       "id": "brand.heroNoNavyGlowHalo",
       "category": "Hero Discipline",
-      "description": "Hero text-shadow uses neutral rgba(0,0,0,…) — not navy-tint rgba(15,42,68,…) which produced cycle-5/6 halo smear",
+      "description": "Hero text-shadow does not use navy-tint rgba(15,42,68,…) which produced the cycle-5/6 halo smear",
       "status": "PASS",
-      "evidence": "no navy-tint text-shadow halo (neutral rgba(0,0,0,…) used)"
+      "evidence": "no navy-tint text-shadow halo present"
+    },
+    {
+      "id": "brand.heroNoCycle7WeakOverlay",
+      "category": "Hero Discipline",
+      "description": "If Hero relies on overlay-only readability (no copy panel), the cycle-7 weak overlay values (via-navy-900/40, sm:to-navy-900/20) must be absent.",
+      "status": "PASS",
+      "evidence": "copy panel present — overlay strength is decorative not load-bearing"
     },
     {
       "id": "brand.heroOverlayLayers",
       "category": "Hero Discipline",
-      "description": "Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim) per cycle-7 readability spec",
+      "description": "Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim). PRESENCE ONLY — opacity correctness verified by audit:hero-contrast.",
       "status": "PASS",
       "evidence": "all 3 overlay layers present (mood, content-scrim, cta-scrim)"
     },

@@ -1,12 +1,12 @@
 ---
 name: WebsiteProductionLoop
 description: Production-grade client-website production cycle skill — combines a fresh baseline + Codex Spark / multi-family expert lanes + missing-image and brand-consistency sentinels + live-staging verification gate + compliance severity taxonomy + principal-decision register + skill-improvement loop. Composes as a domain skill INSIDE the PAI Algorithm v6.4.0 (does not replace the Algorithm). USE WHEN production cycle on a client website, build a new client site, level up an existing client site, audit-and-improve, pre-cutover hardening, regression check, or "make this site world-class". NOT FOR one-shot single-file fixes (use PAI Algorithm directly), code-only refactors with no UX/SEO/AEO/compliance dimension (use Forge or Engineer directly), discovery / research / ideation phases (use Research, Ideate, BeCreative), or anything pre-fact-ledger.
-version: 0.2.0
+version: 0.3.0
 status: in-use — refined each cycle by the SkillImprovementLoop workflow
 authored: 2026-05-08
 authored_from_cycles: Mia Sanabria cycles 3 + 4 (Codex-Spark expert audits)
-last_updated: 2026-05-08
-last_updated_cycle: 4 (Spark-only production-quality correction)
+last_updated: 2026-05-09
+last_updated_cycle: 8 (rendered hero readability failure recovery)
 upstream_skill: ~/.claude/skills/CreateSkill (UpdateSkill workflow)
 companion_docs:
   changelog: WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md
@@ -357,13 +357,20 @@ Write the next-session prompt to `WEBSITE_PRODUCTION_LOOP_NEXT_SESSION_PROMPT.md
 9. **NEW v0.2.0 — Brand-consistency gate (VERIFY)** — `bun run audit:brand` exit 0; nav/hero/footer/CTA tokens consistent with Brand System Contract
 10. **NEW v0.2.0 — Compliance severity gate (VERIFY)** — every compliance finding classified per §5 taxonomy; statutory-binary findings cannot be downgraded to "concerns"; statutory-binary unresolved blocks public-launch declaration (does NOT block staging)
 11. **Re-read gate (VERIFY)** — every explicit ask in user's mission addressed or marked SKIP with reason
+12. **NEW v0.3.0 — Defect reproduction gate (STATE-PROBE, before plan)** — for any user-visible defect claim, capture and review live screenshots BEFORE writing an implementation plan. Per route × viewport, record `user-visible failure reproduced: PASS/FAIL/UNVERIFIED` with evidence path. No plan may proceed against operator assertion alone.
+13. **NEW v0.3.0 — Rendered hero readability gate (VERIFY, pre-deploy)** — for any image-mode hero or visual-readability fix, `bun run audit:hero-contrast` must pass locally. H1 core glyph pixels must be ≥4.5:1 WCAG contrast against the background under them; anti-aliased edge pixels must be ≥3.0:1 across required viewports (320×568, 375×812, 768×1024, 1280×800, 1440×900). Token grep (text-shadow / overlay tokens / weight class) is structural-only evidence and cannot stand in for pixel-contrast.
+14. **NEW v0.3.0 — Screenshot verdict gate (VERIFY)** — captured screenshots are not evidence on their own. Every visual screenshot set must produce a per-route × per-viewport verdict matrix (`captured | reviewed | PASS/FAIL/NA`). Any missing row blocks visual PASS.
+15. **NEW v0.3.0 — Live visual gate (VERIFY post-deploy, HARD)** — rerun `audit:hero-contrast --live` with cache-busted URLs against the deployed staging URL. Visual PASS does not exist until the live URL pixel audit runs and passes with the same thresholds as local.
+16. **NEW v0.3.0 — Audit-mutation gate (VERIFY)** — every visual sentinel ships with a mutation test. The audit must FAIL on a deliberately-broken fixture (e.g. weakened scrim, removed panel BG). A sentinel that passes its mutation has zero signal.
+17. **NEW v0.3.0 — Cascade priority gate (BUILD → VERIFY)** — typography defaults that set `color`, `font-weight`, or `font-family` on element selectors (`h1`, `h2`, etc.) MUST live inside `@layer base`. Raw CSS rules with no `@layer` outrank Tailwind utilities and silently override `text-cream-50`/`font-bold` etc. (Cycle 8 root-cause: a `h1{color:navy-800}` rule outside any layer made every image-mode H1 invisible navy-on-navy across cycles 5/6/7 even though `text-cream-50` was on the element.)
 
 ## Decision gates (SOFT — surface but don't block)
 
 1. **Lighthouse-mobile threshold** — capture, surface a warning when below threshold; future cycle should make this HARD via deploy gate
-2. **Visual screenshot acceptance** — chrome-headless 5×N grid; documented but not deploy-blocking
-3. **Form readiness** — WARN-only on mailto-classified forms; flips HARD when GHL endpoint URL arrives
-4. **Performance regression** — Lighthouse threshold drift between cycles; surface, don't block
+2. **Form readiness** — WARN-only on mailto-classified forms; flips HARD when GHL endpoint URL arrives
+3. **Performance regression** — Lighthouse threshold drift between cycles; surface, don't block
+
+(Removed in v0.3.0: "Visual screenshot acceptance" — promoted to HARD via Screenshot verdict gate #14.)
 
 ## NEW v0.2.0 — World-class production-company QA checklist
 
@@ -491,15 +498,23 @@ Per-client substrate (created on first cycle for new clients):
 10. **Cross-vendor diversity requires explicit measurement, not just family count.** 5 audit teams sharing the OpenAI corpus + 1 Gemini blindspot is NOT 6 independent perspectives. Cross-team recommendation overlap is a homogeneity signal. Add a homogeneity check at synthesis.
 11. **Skill specs that mention real client names / vertical-specific filenames are project-local docs.** They DO follow PAI skill conventions but they live in `<project_root>/docs/skills/`, not in `~/.claude/skills/`. Promotion to PAI skill happens only after the spec is fully parameterized AND reused on at least 2 verticals.
 12. **The CreateSkill skill is the parent.** Use `Skill("CreateSkill")` with the UpdateSkill workflow when modifying this spec — handrolling is anti-pattern even though this spec lives in a project tree.
+13. **Token contrast is not rendered readability (NEW v0.3.0 — cycle 5/6/7/8 lesson).** A class grep proving `text-shadow`, `font-bold`, or overlay layers exist does not prove the H1 is readable over actual image pixels. Always pair structural sentinels with a rendered pixel-WCAG sentinel (`audit:hero-contrast`).
+14. **Captured screenshots are audit debt without a verdict (NEW v0.3.0 — cycle 7 lesson).** A file dump of 70+ PNGs without a per-route × per-viewport verdict matrix is not deploy evidence. Verdict every screenshot or it doesn't count.
+15. **A negative anti-pattern sentinel is not a success sentinel (NEW v0.3.0 — cycle 7 lesson).** `brand.heroNoNavyGlowHalo` proves the cycle-5/6 anti-pattern is gone — it does NOT prove the replacement is readable. Pair every anti-pattern sentinel with a positive rendered-contrast sentinel.
+16. **User-visible rejection overrides scripted PASS (NEW v0.3.0 — cycle 8 lesson).** If the principal says "unreadable," the final state is FAIL/PENDING regardless of what the audit chain says. The audit chain has bugs; the user has eyes.
+17. **Live and local are different systems (NEW v0.3.0 — recurring cycle lesson).** `out/` plus local checks passing is insufficient evidence of readability if live cache, Caddy rewrite, font-load timing, or CDN behavior diverges. Always run `audit:hero-contrast --live` after deploy.
+18. **Tailwind v4 @layer ordering matters more than specificity (NEW v0.3.0 — cycle 8 root cause).** A raw CSS rule with no `@layer` (e.g. `h1{color:navy-800}` in globals.css) outranks ALL Tailwind utility classes (which live inside `@layer utilities`). It does NOT matter that `.text-cream-50` has higher specificity (0,1,0) than `h1` (0,0,1) — `@layer` ordering wins before specificity is consulted. Wrap typography defaults in `@layer base { … }` so utilities can override. This bug masked itself for 3 cycles.
+19. **Audit threshold tuning matters (NEW v0.3.0 — cycle 8 sub-lesson).** A pixel-diff threshold of 60 (R+G+B sum) catches Chrome render noise + anti-aliasing artifacts that aren't H1 letters. Raise to 150 for cream-50 letters on navy panel: cream-letter centers diff ~600, anti-aliased edges ~150-300, render noise <30. The threshold is a calibration parameter — document why you picked the number.
+20. **Mutation tests prove sentinels are real (NEW v0.3.0).** Every visual sentinel must ship with a `--mutation` flag that intentionally breaks the structure. The audit MUST FAIL on the mutation. A sentinel that passes its mutation has zero signal — it's measuring background noise.
 
 ## BPE (Bitter-Pilled Engineering) check
 
 Before each release, ask: **"Would a smarter model make this skill unnecessary?"**
 
-- ✅ **Anti-fragile (KEEP):** the audit-chain commands, the `audit:images` + `audit:brand` sentinel scripts, the live-staging verification gate, the gotchas section, the principal-decision register pattern, the compliance severity taxonomy, the parameterized intake fields, the rate-limit cap rules
+- ✅ **Anti-fragile (KEEP):** the audit-chain commands, the `audit:images` + `audit:brand` + `audit:hero-contrast` sentinel scripts, the live-staging verification gate, the rendered hero readability gate, the screenshot verdict gate, the defect reproduction gate, the audit-mutation gate, the cascade-priority gate (Tailwind v4 @layer discipline), the gotchas section, the principal-decision register pattern, the compliance severity taxonomy, the parameterized intake fields, the rate-limit cap rules
 - ❌ **Fragile (CUT next time):** any rule that says "the model will…" or "Claude should…" — Claude can already self-derive process steps; what it can't derive is the failure modes (gotchas), the verifications (sentinel scripts), and the constraints (anti-criteria)
 
-Currently this skill scores well on the anti-fragile axis: most of its mass is verifications + anti-criteria + gotchas + parameterized inputs.
+Currently this skill scores well on the anti-fragile axis: most of its mass is verifications + anti-criteria + gotchas + parameterized inputs. The v0.3.0 additions are all anti-fragile (evidence-anchoring controls, not behavioral assumptions).
 
 ## Skill version history
 
@@ -507,6 +522,7 @@ See `WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` for version-by-version details.
 
 - **v0.1.0** — Mia cycle 3 — initial spec; multi-family lane; 7 expert teams; 8 hard gates + 4 soft gates
 - **v0.2.0** — Mia cycle 4 — Spark-only lane; rate-limit cap; image + brand sentinels; live-staging gate; compliance severity taxonomy; principal-decision register; parameterized artifact paths; world-class production QA checklist; skill improvement loop formalized; 11 hard gates + 4 soft gates
+- **v0.3.0** — Mia cycle 8 — rendered hero readability gate; screenshot verdict gate; defect reproduction gate; live visual gate; audit-mutation gate; cascade-priority gate (Tailwind v4 @layer discipline); reframed `brand.heroH1ContrastTokens` as structural-only; `audit:hero-contrast` script + sentinel pattern; concurrency cap clarified (≤3 same-model only for short read-only briefs); 17 hard gates + 3 soft gates. Driver: 3-cycle PASS-vs-FAIL-perception loop (cycles 5/6/7 audits passed while user kept seeing illegible H1; root cause was a `h1{color:navy-800}` rule outside `@layer base` that beat the Tailwind `text-cream-50` utility).
 
 ## Evidence appendix
 

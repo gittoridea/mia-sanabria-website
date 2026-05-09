@@ -48,3 +48,4 @@ audit-reports/
 tsconfig.tsbuildinfo
 audits/
 .claude/
+tmp/

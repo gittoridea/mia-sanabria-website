@@ -1,0 +1,882 @@
+{
+  "tool": "scripts/audit-hero-pixel-contrast.ts",
+  "generated": "2026-05-09T15:56:12.154Z",
+  "mode": "local",
+  "mutation": false,
+  "base": "http://127.0.0.1:4173",
+  "thresholds": {
+    "glyph": 4.5,
+    "edge": 3
+  },
+  "viewports": [
+    "320x568",
+    "375x812",
+    "768x1024",
+    "1280x800",
+    "1440x900"
+  ],
+  "counts": {
+    "pass": 94,
+    "warn": 0,
+    "fail": 1,
+    "skip": 0
+  },
+  "rows": [
+    {
+      "route": "/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.3,
+      "meanEdgeContrast": 7.91,
+      "glyphSamples": 1231,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.21,
+      "meanEdgeContrast": 8.18,
+      "glyphSamples": 1407,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.59,
+      "meanEdgeContrast": 9.24,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.93,
+      "meanEdgeContrast": 8.92,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.81,
+      "meanEdgeContrast": 8.84,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/about/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.26,
+      "meanEdgeContrast": 7.82,
+      "glyphSamples": 898,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/about/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.25,
+      "meanEdgeContrast": 7.93,
+      "glyphSamples": 988,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/about/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.67,
+      "meanEdgeContrast": 9.14,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/about/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.11,
+      "meanEdgeContrast": 9.26,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/about/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.98,
+      "meanEdgeContrast": 9.2,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.31,
+      "meanEdgeContrast": 8.13,
+      "glyphSamples": 703,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.32,
+      "meanEdgeContrast": 8.21,
+      "glyphSamples": 799,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.75,
+      "meanEdgeContrast": 9.37,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.86,
+      "meanEdgeContrast": 9.23,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.9,
+      "meanEdgeContrast": 9.24,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/buyers/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.31,
+      "meanEdgeContrast": 8.52,
+      "glyphSamples": 826,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/buyers/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.29,
+      "meanEdgeContrast": 8.49,
+      "glyphSamples": 912,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/buyers/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.3,
+      "meanEdgeContrast": 8.39,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/buyers/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.54,
+      "meanEdgeContrast": 8.44,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/buyers/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.48,
+      "meanEdgeContrast": 8.4,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/sellers/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.48,
+      "meanEdgeContrast": 8.18,
+      "glyphSamples": 657,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/sellers/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.39,
+      "meanEdgeContrast": 8.22,
+      "glyphSamples": 748,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/sellers/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.47,
+      "meanEdgeContrast": 9.74,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/sellers/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.73,
+      "meanEdgeContrast": 8.88,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/sellers/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.75,
+      "meanEdgeContrast": 8.87,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/valuation/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.63,
+      "meanEdgeContrast": 8.27,
+      "glyphSamples": 457,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/valuation/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.63,
+      "meanEdgeContrast": 8.27,
+      "glyphSamples": 457,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/valuation/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 16,
+      "meanEdgeContrast": 9.19,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/valuation/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.25,
+      "meanEdgeContrast": 8.98,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/valuation/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 16.16,
+      "meanEdgeContrast": 8.94,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.3,
+      "meanEdgeContrast": 7.94,
+      "glyphSamples": 747,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.24,
+      "meanEdgeContrast": 8.14,
+      "glyphSamples": 855,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.55,
+      "meanEdgeContrast": 8.87,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.09,
+      "meanEdgeContrast": 8.94,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.94,
+      "meanEdgeContrast": 8.92,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/las-olas-isles/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.24,
+      "meanEdgeContrast": 7.92,
+      "glyphSamples": 1131,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/las-olas-isles/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.22,
+      "meanEdgeContrast": 8.05,
+      "glyphSamples": 1299,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/las-olas-isles/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.84,
+      "meanEdgeContrast": 9.58,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/las-olas-isles/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.15,
+      "meanEdgeContrast": 8.67,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/las-olas-isles/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.9,
+      "meanEdgeContrast": 8.57,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/sea-ranch-lakes/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.52,
+      "meanEdgeContrast": 8.3,
+      "glyphSamples": 856,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/sea-ranch-lakes/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.53,
+      "meanEdgeContrast": 8.29,
+      "glyphSamples": 937,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/sea-ranch-lakes/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.69,
+      "meanEdgeContrast": 8.71,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/sea-ranch-lakes/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.11,
+      "meanEdgeContrast": 8.69,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/sea-ranch-lakes/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.96,
+      "meanEdgeContrast": 8.61,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/seven-isles/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.19,
+      "meanEdgeContrast": 7.6,
+      "glyphSamples": 1012,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/seven-isles/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.12,
+      "meanEdgeContrast": 7.75,
+      "glyphSamples": 1220,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/seven-isles/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.49,
+      "meanEdgeContrast": 9,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/seven-isles/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 2.24,
+      "meanEdgeContrast": 2.45,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "FAIL",
+      "note": "glyph=2.24 edge=2.45"
+    },
+    {
+      "route": "/markets/seven-isles/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 16.03,
+      "meanEdgeContrast": 8.68,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/victoria-park/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.29,
+      "meanEdgeContrast": 8.09,
+      "glyphSamples": 962,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/victoria-park/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.31,
+      "meanEdgeContrast": 8.09,
+      "glyphSamples": 1159,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/victoria-park/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.34,
+      "meanEdgeContrast": 9.44,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/victoria-park/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.51,
+      "meanEdgeContrast": 8.65,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/victoria-park/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.57,
+      "meanEdgeContrast": 8.71,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/hillsboro-mile/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.55,
+      "meanEdgeContrast": 8.18,
+      "glyphSamples": 1012,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/hillsboro-mile/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.53,
+      "meanEdgeContrast": 8.24,
+      "glyphSamples": 1110,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/hillsboro-mile/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.75,
+      "meanEdgeContrast": 8.92,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/hillsboro-mile/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.68,
+      "meanEdgeContrast": 9.34,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/hillsboro-mile/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.68,
+      "meanEdgeContrast": 9.33,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/rio-vista/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 14.96,
+      "meanEdgeContrast": 7.73,
+      "glyphSamples": 1003,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/rio-vista/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 14.96,
+      "meanEdgeContrast": 7.87,
+      "glyphSamples": 1160,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/rio-vista/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.46,
+      "meanEdgeContrast": 9.41,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/rio-vista/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.69,
+      "meanEdgeContrast": 8.75,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/rio-vista/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.78,
+      "meanEdgeContrast": 8.78,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.11,
+      "meanEdgeContrast": 7.76,
+      "glyphSamples": 844,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.13,
+      "meanEdgeContrast": 7.86,
+      "glyphSamples": 936,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.63,
+      "meanEdgeContrast": 8.99,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.73,
+      "meanEdgeContrast": 8.43,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.94,
+      "meanEdgeContrast": 8.51,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/coral-ridge/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.37,
+      "meanEdgeContrast": 7.87,
+      "glyphSamples": 991,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/coral-ridge/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.41,
+      "meanEdgeContrast": 8.2,
+      "glyphSamples": 1181,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/coral-ridge/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.81,
+      "meanEdgeContrast": 9.31,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/coral-ridge/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.16,
+      "meanEdgeContrast": 9.46,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/coral-ridge/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 16.14,
+      "meanEdgeContrast": 9.49,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/palm-beach/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.24,
+      "meanEdgeContrast": 7.93,
+      "glyphSamples": 1010,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/palm-beach/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.27,
+      "meanEdgeContrast": 8.3,
+      "glyphSamples": 1175,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/palm-beach/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.64,
+      "meanEdgeContrast": 8.53,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/palm-beach/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.04,
+      "meanEdgeContrast": 8.95,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/palm-beach/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 16.03,
+      "meanEdgeContrast": 8.91,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/lighthouse-point/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 14.91,
+      "meanEdgeContrast": 7.6,
+      "glyphSamples": 1025,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/lighthouse-point/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 14.87,
+      "meanEdgeContrast": 7.71,
+      "glyphSamples": 1205,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/lighthouse-point/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.38,
+      "meanEdgeContrast": 8.47,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/lighthouse-point/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 15.65,
+      "meanEdgeContrast": 8.67,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/lighthouse-point/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 15.62,
+      "meanEdgeContrast": 8.65,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 14.84,
+      "meanEdgeContrast": 7.49,
+      "glyphSamples": 1135,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 14.86,
+      "meanEdgeContrast": 7.77,
+      "glyphSamples": 1279,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.43,
+      "meanEdgeContrast": 9.02,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.02,
+      "meanEdgeContrast": 9.53,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 16.03,
+      "meanEdgeContrast": 9.55,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/harbor-beach/",
+      "viewport": "320x568",
+      "meanGlyphContrast": 15.26,
+      "meanEdgeContrast": 8.26,
+      "glyphSamples": 990,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/harbor-beach/",
+      "viewport": "375x812",
+      "meanGlyphContrast": 15.27,
+      "meanEdgeContrast": 8.36,
+      "glyphSamples": 1086,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/harbor-beach/",
+      "viewport": "768x1024",
+      "meanGlyphContrast": 15.84,
+      "meanEdgeContrast": 9.94,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/harbor-beach/",
+      "viewport": "1280x800",
+      "meanGlyphContrast": 16.18,
+      "meanEdgeContrast": 9.52,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    },
+    {
+      "route": "/markets/harbor-beach/",
+      "viewport": "1440x900",
+      "meanGlyphContrast": 16.23,
+      "meanEdgeContrast": 9.54,
+      "glyphSamples": 1500,
+      "edgeSamples": 800,
+      "status": "PASS"
+    }
+  ]
+}

@@ -57,37 +57,51 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display);
-  letter-spacing: var(--tracking-display);
-  color: var(--color-navy-800);
-  font-weight: 500;
-}
+/* Cycle 8 — typography defaults moved into @layer base so Tailwind utility
+ * classes (in @layer utilities) override them via standard cascade.
+ *
+ * Prior to Cycle 8 these rules sat outside any @layer, which gave them
+ * higher effective priority than ALL Tailwind utilities. Result: every H1
+ * with `class="text-cream-50"` rendered as navy-800 in production for
+ * cycles 5/6/7. The hero H1 was therefore navy-on-navy on image-mode heroes,
+ * which is exactly the unreadable state the user kept reporting. Audit
+ * sentinels passed because they grepped for the class string, not the
+ * computed color. Tailwind v4 honors @layer ordering: base < utilities,
+ * so wrapping these defaults in @layer base lets utilities win as intended.
+ */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: var(--tracking-display);
+    color: var(--color-navy-800);
+    font-weight: 500;
+  }
 
-h1 {
-  font-size: clamp(2.25rem, 1.5rem + 3vw, 4rem);
-  line-height: 1.1;
-  font-weight: 600;
-}
+  h1 {
+    font-size: clamp(2.25rem, 1.5rem + 3vw, 4rem);
+    line-height: 1.1;
+    font-weight: 600;
+  }
 
-h2 {
-  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.75rem);
-  line-height: 1.15;
-}
+  h2 {
+    font-size: clamp(1.75rem, 1.25rem + 2vw, 2.75rem);
+    line-height: 1.15;
+  }
 
-h3 {
-  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
-  line-height: 1.2;
-}
+  h3 {
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    line-height: 1.2;
+  }
 
-p {
-  line-height: 1.65;
-  max-width: 70ch;
+  p {
+    line-height: 1.65;
+    max-width: 70ch;
+  }
 }
 
 a:focus-visible,

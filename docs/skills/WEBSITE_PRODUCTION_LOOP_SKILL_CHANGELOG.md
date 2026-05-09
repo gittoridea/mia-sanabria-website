@@ -2,6 +2,53 @@
 
 Version-by-version evolution of `WEBSITE_PRODUCTION_LOOP_SKILL.md`. Updated each cycle by the SkillImprovementLoop workflow.
 
+## v0.3.0 — 2026-05-09 (Mia Sanabria cycle 8 — rendered hero readability failure recovery)
+
+**Driver:** principal-visible PASS-vs-FAIL pattern persisted through cycles 5, 6, 7. Token + structural audits passed (35 PASS / 11 PASS / 12 PASS chains) while the user kept seeing illegible hero H1. Root cause: `src/app/globals.css` had `h1 { color: var(--color-navy-800); }` OUTSIDE any `@layer`. In Tailwind v4, raw CSS rules without `@layer` outrank ALL utilities — even though `.text-cream-50` has higher specificity (0,1,0) than `h1` (0,0,1), `@layer` ordering is consulted FIRST. Result: every image-mode H1 with `class="text-cream-50"` rendered as navy-800 across cycles 5/6/7 — invisible navy-on-navy. Three cycles of "stronger overlay" tweaks were treating a CSS-cascade bug as a contrast-math problem. Audits passed because they grepped class strings, not computed colors.
+
+The fix was structural in TWO places: (a) wrap typography defaults in `@layer base` so utilities can override; (b) ship a sentinel that proves rendered pixels, not class presence.
+
+### Added
+
+- HARD gate #12 — **Defect reproduction gate (STATE-PROBE)** — capture and review live screenshots before any plan; route × viewport verdicts required.
+- HARD gate #13 — **Rendered hero readability gate (VERIFY)** — `bun run audit:hero-contrast` must pass locally; H1 core glyph ≥4.5:1, edges ≥3.0:1 across all required viewports.
+- HARD gate #14 — **Screenshot verdict gate (VERIFY)** — captured screenshots without a route × viewport verdict matrix are audit debt, not evidence.
+- HARD gate #15 — **Live visual gate (VERIFY post-deploy)** — `audit:hero-contrast --live` against the deployed staging URL with cache-bust before declaring "deployed."
+- HARD gate #16 — **Audit-mutation gate** — every visual sentinel ships with a mutation flag; the audit must FAIL on the deliberately-broken fixture.
+- HARD gate #17 — **Cascade priority gate (BUILD → VERIFY)** — typography defaults that set `color`/`font-weight`/`font-family` on element selectors MUST live inside `@layer base`. Raw CSS without `@layer` silently overrides Tailwind utilities.
+- New per-client substrate: `${project_root}/scripts/audit-hero-pixel-contrast.ts` — Bun static server + Chrome headless + sharp pixel diffing + WCAG contrast computation. Mutation flag injects weak-scrim CSS to verify the audit isn't a no-op.
+- New verification command: `bun run audit:hero-contrast` — added to `audit:all` chain.
+- Reframed `brand.heroH1ContrastTokens` (v0.2.0 sentinel) — description now says "STRUCTURAL ONLY — rendered readability is verified by `audit:hero-contrast`." Stops the sentinel from masquerading as a readability proof.
+- New brand sentinel `brand.heroNoCycle7WeakOverlay` — flags regression to cycle-7 weak overlay values when Hero lacks a copy panel.
+- 8 new gotchas (#13–#20) tied to cycle 5/6/7/8 lessons: token-vs-rendered, screenshot-as-debt, anti-pattern-vs-success, user-overrides-script, live-vs-local, Tailwind v4 @layer rule, audit-threshold-tuning, mutation-test discipline.
+- Concurrency cap clarification: `≤3 same-model concurrent only for short read-only briefs`; full-cycle implementation runs return to `≤2`.
+
+### Changed
+
+- **Hard gate count:** 11 → 17. **Soft gate count:** 4 → 3 (visual screenshot acceptance promoted to HARD via gate #14).
+- **Workflow order:** STATE-PROBE now includes mandatory defect-reproduction artifact capture before plan synthesis.
+- **Verification commands chain:** `audit:hero-contrast` joins after `audit:brand`.
+- **Anti-fragile/fragile audit:** added all v0.3.0 controls under anti-fragile (evidence-anchoring, not behavioral).
+
+### Process improvements caught this cycle (v0.3.0)
+
+- Cycle 5/6/7 confirmed that `brand.heroH1ContrastTokens` was a readability oracle in name only; it grepped class strings, not pixels. v0.3.0 introduces a true rendered-pixel audit.
+- Cycle 7 confirmed screenshot capture without verdict interpretation is insufficient. v0.3.0 makes the verdict matrix mandatory.
+- Cycle 8 confirmed the 3-cycle loop pattern: when the audit passes but the user says FAIL, the audit is wrong, not the user. The audit needs new dimensions.
+- Cycle 8 confirmed mutation tests are non-optional: a sentinel that doesn't FAIL on a deliberately-broken fixture has zero signal. v0.3.0 makes the mutation flag mandatory for every visual sentinel.
+- Cycle 8 confirmed Tailwind v4 @layer ordering is a meaningful CSS hazard distinct from selector specificity. v0.3.0 introduces the cascade-priority gate.
+- Cycle 6 finding (≤3 same-model concurrent works for short briefs) codified into the concurrency rule.
+- Cycle 8 confirmed the skill type stays Type 4 + Type 8 (Business Process + Operations Runbook) — the failure mode is verification/operations, not autonomous routing.
+
+### Limitations of v0.2.0 closed in v0.3.0
+
+- Token sentinels masqueraded as readability evidence (Cato §11.6) → rendered-pixel sentinel + structural-only reframe.
+- Screenshot capture without verdict (cycle 7 closeout) → screenshot verdict gate.
+- Live visual evidence was implicit (cycle 7 closeout) → live visual gate post-deploy.
+- "Anti-pattern absent" was treated as "readable" (cycles 5/6/7) → anti-pattern + positive sentinels paired.
+- Tailwind v4 @layer hazard not flagged (cycles 5/6/7 silent miscompile) → cascade-priority gate.
+- Visual sentinel sensitivity not measured (cycles 4/5/6/7) → mutation gate.
+
 ## v0.2.0 — 2026-05-08 (Mia Sanabria cycle 4 — Spark-only production-quality correction)
 
 **Driver:** principal observed visible production-quality issues (missing images, branding inconsistency, navbar/hero/footer/color/font issues) that cycle-3 audits under-weighted. Cycle 4 ran under a Spark-only constraint with rate-limit cap, codified the gaps as new audit sentinels, and elevated the skill from a useful spec into an operational production skill.

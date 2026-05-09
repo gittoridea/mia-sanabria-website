@@ -1,8 +1,8 @@
 # Audit Brand Consistency Report
 
-**Generated:** 2026-05-09T14:10:26.413Z
+**Generated:** 2026-05-09T15:18:06.999Z
 
-**Summary:** 11 PASS · 0 WARN · 0 FAIL · 0 SKIP
+**Summary:** 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 ## Results by category
 
@@ -47,9 +47,10 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `brand.heroH1ContrastTokens` | ✅ | Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight | text-shadow + overlay gradient + bold weight all present in Hero.tsx |
-| `brand.heroNoNavyGlowHalo` | ✅ | Hero text-shadow uses neutral rgba(0,0,0,…) — not navy-tint rgba(15,42,68,…) which produced cycle-5/6 halo smear | no navy-tint text-shadow halo (neutral rgba(0,0,0,…) used) |
-| `brand.heroOverlayLayers` | ✅ | Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim) per cycle-7 readability spec | all 3 overlay layers present (mood, content-scrim, cta-scrim) |
+| `brand.heroH1ContrastTokens` | ✅ | Hero image-mode H1 has structural tokens for readability (panel attr + navy-9X panel bg + brass-300 left edge + bold). STRUCTURAL ONLY — rendered readability is verified by audit:hero-contrast. | panel attr + navy-9X bg + brass-300 left edge + bold weight all present in Hero.tsx |
+| `brand.heroNoNavyGlowHalo` | ✅ | Hero text-shadow does not use navy-tint rgba(15,42,68,…) which produced the cycle-5/6 halo smear | no navy-tint text-shadow halo present |
+| `brand.heroNoCycle7WeakOverlay` | ✅ | If Hero relies on overlay-only readability (no copy panel), the cycle-7 weak overlay values (via-navy-900/40, sm:to-navy-900/20) must be absent. | copy panel present — overlay strength is decorative not load-bearing |
+| `brand.heroOverlayLayers` | ✅ | Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim). PRESENCE ONLY — opacity correctness verified by audit:hero-contrast. | all 3 overlay layers present (mood, content-scrim, cta-scrim) |
 
 ### Email Consistency
 

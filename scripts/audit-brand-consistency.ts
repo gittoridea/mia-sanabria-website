@@ -285,9 +285,10 @@ async function checkSiteFooterContractStructure(): Promise<CheckResult[]> {
 
 async function checkHeroH1ContrastTokens(): Promise<CheckResult[]> {
   const results: CheckResult[] = [];
-  // Source-side token check: the Hero component must (a) use a text-shadow stack on image-mode H1
-  // and (b) use an overlay gradient over the image. We grep for the canonical shadow stack tokens
-  // and overlay class — if the patterns disappear, we want to know.
+  // STRUCTURAL-ONLY CHECKS (cycle-8 v0.3.0 doctrine): these sentinels verify that the Hero
+  // component's structural tokens are present. They DO NOT prove rendered readability — that
+  // is the job of `audit:hero-contrast` (rendered pixel-WCAG sentinel). Cycle 5/6/7 conflated
+  // token presence with readability and shipped illegible heroes three cycles in a row.
   const heroPath = join(SRC_DIR, "components", "Hero.tsx");
   if (!(await fileExists(heroPath))) {
     results.push({
@@ -300,37 +301,54 @@ async function checkHeroH1ContrastTokens(): Promise<CheckResult[]> {
     return results;
   }
   const heroSrc = await readFile(heroPath, "utf-8");
-  const hasTextShadow = /\[text-shadow:[^\]]*rgba/.test(heroSrc);
-  const hasOverlay = /from-navy-900\/\d+/.test(heroSrc) && /via-navy-900\/\d+/.test(heroSrc);
+  // Cycle 8 Option C panel: verify `data-hero-copy-panel="true"` mechanism exists and uses navy panel + brass edge
+  const hasCopyPanelAttr = /data-hero-copy-panel/.test(heroSrc);
+  const hasPanelBg = /bg-navy-900\/9[0-9]/.test(heroSrc);
+  const hasPanelBrassEdge = /border-l-2[\s\S]{0,80}border-brass-300|border-brass-300[\s\S]{0,80}border-l-2/.test(heroSrc);
   const hasFontWeight = /font-(?:semibold|bold|extrabold)/.test(heroSrc);
+  const panelOk = hasCopyPanelAttr && hasPanelBg && hasPanelBrassEdge && hasFontWeight;
   results.push({
     id: "brand.heroH1ContrastTokens",
     category: "Hero Discipline",
-    description: "Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight",
-    status: hasTextShadow && hasOverlay && hasFontWeight ? "PASS" : "WARN",
-    evidence:
-      hasTextShadow && hasOverlay && hasFontWeight
-        ? "text-shadow + overlay gradient + bold weight all present in Hero.tsx"
-        : `missing tokens (text-shadow:${hasTextShadow} overlay:${hasOverlay} bold:${hasFontWeight})`,
+    description: "Hero image-mode H1 has structural tokens for readability (panel attr + navy-9X panel bg + brass-300 left edge + bold). STRUCTURAL ONLY — rendered readability is verified by audit:hero-contrast.",
+    status: panelOk ? "PASS" : "WARN",
+    evidence: panelOk
+      ? "panel attr + navy-9X bg + brass-300 left edge + bold weight all present in Hero.tsx"
+      : `missing structural tokens (panelAttr:${hasCopyPanelAttr} panelBg:${hasPanelBg} brassEdge:${hasPanelBrassEdge} bold:${hasFontWeight})`,
   });
 
-  // Cycle-7 readability hardening: detect regression to the broken cycle-5/6 navy-glow halo
-  // text-shadow stack which produced an illegible smear over bright tropical imagery.
-  // The stack used a navy-tinted shadow rgba(15,42,68,...) that bled into bright pixels
-  // rather than darkening them. Cycle-7 uses neutral rgba(0,0,0,...) shadows and a
-  // three-layer overlay system (mood + content-scrim + cta-scrim).
+  // Cycle-5/6 navy-glow halo regression check (KEEP — anti-pattern detection)
   const hasNavyGlowAntiPattern = /\[text-shadow:[^\]]*rgba\(15,\s*42,\s*68/.test(heroSrc);
   results.push({
     id: "brand.heroNoNavyGlowHalo",
     category: "Hero Discipline",
-    description: "Hero text-shadow uses neutral rgba(0,0,0,…) — not navy-tint rgba(15,42,68,…) which produced cycle-5/6 halo smear",
+    description: "Hero text-shadow does not use navy-tint rgba(15,42,68,…) which produced the cycle-5/6 halo smear",
     status: hasNavyGlowAntiPattern ? "FAIL" : "PASS",
     evidence: hasNavyGlowAntiPattern
       ? "navy-glow halo text-shadow detected — regression to cycle-5/6 broken pattern"
-      : "no navy-tint text-shadow halo (neutral rgba(0,0,0,…) used)",
+      : "no navy-tint text-shadow halo present",
   });
 
-  // Cycle-7 three-layer overlay sentinel: mood + content-scrim + cta-scrim must all exist.
+  // Cycle-7 weak-overlay regression check: cycle-7 used `via-navy-900/40` + `sm:to-navy-900/20`
+  // which left the H1 in the lightest band of the gradient. Cycle-8 panel doctrine permits
+  // lighter overlays because the H1 sits on a deterministic navy panel. But if anyone reverts
+  // to overlay-only readability AND removes the panel, the audit must catch it. We flag a
+  // regression when the OLD weak values appear AND the panel attribute is absent.
+  const hasCycle7WeakOverlay = /sm:to-navy-900\/20|via-navy-900\/40/.test(heroSrc);
+  const isReadabilityRegression = hasCycle7WeakOverlay && !hasCopyPanelAttr;
+  results.push({
+    id: "brand.heroNoCycle7WeakOverlay",
+    category: "Hero Discipline",
+    description: "If Hero relies on overlay-only readability (no copy panel), the cycle-7 weak overlay values (via-navy-900/40, sm:to-navy-900/20) must be absent.",
+    status: isReadabilityRegression ? "FAIL" : "PASS",
+    evidence: isReadabilityRegression
+      ? "cycle-7 weak overlay values present without copy panel — readability regression risk"
+      : hasCopyPanelAttr
+        ? "copy panel present — overlay strength is decorative not load-bearing"
+        : "no cycle-7 weak overlay values present",
+  });
+
+  // Three-layer overlay sentinel: mood + content-scrim + cta-scrim must all exist (presence-only).
   const overlayLayers = (heroSrc.match(/data-hero-overlay="(mood|content-scrim|cta-scrim)"/g) ?? [])
     .map((m) => m.replace(/.*?="([^"]+)"/, "$1"));
   const expectedLayers = ["mood", "content-scrim", "cta-scrim"];
@@ -338,7 +356,7 @@ async function checkHeroH1ContrastTokens(): Promise<CheckResult[]> {
   results.push({
     id: "brand.heroOverlayLayers",
     category: "Hero Discipline",
-    description: "Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim) per cycle-7 readability spec",
+    description: "Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim). PRESENCE ONLY — opacity correctness verified by audit:hero-contrast.",
     status: missingLayers.length === 0 ? "PASS" : "WARN",
     evidence: missingLayers.length === 0
       ? `all 3 overlay layers present (${overlayLayers.join(", ")})`
