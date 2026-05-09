@@ -1,7 +1,62 @@
 # Brand and Visual Production QA Matrix — Mia Sanabria Realtor Site
 
-**Cycle:** 2026-05-08 PM cycle 4 (Spark-only production-quality correction)
-**Live staging:** https://miasanabriarealtor.trueidea.com (last-modified: 2026-05-08 22:01:24 GMT, ETag `didmtu6seolc2bl8`)
+**Latest cycle:** 2026-05-09 cycle 6 (Design Level-Up — 9-lane Spark audit + Tier-1 implementation pass)
+**Live staging:** https://miasanabriarealtor.trueidea.com (last-modified: 2026-05-09 01:36:40 GMT, ETag `didrenptbrb4*`)
+**Cycle-4 baseline:** 2026-05-08 PM cycle 4 (Spark-only production-quality correction; ETag `didmtu6seolc2bl8`)
+**Cycle-5 baseline:** 2026-05-08 PM cycle 5 (Priority 2/4 fixes; ETag `didpufmmopa8*`)
+
+## Cycle-6 cell deltas (moved from cycle-5 baseline)
+
+Audit chain post-cycle-6: **35 PASS · 2 WARN · 0 FAIL** (preserved from cycle-5; JSON-LD blocks 148 → 153 +5 from AnswerFirst FaqSchema).
+
+| Axis | Routes affected | Cycle-5 cell | Cycle-6 cell | Driver |
+|---|---|---|---|---|
+| 1. Nav | all | ✅ | ✅+ | Mobile drawer focus trap + ESC + scroll-lock + aria-modal (Lane 5 F3, Lane 7 F6); h-12 menu (Lane 5 F4); aria-current on header + footer (Lane 7 F7) |
+| 2. Hero | `/`, `/about/`, `/buyers/`, `/sellers/`, `/valuation/`, `/markets/`, `/markets/[slug]/` | ✅ | ✅+ | Content-band scrim deepen for AA on bright imagery (Lane 5 F8, Lane 7 F1+F2); cycle-5 H1 shadow lock preserved |
+| 3. Footer | all | ✅ | ✅+ | NavLink for aria-current + min-h-44 footer touch targets (Lane 7 F8) |
+| 4. Colors | all | ✅ | ✅ | (no token change — Brand Contract LOCKED) |
+| 5. Typography | all | ✅ | ✅+ | text-wrap:balance on h2 + text-wrap:pretty on body (Lane 4 F3+F4); MarketCard h3 tracking-[0.05em] removed (Lane 4 F9) |
+| 6. Images | all | ✅ | ✅+ | 7 SVG placeholders removed from public/markets (Lane 6 F8); per-market objectPosition/alt taxonomy queued for cycle 7 (Lane 6 F3+F4) |
+| 7. Mobile quality | all | ✅ | ✅+ | scroll-padding-top with safe-area-inset-top (Lane 5 F2); form 14→16px text-base (Lane 5 F6, Lane 7 F4); drawer focus trap |
+| 8. CTA consistency | `/markets/`, `/buyers/`, `/sellers/` | ⚠️ | ✅ | Markets hub Hero ctaPrimary + ctaSecondary (Lane 3 F2); buyer/seller intent passthrough `/contact/?intent=*` (Lanes 2 F3, 3 F8) |
+| 9. Compliance display | all | 🔒 | 🔒 | Cards 1, 2, 4, 5, 6 OPEN — preserved unchanged. Lane 9 F3 keyword casing fixed (REALTOR® uppercase). Card 3 register synced to DECIDED (cycle-5 supersession) |
+| 10. Production polish | `/buyers/`, `/sellers/`, `/valuation/`, `/about/`, `/` | ⚠️ | ✅+ | AnswerFirst now emits FaqSchema for AEO (Lane 8 F1); Q+A questions get text-wrap:balance, answers get text-wrap:pretty |
+
+**New axis (added cycle 6): 11. Schema saturation per route** — measured via `audit:schema`. PlaceSchema now threads county for `/markets/[slug]/` (Lane 8 F4 — Boca/Delray correctly emit Palm Beach County containment).
+
+## Cycle-6 deferred to cycle 7+ (queued items)
+
+- Form noValidate + accessible error region (Lane 7 F5) — Tier 2
+- Service-page PersonSchema continuity on `/buyers/`, `/sellers/`, `/valuation/` (Lane 8 F3)
+- Per-route Twitter metadata (Lane 8 F6)
+- /insights/ 3-essay topic cluster (Lane 8 F9 — proposal-only)
+- IDX iframe responsive min-h floor (Lane 5 F10)
+- Privacy trust strip in form headers (Lane 2 F9)
+- Per-market objectPosition + richer alt enrichment (Lane 6 F3+F4)
+- Hero secondary CTA contrast on image bg (Lane 5 F8 sub-finding)
+- AnswerFirst Q+A first-sentence-direct rewrites (Lane 8 F2)
+
+## Cycle-6 principal-decision-gated (queued)
+
+- Card 1 license rendering — set `licenseNumber: null` until DBPR primary-source confirmation
+- Card 4 REALTOR® mark descriptive vs member-name-adjacent — content sprint
+- Card 5 combined REALTOR®+MLS logo separation
+- Card 6 Spanish hreflang
+- Card 2 TCPA mechanics — gated by GHL endpoint cycle
+
+## Cycle-6 strategic (Tier 3) queued — needs principal direction
+
+- IntentRouter copy retune + 4th path + hierarchy (Lanes 1, 2, 3 — voice-adjacent)
+- Heading system pivot (h3+ → body-font; Lane 1 F2)
+- Hero motion ceremony (entrance stagger; Lane 1 F4)
+- Market template archetype variants (Lanes 1 F1+F3)
+- Image taxonomy heroMood/heroPerspective (Lane 6 F6+F7)
+
+---
+
+## Original cycle-4 matrix (preserved below)
+
+
 **Authority:** WEBSITE_PRODUCTION_LOOP_SKILL.md v0.2.0 §"World-class production-company QA checklist"
 **Method:** 6 Spark-only expert team audits + audit:images + audit:brand sentinels + 70 before/70 after chrome-headless screenshots
 

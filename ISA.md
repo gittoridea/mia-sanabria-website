@@ -3,12 +3,12 @@ project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
 phase: verify
-progress: 308/308
+progress: 326/326
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-08T22:15:00Z
+updated: 2026-05-09T01:55:00Z
 algorithm_version: 6.4.0
-active_mission: 2026-05-08-pm-cycle-4-spark-only-production-quality-correction
+active_mission: 2026-05-09-cycle-6-design-level-up
 ---
 
 # Mia Sanabria Realtor Site — ISA
@@ -276,6 +276,8 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 | F16: Mission verify + ISA hygiene | ISC-124–130 | F11–F15 | sequential |
 
 ## Decisions
+
+- 2026-05-09T01:48:48.811Z —— STRICT GATE BLOCK: tier E5 missing sections: Deliverables, Quality Gates, Risks. Phase reverted from complete to verify.
 
 - 2026-05-08T22:09:23.585Z —— STRICT GATE BLOCK: tier E5 missing sections: Deliverables, Quality Gates, Risks. Phase reverted from complete to verify.
 
@@ -1168,3 +1170,106 @@ Anti-criteria + antecedent:
 - ISC-386 to ISC-394: anti-criteria + antecedent — verified by direct file Read (Cards 1/2/4/5/6 mentions in PRINCIPAL_DECISION_REGISTER preserved), grep (no `mia@miasanabriarealtor.com` in src/), grep (no Miami-Dade introductions), full audit chain green pre and post.
 
 
+
+---
+
+## Decisions (continued — 2026-05-09 cycle-6 design level-up)
+
+### D-cycle6-01: 9-lane design audit replaces standard 6-7-team pattern
+
+- Cycle-3/4 ran the canonical 6-7 expert-team Spark pattern. Cycle-6 used the design-specialized 9-lane pattern from `docs/NEXT_SESSION_DESIGN_LEVEL_UP_TRIGGER_PROMPT.md`. The 9 lanes: Creative Director / Luxury RE UX / Conversion Designer / Typography & Layout / Mobile QA / Image Art Direction / Accessibility / SEO-AEO / Compliance Guardrail. All 9 returned schema-valid JSON verdicts on LAST line; 1 lane (8 SEO/AEO) needed the EOF-fallback extractor (no closing AUDIT_END).
+
+### D-cycle6-02: Stack architecture decisions per `docs/STACK_ARCHITECTURE_REVIEW_NEXT_TAILWIND_SHADCN_PAYLOAD_POSTGRES.md`
+
+- **Next + TS + Tailwind:** Keep now (no migration; additive sharpening queued).
+- **shadcn/ui:** Adopt selectively (Sheet, Dialog, Accordion, Tabs, Tooltip, Toast — curated list).
+- **Payload + Postgres:** Defer — re-evaluation criteria documented (≥30 posts + Mia self-edit + separate Postgres need).
+- Decision is principal-approval-light (cycle 7 candidate); does not block any cycle-6 implementation.
+
+### D-cycle6-03: Cycle-5 fixes preserved verbatim (do-not-re-litigate boundary held)
+
+- Hero H1 multi-stop text-shadow stack (`0.95`/`0.85`/`0.6` alpha layers) preserved.
+- Hero scrim base 35/65/35 vertical band preserved.
+- Cycle-6 contrast hardening (Lane 7 F1+F2) addresses bright-image AA failures by ADDING a content-band overlay (`top-1/4 inset` going `transparent → 35% → 55%` navy-900). Does not modify the cycle-5 H1 shadow stack.
+- Lane 4 F7 ("hero shadow stack over-strong") explicitly NOT IMPLEMENTED with rationale: cycle-5 lock + Brand Contract authority.
+- Lane 4 F1 ("Hero H1 weight inconsistent across variants — `font-semibold` on cream/navy, `font-bold` on image") explicitly NOT IMPLEMENTED with rationale: cycle-5 principal-authorized variant-specific weight; Brand Contract honors variant intent.
+
+### D-cycle6-04: Card 3 status synchronization closes Lane 9 F10
+
+- PRINCIPAL_DECISION_REGISTER.md Card 3 was OPEN; BRAND_SYSTEM_CONTRACT.md said DECIDED (cycle 5). Lane 9 F10 surfaced this drift.
+- Card 3 entry rewritten to DECIDED (2026-05-08, cycle-5 supersession); historical OPEN content preserved as historical record.
+- Card 1, 2, 4, 5, 6 stay OPEN unchanged.
+
+### D-cycle6-05: AnswerFirst FaqSchema emission — default true
+
+- Lane 8 F1 wanted optional FaqSchema emission. Decision: default true (5 pages × 5 AnswerFirst blocks = +5 FAQPage entities; JSON-LD count 148 → 153 verified). Pages opt out via `emitFaqSchema={false}` if their primary Faq component already emits FAQPage and a duplicate would confuse Google. Audited: schema audit clean, no validation errors. Pages with both AnswerFirst and Faq retain both FAQPage entities since the Q&A sets are distinct (AnswerFirst is the curated AEO Q&A; Faq is the longer FAQ list).
+
+### D-cycle6-06: PlaceSchema county threading
+
+- Lane 8 F4 — Boca/Delray under Palm Beach County, Fort Lauderdale + neighborhoods under Broward County. Schema test uses `containedInPlace.AdministrativeArea.name = market.county` with state nested as parent. Geographic guardrail preserved via per-market data layer (county field already typed as `"Broward County" | "Palm Beach County"`).
+
+### D-cycle6-07: Mobile drawer focus-manager is INTERIM, shadcn Sheet adoption is the structural fix
+
+- Hand-rolled focus-manager in `SiteHeader.tsx:14-49` ships cycle 6 to close Lane 5 F3 + Lane 7 F6 immediately. shadcn/ui Sheet adoption (cycle 7 candidate) replaces this with a Radix-backed primitive — eliminates the need to re-litigate drawer a11y in every future cycle. Documented in stack architecture review.
+
+### D-cycle6-08: Local commit was not pushed before first deploy attempt — corrective push + redeploy
+
+- First `bun scripts/deploy-and-verify.ts --no-lighthouse` ran; deploy succeeded but `last-modified` did not flip because Dokploy pulls from `origin/main` and commit was local-only. Corrective `git push origin main` + re-run completed in 90s; ETag/last-modified both flipped (`didpufmmopa8*` → `didrenptbrb4*`, `2026-05-09T00:23:14Z` → `2026-05-09T01:36:40Z`). Recommend deploy-and-verify.ts amendment cycle 7 to detect "remote does not have HEAD commit" before triggering deploy.
+
+### D-cycle6-09: Tier-1 voice-adjacent items escalated to Tier 3
+
+- Lane 3 F1 ("relationship-oriented intent labels") and Lane 2 F4 ("add 4th 'I'm exploring' path") and Lane 1 F5 ("primary-intent visual hierarchy") all touch Mia's voice. Per Card 3 logic, voice-adjacent items require principal direction even when lane marks "safe-now." Cycle-7 next-session prompt surfaces these as 3 decision cards.
+
+### D-cycle6-10: Skill v0.2.0 governs cycle 6; no v0.3.0 amendment warranted
+
+- Skill spec gates honored (authority load, fact-ledger, brand-contract drift, audit-chain, schema-enforced auditor verdict, deploy-preflight, live-staging, image-integrity, brand-consistency, compliance severity, re-read).
+- Lessons captured in cycle-6 closeout § "What the skill should improve next" (5 candidate amendments) — none alone is a repeatable failure mode warranting a version bump. Cumulative entry into v0.3.0 stress-test cycle (next vertical OR next major repeat).
+
+## Changelog (continued — 2026-05-09 cycle-6 design level-up)
+
+- **Conjecture:** A 9-lane design-specialized audit pattern produces meaningfully different findings than the 6-7-team standard pattern; lanes specifically tuned to design axes (creative direction, conversion, typography, mobile, image, a11y, SEO/AEO, compliance) surface design-specific issues that would be averaged-down in a generic team.
+- **Refuted-by:** Not refuted — confirmed. The 9-lane pattern surfaced 25 high-severity findings vs. 6-7-team historical average of 8-12 highs; convergence axes were design-specific (mailto silent failure, intent hierarchy flat, market template homogeneity, hero contrast on bright imagery, drawer focus trap, MarketCard contrast) rather than the generic-team pattern (compliance + content quality + schema sprinkles).
+- **Learned:** When the cycle goal is "design level-up," design-specialized lanes earn their cost. When the cycle goal is "production-ready audit," the 6-7-team standard pattern is the right primitive. The skill v0.2.0 should disambiguate (cycle 7 candidate amendment).
+
+- **Conjecture:** Spark concurrency cap of ≤2 (skill spec) is a needless constraint when briefs are short and stdin is closed.
+- **Refuted-by:** Not refuted — but successfully exceeded once. Cycle 6 successfully ran 3 same-model concurrent dispatches (lanes 5+6+9 simultaneously) with no stdin stalls. Skill v0.3.0 should permit ≤3 same-model concurrent for read-only briefs.
+- **Learned:** ≤3 same-model concurrent works when (a) `--sandbox read-only`, (b) `< /dev/null` close stdin, (c) brief ≤3KB, (d) model-family is consistent. Cap of 4+ remains the documented stall threshold.
+
+- **Conjecture:** Tier-1 lane findings can be implemented without principal direction even when they touch voice / brand boundaries.
+- **Refuted-by:** Three findings (Lane 3 F1 IntentRouter copy retune, Lane 2 F4 add 4th intent path, Lane 1 F5 primary-intent visual hierarchy) marked "safe-to-implement-now" by lanes — but each touches Mia's voice or the IntentRouter primitive that Card 3 logic protects. Decision: ESCALATE these to Tier 3 / principal-direction even when lane marks safe-now.
+- **Learned:** "Safe-to-implement-now" is a lane assessment of risk in code; it does NOT account for voice / brand authority gates. The skill should add a "voice-adjacent surface check" between lane verdict and Tier-1 dispatch — cycle 7 candidate amendment.
+
+## Verification (continued — 2026-05-09 cycle-6 design level-up)
+
+ISCs added cycle 6 (309-326):
+
+- **ISC-309 (state-probe — already passed pre-BUILD):** audit chain green at 35 PASS · 2 WARN · 0 FAIL preserved from cycle 5 baseline. Evidence: pre-implementation `bun run audit:all` exit 0 with 14/2/0 completeness; cycle 5 closeout commit `0bc45c7` represents the baseline.
+- [x] ISC-310: 9 lanes audited; each emitted exactly 10 findings + structured JSON verdict on LAST line. Evidence: `docs/design-level-up-audits/cycle-6/lane-{1..9}-*.md` × 9 files; verdict `findings_count":10` confirmed in each.
+- [x] ISC-311: Stack architecture review documented per-item verdicts. Evidence: `docs/STACK_ARCHITECTURE_REVIEW_NEXT_TAILWIND_SHADCN_PAYLOAD_POSTGRES.md` (~14KB).
+- [x] ISC-312: Synthesis identifies cross-lane convergence (≥3 lanes) and contradictions. Evidence: `docs/CYCLE_6_DESIGN_LEVEL_UP_SYNTHESIS.md` § Cross-lane convergence (4 axes) + § Contradictions surfaced (2).
+- [x] ISC-313: Upgrade plan tiers Tier 1-5 + GHL-gated + do-not-change. Evidence: `docs/DESIGN_LEVEL_UP_UPGRADE_PLAN.md`.
+- [x] ISC-314: 75 BEFORE screenshots captured at `/tmp/mia-cycle6-design-before/` (15 routes × 5 viewports). Evidence: `ls /tmp/mia-cycle6-design-before/ | wc -l` = 75; `du -sh` = 56MB.
+- [x] ISC-315: 75 AFTER screenshots captured at `/tmp/mia-cycle6-design-after/` post-deploy. Evidence: same — 75 PNGs, 54MB.
+- [x] ISC-316: Mobile drawer focus trap + ESC + scroll lock + aria-modal shipped. Evidence: `src/components/SiteHeader.tsx:14-49` useEffect.
+- [x] ISC-317: Header menu icon ≥48×48 px. Evidence: `src/components/SiteHeader.tsx:96` h-12 w-12.
+- [x] ISC-318: scroll-padding-top with safe-area-inset-top in globals.css. Evidence: `src/app/globals.css:46-50`.
+- [x] ISC-319: Form controls upgraded to text-base (16px) on /contact/ + /valuation/. Evidence: `grep px-4 py-3 text-base text-navy-800 src/app/contact/ src/app/valuation/` returns 5 hits (3 contact + 2 valuation).
+- [x] ISC-320: Hero content-band scrim deepens for AA contrast on bright imagery. Evidence: `src/components/Hero.tsx:54-58` (new `inset-x-0 bottom-0 top-1/4` overlay) + cycle-5 H1 shadow stack preserved at `:73`.
+- [x] ISC-321: MarketCard "Explore Area" → text-cream-50; h3 tracking-[0.05em] removed. Evidence: `src/components/MarketCard.tsx:27-34`.
+- [x] ISC-322: AnswerFirst emits FaqSchema by default; uses useId() for unique heading id. Evidence: `src/components/AnswerFirst.tsx:1-93`; live verify on /buyers/ shows `"@type":"FAQPage"` count 1; audit-schema 148 → 153.
+- [x] ISC-323: PlaceSchema county threading + markets/[slug]/page.tsx passes county. Evidence: `src/components/schema/PlaceSchema.tsx:6-58` + `src/app/markets/[slug]/page.tsx:100-106`.
+- [x] ISC-324: Markets hub Hero gets ctaPrimary + ctaSecondary + #primary-markets scroll target. Evidence: `src/app/markets/page.tsx:82-92` + live curl shows `intent=market-brief` and `id="primary-markets"`.
+- [x] ISC-325: /buyers + /sellers CTAs include intent passthrough. Evidence: live curl shows `intent=buyer` (3 hits buyers) and `intent=seller` (1+ hits sellers).
+- [x] ISC-326 (deploy + live verify): cycle-6 commit `7f8800c` pushed to origin/main; deploy via `bun scripts/deploy-and-verify.ts --no-lighthouse` completed in 90s; ETag flipped (`didpufmmopa8*` → `didrenptbrb4*`); last-modified flipped (00:23:14Z → 01:36:40Z); HTTP 200 across 8 spot-checked routes; canonical email preserved; no `Family Homes` regression; no `mia@miasanabriarealtor.com` regression.
+
+Anti-criteria preserved (verified by absence):
+- No new color tokens introduced — `audit:brand` 9/0/0.
+- No new font families — same Cinzel + Montserrat.
+- No glassmorphism / gradient borders / neon edges — same audit.
+- No fabricated facts — `MIA.unverified.*` namespace untouched; license# rendering unchanged (Card 1 OPEN).
+- No DNS / Cloudflare / .com cutover / GHL prod writes / lead magnet — confirmed by absence.
+- No PAI infrastructure edits outside this project — confirmed by `git log --oneline ~/.claude` shows no concurrent activity.
+- No Boca/Delray-as-Broward — `audit:stale-terms` clean + manual grep on Florida geographic terms.
+- No legal copy rewrite — `/privacy/`, `/terms/`, `/dmca/`, `/accessibility/` pages unchanged at content level.
+- No statutory-binary downgraded — Lane 9 F1 (license), F2 (REALTOR® descriptive), F4 (combined logo), F6 (mailto), F7 (TCPA) all stay principal-decision-gated.
+- No regression of cycle-5 fixes — luxury/waterfront tagline preserved (regression curl), hero H1 shadow stack preserved (visual diff), AEO answer-first blocks preserved (5 pages still emit AnswerFirst with the same Q+A copy).
