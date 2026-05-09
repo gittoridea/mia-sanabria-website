@@ -1024,4 +1024,147 @@ Anti-criteria (all preserved this cycle):
 - ISC-319 to ISC-321: closeout doc + reflection JSONL + commit/push.
 - ISC-322 to ISC-332: anti-criteria + antecedent — Spark-only constraint honored; no over-claims; no Brand drift; no DNS/cutover/GHL/lead-magnet; no model misrepresentation; no PAI infra edits; geographic guardrail intact; statutory-binary preserved as launch-blockers; principal-decision cards open.
 
+---
+
+## Mission 2026-05-08 PM cycle 5 — Priority 2 + Priority 4 Production Fix Sprint + Image/Hero Repairs
+
+**Effort:** E5 | **Phase:** complete | **Started:** 2026-05-08 PM cycle 5 | **Commits:** `8cf6353` (main) + `b40a174` (tagline patch).
+
+### Goal (this mission)
+
+Address all Priority-2 visible-consistency issues (canonical email, service-area / positioning consistency, family-vs-luxury voice — Card 3 DECIDED), Priority-4 AEO funnel sprint (5 answer-first blocks on funnel pages), and 4 principal-flagged image/hero gaps (homepage hero H1 visibility, Featured Markets card images, /markets/ hero, /about/ hero treatment), with new audit sentinels to structurally prevent recurrence; deploy to live staging and verify; produce a closeout + a design-level-up trigger prompt engineered for an intense next-cycle expert-design audit.
+
+### Criteria (this mission)
+
+Phase 0 — Baseline:
+
+- [x] ISC-333: Pre-cycle baseline captured: 25 routes, audit:all 14/2/0/0, audit:images 7/0/0, audit:brand 7/0/0, last-modified `Fri, 08 May 2026 22:01:24 GMT`, ETag `didmtu6seolc2bl8`.
+- [x] ISC-334: 70 chrome-headless screenshots at `/tmp/mia-cycle5-fix-before/` (14 routes × 5 viewports, 20s virtual-time-budget).
+- [x] ISC-335: Email + tagline + service-area + family-homes pre-state grep documented (single visible source: `MIA.contact.email = msanabriarea@gmail.com`; SITE.tagline + MIA.voice.tagline + SITE.description + homepage Hero + BRAND_SYSTEM_CONTRACT.md all referenced family-homes phrasing pre-cycle).
+
+Phase 1 — Canonical email:
+
+- [x] ISC-336: `MIA.contact.email = "msanabriarea@gmail.com"` confirmed canonical (already set since cycle-2).
+- [x] ISC-337: Branded email `mia@miasanabriarealtor.com` confirmed absent from `src/`; only present in DOCS as forward-looking provisioning notes.
+- [x] ISC-338: New `audit:images.publicEmailConsistency` sentinel — exactly 1 distinct email in rendered HTML across 27 built pages — PASS post-cycle-5 (`msanabriarea@gmail.com`).
+- [x] ISC-339: New `audit:brand.publicEmailConsistency` sentinel — only canonical email in `src/`, with allowlist for `msanabriarea@gmail.com` — PASS post-cycle-5.
+- [x] ISC-340: Live `/contact/` cache-busted curl renders 20 instances of `msanabriarea@gmail.com`, ZERO of `mia@miasanabriarealtor.com`.
+
+Phase 2 — Priority 2 visible consistency:
+
+- [x] ISC-341: `MIA.voice.tagline` updated to "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach." (Card 3 DECIDED toward luxury/waterfront).
+- [x] ISC-342: `SITE.tagline` updated identically (caught initial-edit miss in patch commit `b40a174` after live-verification grep showed stale string still rendered in OG metadata — recurrence-protection now in `audit:images.publicEmailConsistency` + visible content live-grep at deploy).
+- [x] ISC-343: `SITE.description` updated to 154 chars (was 178, audit:seo FAIL): "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Private representation."
+- [x] ISC-344: Homepage Hero heading updated to "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach." (matches tagline).
+- [x] ISC-345: Homepage Hero sub updated to "A small, deliberate practice — private representation for buyers and sellers of distinctive coastal residences." (replaces previous service-area-restating sub).
+- [x] ISC-346: BRAND_SYSTEM_CONTRACT.md tagline reference updated; supersession note documents Card 3 → DECIDED (luxury/waterfront).
+- [x] ISC-347: Live grep confirms "Family Homes Where Memories" count = 0 across all 7 sampled live routes; new tagline count = 1 on `/`.
+
+Phase 3 — Hero H1 visibility:
+
+- [x] ISC-348: Homepage Hero `imageSrc` upgraded `/og-default.jpg` (1200×630 lateral) → `/markets/fort-lauderdale.jpg` (1200×1500 portrait — fills hero correctly, no upscale).
+- [x] ISC-349: Hero overlay gradient strengthened `from-navy-900/15 via-navy-900/35 to-navy-900/15` → `from-navy-900/35 via-navy-900/65 to-navy-900/35` (cycle-2 "brighter feel" directive principal-authorized supersession).
+- [x] ISC-350: Hero image-mode H1 weight `font-semibold` → `font-bold`; multi-stop text-shadow `(0_4px_24px / 0_2px_8px / 0_1px_2px)` for layered legibility.
+- [x] ISC-351: New `audit:brand.heroH1ContrastTokens` sentinel verifies Hero.tsx retains text-shadow + dark-overlay gradient + bold weight — PASS post-cycle-5.
+- [x] ISC-352: Visible across all 5 viewports (320/375/768/1280/1440) in `/tmp/mia-cycle5-fix-after/` screenshots.
+
+Phase 4 — Featured Markets cards:
+
+- [x] ISC-353: Investigation confirmed all 6 Featured cards always rendered `<img src="/markets/{slug}.jpg">` in built HTML — principal observation was a screenshot lazy-load timing artifact (Next.js Image default `loading="lazy"`).
+- [x] ISC-354: `MarketCard` API extended with `priority?: boolean` prop (default false).
+- [x] ISC-355: Homepage Featured Markets — first 3 cards eager-load (`priority={idx < 3}`); above-fold-on-desktop + screenshot-visible.
+- [x] ISC-356: New `audit:images.homepageFeaturedCards` sentinel — verifies all 6 expected slugs (fort-lauderdale, victoria-park, boca-raton, delray-beach, harbor-beach, las-olas-isles) render `<img>` tags — PASS post-cycle-5.
+- [x] ISC-357: Live verification — all 6 slugs grep-found in cache-busted `/?_=$ts` HTML.
+
+Phase 5 — /markets/ hero image:
+
+- [x] ISC-358: `/markets/page.tsx` Hero `background="navy"` → `background="image" imageSrc="/markets/hillsboro-mile.jpg" imageAlt="Hillsboro Mile oceanfront luxury estates, Southeast Florida"` — chosen for trophy oceanfront-estate visual without leaning on a specific neighborhood.
+- [x] ISC-359: New `audit:images.hubPageHeroImage` sentinel — `/markets/` + `/about/` first `<section>` emits `<img>` — PASS post-cycle-5.
+- [x] ISC-360: Live `/markets/` cache-busted curl renders `<img src="/markets/hillsboro-mile.jpg">` in hero region.
+
+Phase 6 — /about/ hero treatment:
+
+- [x] ISC-361: `/about/page.tsx` Hero `background="navy"` → `background="image" imageSrc="/markets/las-olas-isles.jpg" imageAlt="Las Olas Isles deepwater finger islands, Eastern Fort Lauderdale"` — anchors luxury/waterfront visually; place-hero pairs cleanly with person-section below.
+- [x] ISC-362: Hero heading updated "South Florida's personal REALTOR® — a practice built on relationships, not transactions." → "A personal practice for luxury and waterfront real estate." (aligns with cycle-5 positioning).
+- [x] ISC-363: Mia headshot section below the hero PRESERVED (intentional — hero=place, section=person).
+- [x] ISC-364: Live `/about/` cache-busted curl renders `<img src="/markets/las-olas-isles.jpg">` in hero region.
+
+Phase 7 — AEO funnel sprint:
+
+- [x] ISC-365: New `src/components/AnswerFirst.tsx` primitive — 75-125 word answer-first block with related-markets internal links + optional CTA + cream variants.
+- [x] ISC-366: `/` AEO block — "What kind of real estate does Mia Sanabria specialize in?" + links to fort-lauderdale, boca-raton, delray-beach + "Walk the markets" CTA.
+- [x] ISC-367: `/about/` AEO block — "How does Mia Sanabria represent luxury and waterfront clients?" + links to las-olas-isles, harbor-beach, boca-raton + "Begin a private conversation" CTA.
+- [x] ISC-368: `/buyers/` AEO block — "How should buyers approach luxury and waterfront homes in Eastern Fort Lauderdale?" + links to las-olas-isles, harbor-beach, rio-vista + "Begin a buyer brief" CTA.
+- [x] ISC-369: `/sellers/` AEO block — "How should sellers position a luxury or waterfront home in Eastern Fort Lauderdale?" + links to fort-lauderdale, boca-raton, delray-beach + "Request a valuation" CTA.
+- [x] ISC-370: `/valuation/` AEO block — "What should a luxury waterfront valuation consider beyond automated estimates?" + links to fort-lauderdale, boca-raton, lighthouse-point + "Talk through your property" CTA.
+- [x] ISC-371: `/contact/` AEO block SKIPPED per principal direction — concierge framing already in cycle-3 form-helper prose.
+
+Phase 8 — Expand audit coverage:
+
+- [x] ISC-372: `audit:images` extended +3 sentinels (homepageFeaturedCards, hubPageHeroImage, publicEmailConsistency) — 7 → 10 PASS.
+- [x] ISC-373: `audit:brand` extended +2 sentinels (heroH1ContrastTokens, publicEmailConsistency) — 7 → 9 PASS.
+- [x] ISC-374: TS-strict `m[1]` undefined-guard fixes shipped on both scripts (typecheck exit 0 post-extension).
+
+Phase 9 — Deploy + live verify:
+
+- [x] ISC-375: typecheck + lint + build green; audit:all 14/2/0/0 + audit:images 10/0/0 + audit:brand 9/0/0 — total 33 PASS · 2 WARN · 0 FAIL across 3 chains.
+- [x] ISC-376: Cycle-5 main commit `8cf6353` deployed via `bun scripts/deploy-and-verify.ts --no-lighthouse`; status=done in 106s; Caddy flipped `Sat, 09 May 2026 00:19:01 GMT` ETag `didpr7eh0nwg2fmz`.
+- [x] ISC-377: Cycle-5 patch commit `b40a174` (missed SITE.tagline) deployed; status=done in 82s; Caddy flipped `Sat, 09 May 2026 00:23:14 GMT`.
+- [x] ISC-378: Cache-busted curl verified all 7 changed routes return HTTP 200; tagline live; family-homes count=0; Featured Markets 6 imgs live; /about/ hero las-olas-isles live; /markets/ hero hillsboro-mile live; canonical email 20 instances on /contact/, 0 branded.
+- [x] ISC-379: 70 after-screenshots captured at `/tmp/mia-cycle5-fix-after/` (same 14 routes × 5 viewports as before-set).
+
+Phase 10 — Closeout:
+
+- [x] ISC-380: `docs/CYCLE_5_PRIORITY_FIX_BASELINE.md` written.
+- [x] ISC-381: `docs/CYCLE_5_PRIORITY_FIX_AFTER.md` written.
+- [x] ISC-382: `docs/PRODUCTION_READINESS_HANDOFF_PRIORITY_2_4_FIXES_2026-05-08.md` written (15-section closeout per principal direction).
+- [x] ISC-383: `docs/NEXT_SESSION_DESIGN_LEVEL_UP_TRIGGER_PROMPT.md` written — engineered for 9-lane expert design audit (Creative Director / Luxury RE UX / Conversion Designer / Typography & Layout / Mobile QA / Image Art Direction / Accessibility / SEO+AEO Strategic / Compliance Guardrail) with world-class luxury-realtor benchmarks, ranked upgrade plan, and safe implementation pass.
+- [x] ISC-384: Reflection JSONL appended (schema_version 6.4.0).
+- [x] ISC-385: Cycle-5 commits `8cf6353` + `b40a174` + (this) closeout commit pushed to `origin/main`.
+
+Anti-criteria + antecedent:
+
+- [x] ISC-386: Anti — NO unrelated principal-decision cards silently resolved. Card 3 (brand voice) explicitly DECIDED per cycle-5 mission text. Cards 1 (license rendering), 2 (TCPA mechanics), 4 (REALTOR® mark usage), 5 (combined REALTOR®+MLS logo), 6 (Spanish hreflang) — ALL untouched, status preserved as OPEN.
+- [x] ISC-387: Anti — NO branded email `mia@miasanabriarealtor.com` introduced to any public surface. Canonical `msanabriarea@gmail.com` retained.
+- [x] ISC-388: Anti — NO claim of TCPA compliance (mechanics still pending GHL form-wiring cycle).
+- [x] ISC-389: Anti — NO DNS / Cloudflare / GHL prod / .com cutover / lead magnet build.
+- [x] ISC-390: Anti — NO legal copy modified.
+- [x] ISC-391: Anti — NO Brand System Contract drift introducing new tokens. Hero overlay strength + H1 weight are principal-authorized supersession of cycle-2 directive (NOT new tokens — same navy-900 token, same font-bold class within Tailwind base).
+- [x] ISC-392: Anti — NO PAI infrastructure edits outside this project.
+- [x] ISC-393: Anti — NO geographic-guardrail violation. Boca / Delray / Palm Beach remain Palm Beach County; nothing called Miami-Dade.
+- [x] ISC-394: Antecedent — Live-staging fidelity preserved across both deploys (cycle-5 main + patch). Caddy flip + cache-bust verified each time. Build-time-vs-live-time check enforced.
+
+## Decisions (continued — 2026-05-08 PM cycle 5)
+
+- 2026-05-08 PM cycle 5 — **PRINCIPAL_DECISION_REGISTER Card 3 (brand voice) → DECIDED.** Family-homes framing removed; luxury/waterfront positioning canonicalized across `MIA.voice.tagline`, `SITE.tagline`, `SITE.description`, homepage Hero heading + sub, BRAND_SYSTEM_CONTRACT.md tagline reference. Live-grep confirms 0 occurrences of family-homes string post-deploy.
+- 2026-05-08 PM cycle 5 — **Hero overlay strength supersession.** Cycle-2 Brand System Contract directive ("brighter feel — do not darken without explicit principal approval") explicitly superseded by cycle-5 mission text ("Improve contrast on image-overlay hero. Use stronger overlay, text-shadow, or typography weight/size adjustments."). Implementation: 15/35/15 → 35/65/35 + bold + 3-stop text-shadow. Documented inline in Hero.tsx + BRAND_SYSTEM_CONTRACT.md note.
+- 2026-05-08 PM cycle 5 — **Featured Markets card "missing images" was lazy-load timing artifact, not real broken images.** Built HTML always rendered all 6 `<img>` tags. Eager-load on first row (`priority={idx < 3}`) + new `audit:images.homepageFeaturedCards` sentinel structurally prevents recurrence. Lesson: future audit:images extensions should distinguish "asset resolves" from "asset renders in time for screenshot capture" — the cycle-3 sentinel was the former; cycle-5 added the latter.
+- 2026-05-08 PM cycle 5 — **Email canonical sentinel pattern.** Two parallel checks (built-HTML side + src/ side) catch different drift classes. The src/-side sentinel uses an allowlist (`msanabriarea@gmail.com` plus standard noreply patterns); the HTML-side sentinel counts distinct emails in built pages. Both PASS — pattern is operational.
+- 2026-05-08 PM cycle 5 — **Tagline-edit miss caught at live-grep.** Initial cycle-5 batch missed `src/lib/site.ts:25 SITE.tagline`; first deploy left stale string in OG metadata. Caught by post-deploy live grep (0 family-homes expected, 1 found). Patched in commit `b40a174`. Lesson: post-deploy live grep on tagline+email+family-homes class of strings is the structural check; new sentinels now own that responsibility for future cycles.
+- 2026-05-08 PM cycle 5 — **AEO `AnswerFirst` component primitive.** Reusable 75-125 word answer-first block with typed `MarketSlug` internal links (typecheck-enforced, typo fails build) + optional CTA + cream variants. Inserted on 5 funnel pages; `/contact/` skipped per direction. Pattern: question matches an LLM-extractable format ("What kind of real estate does Mia specialize in?") + first-sentence direct answer + supporting paragraph + cross-link cluster.
+- 2026-05-08 PM cycle 5 — **Image asset reuse on homepage hero.** Homepage hero now uses `/markets/fort-lauderdale.jpg` (1200×1500). Same asset is used as the Fort Lauderdale market-page hero. Acceptable trade-off for cycle-5; future cycle could source a dedicated homepage-hero asset (twilight Fort Lauderdale skyline or different framing).
+
+## Changelog (continued — 2026-05-08 PM cycle 5)
+
+- **2026-05-08 PM cycle 5 — conjecture:** "Replacing 'Family Homes Where Memories Are Made' across MIA.voice.tagline, SITE.tagline, SITE.description, homepage Hero, and BRAND_SYSTEM_CONTRACT.md will be a clean grep-and-replace operation." → **refuted-by:** initial cycle-5 batch missed `src/lib/site.ts:25 SITE.tagline`; live-verification grep showed 1 occurrence remaining in OG metadata across all routes. → **learned:** multi-source-of-truth strings need a post-deploy live-grep validation step; the cycle-5 sentinel `audit:images.publicEmailConsistency` is the right pattern but `audit:brand.taglineConsistency` could be added for future cycles. Patched in `b40a174`.
+- **2026-05-08 PM cycle 5 — conjecture:** "Featured Markets cards visually missing images means the asset references are wrong or the files are missing." → **refuted-by:** built HTML grep + audit:images.localFilesResolve all confirmed `<img src="/markets/{slug}.jpg">` for all 6 cards with files present. → **learned:** the principal observation was a screenshot lazy-load timing artifact (Next.js Image default `loading="lazy"`). The fix is eager-load on first row + structural sentinel that catches "img tag absent in built HTML" (which would be a real bug); the cycle-5 sentinel now exists.
+- **2026-05-08 PM cycle 5 — conjecture:** "Hero H1 visibility issues are typography-only — bumping weight from semibold to bold solves it." → **refuted-by:** even with bold weight, the original 15/35/15 overlay + lateral-aspect og-default.jpg meant the H1 still felt thin against bright photo regions. → **learned:** Hero visibility is a 4-axis problem (image asset choice, overlay strength, font weight, text-shadow stack). Cycle-5 fixed all 4. The cycle-2 "brighter feel" directive optimized for one axis (overlay) at the cost of H1 legibility; the principal authorized rebalancing.
+- **2026-05-08 PM cycle 5 — conjecture:** "AEO answer-first blocks need to be a custom-built component per page." → **refuted-by:** The 5 pages share a near-identical structure (question + 75-125 word answer + 2-3 internal links + optional CTA). → **learned:** Single `AnswerFirst` component primitive with typed-MarketSlug links + optional CTA covers all 5 cases. New surface = 1 component, 5 inline call sites. Future markets vertical / non-realtor vertical can reuse with parameterized link slugs.
+- **2026-05-08 PM cycle 5 — conjecture:** "Card 3 (brand voice) is a long-running content-policy debate that will need extensive Mia consultation before resolution." → **refuted-by:** cycle-5 mission text explicitly directed luxury/waterfront positioning + provided preferred phrasing variants. → **learned:** Some principal-decision cards resolve via direct cycle-mission authorization rather than separate consultation. The register pattern preserves both modes (open-cards waiting for principal call + cards explicitly resolved by cycle direction).
+
+## Verification (continued — 2026-05-08 PM cycle 5)
+
+- ISC-333 to ISC-335: pre-cycle baseline — verified clean (cycle-4 close state preserved).
+- ISC-336 to ISC-340: email canonical — verified by direct `src/lib/mia.ts` Read + new sentinel + live curl on `/contact/` (20 instances of canonical, 0 of branded).
+- ISC-341 to ISC-347: positioning consistency — verified by direct `src/lib/mia.ts` + `src/lib/site.ts` + `src/app/page.tsx` + `BRAND_SYSTEM_CONTRACT.md` Reads + live cache-busted curl grep (0 family-homes occurrences across 7 routes).
+- ISC-348 to ISC-352: Hero H1 visibility — verified by `src/components/Hero.tsx` Read showing overlay strengthened + H1 bold + 3-stop text-shadow + new `audit:brand.heroH1ContrastTokens` PASS.
+- ISC-353 to ISC-357: Featured Markets — verified by `src/components/MarketCard.tsx` priority prop + `src/app/page.tsx` `priority={idx < 3}` + new `audit:images.homepageFeaturedCards` PASS + live grep showing all 6 slugs.
+- ISC-358 to ISC-360: /markets/ hero — verified by `src/app/markets/page.tsx` Hero image-mode + new `audit:images.hubPageHeroImage` PASS + live curl rendering hillsboro-mile in hero region.
+- ISC-361 to ISC-364: /about/ hero — verified by `src/app/about/page.tsx` Hero image-mode + heading update + same hubPageHeroImage sentinel + live curl rendering las-olas-isles.
+- ISC-365 to ISC-371: AEO funnel sprint — verified by 5 page files containing `<AnswerFirst question="..." answer="..." relatedMarkets={[...]} cta={...} />` + build green + cycle-5-after screenshots showing cream-bg AEO sections post-Hero.
+- ISC-372 to ISC-374: audit sentinel expansion — verified by `bun run audit:images` (10 PASS) + `bun run audit:brand` (9 PASS) + typecheck exit 0.
+- ISC-375 to ISC-379: deploy + live verify — verified by deploy-and-verify.ts output (status=done both deploys) + Caddy flip ETag changes + cache-busted curl on 7 routes returning HTTP 200 + 70 after-screenshots at `/tmp/mia-cycle5-fix-after/`.
+- ISC-380 to ISC-385: closeout — files exist at canonical paths; reflection JSONL appended; commits on origin/main.
+- ISC-386 to ISC-394: anti-criteria + antecedent — verified by direct file Read (Cards 1/2/4/5/6 mentions in PRINCIPAL_DECISION_REGISTER preserved), grep (no `mia@miasanabriarealtor.com` in src/), grep (no Miami-Dade introductions), full audit chain green pre and post.
+
 
