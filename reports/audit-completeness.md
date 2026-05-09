@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-09T01:38:05.542Z
+**Generated:** 2026-05-09T14:08:21.914Z
 
 **Summary:** 14 PASS · 2 WARN · 0 FAIL · 0 SKIP
 
@@ -120,7 +120,7 @@
     },
     {
       "route": "/about/",
-      "img": "/mia-headshot.jpg",
+      "img": "/mia-profile.jpg",
       "problem": "missing width/height"
     },
     {

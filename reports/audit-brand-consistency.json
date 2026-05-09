@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-09T01:38:05.697Z",
+  "timestamp": "2026-05-09T14:08:57.242Z",
   "counts": {
-    "pass": 9,
+    "pass": 11,
     "warn": 0,
     "fail": 0,
     "skip": 0
@@ -62,6 +62,20 @@
       "description": "Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight",
       "status": "PASS",
       "evidence": "text-shadow + overlay gradient + bold weight all present in Hero.tsx"
+    },
+    {
+      "id": "brand.heroNoNavyGlowHalo",
+      "category": "Hero Discipline",
+      "description": "Hero text-shadow uses neutral rgba(0,0,0,…) — not navy-tint rgba(15,42,68,…) which produced cycle-5/6 halo smear",
+      "status": "PASS",
+      "evidence": "no navy-tint text-shadow halo (neutral rgba(0,0,0,…) used)"
+    },
+    {
+      "id": "brand.heroOverlayLayers",
+      "category": "Hero Discipline",
+      "description": "Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim) per cycle-7 readability spec",
+      "status": "PASS",
+      "evidence": "all 3 overlay layers present (mood, content-scrim, cta-scrim)"
     },
     {
       "id": "brand.publicEmailConsistency",

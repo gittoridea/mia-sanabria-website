@@ -9,7 +9,7 @@ import "./globals.css";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["500", "600", "700"],
   display: "swap",
   variable: "--font-cinzel",
 });

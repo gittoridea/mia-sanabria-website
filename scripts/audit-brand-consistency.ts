@@ -313,6 +313,37 @@ async function checkHeroH1ContrastTokens(): Promise<CheckResult[]> {
         ? "text-shadow + overlay gradient + bold weight all present in Hero.tsx"
         : `missing tokens (text-shadow:${hasTextShadow} overlay:${hasOverlay} bold:${hasFontWeight})`,
   });
+
+  // Cycle-7 readability hardening: detect regression to the broken cycle-5/6 navy-glow halo
+  // text-shadow stack which produced an illegible smear over bright tropical imagery.
+  // The stack used a navy-tinted shadow rgba(15,42,68,...) that bled into bright pixels
+  // rather than darkening them. Cycle-7 uses neutral rgba(0,0,0,...) shadows and a
+  // three-layer overlay system (mood + content-scrim + cta-scrim).
+  const hasNavyGlowAntiPattern = /\[text-shadow:[^\]]*rgba\(15,\s*42,\s*68/.test(heroSrc);
+  results.push({
+    id: "brand.heroNoNavyGlowHalo",
+    category: "Hero Discipline",
+    description: "Hero text-shadow uses neutral rgba(0,0,0,…) — not navy-tint rgba(15,42,68,…) which produced cycle-5/6 halo smear",
+    status: hasNavyGlowAntiPattern ? "FAIL" : "PASS",
+    evidence: hasNavyGlowAntiPattern
+      ? "navy-glow halo text-shadow detected — regression to cycle-5/6 broken pattern"
+      : "no navy-tint text-shadow halo (neutral rgba(0,0,0,…) used)",
+  });
+
+  // Cycle-7 three-layer overlay sentinel: mood + content-scrim + cta-scrim must all exist.
+  const overlayLayers = (heroSrc.match(/data-hero-overlay="(mood|content-scrim|cta-scrim)"/g) ?? [])
+    .map((m) => m.replace(/.*?="([^"]+)"/, "$1"));
+  const expectedLayers = ["mood", "content-scrim", "cta-scrim"];
+  const missingLayers = expectedLayers.filter((l) => !overlayLayers.includes(l));
+  results.push({
+    id: "brand.heroOverlayLayers",
+    category: "Hero Discipline",
+    description: "Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim) per cycle-7 readability spec",
+    status: missingLayers.length === 0 ? "PASS" : "WARN",
+    evidence: missingLayers.length === 0
+      ? `all 3 overlay layers present (${overlayLayers.join(", ")})`
+      : `missing overlay layers: ${missingLayers.join(", ")}`,
+  });
   return results;
 }
 

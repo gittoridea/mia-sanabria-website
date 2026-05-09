@@ -80,10 +80,10 @@ export default function AboutPage() {
                 aria-hidden
                 className="absolute inset-0 translate-x-3 translate-y-3 rounded-sm bg-brass-100 -z-10"
               />
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-brass-300/60 shadow-card">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-brass-300/60 shadow-luxury">
                 <Image
-                  src="/mia-headshot.jpg"
-                  alt="Mia Sanabria, REALTOR® with LPT Realty"
+                  src="/mia-profile.jpg"
+                  alt="Mia Sanabria, REALTOR® with LPT Realty — Fort Lauderdale luxury and waterfront real estate"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-top"

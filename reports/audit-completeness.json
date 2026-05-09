@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T01:38:05.542Z",
+  "timestamp": "2026-05-09T14:08:21.914Z",
   "counts": {
     "PASS": 14,
     "WARN": 2,
@@ -145,7 +145,7 @@
           },
           {
             "route": "/about/",
-            "img": "/mia-headshot.jpg",
+            "img": "/mia-profile.jpg",
             "problem": "missing width/height"
           },
           {

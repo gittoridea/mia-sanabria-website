@@ -1,8 +1,8 @@
 # Audit Brand Consistency Report
 
-**Generated:** 2026-05-09T01:38:05.697Z
+**Generated:** 2026-05-09T14:08:57.242Z
 
-**Summary:** 9 PASS · 0 WARN · 0 FAIL · 0 SKIP
+**Summary:** 11 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 ## Results by category
 
@@ -48,6 +48,8 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `brand.heroH1ContrastTokens` | ✅ | Hero image-mode H1 retains text-shadow + dark-overlay gradient + bold font weight | text-shadow + overlay gradient + bold weight all present in Hero.tsx |
+| `brand.heroNoNavyGlowHalo` | ✅ | Hero text-shadow uses neutral rgba(0,0,0,…) — not navy-tint rgba(15,42,68,…) which produced cycle-5/6 halo smear | no navy-tint text-shadow halo (neutral rgba(0,0,0,…) used) |
+| `brand.heroOverlayLayers` | ✅ | Hero image-mode renders three overlay layers (mood + content-scrim + cta-scrim) per cycle-7 readability spec | all 3 overlay layers present (mood, content-scrim, cta-scrim) |
 
 ### Email Consistency
 
