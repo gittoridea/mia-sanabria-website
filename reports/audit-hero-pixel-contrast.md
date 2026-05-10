@@ -1,7 +1,7 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-09T22:57:03.009Z
-**Mode:** live
+**Generated:** 2026-05-10T00:07:34.982Z
+**Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
@@ -44,7 +44,7 @@
 | `/markets/fort-lauderdale/` | 375x812 | 15.40 | 9.09 | 753 | 800 | ✅ PASS |  |
 | `/markets/fort-lauderdale/` | 768x1024 | 15.74 | 9.92 | 1500 | 800 | ✅ PASS |  |
 | `/markets/fort-lauderdale/` | 1280x800 | 15.92 | 10.65 | 1500 | 800 | ✅ PASS |  |
-| `/markets/fort-lauderdale/` | 1440x900 | 15.89 | 10.63 | 1500 | 800 | ✅ PASS |  |
+| `/markets/fort-lauderdale/` | 1440x900 | 4.69 | 4.62 | 1500 | 800 | ✅ PASS |  |
 | `/markets/las-olas-isles/` | 320x568 | 15.42 | 8.85 | 1227 | 800 | ✅ PASS |  |
 | `/markets/las-olas-isles/` | 375x812 | 15.42 | 8.85 | 1227 | 800 | ✅ PASS |  |
 | `/markets/las-olas-isles/` | 768x1024 | 15.84 | 10.15 | 1500 | 800 | ✅ PASS |  |
@@ -81,7 +81,7 @@
 | `/markets/boca-raton/` | 1280x800 | 16.04 | 9.87 | 1500 | 800 | ✅ PASS |  |
 | `/markets/boca-raton/` | 1440x900 | 15.97 | 9.86 | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-ridge/` | 320x568 | 15.56 | 9.94 | 1125 | 800 | ✅ PASS |  |
-| `/markets/coral-ridge/` | 375x812 | 15.56 | 9.94 | 1125 | 800 | ✅ PASS |  |
+| `/markets/coral-ridge/` | 375x812 | 11.80 | 3.64 | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-ridge/` | 768x1024 | 15.84 | 9.54 | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-ridge/` | 1280x800 | 15.93 | 10.45 | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-ridge/` | 1440x900 | 15.91 | 10.43 | 1500 | 800 | ✅ PASS |  |

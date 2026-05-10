@@ -1,7 +1,7 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-09T22:57:03.009Z",
-  "mode": "live",
+  "generated": "2026-05-10T00:07:34.982Z",
+  "mode": "local",
   "mutation": false,
   "base": "http://127.0.0.1:4173",
   "thresholds": {
@@ -331,8 +331,8 @@
     {
       "route": "/markets/fort-lauderdale/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.89,
-      "meanEdgeContrast": 10.63,
+      "meanGlyphContrast": 4.69,
+      "meanEdgeContrast": 4.62,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -664,9 +664,9 @@
     {
       "route": "/markets/coral-ridge/",
       "viewport": "375x812",
-      "meanGlyphContrast": 15.56,
-      "meanEdgeContrast": 9.94,
-      "glyphSamples": 1125,
+      "meanGlyphContrast": 11.8,
+      "meanEdgeContrast": 3.64,
+      "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
     },
