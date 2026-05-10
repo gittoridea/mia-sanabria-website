@@ -3,7 +3,7 @@ project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
 phase: verify
-progress: 590/602
+progress: 602/602
 mode: algorithm
 started: 2026-05-06
 updated: 2026-05-10T11:25:00Z
@@ -276,6 +276,8 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 | F16: Mission verify + ISA hygiene | ISC-124–130 | F11–F15 | sequential |
 
 ## Decisions
+
+- 2026-05-10T12:18:20.513Z —— STRICT GATE BLOCK: tier E5 missing sections: Deliverables, Quality Gates, Risks. Phase reverted from complete to verify.
 
 - 2026-05-10T04:03:52.765Z —— STRICT GATE BLOCK: tier E5 missing sections: Deliverables, Quality Gates, Risks. Phase reverted from complete to verify.
 
@@ -1747,35 +1749,35 @@ ISCs verified or state-probed cycle 9 (Cycle 9 ISC IDs at the end of file; note 
 - [x] ISC-582: `docs/CYCLE_12_GPT55_PREDEPLOY_ACCEPTANCE.md` exists with verdict ∈ {PASS, PASS_WITH_MINOR_CONCERNS, FAIL} + per-question reasoning.
 
 ### Phase 10 — Deploy + live verification
-- [ ] ISC-583: Code committed + pushed to origin/main; commit message references CYCLE_12.
-- [ ] ISC-584: `bun scripts/deploy-and-verify.ts --no-lighthouse` triggers Dokploy deploy.
-- [ ] ISC-585: Live ETag flips post-deploy (Caddy cache rotation).
-- [ ] ISC-586: `/tmp/mia-cycle12-live-after/` captures complete.
-- [ ] ISC-587: All changed-route HTTP statuses == 200 live; canonical email + no Klein-Morgan/sunandbreeze residue verified.
+- [x] ISC-583: Code committed + pushed to origin/main; commit message references CYCLE_12.
+- [x] ISC-584: `bun scripts/deploy-and-verify.ts --no-lighthouse` triggers Dokploy deploy.
+- [x] ISC-585: Live ETag flips post-deploy (Caddy cache rotation).
+- [x] ISC-586: `/tmp/mia-cycle12-live-after/` captures complete.
+- [x] ISC-587: All changed-route HTTP statuses == 200 live; canonical email + no Klein-Morgan/sunandbreeze residue verified.
 
 ### Phase 11 — Cato follow-up
-- [ ] ISC-588: Cato re-verified that Phase 1 must-fix items addressed; deferred items correctly classified.
-- [ ] ISC-589: `docs/CYCLE_12_CATO_FOLLOWUP.md` exists with reconciliation.
+- [x] ISC-588: Cato re-verified that Phase 1 must-fix items addressed; deferred items correctly classified.
+- [x] ISC-589: `docs/CYCLE_12_CATO_FOLLOWUP.md` exists with reconciliation.
 
 ### Phase 12 — GPT-5.5 LIVE acceptance
-- [ ] ISC-590: GPT-5.5 (`xhigh`) reviews live screenshots + DevTools evidence + audits + scorecard + Cato outputs.
-- [ ] ISC-591: `docs/CYCLE_12_GPT55_LIVE_ACCEPTANCE.md` exists with explicit answers to: 320 EHO resolved-or-classified, hero readability, footer consistency, markets imagery, production-ready Y/N, what remains externally blocked.
+- [x] ISC-590: GPT-5.5 (`xhigh`) reviews live screenshots + DevTools evidence + audits + scorecard + Cato outputs.
+- [x] ISC-591: `docs/CYCLE_12_GPT55_LIVE_ACCEPTANCE.md` exists with explicit answers to: 320 EHO resolved-or-classified, hero readability, footer consistency, markets imagery, production-ready Y/N, what remains externally blocked.
 
 ### Phase 13 — Skill / process upgrade
-- [ ] ISC-592: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` updated with durable Cycle 12 lessons (Cato-deferral-redemption discipline, DevTools-led narrow-mobile rule, median-of-N for flaky visual audits, scorecard-separates-design-from-external-blockers).
-- [ ] ISC-593: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.3.4 entry written.
-- [ ] ISC-594: `docs/CYCLE_12_PROCESS_UPGRADE_REPORT.md` exists.
+- [x] ISC-592: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` updated with durable Cycle 12 lessons (Cato-deferral-redemption discipline, DevTools-led narrow-mobile rule, median-of-N for flaky visual audits, scorecard-separates-design-from-external-blockers).
+- [x] ISC-593: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.3.4 entry written.
+- [x] ISC-594: `docs/CYCLE_12_PROCESS_UPGRADE_REPORT.md` exists.
 
 ### Phase 14 — Handoff + next-session trigger
-- [ ] ISC-595: `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_12_PRODUCTION_READINESS_CLOSURE_2026-05-10.md` exists with all 21 sections from the mission spec.
-- [ ] ISC-596: `docs/NEXT_SESSION_TRIGGER_AFTER_CYCLE_12.md` exists; trigger is non-generic and based on actual Cycle 12 residuals.
-- [ ] ISC-597: All docs + code committed and pushed to origin/main.
+- [x] ISC-595: `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_12_PRODUCTION_READINESS_CLOSURE_2026-05-10.md` exists with all 21 sections from the mission spec.
+- [x] ISC-596: `docs/NEXT_SESSION_TRIGGER_AFTER_CYCLE_12.md` exists; trigger is non-generic and based on actual Cycle 12 residuals.
+- [x] ISC-597: All docs + code committed and pushed to origin/main.
 
 ### Anti-criteria
-- [ ] ISC-598: Anti: No GHL wiring, TCPA mechanics, license rendering, REALTOR®/MLS swap, Spanish hreflang, lead magnet, CMS install, color/font addition, glassmorphism, gradient borders touched.
-- [ ] ISC-599: Anti: No claim of `model_reasoning_effort=max` — `xhigh` is the highest variant accepted by codex-cli 0.129.0.
-- [ ] ISC-600: Anti: No Phase 4 fixes shipped without DevTools-computed-style proof of the underlying defect.
-- [ ] ISC-601: Anti: No "production-ready" claim with unresolved design-side defects (external blockers must be classified, not ignored).
+- [x] ISC-598: Anti: No GHL wiring, TCPA mechanics, license rendering, REALTOR®/MLS swap, Spanish hreflang, lead magnet, CMS install, color/font addition, glassmorphism, gradient borders touched.
+- [x] ISC-599: Anti: No claim of `model_reasoning_effort=max` — `xhigh` is the highest variant accepted by codex-cli 0.129.0.
+- [x] ISC-600: Anti: No Phase 4 fixes shipped without DevTools-computed-style proof of the underlying defect.
+- [x] ISC-601: Anti: No "production-ready" claim with unresolved design-side defects (external blockers must be classified, not ignored).
 
 ### Antecedent
-- [ ] ISC-602: Antecedent: principal opening live staging on a real device perceives narrow-mobile readability matches mid-viewport polish (no obvious clipping, no obviously-illegible text), and the scorecard reads as honest about what remains.
+- [x] ISC-602: Antecedent: principal opening live staging on a real device perceives narrow-mobile readability matches mid-viewport polish (no obvious clipping, no obviously-illegible text), and the scorecard reads as honest about what remains.

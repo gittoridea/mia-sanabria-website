@@ -2,7 +2,57 @@
 
 Version-by-version evolution of `WEBSITE_PRODUCTION_LOOP_SKILL.md`. Updated each cycle by the SkillImprovementLoop workflow.
 
-## v0.3.3 — 2026-05-09 (Mia Sanabria cycle 11 — final-mile rendered design QA + footer trust-strip + F6 closure)
+## v0.3.4 — 2026-05-10 (Mia Sanabria cycle 12 — production-readiness closure + Cato early + DevTools 320/375 + median-of-N + scorecard)
+
+**Driver:** Cycle 12 surfaced four structural lessons:
+
+1. **CDP DOM probe is the right escalation when strict-pixel reviewer flags a clip that 3 within-cycle iterations failed to resolve.** Cycle 11 ran three within-cycle iterations on a 320 EHO label clip without visual resolution despite confirmed CSS in HTML + bundle. The next probe is computed-style + bounding-box via `chrome --headless --remote-debugging-port` + Bun WebSocket CDP client, NOT another CSS iteration. Cycle 12 wrote `/tmp/cdp-probe-mia.ts` (computed style + bbox + Range.getClientRects) and `/tmp/cdp-fullpage-mia.ts` (full-page `Page.captureScreenshot { captureBeyondViewport: true }`) — both reproducible from any clean session.
+2. **Vision-model strict-pixel verdict can be a false positive on multi-line wrapped uppercase letterspaced text.** GPT-5.5's "320 EHO clip" verdict in Cycle 11 was a perception artifact: the 2-line wrap of "EQUAL HOUSING" / "OPPORTUNITY" with Cinzel + tracking-[0.16em] visually approximates a single-line clip pattern in low-resolution thumbnail review. DOM evidence + full-page screenshot agreed: no clip. Hard-stop discipline applied; no source change shipped for a falsified defect.
+3. **Cato deferral has a redemption ceiling.** Three consecutive Cycles (9, 10, 11) tombstoned Cato cross-vendor audit with documented rationale. Cycle 12 ran Cato early (Phase 1) and used its findings to shape the rest of the cycle, not append at the end. F-04 (next/image fill mode false positives in audit:completeness) became Phase 6's audit hardening; F-01/F-02 (flex min-w hypothesis) was empirically falsified by DevTools probe and documented as future defensive pattern. The doctrine — Algorithm v6.4.0 Rule 2a — is binding at E5; deferral pattern should not normalize.
+4. **Production-readiness scorecard separates design from external blockers.** Cycle 12 produced a 24-axis scorecard with explicit taxonomy (PASS / PARTIAL / BLOCKED-BY-PRINCIPAL / BLOCKED-BY-GHL / BLOCKED-BY-LEGAL/COMPLIANCE / REVIEW). The cycle's verdict is "production-ready as a design surface; pending external gates for .com cutover" — not "production-ready" full-stop. This ends the cycle-vs-launch-readiness conflation that Cycles 1-11 were drifting toward.
+
+The fix shipped: (a) `scripts/audit-hero-pixel-contrast.ts` median-of-N hardening (Forge — 164 insertions); (b) `scripts/audit-completeness.ts` next/image fill detection (eliminated 27 of 28 false-positive image-dim WARNs); (c) `package.json` audit-script split (`audit:hero-contrast` fast at samples=1, `audit:hero-contrast:stable` at samples=3); (d) 9 new cycle docs incl. CYCLE_12_DEVTOOLS_320_375_INVESTIGATION.md, CYCLE_12_PRODUCTION_READINESS_SCORECARD.md, CYCLE_12_PHASE_4_HARDSTOP.md.
+
+### Added
+
+- **HARD gate #24 — CDP-probe-before-CSS-iteration enforcement (NEW v0.3.4).** When a strict-pixel reviewer (GPT-5.5 / Cato / etc.) flags a "clip" residual and one within-cycle iteration fails to visually resolve it despite confirmed CSS in HTML + bundle, the NEXT probe MUST be CDP `getComputedStyle` + `getBoundingClientRect` + `Range.getClientRects()` + full-page `Page.captureScreenshot { captureBeyondViewport: true }`. Two channels (DOM + screenshot) MUST be triangulated before any further CSS iteration. Reference scripts: `/tmp/cdp-probe-mia.ts` + `/tmp/cdp-fullpage-mia.ts` (both reproducible from any clean session). Encoded in `Workflows/StrictPixelClipEscalation.md` (NEW v0.3.4).
+- **HARD gate #25 — Cato deferral redemption (NEW v0.3.4).** Cato cross-vendor audit may be tombstoned at most TWICE consecutively at E5; the third cycle MUST run Cato (or document an unrecoverable specialist-probe failure as a doctrine-level escalation, not a cycle-level decision). Cycle 12 redeemed three deferrals; future cycles should hold the line.
+- **HARD gate #26 — Production-readiness scorecard (NEW v0.3.4).** When the cycle's mission language includes "launch readiness" / "production readiness" / "ready for cutover", the cycle MUST produce a per-axis scorecard with the 6-status taxonomy (PASS / PARTIAL / BLOCKED-BY-PRINCIPAL / BLOCKED-BY-GHL / BLOCKED-BY-LEGAL/COMPLIANCE / REVIEW). The scorecard separates design-side defects from external blockers. Reference: `docs/CYCLE_12_PRODUCTION_READINESS_SCORECARD.md`.
+- **`Workflows/StrictPixelClipEscalation.md` (NEW v0.3.4)** — 5-step escalation: (1) confirm CSS in HTML + bundle; (2) one within-cycle CSS iteration; (3) on second-iteration failure, write CDP probe scripts + extract computed style + bbox + Range.getClientRects + full-page screenshot; (4) verdict per element (real clipping / screenshot illusion / probe limitation); (5) HARD-STOP with doc if verdict is screenshot illusion or probe limitation.
+- **3 new gotchas (#33–#35) — v0.3.4:**
+  - **#33 — Vision-model strict-pixel verdict on multi-line wrapped uppercase letterspaced text can be a false positive.** Cinzel-uppercase + tracking-[0.16em] + 2-line wrap visually approximates single-line clip pattern in low-res thumbnail review. Always verify with `Range.getClientRects()` (returns per-line fragment rects) before iterating CSS.
+  - **#34 — `audit:completeness` `images.dimsAltPlaceholder` must detect `data-nimg="fill"` to avoid false-positive WARNs.** Next/image fill mode parents are `position:relative` with explicit dims; the rendered `<img>` is `position:absolute` and has no width/height by Next convention. Two signals identify fill mode: `data-nimg="fill"` (canonical) OR inline style `position:absolute + height:100% + width:100%` (defense-in-depth).
+  - **#35 — `audit:hero-contrast` mutation sentinel must survive median-of-N.** When adding sample aggregation, the mutation injection (panel-color collapse) must still produce ≥10% non-PASS rows across N samples — verified by running `--mutation --samples=N` and confirming exit 1 with `0 PASS` count. Forge ship verification: `--mutation --samples=2` → `0 PASS · 5 WARN · 0 FAIL · exit 1` ✓.
+- **Per-cycle artifact — `CYCLE_<N>_PRODUCTION_READINESS_SCORECARD.md`** — when cycle close approaches `.com` cutover decision territory, the scorecard captures the 24-axis classification + remaining gap + owner/blocker per axis. Companion to PRINCIPAL_DECISION_REGISTER.
+
+### Changed
+
+- **Hard gate count:** 23 → 26.
+- **Workflow §1 (Cycle entry):** specialist-prereq probe must be JSON-format (`bun ~/.claude/PAI/TOOLS/SpecialistProbe.ts --json`); previous shell-by-shell probe pattern is preserved as fallback only.
+- **Workflow §6 (Strict-pixel review escalation):** add the 5-step escalation flow (gate #24 + Workflows/StrictPixelClipEscalation.md).
+- **Workflow §8 (Cycle close + handoff):** if the cycle approached .com-launch-readiness language, the close MUST include a production-readiness scorecard (gate #26).
+
+### Process improvements caught this cycle (v0.3.4)
+
+- **Cato re-dispatch on first-attempt termination.** Cycle 12 first Cato dispatch terminated mid-investigation at 35s / 11 tool uses without verdict. Re-dispatch with concentrated brief + bundled context (vs file-discovery turn budget) returned schema-enforced verdict in 106s with 4 tool uses. Pattern: when Cato terminates without structured verdict on the LAST line, re-dispatch with minimal-read brief + bundled-context + explicit "verdict in your FIRST response."
+- **Forge background dispatch with disjoint scope is the right pattern for audit-script hardening.** Cycle 12 ran Forge in background (median-of-N implementation in `scripts/audit-hero-pixel-contrast.ts`) while main thread did DevTools investigation, audit hardening on `scripts/audit-completeness.ts`, and doc writing. Strict scope discipline (script-only) preserved per `feedback_forge_race_scope_drift.md`. Wall-clock save: ~10 min vs sequential.
+- **CDP probe scripts are reusable substrate.** `/tmp/cdp-probe-mia.ts` + `/tmp/cdp-fullpage-mia.ts` apply to any next-step site that needs computed-style + bbox evidence at narrow viewports. They should be moved into `~/.claude/PAI/TOOLS/CDPProbe.ts` as a per-skill substrate or into the website-skill's reference toolkit. Cycle 13 candidate.
+- **Predeploy GPT-5.5 acceptance is faster than LIVE acceptance.** Cycle 12 predeploy GPT-5.5 returned PASS in ~60s with 62k tokens. The model reviewed bundled context (cycle docs + audit summaries + scorecard); it didn't need full file reads. The predeploy phase is now the right place to catch issues that the LIVE phase would surface anyway, BEFORE deploy commit chain.
+
+### Limitations of v0.3.3 closed in v0.3.4
+
+- v0.3.3 #21 (probe-viewport sanity) was an `audit:rendered` SKIP gate; v0.3.4 #24 generalizes the principle: any time a strict-pixel reviewer surfaces a defect that survives one CSS iteration, CDP probe is mandatory before the second iteration.
+- v0.3.3 #20-#22 noted that compliance-asset polarity is the right gate for static asset visibility but didn't address dynamic flex-children behavior at narrow viewports. v0.3.4 records Cato's `min-w-0` flex-children defensive pattern as a future hardening (apply when DOM probe shows real overflow; do not apply preemptively).
+- v0.3.3 audit:completeness 2 carry-forward WARN had no classification rule. v0.3.4 #34 adds the next/image fill detection rule; the second WARN (mailto-fallback) is now properly classified as BLOCKED-BY-GHL in the scorecard.
+
+### Limitations remaining (Cycle 13 candidates)
+
+- **Retry-on-anomaly hero-contrast sampling.** Cato's stronger-than-median-of-N proposal: track per-(route, viewport) historical mean in `reports/audit-hero-pixel-contrast-history.jsonl`; on single-pass FAIL where historical mean is high, mark `FLAKE_SUSPECT` (not FAIL) → re-run with `VTB_MS *= 2` + `await document.fonts.ready` + save the first FAIL screenshot to `reports/flake-evidence/<route>-<viewport>-<ts>.png`. Estimated 2-4h to implement; ship in v0.3.5.
+- **CDP probe scripts → permanent substrate.** Move `/tmp/cdp-probe-mia.ts` + `/tmp/cdp-fullpage-mia.ts` into `~/.claude/PAI/TOOLS/CDPProbe.ts` (skill-level) or `scripts/` (project-level) and codify the API.
+- **Production-readiness scorecard automation.** v0.3.4 ships the manual format; future cycles could automate axis-status-detection from existing audit signals (most PASS axes are already audit-backed).
+- **Lighthouse pass before .com cutover.** Mission spec deferred Lighthouse this cycle; future cycle should run mobile + desktop Lighthouse against live staging and capture LCP / CLS / TBT.
+
+
 
 **Driver:** Cycle 11 surfaced two structural lessons:
 

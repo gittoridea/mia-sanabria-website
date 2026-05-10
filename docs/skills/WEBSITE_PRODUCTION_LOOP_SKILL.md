@@ -1,24 +1,26 @@
 ---
 name: WebsiteProductionLoop
 description: Production-grade client-website production cycle skill — combines a fresh baseline + Codex Spark / multi-family expert lanes + missing-image and brand-consistency sentinels + live-staging verification gate + compliance severity taxonomy + principal-decision register + skill-improvement loop. Composes as a domain skill INSIDE the PAI Algorithm v6.4.0 (does not replace the Algorithm). USE WHEN production cycle on a client website, build a new client site, level up an existing client site, audit-and-improve, pre-cutover hardening, regression check, or "make this site world-class". NOT FOR one-shot single-file fixes (use PAI Algorithm directly), code-only refactors with no UX/SEO/AEO/compliance dimension (use Forge or Engineer directly), discovery / research / ideation phases (use Research, Ideate, BeCreative), or anything pre-fact-ledger.
-version: 0.3.3
+version: 0.3.4
 status: in-use — refined each cycle by the SkillImprovementLoop workflow
 authored: 2026-05-08
 authored_from_cycles: Mia Sanabria cycles 3 + 4 (Codex-Spark expert audits)
-last_updated: 2026-05-09
-last_updated_cycle: 11 (footer trust-strip uniform monochrome + compliance-asset polarity gate + F6 honest-skip enforcement)
-hard_gates: 23
+last_updated: 2026-05-10
+last_updated_cycle: 12 (production-readiness closure — Cato early + DevTools 320/375 + median-of-N + scorecard)
+hard_gates: 26
 soft_gates: 3
-new_in_v033:
-  - "HARD gate #22 — Compliance-asset polarity inspection (sharp pixel-mean + alpha-mean) BEFORE writing trust-strip CSS"
-  - "HARD gate #23 — F6 honest-skip enforcement: viewport-mismatch SKIP gate executable in audit-rendered-visual.ts"
-  - "3 new gotchas (#30-#32): inline-span max-w no-op without display:block; tracked Cinzel uppercase defeats overflow-wrap-anywhere; brightness-0 invert opacity-90 luxury monochrome recipe"
-  - "Per-cycle artifact CYCLE_<N>_FOOTER_LOGO_TRUST_STRIP_AUDIT.md when trust-strip is touched"
-  - "Within-cycle iteration discipline: max 1 iteration on same residual; document residual for next cycle"
-known_limitations_v033:
-  - "Within-cycle iterations on EHO label clip at 320 didn't visually resolve despite correct CSS classes shipping; Cycle 12 needs DevTools computed-style inspection"
-  - "audit:hero-contrast probe-flake on rare sample landings on light hero-image regions (median-of-3 hardening queued)"
-  - "Cato cross-vendor audit deferred 3 consecutive cycles; Cycle 12 must run"
+new_in_v034:
+  - "HARD gate #24 — CDP-probe-before-CSS-iteration enforcement: when strict-pixel reviewer flags a clip and one CSS iteration fails, next probe is CDP getComputedStyle + getBoundingClientRect + Range.getClientRects + full-page Page.captureScreenshot (not another CSS iteration)"
+  - "HARD gate #25 — Cato deferral redemption: at most TWO consecutive E5 deferrals; third cycle MUST run Cato"
+  - "HARD gate #26 — Production-readiness scorecard mandatory when cycle invokes 'launch readiness' / 'production readiness' / 'cutover'; 6-status taxonomy (PASS / PARTIAL / BLOCKED-BY-PRINCIPAL / BLOCKED-BY-GHL / BLOCKED-BY-LEGAL/COMPLIANCE / REVIEW)"
+  - "3 new gotchas (#33-#35): vision-model strict-pixel verdict false-positive on multi-line wrapped uppercase letterspaced text; audit:completeness must detect data-nimg='fill' next/image mode; audit:hero-contrast mutation sentinel must survive median-of-N"
+  - "Workflows/StrictPixelClipEscalation.md (NEW v0.3.4) — 5-step escalation flow for strict-pixel clip residuals"
+  - "Per-cycle artifact CYCLE_<N>_PRODUCTION_READINESS_SCORECARD.md when cycle approaches cutover"
+known_limitations_v034:
+  - "audit:hero-contrast retry-on-anomaly (Cato F-03 strictly stronger than median-of-N) deferred to v0.3.5"
+  - "CDP probe scripts at /tmp/cdp-probe-mia.ts + /tmp/cdp-fullpage-mia.ts are session-scoped — should move to ~/.claude/PAI/TOOLS/CDPProbe.ts as permanent substrate (Cycle 13)"
+  - "Production-readiness scorecard is manually authored — future cycle could automate axis-status detection from existing audit signals"
+  - "Lighthouse mobile/desktop pass deferred from Cycle 12; mandatory before .com cutover"
 upstream_skill: ~/.claude/skills/CreateSkill (UpdateSkill workflow)
 companion_docs:
   changelog: WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md
