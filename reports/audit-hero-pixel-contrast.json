@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-10T03:12:55.825Z",
+  "generated": "2026-05-10T03:32:07.946Z",
   "mode": "local",
   "mutation": false,
   "base": "http://127.0.0.1:4173",
@@ -502,8 +502,8 @@
     {
       "route": "/markets/victoria-park/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.74,
-      "meanEdgeContrast": 10.17,
+      "meanGlyphContrast": 5.62,
+      "meanEdgeContrast": 4.63,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"

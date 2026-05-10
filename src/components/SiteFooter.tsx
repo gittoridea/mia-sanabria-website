@@ -194,7 +194,7 @@ function FooterTrustMark({
   return (
     <div className="flex flex-col items-center gap-3 text-center lg:flex-row lg:text-left">
       <Image src={src} alt={alt} width={width} height={height} className={imageClassName} />
-      <span className="font-display text-[10px] uppercase tracking-[0.3em] text-cream-200/80">
+      <span className="max-w-[12rem] break-words font-display text-[10px] uppercase tracking-[0.18em] text-cream-200/80 [overflow-wrap:anywhere] min-[360px]:tracking-[0.22em] min-[375px]:max-w-none min-[375px]:tracking-[0.3em]">
         {label}
       </span>
     </div>

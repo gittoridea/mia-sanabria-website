@@ -1,6 +1,6 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T03:12:55.825Z
+**Generated:** 2026-05-10T03:32:07.946Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
@@ -63,7 +63,7 @@
 | `/markets/victoria-park/` | 320x568 | 15.22 | 9.12 | 1201 | 800 | ✅ PASS |  |
 | `/markets/victoria-park/` | 375x812 | 15.22 | 9.12 | 1201 | 800 | ✅ PASS |  |
 | `/markets/victoria-park/` | 768x1024 | 15.57 | 10.12 | 1500 | 800 | ✅ PASS |  |
-| `/markets/victoria-park/` | 1280x800 | 15.74 | 10.17 | 1500 | 800 | ✅ PASS |  |
+| `/markets/victoria-park/` | 1280x800 | 5.62 | 4.63 | 1500 | 800 | ✅ PASS |  |
 | `/markets/victoria-park/` | 1440x900 | 15.79 | 10.22 | 1500 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 320x568 | 15.57 | 9.00 | 959 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 375x812 | 15.57 | 9.00 | 959 | 800 | ✅ PASS |  |
