@@ -43,9 +43,10 @@ export default function MarketBriefThankYouPage() {
             newsletter, and it is not automated.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
-            Mia will follow up personally with the briefing for the markets you indicated. There is
-            no subscription mechanic and no opt-in confirmation step; the conversation simply
-            begins.
+            Mia will follow up personally with one private response on the markets you indicated.
+            There is no subscription mechanic; if you would like to receive ongoing market notes
+            after that first conversation, the request is handled separately and explicitly — never
+            as an automatic enrollment from this form.
           </p>
           <h3 className="mt-10 font-display text-2xl text-navy-800">
             While you wait.

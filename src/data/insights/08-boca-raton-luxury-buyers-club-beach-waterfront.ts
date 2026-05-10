@@ -91,7 +91,7 @@ export const POST_08: InsightPost = {
     {
       question: "Is Boca Raton in Broward County or Palm Beach County?",
       answer:
-        "Palm Beach County. Boca Raton sits in southern Palm Beach County, north of the Broward County line. Buyers comparing Boca with Eastern Fort Lauderdale waterfront should understand the county distinction, which affects municipal services, taxation, and school-district administration.",
+        "Palm Beach County. Boca Raton sits in southern Palm Beach County, north of the Broward County line. Buyers comparing Boca with Eastern Fort Lauderdale waterfront should understand the county distinction, which affects municipal services and taxation.",
     },
     {
       question: "Does Mia represent specific country clubs?",

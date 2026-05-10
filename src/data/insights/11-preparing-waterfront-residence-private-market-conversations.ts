@@ -92,7 +92,7 @@ export const POST_11: InsightPost = {
     },
   ],
   whatMiaClarifies:
-    "Mia handles the private-market preparation directly with the seller — the documentation assembly, the visual brief discipline, the introduction-strategy plan, and the management of the private window. She does not claim a curated private list of buyers; she does maintain working brokerage relationships across the markets she serves, and the private path is what makes those relationships productive for the right residence. The pre-arranged conversion to active listing if needed is part of the strategy from day one.",
+    "Mia handles the private-market preparation directly with the seller — the documentation assembly, the visual brief discipline, the introduction-strategy plan, and the management of the private window. She does not claim MLS pre-market access or a curated private list of buyers; the pattern depends on individual broker willingness to share what their clients are preparing to sell. She does maintain working brokerage relationships across the markets she serves, and the private path is what makes those relationships productive for the right residence. The pre-arranged conversion to active listing if needed is part of the strategy from day one.",
   faqs: [
     {
       question: "Is a private-market introduction always slower than an active MLS listing?",

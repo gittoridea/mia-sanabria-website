@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Twelve evergreen briefs on the SE Florida luxury and waterfront market — buyer guides, market comparisons, and pre-listing positioning by Mia Sanabria.",
   alternates: { canonical: `${SITE.url}/insights/` },
   openGraph: {
-    title: "Insights — Mia Sanabria, Fort Lauderdale REALTOR®",
+    title: "Insights — Mia Sanabria, REALTOR® · SE Florida Luxury & Waterfront",
     description:
       "A twelve-part evergreen guide to the Southeast Florida luxury and waterfront market. Read in any order.",
     url: `${SITE.url}/insights/`,

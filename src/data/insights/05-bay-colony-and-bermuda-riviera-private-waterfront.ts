@@ -5,7 +5,7 @@ export const POST_05: InsightPost = {
   title:
     "Bay Colony and Bermuda Riviera: Private Waterfront Living North of Sunrise Boulevard",
   excerpt:
-    "Two of Eastern Fort Lauderdale's most private waterfront enclaves, both north of Sunrise Boulevard — Bay Colony's gated peninsula and Bermuda Riviera's mid-century waterfront character. How they compare for the privacy-first buyer.",
+    "Two of Eastern Fort Lauderdale's quieter waterfront enclaves, both north of Sunrise Boulevard — Bay Colony's gated peninsula and Bermuda Riviera's mid-century waterfront character. How they compare for the privacy-first buyer.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
   topicMonth: "May Discovery",
@@ -44,7 +44,7 @@ export const POST_05: InsightPost = {
   },
   seoTitle: "Bay Colony and Bermuda Riviera: Private Waterfront Enclaves",
   seoDescription:
-    "Bay Colony and Bermuda Riviera — Eastern Fort Lauderdale's most private waterfront enclaves. Architecture, dockage, and lot character compared.",
+    "Bay Colony and Bermuda Riviera — Eastern Fort Lauderdale's quieter waterfront enclaves. Architecture, dockage, and lot character compared.",
   ogImage: "/og-default.jpg",
   aeoQuestion:
     "What makes Bay Colony and Bermuda Riviera distinctive among Eastern Fort Lauderdale waterfront enclaves?",

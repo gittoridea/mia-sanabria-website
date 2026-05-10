@@ -94,7 +94,7 @@ export const POST_12: InsightPost = {
       heading: "Target price band, ideal close timing, and constraints.",
       paragraphs: [
         "The brief should commit to a price band with an explicit ceiling and floor. The ceiling is the harder commitment — it should be the price the buyer is willing to actually pay, not the aspirational price they tell strangers. The floor is the lower bound below which the residence is unlikely to be a luxury candidate in the chosen market.",
-        "Ideal close timing and any timing constraints should be explicit — visa or relocation deadlines, lease expirations, school-year considerations (where relevant and not used as a steering input), market-cycle preferences. These commitments allow Mia to manage the search pace honestly.",
+        "Ideal close timing and any timing constraints should be explicit — visa or relocation deadlines, lease expirations, buyer-stated personal-calendar windows, market-cycle preferences. These commitments allow Mia to manage the search pace honestly.",
       ],
     },
   ],

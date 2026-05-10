@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-10T18:31:54.935Z",
+  "generated": "2026-05-10T18:47:31.387Z",
   "summary": {
     "pass": 535,
     "warn": 0,
@@ -1258,7 +1258,7 @@
       "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
       "check": "seo.descriptionLength",
       "status": "PASS",
-      "detail": "143 chars"
+      "detail": "138 chars"
     },
     {
       "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
@@ -2098,7 +2098,7 @@
       "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
       "check": "wordCount.bodyMin600",
       "status": "PASS",
-      "detail": "1177 words (min 600)"
+      "detail": "1175 words (min 600)"
     },
     {
       "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
@@ -2908,7 +2908,7 @@
       "slug": "preparing-waterfront-residence-private-market-conversations",
       "check": "wordCount.bodyMin600",
       "status": "PASS",
-      "detail": "1120 words (min 600)"
+      "detail": "1140 words (min 600)"
     },
     {
       "slug": "preparing-waterfront-residence-private-market-conversations",
@@ -3184,7 +3184,7 @@
       "slug": "private-buyer-brief-defining-the-search",
       "check": "wordCount.bodyMin600",
       "status": "PASS",
-      "detail": "1162 words (min 600)"
+      "detail": "1154 words (min 600)"
     },
     {
       "slug": "private-buyer-brief-defining-the-search",
