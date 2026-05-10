@@ -8,6 +8,12 @@ export const POST_04: InsightPost = {
     "Three markets that share Fort Lauderdale's deepwater finger-isle character — and three different buyer pools. How experienced buyers separate them on water access, lot orientation, and lifestyle.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2026-04-13",
+  editorialMonthLabel: "Evergreen Brief · April",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/seven-isles.jpg",
+  heroImageAlt: "Seven Isles deepwater finger isle, Fort Lauderdale",
   topicMonth: "April Search",
   seasonalFocus: "Comparative neighborhood reads in active spring search",
   marketCycleMonth: 4,
@@ -39,7 +45,7 @@ export const POST_04: InsightPost = {
   seoTitle: "Las Olas Isles vs. Seven Isles vs. Harbor Beach",
   seoDescription:
     "How buyers compare Fort Lauderdale's three deepwater finger-isle markets — Las Olas Isles, Seven Isles, Harbor Beach — on access, dockage, and feel.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/las-olas-vs-seven-isles-vs-harbor-beach.jpg",
   aeoQuestion:
     "How do Las Olas Isles, Seven Isles, and Harbor Beach compare for waterfront buyers?",
   aeoAnswer:

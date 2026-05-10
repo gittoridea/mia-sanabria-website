@@ -8,6 +8,12 @@ export const POST_02: InsightPost = {
     "On a waterfront residence, four numbers matter more than any photograph — dockage dimensions, seawall age, bridge clearance, and route-to-inlet. The buyer should verify each on the address before writing.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2026-02-09",
+  editorialMonthLabel: "Evergreen Brief · February",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/harbor-beach.jpg",
+  heroImageAlt: "Deepwater dockage and seawall, Harbor Beach Fort Lauderdale",
   topicMonth: "February Diligence",
   seasonalFocus: "Pre-purchase diligence on a specific waterfront address",
   marketCycleMonth: 2,
@@ -39,7 +45,7 @@ export const POST_02: InsightPost = {
   seoTitle: "Waterfront Diligence: Dockage, Seawalls, Route-to-Inlet",
   seoDescription:
     "Dockage, seawall age, bridge clearance, route-to-inlet — four numbers every waterfront buyer should verify on the address before writing an offer.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/dockage-seawalls-bridge-clearance-route-to-inlet.jpg",
   aeoQuestion:
     "What dockage and seawall details should a buyer verify before purchasing a Fort Lauderdale waterfront home?",
   aeoAnswer:

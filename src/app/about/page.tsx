@@ -25,21 +25,25 @@ export const metadata: Metadata = {
   },
 };
 
+// Cycle 16 — softened to remove unverified "deliberately small client list each
+// quarter" claim per CYCLE_16_ABOUT_CREDENTIALS_AND_SERVICE_AREAS_AUDIT.md.
+// Substituted with engagement-by-engagement language that describes the practice
+// without overclaiming a specific quarterly cap.
 const ABOUT_FAQ = [
   {
     question: "How does Mia structure her practice?",
     answer:
-      "Mia's practice is grounded in long relationships rather than transaction count — a deliberately small client list so every engagement receives direct attention.",
+      "Mia's practice is grounded in long relationships rather than transaction count. Each engagement receives direct attention from first conversation through closing — preparation, current comparable sales, and consistent communication on the residence in question.",
   },
   {
     question: "Which markets does Mia know most deeply?",
     answer:
-      "Fort Lauderdale's Las Olas Isles, Harbor Beach, Victoria Park, and Coral Ridge are her home turf. She represents actively across Boca Raton and Delray Beach.",
+      "Fort Lauderdale's deepwater Eastern neighborhoods — Las Olas Isles, Harbor Beach — alongside in-town markets like Victoria Park and Coral Ridge. She represents actively across Boca Raton and Delray Beach.",
   },
   {
     question: "What types of representation does Mia accept?",
     answer:
-      "Buyer representation, seller representation, investment-portfolio acquisition, and selective relocation work. Mia keeps a deliberately small client list so every engagement receives direct attention.",
+      "Buyer representation, seller representation, investment-portfolio acquisition, and selective relocation work. Every engagement begins with a private conversation about timeline, criteria, and the residence in mind.",
   },
 ];
 
@@ -66,7 +70,7 @@ export default function AboutPage() {
 
       <AnswerFirst
         question="How does Mia Sanabria represent luxury and waterfront clients?"
-        answer="Mia represents a deliberately small client list each quarter, with personal attention at every showing, every consultation, and every closing. Her work concentrates on Eastern Fort Lauderdale's deepwater isles and in-town neighborhoods, plus adjacent Boca Raton and Delray Beach. Engagements start with a private brief — timeline, architectural preference, dock or beach access, lifestyle — long before the first showing. Listings are positioned with editorial photography and disciplined pricing built from current comparables on the specific street, building, or block. Every transaction is scaffolded by experienced title, escrow, financing, and inspection partners, and Mia stays present across each milestone."
+        answer="Mia represents buyers and sellers across Southeast Florida's luxury and waterfront markets — concentrated in Eastern Fort Lauderdale's deepwater isles and in-town neighborhoods, plus adjacent Boca Raton and Delray Beach. Engagements start with a private brief — timeline, architectural preference, dock or beach access, lifestyle — long before the first showing. Listings are positioned with editorial photography and disciplined pricing built from current comparables on the specific street, building, or block. Every transaction is scaffolded by experienced title, escrow, financing, and inspection partners, and Mia stays present from first conversation through closing."
         relatedMarkets={["las-olas-isles", "harbor-beach", "boca-raton"]}
         cta={{ href: "/contact/", label: "Begin a private conversation" }}
         background="cream-tint"
@@ -108,20 +112,21 @@ export default function AboutPage() {
             </h2>
             <p>
               Mia Sanabria represents buyers, sellers, and investors across Southeast Florida's most
-              coveted coastal markets. Her practice is structured around a deliberately small client
-              list each quarter — every engagement receives personal attention, direct access, and
-              full presence at every showing, every consultation, every closing table.
+              coveted coastal markets. Her practice is structured around long client relationships —
+              direct attention from first conversation through closing, with consistent presence at
+              showings, consultations, and the closing table itself.
             </p>
             <p>
               Her work centers on the residence as a primary cultural and financial object. Every
-              listing is positioned with editorial photography, copywriting, and global distribution.
-              Every acquisition begins with a private conversation about timeline, architectural
-              preference, and lifestyle — long before the first showing is scheduled.
+              listing is positioned with editorial photography, copywriting, and disciplined
+              market preparation. Every acquisition begins with a private conversation about timeline,
+              architectural preference, and lifestyle — long before the first showing is scheduled.
             </p>
             <p>
-              She knows Fort Lauderdale's deepwater Las Olas Isles, Boca Raton's country-club
-              neighborhoods, and Delray Beach — and the brokerage relationships that quietly move
-              desirable residences across Eastern Southeast Florida.
+              She represents actively across Fort Lauderdale's deepwater Las Olas Isles, Boca Raton's
+              country-club neighborhoods, and Delray Beach. Mia maintains brokerage relationships
+              across Eastern Southeast Florida; access to private or pre-market residences varies by
+              market and timing.
             </p>
           </div>
         </div>

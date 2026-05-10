@@ -74,20 +74,64 @@ export const ALL_MARKET_SLUGS = [
 
 export type MarketSlug = (typeof ALL_MARKET_SLUGS)[number];
 
+/**
+ * Cycle 16 — Featured Markets discriminator.
+ *
+ * Two related but separate concepts:
+ *   - FEATURED_SET — the SET of markets considered "featured" (drives audit,
+ *     index emphasis, and any "featured" sub-collection). Cycle 16 expanded from
+ *     8 → 12 to admit palm-beach + lighthouse-point + coral-ridge + rio-vista
+ *     per principal direction on homepage first-page composition.
+ *   - HOMEPAGE_FEATURED_ORDER — the EXPLICIT ORDERED LIST used by the homepage
+ *     Featured Markets pager. Principal locked the first 6 (Decision Register
+ *     Cycle 16 §1). Order is intentional, not array-order-coincidental.
+ */
 const FEATURED_SET: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
   "fort-lauderdale",
+  "boca-raton",
+  "palm-beach",
+  "victoria-park",
+  "lighthouse-point",
+  "delray-beach",
   "las-olas-isles",
   "harbor-beach",
-  "victoria-park",
-  "boca-raton",
-  "delray-beach",
   "bay-colony",
   "bermuda-riviera",
+  "coral-ridge",
+  "rio-vista",
 ]);
 
 export const FEATURED_MARKETS: ReadonlyArray<MarketSlug> = ALL_MARKET_SLUGS.filter(
   (slug) => FEATURED_SET.has(slug)
 );
+
+/**
+ * Cycle 16 — Homepage Featured Markets pager order (12 slugs, 2 pages of 6).
+ *
+ * First page (principal-locked, Decision Register §1):
+ *   Fort Lauderdale, Boca Raton, Palm Beach, Victoria Park, Lighthouse Point, Delray Beach.
+ *
+ * Second page (Cycle 16 editorial curation by cohort/familiarity):
+ *   Las Olas Isles, Harbor Beach, Bay Colony, Bermuda Riviera, Coral Ridge, Rio Vista.
+ *
+ * Audit:featured-markets enforces this order matches principal direction.
+ */
+export const HOMEPAGE_FEATURED_ORDER: ReadonlyArray<MarketSlug> = [
+  "fort-lauderdale",
+  "boca-raton",
+  "palm-beach",
+  "victoria-park",
+  "lighthouse-point",
+  "delray-beach",
+  "las-olas-isles",
+  "harbor-beach",
+  "bay-colony",
+  "bermuda-riviera",
+  "coral-ridge",
+  "rio-vista",
+];
+
+export const HOMEPAGE_FEATURED_PAGE_SIZE = 6 as const;
 
 /* ─────────────────────────────────────────────────────────────────────────
  * Cycle 14 — canonical route + image-path helpers (DRY refactor).

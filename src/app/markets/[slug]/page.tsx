@@ -9,6 +9,7 @@ import { PlaceSchema } from "@/components/schema/PlaceSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
+import { FortLauderdaleV2Page } from "@/components/markets/FortLauderdaleV2";
 import { MARKETS, getMarket, getNeighborhoodSlugs, type Market } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
@@ -88,6 +89,19 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
   const relatedHeading = allEasternFTL
     ? "Related Eastern Fort Lauderdale neighborhoods."
     : "Continue your tour.";
+
+  // Cycle 16 — Fort Lauderdale gets the gold-standard V2 page. The structural
+  // pattern in FortLauderdaleV2Page becomes the rollout template for other
+  // featured markets in subsequent cycles (see CYCLE_16_FEATURED_MARKET_ROLLOUT_PROCESS.md).
+  if (market.slug === "fort-lauderdale") {
+    return (
+      <FortLauderdaleV2Page
+        market={market}
+        relatedMarkets={relatedMarkets}
+        relatedHeading={relatedHeading}
+      />
+    );
+  }
 
   return (
     <>

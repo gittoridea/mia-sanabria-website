@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-05-10T20:58:59.763Z",
+  "summary": {
+    "pass": 12,
+    "warn": 0,
+    "fail": 0,
+    "skip": 0
+  },
+  "results": [
+    {
+      "id": "about.forbidden.deliberately_small_client_list",
+      "category": "Accuracy",
+      "description": "About page does not contain forbidden phrase \"deliberately small client list\"",
+      "status": "PASS",
+      "evidence": "phrase absent"
+    },
+    {
+      "id": "about.forbidden.global_distribution",
+      "category": "Accuracy",
+      "description": "About page does not contain forbidden phrase \"global distribution\"",
+      "status": "PASS",
+      "evidence": "phrase absent"
+    },
+    {
+      "id": "about.forbidden.Klein_Morgan",
+      "category": "Accuracy",
+      "description": "About page does not contain forbidden phrase \"Klein Morgan\"",
+      "status": "PASS",
+      "evidence": "phrase absent"
+    },
+    {
+      "id": "about.forbidden.sunandbreeze",
+      "category": "Accuracy",
+      "description": "About page does not contain forbidden phrase \"sunandbreeze\"",
+      "status": "PASS",
+      "evidence": "phrase absent"
+    },
+    {
+      "id": "about.serviceArea.canonical",
+      "category": "Service area",
+      "description": "About page renders the three canonical service-area entries",
+      "status": "PASS",
+      "evidence": "Eastern Fort Lauderdale · Eastern Boca Raton · Eastern Delray Beach"
+    },
+    {
+      "id": "about.no.designations",
+      "category": "Credentials",
+      "description": "No unverified NAR designation names rendered",
+      "status": "PASS",
+      "evidence": "pattern not found"
+    },
+    {
+      "id": "about.no.yearsLicensed",
+      "category": "Credentials",
+      "description": "No unverified 'practicing since YYYY' rendered (experience.since is null)",
+      "status": "PASS",
+      "evidence": "pattern not found"
+    },
+    {
+      "id": "about.no.salesVolume",
+      "category": "Credentials",
+      "description": "No unverified sales-volume claim rendered",
+      "status": "PASS",
+      "evidence": "pattern not found"
+    },
+    {
+      "id": "about.no.awardClaims",
+      "category": "Credentials",
+      "description": "No unverified awards/ranking claim rendered",
+      "status": "PASS",
+      "evidence": "pattern not found"
+    },
+    {
+      "id": "about.no.testimonials",
+      "category": "Credentials",
+      "description": "No unverified testimonials section rendered",
+      "status": "PASS",
+      "evidence": "pattern not found"
+    },
+    {
+      "id": "about.license.notOnAbout",
+      "category": "License",
+      "description": "License # does not appear inside About <main>",
+      "status": "PASS",
+      "evidence": "license # absent from body (correctly lives on Footer + Terms)"
+    },
+    {
+      "id": "about.brokerage.lpt",
+      "category": "Brokerage",
+      "description": "About page attributes Mia to LPT Realty",
+      "status": "PASS",
+      "evidence": "LPT Realty present"
+    }
+  ]
+}

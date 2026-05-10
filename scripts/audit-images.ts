@@ -322,21 +322,25 @@ async function runAuditImages(): Promise<CheckResult[]> {
   // Cycle-5 §8 additions — featured-card image presence + hub-page hero image + public email consistency.
   // ───────────────────────────────────────────────────────────────────────
 
-  // (1) Homepage Featured Markets — every featured-card link must render an <img src="/markets/SLUG.jpg">.
+  // (1) Homepage Featured Markets — every visible card on page 1 of the pager
+  //     must render an <img src="/markets/SLUG.jpg"> in the prerendered HTML.
+  //     Cycle 16 — pager is client-rendered above page 1; only the first 6
+  //     (principal-locked HOMEPAGE_FEATURED_ORDER) need to render in static HTML.
+  //     Pages 2+ hydrate client-side and are not part of static-HTML coverage.
+  const { HOMEPAGE_FEATURED_ORDER, HOMEPAGE_FEATURED_PAGE_SIZE } = await import("../src/lib/mia");
   const homeHtml = await readFile(join(OUT_DIR, "index.html"), "utf-8").catch(() => "");
   const featuredImgs = [...homeHtml.matchAll(/src="\/markets\/([a-z-]+)\.jpg"/g)].map((m) => m[1]);
-  // Cycle 14 — DRY refactor: derived from `getFeaturedMarketSlugs()` in src/lib/mia.ts.
-  const expectedFeatured = [...getFeaturedMarketSlugs()];
-  const missingFeatured = expectedFeatured.filter((slug) => !featuredImgs.includes(slug));
+  const firstPageSlugs = [...HOMEPAGE_FEATURED_ORDER].slice(0, HOMEPAGE_FEATURED_PAGE_SIZE);
+  const missingFeatured = firstPageSlugs.filter((slug) => !featuredImgs.includes(slug));
   results.push({
     id: "images.homepageFeaturedCards",
     category: "Featured Markets",
-    description: "Homepage Featured Markets section renders an <img> for each of the 8 featured market cards",
+    description: `Homepage Featured Markets section renders an <img> for each of the ${HOMEPAGE_FEATURED_PAGE_SIZE} first-page featured market cards`,
     status: missingFeatured.length === 0 ? "PASS" : "FAIL",
     evidence:
       missingFeatured.length === 0
-        ? `all 8 featured cards render <img src="/markets/SLUG.jpg">`
-        : `${missingFeatured.length} featured cards missing img: ${missingFeatured.join(", ")}`,
+        ? `all ${HOMEPAGE_FEATURED_PAGE_SIZE} first-page featured cards render <img src="/markets/SLUG.jpg">`
+        : `${missingFeatured.length} first-page featured cards missing img: ${missingFeatured.join(", ")}`,
     details: missingFeatured.length ? { missingFeatured } : undefined,
   });
 

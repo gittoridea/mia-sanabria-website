@@ -35,6 +35,23 @@ export type InsightCategory =
   | "valuation"
   | "diligence";
 
+/**
+ * Cycle 16 — Blog date governance discriminator.
+ *
+ * Posts are evergreen briefs that all happen to deploy on the same date
+ * (Cycle 15 close, 2026-05-10). For SEO/UX integrity we keep `datePublished`
+ * honest (= deployment date) but display an editorial-month frame on cards
+ * and headers. `editorialDate` is the 2nd-Monday-of-month anchor used for
+ * VISIBLE SORT AND LABEL ONLY — it is NEVER fed to schema.
+ *
+ *  - "evergreen-month"  → visible label is `topicMonth` only (e.g. "Evergreen Brief · May").
+ *                          Article header shows "Updated <Month YYYY>" derived from dateModified.
+ *  - "full-date"        → visible label is the full publication date (e.g. "Published May 10, 2026").
+ *  - "updated-only"     → visible label is "Updated <Month YYYY>" only — useful for revisions to
+ *                          posts that were originally part of the 12-post launch cohort.
+ */
+export type InsightDateDisplayMode = "evergreen-month" | "full-date" | "updated-only";
+
 export type InsightCTAVariant =
   | "buyer-brief"
   | "seller-valuation"
@@ -67,8 +84,24 @@ export type InsightPost = {
   readonly slug: string;
   readonly title: string;
   readonly excerpt: string;
+  /** Honest deployment date. Used directly in schema datePublished. NEVER backdated. */
   readonly datePublished: string;
+  /** Honest most-recent revision date. Bumped on real content edits only. */
   readonly dateModified: string;
+  /**
+   * Cycle 16 — Editorial anchor (2nd Monday of the corresponding cycle month).
+   * Used for VISIBLE SORT/LABEL ONLY. Never fed to schema.
+   */
+  readonly editorialDate: string;
+  /**
+   * Cycle 16 — Visible editorial-month frame, e.g. "Evergreen Brief · May".
+   * Replaces the bare `topicMonth` in card/header display.
+   */
+  readonly editorialMonthLabel: string;
+  /** Cycle 16 — Visible date-display strategy. See InsightDateDisplayMode. */
+  readonly dateDisplayMode: InsightDateDisplayMode;
+  /** Cycle 16 — Whether visible labels include the year. Default false for evergreen mode. */
+  readonly showYear?: boolean;
   readonly topicMonth: string;
   readonly seasonalFocus: string;
   readonly marketCycleMonth: number;
@@ -83,6 +116,18 @@ export type InsightPost = {
   readonly softCTA: InsightCTA;
   readonly seoTitle: string;
   readonly seoDescription: string;
+  /**
+   * Cycle 16 — Per-post hero image (rendered above the article body). Falls
+   * back to ogImage if not set. Use existing market images where topical.
+   */
+  readonly heroImage: string;
+  /** Optional alt text for heroImage; falls back to title if not set. */
+  readonly heroImageAlt?: string;
+  /**
+   * Open Graph + Article schema image. Cycle 16: should be a per-post asset
+   * under /og-insights/ — fallback to /og-default.jpg permitted but loud-failed
+   * by audit:insights once the per-post pipeline is wired.
+   */
   readonly ogImage: string;
   readonly aeoQuestion: string;
   readonly aeoAnswer: string;
@@ -229,4 +274,53 @@ export function getTopicMonthIndex(): ReadonlyArray<TopicMonth> {
     seasonalFocus: post.seasonalFocus,
     slug: post.slug,
   })).sort((a, b) => a.month - b.month);
+}
+
+/**
+ * Cycle 16 — Format the post's `dateModified` as "Month YYYY" for the
+ * "Updated …" frame on article headers under evergreen-month mode.
+ */
+export function getUpdatedMonthYearLabel(post: InsightPost): string {
+  const parts = post.dateModified.split("-");
+  const y = parts[0];
+  const m = parts[1];
+  if (!y || !m) return "";
+  const monthName = new Date(Number(y), Number(m) - 1, 1).toLocaleDateString("en-US", {
+    month: "long",
+  });
+  return `${monthName} ${y}`;
+}
+
+/**
+ * Cycle 16 — Visible date display per the post's `dateDisplayMode`. Used by
+ * the article header and the InsightCard's editorial label. NEVER substitute
+ * for schema-side datePublished/dateModified — those stay honest.
+ *
+ * Returns the structured pieces so the caller can format them with the right
+ * <time> elements (only datePublished is schema-faithful).
+ */
+export type InsightVisibleDate = {
+  /** Top-line editorial label, e.g. "Evergreen Brief · May" or "Published May 10, 2026". */
+  readonly primary: string;
+  /** Optional secondary line, e.g. "Updated May 2026". */
+  readonly secondary?: string;
+};
+
+export function getVisibleDateForPost(post: InsightPost): InsightVisibleDate {
+  if (post.dateDisplayMode === "full-date") {
+    const formatted = new Date(post.datePublished).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+    return { primary: `Published ${formatted}` };
+  }
+  if (post.dateDisplayMode === "updated-only") {
+    return { primary: `Updated ${getUpdatedMonthYearLabel(post)}` };
+  }
+  // evergreen-month
+  return {
+    primary: post.editorialMonthLabel,
+    secondary: `Updated ${getUpdatedMonthYearLabel(post)}`,
+  };
 }

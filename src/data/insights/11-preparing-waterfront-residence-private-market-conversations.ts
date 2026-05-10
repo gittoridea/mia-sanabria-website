@@ -8,6 +8,12 @@ export const POST_11: InsightPost = {
     "Private-market conversations require different preparation than MLS listings — documentation, photography brief, dockage proof, and strategic discretion. The working pre-introduction pass for sellers who choose the quieter path.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2025-11-10",
+  editorialMonthLabel: "Evergreen Brief · November",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/bermuda-riviera.jpg",
+  heroImageAlt: "Bermuda Riviera mid-century waterfront residence, Fort Lauderdale",
   topicMonth: "November Preparation",
   seasonalFocus: "Pre-season seller preparation for the private-market path",
   marketCycleMonth: 11,
@@ -45,7 +51,7 @@ export const POST_11: InsightPost = {
   seoTitle: "Preparing a Waterfront Residence for Private Market",
   seoDescription:
     "Private-market sales demand different preparation than MLS — documentation, photography brief, dockage proof, and strategic discretion.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/preparing-waterfront-residence-private-market-conversations.jpg",
   aeoQuestion:
     "How does a seller prepare a waterfront residence for the private market?",
   aeoAnswer:

@@ -1,6 +1,6 @@
 # Audit Images Report
 
-**Generated:** 2026-05-10T18:50:13.771Z
+**Generated:** 2026-05-10T20:52:07.284Z
 
 **Summary:** 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 284 <img> tags across 45 pages — all local references resolve |
+| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 294 <img> tags across 45 pages — all local references resolve |
 | `images.ogImagesResolve` | ✅ | Every og:image referencing a local /public/* path resolves to an actual file | 45 og:image entries across 45 pages — all local references resolve |
 | `images.twitterImagesResolve` | ✅ | Every twitter:image referencing a local /public/* path resolves to an actual file | 0 broken twitter:image references |
 
@@ -24,7 +24,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 284 <img> tags — all have alt attribute |
+| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 294 <img> tags — all have alt attribute |
 
 ### Static Export Integrity
 
@@ -42,7 +42,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.homepageFeaturedCards` | ✅ | Homepage Featured Markets section renders an <img> for each of the 8 featured market cards | all 8 featured cards render <img src="/markets/SLUG.jpg"> |
+| `images.homepageFeaturedCards` | ✅ | Homepage Featured Markets section renders an <img> for each of the 6 first-page featured market cards | all 6 first-page featured cards render <img src="/markets/SLUG.jpg"> |
 | `images.everyMarketCardImagePresent` | ✅ | Every market in MARKETS renders <img src=/markets/<slug>.jpg> on /markets/ index | all 15 markets have card images on /markets/ |
 
 ### Hub Pages

@@ -8,6 +8,12 @@ export const POST_09: InsightPost = {
     "Delray Beach's luxury cohort selects on three lifestyle axes — Atlantic Avenue walkability, beach proximity, or waterfront grid character. How experienced buyers separate them before touring.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2025-09-08",
+  editorialMonthLabel: "Evergreen Brief · September",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/delray-beach.jpg",
+  heroImageAlt: "Delray Beach Atlantic Avenue luxury beach-block residence",
   topicMonth: "September Delray",
   seasonalFocus: "Delray-specific buyer considerations",
   marketCycleMonth: 9,
@@ -39,7 +45,7 @@ export const POST_09: InsightPost = {
   seoTitle: "Delray Beach Luxury Buyers: Walkability + Waterfront",
   seoDescription:
     "Delray Beach luxury buyers weigh Atlantic Avenue walkability, beach proximity, and waterfront grids. How experienced buyers choose between them.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/delray-beach-luxury-buyers-walkability-beach-waterfront.jpg",
   aeoQuestion:
     "How do luxury buyers choose between Delray Beach's walkability, beach, and waterfront markets?",
   aeoAnswer:

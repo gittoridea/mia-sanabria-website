@@ -1,0 +1,144 @@
+{
+  "generatedAt": "2026-05-10T20:58:18.250Z",
+  "summary": {
+    "pass": 18,
+    "warn": 1,
+    "fail": 0,
+    "skip": 0
+  },
+  "results": [
+    {
+      "id": "legal.canonical.privacy",
+      "category": "Metadata",
+      "description": "/privacy/ has canonical link",
+      "status": "PASS",
+      "evidence": "canonical present"
+    },
+    {
+      "id": "legal.breadcrumb.privacy",
+      "category": "Schema",
+      "description": "/privacy/ emits BreadcrumbList schema",
+      "status": "PASS",
+      "evidence": "BreadcrumbList present"
+    },
+    {
+      "id": "legal.footerLinks.privacy",
+      "category": "Cross-link",
+      "description": "/privacy/ renders all 4 legal footer links",
+      "status": "PASS",
+      "evidence": "all legal links present"
+    },
+    {
+      "id": "legal.email.privacy",
+      "category": "Contact",
+      "description": "/privacy/ uses canonical email from PUBLIC_FACT_LEDGER §1",
+      "status": "PASS",
+      "evidence": "email msanabriarea@gmail.com present"
+    },
+    {
+      "id": "legal.canonical.terms",
+      "category": "Metadata",
+      "description": "/terms/ has canonical link",
+      "status": "PASS",
+      "evidence": "canonical present"
+    },
+    {
+      "id": "legal.breadcrumb.terms",
+      "category": "Schema",
+      "description": "/terms/ emits BreadcrumbList schema",
+      "status": "PASS",
+      "evidence": "BreadcrumbList present"
+    },
+    {
+      "id": "legal.footerLinks.terms",
+      "category": "Cross-link",
+      "description": "/terms/ renders all 4 legal footer links",
+      "status": "PASS",
+      "evidence": "all legal links present"
+    },
+    {
+      "id": "legal.email.terms",
+      "category": "Contact",
+      "description": "/terms/ uses canonical email from PUBLIC_FACT_LEDGER §1",
+      "status": "PASS",
+      "evidence": "email msanabriarea@gmail.com present"
+    },
+    {
+      "id": "legal.canonical.accessibility",
+      "category": "Metadata",
+      "description": "/accessibility/ has canonical link",
+      "status": "PASS",
+      "evidence": "canonical present"
+    },
+    {
+      "id": "legal.breadcrumb.accessibility",
+      "category": "Schema",
+      "description": "/accessibility/ emits BreadcrumbList schema",
+      "status": "PASS",
+      "evidence": "BreadcrumbList present"
+    },
+    {
+      "id": "legal.footerLinks.accessibility",
+      "category": "Cross-link",
+      "description": "/accessibility/ renders all 4 legal footer links",
+      "status": "PASS",
+      "evidence": "all legal links present"
+    },
+    {
+      "id": "legal.email.accessibility",
+      "category": "Contact",
+      "description": "/accessibility/ uses canonical email from PUBLIC_FACT_LEDGER §1",
+      "status": "PASS",
+      "evidence": "email msanabriarea@gmail.com present"
+    },
+    {
+      "id": "legal.canonical.dmca",
+      "category": "Metadata",
+      "description": "/dmca/ has canonical link",
+      "status": "PASS",
+      "evidence": "canonical present"
+    },
+    {
+      "id": "legal.breadcrumb.dmca",
+      "category": "Schema",
+      "description": "/dmca/ emits BreadcrumbList schema",
+      "status": "PASS",
+      "evidence": "BreadcrumbList present"
+    },
+    {
+      "id": "legal.footerLinks.dmca",
+      "category": "Cross-link",
+      "description": "/dmca/ renders all 4 legal footer links",
+      "status": "PASS",
+      "evidence": "all legal links present"
+    },
+    {
+      "id": "legal.email.dmca",
+      "category": "Contact",
+      "description": "/dmca/ uses canonical email from PUBLIC_FACT_LEDGER §1",
+      "status": "PASS",
+      "evidence": "email msanabriarea@gmail.com present"
+    },
+    {
+      "id": "legal.dmca.uscoFlag",
+      "category": "DMCA",
+      "description": "DMCA page transparently notes USCO designated-agent registration pending",
+      "status": "WARN",
+      "evidence": "USCO + in-process language present (acceptable for staging; BLOCKED for production cutover per CYCLE_16_LEGAL_PAGE_ACCURACY_AUDIT.md)"
+    },
+    {
+      "id": "legal.privacy.ghlConditional",
+      "category": "Privacy",
+      "description": "Privacy mentions GHL/LeadConnector as conditional service provider",
+      "status": "PASS",
+      "evidence": "conditional language present"
+    },
+    {
+      "id": "legal.terms.realtorAndFL",
+      "category": "Terms",
+      "description": "Terms include canonical REALTOR® mark definition and Florida governing-law clause",
+      "status": "PASS",
+      "evidence": "REALTOR® definition + FL governing law present"
+    }
+  ]
+}

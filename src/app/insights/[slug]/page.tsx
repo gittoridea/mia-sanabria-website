@@ -16,6 +16,7 @@ import {
   getRelatedInsights,
   estimateReadingTime,
   getPostWordCount,
+  getVisibleDateForPost,
   type InsightPost,
 } from "@/lib/insights";
 import { SITE } from "@/lib/site";
@@ -113,16 +114,14 @@ export default async function InsightPostPage({
   const relatedPosts = getRelatedInsights(post.slug, 3);
   const readingTime = estimateReadingTime(post);
 
-  // Insert the inline CTA between roughly two-thirds of the body sections so it
-  // sits mid-article rather than at the foot. For posts with 4 sections, that's
-  // after section index 2 (zero-indexed); for 5-section posts after index 3.
-  const inlineCtaPosition = Math.max(2, Math.floor((post.sections.length * 2) / 3));
+  // Cycle 16 — inline CTA at the genuine midpoint, not 80% through 5-section
+  // posts (prior `Math.floor((n*2)/3)` ran late on small post counts).
+  const inlineCtaPosition = Math.max(2, Math.floor(post.sections.length / 2));
 
-  const formattedPublishDate = new Date(post.datePublished).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  // Cycle 16 — Visible date follows the post's dateDisplayMode. Schema-side
+  // datePublished and the <time datetime=…> attribute stay honest at the
+  // deployment date, regardless of how the visible label is framed.
+  const visibleDate = getVisibleDateForPost(post);
 
   return (
     <>
@@ -137,10 +136,13 @@ export default async function InsightPostPage({
       {faqSchema && <JsonLd data={faqSchema} />}
 
       <Hero
-        eyebrow={`Insights · ${post.topicMonth}`}
+        eyebrow={`Insights · ${post.editorialMonthLabel}`}
         heading={post.title}
         sub={post.excerpt}
         ctaPrimary={{ href: post.primaryCTA.href, label: post.primaryCTA.buttonLabel }}
+        background="image"
+        imageSrc={post.heroImage}
+        imageAlt={post.heroImageAlt ?? post.title}
       />
 
       <article className="bg-cream-50 py-20 lg:py-28">
@@ -148,9 +150,22 @@ export default async function InsightPostPage({
           <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs uppercase tracking-[0.3em] text-brass-700">
             <span>By Mia Sanabria, REALTOR®</span>
             <span aria-hidden className="text-navy-800/30">·</span>
+            {/* Visible label follows post.dateDisplayMode (Cycle 16). The <time> element
+                stays schema-faithful — datetime is the honest datePublished. */}
             <time dateTime={post.datePublished} className="text-navy-800/75">
-              Published {formattedPublishDate}
+              {visibleDate.primary}
             </time>
+            {visibleDate.secondary ? (
+              <>
+                <span aria-hidden className="text-navy-800/30">·</span>
+                <time
+                  dateTime={post.dateModified}
+                  className="text-navy-800/60"
+                >
+                  {visibleDate.secondary}
+                </time>
+              </>
+            ) : null}
             <span aria-hidden className="text-navy-800/30">·</span>
             <span className="text-navy-800/75">{readingTime} min read</span>
           </div>
@@ -223,7 +238,7 @@ export default async function InsightPostPage({
           )}
 
           <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-navy-800/10 pt-6 text-xs uppercase tracking-[0.3em] text-navy-800/65">
-            <span>Topic month · {post.topicMonth}</span>
+            <span>{post.editorialMonthLabel}</span>
             <Link
               href="/insights/"
               className="text-navy-800 transition-colors hover:text-brass-700"

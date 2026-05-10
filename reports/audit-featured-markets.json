@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-05-10T20:58:18.224Z",
+  "summary": {
+    "pass": 17,
+    "warn": 0,
+    "fail": 0,
+    "skip": 0
+  },
+  "results": [
+    {
+      "id": "featured.order.firstPageMatchesPrincipal",
+      "category": "Order",
+      "description": "First 6 entries of HOMEPAGE_FEATURED_ORDER match principal Cycle 16 §1 first-page direction",
+      "status": "PASS",
+      "evidence": "Order: fort-lauderdale, boca-raton, palm-beach, victoria-park, lighthouse-point, delray-beach"
+    },
+    {
+      "id": "featured.pageSize.is6",
+      "category": "Order",
+      "description": "HOMEPAGE_FEATURED_PAGE_SIZE is 6",
+      "status": "PASS",
+      "evidence": "HOMEPAGE_FEATURED_PAGE_SIZE = 6"
+    },
+    {
+      "id": "featured.pager.rendered",
+      "category": "Render",
+      "description": "Featured Markets pager renders on homepage with accessible label",
+      "status": "PASS",
+      "evidence": "aria-label=\"Featured markets pagination\" present in /index.html"
+    },
+    {
+      "id": "featured.homepage.firstPagePresent",
+      "category": "Render",
+      "description": "All 6 first-page featured market routes present in homepage HTML",
+      "status": "PASS",
+      "evidence": "Routes found for: fort-lauderdale, boca-raton, palm-beach, victoria-park, lighthouse-point, delray-beach"
+    },
+    {
+      "id": "featured.market.fort-lauderdale",
+      "category": "Coverage",
+      "description": "Featured market fort-lauderdale has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/fort-lauderdale/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.coral-ridge",
+      "category": "Coverage",
+      "description": "Featured market coral-ridge has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/coral-ridge/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.victoria-park",
+      "category": "Coverage",
+      "description": "Featured market victoria-park has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/victoria-park/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.boca-raton",
+      "category": "Coverage",
+      "description": "Featured market boca-raton has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/boca-raton/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.palm-beach",
+      "category": "Coverage",
+      "description": "Featured market palm-beach has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/palm-beach/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.delray-beach",
+      "category": "Coverage",
+      "description": "Featured market delray-beach has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/delray-beach/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.lighthouse-point",
+      "category": "Coverage",
+      "description": "Featured market lighthouse-point has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/lighthouse-point/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.rio-vista",
+      "category": "Coverage",
+      "description": "Featured market rio-vista has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/rio-vista/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.harbor-beach",
+      "category": "Coverage",
+      "description": "Featured market harbor-beach has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/harbor-beach/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.las-olas-isles",
+      "category": "Coverage",
+      "description": "Featured market las-olas-isles has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/las-olas-isles/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.bay-colony",
+      "category": "Coverage",
+      "description": "Featured market bay-colony has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/bay-colony/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.market.bermuda-riviera",
+      "category": "Coverage",
+      "description": "Featured market bermuda-riviera has page + hero + OG + sitemap entry",
+      "status": "PASS",
+      "evidence": "route=/markets/bermuda-riviera/, hero=ok, og=ok, sitemap=ok"
+    },
+    {
+      "id": "featured.marketsIndex.complete",
+      "category": "Coverage",
+      "description": "/markets/ index links to every market in ALL_MARKET_SLUGS",
+      "status": "PASS",
+      "evidence": "15 markets linked"
+    }
+  ]
+}

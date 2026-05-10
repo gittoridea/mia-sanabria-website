@@ -8,6 +8,12 @@ export const POST_08: InsightPost = {
     "Boca Raton's luxury market is layered — country-club residential corridors, beach-corridor condominiums, single-family waterfront. How experienced buyers separate the three before touring.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2025-08-11",
+  editorialMonthLabel: "Evergreen Brief · August",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/boca-raton.jpg",
+  heroImageAlt: "Boca Raton luxury Mediterranean Revival residence",
   topicMonth: "August Boca",
   seasonalFocus: "Boca-specific buyer considerations",
   marketCycleMonth: 8,
@@ -39,7 +45,7 @@ export const POST_08: InsightPost = {
   seoTitle: "Boca Raton Luxury Homes: Club, Beach, Waterfront",
   seoDescription:
     "Boca Raton luxury buyers face three layered identities — country-club, beach-corridor, and waterfront single-family. How experienced buyers choose.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/boca-raton-luxury-buyers-club-beach-waterfront.jpg",
   aeoQuestion:
     "What are the layered identities of Boca Raton luxury real estate?",
   aeoAnswer:

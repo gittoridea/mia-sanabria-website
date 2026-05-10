@@ -1,6 +1,6 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T18:53:44.773Z
+**Generated:** 2026-05-10T20:55:44.151Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
@@ -98,7 +98,7 @@
 | `/markets/coral-ridge/` | 1440x900 | 15.85 | 10.08 | 15.85 (15.85..15.85) | 1500 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 320x568 | 15.30 | 8.51 | 15.30 (15.30..15.30) | 1040 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 375x812 | 15.31 | 8.51 | 15.31 (15.31..15.31) | 1049 | 800 | ✅ PASS |  |
-| `/markets/palm-beach/` | 768x1024 | 15.67 | 9.49 | 15.67 (15.67..15.67) | 1500 | 800 | ✅ PASS |  |
+| `/markets/palm-beach/` | 768x1024 | 5.80 | 5.55 | 5.80 (5.80..5.80) | 1500 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 1280x800 | 15.58 | 10.18 | 15.58 (15.58..15.58) | 1500 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 1440x900 | 15.56 | 10.17 | 15.56 (15.56..15.56) | 1500 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 320x568 | 15.18 | 8.77 | 15.18 (15.18..15.18) | 938 | 800 | ✅ PASS |  |

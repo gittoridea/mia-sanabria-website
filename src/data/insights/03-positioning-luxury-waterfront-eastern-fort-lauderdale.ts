@@ -8,6 +8,12 @@ export const POST_03: InsightPost = {
     "Pricing discipline, property-specific narrative, photography brief, and a private-market introduction plan — what experienced sellers do before any sign goes up.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2026-03-09",
+  editorialMonthLabel: "Evergreen Brief · March",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/las-olas-isles.jpg",
+  heroImageAlt: "Las Olas Isles deepwater luxury waterfront estates",
   topicMonth: "March Listing",
   seasonalFocus: "Pre-listing positioning for spring and summer",
   marketCycleMonth: 3,
@@ -45,7 +51,7 @@ export const POST_03: InsightPost = {
   seoTitle: "Positioning a Luxury Waterfront Home in Fort Lauderdale",
   seoDescription:
     "How experienced sellers position waterfront residences in Eastern Fort Lauderdale — pricing, narrative, photography, and private-market introductions.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/positioning-luxury-waterfront-eastern-fort-lauderdale.jpg",
   aeoQuestion:
     "How should a luxury waterfront home be positioned for sale in Eastern Fort Lauderdale?",
   aeoAnswer:

@@ -8,6 +8,12 @@ export const POST_12: InsightPost = {
     "Most luxury buyer searches go astray because the brief was never written. What a private buyer brief contains, why every productive search starts there, and how the brief tightens through pursuit.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2025-12-08",
+  editorialMonthLabel: "Evergreen Brief · December",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/fort-lauderdale.jpg",
+  heroImageAlt: "Fort Lauderdale Intracoastal waterfront estate",
   topicMonth: "December Brief",
   seasonalFocus: "Year-end clarity for the next search cycle",
   marketCycleMonth: 12,
@@ -45,7 +51,7 @@ export const POST_12: InsightPost = {
   seoTitle: "A Private Buyer Brief: Defining the Search",
   seoDescription:
     "Most luxury buyer searches go astray because the brief was never written. What a private buyer brief contains, and why every search starts there.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/private-buyer-brief-defining-the-search.jpg",
   aeoQuestion:
     "What should a luxury buyer's brief contain before beginning a search?",
   aeoAnswer:

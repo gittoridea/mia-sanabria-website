@@ -8,6 +8,12 @@ export const POST_07: InsightPost = {
     "Three northern Broward waterfront markets that share latitude and inlet — and differ on governance, lot character, and ownership profile. The cohort comparison for vessel-driven buyers.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2025-07-14",
+  editorialMonthLabel: "Evergreen Brief · July",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/lighthouse-point.jpg",
+  heroImageAlt: "Lighthouse Point luxury waterfront with Hillsboro Inlet access",
   topicMonth: "July Dockage Season",
   seasonalFocus: "Cruising-season vessel ownership",
   marketCycleMonth: 7,
@@ -45,7 +51,7 @@ export const POST_07: InsightPost = {
   seoTitle: "Lighthouse Point, Sea Ranch Lakes, Hillsboro Mile",
   seoDescription:
     "Lighthouse Point's deepwater inlet access, Sea Ranch Lakes' gated lakefront privacy, Hillsboro Mile's A1A address — northern Broward tradeoffs.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile.jpg",
   aeoQuestion:
     "What are the tradeoffs between Lighthouse Point, Sea Ranch Lakes, and Hillsboro Mile waterfront homes?",
   aeoAnswer:

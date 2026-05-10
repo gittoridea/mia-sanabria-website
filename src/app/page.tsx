@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { AnswerFirst } from "@/components/AnswerFirst";
 import { MeetMia } from "@/components/MeetMia";
 import { IntentRouter } from "@/components/IntentRouter";
-import { MarketCard } from "@/components/MarketCard";
+import { FeaturedMarketsPager } from "@/components/FeaturedMarketsPager";
 import { ValueProps } from "@/components/ValueProps";
 import { Faq } from "@/components/Faq";
 import { CTAStrip } from "@/components/CTAStrip";
@@ -14,7 +14,7 @@ import { PersonSchema } from "@/components/schema/PersonSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { getMarket, type Market } from "@/lib/markets";
-import { FEATURED_MARKETS } from "@/lib/mia";
+import { HOMEPAGE_FEATURED_ORDER, HOMEPAGE_FEATURED_PAGE_SIZE } from "@/lib/mia";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -65,7 +65,10 @@ const HOME_VALUE_PROPS = [
   },
 ];
 
-const featuredMarkets: ReadonlyArray<Market> = FEATURED_MARKETS.map(getMarket).filter(
+// Cycle 16 — Homepage featured-markets pager source. Order is principal-locked
+// via HOMEPAGE_FEATURED_ORDER in src/lib/mia.ts (Decision Register §1). Display
+// is paginated 6-at-a-time by FeaturedMarketsPager.
+const featuredMarkets: ReadonlyArray<Market> = HOMEPAGE_FEATURED_ORDER.map(getMarket).filter(
   (market): market is Market => Boolean(market)
 );
 
@@ -103,16 +106,14 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Featured Markets"
             heading="Start with the neighborhoods and property types that match the decision."
-            sub="Market guides for Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach — written to point you toward current comparable sales and a property-specific conversation."
+            sub="Market guides for Fort Lauderdale, Boca Raton, Palm Beach, Victoria Park, Lighthouse Point, and Delray Beach — written to point you toward current comparable sales and a property-specific conversation."
           />
-          <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredMarkets.map((market, idx) => (
-              <li key={market.slug}>
-                {/* Cycle-5 §4: first 3 cards eager-load (above-fold-on-desktop + visible-in-screenshots). */}
-                <MarketCard market={market} priority={idx < 3} />
-              </li>
-            ))}
-          </ul>
+          <div className="mt-12">
+            <FeaturedMarketsPager
+              markets={featuredMarkets}
+              pageSize={HOMEPAGE_FEATURED_PAGE_SIZE}
+            />
+          </div>
         </div>
       </section>
 

@@ -7,6 +7,12 @@ export const POST_01: InsightPost = {
     "Before the first showing, the right Fort Lauderdale waterfront search starts with a private brief — lifestyle fit, water access, dockage capacity, neighborhood architecture, and the questions Mia handles before any address is opened.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2026-01-12",
+  editorialMonthLabel: "Evergreen Brief · January",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/fort-lauderdale.jpg",
+  heroImageAlt: "Fort Lauderdale waterfront luxury residence with Intracoastal view",
   topicMonth: "January Reset",
   seasonalFocus: "Year-start clarity for an organized search",
   marketCycleMonth: 1,
@@ -38,7 +44,7 @@ export const POST_01: InsightPost = {
   seoTitle: "Fort Lauderdale Waterfront Homes: A Buyer's Guide",
   seoDescription:
     "Serious buyers' guide to Fort Lauderdale waterfront homes — dockage, route-to-inlet, neighborhood fit, and the questions Mia handles privately.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/fort-lauderdale-waterfront-buyer-guide.jpg",
   aeoQuestion:
     "What should a serious buyer know before touring Fort Lauderdale waterfront homes?",
   aeoAnswer:

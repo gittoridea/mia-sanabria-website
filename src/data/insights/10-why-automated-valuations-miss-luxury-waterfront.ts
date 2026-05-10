@@ -8,6 +8,12 @@ export const POST_10: InsightPost = {
     "Automated home valuations rely on bulk comparable data — they systematically miss what makes a luxury waterfront residence specifically valuable. The variables, the structural reason, and what experienced sellers do instead.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2025-10-13",
+  editorialMonthLabel: "Evergreen Brief · October",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/harbor-beach.jpg",
+  heroImageAlt: "Editorial reference image — luxury waterfront residence",
   topicMonth: "October Positioning",
   seasonalFocus: "Pre-listing valuation discipline",
   marketCycleMonth: 10,
@@ -45,7 +51,7 @@ export const POST_10: InsightPost = {
   seoTitle: "Why Automated Valuations Miss Luxury Waterfront",
   seoDescription:
     "Automated home valuations miss what makes a luxury waterfront residence specifically valuable — and what experienced sellers do instead.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/why-automated-valuations-miss-luxury-waterfront.jpg",
   aeoQuestion:
     "Why do automated home valuations miss the value of luxury waterfront properties?",
   aeoAnswer:

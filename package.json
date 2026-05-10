@@ -20,8 +20,12 @@
     "audit:hero-contrast:stable": "bun run scripts/audit-hero-pixel-contrast.ts --samples=3",
     "audit:rendered": "bun run scripts/audit-rendered-visual.ts",
     "audit:insights": "bun run scripts/audit-insights.ts",
-    "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand && bun run audit:hero-contrast && bun run audit:rendered && bun run audit:insights",
-    "audit:all:stable": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand && bun run audit:hero-contrast:stable && bun run audit:rendered && bun run audit:insights"
+    "audit:featured-markets": "bun run scripts/audit-featured-markets.ts",
+    "audit:legal": "bun run scripts/audit-legal.ts",
+    "audit:about": "bun run scripts/audit-about.ts",
+    "render:og-insights": "bun run scripts/render-insight-og-images.ts",
+    "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand && bun run audit:hero-contrast && bun run audit:rendered && bun run audit:insights && bun run audit:featured-markets && bun run audit:legal && bun run audit:about",
+    "audit:all:stable": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand && bun run audit:hero-contrast:stable && bun run audit:rendered && bun run audit:insights && bun run audit:featured-markets && bun run audit:legal && bun run audit:about"
   },
   "dependencies": {
     "@img/sharp-libvips-linux-x64": "^1.2.4",

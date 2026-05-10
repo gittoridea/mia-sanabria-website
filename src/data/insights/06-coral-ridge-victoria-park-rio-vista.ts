@@ -8,6 +8,12 @@ export const POST_06: InsightPost = {
     "Three Eastern Fort Lauderdale neighborhoods that solve different lifestyle problems. How buyers separate them on architectural era, walkability, and waterfront character.",
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
+  editorialDate: "2025-06-09",
+  editorialMonthLabel: "Evergreen Brief · June",
+  dateDisplayMode: "evergreen-month",
+  showYear: false,
+  heroImage: "/markets/coral-ridge.jpg",
+  heroImageAlt: "Coral Ridge in-town waterfront neighborhood, Fort Lauderdale",
   topicMonth: "June Lifestyle",
   seasonalFocus: "Lifestyle-fit comparison across three Eastern FtL neighborhoods",
   marketCycleMonth: 6,
@@ -45,7 +51,7 @@ export const POST_06: InsightPost = {
   seoTitle: "Coral Ridge, Victoria Park, Rio Vista: Eastern FtL",
   seoDescription:
     "How buyers choose between Coral Ridge, Victoria Park, and Rio Vista — three distinct Eastern Fort Lauderdale lifestyles compared.",
-  ogImage: "/og-default.jpg",
+  ogImage: "/og-insights/coral-ridge-victoria-park-rio-vista.jpg",
   aeoQuestion:
     "How do Coral Ridge, Victoria Park, and Rio Vista compare for buyers in Eastern Fort Lauderdale?",
   aeoAnswer:

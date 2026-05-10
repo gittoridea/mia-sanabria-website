@@ -116,19 +116,20 @@ export function SiteFooter() {
           className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-4 py-10 text-center lg:flex-row lg:items-center lg:justify-center lg:gap-14 lg:px-8"
           aria-label="Industry affiliations"
         >
-          {/* Cycle 11 — uniform monochrome white-on-transparent treatment.
-              The three trust-mark assets (LPT white-on-transparent, REALTOR®+MLS dark-on-transparent,
-              EHO black-on-transparent) presented three different visibility outcomes on the navy footer
-              when rendered as-is. Applying `brightness-0 invert opacity-90` normalizes all three to
-              discreet white silhouettes — compliance-permitted monochrome variants for NAR REALTOR®
-              + HUD EHO marks, brand-aligned for LPT (canonical white-on-navy). LPT's prior
-              `bg-white/95 p-1` tile rendered the white-on-transparent logo invisible; tile removed.
-              Heights balanced by visual weight: square LPT + portrait EHO at h-10; the wide 2.18:1
-              REALTOR®+MLS combined mark at h-7 lg:h-8 keeps the row visually balanced. Card 5 (asset
-              swap) remains principal-decision-gated in PRINCIPAL_DECISION_REGISTER; no semantic change. */}
+          {/* Cycle 16 — Footer trust-mark visibility fix.
+              The prior `realtor-r.png` was actually the REALTOR®+MLS combined mark (R-block + MLS
+              wordmark) — after the Cycle-11 monochrome treatment the R detail bleached out and the
+              mark read as a flat white block, AND the MLS portion implied MLS authorization Mia
+              has not confirmed. Cycle 16 replaces it with a clean R-only mark. The prior EHO file
+              had embedded "EQUAL HOUSING / OPPORTUNITY" wordmark inside the icon; at h-10 the
+              embedded text became an illegible blob. Cycle 16 replaces it with a clean HUD-style
+              house silhouette + equal sign (no embedded wordmark — the adjacent <span> already
+              labels the mark). All three assets are square 512×512 black-on-transparent so the
+              monochrome filter inverts them cleanly to white-on-navy. Heights now uniform at h-10
+              for visual balance. See docs/CYCLE_16_FOOTER_TRUST_LOGO_FIX.md. */}
           <FooterTrustMark
             src="/logos/lpt-realty.png"
-            alt=""
+            alt="LPT Realty"
             width={40}
             height={40}
             imageClassName="h-10 w-10 brightness-0 invert opacity-90"
@@ -136,18 +137,18 @@ export function SiteFooter() {
           />
           <FooterTrustMark
             src="/logos/realtor-r.png"
-            alt=""
-            width={64}
-            height={30}
-            imageClassName="h-7 w-auto brightness-0 invert opacity-90 lg:h-8"
+            alt="REALTOR®"
+            width={40}
+            height={40}
+            imageClassName="h-10 w-10 brightness-0 invert opacity-90"
             label="REALTOR®"
           />
           <FooterTrustMark
             src="/logos/equal-housing.png"
-            alt=""
-            width={36}
+            alt="Equal Housing Opportunity"
+            width={40}
             height={40}
-            imageClassName="h-10 w-auto brightness-0 invert opacity-90"
+            imageClassName="h-10 w-10 brightness-0 invert opacity-90"
             label="Equal Housing Opportunity"
           />
         </div>

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T18:50:13.771Z",
+  "timestamp": "2026-05-10T20:52:07.284Z",
   "counts": {
     "pass": 14,
     "warn": 0,
@@ -12,7 +12,7 @@
       "category": "Image Resolution",
       "description": "Every <img> referencing a local /public/* path resolves to an actual file",
       "status": "PASS",
-      "evidence": "284 <img> tags across 45 pages — all local references resolve"
+      "evidence": "294 <img> tags across 45 pages — all local references resolve"
     },
     {
       "id": "images.ogImagesResolve",
@@ -40,7 +40,7 @@
       "category": "Accessibility",
       "description": "Every <img> has an alt attribute (empty alt for decorative is acceptable)",
       "status": "PASS",
-      "evidence": "284 <img> tags — all have alt attribute"
+      "evidence": "294 <img> tags — all have alt attribute"
     },
     {
       "id": "images.noUnresolvableRemote",
@@ -59,9 +59,9 @@
     {
       "id": "images.homepageFeaturedCards",
       "category": "Featured Markets",
-      "description": "Homepage Featured Markets section renders an <img> for each of the 8 featured market cards",
+      "description": "Homepage Featured Markets section renders an <img> for each of the 6 first-page featured market cards",
       "status": "PASS",
-      "evidence": "all 8 featured cards render <img src=\"/markets/SLUG.jpg\">"
+      "evidence": "all 6 first-page featured cards render <img src=\"/markets/SLUG.jpg\">"
     },
     {
       "id": "images.hubPageHeroImage",

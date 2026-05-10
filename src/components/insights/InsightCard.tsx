@@ -8,6 +8,10 @@ import { estimateReadingTime } from "@/lib/insights";
  * topic-month label, title, excerpt, AEO question, primary market chips, and
  * an explicit "Read" affordance. Mirrors the MarketCard editorial discipline
  * without competing with it visually (no large image; insights are text-led).
+ *
+ * Cycle 16 — Label uses `editorialMonthLabel` (e.g. "Evergreen Brief · May"),
+ * which is the visible-only editorial frame. Schema-side datePublished stays
+ * honest at the deployment date (rendered separately at the article-page level).
  */
 
 export function InsightCard({ post }: { post: InsightPost }) {
@@ -19,7 +23,7 @@ export function InsightCard({ post }: { post: InsightPost }) {
       className="group flex flex-col rounded-sm border border-navy-800/10 bg-cream-50 p-6 shadow-card transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-luxury lg:p-8"
     >
       <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.3em] text-brass-700">
-        <span>{post.topicMonth}</span>
+        <span>{post.editorialMonthLabel}</span>
         <span className="text-navy-800/55">{readingTime} min read</span>
       </div>
       <h3 className="mt-4 font-display text-2xl text-navy-800 [text-wrap:balance] sm:text-[28px]">
