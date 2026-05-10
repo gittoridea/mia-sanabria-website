@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T13:23:52.663Z",
+  "timestamp": "2026-05-10T15:07:00.061Z",
   "counts": {
     "PASS": 15,
     "WARN": 1,
@@ -95,10 +95,10 @@
       "category": "Design/Display Integrity",
       "description": "Core-page <img> tags have alt + width/height + no placeholder names (next/image fill mode exempted from dims check)",
       "status": "PASS",
-      "evidence": "no img-attribute issues (30 next/image fill-mode images correctly classified)",
+      "evidence": "no img-attribute issues (34 next/image fill-mode images correctly classified)",
       "details": {
         "issues": [],
-        "fillModeCount": 30
+        "fillModeCount": 34
       }
     },
     {

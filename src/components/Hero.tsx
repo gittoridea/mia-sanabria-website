@@ -163,7 +163,7 @@ export function Hero({
                     isCream
                       ? "mt-5 font-display text-[11px] uppercase tracking-[0.3em] text-brass-700 sm:text-xs sm:tracking-[0.4em]"
                       : useImage
-                        ? "mt-3 max-w-full break-words font-display text-[8px] uppercase tracking-[0.1em] text-brass-300 [overflow-wrap:anywhere] [word-break:break-word] min-[360px]:mt-4 min-[360px]:text-[9px] min-[360px]:tracking-[0.16em] min-[375px]:text-[10px] min-[375px]:tracking-[0.22em] sm:text-xs sm:tracking-[0.32em]"
+                        ? "mt-3 max-w-full break-words font-display text-[9px] uppercase tracking-[0.12em] text-brass-300 [overflow-wrap:break-word] [word-break:normal] min-[360px]:mt-4 min-[360px]:text-[10px] min-[360px]:tracking-[0.18em] min-[375px]:text-[10px] min-[375px]:tracking-[0.24em] sm:text-xs sm:tracking-[0.32em]"
                         : "mt-5 font-display text-[11px] uppercase tracking-[0.3em] text-brass-300 sm:text-xs sm:tracking-[0.4em]"
                   }
                 >
@@ -190,7 +190,7 @@ export function Hero({
                   isCream
                     ? "mt-6 max-w-2xl text-lg text-navy-800/80 [text-wrap:pretty] sm:text-xl"
                     : useImage
-                      ? "mt-3 max-w-xl text-[12px] leading-5 text-cream-200/95 [text-wrap:pretty] [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto min-[360px]:mt-4 min-[360px]:text-[13px] min-[360px]:leading-[1.45] min-[375px]:text-[15px] min-[375px]:leading-7 sm:text-base md:text-lg lg:leading-6"
+                      ? "mt-3 max-w-xl text-[13px] leading-[1.5] text-cream-200/95 [text-wrap:pretty] [overflow-wrap:break-word] [word-break:break-word] hyphens-auto min-[360px]:mt-4 min-[360px]:text-[14px] min-[360px]:leading-[1.55] min-[375px]:text-[15px] min-[375px]:leading-7 sm:text-base md:text-lg lg:leading-6"
                       : "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
                 }
               >

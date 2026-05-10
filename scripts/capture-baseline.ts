@@ -21,6 +21,7 @@
 import { spawn } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { getAllMarketRoutesIncludingIndex } from "../src/lib/mia";
 
 type Viewport = { name: string; width: number; height: number };
 
@@ -35,6 +36,9 @@ const OUT = arg("--out=", "/tmp/mia-cycle10-rendered-before");
 const CONCURRENCY = Number(arg("--concurrency=", "4"));
 const VTB = Number(arg("--vtb=", "20000"));
 
+// Cycle 14 — DRY refactor: market portion derived from `ALL_MARKET_SLUGS` in
+// src/lib/mia.ts. Non-market routes stay curated (priority screenshot targets,
+// not market-data-derived).
 const ROUTES_DEFAULT = [
   "/",
   "/about/",
@@ -42,22 +46,7 @@ const ROUTES_DEFAULT = [
   "/sellers/",
   "/valuation/",
   "/contact/",
-  "/markets/",
-  "/markets/fort-lauderdale/",
-  "/markets/coral-ridge/",
-  "/markets/victoria-park/",
-  "/markets/rio-vista/",
-  "/markets/lighthouse-point/",
-  "/markets/sea-ranch-lakes/",
-  "/markets/harbor-beach/",
-  "/markets/hillsboro-mile/",
-  "/markets/seven-isles/",
-  "/markets/las-olas-isles/",
-  "/markets/boca-raton/",
-  "/markets/delray-beach/",
-  "/markets/palm-beach/",
-  "/markets/bay-colony/",
-  "/markets/bermuda-riviera/",
+  ...getAllMarketRoutesIncludingIndex(),
   "/insights/",
   "/privacy/",
   "/terms/",

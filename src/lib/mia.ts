@@ -54,7 +54,7 @@ export const MIA = {
   },
 } as const;
 
-const ALL_MARKET_SLUGS = [
+export const ALL_MARKET_SLUGS = [
   "fort-lauderdale",
   "coral-ridge",
   "victoria-park",
@@ -88,3 +88,43 @@ const FEATURED_SET: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
 export const FEATURED_MARKETS: ReadonlyArray<MarketSlug> = ALL_MARKET_SLUGS.filter(
   (slug) => FEATURED_SET.has(slug)
 );
+
+/* ─────────────────────────────────────────────────────────────────────────
+ * Cycle 14 — canonical route + image-path helpers (DRY refactor).
+ *
+ * These operate only on slugs (no `MARKETS` data dependency), so they can be
+ * imported from anywhere — Bun-runnable audit scripts and Next.js components
+ * alike — without circular-import risk. Helpers that need `MARKETS` live in
+ * `markets.ts` (cluster derivation, `getMarket`, etc.).
+ * ─────────────────────────────────────────────────────────────────────────
+ */
+
+export const MARKETS_INDEX_ROUTE = "/markets/" as const;
+
+export function getMarketRoute(slug: MarketSlug): string {
+  return `/markets/${slug}/`;
+}
+
+export function getAllMarketRoutes(): ReadonlyArray<string> {
+  return ALL_MARKET_SLUGS.map((slug) => getMarketRoute(slug));
+}
+
+export function getAllMarketRoutesIncludingIndex(): ReadonlyArray<string> {
+  return [MARKETS_INDEX_ROUTE, ...getAllMarketRoutes()];
+}
+
+export function getFeaturedMarketSlugs(): ReadonlyArray<MarketSlug> {
+  return FEATURED_MARKETS;
+}
+
+export function getFeaturedMarketRoutes(): ReadonlyArray<string> {
+  return FEATURED_MARKETS.map((slug) => getMarketRoute(slug));
+}
+
+export function getMarketImagePath(slug: MarketSlug): string {
+  return `/markets/${slug}.jpg`;
+}
+
+export function getMarketOgImagePath(slug: MarketSlug): string {
+  return `/og-markets/${slug}.jpg`;
+}

@@ -10,6 +10,14 @@ export type MarketInternalLink = {
   readonly label: string;
 };
 
+/**
+ * Cycle 14 — Market cluster discriminator. Drives `/markets/` index partition
+ * (Primary service markets vs Eastern Fort Lauderdale neighborhoods) and the
+ * `[slug]/page.tsx` related-section heading. Replaces the hardcoded
+ * `PRIMARY_SLUGS` / `NEIGHBORHOOD_SLUGS` / `easternBrowardSlugs` Sets.
+ */
+export type MarketCluster = "primary" | "neighborhood";
+
 export type Market = {
   readonly slug: MarketSlug;
   readonly name: string;
@@ -34,6 +42,15 @@ export type Market = {
   /** County the market sits in — used in schema and copy. */
   readonly county: "Broward County" | "Palm Beach County";
   /**
+   * Cluster classification (Cycle 14). `"primary"` = city/town-level service market
+   * (Fort Lauderdale, Boca Raton, Delray Beach, Palm Beach, Lighthouse Point,
+   * Hillsboro Mile, Sea Ranch Lakes). `"neighborhood"` = Eastern Fort Lauderdale
+   * neighborhood (Coral Ridge, Victoria Park, Rio Vista, Harbor Beach, Las Olas
+   * Isles, Seven Isles, Bay Colony, Bermuda Riviera). Drives `/markets/` index
+   * partition + related-section heading on `[slug]/page.tsx`.
+   */
+  readonly cluster: MarketCluster;
+  /**
    * §1-verified hero quote sourced from miasanabria.com (PUBLIC_FACT_LEDGER §1).
    * Optional — Coral Ridge has no source quote on the live .com.
    */
@@ -51,13 +68,24 @@ export type Market = {
   readonly sellerGuidance: string;
   /** Exactly 5 market-specific FAQs; answers 30-80 words each. */
   readonly faqs: ReadonlyArray<MarketFaq>;
-  /** 2-4 cross-pollination links to related markets/neighborhoods. */
+  /** 2-6 cross-pollination links to related markets/neighborhoods. Cycle 14 raised cap from 4 to 6 to absorb reverse-link curation for Bay Colony + Bermuda Riviera. */
   readonly internalLinks: ReadonlyArray<MarketInternalLink>;
+  /**
+   * Optional 60-120 word "How this market compares to nearby markets" paragraph,
+   * rendered above the related-markets card grid on `[slug]/page.tsx`. Names the
+   * cohort + the buyer-decision logic that makes each peer relevant. Required for
+   * featured markets per the Ultimate Featured Market Page Standard (Cycle 14);
+   * optional for non-featured (the related-markets cards alone suffice). Kept
+   * factual: cohort vocabulary, architectural era, water-access tier, walkability —
+   * never invented stats or rankings.
+   */
+  readonly comparisonContext?: string;
 };
 
 export const MARKETS: ReadonlyArray<Market> = [
   {
     slug: "fort-lauderdale",
+    cluster: "primary",
     name: "Fort Lauderdale",
     tagline: "Waterfront, city, and beach living in Mia's home market.",
     intro:
@@ -127,10 +155,15 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "harbor-beach", label: "Harbor Beach" },
       { slug: "victoria-park", label: "Victoria Park" },
       { slug: "coral-ridge", label: "Coral Ridge" },
+      { slug: "bay-colony", label: "Bay Colony" },
+      { slug: "bermuda-riviera", label: "Bermuda Riviera" },
     ],
+    comparisonContext:
+      "Fort Lauderdale is the anchor for the Eastern Fort Lauderdale waterfront cohort. Buyers usually compare three vectors against the city itself: Las Olas Isles for deepwater dockage with walkable Las Olas Boulevard frontage; Harbor Beach for private gated estate living with a beach-club component; and Victoria Park or Coral Ridge for in-town or country-club residential alternatives. Bay Colony and Bermuda Riviera are the gated and mid-century-modern subsets within the broader cohort. The right shortlist depends on whether dockage specifics, gate-controlled privacy, walkability, or architectural era is the dominant priority.",
   },
   {
     slug: "coral-ridge",
+    cluster: "neighborhood",
     name: "Coral Ridge",
     tagline: "A Fort Lauderdale neighborhood known for water access and established streets.",
     intro:
@@ -205,10 +238,13 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "fort-lauderdale", label: "Fort Lauderdale" },
       { slug: "victoria-park", label: "Victoria Park" },
       { slug: "lighthouse-point", label: "Lighthouse Point" },
+      { slug: "bermuda-riviera", label: "Bermuda Riviera" },
+      { slug: "bay-colony", label: "Bay Colony" },
     ],
   },
   {
     slug: "victoria-park",
+    cluster: "neighborhood",
     name: "Victoria Park",
     tagline: "Walkable Fort Lauderdale living near Las Olas, downtown, and the beach corridor.",
     intro:
@@ -276,9 +312,12 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "las-olas-isles", label: "Las Olas Isles" },
       { slug: "coral-ridge", label: "Coral Ridge" },
     ],
+    comparisonContext:
+      "Victoria Park is the in-town walkable alternative within Eastern Fort Lauderdale. Buyers who prioritize Las Olas Boulevard adjacency without the deepwater dockage premium usually compare Victoria Park against Las Olas Isles (water access at higher price band), Rio Vista (residential walkable plus deepwater), and Coral Ridge (country-club setting, less walkable). The Eastern Fort Lauderdale cohort offers four meaningful tradeoffs — walkability, waterfront, architectural character, and country-club access — and Victoria Park is the canonical walkable-without-waterfront answer for buyers who value the in-town residential pattern over canal frontage.",
   },
   {
     slug: "boca-raton",
+    cluster: "primary",
     name: "Boca Raton",
     tagline: "Coastal, club, and city access across South Palm Beach County.",
     intro:
@@ -347,9 +386,12 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "palm-beach", label: "Palm Beach" },
       { slug: "fort-lauderdale", label: "Fort Lauderdale" },
     ],
+    comparisonContext:
+      "Boca Raton sits within the Palm Beach County primary luxury cohort alongside Delray Beach and Palm Beach. Boca offers three identity layers — coastal condominiums east of A1A, single-family neighborhoods around the country-club corridor, and beach-oriented Mediterranean Revival residences — that make the brief broader than either neighbor. Delray Beach trades on its downtown Atlantic Avenue lifestyle and beach-block residences; Palm Beach trades on its oceanfront formality. Fort Lauderdale to the south is the alternative for buyers who want a major city alongside the waterfront. The right Boca shortlist depends on which of those three layers fits the lifestyle.",
   },
   {
     slug: "palm-beach",
+    cluster: "primary",
     name: "Palm Beach",
     tagline: "Island and coastal property decisions that require careful preparation.",
     intro:
@@ -425,6 +467,7 @@ export const MARKETS: ReadonlyArray<Market> = [
   },
   {
     slug: "delray-beach",
+    cluster: "primary",
     name: "Delray Beach",
     tagline: "Beach, downtown, and residential options with a strong local lifestyle draw.",
     intro:
@@ -493,9 +536,12 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "palm-beach", label: "Palm Beach" },
       { slug: "fort-lauderdale", label: "Fort Lauderdale" },
     ],
+    comparisonContext:
+      "Delray Beach pairs with Boca Raton and Palm Beach in the Palm Beach County primary luxury cohort. Delray's center of gravity is Atlantic Avenue, the beach blocks east of A1A, and the canal-front Tropic Isle and Pelican Harbor pockets. Boca Raton to the south offers a more formal country-club tier; Palm Beach further north offers a more formal oceanfront tier. Fort Lauderdale is the alternative for buyers who prefer the larger waterfront city. Delray's brief usually sits between these — beach-and-downtown lifestyle without the formality of Palm Beach or the scale of Fort Lauderdale.",
   },
   {
     slug: "lighthouse-point",
+    cluster: "primary",
     name: "Lighthouse Point",
     tagline: "A Broward coastal community where water access often drives the search.",
     intro:
@@ -569,10 +615,12 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "hillsboro-mile", label: "Hillsboro Mile" },
       { slug: "sea-ranch-lakes", label: "Sea Ranch Lakes" },
       { slug: "coral-ridge", label: "Coral Ridge" },
+      { slug: "bermuda-riviera", label: "Bermuda Riviera" },
     ],
   },
   {
     slug: "rio-vista",
+    cluster: "neighborhood",
     name: "Rio Vista",
     tagline: "Walkable deepwater living south of Las Olas in eastern Fort Lauderdale.",
     intro:
@@ -643,6 +691,7 @@ export const MARKETS: ReadonlyArray<Market> = [
   },
   {
     slug: "harbor-beach",
+    cluster: "neighborhood",
     name: "Harbor Beach",
     tagline: "Eastern Fort Lauderdale's gated ultra-luxury waterfront enclave.",
     intro:
@@ -708,10 +757,15 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "rio-vista", label: "Rio Vista" },
       { slug: "las-olas-isles", label: "Las Olas Isles" },
       { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+      { slug: "bay-colony", label: "Bay Colony" },
+      { slug: "bermuda-riviera", label: "Bermuda Riviera" },
     ],
+    comparisonContext:
+      "Harbor Beach is the canonical Eastern Fort Lauderdale gated trophy estate brief — deepwater dockage, private security, and a private beach-club component. Buyers usually compare Bay Colony for the alternate gated single-entry deepwater enclave (different architectural era, no beach-club), Las Olas Isles or Rio Vista for the deepwater walkable alternatives without the gate, Fort Lauderdale for the broader anchor-city option, and Bermuda Riviera for the mid-century-modern quieter waterfront alternative. The right Harbor Beach shortlist depends on whether the gate, the beach club, the dockage, or the architectural era is the dominant priority.",
   },
   {
     slug: "las-olas-isles",
+    cluster: "neighborhood",
     name: "Las Olas Isles",
     tagline: "The seven finger isles east of downtown Fort Lauderdale, walkable to Las Olas Boulevard.",
     intro:
@@ -778,10 +832,15 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "rio-vista", label: "Rio Vista" },
       { slug: "harbor-beach", label: "Harbor Beach" },
       { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+      { slug: "bay-colony", label: "Bay Colony" },
+      { slug: "bermuda-riviera", label: "Bermuda Riviera" },
     ],
+    comparisonContext:
+      "Las Olas Isles is the canonical Eastern Fort Lauderdale deepwater isles brief — finger isles north of the New River with yacht-capable canals and walkable Las Olas Boulevard frontage. Buyers usually compare Seven Isles for the deepwater-yacht subset, Rio Vista for the more residential walkable alternative south of the river, Harbor Beach for the gated trophy alternative with a beach-club component, Bay Colony for the gated single-entry alternative without the walkability, and Bermuda Riviera for the mid-century-modern quieter waterfront alternative. The right Las Olas Isles shortlist depends on whether walkability, vessel size, or architectural era is the priority.",
   },
   {
     slug: "seven-isles",
+    cluster: "neighborhood",
     name: "Seven Isles",
     tagline: "The deepwater yacht-capable finger isles east of downtown Fort Lauderdale.",
     intro:
@@ -851,6 +910,7 @@ export const MARKETS: ReadonlyArray<Market> = [
   },
   {
     slug: "sea-ranch-lakes",
+    cluster: "primary",
     name: "Sea Ranch Lakes",
     tagline: "A small private gated coastal village in northern Broward.",
     intro:
@@ -919,6 +979,7 @@ export const MARKETS: ReadonlyArray<Market> = [
   },
   {
     slug: "hillsboro-mile",
+    cluster: "primary",
     name: "Hillsboro Mile",
     tagline: "The A1A oceanfront and Intracoastal corridor in Hillsboro Beach.",
     intro:
@@ -987,6 +1048,7 @@ export const MARKETS: ReadonlyArray<Market> = [
   },
   {
     slug: "bay-colony",
+    cluster: "neighborhood",
     name: "Bay Colony",
     tagline: "Eastern Fort Lauderdale's gated deepwater enclave off Bayview Drive.",
     intro:
@@ -1054,9 +1116,12 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "coral-ridge", label: "Coral Ridge" },
       { slug: "fort-lauderdale", label: "Fort Lauderdale" },
     ],
+    comparisonContext:
+      "Bay Colony is the gated single-entry deepwater enclave alternative within Eastern Fort Lauderdale. Buyers usually compare Harbor Beach as the canonical gated trophy peer with a beach-club component (Bay Colony has neither), Las Olas Isles for the walkable-deepwater alternative without the gate, Coral Ridge for the country-club geographic neighbor, Fort Lauderdale for the anchor city, and Bermuda Riviera for the mid-century-modern architectural alternative within the same broader Eastern Fort Lauderdale waterfront cohort. The right Bay Colony brief usually centers on private security, dockage, and the gated single-entry character.",
   },
   {
     slug: "bermuda-riviera",
+    cluster: "neighborhood",
     name: "Bermuda Riviera",
     tagline: "Eastern Fort Lauderdale waterfront with mid-century-modern architectural heritage.",
     intro:
@@ -1124,9 +1189,33 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "las-olas-isles", label: "Las Olas Isles" },
       { slug: "fort-lauderdale", label: "Fort Lauderdale" },
     ],
+    comparisonContext:
+      "Bermuda Riviera is the mid-century-modern waterfront alternative within Eastern Fort Lauderdale. Buyers usually compare Coral Ridge as the architectural and geographic cousin to the south, Harbor Beach for the gated trophy alternative with a beach-club component, Las Olas Isles for the walkable-deepwater alternative with stronger Las Olas Boulevard adjacency, and Fort Lauderdale as the broader anchor city. The right Bermuda Riviera brief usually centers on architectural era — preserved mid-century-modern original, studs-out renovation, or contemporary new build — alongside dockage and canal-route specifics, rather than competing on walkability or formal-club access.",
   },
 ];
 
 export function getMarket(slug: string): Market | undefined {
   return MARKETS.find((m) => m.slug === slug);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+ * Cycle 14 — cluster-derived helpers (DRY refactor).
+ *
+ * Derived from `Market.cluster`. Replaces the hardcoded `PRIMARY_SLUGS` /
+ * `NEIGHBORHOOD_SLUGS` Sets in `src/app/markets/page.tsx` and the local
+ * `easternBrowardSlugs` Set in `src/app/markets/[slug]/page.tsx`. Source-array
+ * order is preserved (callers that depend on display order still get it).
+ * ─────────────────────────────────────────────────────────────────────────
+ */
+
+export function getMarketsByCluster(cluster: MarketCluster): ReadonlyArray<Market> {
+  return MARKETS.filter((m) => m.cluster === cluster);
+}
+
+export function getPrimarySlugs(): ReadonlyArray<MarketSlug> {
+  return getMarketsByCluster("primary").map((m) => m.slug);
+}
+
+export function getNeighborhoodSlugs(): ReadonlyArray<MarketSlug> {
+  return getMarketsByCluster("neighborhood").map((m) => m.slug);
 }

@@ -8,7 +8,7 @@ import { MarketCard } from "@/components/MarketCard";
 import { PlaceSchema } from "@/components/schema/PlaceSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
-import { MARKETS, getMarket, type Market } from "@/lib/markets";
+import { MARKETS, getMarket, getNeighborhoodSlugs, type Market } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
 type Params = { slug: string };
@@ -78,18 +78,10 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
     .map((link) => getMarket(link.slug))
     .filter((m): m is Market => m !== undefined);
 
-  // Title for the related-markets section reflects whether all links share the
-  // Eastern Fort Lauderdale neighborhood cluster (Broward, non-city-level).
-  const easternBrowardSlugs = new Set([
-    "coral-ridge",
-    "victoria-park",
-    "rio-vista",
-    "harbor-beach",
-    "las-olas-isles",
-    "seven-isles",
-    "bay-colony",
-    "bermuda-riviera",
-  ]);
+  // Cycle 14 — derived from `Market.cluster` via `getNeighborhoodSlugs()` (DRY
+  // refactor). Hardcoded `easternBrowardSlugs` Set removed; source of truth is
+  // the `cluster: "neighborhood"` field on each Market entry.
+  const easternBrowardSlugs: ReadonlySet<string> = new Set(getNeighborhoodSlugs());
   const allEasternFTL = relatedMarkets.length > 0 &&
     relatedMarkets.every((m) => easternBrowardSlugs.has(m.slug));
   const relatedHeading = allEasternFTL
@@ -295,11 +287,19 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
         emitSchema
       />
 
-      {/* SECTION 7 — Related markets, driven by market.internalLinks */}
+      {/* SECTION 7 — Related markets, driven by market.internalLinks.
+          Cycle 14 — comparisonContext prose paragraph rendered above the card grid
+          per Ultimate Featured Market Page Standard §7. Optional field; pages without
+          comparisonContext render the legacy card-only related section. */}
       {relatedMarkets.length > 0 ? (
         <section className="bg-cream-100 py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <SectionHeading eyebrow="Related Markets" heading={relatedHeading} />
+            {market.comparisonContext ? (
+              <p className="mt-6 max-w-3xl text-[17px] leading-relaxed text-navy-800/85">
+                {market.comparisonContext}
+              </p>
+            ) : null}
             <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {relatedMarkets.map((m) => (
                 <li key={m.slug}>

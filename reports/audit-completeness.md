@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-10T13:23:52.663Z
+**Generated:** 2026-05-10T15:07:00.061Z
 
 **Summary:** 15 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -39,7 +39,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.images.dimsAltPlaceholder` | ✅ | Core-page <img> tags have alt + width/height + no placeholder names (next/image fill mode exempted from dims check) | no img-attribute issues (30 next/image fill-mode images correctly classified) |
+| `completeness.images.dimsAltPlaceholder` | ✅ | Core-page <img> tags have alt + width/height + no placeholder names (next/image fill mode exempted from dims check) | no img-attribute issues (34 next/image fill-mode images correctly classified) |
 | `completeness.images.localFilesExist` | ✅ | Local image references resolve to files in out/ | all referenced local images exist |
 
 ### Forms/CTAs

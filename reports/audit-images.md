@@ -1,6 +1,6 @@
 # Audit Images Report
 
-**Generated:** 2026-05-10T13:34:24.121Z
+**Generated:** 2026-05-10T15:07:00.388Z
 
 **Summary:** 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 211 <img> tags across 29 pages — all local references resolve |
+| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 220 <img> tags across 29 pages — all local references resolve |
 | `images.ogImagesResolve` | ✅ | Every og:image referencing a local /public/* path resolves to an actual file | 29 og:image entries across 29 pages — all local references resolve |
 | `images.twitterImagesResolve` | ✅ | Every twitter:image referencing a local /public/* path resolves to an actual file | 0 broken twitter:image references |
 
@@ -24,7 +24,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 211 <img> tags — all have alt attribute |
+| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 220 <img> tags — all have alt attribute |
 
 ### Static Export Integrity
 

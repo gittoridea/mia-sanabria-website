@@ -19,6 +19,10 @@
  */
 import { readFile, readdir, mkdir, writeFile, stat } from "node:fs/promises";
 import { join, relative } from "node:path";
+import {
+  MARKETS_INDEX_ROUTE,
+  getAllMarketRoutes,
+} from "../src/lib/mia";
 
 type CheckStatus = "PASS" | "WARN" | "FAIL" | "SKIP";
 type CheckResult = {
@@ -50,26 +54,13 @@ const CORE_PAGES = [
 
 const LEGAL_PAGES = ["/privacy/", "/terms/", "/dmca/", "/accessibility/"] as const;
 
-// Updated 2026-05-10 cycle 13: list now matches all 15 market routes (added bay-colony + bermuda-riviera).
-// Future improvement: derive dynamically from src/lib/markets.ts at audit time.
-const MARKET_PAGES = [
-  "/markets/",
-  "/markets/fort-lauderdale/",
-  "/markets/coral-ridge/",
-  "/markets/victoria-park/",
-  "/markets/boca-raton/",
-  "/markets/delray-beach/",
-  "/markets/palm-beach/",
-  "/markets/lighthouse-point/",
-  "/markets/rio-vista/",
-  "/markets/harbor-beach/",
-  "/markets/las-olas-isles/",
-  "/markets/seven-isles/",
-  "/markets/sea-ranch-lakes/",
-  "/markets/hillsboro-mile/",
-  "/markets/bay-colony/",
-  "/markets/bermuda-riviera/",
-] as const;
+// Cycle 14 — DRY refactor: derived from `ALL_MARKET_SLUGS` in src/lib/mia.ts.
+// `MARKET_PAGES` now equals `[MARKETS_INDEX_ROUTE, ...getAllMarketRoutes()]` —
+// adding a market in mia.ts/markets.ts auto-extends this audit's coverage.
+const MARKET_PAGES: ReadonlyArray<string> = [
+  MARKETS_INDEX_ROUTE,
+  ...getAllMarketRoutes(),
+];
 
 const SAMPLED_FOOTER_PAGES = [
   "/",

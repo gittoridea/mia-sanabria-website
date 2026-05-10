@@ -5,7 +5,7 @@ import { CTAStrip } from "@/components/CTAStrip";
 import { SectionHeading } from "@/components/SectionHeading";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
-import { MARKETS, type Market } from "@/lib/markets";
+import { getMarketsByCluster, type Market } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -29,47 +29,14 @@ export const metadata: Metadata = {
   },
 };
 
-// Split into city/town-level "Primary service markets" vs Eastern Fort Lauderdale neighborhood
-// cluster. The split preserves visual rhythm and gives buyers a clear orientation between
-// "where in South Florida" and "which Fort Lauderdale neighborhood".
-const PRIMARY_SLUGS = new Set<string>([
-  "fort-lauderdale",
-  "boca-raton",
-  "delray-beach",
-  "palm-beach",
-  "lighthouse-point",
-  "hillsboro-mile",
-  "sea-ranch-lakes",
-]);
-
-const NEIGHBORHOOD_SLUGS = new Set<string>([
-  "coral-ridge",
-  "victoria-park",
-  "rio-vista",
-  "harbor-beach",
-  "las-olas-isles",
-  "seven-isles",
-  "bay-colony",
-  "bermuda-riviera",
-]);
-
-function partitionMarkets(): {
-  primary: ReadonlyArray<Market>;
-  neighborhoods: ReadonlyArray<Market>;
-} {
-  const primary: Market[] = [];
-  const neighborhoods: Market[] = [];
-  for (const m of MARKETS) {
-    if (PRIMARY_SLUGS.has(m.slug)) primary.push(m);
-    else if (NEIGHBORHOOD_SLUGS.has(m.slug)) neighborhoods.push(m);
-    // Any future slug not in either set will not render here — surface as TS-build error
-    // instead by adding it to one of the sets above.
-  }
-  return { primary, neighborhoods };
-}
+// Cycle 14 — partition derived from `Market.cluster` (DRY refactor). Hardcoded
+// PRIMARY_SLUGS / NEIGHBORHOOD_SLUGS Sets removed; source of truth is now the
+// `cluster:` field on each Market entry in `src/lib/markets.ts`. Order preserved
+// from MARKETS array — display order matches source-array order.
 
 export default function MarketsIndex() {
-  const { primary, neighborhoods } = partitionMarkets();
+  const primary: ReadonlyArray<Market> = getMarketsByCluster("primary");
+  const neighborhoods: ReadonlyArray<Market> = getMarketsByCluster("neighborhood");
 
   return (
     <>

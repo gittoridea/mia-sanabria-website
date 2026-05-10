@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T13:34:24.121Z",
+  "timestamp": "2026-05-10T15:07:00.388Z",
   "counts": {
     "pass": 14,
     "warn": 0,
@@ -12,7 +12,7 @@
       "category": "Image Resolution",
       "description": "Every <img> referencing a local /public/* path resolves to an actual file",
       "status": "PASS",
-      "evidence": "211 <img> tags across 29 pages — all local references resolve"
+      "evidence": "220 <img> tags across 29 pages — all local references resolve"
     },
     {
       "id": "images.ogImagesResolve",
@@ -40,7 +40,7 @@
       "category": "Accessibility",
       "description": "Every <img> has an alt attribute (empty alt for decorative is acceptable)",
       "status": "PASS",
-      "evidence": "211 <img> tags — all have alt attribute"
+      "evidence": "220 <img> tags — all have alt attribute"
     },
     {
       "id": "images.noUnresolvableRemote",

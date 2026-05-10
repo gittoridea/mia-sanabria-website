@@ -16,6 +16,12 @@
  */
 import { readFile, readdir, mkdir, writeFile, stat } from "node:fs/promises";
 import { join, relative, posix } from "node:path";
+import {
+  ALL_MARKET_SLUGS,
+  getFeaturedMarketSlugs,
+  getMarketImagePath,
+  getMarketOgImagePath,
+} from "../src/lib/mia";
 
 type CheckStatus = "PASS" | "WARN" | "FAIL" | "SKIP";
 type CheckResult = {
@@ -288,23 +294,10 @@ async function runAuditImages(): Promise<CheckResult[]> {
     "logos/realtor-r.png",
     "logos/equal-housing.png",
   ];
-  const marketSlugs = [
-    "fort-lauderdale",
-    "coral-ridge",
-    "victoria-park",
-    "boca-raton",
-    "delray-beach",
-    "palm-beach",
-    "lighthouse-point",
-    "rio-vista",
-    "harbor-beach",
-    "las-olas-isles",
-    "seven-isles",
-    "sea-ranch-lakes",
-    "hillsboro-mile",
-    "bay-colony",
-    "bermuda-riviera",
-  ];
+  // Cycle 14 — DRY refactor: derived from `ALL_MARKET_SLUGS` in src/lib/mia.ts.
+  // Adding a market is now a single-edit operation in mia.ts (and markets.ts entry);
+  // this audit picks up the new slug automatically.
+  const marketSlugs = [...ALL_MARKET_SLUGS];
   const missingAssets: { path: string; reason: string }[] = [];
   for (const a of requiredAssets) {
     if (!(await fileExists(join(PUBLIC_DIR, a)))) missingAssets.push({ path: a, reason: "Brand-Contract-required asset" });
@@ -332,7 +325,8 @@ async function runAuditImages(): Promise<CheckResult[]> {
   // (1) Homepage Featured Markets — every featured-card link must render an <img src="/markets/SLUG.jpg">.
   const homeHtml = await readFile(join(OUT_DIR, "index.html"), "utf-8").catch(() => "");
   const featuredImgs = [...homeHtml.matchAll(/src="\/markets\/([a-z-]+)\.jpg"/g)].map((m) => m[1]);
-  const expectedFeatured = ["fort-lauderdale", "victoria-park", "boca-raton", "delray-beach", "harbor-beach", "las-olas-isles", "bay-colony", "bermuda-riviera"];
+  // Cycle 14 — DRY refactor: derived from `getFeaturedMarketSlugs()` in src/lib/mia.ts.
+  const expectedFeatured = [...getFeaturedMarketSlugs()];
   const missingFeatured = expectedFeatured.filter((slug) => !featuredImgs.includes(slug));
   results.push({
     id: "images.homepageFeaturedCards",

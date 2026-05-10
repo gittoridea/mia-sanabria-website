@@ -1,6 +1,6 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T13:27:23.569Z
+**Generated:** 2026-05-10T15:20:35.723Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
@@ -113,7 +113,7 @@
 | `/markets/delray-beach/` | 1440x900 | 15.97 | 9.70 | 15.97 (15.97..15.97) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 320x568 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 836 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 375x812 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 860 | 800 | ✅ PASS |  |
-| `/markets/harbor-beach/` | 768x1024 | 3.12 | 2.85 | 3.12 (3.12..3.12) | 1500 | 800 | ✅ PASS |  |
+| `/markets/harbor-beach/` | 768x1024 | 15.92 | 9.85 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 1280x800 | 15.95 | 10.50 | 15.95 (15.95..15.95) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 1440x900 | 15.92 | 10.51 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
 

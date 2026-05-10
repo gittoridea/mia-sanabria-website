@@ -58,6 +58,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { spawn } from "node:child_process";
 import sharp from "sharp";
+import { getAllMarketRoutesIncludingIndex } from "../src/lib/mia";
 
 // Minimal Bun.serve declaration so this file compiles under tsc --noEmit
 // without @types/bun. Mirrors the pattern in audit-hero-pixel-contrast.ts.
@@ -75,34 +76,27 @@ const REPO_ROOT = process.cwd();
 const OUT_DIR = join(REPO_ROOT, "out");
 const REPORTS_DIR = join(REPO_ROOT, "reports");
 
-const REQUIRED_ROUTES: ReadonlyArray<string> = [
+// Cycle 14 — DRY refactor: market portion derived from `ALL_MARKET_SLUGS` in
+// src/lib/mia.ts via `getAllMarketRoutesIncludingIndex()`. Non-market routes
+// stay curated (these are the human-priority screenshot targets, not
+// market-data-derived).
+const NON_MARKET_ROUTES: ReadonlyArray<string> = [
   "/",
   "/about/",
   "/buyers/",
   "/sellers/",
   "/valuation/",
   "/contact/",
-  "/markets/",
-  "/markets/fort-lauderdale/",
-  "/markets/coral-ridge/",
-  "/markets/victoria-park/",
-  "/markets/rio-vista/",
-  "/markets/lighthouse-point/",
-  "/markets/sea-ranch-lakes/",
-  "/markets/harbor-beach/",
-  "/markets/hillsboro-mile/",
-  "/markets/seven-isles/",
-  "/markets/las-olas-isles/",
-  "/markets/boca-raton/",
-  "/markets/delray-beach/",
-  "/markets/palm-beach/",
-  "/markets/bay-colony/",
-  "/markets/bermuda-riviera/",
   "/insights/",
   "/privacy/",
   "/terms/",
   "/accessibility/",
   "/dmca/",
+];
+
+const REQUIRED_ROUTES: ReadonlyArray<string> = [
+  ...NON_MARKET_ROUTES,
+  ...getAllMarketRoutesIncludingIndex(),
 ];
 
 type ViewportSpec = { name: string; width: number; height: number };
