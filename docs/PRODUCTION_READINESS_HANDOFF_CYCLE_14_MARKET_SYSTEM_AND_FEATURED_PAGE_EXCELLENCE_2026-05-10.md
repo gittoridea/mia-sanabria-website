@@ -130,26 +130,56 @@ Live deploy verification + post-deploy screenshots in section 10 below.
 
 ## 10. Deploy + live verification
 
-Commit: (recorded inline at deploy time)
-Push: origin/main updated
-Deploy: `bun scripts/deploy-and-verify.ts --no-lighthouse` → Dokploy `application.deploy` → Caddy flip
-Pre-deploy ETag: `dif18qj6ioe82vti` (Cycle 13)
-Post-deploy ETag: (recorded inline at deploy time — to be filled after Phase 12)
+**Commit:** `ca02263 feat(MIA-SITE-CYCLE-14): market system integrity + featured page excellence`
+**Push:** `2426fc5..ca02263 main -> main` on `github.com:gittoridea/mia-sanabria-website.git`
+**Deploy:** `bun scripts/deploy-and-verify.ts --no-lighthouse` → Dokploy `application.deploy` → Caddy flip in 115s
+**Pre-deploy ETag:** `dif18qj6ioe82vti` (Cycle 13 close)
+**Post-deploy ETag:** `dif3sciprg8w2vtu`
+**Pre-deploy last-modified:** `Sun, 10 May 2026 13:31:47 GMT`
+**Post-deploy last-modified:** `Sun, 10 May 2026 15:31:26 GMT`
 
-Live route sweep (cache-busted) covers `/`, `/markets/`, every featured route, Bay Colony, Bermuda Riviera, sitemap, /about/, /buyers/, /sellers/, /valuation/, /contact/.
+Live route sweep (cache-busted via `?_=$(date +%s)` + `Cache-Control: no-cache`):
+
+```
+200 /
+200 /markets/
+200 /markets/bay-colony/
+200 /markets/bermuda-riviera/
+200 /markets/fort-lauderdale/
+200 /markets/victoria-park/
+200 /markets/boca-raton/
+200 /markets/delray-beach/
+200 /markets/las-olas-isles/
+200 /markets/harbor-beach/
+200 /about/
+200 /buyers/
+200 /sellers/
+200 /valuation/
+200 /contact/
+200 /sitemap.xml
+```
+
+Live presence checks (cache-busted):
+- `/markets/harbor-beach/` — references Bay Colony + Bermuda Riviera + Fort Lauderdale + Las Olas Isles + Rio Vista in related-markets card grid (Phase 3 reverse-link curation rendered live)
+- `/markets/bay-colony/` — `comparisonContext` paragraph "Bay Colony is the gated single-entry deepwater enclave alternative within Eastern Fort Lauderdale..." rendered above related-markets grid (Phase 8 upgrade verified live)
+- `/markets/fort-lauderdale/` — `comparisonContext` paragraph "Fort Lauderdale is the anchor for the Eastern Fort Lauderdale waterfront cohort..." rendered (Phase 8 upgrade verified live)
+- Stale-string sweep: 0 hits across 7 sentinels (Klein Morgan, kleinmorgan, Family Homes Where Memories Are Made, mia@miasanabriarealtor.com, sunandbreeze, accessibility@agent3000.com, FLorida)
+
+Live AFTER captures: 140 PNGs at `/tmp/mia-cycle14-after/` (28 routes × 5 viewports).
+Live BEFORE captures: 140 PNGs at `/tmp/mia-cycle14-before/` (same viewports, captured pre-deploy).
 
 ## 11. Cato cross-check verdict
 
-`docs/CYCLE_14_CATO_OR_CROSSCHECK.md` — focused on:
-- Trademark/graphics risk (Card 5 still pending; doc-only this cycle — no asset swap)
-- MLS representation risk (no new MLS claims)
-- Geographic accuracy (no new fabricated facts; reverse-link cohort logic preserves cluster discipline)
-- Unsupported content claims (`comparisonContext` paragraphs reviewed for fabrication risk)
-- Steering language (no new Fair Housing-risk language)
-- Schema/internal-link correctness (delta = +9 internal links, all resolve; +8 comparisonContext fields don't change schema graph)
-- Launch-blocker classification (unchanged from Cycle 12 baseline)
+**VERDICT: pass · deploy_allowed: true · 0 critical · 0 medium · 1 low (carry-forward, not Cycle 14 introduced)**
 
-(See doc for verdict.)
+Doc: `docs/CYCLE_14_CATO_OR_CROSSCHECK.md`.
+
+Cato confirmed live deploy fingerprint, verified all 8 `comparisonContext` paragraphs free of fabricated stats / rankings / designations / steering language, verified cluster discipline preserved by `Market.cluster` discriminator + `getMarketsByCluster()` partition, confirmed Cards 4 + 5 status preserved, confirmed zero design-side gates introduced.
+
+**One low-severity finding (F-01) — carry-forward:**
+- `src/lib/markets.ts` boca-raton.buyerGuidance "top-rated schools" phrase + coral-ridge.faqs "the schools" reference — pre-existed Cycle 14 (not a Cycle 14 introduction). Surfaced for Cycle 15 content sprint (Theme 2 — Boca buyer/seller sharpening already in the deferred plan).
+
+**Cross-vendor agreement:** Forge (predeploy, OpenAI/GPT-5.4) PASS_WITH_MINOR_CONCERNS → operational PASS after stale-report re-run. Cato (post-deploy live, OpenAI/GPT-5.4 read-only) PASS. Two non-Anthropic reviewers in agreement on shipping-grade.
 
 ## 12. Production-readiness scorecard update
 
