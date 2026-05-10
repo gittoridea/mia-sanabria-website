@@ -1,6 +1,6 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T13:10:25.265Z
+**Generated:** 2026-05-10T13:27:23.569Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
@@ -60,7 +60,7 @@
 | `/markets/bermuda-riviera/` | 375x812 | 15.75 | 9.27 | 15.75 (15.75..15.75) | 1190 | 800 | ✅ PASS |  |
 | `/markets/bermuda-riviera/` | 768x1024 | 15.71 | 9.75 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |
 | `/markets/bermuda-riviera/` | 1280x800 | 15.63 | 10.34 | 15.63 (15.63..15.63) | 1500 | 800 | ✅ PASS |  |
-| `/markets/bermuda-riviera/` | 1440x900 | 16.26 | 10.58 | 16.26 (16.26..16.26) | 1500 | 800 | ✅ PASS |  |
+| `/markets/bermuda-riviera/` | 1440x900 | 15.48 | 10.27 | 15.48 (15.48..15.48) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 320x568 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 375x812 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 768x1024 | 15.79 | 9.56 | 15.79 (15.79..15.79) | 1500 | 800 | ✅ PASS |  |
@@ -113,7 +113,7 @@
 | `/markets/delray-beach/` | 1440x900 | 15.97 | 9.70 | 15.97 (15.97..15.97) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 320x568 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 836 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 375x812 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 860 | 800 | ✅ PASS |  |
-| `/markets/harbor-beach/` | 768x1024 | 15.92 | 9.85 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
+| `/markets/harbor-beach/` | 768x1024 | 3.12 | 2.85 | 3.12 (3.12..3.12) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 1280x800 | 15.95 | 10.50 | 15.95 (15.95..15.95) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 1440x900 | 15.92 | 10.51 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
 
