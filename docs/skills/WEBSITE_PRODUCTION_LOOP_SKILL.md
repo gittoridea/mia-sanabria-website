@@ -1,12 +1,22 @@
 ---
 name: WebsiteProductionLoop
 description: Production-grade client-website production cycle skill — combines a fresh baseline + Codex Spark / multi-family expert lanes + missing-image and brand-consistency sentinels + live-staging verification gate + compliance severity taxonomy + principal-decision register + skill-improvement loop. Composes as a domain skill INSIDE the PAI Algorithm v6.4.0 (does not replace the Algorithm). USE WHEN production cycle on a client website, build a new client site, level up an existing client site, audit-and-improve, pre-cutover hardening, regression check, or "make this site world-class". NOT FOR one-shot single-file fixes (use PAI Algorithm directly), code-only refactors with no UX/SEO/AEO/compliance dimension (use Forge or Engineer directly), discovery / research / ideation phases (use Research, Ideate, BeCreative), or anything pre-fact-ledger.
-version: 0.3.1
+version: 0.3.2
 status: in-use — refined each cycle by the SkillImprovementLoop workflow
 authored: 2026-05-08
 authored_from_cycles: Mia Sanabria cycles 3 + 4 (Codex-Spark expert audits)
 last_updated: 2026-05-09
-last_updated_cycle: 9 (acceptance-driven visual completion — layout vs contrast separation)
+last_updated_cycle: 10 (rendered visual QA + 3-layer image model — PRESENCE / VISIBILITY / AESTHETIC)
+hard_gates: 21
+soft_gates: 3
+new_in_v032:
+  - "HARD gate #20 — Rendered visibility (audit:rendered must PASS pre-deploy)"
+  - "HARD gate #21 — Probe-viewport sanity assertion (probe.viewport.w === requested.w or finding SKIPped with reason)"
+  - "3-layer image model — PRESENCE (audit:images) / VISIBILITY (audit:rendered) / AESTHETIC (operator + GPT-5.5)"
+  - "twice-failed component → mandatory rendered-DOM probe rule"
+  - "Per-client substrate adds scripts/audit-rendered-visual.ts + scripts/capture-baseline.ts"
+known_limitations_v032:
+  - "Chrome --dump-dom clamps mobile viewport at ~500px regardless of --window-size; mobile probe NOT yet honest at 320/375 — DevTools-protocol probe path queued for Cycle 11"
 upstream_skill: ~/.claude/skills/CreateSkill (UpdateSkill workflow)
 companion_docs:
   changelog: WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md

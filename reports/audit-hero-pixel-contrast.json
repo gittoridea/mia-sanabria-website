@@ -1,7 +1,7 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-10T00:07:34.982Z",
-  "mode": "local",
+  "generated": "2026-05-10T01:38:33.975Z",
+  "mode": "live",
   "mutation": false,
   "base": "http://127.0.0.1:4173",
   "thresholds": {
@@ -52,8 +52,8 @@
     {
       "route": "/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.87,
-      "meanEdgeContrast": 10.69,
+      "meanGlyphContrast": 15.91,
+      "meanEdgeContrast": 10.48,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -61,8 +61,8 @@
     {
       "route": "/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.88,
-      "meanEdgeContrast": 10.72,
+      "meanGlyphContrast": 15.93,
+      "meanEdgeContrast": 10.49,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -97,8 +97,8 @@
     {
       "route": "/about/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.79,
-      "meanEdgeContrast": 10.41,
+      "meanGlyphContrast": 15.7,
+      "meanEdgeContrast": 10.15,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -106,8 +106,8 @@
     {
       "route": "/about/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.74,
-      "meanEdgeContrast": 10.39,
+      "meanGlyphContrast": 15.63,
+      "meanEdgeContrast": 10.12,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -142,8 +142,8 @@
     {
       "route": "/markets/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.91,
-      "meanEdgeContrast": 10.04,
+      "meanGlyphContrast": 15.86,
+      "meanEdgeContrast": 9.95,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -151,8 +151,8 @@
     {
       "route": "/markets/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.93,
-      "meanEdgeContrast": 10.03,
+      "meanGlyphContrast": 15.92,
+      "meanEdgeContrast": 9.96,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -187,8 +187,8 @@
     {
       "route": "/buyers/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.68,
-      "meanEdgeContrast": 10.28,
+      "meanGlyphContrast": 15.6,
+      "meanEdgeContrast": 9.62,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -196,8 +196,8 @@
     {
       "route": "/buyers/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.7,
-      "meanEdgeContrast": 10.28,
+      "meanGlyphContrast": 15.56,
+      "meanEdgeContrast": 9.6,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -232,8 +232,8 @@
     {
       "route": "/sellers/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.74,
-      "meanEdgeContrast": 10.91,
+      "meanGlyphContrast": 15.61,
+      "meanEdgeContrast": 10.18,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -241,8 +241,8 @@
     {
       "route": "/sellers/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.65,
-      "meanEdgeContrast": 10.98,
+      "meanGlyphContrast": 15.55,
+      "meanEdgeContrast": 10.15,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -277,8 +277,8 @@
     {
       "route": "/valuation/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 16.11,
-      "meanEdgeContrast": 10.13,
+      "meanGlyphContrast": 16.01,
+      "meanEdgeContrast": 10.41,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -286,8 +286,8 @@
     {
       "route": "/valuation/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 16.05,
-      "meanEdgeContrast": 10.11,
+      "meanGlyphContrast": 15.99,
+      "meanEdgeContrast": 10.43,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -322,8 +322,8 @@
     {
       "route": "/markets/fort-lauderdale/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.92,
-      "meanEdgeContrast": 10.65,
+      "meanGlyphContrast": 15.96,
+      "meanEdgeContrast": 10.37,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -331,8 +331,8 @@
     {
       "route": "/markets/fort-lauderdale/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 4.69,
-      "meanEdgeContrast": 4.62,
+      "meanGlyphContrast": 15.95,
+      "meanEdgeContrast": 10.41,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -367,8 +367,8 @@
     {
       "route": "/markets/las-olas-isles/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 16.05,
-      "meanEdgeContrast": 10.58,
+      "meanGlyphContrast": 15.89,
+      "meanEdgeContrast": 10.55,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -376,8 +376,8 @@
     {
       "route": "/markets/las-olas-isles/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.91,
-      "meanEdgeContrast": 10.56,
+      "meanGlyphContrast": 15.82,
+      "meanEdgeContrast": 10.5,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -412,8 +412,8 @@
     {
       "route": "/markets/sea-ranch-lakes/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.73,
-      "meanEdgeContrast": 10.17,
+      "meanGlyphContrast": 15.76,
+      "meanEdgeContrast": 9.62,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -421,8 +421,8 @@
     {
       "route": "/markets/sea-ranch-lakes/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.67,
-      "meanEdgeContrast": 10.02,
+      "meanGlyphContrast": 15.69,
+      "meanEdgeContrast": 9.62,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -457,8 +457,8 @@
     {
       "route": "/markets/seven-isles/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 16.15,
-      "meanEdgeContrast": 10.76,
+      "meanGlyphContrast": 16.03,
+      "meanEdgeContrast": 10.55,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -466,8 +466,8 @@
     {
       "route": "/markets/seven-isles/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 16.15,
-      "meanEdgeContrast": 10.8,
+      "meanGlyphContrast": 16.02,
+      "meanEdgeContrast": 10.49,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -502,8 +502,8 @@
     {
       "route": "/markets/victoria-park/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.76,
-      "meanEdgeContrast": 9.77,
+      "meanGlyphContrast": 15.74,
+      "meanEdgeContrast": 10.17,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -511,8 +511,8 @@
     {
       "route": "/markets/victoria-park/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.83,
-      "meanEdgeContrast": 9.81,
+      "meanGlyphContrast": 15.79,
+      "meanEdgeContrast": 10.22,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -547,8 +547,8 @@
     {
       "route": "/markets/hillsboro-mile/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.93,
-      "meanEdgeContrast": 10.21,
+      "meanGlyphContrast": 15.84,
+      "meanEdgeContrast": 9.69,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -556,8 +556,8 @@
     {
       "route": "/markets/hillsboro-mile/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.95,
-      "meanEdgeContrast": 10.23,
+      "meanGlyphContrast": 15.82,
+      "meanEdgeContrast": 9.63,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -592,8 +592,8 @@
     {
       "route": "/markets/rio-vista/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 16.19,
-      "meanEdgeContrast": 10.67,
+      "meanGlyphContrast": 16.17,
+      "meanEdgeContrast": 10.37,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -601,8 +601,8 @@
     {
       "route": "/markets/rio-vista/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 16.17,
-      "meanEdgeContrast": 10.67,
+      "meanGlyphContrast": 16.02,
+      "meanEdgeContrast": 10.38,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -637,8 +637,8 @@
     {
       "route": "/markets/boca-raton/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 16.04,
-      "meanEdgeContrast": 9.87,
+      "meanGlyphContrast": 15.93,
+      "meanEdgeContrast": 9.8,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -646,8 +646,8 @@
     {
       "route": "/markets/boca-raton/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.97,
-      "meanEdgeContrast": 9.86,
+      "meanGlyphContrast": 15.91,
+      "meanEdgeContrast": 9.79,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -664,9 +664,9 @@
     {
       "route": "/markets/coral-ridge/",
       "viewport": "375x812",
-      "meanGlyphContrast": 11.8,
-      "meanEdgeContrast": 3.64,
-      "glyphSamples": 1500,
+      "meanGlyphContrast": 15.56,
+      "meanEdgeContrast": 9.94,
+      "glyphSamples": 1125,
       "edgeSamples": 800,
       "status": "PASS"
     },
@@ -682,8 +682,8 @@
     {
       "route": "/markets/coral-ridge/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.93,
-      "meanEdgeContrast": 10.45,
+      "meanGlyphContrast": 15.9,
+      "meanEdgeContrast": 10.08,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -691,8 +691,8 @@
     {
       "route": "/markets/coral-ridge/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.91,
-      "meanEdgeContrast": 10.43,
+      "meanGlyphContrast": 15.85,
+      "meanEdgeContrast": 10.08,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -727,8 +727,8 @@
     {
       "route": "/markets/palm-beach/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.83,
-      "meanEdgeContrast": 9.55,
+      "meanGlyphContrast": 15.58,
+      "meanEdgeContrast": 10.18,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -736,8 +736,8 @@
     {
       "route": "/markets/palm-beach/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.7,
-      "meanEdgeContrast": 9.52,
+      "meanGlyphContrast": 15.56,
+      "meanEdgeContrast": 10.17,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -772,8 +772,8 @@
     {
       "route": "/markets/lighthouse-point/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.8,
-      "meanEdgeContrast": 9.91,
+      "meanGlyphContrast": 15.78,
+      "meanEdgeContrast": 9.89,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -781,8 +781,8 @@
     {
       "route": "/markets/lighthouse-point/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.74,
-      "meanEdgeContrast": 9.97,
+      "meanGlyphContrast": 15.81,
+      "meanEdgeContrast": 9.89,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -817,8 +817,8 @@
     {
       "route": "/markets/delray-beach/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 16,
-      "meanEdgeContrast": 9.82,
+      "meanGlyphContrast": 15.93,
+      "meanEdgeContrast": 9.66,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -826,8 +826,8 @@
     {
       "route": "/markets/delray-beach/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.96,
-      "meanEdgeContrast": 9.82,
+      "meanGlyphContrast": 15.97,
+      "meanEdgeContrast": 9.7,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -862,8 +862,8 @@
     {
       "route": "/markets/harbor-beach/",
       "viewport": "1280x800",
-      "meanGlyphContrast": 15.96,
-      "meanEdgeContrast": 10.03,
+      "meanGlyphContrast": 15.95,
+      "meanEdgeContrast": 10.5,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
@@ -871,8 +871,8 @@
     {
       "route": "/markets/harbor-beach/",
       "viewport": "1440x900",
-      "meanGlyphContrast": 15.97,
-      "meanEdgeContrast": 10.01,
+      "meanGlyphContrast": 15.92,
+      "meanEdgeContrast": 10.51,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
