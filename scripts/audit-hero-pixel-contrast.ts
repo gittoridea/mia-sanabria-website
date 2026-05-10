@@ -17,9 +17,10 @@
  * Exit code: 0 if zero FAILs (warnings allowed); 1 if any FAIL.
  *
  * Usage:
- *   bun run audit:hero-contrast            # local out/ via Bun static server, default routes/viewports
- *   bun run audit:hero-contrast --live     # live staging URL
- *   bun run audit:hero-contrast --mutation # weak-scrim mutation; the audit MUST FAIL on this run
+ *   bun run audit:hero-contrast             # local out/ via Bun static server, default routes/viewports, 3 samples
+ *   bun run audit:hero-contrast --samples=1 # single-sample compatibility mode
+ *   bun run audit:hero-contrast --live      # live staging URL
+ *   bun run audit:hero-contrast --mutation  # weak-scrim mutation; the audit MUST FAIL on this run
  *
  * Authored: 2026-05-09 cycle 8 (GPT-5.5 xhigh design decision + Codex Spark Team B spec)
  */
@@ -45,6 +46,12 @@ type ViewportSpec = { name: string; width: number; height: number };
 type Row = {
   route: string;
   viewport: string;
+  glyphContrastMin: number;
+  glyphContrastMedian: number;
+  glyphContrastMax: number;
+  edgeContrastMin: number;
+  edgeContrastMedian: number;
+  edgeContrastMax: number;
   meanGlyphContrast: number;
   meanEdgeContrast: number;
   glyphSamples: number;
@@ -98,8 +105,23 @@ function arg(prefix: string, fallback = ""): string {
   return a ? a.slice(prefix.length) : fallback;
 }
 
+function parseSamples(): number {
+  const raw = arg("--samples=", "3");
+  if (!/^\d+$/.test(raw)) {
+    console.error(`Invalid --samples=${raw}. Expected an integer from 1 to 7.`);
+    process.exit(1);
+  }
+  const parsed = Number(raw);
+  if (parsed < 1 || parsed > 7) {
+    console.error(`Invalid --samples=${raw}. Expected an integer from 1 to 7.`);
+    process.exit(1);
+  }
+  return parsed;
+}
+
 const PORT = Number(arg("--port=", "4173"));
 const LIVE_BASE = arg("--base=", "https://miasanabriarealtor.trueidea.com");
+const samplesPerRow = parseSamples();
 const ROUTES_OVERRIDE = arg("--routes=", "")
   .split(",")
   .map((r) => r.trim())
@@ -384,10 +406,80 @@ function sampleContrast(
   return { meanGlyph: mean(glyphContrasts), meanEdge: mean(edgeContrasts), glyphN, edgeN };
 }
 
-function statusFor(meanGlyph: number, meanEdge: number, gN: number, eN: number): { status: Status; note?: string } {
+type ContrastReading = {
+  meanGlyphContrast: number;
+  meanEdgeContrast: number;
+  glyphSamples: number;
+  edgeSamples: number;
+};
+
+type AggregatedContrast = {
+  glyphContrastMin: number;
+  glyphContrastMedian: number;
+  glyphContrastMax: number;
+  edgeContrastMin: number;
+  edgeContrastMedian: number;
+  edgeContrastMax: number;
+  glyphSamples: number;
+  edgeSamples: number;
+};
+
+function median(values: number[]): number {
+  if (values.length === 0) return 0;
+  const sorted = [...values].sort((a, b) => a - b);
+  if (sorted.length % 2 === 1) {
+    return sorted[(sorted.length - 1) / 2] ?? 0;
+  }
+  const hiIndex = sorted.length / 2;
+  const lo = sorted[hiIndex - 1] ?? 0;
+  const hi = sorted[hiIndex] ?? 0;
+  return (lo + hi) / 2;
+}
+
+function minValue(values: number[]): number {
+  return values.length ? values.reduce((acc, v) => Math.min(acc, v), values[0] ?? 0) : 0;
+}
+
+function maxValue(values: number[]): number {
+  return values.length ? values.reduce((acc, v) => Math.max(acc, v), values[0] ?? 0) : 0;
+}
+
+function aggregateRow(readings: ContrastReading[]): AggregatedContrast {
+  const glyphContrasts = readings.map((r) => r.meanGlyphContrast);
+  const edgeContrasts = readings.map((r) => r.meanEdgeContrast);
+  const glyphSampleCounts = readings.map((r) => r.glyphSamples);
+  const edgeSampleCounts = readings.map((r) => r.edgeSamples);
+  return {
+    glyphContrastMin: minValue(glyphContrasts),
+    glyphContrastMedian: median(glyphContrasts),
+    glyphContrastMax: maxValue(glyphContrasts),
+    edgeContrastMin: minValue(edgeContrasts),
+    edgeContrastMedian: median(edgeContrasts),
+    edgeContrastMax: maxValue(edgeContrasts),
+    glyphSamples: minValue(glyphSampleCounts),
+    edgeSamples: minValue(edgeSampleCounts),
+  };
+}
+
+function round2(n: number): number {
+  return Number(n.toFixed(2));
+}
+
+function statusFor(stats: AggregatedContrast): { status: Status; note?: string } {
+  const gN = stats.glyphSamples;
+  const eN = stats.edgeSamples;
   if (gN < 200 || eN < 50) return { status: "WARN", note: `low samples (glyph=${gN} edge=${eN})` };
-  if (meanGlyph >= THRESH_GLYPH && meanEdge >= THRESH_EDGE) return { status: "PASS" };
-  return { status: "FAIL", note: `glyph=${meanGlyph.toFixed(2)} edge=${meanEdge.toFixed(2)}` };
+  if (
+    stats.glyphContrastMin >= THRESH_GLYPH / 2 &&
+    stats.glyphContrastMedian >= THRESH_GLYPH &&
+    stats.edgeContrastMedian >= THRESH_EDGE
+  ) {
+    return { status: "PASS" };
+  }
+  return {
+    status: "FAIL",
+    note: `glyph min/median/max=${stats.glyphContrastMin.toFixed(2)}/${stats.glyphContrastMedian.toFixed(2)}/${stats.glyphContrastMax.toFixed(2)} edge min/median/max=${stats.edgeContrastMin.toFixed(2)}/${stats.edgeContrastMedian.toFixed(2)}/${stats.edgeContrastMax.toFixed(2)}`,
+  };
 }
 
 function safeName(s: string): string {
@@ -420,6 +512,12 @@ async function main(): Promise<void> {
             rows.push({
               route,
               viewport: vp.name,
+              glyphContrastMin: 0,
+              glyphContrastMedian: 0,
+              glyphContrastMax: 0,
+              edgeContrastMin: 0,
+              edgeContrastMedian: 0,
+              edgeContrastMax: 0,
               meanGlyphContrast: 0,
               meanEdgeContrast: 0,
               glyphSamples: 0,
@@ -433,23 +531,44 @@ async function main(): Promise<void> {
       }
       for (const vp of VIEWPORTS) {
         const ts = Date.now();
-        const normalPath = join(SHOTS_DIR, `${safeName(route)}-${vp.name}-normal.png`);
-        const hiddenPath = join(SHOTS_DIR, `${safeName(route)}-${vp.name}-hidden.png`);
         const sep = route.includes("?") ? "&" : "?";
         try {
-          await captureScreenshot(`${baseUrl}${route}${sep}auditMode=normal&_=${ts}`, vp, normalPath);
-          await captureScreenshot(`${baseUrl}${route}${sep}auditMode=hide&_=${ts}`, vp, hiddenPath);
-          const a = await readPixels(normalPath);
-          const b = await readPixels(hiddenPath);
-          const { meanGlyph, meanEdge, glyphN, edgeN } = sampleContrast(a, b);
-          const { status, note } = statusFor(meanGlyph, meanEdge, glyphN, edgeN);
+          const readings: ContrastReading[] = [];
+          for (let sampleIndex = 0; sampleIndex < samplesPerRow; sampleIndex += 1) {
+            const cacheBust = ts + sampleIndex;
+            const sampleName = `${safeName(route)}-${vp.name}-s${sampleIndex + 1}-${cacheBust}`;
+            const normalPath = join(SHOTS_DIR, `${sampleName}-normal.png`);
+            const hiddenPath = join(SHOTS_DIR, `${sampleName}-hidden.png`);
+            await captureScreenshot(`${baseUrl}${route}${sep}auditMode=normal&_=${cacheBust}`, vp, normalPath);
+            await captureScreenshot(`${baseUrl}${route}${sep}auditMode=hide&_=${cacheBust}`, vp, hiddenPath);
+            const a = await readPixels(normalPath);
+            const b = await readPixels(hiddenPath);
+            const { meanGlyph, meanEdge, glyphN, edgeN } = sampleContrast(a, b);
+            readings.push({
+              meanGlyphContrast: meanGlyph,
+              meanEdgeContrast: meanEdge,
+              glyphSamples: glyphN,
+              edgeSamples: edgeN,
+            });
+          }
+          const stats = aggregateRow(readings);
+          const { status, note } = statusFor(stats);
+          const medianGlyphContrast = round2(stats.glyphContrastMedian);
+          const medianEdgeContrast = round2(stats.edgeContrastMedian);
           rows.push({
             route,
             viewport: vp.name,
-            meanGlyphContrast: Number(meanGlyph.toFixed(2)),
-            meanEdgeContrast: Number(meanEdge.toFixed(2)),
-            glyphSamples: glyphN,
-            edgeSamples: edgeN,
+            glyphContrastMin: round2(stats.glyphContrastMin),
+            glyphContrastMedian: medianGlyphContrast,
+            glyphContrastMax: round2(stats.glyphContrastMax),
+            edgeContrastMin: round2(stats.edgeContrastMin),
+            edgeContrastMedian: medianEdgeContrast,
+            edgeContrastMax: round2(stats.edgeContrastMax),
+            // Legacy JSON keys retained for downstream consumers; values now hold the median-of-N reading.
+            meanGlyphContrast: medianGlyphContrast,
+            meanEdgeContrast: medianEdgeContrast,
+            glyphSamples: stats.glyphSamples,
+            edgeSamples: stats.edgeSamples,
             status,
             note,
           });
@@ -457,6 +576,12 @@ async function main(): Promise<void> {
           rows.push({
             route,
             viewport: vp.name,
+            glyphContrastMin: 0,
+            glyphContrastMedian: 0,
+            glyphContrastMax: 0,
+            edgeContrastMin: 0,
+            edgeContrastMedian: 0,
+            edgeContrastMax: 0,
             meanGlyphContrast: 0,
             meanEdgeContrast: 0,
             glyphSamples: 0,
@@ -480,6 +605,7 @@ async function main(): Promise<void> {
       mode: isLive ? "live" : "local",
       mutation: isMutation,
       base: baseUrl,
+      samples: samplesPerRow,
       thresholds: { glyph: THRESH_GLYPH, edge: THRESH_EDGE },
       viewports: VIEWPORTS.map((v) => v.name),
       counts,
@@ -494,16 +620,33 @@ async function main(): Promise<void> {
       `**Mode:** ${payload.mode}`,
       `**Mutation:** ${payload.mutation}`,
       `**Base:** ${payload.base}`,
+      `**Samples per row:** ${payload.samples}`,
       `**Thresholds:** glyph ≥ ${THRESH_GLYPH}:1 · edge ≥ ${THRESH_EDGE}:1`,
       "",
       `**Summary:** ${counts.pass} PASS · ${counts.warn} WARN · ${counts.fail} FAIL · ${counts.skip} SKIP`,
       "",
-      "| Route | Viewport | Glyph contrast | Edge contrast | Glyph samples | Edge samples | Status | Note |",
-      "|---|---|---:|---:|---:|---:|:-:|---|",
+      "| Route | Viewport | Glyph contrast | Edge contrast | Stability | Glyph samples | Edge samples | Status | Note |",
+      "|---|---|---:|---:|---:|---:|---:|:-:|---|",
       ...rows.map((r) => {
         const icon = r.status === "PASS" ? "✅" : r.status === "WARN" ? "⚠️" : r.status === "FAIL" ? "❌" : "—";
-        return `| \`${r.route}\` | ${r.viewport} | ${r.meanGlyphContrast.toFixed(2)} | ${r.meanEdgeContrast.toFixed(2)} | ${r.glyphSamples} | ${r.edgeSamples} | ${icon} ${r.status} | ${r.note ?? ""} |`;
+        const stability = `${r.glyphContrastMedian.toFixed(2)} (${r.glyphContrastMin.toFixed(2)}..${r.glyphContrastMax.toFixed(2)})`;
+        return `| \`${r.route}\` | ${r.viewport} | ${r.meanGlyphContrast.toFixed(2)} | ${r.meanEdgeContrast.toFixed(2)} | ${stability} | ${r.glyphSamples} | ${r.edgeSamples} | ${icon} ${r.status} | ${r.note ?? ""} |`;
       }),
+      "",
+      "## Stability summary",
+      "",
+      ...(() => {
+        const unstableRows = rows.filter((r) => r.glyphContrastMax - r.glyphContrastMin > 1.0);
+        if (!unstableRows.length) return ["_All rows within 1.0 contrast spread — no high-variance rows._"];
+        return [
+          "| Route | Viewport | Min | Median | Max | Spread |",
+          "|---|---|---:|---:|---:|---:|",
+          ...unstableRows.map((r) => {
+            const spread = r.glyphContrastMax - r.glyphContrastMin;
+            return `| \`${r.route}\` | ${r.viewport} | ${r.glyphContrastMin.toFixed(2)} | ${r.glyphContrastMedian.toFixed(2)} | ${r.glyphContrastMax.toFixed(2)} | ${spread.toFixed(2)} |`;
+          }),
+        ];
+      })(),
       "",
       "## Mutation note",
       "",

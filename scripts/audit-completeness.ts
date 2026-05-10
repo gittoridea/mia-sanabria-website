@@ -365,6 +365,9 @@ async function checkCorePageImages(): Promise<CheckResult[]> {
   const results: CheckResult[] = [];
   const issues: { route: string; img: string; problem: string }[] = [];
   const broken: { route: string; img: string; status: number }[] = [];
+  // Cycle 12 — track fill-mode classification so the report can show how many
+  // images are correctly using next/image fill (no width/height by Next convention).
+  let fillModeCount = 0;
 
   for (const route of [...CORE_PAGES, ...MARKET_PAGES.slice(1, 4)]) {
     const html = await readBuiltHtml(route);
@@ -379,10 +382,25 @@ async function checkCorePageImages(): Promise<CheckResult[]> {
       if (!src) continue;
       // Skip Next.js srcset placeholders
       if (src.startsWith("data:")) continue;
+      // Cycle 12 — next/image `fill` mode: parent must be position:relative with explicit
+      // dimensions; the rendered <img> is position:absolute and has NO width/height by
+      // Next.js convention. The audit must not flag legitimate fill-mode usage.
+      // Two signals identify fill mode:
+      //   1. data-nimg="fill" — canonical attr emitted by next/image v13+ in fill mode
+      //   2. inline style position:absolute + height:100%; width:100% — the runtime CSS
+      //      next/image injects (defense-in-depth in case Next changes the data attr)
+      const isFillMode =
+        /\bdata-nimg="fill"/.test(tag) ||
+        (/\bstyle="[^"]*position:absolute[^"]*"/.test(tag) &&
+          /\bstyle="[^"]*height:100%[^"]*"/.test(tag) &&
+          /\bstyle="[^"]*width:100%[^"]*"/.test(tag));
+      if (isFillMode) {
+        fillModeCount++;
+      }
       // alt text required (empty alt OK only if aria-hidden or decorative)
       if (alt === null) issues.push({ route, img: src, problem: "missing alt attribute" });
-      // dims required for non-decorative images
-      if (alt && alt[1] !== "" && (!w || !h)) {
+      // dims required for non-decorative images — UNLESS rendered in next/image fill mode
+      if (alt && alt[1] !== "" && (!w || !h) && !isFillMode) {
         issues.push({ route, img: src, problem: "missing width/height" });
       }
       // placeholder name
@@ -403,10 +421,12 @@ async function checkCorePageImages(): Promise<CheckResult[]> {
   results.push({
     id: "completeness.images.dimsAltPlaceholder",
     category: "Design/Display Integrity",
-    description: "Core-page <img> tags have alt + width/height + no placeholder names",
+    description: "Core-page <img> tags have alt + width/height + no placeholder names (next/image fill mode exempted from dims check)",
     status: issues.length === 0 ? "PASS" : "WARN",
-    evidence: issues.length === 0 ? "no img-attribute issues" : `${issues.length} img attribute issues`,
-    details: { issues },
+    evidence: issues.length === 0
+      ? `no img-attribute issues (${fillModeCount} next/image fill-mode images correctly classified)`
+      : `${issues.length} img attribute issues (${fillModeCount} next/image fill-mode images correctly classified)`,
+    details: { issues, fillModeCount },
   });
   results.push({
     id: "completeness.images.localFilesExist",

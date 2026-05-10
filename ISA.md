@@ -3,12 +3,12 @@ project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
 phase: verify
-progress: 540/540
+progress: 590/602
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-10T04:05:00Z
+updated: 2026-05-10T11:25:00Z
 algorithm_version: 6.4.0
-active_mission: 2026-05-09-cycle-11-final-mile-rendered-design-qa
+active_mission: 2026-05-10-cycle-12-production-readiness-closure
 ---
 
 # Mia Sanabria Realtor Site — ISA
@@ -1675,3 +1675,107 @@ ISCs verified or state-probed cycle 9 (Cycle 9 ISC IDs at the end of file; note 
 - **2026-05-10T02:50Z Card 5 boundary respected:** combined REALTOR®+MLS asset stays — visual treatment via CSS filter only; asset swap requires principal authorization. Confirmed against PRINCIPAL_DECISION_REGISTER and mission boundaries.
 - **2026-05-10T02:50Z visual-fix recipe locked:** `[filter:brightness(0)_invert(1)] opacity-80` on all three trust marks; remove `bg-white/95 p-1` from LPT. Algebra verified: white-on-transparent → black → white (no-op); dark-on-transparent → black → white (visible); black-on-transparent → black → white (visible). All three become discreet white silhouettes on navy at 80% opacity.
 - **2026-05-10T03:00Z E5 Interview-workflow waiver re-applied:** same rationale as Cycle 10 — project ISA already carries 449 cumulative ISCs + 11-section structure; running Interview re-derives substrate that exists in 95k+ tokens of ISA + handoffs. Cycle 11 plan derives directly from Cycle 10 next-session trigger + principal review note. Honest scope vs. cost-of-ceremony.
+
+---
+
+## Mission 2026-05-10 — cycle-12 production-readiness closure (Cato early + DevTools 320/375 + median-of-3 + WARN review + scorecard)
+
+**Trigger:** Cycle 11 closed PASS_WITH_MINOR_CONCERNS · principal-visible-logo-issue: RESOLVED · GPT-5.5 strict verdict: FAIL · 320/375 narrow-mobile residuals + EHO label clip + audit:hero-contrast probe-flake + 2 carry-forward WARNs queued for Cycle 12. Cato has been deferred 3 consecutive cycles (9, 10, 11); Algorithm v6.4.0 Rule 2a mandates Cato at E5. Cycle 12 must run Cato early.
+
+**Principal-visible objective:** produce a final production-readiness scorecard that classifies every remaining gap as PASS / PARTIAL / BLOCKED-BY-PRINCIPAL / BLOCKED-BY-GHL / BLOCKED-BY-LEGAL/COMPLIANCE / REVIEW. This is the closure deliverable — it tells the principal what is actually launchable, separate from external blockers that no design cycle can resolve.
+
+### Phase 0 — Recovery + integrity check
+- [x] ISC-541: `docs/CYCLE_12_RECOVERY_AND_INTEGRITY_CHECK.md` exists and documents git+live state.
+- [x] ISC-542: Working tree clean at session entry; HEAD matches origin/main.
+- [x] ISC-543: Specialist-Prereq Probe ran and result logged in ISA Decisions.
+
+### Phase 1 — Cato cross-vendor audit FIRST
+- [x] ISC-544: Cato dispatched via `Agent(subagent_type="Cato", ...)` with brief covering Cycle 11 outputs + live state + audit reports + scorecard request.
+- [x] ISC-545: Cato verdict captured: pass / concerns / fail (schema-enforced).
+- [x] ISC-546: Cato findings classified: must-fix this cycle vs. document as future/external blocker.
+- [x] ISC-547: `docs/CYCLE_12_CATO_CROSS_VENDOR_AUDIT.md` exists with verbatim Cato output + reconciliation.
+- [x] ISC-548: Cato findings drive the rest of the cycle (not waited until end).
+
+### Phase 2 — DevTools 320/375 investigation
+- [x] ISC-549: chrome `--headless --remote-debugging-port` opens listener on the live site at 320×568.
+- [x] ISC-550: Computed style for FooterTrustMark `<span>` label captured: display, max-width, overflow-wrap, word-break, font-size, letter-spacing, line-height.
+- [x] ISC-551: Bounding-box rect for the EHO label captured at 320 (x, y, width, height) — ground-truth for "clipped" claim.
+- [x] ISC-552: Same computed-style + bounding-box capture for Hero eyebrow / sub / CTA at 320 and 375.
+- [x] ISC-553: Same capture for AnswerFirst H2 at 320 and 375 on home + flagged routes.
+- [x] ISC-554: Verdict per element: real clipping (DOM box exceeds viewport) | screenshot illusion (DOM fits, screenshot differs) | probe limitation (CDP rendered same as screenshot — no further evidence available without principal device).
+- [x] ISC-555: `docs/CYCLE_12_DEVTOOLS_320_375_INVESTIGATION.md` exists with the full evidence table.
+- [x] ISC-556: Investigation produces actionable verdict for Phase 4 (fix path identified, or hard-stop documented).
+
+### Phase 3 — Visual baseline (BEFORE)
+- [x] ISC-557: `/tmp/mia-cycle12-before/` contains screenshots at 6 viewports × ~26 routes (≥150 PNGs).
+- [x] ISC-558: `docs/CYCLE_12_VISUAL_BASELINE.md` indexes the captures + summarizes residual issues.
+
+### Phase 4 — Narrow-mobile surgical fixes (only if Phase 2 proves real clipping)
+- [x] ISC-559: Phase 4 only fires when Phase 2 verdict ∈ {real clipping}; documented hard-stop is acceptable verdict.
+- [x] ISC-560: All implemented fixes are inside mission boundary (no GHL / TCPA / license / REALTOR / Spanish / DNS / CMS / colors / fonts / glassmorphism).
+- [x] ISC-561: After each patch: `bun run typecheck` + `bun run lint` + `bun run build` exit 0.
+- [x] ISC-562: After each patch: `audit:rendered` + `audit:brand` + `audit:images` stay clean (no regressions).
+- [x] ISC-563: Cycle 11's monochrome trust-strip treatment preserved (no semantic change to LPT/REALTOR®/EHO compliance assets).
+- [x] ISC-564: 320 EHO label clip resolved with DevTools-confirmed proof OR hard-stopped with documented technical-debt entry.
+
+### Phase 5 — `audit:hero-contrast` median-of-N hardening
+- [x] ISC-565: `scripts/audit-hero-pixel-contrast.ts` runs ≥3 sample passes per route×viewport.
+- [x] ISC-566: Aggregation reports min/median/max contrast per row.
+- [x] ISC-567: FAIL only fires if median fails (or min catastrophically below half-threshold).
+- [x] ISC-568: Mutation-mode sentinel still detects regression (median-mutate must FAIL).
+- [x] ISC-569: `docs/CYCLE_12_HERO_CONTRAST_MEDIAN_HARDENING.md` exists with before/after stability evidence.
+
+### Phase 6 — `audit:completeness` WARN cleanup / classification
+- [x] ISC-570: Each of the 28 missing-img-dim issues classified: low-risk-fix-now / Next.js fill-mode-correct-as-is / GHL-gated / accepted-WARN.
+- [x] ISC-571: Each of the 2 mailto/form-fallback warnings classified: low-risk-fix / GHL-gated / accepted-WARN.
+- [x] ISC-572: `docs/CYCLE_12_AUDIT_COMPLETENESS_WARN_REVIEW.md` exists with the full classification table.
+
+### Phase 7 — Production-readiness scorecard (the closure deliverable)
+- [x] ISC-573: `docs/CYCLE_12_PRODUCTION_READINESS_SCORECARD.md` exists with all 24 axes covered.
+- [x] ISC-574: Each axis has Status / Evidence / Remaining-gap / Owner-blocker columns populated.
+- [x] ISC-575: Status taxonomy honest: PASS / PARTIAL / BLOCKED-BY-PRINCIPAL / BLOCKED-BY-GHL / BLOCKED-BY-LEGAL/COMPLIANCE / REVIEW.
+
+### Phase 8 — Local verification
+- [x] ISC-576: `bun run typecheck` exits 0.
+- [x] ISC-577: `bun run lint` exits 0.
+- [x] ISC-578: `bun run build` exits 0.
+- [x] ISC-579: `bun run audit:all` exits 0 or only with classified WARNs.
+- [x] ISC-580: `/tmp/mia-cycle12-local-after/` captures complete; `docs/CYCLE_12_LOCAL_VERIFICATION.md` exists.
+
+### Phase 9 — GPT-5.5 predeploy acceptance
+- [x] ISC-581: GPT-5.5 (`xhigh`) reviews Cato + DevTools + audits + screenshots + scorecard + diff.
+- [x] ISC-582: `docs/CYCLE_12_GPT55_PREDEPLOY_ACCEPTANCE.md` exists with verdict ∈ {PASS, PASS_WITH_MINOR_CONCERNS, FAIL} + per-question reasoning.
+
+### Phase 10 — Deploy + live verification
+- [ ] ISC-583: Code committed + pushed to origin/main; commit message references CYCLE_12.
+- [ ] ISC-584: `bun scripts/deploy-and-verify.ts --no-lighthouse` triggers Dokploy deploy.
+- [ ] ISC-585: Live ETag flips post-deploy (Caddy cache rotation).
+- [ ] ISC-586: `/tmp/mia-cycle12-live-after/` captures complete.
+- [ ] ISC-587: All changed-route HTTP statuses == 200 live; canonical email + no Klein-Morgan/sunandbreeze residue verified.
+
+### Phase 11 — Cato follow-up
+- [ ] ISC-588: Cato re-verified that Phase 1 must-fix items addressed; deferred items correctly classified.
+- [ ] ISC-589: `docs/CYCLE_12_CATO_FOLLOWUP.md` exists with reconciliation.
+
+### Phase 12 — GPT-5.5 LIVE acceptance
+- [ ] ISC-590: GPT-5.5 (`xhigh`) reviews live screenshots + DevTools evidence + audits + scorecard + Cato outputs.
+- [ ] ISC-591: `docs/CYCLE_12_GPT55_LIVE_ACCEPTANCE.md` exists with explicit answers to: 320 EHO resolved-or-classified, hero readability, footer consistency, markets imagery, production-ready Y/N, what remains externally blocked.
+
+### Phase 13 — Skill / process upgrade
+- [ ] ISC-592: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` updated with durable Cycle 12 lessons (Cato-deferral-redemption discipline, DevTools-led narrow-mobile rule, median-of-N for flaky visual audits, scorecard-separates-design-from-external-blockers).
+- [ ] ISC-593: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.3.4 entry written.
+- [ ] ISC-594: `docs/CYCLE_12_PROCESS_UPGRADE_REPORT.md` exists.
+
+### Phase 14 — Handoff + next-session trigger
+- [ ] ISC-595: `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_12_PRODUCTION_READINESS_CLOSURE_2026-05-10.md` exists with all 21 sections from the mission spec.
+- [ ] ISC-596: `docs/NEXT_SESSION_TRIGGER_AFTER_CYCLE_12.md` exists; trigger is non-generic and based on actual Cycle 12 residuals.
+- [ ] ISC-597: All docs + code committed and pushed to origin/main.
+
+### Anti-criteria
+- [ ] ISC-598: Anti: No GHL wiring, TCPA mechanics, license rendering, REALTOR®/MLS swap, Spanish hreflang, lead magnet, CMS install, color/font addition, glassmorphism, gradient borders touched.
+- [ ] ISC-599: Anti: No claim of `model_reasoning_effort=max` — `xhigh` is the highest variant accepted by codex-cli 0.129.0.
+- [ ] ISC-600: Anti: No Phase 4 fixes shipped without DevTools-computed-style proof of the underlying defect.
+- [ ] ISC-601: Anti: No "production-ready" claim with unresolved design-side defects (external blockers must be classified, not ignored).
+
+### Antecedent
+- [ ] ISC-602: Antecedent: principal opening live staging on a real device perceives narrow-mobile readability matches mid-viewport polish (no obvious clipping, no obviously-illegible text), and the scorecard reads as honest about what remains.
