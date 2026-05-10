@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T15:23:28.601Z",
+  "timestamp": "2026-05-10T18:25:41.077Z",
   "counts": {
     "PASS": 15,
     "WARN": 1,
@@ -12,11 +12,11 @@
       "category": "Sitemap coverage",
       "description": "Every public built route is in sitemap.xml",
       "status": "PASS",
-      "evidence": "27 built · 27 in sitemap · 0 missing",
+      "evidence": "39 built · 39 in sitemap · 0 missing",
       "details": {
         "missing": [],
-        "builtCount": 27,
-        "sitemapCount": 27
+        "builtCount": 39,
+        "sitemapCount": 39
       }
     },
     {
@@ -162,16 +162,16 @@
     {
       "id": "completeness.blog.articleSchema",
       "category": "Blog",
-      "description": "/insights/ emits at least one Article JSON-LD",
+      "description": "Insights emits Blog/BlogPosting schema on index AND Article schema on each post",
       "status": "PASS",
-      "evidence": "Article schema present"
+      "evidence": "Blog schema on index + Article on representative post"
     },
     {
       "id": "completeness.schema.valid",
       "category": "Schema",
       "description": "All JSON-LD blocks parse and carry @type",
       "status": "PASS",
-      "evidence": "161 JSON-LD blocks across 27 pages · 0 broken",
+      "evidence": "159 JSON-LD blocks across 27 pages · 0 broken",
       "details": {
         "issues": []
       }

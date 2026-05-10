@@ -7,6 +7,7 @@ import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
 import { ContactPageSchema } from "@/components/schema/ContactPageSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
+import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { SITE } from "@/lib/site";
 import { MIA } from "@/lib/mia";
 
@@ -198,6 +199,20 @@ export default function ContactPage() {
       </section>
 
       <Faq items={CONTACT_FAQ} />
+
+      {/* Cycle 15 — contact-page editorial weaving. The two highest-leverage
+          briefs to read before the first conversation: the buyer-brief
+          framework and the dockage-diligence brief. */}
+      <RelatedInsightsModule
+        slugs={[
+          "private-buyer-brief-defining-the-search",
+          "fort-lauderdale-waterfront-buyer-guide",
+          "preparing-waterfront-residence-private-market-conversations",
+        ]}
+        heading="Helpful before the first conversation"
+        sub="Three briefs that make the first private conversation more productive — for buyers, for sellers, and for the in-between cases."
+        background="cream"
+      />
     </>
   );
 }

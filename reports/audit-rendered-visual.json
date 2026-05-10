@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-10T15:29:43.573Z",
+  "generated": "2026-05-10T18:31:54.859Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -540,7 +540,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 14249,
+        "documentHeight": 16016,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -895,7 +895,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 14249,
+        "documentHeight": 16016,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1250,7 +1250,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 10188,
+        "documentHeight": 11654,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1605,7 +1605,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 8208,
+        "documentHeight": 9216,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1944,7 +1944,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 8208,
+        "documentHeight": 9216,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3314,7 +3314,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6162,
+        "documentHeight": 7035,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3561,7 +3561,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6162,
+        "documentHeight": 7035,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3808,7 +3808,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 5489,
+        "documentHeight": 6174,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4055,7 +4055,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4194,
+        "documentHeight": 4692,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4286,7 +4286,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4194,
+        "documentHeight": 4692,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4517,7 +4517,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6377,
+        "documentHeight": 7226,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4764,7 +4764,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6377,
+        "documentHeight": 7226,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5011,7 +5011,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 5643,
+        "documentHeight": 6304,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5258,7 +5258,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4377,
+        "documentHeight": 4875,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5489,7 +5489,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4377,
+        "documentHeight": 4875,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5720,7 +5720,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6010,
+        "documentHeight": 6858,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5921,7 +5921,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6010,
+        "documentHeight": 6858,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6122,7 +6122,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 5219,
+        "documentHeight": 5881,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6323,7 +6323,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4377,
+        "documentHeight": 4875,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6507,7 +6507,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4377,
+        "documentHeight": 4875,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6691,7 +6691,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 4388,
+        "documentHeight": 5293,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6892,7 +6892,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 4388,
+        "documentHeight": 5293,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7093,7 +7093,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 4120,
+        "documentHeight": 4817,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7294,7 +7294,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 2837,
+        "documentHeight": 3371,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7478,7 +7478,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 2837,
+        "documentHeight": 3371,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7662,7 +7662,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6835,
+        "documentHeight": 10635,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7719,9 +7719,9 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 439.140625,
+            "h": 467.140625,
             "right": 500,
-            "bottom": 520.140625
+            "bottom": 548.140625
           },
           "headingBox": {
             "x": 16,
@@ -7745,9 +7745,9 @@
             "x": 16,
             "y": 324.140625,
             "w": 468,
-            "h": 84,
+            "h": 112,
             "right": 484,
-            "bottom": 408.140625
+            "bottom": 436.140625
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -7828,12 +7828,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 77,
+        "rightEdgeContentPx": 87,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (77 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (87 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -7851,7 +7851,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6835,
+        "documentHeight": 10635,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7908,9 +7908,9 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 439.140625,
+            "h": 467.140625,
             "right": 500,
-            "bottom": 520.140625
+            "bottom": 548.140625
           },
           "headingBox": {
             "x": 16,
@@ -7934,9 +7934,9 @@
             "x": 16,
             "y": 324.140625,
             "w": 468,
-            "h": 84,
+            "h": 112,
             "right": 484,
-            "bottom": 408.140625
+            "bottom": 436.140625
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -8017,12 +8017,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 60,
+        "rightEdgeContentPx": 68,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (60 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (68 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -8040,7 +8040,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 5871,
+        "documentHeight": 9127,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8097,17 +8097,17 @@
             "x": 0,
             "y": 81,
             "w": 768,
-            "h": 526.59375,
+            "h": 579.390625,
             "right": 768,
-            "bottom": 607.59375
+            "bottom": 660.390625
           },
           "headingBox": {
             "x": 16,
             "y": 266,
             "w": 736,
-            "h": 105.59375,
+            "h": 158.390625,
             "right": 752,
-            "bottom": 371.59375
+            "bottom": 424.390625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
@@ -8121,11 +8121,11 @@
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 16,
-            "y": 395.59375,
+            "y": 448.390625,
             "w": 672,
             "h": 84,
             "right": 688,
-            "bottom": 479.59375
+            "bottom": 532.390625
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -8229,7 +8229,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5091,
+        "documentHeight": 6420,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8286,17 +8286,17 @@
             "x": 0,
             "y": 77,
             "w": 1280,
-            "h": 617,
+            "h": 683,
             "right": 1280,
-            "bottom": 694
+            "bottom": 760
           },
           "headingBox": {
             "x": 32,
             "y": 294,
             "w": 896,
-            "h": 132,
+            "h": 198,
             "right": 928,
-            "bottom": 426
+            "bottom": 492
           },
           "headingClipsRight": false,
           "eyebrowBox": {
@@ -8310,11 +8310,11 @@
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 32,
-            "y": 450,
+            "y": 516,
             "w": 672,
             "h": 84,
             "right": 704,
-            "bottom": 534
+            "bottom": 600
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -8401,7 +8401,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5091,
+        "documentHeight": 6420,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8458,17 +8458,17 @@
             "x": 0,
             "y": 77,
             "w": 1440,
-            "h": 617,
+            "h": 683,
             "right": 1440,
-            "bottom": 694
+            "bottom": 760
           },
           "headingBox": {
             "x": 112,
             "y": 294,
             "w": 896,
-            "h": 132,
+            "h": 198,
             "right": 1008,
-            "bottom": 426
+            "bottom": 492
           },
           "headingClipsRight": false,
           "eyebrowBox": {
@@ -8482,11 +8482,11 @@
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 112,
-            "y": 450,
+            "y": 516,
             "w": 672,
             "h": 84,
             "right": 784,
-            "bottom": 534
+            "bottom": 600
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -12077,7 +12077,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12480,
+        "documentHeight": 13378,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -12835,7 +12835,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12480,
+        "documentHeight": 13378,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -13593,7 +13593,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6937,
+        "documentHeight": 7623,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -14351,7 +14351,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5399,
+        "documentHeight": 5897,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15093,7 +15093,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5399,
+        "documentHeight": 5897,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15835,7 +15835,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12978,
+        "documentHeight": 13884,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16154,7 +16154,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12978,
+        "documentHeight": 13884,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16473,7 +16473,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9330,
+        "documentHeight": 10052,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16792,7 +16792,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7208,
+        "documentHeight": 7742,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17095,7 +17095,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7208,
+        "documentHeight": 7742,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17398,7 +17398,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11865,
+        "documentHeight": 12771,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17689,7 +17689,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11865,
+        "documentHeight": 12771,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17996,7 +17996,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9035,
+        "documentHeight": 9757,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18303,7 +18303,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6927,
+        "documentHeight": 7461,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18594,7 +18594,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6927,
+        "documentHeight": 7461,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18862,12 +18862,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1240,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1240 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -18885,7 +18885,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11644,
+        "documentHeight": 12550,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19164,7 +19164,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11644,
+        "documentHeight": 12550,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19459,7 +19459,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8891,
+        "documentHeight": 9613,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19754,7 +19754,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7199,
+        "documentHeight": 7733,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20033,7 +20033,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7199,
+        "documentHeight": 7733,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20312,7 +20312,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11011,
+        "documentHeight": 11868,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20595,7 +20595,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11011,
+        "documentHeight": 11868,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20878,7 +20878,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8801,
+        "documentHeight": 9498,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21161,7 +21161,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6674,
+        "documentHeight": 7208,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21428,7 +21428,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6674,
+        "documentHeight": 7208,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21695,7 +21695,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 9939,
+        "documentHeight": 10820,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21966,7 +21966,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 9939,
+        "documentHeight": 10820,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22237,7 +22237,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8115,
+        "documentHeight": 8812,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22508,7 +22508,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6429,
+        "documentHeight": 6963,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22763,7 +22763,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6429,
+        "documentHeight": 6963,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23018,7 +23018,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10980,
+        "documentHeight": 11836,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23301,7 +23301,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10980,
+        "documentHeight": 11836,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23584,7 +23584,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8779,
+        "documentHeight": 9477,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23867,7 +23867,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6583,
+        "documentHeight": 7117,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24134,7 +24134,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6583,
+        "documentHeight": 7117,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24401,7 +24401,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11225,
+        "documentHeight": 12156,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24696,7 +24696,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11225,
+        "documentHeight": 12156,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24991,7 +24991,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8527,
+        "documentHeight": 9273,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25286,7 +25286,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6942,
+        "documentHeight": 7476,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25565,7 +25565,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6942,
+        "documentHeight": 7476,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25821,12 +25821,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1491,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1491 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -25844,7 +25844,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11049,
+        "documentHeight": 11954,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26123,7 +26123,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11049,
+        "documentHeight": 11954,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26418,7 +26418,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8516,
+        "documentHeight": 9238,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26713,7 +26713,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6936,
+        "documentHeight": 7434,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26992,7 +26992,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6936,
+        "documentHeight": 7434,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27271,7 +27271,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12256,
+        "documentHeight": 13162,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27562,7 +27562,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12256,
+        "documentHeight": 13162,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27869,7 +27869,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9320,
+        "documentHeight": 10017,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28176,7 +28176,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7187,
+        "documentHeight": 7721,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28467,7 +28467,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7187,
+        "documentHeight": 7721,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28758,7 +28758,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12889,
+        "documentHeight": 13795,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29061,7 +29061,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12889,
+        "documentHeight": 13795,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29380,7 +29380,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9300,
+        "documentHeight": 9998,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29699,7 +29699,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7223,
+        "documentHeight": 7757,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30002,7 +30002,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7223,
+        "documentHeight": 7757,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30282,12 +30282,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1653,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1653 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -30305,7 +30305,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10689,
+        "documentHeight": 11595,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30572,7 +30572,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10689,
+        "documentHeight": 11595,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30855,7 +30855,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8548,
+        "documentHeight": 9270,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31138,7 +31138,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6445,
+        "documentHeight": 6979,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31405,7 +31405,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6445,
+        "documentHeight": 6979,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31672,7 +31672,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 9957,
+        "documentHeight": 10497,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31927,7 +31927,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 9957,
+        "documentHeight": 10497,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32198,7 +32198,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8069,
+        "documentHeight": 8595,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32469,7 +32469,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6405,
+        "documentHeight": 6939,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32724,7 +32724,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6405,
+        "documentHeight": 6939,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32979,7 +32979,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10075,
+        "documentHeight": 10811,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33234,7 +33234,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10075,
+        "documentHeight": 10811,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33505,7 +33505,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8143,
+        "documentHeight": 8670,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33776,7 +33776,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6401,
+        "documentHeight": 6935,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34031,7 +34031,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6401,
+        "documentHeight": 6935,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34286,7 +34286,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11858,
+        "documentHeight": 12764,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34549,7 +34549,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11858,
+        "documentHeight": 12764,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34844,7 +34844,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9044,
+        "documentHeight": 9742,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35139,7 +35139,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7321,
+        "documentHeight": 7855,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35418,7 +35418,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7321,
+        "documentHeight": 7855,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35697,7 +35697,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11874,
+        "documentHeight": 12780,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35976,7 +35976,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11874,
+        "documentHeight": 12780,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36271,7 +36271,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8988,
+        "documentHeight": 9686,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36566,7 +36566,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7312,
+        "documentHeight": 7846,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36845,7 +36845,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7312,
+        "documentHeight": 7846,
         "hasHorizontalOverflow": false,
         "images": [
           {

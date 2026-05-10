@@ -9,6 +9,7 @@ import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { OfferCatalogSchema } from "@/components/schema/OfferCatalogSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
+import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -171,6 +172,20 @@ export default function BuyersPage() {
       />
 
       <Faq items={BUYER_FAQ} />
+
+      {/* Cycle 15 — buyer-focused editorial weaving. Three briefs that map to
+          the principal buyer ICPs (Fort Lauderdale waterfront, dockage
+          diligence, Boca/Delray comparison via the buyer-brief framework). */}
+      <RelatedInsightsModule
+        slugs={[
+          "private-buyer-brief-defining-the-search",
+          "dockage-seawalls-bridge-clearance-route-to-inlet",
+          "boca-raton-luxury-buyers-club-beach-waterfront",
+        ]}
+        heading="Buyer-side briefs"
+        sub="Three editorial briefs that frame the conversations buyers most often arrive with — the brief itself, the diligence pass, and the layered Boca-Delray comparison."
+        background="cream"
+      />
 
       <CTAStrip
         heading="Tell Mia what you're looking for."

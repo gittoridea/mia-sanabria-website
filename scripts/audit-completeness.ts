@@ -159,11 +159,21 @@ async function checkUrl(url: string, timeoutMs = 5000): Promise<{ ok: boolean; s
  * ========================================================================= */
 
 async function checkRouteSitemapMatch(): Promise<CheckResult[]> {
-  const built = (await listBuiltRoutes()).filter((r) => r !== "/_not-found/" && r !== "/404/" && !r.startsWith("/_"));
+  // Cycle 15: thank-you routes are intentionally noindex (lead-capture
+  // architecture: redirect targets only, never user-discoverable navigation)
+  // and must NOT appear in sitemap.xml. Excluded from "built but not in
+  // sitemap" check.
+  const isExcluded = (r: string) =>
+    r === "/_not-found/" ||
+    r === "/404/" ||
+    r.startsWith("/_") ||
+    r === "/thank-you/" ||
+    r.startsWith("/thank-you/");
+  const built = (await listBuiltRoutes()).filter((r) => !isExcluded(r));
   const sitemap = parseSitemapRoutes(await readSitemapXml()).map((r) => (r.endsWith("/") || r === "" ? r : `${r}/`));
   const sitemapSet = new Set(sitemap.map((r) => r || "/"));
 
-  const inBuiltNotInSitemap = built.filter((r) => !sitemapSet.has(r) && !r.startsWith("/_") && r !== "/404/");
+  const inBuiltNotInSitemap = built.filter((r) => !sitemapSet.has(r) && !isExcluded(r));
   const inSitemapNotInBuilt = sitemap.filter((r) => {
     const norm = r === "" ? "/" : r;
     return !built.includes(norm);
@@ -534,15 +544,26 @@ async function checkBlogIntegration(): Promise<CheckResult[]> {
     evidence: insightsInSitemap ? "/insights/ in sitemap" : "/insights/ missing from sitemap",
   });
 
-  // Insights page has Article schema
+  // Insights index has Blog or BlogPosting schema; representative [slug]
+  // page has Article schema (Cycle 15: index emits Blog with BlogPosting
+  // children; per-post pages emit Article).
   const insightsHtml = await readBuiltHtml("/insights/");
-  const hasArticleSchema = insightsHtml ? /"@type":"Article"/.test(insightsHtml) : false;
+  const hasBlogSchema = insightsHtml
+    ? /"@type":"Blog"/.test(insightsHtml) || /"@type":"BlogPosting"/.test(insightsHtml)
+    : false;
+  const samplePostHtml = await readBuiltHtml("/insights/fort-lauderdale-waterfront-buyer-guide/");
+  const samplePostHasArticle = samplePostHtml
+    ? /"@type":"Article"/.test(samplePostHtml)
+    : false;
+  const ok = hasBlogSchema && samplePostHasArticle;
   results.push({
     id: "completeness.blog.articleSchema",
     category: "Blog",
-    description: "/insights/ emits at least one Article JSON-LD",
-    status: hasArticleSchema ? "PASS" : "WARN",
-    evidence: hasArticleSchema ? "Article schema present" : "no Article schema found",
+    description: "Insights emits Blog/BlogPosting schema on index AND Article schema on each post",
+    status: ok ? "PASS" : "WARN",
+    evidence: ok
+      ? "Blog schema on index + Article on representative post"
+      : `index Blog: ${hasBlogSchema} · sample post Article: ${samplePostHasArticle}`,
   });
 
   return results;

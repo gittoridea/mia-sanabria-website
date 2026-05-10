@@ -1,6 +1,6 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T15:26:58.809Z
+**Generated:** 2026-05-10T18:29:10.861Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
@@ -60,8 +60,8 @@
 | `/markets/bermuda-riviera/` | 375x812 | 15.75 | 9.27 | 15.75 (15.75..15.75) | 1190 | 800 | ✅ PASS |  |
 | `/markets/bermuda-riviera/` | 768x1024 | 15.71 | 9.75 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |
 | `/markets/bermuda-riviera/` | 1280x800 | 15.63 | 10.34 | 15.63 (15.63..15.63) | 1500 | 800 | ✅ PASS |  |
-| `/markets/bermuda-riviera/` | 1440x900 | 4.80 | 4.49 | 4.80 (4.80..4.80) | 1500 | 800 | ✅ PASS |  |
-| `/markets/sea-ranch-lakes/` | 320x568 | 15.13 | 8.32 | 15.13 (15.13..15.13) | 871 | 800 | ✅ PASS |  |
+| `/markets/bermuda-riviera/` | 1440x900 | 15.48 | 10.27 | 15.48 (15.48..15.48) | 1500 | 800 | ✅ PASS |  |
+| `/markets/sea-ranch-lakes/` | 320x568 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 375x812 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 768x1024 | 15.79 | 9.56 | 15.79 (15.79..15.79) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 1280x800 | 15.76 | 9.62 | 15.76 (15.76..15.76) | 1500 | 800 | ✅ PASS |  |
@@ -105,7 +105,7 @@
 | `/markets/lighthouse-point/` | 375x812 | 15.18 | 8.76 | 15.18 (15.18..15.18) | 949 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 768x1024 | 15.38 | 9.60 | 15.38 (15.38..15.38) | 1500 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 1280x800 | 15.78 | 9.89 | 15.78 (15.78..15.78) | 1500 | 800 | ✅ PASS |  |
-| `/markets/lighthouse-point/` | 1440x900 | 15.81 | 9.89 | 15.81 (15.81..15.81) | 1500 | 800 | ✅ PASS |  |
+| `/markets/lighthouse-point/` | 1440x900 | 4.81 | 4.11 | 4.81 (4.81..4.81) | 1500 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 320x568 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 375x812 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 768x1024 | 15.71 | 9.03 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |

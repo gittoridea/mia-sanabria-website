@@ -1,0 +1,3220 @@
+{
+  "generated": "2026-05-10T18:31:54.935Z",
+  "summary": {
+    "pass": 535,
+    "warn": 0,
+    "fail": 0
+  },
+  "rows": [
+    {
+      "slug": null,
+      "check": "library.count12",
+      "status": "PASS",
+      "detail": "12 posts (expected 12)"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "49 chars"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "143 chars"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "4 primary + 4 secondary = 8 total"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.market.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.market.las-olas-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.market.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.market.coral-ridge",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.secondaryMarket.victoria-park",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.secondaryMarket.rio-vista",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "114 words (target 90-140)"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "108 words (target 75-125)"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1045 words (min 600)"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"fort-lauderdale-waterfront-buyer-guide\""
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "55 chars"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "146 chars"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "4 primary + 4 secondary = 8 total"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.market.lighthouse-point",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.market.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.market.las-olas-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.market.seven-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.secondaryMarket.hillsboro-mile",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "links.secondaryMarket.palm-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "104 words (target 90-140)"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "111 words (target 75-125)"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1135 words (min 600)"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"dockage-seawalls-bridge-clearance-route-to-inlet\""
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "55 chars"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "150 chars"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "5 primary + 4 secondary = 9 total"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.market.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.market.las-olas-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.market.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.market.coral-ridge",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.market.victoria-park",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.secondaryMarket.rio-vista",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "links.secondaryMarket.seven-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "104 words (target 90-140)"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "113 words (target 75-125)"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1059 words (min 600)"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"positioning-luxury-waterfront-eastern-fort-lauderdale\""
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "47 chars"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "148 chars"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "3 primary + 4 secondary = 7 total"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.market.las-olas-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.market.seven-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.market.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.secondaryMarket.rio-vista",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "links.secondaryMarket.lighthouse-point",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "106 words (target 90-140)"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "105 words (target 75-125)"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1127 words (min 600)"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"las-olas-vs-seven-isles-vs-harbor-beach\""
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "59 chars"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "143 chars"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "2 primary + 4 secondary = 6 total"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "links.market.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "links.market.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "links.secondaryMarket.coral-ridge",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "links.secondaryMarket.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "links.secondaryMarket.lighthouse-point",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "links.secondaryMarket.seven-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "94 words (target 90-140)"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "108 words (target 75-125)"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1023 words (min 600)"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"bay-colony-and-bermuda-riviera-private-waterfront\""
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "50 chars"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "129 chars"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "3 primary + 3 secondary = 6 total"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "links.market.coral-ridge",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "links.market.victoria-park",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "links.market.rio-vista",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "links.secondaryMarket.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "links.secondaryMarket.las-olas-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "links.secondaryMarket.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "94 words (target 90-140)"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "114 words (target 75-125)"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1094 words (min 600)"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"coral-ridge-victoria-park-rio-vista\""
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "49 chars"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "143 chars"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "3 primary + 4 secondary = 7 total"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.market.lighthouse-point",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.market.sea-ranch-lakes",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.market.hillsboro-mile",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.secondaryMarket.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "links.secondaryMarket.seven-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "104 words (target 90-140)"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "104 words (target 75-125)"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1062 words (min 600)"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"lighthouse-point-sea-ranch-lakes-hillsboro-mile\""
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "48 chars"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "147 chars"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "1 primary + 3 secondary = 4 total"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "links.market.boca-raton",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "links.secondaryMarket.delray-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "links.secondaryMarket.palm-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "links.secondaryMarket.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "99 words (target 90-140)"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "116 words (target 75-125)"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1177 words (min 600)"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "county.palmBeachReferenced",
+      "status": "PASS",
+      "detail": "Palm Beach County referenced"
+    },
+    {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"boca-raton-luxury-buyers-club-beach-waterfront\""
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "52 chars"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "144 chars"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "1 primary + 3 secondary = 4 total"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "links.market.delray-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "links.secondaryMarket.boca-raton",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "links.secondaryMarket.palm-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "links.secondaryMarket.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "112 words (target 90-140)"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "120 words (target 75-125)"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1079 words (min 600)"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "county.palmBeachReferenced",
+      "status": "PASS",
+      "detail": "Palm Beach County referenced"
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"delray-beach-luxury-buyers-walkability-beach-waterfront\""
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "47 chars"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "136 chars"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "5 primary + 4 secondary = 9 total"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.market.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.market.boca-raton",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.market.delray-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.market.lighthouse-point",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.market.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.secondaryMarket.palm-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "links.secondaryMarket.seven-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "117 words (target 90-140)"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "99 words (target 75-125)"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1122 words (min 600)"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"why-automated-valuations-miss-luxury-waterfront\""
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "51 chars"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "135 chars"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "5 primary + 4 secondary = 9 total"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.market.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.market.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.market.las-olas-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.market.boca-raton",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.market.palm-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.secondaryMarket.lighthouse-point",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "links.secondaryMarket.delray-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "88 words (target 90-140)"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "120 words (target 75-125)"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1120 words (min 600)"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"preparing-waterfront-residence-private-market-conversations\""
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.slug",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.title",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.excerpt",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.datePublished",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.dateModified",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.topicMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.seasonalFocus",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.marketCycleMonth",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.author",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.category",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.tags",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.icp",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.relatedMarkets",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.primaryCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.softCTA",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.seoTitle",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.seoDescription",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.ogImage",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.aeoQuestion",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.aeoAnswer",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.intro",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.sections",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "field.whatMiaClarifies",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "date.publishedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "date.notBackdated",
+      "status": "PASS",
+      "detail": "current"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "date.modifiedParseable",
+      "status": "PASS",
+      "detail": "2026-05-10"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "seo.titleLength",
+      "status": "PASS",
+      "detail": "42 chars"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "seo.descriptionLength",
+      "status": "PASS",
+      "detail": "145 chars"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.relatedMarketsMin2",
+      "status": "PASS",
+      "detail": "5 primary + 4 secondary = 9 total"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.market.fort-lauderdale",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.market.boca-raton",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.market.delray-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.market.harbor-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.market.las-olas-isles",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.secondaryMarket.palm-beach",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.secondaryMarket.coral-ridge",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.secondaryMarket.bay-colony",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "links.secondaryMarket.bermuda-riviera",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "cta.primaryCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "cta.softCTA.complete",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "wordCount.introInRange",
+      "status": "PASS",
+      "detail": "94 words (target 90-140)"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "wordCount.aeoInRange",
+      "status": "PASS",
+      "detail": "111 words (target 75-125)"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "wordCount.bodyMin600",
+      "status": "PASS",
+      "detail": "1162 words (min 600)"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "banned.allClear",
+      "status": "PASS",
+      "detail": "0 banned phrases across 26 patterns"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "county.consistency",
+      "status": "PASS",
+      "detail": "no Boca/Delray-Broward conflation"
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "slug.kebabCase",
+      "status": "PASS",
+      "detail": "slug \"private-buyer-brief-defining-the-search\""
+    },
+    {
+      "slug": null,
+      "check": "library.uniqueSlugs",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "slug": null,
+      "check": "library.uniqueTopicMonths",
+      "status": "PASS",
+      "detail": "ok"
+    }
+  ]
+}

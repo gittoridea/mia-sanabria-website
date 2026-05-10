@@ -6,6 +6,7 @@ import { Faq } from "@/components/Faq";
 import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { OfferCatalogSchema } from "@/components/schema/OfferCatalogSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
+import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { SITE } from "@/lib/site";
 import { MIA } from "@/lib/mia";
 
@@ -211,6 +212,19 @@ export default function ValuationPage() {
       />
 
       <Faq items={VALUATION_FAQ} />
+
+      {/* Cycle 15 — valuation-focused editorial weaving. The two briefs that
+          frame why the valuation work has to happen at the parcel level. */}
+      <RelatedInsightsModule
+        slugs={[
+          "why-automated-valuations-miss-luxury-waterfront",
+          "positioning-luxury-waterfront-eastern-fort-lauderdale",
+          "preparing-waterfront-residence-private-market-conversations",
+        ]}
+        heading="Before the valuation"
+        sub="Three briefs on why luxury waterfront pricing requires parcel-level work — and what the conversation about positioning looks like once the price is set."
+        background="cream"
+      />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { CTAStrip } from "@/components/CTAStrip";
 import { SectionHeading } from "@/components/SectionHeading";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
+import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { getMarketsByCluster, type Market } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
@@ -92,6 +93,20 @@ export default function MarketsIndex() {
           </ul>
         </div>
       </section>
+
+      {/* Cycle 15 — cross-market editorial weaving. Three curated briefs that
+          frame how markets compare to each other (cohort comparisons + private
+          enclaves + buyer-brief discipline). */}
+      <RelatedInsightsModule
+        slugs={[
+          "las-olas-vs-seven-isles-vs-harbor-beach",
+          "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+          "private-buyer-brief-defining-the-search",
+        ]}
+        heading="Cross-market briefs"
+        sub="When markets cluster, the brief separates them. These three editorial briefs frame how serious buyers compare cohorts before committing to one."
+        background="cream"
+      />
 
       <CTAStrip
         heading="Tell Mia which markets matter."

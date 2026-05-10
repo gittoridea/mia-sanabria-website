@@ -9,6 +9,7 @@ import { ServiceSchema } from "@/components/schema/ServiceSchema";
 import { OfferCatalogSchema } from "@/components/schema/OfferCatalogSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
+import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -171,6 +172,19 @@ export default function SellersPage() {
       />
 
       <Faq items={SELLER_FAQ} />
+
+      {/* Cycle 15 — seller-focused editorial weaving. Positioning + automated
+          valuation skepticism + private-market preparation. */}
+      <RelatedInsightsModule
+        slugs={[
+          "positioning-luxury-waterfront-eastern-fort-lauderdale",
+          "why-automated-valuations-miss-luxury-waterfront",
+          "preparing-waterfront-residence-private-market-conversations",
+        ]}
+        heading="Seller-side briefs"
+        sub="Three editorial briefs that frame the work before a residence touches the market — positioning, pricing discipline, and preparation for the private path."
+        background="cream"
+      />
 
       <CTAStrip
         heading="Begin with a complimentary valuation."

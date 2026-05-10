@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-10T15:23:28.601Z
+**Generated:** 2026-05-10T18:25:41.077Z
 
 **Summary:** 15 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 27 built · 27 in sitemap · 0 missing |
+| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 39 built · 39 in sitemap · 0 missing |
 | `completeness.sitemap.sitemapInBuilt` | ✅ | Every sitemap route resolves to a built page | 0 unresolved |
 
 ### Compliance
@@ -54,13 +54,13 @@
 |---|:-:|---|---|
 | `completeness.blog.inNav` | ✅ | Insights/blog link present in homepage nav (header or footer) | insights linked from homepage |
 | `completeness.blog.inSitemap` | ✅ | /insights/ in sitemap.xml | /insights/ in sitemap |
-| `completeness.blog.articleSchema` | ✅ | /insights/ emits at least one Article JSON-LD | Article schema present |
+| `completeness.blog.articleSchema` | ✅ | Insights emits Blog/BlogPosting schema on index AND Article schema on each post | Blog schema on index + Article on representative post |
 
 ### Schema
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 161 JSON-LD blocks across 27 pages · 0 broken |
+| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 159 JSON-LD blocks across 27 pages · 0 broken |
 
 ## Failures and warnings — details
 

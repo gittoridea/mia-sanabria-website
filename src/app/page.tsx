@@ -9,6 +9,7 @@ import { Faq } from "@/components/Faq";
 import { CTAStrip } from "@/components/CTAStrip";
 import { IdxEmbed } from "@/components/IdxEmbed";
 import { SectionHeading } from "@/components/SectionHeading";
+import { InsightsTeaser } from "@/components/insights/InsightsTeaser";
 import { PersonSchema } from "@/components/schema/PersonSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
@@ -123,6 +124,20 @@ export default function HomePage() {
       />
 
       <IdxEmbed />
+
+      {/* Cycle 15 — Latest Insights cross-site weaving. Three curated briefs:
+          buyer guide, deepwater isle comparison, and seller positioning —
+          spanning the three principal ICPs without crowding the hero. */}
+      <InsightsTeaser
+        slugs={[
+          "fort-lauderdale-waterfront-buyer-guide",
+          "las-olas-vs-seven-isles-vs-harbor-beach",
+          "preparing-waterfront-residence-private-market-conversations",
+        ]}
+        heading="Latest Insights"
+        sub="A twelve-part evergreen guide to the Southeast Florida luxury and waterfront market — read in any order."
+        background="cream"
+      />
 
       <Faq items={HOME_FAQ} />
       <CTAStrip />

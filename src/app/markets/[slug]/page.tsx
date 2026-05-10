@@ -8,6 +8,7 @@ import { MarketCard } from "@/components/MarketCard";
 import { PlaceSchema } from "@/components/schema/PlaceSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
+import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { MARKETS, getMarket, getNeighborhoodSlugs, type Market } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
@@ -310,6 +311,17 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
           </div>
         </section>
       ) : null}
+
+      {/* SECTION 7b — Related Insights (Cycle 15). Renders only when the
+          market is referenced by ≥1 published Insights brief; data-driven via
+          getInsightsForMarket(slug). For markets not referenced by any post,
+          the section silently omits — no empty-state pollution. */}
+      <RelatedInsightsModule
+        marketSlug={market.slug}
+        heading={`From the Insights library — ${market.name}`}
+        sub="Editorial briefs that frame the conversations buyers and sellers in this market most often arrive with."
+        background="cream"
+      />
 
       {/* SECTION 8 — CTA strip (preserved) */}
       <CTAStrip
