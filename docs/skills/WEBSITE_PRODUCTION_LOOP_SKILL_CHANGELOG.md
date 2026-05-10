@@ -2,6 +2,53 @@
 
 Version-by-version evolution of `WEBSITE_PRODUCTION_LOOP_SKILL.md`. Updated each cycle by the SkillImprovementLoop workflow.
 
+## v0.4.0 — 2026-05-10 (Mia Sanabria cycle 15 — Insights library + lead-capture architecture + sitewide content weaving)
+
+**Driver:** Cycle 15 surfaced seven durable lessons:
+
+1. **Date governance for content libraries.** When the principal asks "1 post per month over the last 12 months", the implementer's first instinct is to backdate publish dates. That is the wrong instinct. Every backdated post is a fabrication that future audits, the principal's own review, and any AI scraper will reveal. The correct response is to honestly publish current-dated posts and use a separate editorial field (`topicMonth` in this cycle) to organize the library as an evergreen guide series. `audit:insights` enforces "no datePublished older than 7 days at audit time without an explicit `editorial.republished_from` field documenting the original publication date."
+
+2. **Lead-capture architecture can ship before form wiring.** Cycle 15 proved a 3-layer pattern: Layer A = components + URL-attribution params (no GHL needed); Layer B = thank-you/redirect targets (stubs, noindex); Layer C = GHL form action + webhook + pipeline tags (requires unblocked GHL). Layers A+B ship first as a complete UI surface; Layer C ships when the GHL prerequisite is met. Each layer is independently shippable and useful in isolation.
+
+3. **Sitewide content weaving is a first-class architectural pass.** Cycles 1-14 treated cross-page linking as an audit concern (reverse-link curation in Cycle 14). Cycle 15 elevated it: a `RelatedInsightsModule` component that takes either a `marketSlug` (data-driven) or an explicit `slugs` array (editorial), wired into 7 distinct page surfaces in one cycle → +867 internal links without per-page hand-coding. The data model + reusable module did the work.
+
+4. **`audit:<category>` as a content governance layer.** The Cycle 15 audit script caught 6 explicit FAILs on first run and tightened to 535/0/0 within 3 iterations. Every new content category should ship with a deterministic audit before scaling.
+
+5. **Forge race-scope-drift defended successfully.** Per `feedback_forge_race_scope_drift.md`, background Forge content writers + main-thread infrastructure edits race even with explicit DO-NOT-touch contracts. Cycle 15's defense: main thread authored all 12 posts as TypeScript data files; Forge invoked ONLY post-EXECUTE for separate-context VERIFY (Rule 2b) and Cato cross-vendor audit (Rule 2a). Zero file conflicts; zero scope drift.
+
+6. **`audit:completeness` exclusions for noindex routes.** Intentionally noindex routes (thank-you, redirect targets, internal admin) must be excluded from the sitemap-coverage check in the same commit they ship. The default check flagged the 4 thank-you routes as "built but missing from sitemap" — exactly the wrong feedback.
+
+7. **SEO meta length is the silent killer.** audit:seo enforces ≤60 chars title and ≤160 chars description. Of the 12 posts initially shipped, 13 separate title/description fields exceeded the limit. Set seoTitle ≤55 chars and seoDescription ≤150 chars in editorial maps to leave headroom for build-time suffixes.
+
+The fix shipped: (a) 12 evergreen posts in `src/data/insights/01..12.ts`; (b) `src/lib/insights.ts` data model + 12 helpers + 7 typed CTA components; (c) `/insights/[slug]/` editorial route + rebuilt `/insights/` index; (d) 4 `/thank-you/*` routes; (e) `RelatedInsightsModule` wired into 7 page surfaces; (f) `scripts/audit-insights.ts` (535 PASS · 0 WARN · 0 FAIL); (g) sitemap.ts +12 routes; (h) audit:completeness updated; (i) 11 cycle docs incl. CYCLE_15_INSIGHTS_AND_LEAD_CAPTURE_STRATEGY, CYCLE_15_12_POST_EDITORIAL_MAP, CYCLE_15_INSIGHTS_CONTENT_STANDARD, CYCLE_15_LEAD_CAPTURE_ARCHITECTURE, CYCLE_15_SEO_AEO_INSIGHTS_MATRIX.
+
+### Added
+
+- **HARD gate #27 — Date governance for content libraries (NEW v0.4.0).** When a cycle ships a content library (insights, listings, case studies, etc.), all `datePublished` values MUST be honest current dates at ship time. Editorial framing (topicMonth, seasonalFocus, marketCycleMonth, etc.) is separate from publish history. The category-specific audit (e.g. `audit:insights`) enforces "no datePublished older than 7 days at audit time" by default; older dates require an explicit `editorial.republished_from` field documenting the original publication.
+- **HARD gate #28 — Lead-capture architecture 3-layer ship pattern (NEW v0.4.0).** Layer A (components + URL-attribution params) and Layer B (thank-you/redirect targets, noindex) ship together independently of CRM endpoint availability. Layer C (form action + webhook + pipeline tags) is GHL-prerequisite-gated. The architecture document MUST specify the URL-attribution → hidden-field schema → GHL/n8n mapping for the next engineering cycle to wire without ambiguity.
+- **HARD gate #29 — Sitewide weaving as first-class pass (NEW v0.4.0).** When introducing a new content surface (insights, listings, case studies), build the cross-page module that surfaces them on existing pages BEFORE the surface itself feels complete. Sitewide weaving is the conversion gain.
+- **HARD gate #30 — Category-audit on every new content type (NEW v0.4.0).** Every new content category gets a deterministic audit script (e.g. `audit:insights`) before the category ships at scale. Content libraries without an audit drift; with an audit, drift is mechanical to detect.
+- **HARD gate #31 — Noindex-route audit exclusion (NEW v0.4.0).** When introducing intentionally-noindex routes (thank-you, redirect targets, internal admin), update the completeness audit's exclusion list in the same commit. Don't ship the routes without the exclusion.
+- **`Workflows/ContentLibraryShipPattern.md` (NEW v0.4.0)** — 5-step pattern: (1) editorial map + content standard docs ship first; (2) data model + helpers built; (3) main-thread authoring of all entries (Forge race-scope-drift defense); (4) routes + sitemap + cross-page weaving wired; (5) category-specific audit script + Cato cross-vendor compliance audit.
+- **3 new gotchas (#36-#38) — v0.4.0:**
+  - **#36 — Audit county-consistency check requires positive-assertion regex** (Cycle 15 caught Boca/Delray Broward conflation false-positive on negation patterns "Boca is in Palm Beach, not Broward"). Use `/Boca Raton[^.]{0,80}\b(?:is in|sits in|located in|part of|within)\s+(?:the\s+)?Broward\b/i` not `/Boca Raton.{0,80}Broward\b/i`.
+  - **#37 — Counting market links as "primary + secondary"** (Cycle 15 audit initially failed on Boca-only and Delray-only posts because relatedMarkets array had only 1 entry; intent of "≥2 market links" includes secondaryMarkets which the post page also renders).
+  - **#38 — REALTOR® mark anchor in metadata** (Cycle 15 Cato finding). Per NAR Membership Marks Manual, REALTOR® must denote membership not be used descriptively. "Mia Sanabria, REALTOR®" is correct; "Mia Sanabria, Fort Lauderdale REALTOR®" risks reading as a generic descriptor. Anchor the mark to the member name; put the location in a non-trademarked descriptor.
+- **Per-cycle artifact — `CYCLE_<N>_<CATEGORY>_EDITORIAL_MAP.md`** — when shipping a content library, the editorial map captures slug + title + datePublished + topicMonth + ICP + market footprint + CTA + lead path + risks + status BEFORE any data file is written. Companion to the content standard doc.
+
+### Changed
+
+- **Hard gate count:** 26 → 31.
+- **Workflow §6 (Content cycle)** — new 5-step pattern: editorial map → data model → main-thread authoring → routes+weaving → audit (gate #30).
+- **Workflow §7 (Audit chain)** — when introducing intentionally-noindex routes, update completeness audit's exclusion list in the same commit (gate #31).
+- **Workflow §8 (Cycle close + handoff)** — when shipping a content library, the close MUST include a SEO/AEO matrix doc + per-axis production-readiness scorecard delta.
+
+### Process improvements caught this cycle (v0.4.0)
+
+- **Cato verdict-truncation handling.** Cycle 15 initial Cato dispatch returned "I'll run a cross-vendor compliance audit on Cycle 15. Let me start by gathering the artifacts." in the result field — the multi-paragraph response was truncated by the host. Re-dispatch with explicit "single-line JSON, nothing else" returned the structured verdict in 33 seconds. Pattern: when Cato terminates with a preamble in the result field instead of the schema-enforced JSON, re-dispatch with single-line-JSON-only instruction.
+- **Forge background dispatch with clean-context isolation.** Cycle 15 dispatched Forge separate-context VERIFY in background while main thread captured screenshots and wrote local-verification + scorecard docs. Wall-clock save: ~5 minutes vs sequential. Forge VERIFY took ~5 minutes / 57 tool uses / ~184k tokens; main thread fully utilized in parallel.
+- **Live ETag verification needs body-grep, not just etag-flip.** Cycle 15 deploy script flagged "last-modified did not change" because the script was probing the cached homepage URL too quickly. The Caddy flip was real — body-grep for new copy ("twelve-part evergreen") confirmed the flip ~5 minutes after deploy completed. Future deploy verification should body-grep for cycle-specific copy in addition to etag/last-modified comparison.
+
 ## v0.3.4 — 2026-05-10 (Mia Sanabria cycle 12 — production-readiness closure + Cato early + DevTools 320/375 + median-of-N + scorecard)
 
 **Driver:** Cycle 12 surfaced four structural lessons:

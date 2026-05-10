@@ -2,11 +2,11 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: build
-progress: 660/745
+phase: complete
+progress: 745/745
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-10T17:25:00Z
+updated: 2026-05-10T19:10:00Z
 algorithm_version: 6.4.0
 active_mission: 2026-05-10-cycle-15-insights-library-and-lead-capture-architecture
 ---
@@ -1791,169 +1791,169 @@ ISCs verified or state-probed cycle 9 (Cycle 9 ISC IDs at the end of file; note 
 **Principal-visible objective:** ship a 12-post evergreen Insights library (honest publish dates, editorial topicMonth labels), premium soft lead-capture modules across the site, thank-you/confirmation routes, and Article/BlogPosting + Breadcrumb schema saturation — without making any GHL production write, without faking historical dates, without overclaiming TCPA/CRM capture, without reopening Cycle 14 design work, and without modifying Hero/SiteFooter or introducing new colors/fonts/glassmorphism.
 
 ### Phase 0 — Recovery + baseline
-- [ ] ISC-603: Working tree clean at session entry; HEAD `54c9aea` matches origin/main.
-- [ ] ISC-604: Specialist-Prereq Probe ran: Forge ✓, Cato ✓, Perplexity ✓, Anvil ✗→Forge fallback (logged in Decisions).
-- [ ] ISC-605: Live HTTP HEAD probe captured (HTTP/2 200, ETag `dif3sciprg8w2vtu`, last-modified 15:31:26Z).
-- [ ] ISC-606: `bun run typecheck` exits 0 at baseline.
-- [ ] ISC-607: `bun run lint` exits 0 at baseline.
-- [ ] ISC-608: `bun run audit:all` baseline captured (12 audits, 0 FAIL, 1 expected WARN on rendered.probe.viewportSanity).
-- [ ] ISC-609: `docs/CYCLE_15_RECOVERY_AND_BASELINE.md` exists documenting route count, market count, Insights state, sitemap count, JSON-LD count, audit summary, ETag.
+- [x] ISC-603: Working tree clean at session entry; HEAD `54c9aea` matches origin/main.
+- [x] ISC-604: Specialist-Prereq Probe ran: Forge ✓, Cato ✓, Perplexity ✓, Anvil ✗→Forge fallback (logged in Decisions).
+- [x] ISC-605: Live HTTP HEAD probe captured (HTTP/2 200, ETag `dif3sciprg8w2vtu`, last-modified 15:31:26Z).
+- [x] ISC-606: `bun run typecheck` exits 0 at baseline.
+- [x] ISC-607: `bun run lint` exits 0 at baseline.
+- [x] ISC-608: `bun run audit:all` baseline captured (12 audits, 0 FAIL, 1 expected WARN on rendered.probe.viewportSanity).
+- [x] ISC-609: `docs/CYCLE_15_RECOVERY_AND_BASELINE.md` exists documenting route count, market count, Insights state, sitemap count, JSON-LD count, audit summary, ETag.
 
 ### Phase 1 — Strategy decision
-- [ ] ISC-610: `docs/CYCLE_15_INSIGHTS_AND_LEAD_CAPTURE_STRATEGY.md` exists.
-- [ ] ISC-611: Strategy answers: (a) Next.js canonical Insights, GHL CRM-only; (b) honest publish-now dates with topicMonth editorial label; (c) 7 conversion paths defined with status taxonomy; (d) what is implementable now vs blocked.
+- [x] ISC-610: `docs/CYCLE_15_INSIGHTS_AND_LEAD_CAPTURE_STRATEGY.md` exists.
+- [x] ISC-611: Strategy answers: (a) Next.js canonical Insights, GHL CRM-only; (b) honest publish-now dates with topicMonth editorial label; (c) 7 conversion paths defined with status taxonomy; (d) what is implementable now vs blocked.
 
 ### Phase 2 — 12-post editorial map
-- [ ] ISC-612: `docs/CYCLE_15_12_POST_EDITORIAL_MAP.md` exists with 12 post rows.
-- [ ] ISC-613: Each row defines slug, title, datePublished, dateModified, optional topicMonth/seasonalFocus, ICP, primary markets, secondary markets, primary CTA, soft CTA, lead-capture module, SEO title, meta description, AEO answer question, schema notes, risk notes.
-- [ ] ISC-614: All 12 required post titles from mission spec present (verified by exact-string match in audit).
+- [x] ISC-612: `docs/CYCLE_15_12_POST_EDITORIAL_MAP.md` exists with 12 post rows.
+- [x] ISC-613: Each row defines slug, title, datePublished, dateModified, optional topicMonth/seasonalFocus, ICP, primary markets, secondary markets, primary CTA, soft CTA, lead-capture module, SEO title, meta description, AEO answer question, schema notes, risk notes.
+- [x] ISC-614: All 12 required post titles from mission spec present (verified by exact-string match in audit).
 
 ### Phase 3 — Content quality standard
-- [ ] ISC-615: `docs/CYCLE_15_INSIGHTS_CONTENT_STANDARD.md` exists.
-- [ ] ISC-616: Standard codifies: 90-140w intro, 75-125w AEO answer, 4-6 substantive sections, "What Mia would clarify privately", 3-6 market links, primary+soft CTA, compliance-safe language, full metadata/schema rules.
+- [x] ISC-615: `docs/CYCLE_15_INSIGHTS_CONTENT_STANDARD.md` exists.
+- [x] ISC-616: Standard codifies: 90-140w intro, 75-125w AEO answer, 4-6 substantive sections, "What Mia would clarify privately", 3-6 market links, primary+soft CTA, compliance-safe language, full metadata/schema rules.
 
 ### Phase 4 — Insights data model
-- [ ] ISC-617: `src/lib/insights.ts` exists with `InsightPost` type covering all required fields.
-- [ ] ISC-618: `getAllInsights()`, `getInsightBySlug(slug)`, `getInsightsForMarket(slug)`, `getInsightsByTopicMonth(month)`, `getRelatedInsights(slug, n)`, `getAllInsightRoutes()`, `getInsightOgImagePath(slug)` helpers exported.
-- [ ] ISC-619: Type-strict — `bun run typecheck` exits 0 after data model lands.
-- [ ] ISC-620: 12 post stubs registered in `INSIGHTS` array with consistent IDs.
+- [x] ISC-617: `src/lib/insights.ts` exists with `InsightPost` type covering all required fields.
+- [x] ISC-618: `getAllInsights()`, `getInsightBySlug(slug)`, `getInsightsForMarket(slug)`, `getInsightsByTopicMonth(month)`, `getRelatedInsights(slug, n)`, `getAllInsightRoutes()`, `getInsightOgImagePath(slug)` helpers exported.
+- [x] ISC-619: Type-strict — `bun run typecheck` exits 0 after data model lands.
+- [x] ISC-620: 12 post stubs registered in `INSIGHTS` array with consistent IDs.
 
 ### Phase 5 — Author 12 evergreen posts
-- [ ] ISC-621: `src/data/insights/01-fort-lauderdale-waterfront-buyer-guide.ts` exists, ≥600 words body content, with all required fields.
-- [ ] ISC-622: `src/data/insights/02-dockage-seawalls-bridge-clearance-route-to-inlet.ts` exists, ≥600 words.
-- [ ] ISC-623: `src/data/insights/03-positioning-luxury-waterfront-eastern-fort-lauderdale.ts` exists, ≥600 words.
-- [ ] ISC-624: `src/data/insights/04-las-olas-vs-seven-isles-vs-harbor-beach.ts` exists, ≥600 words.
-- [ ] ISC-625: `src/data/insights/05-bay-colony-and-bermuda-riviera-private-waterfront.ts` exists, ≥600 words.
-- [ ] ISC-626: `src/data/insights/06-coral-ridge-victoria-park-rio-vista.ts` exists, ≥600 words.
-- [ ] ISC-627: `src/data/insights/07-lighthouse-point-sea-ranch-lakes-hillsboro-mile.ts` exists, ≥600 words.
-- [ ] ISC-628: `src/data/insights/08-boca-raton-luxury-buyers-club-beach-waterfront.ts` exists, ≥600 words.
-- [ ] ISC-629: `src/data/insights/09-delray-beach-luxury-buyers-walkability-beach-waterfront.ts` exists, ≥600 words.
-- [ ] ISC-630: `src/data/insights/10-why-automated-valuations-miss-luxury-waterfront.ts` exists, ≥600 words.
-- [ ] ISC-631: `src/data/insights/11-preparing-waterfront-residence-private-market-conversations.ts` exists, ≥600 words.
-- [ ] ISC-632: `src/data/insights/12-private-buyer-brief-defining-the-search.ts` exists, ≥600 words.
-- [ ] ISC-633: All 12 posts use honest current-or-staged datePublished (no backdated months).
-- [ ] ISC-634: All 12 posts include topicMonth editorial label distinct from datePublished.
+- [x] ISC-621: `src/data/insights/01-fort-lauderdale-waterfront-buyer-guide.ts` exists, ≥600 words body content, with all required fields.
+- [x] ISC-622: `src/data/insights/02-dockage-seawalls-bridge-clearance-route-to-inlet.ts` exists, ≥600 words.
+- [x] ISC-623: `src/data/insights/03-positioning-luxury-waterfront-eastern-fort-lauderdale.ts` exists, ≥600 words.
+- [x] ISC-624: `src/data/insights/04-las-olas-vs-seven-isles-vs-harbor-beach.ts` exists, ≥600 words.
+- [x] ISC-625: `src/data/insights/05-bay-colony-and-bermuda-riviera-private-waterfront.ts` exists, ≥600 words.
+- [x] ISC-626: `src/data/insights/06-coral-ridge-victoria-park-rio-vista.ts` exists, ≥600 words.
+- [x] ISC-627: `src/data/insights/07-lighthouse-point-sea-ranch-lakes-hillsboro-mile.ts` exists, ≥600 words.
+- [x] ISC-628: `src/data/insights/08-boca-raton-luxury-buyers-club-beach-waterfront.ts` exists, ≥600 words.
+- [x] ISC-629: `src/data/insights/09-delray-beach-luxury-buyers-walkability-beach-waterfront.ts` exists, ≥600 words.
+- [x] ISC-630: `src/data/insights/10-why-automated-valuations-miss-luxury-waterfront.ts` exists, ≥600 words.
+- [x] ISC-631: `src/data/insights/11-preparing-waterfront-residence-private-market-conversations.ts` exists, ≥600 words.
+- [x] ISC-632: `src/data/insights/12-private-buyer-brief-defining-the-search.ts` exists, ≥600 words.
+- [x] ISC-633: All 12 posts use honest current-or-staged datePublished (no backdated months).
+- [x] ISC-634: All 12 posts include topicMonth editorial label distinct from datePublished.
 
 ### Phase 6 — Insights routes + sitemap
-- [ ] ISC-635: `src/app/insights/page.tsx` rebuilt as premium 12-post index (replacing inline 2-article hardcode).
-- [ ] ISC-636: `src/app/insights/[slug]/page.tsx` exists and statically generates all 12 paths.
-- [ ] ISC-637: Each insight page renders Article + Breadcrumb schema (FAQPage where faqs present).
-- [ ] ISC-638: `src/app/sitemap.ts` includes all 12 insight routes via `getAllInsightRoutes()` helper.
-- [ ] ISC-639: Each insight page includes related-markets module + lead-capture CTA.
-- [ ] ISC-640: Each insight page links to ≥2 market pages (verified by audit).
+- [x] ISC-635: `src/app/insights/page.tsx` rebuilt as premium 12-post index (replacing inline 2-article hardcode).
+- [x] ISC-636: `src/app/insights/[slug]/page.tsx` exists and statically generates all 12 paths.
+- [x] ISC-637: Each insight page renders Article + Breadcrumb schema (FAQPage where faqs present).
+- [x] ISC-638: `src/app/sitemap.ts` includes all 12 insight routes via `getAllInsightRoutes()` helper.
+- [x] ISC-639: Each insight page includes related-markets module + lead-capture CTA.
+- [x] ISC-640: Each insight page links to ≥2 market pages (verified by audit).
 
 ### Phase 7 — Lead capture architecture
-- [ ] ISC-641: `docs/CYCLE_15_LEAD_CAPTURE_ARCHITECTURE.md` exists.
-- [ ] ISC-642: 7 conversion paths defined: Private Consultation Request, Confidential Home Valuation, Private Buyer Brief, Quarterly Waterfront Market Brief, Dockage/Route-to-Inlet Review, Private Listing Strategy Conversation, Market-Specific Brief Request.
-- [ ] ISC-643: Each path lists fields, hidden fields, GHL/n8n mapping, tags, pipeline stage, notification, ack copy, thank-you target, privacy/TCPA notes, status (IMPLEMENTED-STATIC / READY-FOR-GHL / BLOCKED-BY-GHL / BLOCKED-BY-LEGAL/TCPA / BLOCKED-BY-PRINCIPAL).
-- [ ] ISC-644: Hidden field schema documented: source_url, page_type, cta_clicked, market_interest, post_slug, buyer_seller_researcher, utm_*, referrer, timestamp, consent_email, consent_sms.
+- [x] ISC-641: `docs/CYCLE_15_LEAD_CAPTURE_ARCHITECTURE.md` exists.
+- [x] ISC-642: 7 conversion paths defined: Private Consultation Request, Confidential Home Valuation, Private Buyer Brief, Quarterly Waterfront Market Brief, Dockage/Route-to-Inlet Review, Private Listing Strategy Conversation, Market-Specific Brief Request.
+- [x] ISC-643: Each path lists fields, hidden fields, GHL/n8n mapping, tags, pipeline stage, notification, ack copy, thank-you target, privacy/TCPA notes, status (IMPLEMENTED-STATIC / READY-FOR-GHL / BLOCKED-BY-GHL / BLOCKED-BY-LEGAL/TCPA / BLOCKED-BY-PRINCIPAL).
+- [x] ISC-644: Hidden field schema documented: source_url, page_type, cta_clicked, market_interest, post_slug, buyer_seller_researcher, utm_*, referrer, timestamp, consent_email, consent_sms.
 
 ### Phase 8 — Lead capture components
-- [ ] ISC-645: `src/components/cta/LeadCaptureCTA.tsx` exists (base).
-- [ ] ISC-646: `src/components/cta/MarketBriefCTA.tsx` exists.
-- [ ] ISC-647: `src/components/cta/BuyerBriefCTA.tsx` exists.
-- [ ] ISC-648: `src/components/cta/SellerValuationCTA.tsx` exists.
-- [ ] ISC-649: `src/components/cta/WaterfrontReviewCTA.tsx` exists.
-- [ ] ISC-650: `src/components/cta/PrivateConsultationCTA.tsx` exists.
-- [ ] ISC-651: `src/components/cta/InlineInsightCTA.tsx` exists.
-- [ ] ISC-652: All CTA components use existing brand tokens (no new colors/fonts/glassmorphism); `bun run lint` clean.
-- [ ] ISC-653: All CTAs route to existing pages (contact/valuation) or new thank-you routes; no forms POST to GHL endpoints this cycle.
+- [x] ISC-645: `src/components/cta/LeadCaptureCTA.tsx` exists (base).
+- [x] ISC-646: `src/components/cta/MarketBriefCTA.tsx` exists.
+- [x] ISC-647: `src/components/cta/BuyerBriefCTA.tsx` exists.
+- [x] ISC-648: `src/components/cta/SellerValuationCTA.tsx` exists.
+- [x] ISC-649: `src/components/cta/WaterfrontReviewCTA.tsx` exists.
+- [x] ISC-650: `src/components/cta/PrivateConsultationCTA.tsx` exists.
+- [x] ISC-651: `src/components/cta/InlineInsightCTA.tsx` exists.
+- [x] ISC-652: All CTA components use existing brand tokens (no new colors/fonts/glassmorphism); `bun run lint` clean.
+- [x] ISC-653: All CTAs route to existing pages (contact/valuation) or new thank-you routes; no forms POST to GHL endpoints this cycle.
 
 ### Phase 9 — Thank-you routes
-- [ ] ISC-654: `src/app/thank-you/page.tsx` exists with private-tone copy.
-- [ ] ISC-655: `src/app/thank-you/valuation/page.tsx` exists.
-- [ ] ISC-656: `src/app/thank-you/buyer-brief/page.tsx` exists.
-- [ ] ISC-657: `src/app/thank-you/market-brief/page.tsx` exists.
-- [ ] ISC-658: Thank-you pages set noindex per layout staging gate; do not claim automated CRM capture.
-- [ ] ISC-659: Thank-you routes added to `sitemap.ts` exclusion (noindex) — not user-discoverable navigation.
+- [x] ISC-654: `src/app/thank-you/page.tsx` exists with private-tone copy.
+- [x] ISC-655: `src/app/thank-you/valuation/page.tsx` exists.
+- [x] ISC-656: `src/app/thank-you/buyer-brief/page.tsx` exists.
+- [x] ISC-657: `src/app/thank-you/market-brief/page.tsx` exists.
+- [x] ISC-658: Thank-you pages set noindex per layout staging gate; do not claim automated CRM capture.
+- [x] ISC-659: Thank-you routes added to `sitemap.ts` exclusion (noindex) — not user-discoverable navigation.
 
 ### Phase 10 — Sitewide weaving
-- [ ] ISC-660: Homepage adds "Latest Insights" / "Private Market Notes" section with 3-4 curated posts + link to /insights/.
-- [ ] ISC-661: `/markets/` index page adds related Insights module.
-- [ ] ISC-662: 8 featured market pages display ≥1 relevant insight link (Bay Colony→#5; Bermuda Riviera→#5; FtL→#1,#2,#3; Boca→#8; Delray→#9; etc).
-- [ ] ISC-663: Buyers page links to buyer brief, dockage due-diligence, Boca/Delray comparison posts.
-- [ ] ISC-664: Sellers page links to seller positioning, automated valuation, private listing strategy posts.
-- [ ] ISC-665: Valuation page links to automated-valuation post + waterfront seller post.
-- [ ] ISC-666: Contact page links to private buyer brief + market brief posts.
+- [x] ISC-660: Homepage adds "Latest Insights" / "Private Market Notes" section with 3-4 curated posts + link to /insights/.
+- [x] ISC-661: `/markets/` index page adds related Insights module.
+- [x] ISC-662: 8 featured market pages display ≥1 relevant insight link (Bay Colony→#5; Bermuda Riviera→#5; FtL→#1,#2,#3; Boca→#8; Delray→#9; etc).
+- [x] ISC-663: Buyers page links to buyer brief, dockage due-diligence, Boca/Delray comparison posts.
+- [x] ISC-664: Sellers page links to seller positioning, automated valuation, private listing strategy posts.
+- [x] ISC-665: Valuation page links to automated-valuation post + waterfront seller post.
+- [x] ISC-666: Contact page links to private buyer brief + market brief posts.
 
 ### Phase 11 — audit:insights script
-- [ ] ISC-667: `scripts/audit-insights.ts` exists.
-- [ ] ISC-668: Script verifies: 12 posts present; each has slug, title, excerpt, content, datePublished, dateModified.
-- [ ] ISC-669: Script verifies: every post has SEO title and meta description.
-- [ ] ISC-670: Script verifies: every post emits Article/BlogPosting schema.
-- [ ] ISC-671: Script verifies: every post links to ≥2 market pages.
-- [ ] ISC-672: Script verifies: every post has ≥1 CTA.
-- [ ] ISC-673: Script verifies: every post is in sitemap.
-- [ ] ISC-674: Script verifies: no broken internal links from insight pages.
-- [ ] ISC-675: Script verifies: no banned phrases (school steering, family steering, fake urgency, "exclusive inventory", "guaranteed").
-- [ ] ISC-676: `package.json` `audit:insights` script wired and `audit:all` extended (or `audit:insights` runnable standalone).
-- [ ] ISC-677: `bun run audit:insights` exits 0.
+- [x] ISC-667: `scripts/audit-insights.ts` exists.
+- [x] ISC-668: Script verifies: 12 posts present; each has slug, title, excerpt, content, datePublished, dateModified.
+- [x] ISC-669: Script verifies: every post has SEO title and meta description.
+- [x] ISC-670: Script verifies: every post emits Article/BlogPosting schema.
+- [x] ISC-671: Script verifies: every post links to ≥2 market pages.
+- [x] ISC-672: Script verifies: every post has ≥1 CTA.
+- [x] ISC-673: Script verifies: every post is in sitemap.
+- [x] ISC-674: Script verifies: no broken internal links from insight pages.
+- [x] ISC-675: Script verifies: no banned phrases (school steering, family steering, fake urgency, "exclusive inventory", "guaranteed").
+- [x] ISC-676: `package.json` `audit:insights` script wired and `audit:all` extended (or `audit:insights` runnable standalone).
+- [x] ISC-677: `bun run audit:insights` exits 0.
 
 ### Phase 12 — SEO/AEO matrix
-- [ ] ISC-678: `docs/CYCLE_15_SEO_AEO_INSIGHTS_MATRIX.md` exists with 12 rows + columns: title, slug, ICP, primary markets, AEO question, metadata, schema, internal links, CTA, lead path, risks, status.
+- [x] ISC-678: `docs/CYCLE_15_SEO_AEO_INSIGHTS_MATRIX.md` exists with 12 rows + columns: title, slug, ICP, primary markets, AEO question, metadata, schema, internal links, CTA, lead path, risks, status.
 
 ### Phase 13 — Screenshots + visual QA
-- [ ] ISC-679: `/tmp/mia-cycle15-before/` and `/tmp/mia-cycle15-after/` capture key Insights/CTA routes at 320/375/414/768/1280/1440.
-- [ ] ISC-680: Insights index visually clean (no overflow, premium feel).
-- [ ] ISC-681: Insight article pages readable (no cramped typography); related-markets module not cramped.
+- [x] ISC-679: `/tmp/mia-cycle15-before/` and `/tmp/mia-cycle15-after/` capture key Insights/CTA routes at 320/375/414/768/1280/1440.
+- [x] ISC-680: Insights index visually clean (no overflow, premium feel).
+- [x] ISC-681: Insight article pages readable (no cramped typography); related-markets module not cramped.
 
 ### Phase 14 — Local verification
-- [ ] ISC-682: `bun run typecheck` exits 0.
-- [ ] ISC-683: `bun run lint` exits 0.
-- [ ] ISC-684: `bun run build` exits 0; `out/` includes 12 insight pages + 4 thank-you pages.
-- [ ] ISC-685: `bun run audit:all` exits 0 (or only with classified WARNs at parity with Cycle 14 baseline).
-- [ ] ISC-686: `bun run audit:insights` exits 0.
-- [ ] ISC-687: `docs/CYCLE_15_LOCAL_VERIFICATION.md` exists.
+- [x] ISC-682: `bun run typecheck` exits 0.
+- [x] ISC-683: `bun run lint` exits 0.
+- [x] ISC-684: `bun run build` exits 0; `out/` includes 12 insight pages + 4 thank-you pages.
+- [x] ISC-685: `bun run audit:all` exits 0 (or only with classified WARNs at parity with Cycle 14 baseline).
+- [x] ISC-686: `bun run audit:insights` exits 0.
+- [x] ISC-687: `docs/CYCLE_15_LOCAL_VERIFICATION.md` exists.
 
 ### Phase 15 — GPT-5.5 acceptance review
-- [ ] ISC-688: GPT-5.5 (Forge `xhigh`) reviews 12-post map + posts + index + lead-capture arch + screenshots + audits + SEO/AEO matrix.
-- [ ] ISC-689: `docs/CYCLE_15_GPT55_PREDEPLOY_REVIEW.md` exists with verdict ∈ {PASS, PASS_WITH_MINOR_CONCERNS, FAIL} + per-question reasoning.
+- [x] ISC-688: GPT-5.5 (Forge `xhigh`) reviews 12-post map + posts + index + lead-capture arch + screenshots + audits + SEO/AEO matrix.
+- [x] ISC-689: `docs/CYCLE_15_GPT55_PREDEPLOY_REVIEW.md` exists with verdict ∈ {PASS, PASS_WITH_MINOR_CONCERNS, FAIL} + per-question reasoning.
 
 ### Phase 16 — Cato compliance cross-check
-- [ ] ISC-690: Cato dispatched (mandatory at E5 in VERIFY) for compliance review.
-- [ ] ISC-691: `docs/CYCLE_15_CATO_OR_COMPLIANCE_CROSSCHECK.md` exists with Cato verdict.
-- [ ] ISC-692: Cato confirms: no fake dates, no unsupported claims, no steering, no TCPA/CRM overclaim, no MLS/private-inventory overclaim, no misleading schema.
+- [x] ISC-690: Cato dispatched (mandatory at E5 in VERIFY) for compliance review.
+- [x] ISC-691: `docs/CYCLE_15_CATO_OR_COMPLIANCE_CROSSCHECK.md` exists with Cato verdict.
+- [x] ISC-692: Cato confirms: no fake dates, no unsupported claims, no steering, no TCPA/CRM overclaim, no MLS/private-inventory overclaim, no misleading schema.
 
 ### Phase 17 — Deploy + live verification
-- [ ] ISC-693: Code committed + pushed to origin/main; commit message references CYCLE_15.
-- [ ] ISC-694: `bun scripts/deploy-and-verify.ts --no-lighthouse` triggers Dokploy deploy.
-- [ ] ISC-695: Live ETag flips post-deploy (Caddy cache rotation).
-- [ ] ISC-696: `/tmp/mia-cycle15-live-after/` captures complete (key routes).
-- [ ] ISC-697: All changed-route HTTP statuses == 200 live; canonical email + no Klein-Morgan/sunandbreeze residue verified; `mia@miasanabriarealtor.com` absent.
+- [x] ISC-693: Code committed + pushed to origin/main; commit message references CYCLE_15.
+- [x] ISC-694: `bun scripts/deploy-and-verify.ts --no-lighthouse` triggers Dokploy deploy.
+- [x] ISC-695: Live ETag flips post-deploy (Caddy cache rotation).
+- [x] ISC-696: `/tmp/mia-cycle15-live-after/` captures complete (key routes).
+- [x] ISC-697: All changed-route HTTP statuses == 200 live; canonical email + no Klein-Morgan/sunandbreeze residue verified; `mia@miasanabriarealtor.com` absent.
 
 ### Phase 18 — Production scorecard update
-- [ ] ISC-698: `docs/CYCLE_15_PRODUCTION_READINESS_SCORECARD_UPDATE.md` exists.
-- [ ] ISC-699: Reflects Insights/blog status, content authority status, lead-capture architecture status; preserves classification of unchanged external blockers (GHL, TCPA, license, REALTOR®/MLS, branded email, .com cutover).
+- [x] ISC-698: `docs/CYCLE_15_PRODUCTION_READINESS_SCORECARD_UPDATE.md` exists.
+- [x] ISC-699: Reflects Insights/blog status, content authority status, lead-capture architecture status; preserves classification of unchanged external blockers (GHL, TCPA, license, REALTOR®/MLS, branded email, .com cutover).
 
 ### Phase 19 — Skill / process upgrade
-- [ ] ISC-700: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` updated with durable Cycle 15 lessons (date governance, lead capture pre-wiring, sitewide weaving as first-class pass).
-- [ ] ISC-701: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.4.0 entry written.
-- [ ] ISC-702: `docs/CYCLE_15_PROCESS_UPGRADE_REPORT.md` exists.
+- [x] ISC-700: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` updated with durable Cycle 15 lessons (date governance, lead capture pre-wiring, sitewide weaving as first-class pass).
+- [x] ISC-701: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.4.0 entry written.
+- [x] ISC-702: `docs/CYCLE_15_PROCESS_UPGRADE_REPORT.md` exists.
 
 ### Phase 20 — Handoff + next-session trigger
-- [ ] ISC-703: `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_15_INSIGHTS_AND_LEAD_CAPTURE_2026-05-10.md` exists with 22 sections from mission spec.
-- [ ] ISC-704: `docs/NEXT_SESSION_TRIGGER_AFTER_CYCLE_15.md` exists; non-generic, based on actual Cycle 15 residuals.
-- [ ] ISC-705: All docs + code committed and pushed to origin/main.
+- [x] ISC-703: `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_15_INSIGHTS_AND_LEAD_CAPTURE_2026-05-10.md` exists with 22 sections from mission spec.
+- [x] ISC-704: `docs/NEXT_SESSION_TRIGGER_AFTER_CYCLE_15.md` exists; non-generic, based on actual Cycle 15 residuals.
+- [x] ISC-705: All docs + code committed and pushed to origin/main.
 
 ### Anti-criteria
-- [ ] ISC-706: Anti: No fake historical publish dates anywhere (audit:insights enforces).
-- [ ] ISC-707: Anti: No GHL production write performed.
-- [ ] ISC-708: Anti: No TCPA compliance claim shipped without actual consent mechanics.
-- [ ] ISC-709: Anti: No DNS/.com production change.
-- [ ] ISC-710: Anti: No CMS install (Payload/Postgres/Decap absent).
-- [ ] ISC-711: Anti: No legal-page rewrite touched.
-- [ ] ISC-712: Anti: No fabricated market facts, sales stats, awards, designations, credentials, MLS membership, testimonials, languages, or "private inventory" claims.
-- [ ] ISC-713: Anti: No school/family steering language.
-- [ ] ISC-714: Anti: Boca Raton + Delray Beach treated as Palm Beach County (never Broward).
-- [ ] ISC-715: Anti: No reopening of solved hero/footer/market-image work absent live evidence of regression.
-- [ ] ISC-716: Anti: No new colors/fonts/glassmorphism introduced.
-- [ ] ISC-717: Anti: No claim of CRM capture from any CTA without GHL endpoint authorized.
-- [ ] ISC-718: Anti: No `mia@miasanabriarealtor.com` introduced (canonical email stays `msanabriarea@gmail.com`).
-- [ ] ISC-719: Anti: No regression of Cycle 14 reverse-link curation, DRY refactor, comparisonContext content, or Ultimate Standard.
-- [ ] ISC-720: Anti: No same-context self-review treated as separate-context VERIFY (Rule 2b — Forge or Cato required at E5).
+- [x] ISC-706: Anti: No fake historical publish dates anywhere (audit:insights enforces).
+- [x] ISC-707: Anti: No GHL production write performed.
+- [x] ISC-708: Anti: No TCPA compliance claim shipped without actual consent mechanics.
+- [x] ISC-709: Anti: No DNS/.com production change.
+- [x] ISC-710: Anti: No CMS install (Payload/Postgres/Decap absent).
+- [x] ISC-711: Anti: No legal-page rewrite touched.
+- [x] ISC-712: Anti: No fabricated market facts, sales stats, awards, designations, credentials, MLS membership, testimonials, languages, or "private inventory" claims.
+- [x] ISC-713: Anti: No school/family steering language.
+- [x] ISC-714: Anti: Boca Raton + Delray Beach treated as Palm Beach County (never Broward).
+- [x] ISC-715: Anti: No reopening of solved hero/footer/market-image work absent live evidence of regression.
+- [x] ISC-716: Anti: No new colors/fonts/glassmorphism introduced.
+- [x] ISC-717: Anti: No claim of CRM capture from any CTA without GHL endpoint authorized.
+- [x] ISC-718: Anti: No `mia@miasanabriarealtor.com` introduced (canonical email stays `msanabriarea@gmail.com`).
+- [x] ISC-719: Anti: No regression of Cycle 14 reverse-link curation, DRY refactor, comparisonContext content, or Ultimate Standard.
+- [x] ISC-720: Anti: No same-context self-review treated as separate-context VERIFY (Rule 2b — Forge or Cato required at E5).
 
 ### Antecedent
-- [ ] ISC-721: Antecedent: principal opening live `/insights/` perceives a substantive editorial library (12 posts) that reads as Mia's voice, with each post offering a clear soft conversion path to private conversation, and each market page now opens into the editorial layer rather than dead-ending.
+- [x] ISC-721: Antecedent: principal opening live `/insights/` perceives a substantive editorial library (12 posts) that reads as Mia's voice, with each post offering a clear soft conversion path to private conversation, and each market page now opens into the editorial layer rather than dead-ending.
 
 ### Cycle 15 Decisions
 
