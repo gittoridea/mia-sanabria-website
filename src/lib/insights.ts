@@ -44,8 +44,12 @@ export type InsightCategory =
  * and headers. `editorialDate` is the 2nd-Monday-of-month anchor used for
  * VISIBLE SORT AND LABEL ONLY — it is NEVER fed to schema.
  *
- *  - "evergreen-month"  → visible label is `topicMonth` only (e.g. "Evergreen Brief · May").
+ *  - "evergreen-month"  → visible label is `editorialMonthLabel` (e.g. "Market Note · May").
  *                          Article header shows "Updated <Month YYYY>" derived from dateModified.
+ *                          (Cycle 17 — "Market Note · <Month>" replaced "Evergreen Brief · <Month>"
+ *                          per CYCLE_17_DECISION_REGISTER.md Card 1. The internal mode name stays
+ *                          `evergreen-month` since the underlying architectural choice — posts are
+ *                          evergreen, labeled by editorial month — is unchanged.)
  *  - "full-date"        → visible label is the full publication date (e.g. "Published May 10, 2026").
  *  - "updated-only"     → visible label is "Updated <Month YYYY>" only — useful for revisions to
  *                          posts that were originally part of the 12-post launch cohort.
@@ -94,7 +98,8 @@ export type InsightPost = {
    */
   readonly editorialDate: string;
   /**
-   * Cycle 16 — Visible editorial-month frame, e.g. "Evergreen Brief · May".
+   * Cycle 16 — Visible editorial-month frame, e.g. "Market Note · May" (Cycle 17 update;
+   * replaced "Evergreen Brief · <Month>" per CYCLE_17_DECISION_REGISTER.md Card 1).
    * Replaces the bare `topicMonth` in card/header display.
    */
   readonly editorialMonthLabel: string;
@@ -300,7 +305,7 @@ export function getUpdatedMonthYearLabel(post: InsightPost): string {
  * <time> elements (only datePublished is schema-faithful).
  */
 export type InsightVisibleDate = {
-  /** Top-line editorial label, e.g. "Evergreen Brief · May" or "Published May 10, 2026". */
+  /** Top-line editorial label, e.g. "Market Note · May" or "Published May 10, 2026". */
   readonly primary: string;
   /** Optional secondary line, e.g. "Updated May 2026". */
   readonly secondary?: string;

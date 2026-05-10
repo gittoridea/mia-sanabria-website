@@ -9,9 +9,10 @@ import { estimateReadingTime } from "@/lib/insights";
  * an explicit "Read" affordance. Mirrors the MarketCard editorial discipline
  * without competing with it visually (no large image; insights are text-led).
  *
- * Cycle 16 — Label uses `editorialMonthLabel` (e.g. "Evergreen Brief · May"),
- * which is the visible-only editorial frame. Schema-side datePublished stays
- * honest at the deployment date (rendered separately at the article-page level).
+ * Cycle 16 — Label uses `editorialMonthLabel` (e.g. "Market Note · May" — Cycle 17
+ * replaced "Evergreen Brief" with "Market Note" per CYCLE_17_DECISION_REGISTER.md
+ * Card 1), which is the visible-only editorial frame. Schema-side datePublished
+ * stays honest at the deployment date (rendered separately at the article-page level).
  */
 
 export function InsightCard({ post }: { post: InsightPost }) {

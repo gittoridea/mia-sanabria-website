@@ -1,0 +1,160 @@
+{
+  "generated": "2026-05-10T23:26:01.379Z",
+  "summary": {
+    "pass": 30,
+    "warn": 0,
+    "fail": 0
+  },
+  "rows": [
+    {
+      "name": "asset.lpt-realty.png.exists",
+      "status": "PASS",
+      "detail": "/home/torrey/code/mia-sanabria-website/public/logos/lpt-realty.png"
+    },
+    {
+      "name": "asset.lpt-realty.png.png-magic",
+      "status": "PASS",
+      "detail": "PNG signature ok"
+    },
+    {
+      "name": "asset.lpt-realty.png.dimensions",
+      "status": "PASS",
+      "detail": "1097x1097"
+    },
+    {
+      "name": "asset.lpt-realty.png.rgba",
+      "status": "PASS",
+      "detail": "channels=4 hasAlpha=true"
+    },
+    {
+      "name": "asset.lpt-realty.png.visible-content",
+      "status": "PASS",
+      "detail": "alpha-mean=62.6 (must be > 5 to render as visible silhouette)"
+    },
+    {
+      "name": "asset.realtor-r.png.exists",
+      "status": "PASS",
+      "detail": "/home/torrey/code/mia-sanabria-website/public/logos/realtor-r.png"
+    },
+    {
+      "name": "asset.realtor-r.png.png-magic",
+      "status": "PASS",
+      "detail": "PNG signature ok"
+    },
+    {
+      "name": "asset.realtor-r.png.dimensions",
+      "status": "PASS",
+      "detail": "600x600"
+    },
+    {
+      "name": "asset.realtor-r.png.rgba",
+      "status": "PASS",
+      "detail": "channels=4 hasAlpha=true"
+    },
+    {
+      "name": "asset.realtor-r.png.visible-content",
+      "status": "PASS",
+      "detail": "alpha-mean=69.9 (must be > 5 to render as visible silhouette)"
+    },
+    {
+      "name": "asset.equal-housing.png.exists",
+      "status": "PASS",
+      "detail": "/home/torrey/code/mia-sanabria-website/public/logos/equal-housing.png"
+    },
+    {
+      "name": "asset.equal-housing.png.png-magic",
+      "status": "PASS",
+      "detail": "PNG signature ok"
+    },
+    {
+      "name": "asset.equal-housing.png.dimensions",
+      "status": "PASS",
+      "detail": "1000x1000"
+    },
+    {
+      "name": "asset.equal-housing.png.rgba",
+      "status": "PASS",
+      "detail": "channels=4 hasAlpha=true"
+    },
+    {
+      "name": "asset.equal-housing.png.visible-content",
+      "status": "PASS",
+      "detail": "alpha-mean=108.3 (must be > 5 to render as visible silhouette)"
+    },
+    {
+      "name": "siteFooter.exists",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "name": "siteFooter.references.lpt-realty.png",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "name": "siteFooter.alt.lpt-realty.png",
+      "status": "PASS",
+      "detail": "alt=\"LPT Realty\" present"
+    },
+    {
+      "name": "siteFooter.label.lpt-realty.png",
+      "status": "PASS",
+      "detail": "label=\"LPT Realty\" present"
+    },
+    {
+      "name": "siteFooter.references.realtor-r.png",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "name": "siteFooter.alt.realtor-r.png",
+      "status": "PASS",
+      "detail": "alt=\"REALTOR®\" present"
+    },
+    {
+      "name": "siteFooter.label.realtor-r.png",
+      "status": "PASS",
+      "detail": "label=\"REALTOR®\" present"
+    },
+    {
+      "name": "siteFooter.references.equal-housing.png",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "name": "siteFooter.alt.equal-housing.png",
+      "status": "PASS",
+      "detail": "alt=\"Equal Housing Opportunity\" present"
+    },
+    {
+      "name": "siteFooter.label.equal-housing.png",
+      "status": "PASS",
+      "detail": "label=\"Equal Housing Opportunity\" present"
+    },
+    {
+      "name": "siteFooter.filterChain",
+      "status": "PASS",
+      "detail": "brightness-0 invert opacity-90 filter present"
+    },
+    {
+      "name": "siteFooter.noMlsCombined",
+      "status": "PASS",
+      "detail": "no combined REALTOR®+MLS asset referenced"
+    },
+    {
+      "name": "builtOutput.homepage.lpt-realty.png",
+      "status": "PASS",
+      "detail": "asset referenced in built homepage HTML"
+    },
+    {
+      "name": "builtOutput.homepage.realtor-r.png",
+      "status": "PASS",
+      "detail": "asset referenced in built homepage HTML"
+    },
+    {
+      "name": "builtOutput.homepage.equal-housing.png",
+      "status": "PASS",
+      "detail": "asset referenced in built homepage HTML"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "generated": "2026-05-10T23:32:12.786Z",
+  "summary": {
+    "pass": 11,
+    "warn": 0,
+    "fail": 0
+  },
+  "rows": [
+    {
+      "name": "v3.heroPrecisionFrame",
+      "status": "PASS",
+      "detail": "\"Where deepwater yacht access\" present"
+    },
+    {
+      "name": "v3.preludeEyebrow",
+      "status": "PASS",
+      "detail": "\"A decision, not a default\" present"
+    },
+    {
+      "name": "v3.preludeHeading",
+      "status": "PASS",
+      "detail": "\"Fort Lauderdale rewards a written brief\" present"
+    },
+    {
+      "name": "v3.seventhCardTitle",
+      "status": "PASS",
+      "detail": "\"Insurance underwriting and the 4-point sequence\" present"
+    },
+    {
+      "name": "v3.emphasizedCardEyebrow",
+      "status": "PASS",
+      "detail": "\"THE QUESTION BUYERS ASK MOST OFTEN\" present"
+    },
+    {
+      "name": "v3.peerPointers",
+      "status": "PASS",
+      "detail": "12 matches (target ≥ 4)"
+    },
+    {
+      "name": "v3.antiPatternAside",
+      "status": "PASS",
+      "detail": "4 matches (target ≥ 2)"
+    },
+    {
+      "name": "v3.faqPrivateBriefVsAlert",
+      "status": "PASS",
+      "detail": "\"How is a private buyer brief different from a saved-search alert?\" present"
+    },
+    {
+      "name": "v3.faqRouteToInletNonYachter",
+      "status": "PASS",
+      "detail": "\"Why does route-to-inlet matter for a buyer who isn\" present"
+    },
+    {
+      "name": "v3.sellerPlaybookInsightsLink",
+      "status": "PASS",
+      "detail": "\"/insights/why-automated-valuations-miss-luxury-waterfront/\" present"
+    },
+    {
+      "name": "v3.faqPageCountIs9",
+      "status": "PASS",
+      "detail": "FAQPage schema has 9 Question entries (target 9 = market.faqs:5 + V2 specifics:4)"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-10T21:16:57.734Z",
+  "generated": "2026-05-10T23:26:01.460Z",
   "summary": {
     "pass": 535,
     "warn": 0,
@@ -268,7 +268,7 @@
       "slug": "fort-lauderdale-waterfront-buyer-guide",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "fort-lauderdale-waterfront-buyer-guide",
@@ -538,7 +538,7 @@
       "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
@@ -814,7 +814,7 @@
       "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
@@ -1078,7 +1078,7 @@
       "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
@@ -1336,7 +1336,7 @@
       "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
@@ -1594,7 +1594,7 @@
       "slug": "coral-ridge-victoria-park-rio-vista",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "coral-ridge-victoria-park-rio-vista",
@@ -1858,7 +1858,7 @@
       "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
@@ -2104,7 +2104,7 @@
       "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
@@ -2356,7 +2356,7 @@
       "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
@@ -2638,7 +2638,7 @@
       "slug": "why-automated-valuations-miss-luxury-waterfront",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "why-automated-valuations-miss-luxury-waterfront",
@@ -2914,7 +2914,7 @@
       "slug": "preparing-waterfront-residence-private-market-conversations",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "preparing-waterfront-residence-private-market-conversations",
@@ -3190,7 +3190,7 @@
       "slug": "private-buyer-brief-defining-the-search",
       "check": "banned.allClear",
       "status": "PASS",
-      "detail": "0 banned phrases across 26 patterns"
+      "detail": "0 banned phrases across 27 patterns"
     },
     {
       "slug": "private-buyer-brief-defining-the-search",

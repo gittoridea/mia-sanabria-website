@@ -9,7 +9,7 @@ export const POST_12: InsightPost = {
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
   editorialDate: "2025-12-08",
-  editorialMonthLabel: "Evergreen Brief · December",
+  editorialMonthLabel: "Market Note · December",
   dateDisplayMode: "evergreen-month",
   showYear: false,
   heroImage: "/markets/fort-lauderdale.jpg",

@@ -9,7 +9,7 @@ export const POST_07: InsightPost = {
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
   editorialDate: "2025-07-14",
-  editorialMonthLabel: "Evergreen Brief · July",
+  editorialMonthLabel: "Market Note · July",
   dateDisplayMode: "evergreen-month",
   showYear: false,
   heroImage: "/markets/lighthouse-point.jpg",

@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-10T21:22:56.399Z",
+  "generated": "2026-05-10T23:19:59.007Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -540,7 +540,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 14951,
+        "documentHeight": 14935,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -665,8 +665,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -677,8 +677,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -871,7 +871,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 14951,
+        "documentHeight": 14935,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -996,8 +996,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -1008,8 +1008,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -1327,8 +1327,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -1339,8 +1339,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -1658,8 +1658,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -1670,8 +1670,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -1973,8 +1973,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -1985,8 +1985,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2216,8 +2216,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2228,8 +2228,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2429,8 +2429,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2441,8 +2441,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2642,8 +2642,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2654,8 +2654,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2855,8 +2855,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -2867,8 +2867,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3051,8 +3051,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3063,8 +3063,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3235,8 +3235,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3247,8 +3247,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3482,8 +3482,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3494,8 +3494,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3729,8 +3729,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3741,8 +3741,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3976,8 +3976,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -3988,8 +3988,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4207,8 +4207,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4219,8 +4219,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4438,8 +4438,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4450,8 +4450,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4685,8 +4685,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4697,8 +4697,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4932,8 +4932,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -4944,8 +4944,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5179,8 +5179,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5191,8 +5191,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5410,8 +5410,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5422,8 +5422,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5641,8 +5641,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5653,8 +5653,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5842,8 +5842,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -5854,8 +5854,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6043,8 +6043,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6055,8 +6055,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6244,8 +6244,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6256,8 +6256,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6428,8 +6428,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6440,8 +6440,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6612,8 +6612,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6624,8 +6624,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6813,8 +6813,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -6825,8 +6825,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7014,8 +7014,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7026,8 +7026,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7215,8 +7215,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7227,8 +7227,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7399,8 +7399,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7411,8 +7411,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7542,7 +7542,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10679,
+        "documentHeight": 10647,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7571,8 +7571,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7583,8 +7583,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7731,7 +7731,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10679,
+        "documentHeight": 10647,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7760,8 +7760,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7772,8 +7772,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7949,8 +7949,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -7961,8 +7961,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8109,7 +8109,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6452,
+        "documentHeight": 6436,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8138,8 +8138,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8150,8 +8150,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8281,7 +8281,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6452,
+        "documentHeight": 6436,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8310,8 +8310,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8322,8 +8322,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8482,8 +8482,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8494,8 +8494,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8664,8 +8664,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8676,8 +8676,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8846,8 +8846,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -8858,8 +8858,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9028,8 +9028,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9040,8 +9040,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9193,8 +9193,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9205,8 +9205,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9358,8 +9358,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9370,8 +9370,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9540,8 +9540,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9552,8 +9552,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9722,8 +9722,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9734,8 +9734,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9904,8 +9904,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -9916,8 +9916,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10069,8 +10069,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10081,8 +10081,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10234,8 +10234,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10246,8 +10246,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10416,8 +10416,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10428,8 +10428,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10598,8 +10598,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10610,8 +10610,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10780,8 +10780,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10792,8 +10792,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10945,8 +10945,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -10957,8 +10957,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11110,8 +11110,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11122,8 +11122,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11292,8 +11292,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11304,8 +11304,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11474,8 +11474,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11486,8 +11486,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11656,8 +11656,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11668,8 +11668,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11821,8 +11821,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -11833,8 +11833,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -12178,8 +12178,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -12190,8 +12190,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -12936,8 +12936,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -12948,8 +12948,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -13694,8 +13694,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -13706,8 +13706,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -14452,8 +14452,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -14464,8 +14464,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -15194,8 +15194,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -15206,8 +15206,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -15715,7 +15715,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 18248,
+        "documentHeight": 20473,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15735,7 +15735,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 474.59375,
+            "renderedHeight": 494.640625,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -15828,8 +15828,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -15840,8 +15840,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -15856,17 +15856,17 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 410.59375,
+            "h": 430.640625,
             "right": 484,
-            "bottom": 523.59375
+            "bottom": 543.640625
           },
           "headingBox": {
             "x": 38,
             "y": 182.5,
             "w": 299.71875,
-            "h": 40.09375,
+            "h": 60.140625,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 242.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
@@ -15880,30 +15880,30 @@
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 258.640625,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 378.59375
+            "bottom": 398.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 402.59375,
+            "y": 422.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 446.09375
+            "bottom": 466.140625
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 458.09375,
+            "y": 478.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 503.59375
+            "bottom": 523.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -15930,11 +15930,11 @@
             "text": "Begin a Private Buyer Brief",
             "box": {
               "x": 38,
-              "y": 402.59375,
+              "y": 422.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 446.09375
+              "bottom": 466.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -15946,11 +15946,11 @@
             "text": "Confidential Valuation",
             "box": {
               "x": 38,
-              "y": 458.09375,
+              "y": 478.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 503.59375
+              "bottom": 523.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -16011,12 +16011,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 223,
+        "rightEdgeContentPx": 245,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (223 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (245 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -16034,7 +16034,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 18248,
+        "documentHeight": 20473,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16054,7 +16054,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 474.59375,
+            "renderedHeight": 494.640625,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -16147,8 +16147,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -16159,8 +16159,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -16175,17 +16175,17 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 410.59375,
+            "h": 430.640625,
             "right": 484,
-            "bottom": 523.59375
+            "bottom": 543.640625
           },
           "headingBox": {
             "x": 38,
             "y": 182.5,
             "w": 299.71875,
-            "h": 40.09375,
+            "h": 60.140625,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 242.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
@@ -16199,30 +16199,30 @@
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 258.640625,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 378.59375
+            "bottom": 398.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 402.59375,
+            "y": 422.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 446.09375
+            "bottom": 466.140625
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 458.09375,
+            "y": 478.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 503.59375
+            "bottom": 523.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -16249,11 +16249,11 @@
             "text": "Begin a Private Buyer Brief",
             "box": {
               "x": 38,
-              "y": 402.59375,
+              "y": 422.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 446.09375
+              "bottom": 466.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -16265,11 +16265,11 @@
             "text": "Confidential Valuation",
             "box": {
               "x": 38,
-              "y": 458.09375,
+              "y": 478.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 503.59375
+              "bottom": 523.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -16330,12 +16330,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 229,
+        "rightEdgeContentPx": 230,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (229 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (230 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -16353,7 +16353,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 13102,
+        "documentHeight": 14823,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16373,7 +16373,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 768,
-            "renderedHeight": 500,
+            "renderedHeight": 524.5625,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -16466,8 +16466,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -16478,8 +16478,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -16492,56 +16492,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 134.3125,
+            "y": 129,
             "w": 672,
-            "h": 393.375,
+            "h": 428.5625,
             "right": 688,
-            "bottom": 527.6875
+            "bottom": 557.5625
           },
           "headingBox": {
             "x": 42,
-            "y": 207.3125,
+            "y": 202,
             "w": 576,
-            "h": 70.375,
+            "h": 105.5625,
             "right": 618,
-            "bottom": 277.6875
+            "bottom": 307.5625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 42,
-            "y": 175.3125,
+            "y": 170,
             "w": 622,
             "h": 16,
             "right": 664,
-            "bottom": 191.3125
+            "bottom": 186
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 42,
-            "y": 293.6875,
+            "y": 323.5625,
             "w": 576,
             "h": 140,
             "right": 618,
-            "bottom": 433.6875
+            "bottom": 463.5625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 42,
-            "y": 458.6875,
+            "y": 488.5625,
             "w": 275.640625,
             "h": 44,
             "right": 317.640625,
-            "bottom": 502.6875
+            "bottom": 532.5625
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 333.640625,
-            "y": 457.6875,
+            "y": 487.5625,
             "w": 215.5,
             "h": 46,
             "right": 549.140625,
-            "bottom": 503.6875
+            "bottom": 533.5625
           },
           "secondaryCtaTailClips": false
         },
@@ -16568,11 +16568,11 @@
             "text": "Begin a Private Buyer Brief",
             "box": {
               "x": 42,
-              "y": 458.6875,
+              "y": 488.5625,
               "w": 275.640625,
               "h": 44,
               "right": 317.640625,
-              "bottom": 502.6875
+              "bottom": 532.5625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -16584,11 +16584,11 @@
             "text": "Confidential Valuation",
             "box": {
               "x": 333.640625,
-              "y": 457.6875,
+              "y": 487.5625,
               "w": 215.5,
               "h": 46,
               "right": 549.140625,
-              "bottom": 503.6875
+              "bottom": 533.5625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -16649,12 +16649,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1577,
+        "rightEdgeContentPx": 1663,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1577 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1663 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -16672,7 +16672,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 10772,
+        "documentHeight": 12476,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16692,7 +16692,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 1280,
-            "renderedHeight": 520,
+            "renderedHeight": 570.5,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -16785,8 +16785,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -16797,8 +16797,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -16811,56 +16811,56 @@
         "hero": {
           "panelBox": {
             "x": 32,
-            "y": 138.625,
+            "y": 125,
             "w": 672,
-            "h": 396.75,
+            "h": 474.5,
             "right": 704,
-            "bottom": 535.375
+            "bottom": 599.5
           },
           "headingBox": {
             "x": 66,
-            "y": 219.625,
+            "y": 206,
             "w": 576,
-            "h": 77.75,
+            "h": 155.5,
             "right": 642,
-            "bottom": 297.375
+            "bottom": 361.5
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 66,
-            "y": 187.625,
+            "y": 174,
             "w": 606,
             "h": 16,
             "right": 672,
-            "bottom": 203.625
+            "bottom": 190
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 66,
-            "y": 313.375,
+            "y": 377.5,
             "w": 576,
             "h": 120,
             "right": 642,
-            "bottom": 433.375
+            "bottom": 497.5
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 66,
-            "y": 458.375,
+            "y": 522.5,
             "w": 283.640625,
             "h": 44,
             "right": 349.640625,
-            "bottom": 502.375
+            "bottom": 566.5
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 365.640625,
-            "y": 457.375,
+            "y": 521.5,
             "w": 223.5,
             "h": 46,
             "right": 589.140625,
-            "bottom": 503.375
+            "bottom": 567.5
           },
           "secondaryCtaTailClips": false
         },
@@ -16871,11 +16871,11 @@
             "text": "Begin a Private Buyer Brief",
             "box": {
               "x": 66,
-              "y": 458.375,
+              "y": 522.5,
               "w": 283.640625,
               "h": 44,
               "right": 349.640625,
-              "bottom": 502.375
+              "bottom": 566.5
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -16887,11 +16887,11 @@
             "text": "Confidential Valuation",
             "box": {
               "x": 365.640625,
-              "y": 457.375,
+              "y": 521.5,
               "w": 223.5,
               "h": 46,
               "right": 589.140625,
-              "bottom": 503.375
+              "bottom": 567.5
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -16952,12 +16952,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1453,
+        "rightEdgeContentPx": 1463,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1453 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1463 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -16975,7 +16975,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 10772,
+        "documentHeight": 12476,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16995,7 +16995,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 1440,
-            "renderedHeight": 520,
+            "renderedHeight": 570.5,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -17088,8 +17088,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -17100,8 +17100,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -17114,56 +17114,56 @@
         "hero": {
           "panelBox": {
             "x": 112,
-            "y": 138.625,
+            "y": 125,
             "w": 672,
-            "h": 396.75,
+            "h": 474.5,
             "right": 784,
-            "bottom": 535.375
+            "bottom": 599.5
           },
           "headingBox": {
             "x": 146,
-            "y": 219.625,
+            "y": 206,
             "w": 576,
-            "h": 77.75,
+            "h": 155.5,
             "right": 722,
-            "bottom": 297.375
+            "bottom": 361.5
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 146,
-            "y": 187.625,
+            "y": 174,
             "w": 606,
             "h": 16,
             "right": 752,
-            "bottom": 203.625
+            "bottom": 190
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 146,
-            "y": 313.375,
+            "y": 377.5,
             "w": 576,
             "h": 120,
             "right": 722,
-            "bottom": 433.375
+            "bottom": 497.5
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 146,
-            "y": 458.375,
+            "y": 522.5,
             "w": 283.640625,
             "h": 44,
             "right": 429.640625,
-            "bottom": 502.375
+            "bottom": 566.5
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 445.640625,
-            "y": 457.375,
+            "y": 521.5,
             "w": 223.5,
             "h": 46,
             "right": 669.140625,
-            "bottom": 503.375
+            "bottom": 567.5
           },
           "secondaryCtaTailClips": false
         },
@@ -17174,11 +17174,11 @@
             "text": "Begin a Private Buyer Brief",
             "box": {
               "x": 146,
-              "y": 458.375,
+              "y": 522.5,
               "w": 283.640625,
               "h": 44,
               "right": 429.640625,
-              "bottom": 502.375
+              "bottom": 566.5
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -17190,11 +17190,11 @@
             "text": "Confidential Valuation",
             "box": {
               "x": 445.640625,
-              "y": 457.375,
+              "y": 521.5,
               "w": 223.5,
               "h": 46,
               "right": 669.140625,
-              "bottom": 503.375
+              "bottom": 567.5
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -17255,12 +17255,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1406,
+        "rightEdgeContentPx": 1657,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1406 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1657 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -17379,8 +17379,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -17391,8 +17391,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -17670,8 +17670,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -17682,8 +17682,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -17977,8 +17977,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -17989,8 +17989,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -18160,12 +18160,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1174,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1174 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -18284,8 +18284,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -18296,8 +18296,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -18575,8 +18575,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -18587,8 +18587,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -18854,8 +18854,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -18866,8 +18866,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -19133,8 +19133,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -19145,8 +19145,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -19428,8 +19428,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -19440,8 +19440,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -19723,8 +19723,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -19735,8 +19735,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20002,8 +20002,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20014,8 +20014,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20269,8 +20269,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20281,8 +20281,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20552,8 +20552,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20564,8 +20564,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20835,8 +20835,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -20847,8 +20847,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21118,8 +21118,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21130,8 +21130,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21285,12 +21285,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1936,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1936 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -21385,8 +21385,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21397,8 +21397,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21640,8 +21640,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21652,8 +21652,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21911,8 +21911,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -21923,8 +21923,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22182,8 +22182,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22194,8 +22194,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22453,8 +22453,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22465,8 +22465,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22708,8 +22708,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22720,8 +22720,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22975,8 +22975,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -22987,8 +22987,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -23258,8 +23258,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -23270,8 +23270,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -23541,8 +23541,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -23553,8 +23553,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -23824,8 +23824,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -23836,8 +23836,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24091,8 +24091,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24103,8 +24103,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24258,12 +24258,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1798,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1798 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -24370,8 +24370,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24382,8 +24382,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24665,8 +24665,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24677,8 +24677,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24960,8 +24960,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -24972,8 +24972,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -25255,8 +25255,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -25267,8 +25267,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -25534,8 +25534,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -25546,8 +25546,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -25813,8 +25813,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -25825,8 +25825,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26092,8 +26092,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26104,8 +26104,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26387,8 +26387,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26399,8 +26399,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26682,8 +26682,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26694,8 +26694,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26961,8 +26961,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -26973,8 +26973,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -27252,8 +27252,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -27264,8 +27264,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -27543,8 +27543,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -27555,8 +27555,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -27850,8 +27850,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -27862,8 +27862,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -28157,8 +28157,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -28169,8 +28169,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -28448,8 +28448,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -28460,8 +28460,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -28751,8 +28751,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -28763,8 +28763,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -29054,8 +29054,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -29066,8 +29066,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -29373,8 +29373,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -29385,8 +29385,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -29692,8 +29692,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -29704,8 +29704,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -29995,8 +29995,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -30007,8 +30007,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -30262,8 +30262,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -30274,8 +30274,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -30529,8 +30529,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -30541,8 +30541,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -30812,8 +30812,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -30824,8 +30824,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31095,8 +31095,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31107,8 +31107,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31362,8 +31362,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31374,8 +31374,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31617,8 +31617,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31629,8 +31629,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31872,8 +31872,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -31884,8 +31884,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32143,8 +32143,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32155,8 +32155,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32414,8 +32414,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32426,8 +32426,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32669,8 +32669,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32681,8 +32681,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32924,8 +32924,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -32936,8 +32936,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33179,8 +33179,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33191,8 +33191,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33450,8 +33450,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33462,8 +33462,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33721,8 +33721,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33733,8 +33733,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33976,8 +33976,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -33988,8 +33988,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -34255,8 +34255,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -34267,8 +34267,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -34518,8 +34518,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -34530,8 +34530,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -34813,8 +34813,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -34825,8 +34825,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35108,8 +35108,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35120,8 +35120,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35387,8 +35387,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35399,8 +35399,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35666,8 +35666,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35678,8 +35678,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35945,8 +35945,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -35957,8 +35957,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -36240,8 +36240,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -36252,8 +36252,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -36535,8 +36535,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -36547,8 +36547,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -36814,8 +36814,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/realtor-r.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 600,
+            "naturalHeight": 600,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,
@@ -36826,8 +36826,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/logos/equal-housing.png",
-            "naturalWidth": 512,
-            "naturalHeight": 512,
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
             "renderedWidth": 40,
             "renderedHeight": 40,
             "opacity": 0.9,

@@ -116,17 +116,24 @@ export function SiteFooter() {
           className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-4 py-10 text-center lg:flex-row lg:items-center lg:justify-center lg:gap-14 lg:px-8"
           aria-label="Industry affiliations"
         >
-          {/* Cycle 16 — Footer trust-mark visibility fix.
-              The prior `realtor-r.png` was actually the REALTOR®+MLS combined mark (R-block + MLS
-              wordmark) — after the Cycle-11 monochrome treatment the R detail bleached out and the
-              mark read as a flat white block, AND the MLS portion implied MLS authorization Mia
-              has not confirmed. Cycle 16 replaces it with a clean R-only mark. The prior EHO file
-              had embedded "EQUAL HOUSING / OPPORTUNITY" wordmark inside the icon; at h-10 the
-              embedded text became an illegible blob. Cycle 16 replaces it with a clean HUD-style
-              house silhouette + equal sign (no embedded wordmark — the adjacent <span> already
-              labels the mark). All three assets are square 512×512 black-on-transparent so the
-              monochrome filter inverts them cleanly to white-on-navy. Heights now uniform at h-10
-              for visual balance. See docs/CYCLE_16_FOOTER_TRUST_LOGO_FIX.md. */}
+          {/* Cycle 17 — Footer trust-mark source upgrade.
+              Cycle 16 shipped SVG-derived renditions for `realtor-r.png` and `equal-housing.png`
+              that the principal still reported as visually wrong. Cycle 17 replaces both with the
+              canonical sources documented in CYCLE_17_DECISION_REGISTER.md Cards 2 & 3:
+                • realtor-r.png      ← NAR official white/reversed PNG
+                                        https://www.nar.realtor/sites/default/files/2025-07/nar_membershipmark_white.png
+                                        (600×600 RGBA, pure white-on-transparent, NAR Membership Marks Manual permits member display)
+                • equal-housing.png  ← equalhousinglogo.com curated white PNG (principal-named source)
+                                        https://equalhousinglogo.com/wp-content/uploads/2019/03/equal-housing-logowhite-1000.png
+                                        (1000×1000 RGBA, pure white-on-transparent, HUD EHO mark is public-domain for Fair Housing signaling)
+              Both new sources are pre-rendered white-on-transparent (RGB=255,255,255 across the visible
+              alpha mask). The existing `brightness-0 invert opacity-90` filter chain is idempotent for
+              pre-white sources (black → invert → white) and is preserved for visual cohesion with LPT,
+              which is grayscale and still relies on the chain to whiten. Heights stay uniform at h-10.
+              Cycle 16 SVG renditions are preserved as `realtor-r.cycle16.png.bak` and
+              `equal-housing.cycle16.png.bak` for rollback. REVIEW gates carried forward: principal-legal
+              sign-off on Mia's active NAR membership + rendition compliance before .com cutover.
+              See docs/CYCLE_17_FOOTER_OFFICIAL_TRUST_LOGO_FIX.md. */}
           <FooterTrustMark
             src="/logos/lpt-realty.png"
             alt="LPT Realty"

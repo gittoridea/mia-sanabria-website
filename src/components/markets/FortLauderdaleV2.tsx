@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Anchor, Ship, Compass, Building2, ShieldCheck, FileSearch } from "lucide-react";
+import { Anchor, Ship, Compass, Building2, ShieldCheck, FileSearch, AlertCircle } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Faq } from "@/components/Faq";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -12,25 +12,52 @@ import type { Market } from "@/lib/markets";
 
 /**
  * Cycle 16 — Fort Lauderdale V2 gold-standard market page.
+ * Cycle 17 — V3 content lift applied in-place (component name preserved so
+ * the rollout template at `src/app/markets/[slug]/page.tsx` does not churn).
+ * Lift summary (per docs/CYCLE_17_FORT_LAUDERDALE_ICP_REVIEW.md):
+ *   • Hero `heading` override — HNWI-precision frame (was: `market.tagline`).
+ *   • New prelude section "Why Fort Lauderdale is a decision, not a default"
+ *     between Hero and Executive AEO.
+ *   • Waterfront decision framework grows from 6 cards → 7 (adds insurance +
+ *     4-point inspection sequencing; rendered as a `lg:col-span-3` emphasis
+ *     card below the 6-card grid).
+ *   • Neighborhood comparison section adds a per-peer "Comes up when…" italic
+ *     pointer above each MarketCard, sourced from V3_PEER_POINTERS.
+ *   • Buyer playbook step 1 extends with a relocation-thread sentence.
+ *   • Buyer playbook + Seller playbook each carry a closing "What this is not"
+ *     anti-pattern aside.
+ *   • Seller playbook step 1 inline-links the automated-valuations Insight.
+ *   • FORT_LAUDERDALE_V2_FAQS grows from 2 → 4 items (total FAQ count 5+4=9).
  *
  * Structural pattern intended to be cloned for the other featured markets:
  *   1. Hero
- *   2. Executive AEO answer
- *   3. Market identity (Eastern FL vs broader market)
- *   4. Waterfront decision framework (verifiable-variable cards)
- *   5. Neighborhood comparison module (comparisonContext + cards)
- *   6. Buyer playbook (brief-first checklist)
- *   7. Seller playbook (positioning checklist)
- *   8. Related Insights
- *   9. FAQ
- *  10. CTA strip
+ *   2. (V3) Prelude — "Why Fort Lauderdale is a decision, not a default"
+ *   3. Executive AEO answer
+ *   4. Market identity (Eastern FL vs broader market)
+ *   5. Waterfront decision framework (7 cards as of V3)
+ *   6. Neighborhood comparison module (comparisonContext + per-peer pointers + cards)
+ *   7. Buyer playbook (brief-first checklist + anti-pattern aside)
+ *   8. Seller playbook (positioning checklist + anti-pattern aside)
+ *   9. Related Insights
+ *  10. FAQ
+ *  11. CTA strip
  *
  * No invented stats. No school steering. No private-inventory claims. Every
  * content block ties back to `market.*` fields or to neutrally-worded process
- * language. See docs/CYCLE_16_FORT_LAUDERDALE_MARKET_PAGE_V2_BLUEPRINT.md.
+ * language. See docs/CYCLE_16_FORT_LAUDERDALE_MARKET_PAGE_V2_BLUEPRINT.md and
+ * docs/CYCLE_17_FORT_LAUDERDALE_V3_IMPLEMENTATION.md.
  */
 
-const WATERFRONT_VARIABLES = [
+// Cycle 17 — V3 lift. The 7th card (insurance + 4-point sequencing) is rendered
+// emphasized (`lg:col-span-3` full-width below the 6-card grid) because it is
+// the single decision HNW buyers ask Mia about most often per principal context.
+// `emphasize: true` triggers the wider treatment in the render loop below.
+const WATERFRONT_VARIABLES: ReadonlyArray<{
+  icon: typeof Anchor;
+  title: string;
+  body: string;
+  emphasize?: boolean;
+}> = [
   {
     icon: Anchor,
     title: "Dockage capacity",
@@ -67,14 +94,41 @@ const WATERFRONT_VARIABLES = [
     body:
       "FEMA zone, elevation certificate, and recent inspection records (4-point, wind mitigation, roof, electrical). Carefully understood — not over-claimed. Flood-zone considerations affect insurance and resale; documented improvements affect both.",
   },
+  {
+    icon: AlertCircle,
+    title: "Insurance underwriting and the 4-point sequence",
+    body:
+      "On Eastern Fort Lauderdale waterfront, the binding decision is rarely listing price — it is whether the residence is underwritable on the buyer's timeline at a defensible premium. Order matters: a 4-point inspection (roof, electrical, plumbing, HVAC), a wind-mitigation report, an elevation certificate, and any prior-claim history get sequenced before the offer's diligence window — not after. A Florida-licensed insurance broker is the right early party. Mia coordinates introductions; the underwriter's quote, not Mia's summary, is the ground truth.",
+    emphasize: true,
+  },
 ];
+
+// Cycle 17 — V3 lift. Per-peer "Comes up when…" pointer rendered above each
+// MarketCard in the comparison section. Keyed by the peer market slug so the
+// data file can grow internalLinks without churning this component (any peer
+// without a registered pointer falls back to the MarketCard alone). No invented
+// rankings; each pointer is a decision-context anchor, not a market claim.
+const V3_PEER_POINTERS: Readonly<Record<string, string>> = {
+  "las-olas-isles":
+    "Comes up when deepwater dockage and walkability to Las Olas Boulevard rank equally on the brief.",
+  "harbor-beach":
+    "Comes up when gated barrier-island privacy and beach-club access shape the residence search.",
+  "victoria-park":
+    "Comes up when in-town walkability is the dominant lifestyle anchor, with or without water access.",
+  "coral-ridge":
+    "Comes up when an established country-club residential setting matters more than direct water frontage.",
+  "bay-colony":
+    "Comes up when gated single-entry waterfront is preferred over open-grid finger-isle layouts.",
+  "bermuda-riviera":
+    "Comes up when mid-century-modern architecture and a quiet residential rhythm anchor the search.",
+};
 
 const BUYER_PLAYBOOK = [
   {
     n: "01",
     title: "Begin with a brief, not a search",
     body:
-      "The first 60-90 minutes is conversation. Lifestyle anchors, timeline, vessel profile, architectural preference, and target price band. The brief filters listings; aesthetic enthusiasm does not.",
+      "The first 60-90 minutes is conversation. Lifestyle anchors, timeline, vessel profile, architectural preference, and target price band. The brief filters listings; aesthetic enthusiasm does not. If the brief crosses a relocation — Northeast, Midwest, or West Coast — the diligence sequence accounts for remote initial conversations and a defined in-person stage.",
   },
   {
     n: "02",
@@ -107,7 +161,7 @@ const SELLER_PLAYBOOK = [
     n: "01",
     title: "Begin with a property-specific valuation",
     body:
-      "Current comparable sales drawn from the right cohort — the same block, the same canal, the same lot profile. Broad averages do not predict what a deepwater point-lot trades at relative to an interior canal residence.",
+      "Current comparable sales drawn from the right cohort — the same block, the same canal, the same lot profile. Broad averages do not predict what a deepwater point-lot trades at relative to an interior canal residence. Why public estimates miss this is its own conversation; the short version lives in the Insights note on automated valuations.",
   },
   {
     n: "02",
@@ -137,6 +191,7 @@ const SELLER_PLAYBOOK = [
 
 // FL-specific FAQs beyond the data-driven `market.faqs`. Kept conservatively
 // worded — no school steering, no school-zone copy, no school-rating claim.
+// Cycle 17 — extended from 2 to 4 items (V3 lift; page-total 5+4=9).
 const FORT_LAUDERDALE_V2_FAQS: ReadonlyArray<{ question: string; answer: string }> = [
   {
     question: "How does Eastern Fort Lauderdale differ from broader Broward County?",
@@ -147,6 +202,16 @@ const FORT_LAUDERDALE_V2_FAQS: ReadonlyArray<{ question: string; answer: string 
     question: "Does Fort Lauderdale's flood-zone overlap make insurance harder?",
     answer:
       "Flood zone affects insurance pricing and lender requirements, particularly for waterfront residences. Elevation certificates, prior remediation, and mitigation history all factor in. Mia recommends a property-specific conversation with a Florida-licensed insurance broker early in the diligence window for any waterfront residence — not after the contract is signed.",
+  },
+  {
+    question: "How is a private buyer brief different from a saved-search alert?",
+    answer:
+      "A saved-search alert surfaces listings; a private buyer brief surfaces decisions. The brief is a written priority hierarchy — lifestyle anchors, vessel profile, architectural era, dockage requirements, timing — that becomes the filter applied to public listings and, where the brokerage relationships surface a fit, to pre-market introductions. Mia's role is to read the brief carefully enough to rule out three quarters of the market before any address is opened, then narrow to the two or three residences a serious search should actually consider.",
+  },
+  {
+    question: "Why does route-to-inlet matter for a buyer who isn't a serious yachter?",
+    answer:
+      "Route-to-inlet is a proxy for what the waterfront residence actually feels like day-to-day, even without a vessel. A no-fixed-bridge run to Port Everglades means open Atlantic water sits a short ride away — the canal carries through-traffic, the views include working boats, and resale captures the deepwater premium. Two opening bridges and a narrow turning basin imply a quieter canal experience and a different buyer pool at resale. The question shows up in lifestyle, view, and price; not only in vessel logistics.",
   },
 ];
 
@@ -180,7 +245,10 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
 
       <Hero
         eyebrow={`${market.name} · The Venice of America`}
-        heading={market.tagline}
+        // Cycle 17 — V3 hero heading override. `market.tagline` is preserved on the
+        // markets-index card and OG fallback; here the page leads with a precision
+        // frame for the HNWI ICP per CYCLE_17_FORT_LAUDERDALE_ICP_REVIEW.md §"HNWI".
+        heading="Where deepwater yacht access, a working downtown, and a 165-mile canal system meet."
         sub={market.intro}
         ctaPrimary={{ href: "/contact/?intent=buyer-brief&market=fort-lauderdale&source=market-v2", label: "Begin a Private Buyer Brief" }}
         ctaSecondary={{ href: "/valuation/?market=fort-lauderdale&source=market-v2", label: "Confidential Valuation" }}
@@ -188,6 +256,27 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
         imageSrc={market.heroImage}
         imageAlt={`${market.name} waterfront luxury real estate`}
       />
+
+      {/* SECTION 1.5 — V3 prelude: "A decision, not a default."
+          New in Cycle 17 per CYCLE_17_FORT_LAUDERDALE_ICP_REVIEW.md. Sits between
+          Hero and Executive AEO; anchors the privacy-conscious / brief-first framing
+          before the snippet-able AEO paragraph below. */}
+      <section className="bg-cream-100 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+          <div className="font-display text-xs tracking-[0.3em] text-brass-700">
+            A decision, not a default
+          </div>
+          <h2 className="mt-3 font-display text-3xl text-navy-800 sm:text-[34px] [text-wrap:balance]">
+            Fort Lauderdale rewards a written brief.
+          </h2>
+          <p className="mt-5 text-[17px] leading-relaxed text-navy-800/85">
+            For luxury and waterfront buyers, the city resolves into four or five distinct sub-markets that trade on different fundamentals. For sellers, the work that earns the right price is property-specific, not slogan-driven. The pages that follow are organized around the conversations Mia handles privately before any address is opened — for buyers, the brief; for sellers, the valuation and the buyer-profile decision.
+          </p>
+          <p className="mt-4 text-[16px] leading-relaxed text-navy-800/80">
+            Treat this page as a primer. The shortlists, the dock and lot specifics, the comparable-sales cohort, and the introductions — those happen in a 30-minute private call, not on a search page.
+          </p>
+        </div>
+      </section>
 
       {/* SECTION 2 — Executive AEO answer */}
       <section className="bg-cream-50 py-20 lg:py-28">
@@ -255,9 +344,37 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
             heading="Six verifiable variables before any offer."
             sub="On a Fort Lauderdale waterfront parcel, the variables that matter most live in surveys, permits, and inspections — not in listing photographs. These are the questions Mia handles privately before the second showing."
           />
+          {/* Cycle 17 — V3 lift. 7 cards: first 6 in 3-col grid, 7th (insurance + 4-point)
+              emphasized as a full-width row below. The `emphasize` flag controls the
+              col-span at lg, the inner layout (two-column at sm), and the icon size.
+              Editorial intent: the 7th card is the question HNW buyers ask Mia most often,
+              so it gets the visual weight a single full-width row provides. */}
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {WATERFRONT_VARIABLES.map((v) => {
               const Icon = v.icon;
+              if (v.emphasize) {
+                return (
+                  <li
+                    key={v.title}
+                    className="rounded-sm border border-brass-400/30 bg-cream-100 p-7 shadow-card sm:col-span-2 lg:col-span-3 lg:p-10"
+                  >
+                    <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:gap-10">
+                      <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-navy-800 text-cream-50">
+                        <Icon className="h-6 w-6" aria-hidden />
+                      </div>
+                      <div>
+                        <div className="font-display text-xs tracking-[0.3em] text-brass-700">
+                          THE QUESTION BUYERS ASK MOST OFTEN
+                        </div>
+                        <h3 className="mt-2 font-display text-2xl text-navy-800">{v.title}</h3>
+                        <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-navy-800/85">
+                          {v.body}
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                );
+              }
               return (
                 <li
                   key={v.title}
@@ -273,7 +390,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
             })}
           </ul>
           <p className="mt-10 max-w-3xl text-[14px] italic leading-relaxed text-navy-800/70">
-            None of the six is a substitute for a licensed inspector, marine contractor, surveyor, or insurance broker. Mia coordinates these specialists; their findings — not Mia's summaries — are the ground truth.
+            None of the seven is a substitute for a licensed inspector, marine contractor, surveyor, or insurance broker. Mia coordinates these specialists; their findings — not Mia's summaries — are the ground truth.
           </p>
         </div>
       </section>
@@ -292,12 +409,23 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
                 {market.comparisonContext}
               </p>
             ) : null}
+            {/* Cycle 17 — V3 lift. Per-peer "Comes up when…" pointer above each MarketCard,
+                sourced from V3_PEER_POINTERS keyed by peer market slug. Peers without a
+                registered pointer fall back to the MarketCard alone. */}
             <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedMarkets.map((m) => (
-                <li key={m.slug}>
-                  <MarketCard market={m} />
-                </li>
-              ))}
+              {relatedMarkets.map((m) => {
+                const pointer = V3_PEER_POINTERS[m.slug];
+                return (
+                  <li key={m.slug} className="flex flex-col gap-3">
+                    {pointer ? (
+                      <p className="text-[13px] italic leading-snug text-navy-800/70">
+                        {pointer}
+                      </p>
+                    ) : null}
+                    <MarketCard market={m} />
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
@@ -326,6 +454,15 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
                 </li>
               ))}
             </ol>
+            {/* Cycle 17 — V3 lift. Anti-pattern aside at the end of the buyer playbook. */}
+            <aside className="mt-10 rounded-sm border border-navy-800/10 bg-cream-100 px-6 py-5 text-[14px] leading-relaxed text-navy-800/80">
+              <span className="block font-display text-xs uppercase tracking-[0.3em] text-brass-700">
+                What this is not
+              </span>
+              <p className="mt-2">
+                The brief is not a saved-search alert; it is a written priority hierarchy. Saved-search alerts surface listings; a brief surfaces decisions — which neighborhoods, which lot profiles, and which trade-offs are inside the search and which are outside it.
+              </p>
+            </aside>
           </div>
           <aside className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10">
             <div className="font-display text-xs tracking-[0.3em] text-brass-700">
@@ -395,6 +532,15 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
                 </li>
               ))}
             </ol>
+            {/* Cycle 17 — V3 lift. Anti-pattern aside + Insights cross-link at the end of the seller playbook. */}
+            <aside className="mt-10 rounded-sm border border-navy-800/10 bg-cream-50 px-6 py-5 text-[14px] leading-relaxed text-navy-800/80">
+              <span className="block font-display text-xs uppercase tracking-[0.3em] text-brass-700">
+                What this is not
+              </span>
+              <p className="mt-2">
+                Pricing is not a number drawn from a public estimate, and positioning is not a slogan. The seller playbook above operates the residence-specific way; the related note on why public estimates miss luxury waterfront — <Link href="/insights/why-automated-valuations-miss-luxury-waterfront/?source=market-v2-seller" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">read the brief</Link> — covers the category limitation in writing.
+              </p>
+            </aside>
           </div>
         </div>
       </section>

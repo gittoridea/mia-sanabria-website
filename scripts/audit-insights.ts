@@ -85,6 +85,11 @@ const BANNED_PHRASES: ReadonlyArray<{ pattern: RegExp; reason: string }> = [
   { pattern: /\brealtor\.com\b/i, reason: "Competitor name; frame as 'category limitation' instead" },
   { pattern: /\bmia@miasanabriarealtor\.com\b/i, reason: "Non-canonical email; canonical is msanabriarea@gmail.com" },
   { pattern: /\bDirect private intake is being finalized\b/i, reason: "Banned overclaim per Cycle 15 strategy doc" },
+  // Cycle 17 — visible label "Evergreen Brief · <Month>" replaced with "Market Note · <Month>"
+  // per CYCLE_17_DECISION_REGISTER.md Card 1. Audit rejects the legacy phrase across any
+  // visible field so it cannot regress. The body string is extended in checkBannedPhrases to
+  // include editorialMonthLabel + topicMonth so the regex can reach those label surfaces.
+  { pattern: /\bEvergreen Brief\b/i, reason: "Legacy Cycle-16 label; replaced by 'Market Note · <Month>' in Cycle 17" },
 ];
 
 const PALM_BEACH_MUNICIPALITIES = new Set(["boca-raton", "delray-beach", "palm-beach"]);
@@ -313,7 +318,11 @@ function checkWordCounts(post: InsightPost): CheckRow[] {
 
 function checkBannedPhrases(post: InsightPost): CheckRow[] {
   const rows: CheckRow[] = [];
-  const body = postBodyText(post) + " " + post.title + " " + post.excerpt + " " + post.seoTitle + " " + post.seoDescription;
+  // Cycle 17 — include editorialMonthLabel + topicMonth in the scan surface so the
+  // banned-phrase regex can reach the visible label fields (Card 1 binding).
+  const body =
+    postBodyText(post) + " " + post.title + " " + post.excerpt + " " + post.seoTitle +
+    " " + post.seoDescription + " " + post.editorialMonthLabel + " " + post.topicMonth;
   for (const { pattern, reason } of BANNED_PHRASES) {
     const match = body.match(pattern);
     if (match) {

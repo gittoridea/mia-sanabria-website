@@ -9,7 +9,7 @@ export const POST_06: InsightPost = {
   datePublished: "2026-05-10",
   dateModified: "2026-05-10",
   editorialDate: "2025-06-09",
-  editorialMonthLabel: "Evergreen Brief · June",
+  editorialMonthLabel: "Market Note · June",
   dateDisplayMode: "evergreen-month",
   showYear: false,
   heroImage: "/markets/coral-ridge.jpg",
