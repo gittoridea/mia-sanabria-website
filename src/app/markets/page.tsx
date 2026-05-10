@@ -49,6 +49,8 @@ const NEIGHBORHOOD_SLUGS = new Set<string>([
   "harbor-beach",
   "las-olas-isles",
   "seven-isles",
+  "bay-colony",
+  "bermuda-riviera",
 ]);
 
 function partitionMarkets(): {

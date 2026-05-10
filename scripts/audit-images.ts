@@ -302,6 +302,8 @@ async function runAuditImages(): Promise<CheckResult[]> {
     "seven-isles",
     "sea-ranch-lakes",
     "hillsboro-mile",
+    "bay-colony",
+    "bermuda-riviera",
   ];
   const missingAssets: { path: string; reason: string }[] = [];
   for (const a of requiredAssets) {
@@ -314,7 +316,7 @@ async function runAuditImages(): Promise<CheckResult[]> {
   results.push({
     id: "images.requiredAssetsExist",
     category: "Asset Inventory",
-    description: "Every Brand-Contract-required asset (headshot, logos, OG defaults, 13 market heroes) exists in public/",
+    description: "Every Brand-Contract-required asset (headshot, logos, OG defaults, 15 market heroes) exists in public/",
     status: missingAssets.length === 0 ? "PASS" : "FAIL",
     evidence:
       missingAssets.length === 0
@@ -330,16 +332,16 @@ async function runAuditImages(): Promise<CheckResult[]> {
   // (1) Homepage Featured Markets — every featured-card link must render an <img src="/markets/SLUG.jpg">.
   const homeHtml = await readFile(join(OUT_DIR, "index.html"), "utf-8").catch(() => "");
   const featuredImgs = [...homeHtml.matchAll(/src="\/markets\/([a-z-]+)\.jpg"/g)].map((m) => m[1]);
-  const expectedFeatured = ["fort-lauderdale", "victoria-park", "boca-raton", "delray-beach", "harbor-beach", "las-olas-isles"];
+  const expectedFeatured = ["fort-lauderdale", "victoria-park", "boca-raton", "delray-beach", "harbor-beach", "las-olas-isles", "bay-colony", "bermuda-riviera"];
   const missingFeatured = expectedFeatured.filter((slug) => !featuredImgs.includes(slug));
   results.push({
     id: "images.homepageFeaturedCards",
     category: "Featured Markets",
-    description: "Homepage Featured Markets section renders an <img> for each of the 6 featured market cards",
+    description: "Homepage Featured Markets section renders an <img> for each of the 8 featured market cards",
     status: missingFeatured.length === 0 ? "PASS" : "FAIL",
     evidence:
       missingFeatured.length === 0
-        ? `all 6 featured cards render <img src="/markets/SLUG.jpg">`
+        ? `all 8 featured cards render <img src="/markets/SLUG.jpg">`
         : `${missingFeatured.length} featured cards missing img: ${missingFeatured.join(", ")}`,
     details: missingFeatured.length ? { missingFeatured } : undefined,
   });

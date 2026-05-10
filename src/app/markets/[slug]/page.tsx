@@ -87,6 +87,8 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
     "harbor-beach",
     "las-olas-isles",
     "seven-isles",
+    "bay-colony",
+    "bermuda-riviera",
   ]);
   const allEasternFTL = relatedMarkets.length > 0 &&
     relatedMarkets.every((m) => easternBrowardSlugs.has(m.slug));

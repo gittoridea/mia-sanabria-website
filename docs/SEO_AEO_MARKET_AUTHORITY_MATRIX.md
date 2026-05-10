@@ -1,6 +1,6 @@
 # SEO / AEO / Market Authority Matrix — Mia Sanabria Realtor Site
 
-**Generated:** 2026-05-08 PM (post markets-V3 sprint)
+**Generated:** 2026-05-10 (Cycle 13 — Bay Colony + Bermuda Riviera added)
 **Live URL:** https://miasanabriarealtor.trueidea.com
 **Source of truth:** `src/lib/markets.ts`, `src/app/markets/[slug]/page.tsx`, `src/app/markets/page.tsx`
 
@@ -15,7 +15,7 @@ This matrix is the per-route SEO/AEO authority map. Every public route should ha
 | `/buyers/` | Buyer conversion path | Luxury buyers | (intent-specific H1) | unique | implicit (process timeline) | yes | Service + BreadcrumbList + FAQPage | Markets, Valuation, Contact |
 | `/sellers/` | Seller conversion path | Premium sellers | (intent-specific H1) | unique | implicit | yes | Service + BreadcrumbList + FAQPage | Valuation, Contact, Markets |
 | `/valuation/` | Valuation lead capture | Sellers + curious owners | (valuation H1) | unique | implicit | yes | Service + BreadcrumbList + FAQPage | Sellers, Contact |
-| `/markets/` | Market hub navigation | All audiences | "Featured Markets" | unique | grouped intro paragraphs | n/a | BreadcrumbList + RealEstateAgent | all 13 market routes |
+| `/markets/` | Market hub navigation | All audiences | "Featured Markets" | unique | grouped intro paragraphs | n/a | BreadcrumbList + RealEstateAgent | all 15 market routes |
 | `/contact/` | Conversion | All audiences | (contact H1) | unique | n/a | yes | Person + RealEstateAgent + ContactPage + LocalBusiness + BreadcrumbList + FAQPage | Home, About, Valuation |
 | `/insights/` | Topic authority + recurring crawl | All audiences | "Insights" | unique | per-essay AEO blocks | per-essay | Article + FAQPage + BreadcrumbList (per essay) | Home, Markets, Buyers/Sellers |
 
@@ -41,13 +41,15 @@ This matrix is the per-route SEO/AEO authority map. Every public route should ha
 | `/markets/harbor-beach/` | Harbor Beach gated luxury | private beach club, Eastern FtL trophy estates | Broward | ✅ | ✅ | full | rio-vista, las-olas-isles, fort-lauderdale |
 | `/markets/las-olas-isles/` | Las Olas Isles waterfront homes | finger isles, walkable Las Olas Boulevard | Broward | ✅ | ✅ | full | seven-isles, rio-vista, harbor-beach, fort-lauderdale |
 | `/markets/seven-isles/` | Seven Isles deepwater estates | yacht-capable, no-fixed-bridge ocean access | Broward | ✅ | ✅ | full | las-olas-isles, harbor-beach, rio-vista |
+| `/markets/bay-colony/` | Bay Colony gated waterfront | Eastern FtL gated deepwater enclave off Bayview Drive | Broward | ✅ | ✅ | full | harbor-beach, las-olas-isles, coral-ridge, fort-lauderdale |
+| `/markets/bermuda-riviera/` | Bermuda Riviera waterfront | mid-century-modern architectural heritage, deepwater canal homes | Broward | ✅ | ✅ | full | coral-ridge, harbor-beach, las-olas-isles, fort-lauderdale |
 
 ## Topic authority clusters
 
 The internal-link graph forms three reinforcing clusters. The data lives in `Market.internalLinks[]` so all cross-references are typed against `MarketSlug` — a typo would fail typecheck, not silently break authority.
 
 **Cluster A — Eastern Fort Lauderdale waterfront / luxury (core niche):**
-fort-lauderdale ↔ las-olas-isles ↔ seven-isles ↔ rio-vista ↔ harbor-beach ↔ victoria-park ↔ coral-ridge
+fort-lauderdale ↔ las-olas-isles ↔ seven-isles ↔ rio-vista ↔ harbor-beach ↔ victoria-park ↔ coral-ridge ↔ bay-colony ↔ bermuda-riviera
 
 **Cluster B — Northern Broward coastal:**
 lighthouse-point ↔ hillsboro-mile ↔ sea-ranch-lakes ↔ fort-lauderdale (cross-link to anchor)
@@ -59,7 +61,7 @@ The clusters are explicit guardrails — Cluster A uses Eastern Fort Lauderdale 
 
 ## Schema saturation summary
 
-- **148 JSON-LD blocks** across 27 generated pages (audit:schema)
+- **165 JSON-LD blocks** across 29 generated pages (audit:schema, Cycle 13)
 - Per-market: PlaceSchema + BreadcrumbSchema + RealEstateAgentSchema + FaqSchema (FAQPage) — full graph
 - All blocks parse + carry `@context` + `@type`
 - Zero unverified-fact assertions in JSON-LD (license # null-guarded; designations [] empty array; languages = English only; no displayOffice)
@@ -72,7 +74,7 @@ Why this works for AEO: when an LLM-driven search engine asks "What is Las Olas 
 
 ## Compliance posture
 
-All 13 market pages inherit the locked footer trust strip (LPT logo + REALTOR® logo + EHO logo with explicit text labels) + IDX disclaimer + brokerage disclosure + EHO statement + 4 legal-policy links. No market page inlines unverified claims. Geographic guardrails enforced at the data layer (`Market.county` is the literal-union type `"Broward County" | "Palm Beach County"`).
+All 15 market pages inherit the locked footer trust strip (LPT logo + REALTOR® logo + EHO logo with explicit text labels) + IDX disclaimer + brokerage disclosure + EHO statement + 4 legal-policy links. No market page inlines unverified claims. Geographic guardrails enforced at the data layer (`Market.county` is the literal-union type `"Broward County" | "Palm Beach County"`).
 
 ## Remaining gap
 

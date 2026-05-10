@@ -68,6 +68,8 @@ const ALL_MARKET_SLUGS = [
   "seven-isles",
   "sea-ranch-lakes",
   "hillsboro-mile",
+  "bay-colony",
+  "bermuda-riviera",
 ] as const;
 
 export type MarketSlug = (typeof ALL_MARKET_SLUGS)[number];
@@ -79,6 +81,8 @@ const FEATURED_SET: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
   "victoria-park",
   "boca-raton",
   "delray-beach",
+  "bay-colony",
+  "bermuda-riviera",
 ]);
 
 export const FEATURED_MARKETS: ReadonlyArray<MarketSlug> = ALL_MARKET_SLUGS.filter(

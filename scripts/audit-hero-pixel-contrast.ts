@@ -82,6 +82,8 @@ const REQUIRED_ROUTES = [
   "/valuation/",
   "/markets/fort-lauderdale/",
   "/markets/las-olas-isles/",
+  "/markets/bay-colony/",
+  "/markets/bermuda-riviera/",
 ];
 
 const N_GLYPH_MAX = 1500;

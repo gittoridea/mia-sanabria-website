@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-10T12:01:02.389Z
+**Generated:** 2026-05-10T13:06:57.518Z
 
 **Summary:** 15 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 25 built · 25 in sitemap · 0 missing |
+| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 27 built · 27 in sitemap · 0 missing |
 | `completeness.sitemap.sitemapInBuilt` | ✅ | Every sitemap route resolves to a built page | 0 unresolved |
 
 ### Compliance
@@ -24,8 +24,8 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 25 pages |
-| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 25 unique titles across 25 pages |
+| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 27 pages |
+| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 27 unique titles across 27 pages |
 | `completeness.metadata.uniqueDescriptions` | ✅ | Each core/legal/market page has unique <meta description> | all descriptions unique |
 | `completeness.og.imagesResolve` | ✅ | Every page's og:image resolves to a local file in out/ | all og:images resolve |
 
@@ -33,13 +33,13 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 13 market pages exceed 200-word floor |
+| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 15 market pages exceed 200-word floor |
 
 ### Design/Display Integrity
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.images.dimsAltPlaceholder` | ✅ | Core-page <img> tags have alt + width/height + no placeholder names (next/image fill mode exempted from dims check) | no img-attribute issues (28 next/image fill-mode images correctly classified) |
+| `completeness.images.dimsAltPlaceholder` | ✅ | Core-page <img> tags have alt + width/height + no placeholder names (next/image fill mode exempted from dims check) | no img-attribute issues (30 next/image fill-mode images correctly classified) |
 | `completeness.images.localFilesExist` | ✅ | Local image references resolve to files in out/ | all referenced local images exist |
 
 ### Forms/CTAs
@@ -60,7 +60,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 149 JSON-LD blocks across 25 pages · 0 broken |
+| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 161 JSON-LD blocks across 27 pages · 0 broken |
 
 ## Failures and warnings — details
 

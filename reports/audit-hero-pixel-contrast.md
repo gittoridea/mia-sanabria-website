@@ -1,13 +1,13 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T12:04:19.402Z
+**Generated:** 2026-05-10T13:10:25.265Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
 **Samples per row:** 1
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
 
-**Summary:** 95 PASS · 0 WARN · 0 FAIL · 0 SKIP
+**Summary:** 105 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 | Route | Viewport | Glyph contrast | Edge contrast | Stability | Glyph samples | Edge samples | Status | Note |
 |---|---|---:|---:|---:|---:|---:|:-:|---|
@@ -23,7 +23,7 @@
 | `/about/` | 1440x900 | 15.63 | 10.12 | 15.63 (15.63..15.63) | 1500 | 800 | ✅ PASS |  |
 | `/markets/` | 320x568 | 15.58 | 9.14 | 15.58 (15.58..15.58) | 693 | 800 | ✅ PASS |  |
 | `/markets/` | 375x812 | 15.58 | 9.14 | 15.58 (15.58..15.58) | 694 | 800 | ✅ PASS |  |
-| `/markets/` | 768x1024 | 3.38 | 3.08 | 3.38 (3.38..3.38) | 1500 | 800 | ✅ PASS |  |
+| `/markets/` | 768x1024 | 15.85 | 9.90 | 15.85 (15.85..15.85) | 1500 | 800 | ✅ PASS |  |
 | `/markets/` | 1280x800 | 15.86 | 9.95 | 15.86 (15.86..15.86) | 1500 | 800 | ✅ PASS |  |
 | `/markets/` | 1440x900 | 15.92 | 9.96 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
 | `/buyers/` | 320x568 | 15.33 | 9.01 | 15.33 (15.33..15.33) | 743 | 800 | ✅ PASS |  |
@@ -51,6 +51,16 @@
 | `/markets/las-olas-isles/` | 768x1024 | 15.84 | 10.15 | 15.84 (15.84..15.84) | 1500 | 800 | ✅ PASS |  |
 | `/markets/las-olas-isles/` | 1280x800 | 15.89 | 10.55 | 15.89 (15.89..15.89) | 1500 | 800 | ✅ PASS |  |
 | `/markets/las-olas-isles/` | 1440x900 | 15.82 | 10.50 | 15.82 (15.82..15.82) | 1500 | 800 | ✅ PASS |  |
+| `/markets/bay-colony/` | 320x568 | 15.40 | 8.99 | 15.40 (15.40..15.40) | 916 | 800 | ✅ PASS |  |
+| `/markets/bay-colony/` | 375x812 | 15.40 | 8.99 | 15.40 (15.40..15.40) | 916 | 800 | ✅ PASS |  |
+| `/markets/bay-colony/` | 768x1024 | 15.65 | 9.79 | 15.65 (15.65..15.65) | 1500 | 800 | ✅ PASS |  |
+| `/markets/bay-colony/` | 1280x800 | 15.66 | 10.34 | 15.66 (15.66..15.66) | 1500 | 800 | ✅ PASS |  |
+| `/markets/bay-colony/` | 1440x900 | 15.71 | 10.39 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |
+| `/markets/bermuda-riviera/` | 320x568 | 15.75 | 9.27 | 15.75 (15.75..15.75) | 1190 | 800 | ✅ PASS |  |
+| `/markets/bermuda-riviera/` | 375x812 | 15.75 | 9.27 | 15.75 (15.75..15.75) | 1190 | 800 | ✅ PASS |  |
+| `/markets/bermuda-riviera/` | 768x1024 | 15.71 | 9.75 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |
+| `/markets/bermuda-riviera/` | 1280x800 | 15.63 | 10.34 | 15.63 (15.63..15.63) | 1500 | 800 | ✅ PASS |  |
+| `/markets/bermuda-riviera/` | 1440x900 | 16.26 | 10.58 | 16.26 (16.26..16.26) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 320x568 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 375x812 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 768x1024 | 15.79 | 9.56 | 15.79 (15.79..15.79) | 1500 | 800 | ✅ PASS |  |

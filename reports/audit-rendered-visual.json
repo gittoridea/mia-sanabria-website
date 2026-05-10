@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-10T12:07:03.548Z",
+  "generated": "2026-05-10T13:13:10.805Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -32,6 +32,8 @@
     "/markets/boca-raton/",
     "/markets/delray-beach/",
     "/markets/palm-beach/",
+    "/markets/bay-colony/",
+    "/markets/bermuda-riviera/",
     "/insights/",
     "/privacy/",
     "/terms/",
@@ -50,14 +52,14 @@
       "category": "Rendered Images",
       "description": "Every non-lazy image renders with naturalWidth>0, renderedWidth>0, opacity>0",
       "status": "PASS",
-      "evidence": "0 broken images across 125 probes"
+      "evidence": "0 broken images across 135 probes"
     },
     {
       "id": "rendered.marketCards.allVisibleOnIndex",
       "category": "Market Index",
       "description": "/markets/ index renders ≥10 market cards with imgVisible=true",
       "status": "PASS",
-      "evidence": "13 visible cards (best viewport: 320x568)"
+      "evidence": "15 visible cards (best viewport: 320x568)"
     },
     {
       "id": "rendered.principalReportedMarkets.visible",
@@ -71,21 +73,21 @@
       "category": "Hero",
       "description": "Hero heading stays inside the copy panel (no right-edge clipping)",
       "status": "PASS",
-      "evidence": "0 offenders across 125 probes"
+      "evidence": "0 offenders across 135 probes"
     },
     {
       "id": "rendered.hero.eyebrowFitsPanel",
       "category": "Hero",
       "description": "Hero eyebrow stays inside the copy panel (no right-edge clipping)",
       "status": "PASS",
-      "evidence": "0 offenders across 125 probes"
+      "evidence": "0 offenders across 135 probes"
     },
     {
       "id": "rendered.hero.subFitsPanel",
       "category": "Hero",
       "description": "Hero sub-paragraph stays inside the copy panel (no right-edge clipping)",
       "status": "PASS",
-      "evidence": "0 offenders across 125 probes"
+      "evidence": "0 offenders across 135 probes"
     },
     {
       "id": "rendered.hero.primaryCtaAboveFoldDesktop",
@@ -113,7 +115,7 @@
       "category": "Mobile",
       "description": "No horizontal overflow at mobile viewports (≤768) — viewport-honest probes only",
       "status": "PASS",
-      "evidence": "0 overflow at 25 viewport-honest probes; 50 dishonest probes SKIPPED (instrumentation mismatch)",
+      "evidence": "0 overflow at 27 viewport-honest probes; 54 dishonest probes SKIPPED (instrumentation mismatch)",
       "details": {
         "offenders": [],
         "skipped": [
@@ -358,6 +360,30 @@
             "actual": 500
           },
           {
+            "route": "/markets/bay-colony/",
+            "viewport": "320x568",
+            "requested": 320,
+            "actual": 500
+          },
+          {
+            "route": "/markets/bay-colony/",
+            "viewport": "375x812",
+            "requested": 375,
+            "actual": 500
+          },
+          {
+            "route": "/markets/bermuda-riviera/",
+            "viewport": "320x568",
+            "requested": 320,
+            "actual": 500
+          },
+          {
+            "route": "/markets/bermuda-riviera/",
+            "viewport": "375x812",
+            "requested": 375,
+            "actual": 500
+          },
+          {
             "route": "/insights/",
             "viewport": "320x568",
             "requested": 320,
@@ -418,7 +444,7 @@
             "actual": 500
           }
         ],
-        "honestMobileProbes": 25
+        "honestMobileProbes": 27
       }
     },
     {
@@ -454,48 +480,48 @@
       "category": "Probe Health",
       "description": "Every probe's actual window.innerWidth matches requested viewport width (±5px) — F6 instrumentation gate",
       "status": "WARN",
-      "evidence": "75/125 probes viewport-honest; 50 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap)",
+      "evidence": "81/135 probes viewport-honest; 54 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap)",
       "details": {
         "sanity": [
           {
             "requested": "1280x800",
-            "total": 25,
-            "honest": 25,
+            "total": 27,
+            "honest": 27,
             "mismatched": 0,
             "sampleActual": 1280
           },
           {
             "requested": "1440x900",
-            "total": 25,
-            "honest": 25,
+            "total": 27,
+            "honest": 27,
             "mismatched": 0,
             "sampleActual": 1440
           },
           {
             "requested": "320x568",
-            "total": 25,
+            "total": 27,
             "honest": 0,
-            "mismatched": 25,
+            "mismatched": 27,
             "sampleActual": 500
           },
           {
             "requested": "375x812",
-            "total": 25,
+            "total": 27,
             "honest": 0,
-            "mismatched": 25,
+            "mismatched": 27,
             "sampleActual": 500
           },
           {
             "requested": "768x1024",
-            "total": 25,
-            "honest": 25,
+            "total": 27,
+            "honest": 27,
             "mismatched": 0,
             "sampleActual": 768
           }
         ],
-        "totalProbes": 125,
-        "honestProbes": 75,
-        "totalMismatched": 50
+        "totalProbes": 135,
+        "honestProbes": 81,
+        "totalMismatched": 54
       }
     }
   ],
@@ -514,7 +540,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 13032,
+        "documentHeight": 14249,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -615,6 +641,30 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -845,7 +895,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 13032,
+        "documentHeight": 14249,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -946,6 +996,30 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -1176,7 +1250,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9719,
+        "documentHeight": 10188,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1277,6 +1351,30 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 354,
@@ -1507,7 +1605,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7698,
+        "documentHeight": 8208,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1612,6 +1710,30 @@
             "naturalHeight": 1500,
             "renderedWidth": 387.34375,
             "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": false,
@@ -1822,7 +1944,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7698,
+        "documentHeight": 8208,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1927,6 +2049,30 @@
             "naturalHeight": 1500,
             "renderedWidth": 387.34375,
             "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": false,
@@ -7516,7 +7662,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11263,
+        "documentHeight": 12480,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7689,6 +7835,30 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/seven-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -8078,6 +8248,50 @@
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 16,
+              "y": 9177.75,
+              "w": 468,
+              "h": 584.5,
+              "right": 484,
+              "bottom": 9762.25
+            },
+            "imgBox": {
+              "x": 17,
+              "y": 9178.75,
+              "w": 466,
+              "h": 582.5,
+              "right": 483,
+              "bottom": 9761.25
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bay Colony"
+          },
+          {
+            "href": "/markets/bermuda-riviera/",
+            "cardBox": {
+              "x": 16,
+              "y": 9786.25,
+              "w": 468,
+              "h": 584.5,
+              "right": 484,
+              "bottom": 10370.75
+            },
+            "imgBox": {
+              "x": 17,
+              "y": 9787.25,
+              "w": 466,
+              "h": 582.5,
+              "right": 483,
+              "bottom": 10369.75
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bermuda Riviera"
           }
         ],
         "ctas": [
@@ -8206,7 +8420,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11263,
+        "documentHeight": 12480,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8379,6 +8593,30 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/seven-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -8768,6 +9006,50 @@
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 16,
+              "y": 9177.75,
+              "w": 468,
+              "h": 584.5,
+              "right": 484,
+              "bottom": 9762.25
+            },
+            "imgBox": {
+              "x": 17,
+              "y": 9178.75,
+              "w": 466,
+              "h": 582.5,
+              "right": 483,
+              "bottom": 9761.25
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bay Colony"
+          },
+          {
+            "href": "/markets/bermuda-riviera/",
+            "cardBox": {
+              "x": 16,
+              "y": 9786.25,
+              "w": 468,
+              "h": 584.5,
+              "right": 484,
+              "bottom": 10370.75
+            },
+            "imgBox": {
+              "x": 17,
+              "y": 9787.25,
+              "w": 466,
+              "h": 582.5,
+              "right": 483,
+              "bottom": 10369.75
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bermuda Riviera"
           }
         ],
         "ctas": [
@@ -8896,7 +9178,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6469,
+        "documentHeight": 6937,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9069,6 +9351,30 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/seven-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 354,
@@ -9458,6 +9764,50 @@
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 16,
+              "y": 4498,
+              "w": 356,
+              "h": 444.5,
+              "right": 372,
+              "bottom": 4942.5
+            },
+            "imgBox": {
+              "x": 17,
+              "y": 4499,
+              "w": 354,
+              "h": 442.5,
+              "right": 371,
+              "bottom": 4941.5
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bay Colony"
+          },
+          {
+            "href": "/markets/bermuda-riviera/",
+            "cardBox": {
+              "x": 396,
+              "y": 4498,
+              "w": 356,
+              "h": 444.5,
+              "right": 752,
+              "bottom": 4942.5
+            },
+            "imgBox": {
+              "x": 397,
+              "y": 4499,
+              "w": 354,
+              "h": 442.5,
+              "right": 751,
+              "bottom": 4941.5
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bermuda Riviera"
           }
         ],
         "ctas": [
@@ -9586,7 +9936,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4889,
+        "documentHeight": 5399,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9763,6 +10113,30 @@
             "naturalHeight": 1500,
             "renderedWidth": 387.34375,
             "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": false,
@@ -10148,6 +10522,50 @@
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 32,
+              "y": 3881.34375,
+              "w": 389.328125,
+              "h": 486.15625,
+              "right": 421.328125,
+              "bottom": 4367.5
+            },
+            "imgBox": {
+              "x": 33,
+              "y": 3882.34375,
+              "w": 387.328125,
+              "h": 484.15625,
+              "right": 420.328125,
+              "bottom": 4366.5
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bay Colony"
+          },
+          {
+            "href": "/markets/bermuda-riviera/",
+            "cardBox": {
+              "x": 445.328125,
+              "y": 3881.34375,
+              "w": 389.328125,
+              "h": 486.15625,
+              "right": 834.65625,
+              "bottom": 4367.5
+            },
+            "imgBox": {
+              "x": 446.328125,
+              "y": 3882.34375,
+              "w": 387.328125,
+              "h": 484.15625,
+              "right": 833.65625,
+              "bottom": 4366.5
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bermuda Riviera"
           }
         ],
         "ctas": [
@@ -10260,7 +10678,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4889,
+        "documentHeight": 5399,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10437,6 +10855,30 @@
             "naturalHeight": 1500,
             "renderedWidth": 387.34375,
             "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": false,
@@ -10822,6 +11264,50 @@
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 112,
+              "y": 3881.34375,
+              "w": 389.328125,
+              "h": 486.15625,
+              "right": 501.328125,
+              "bottom": 4367.5
+            },
+            "imgBox": {
+              "x": 113,
+              "y": 3882.34375,
+              "w": 387.328125,
+              "h": 484.15625,
+              "right": 500.328125,
+              "bottom": 4366.5
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bay Colony"
+          },
+          {
+            "href": "/markets/bermuda-riviera/",
+            "cardBox": {
+              "x": 525.328125,
+              "y": 3881.34375,
+              "w": 389.328125,
+              "h": 486.15625,
+              "right": 914.65625,
+              "bottom": 4367.5
+            },
+            "imgBox": {
+              "x": 526.328125,
+              "y": 3882.34375,
+              "w": 387.328125,
+              "h": 484.15625,
+              "right": 913.65625,
+              "bottom": 4366.5
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Bermuda Riviera"
           }
         ],
         "ctas": [
@@ -10911,12 +11397,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1343,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1343 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -12354,12 +12840,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1406,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1406 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -18755,12 +19241,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1244,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1244 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -28828,6 +29314,2844 @@
         "imageHeight": 900,
         "flagged": true,
         "reason": "right-edge content reaches viewport boundary (1600 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bay-colony/",
+      "viewport": {
+        "name": "320x568",
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "route": "/markets/bay-colony/",
+        "viewport": {
+          "w": 500,
+          "h": 481
+        },
+        "documentWidth": 500,
+        "documentHeight": 11475,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 500,
+            "renderedHeight": 578.640625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 60.96875,
+            "renderedHeight": 28,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 113,
+            "w": 468,
+            "h": 514.640625,
+            "right": 484,
+            "bottom": 627.640625
+          },
+          "headingBox": {
+            "x": 38,
+            "y": 182.5,
+            "w": 299.71875,
+            "h": 60.140625,
+            "right": 337.71875,
+            "bottom": 242.640625
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 38,
+            "y": 150,
+            "w": 426,
+            "h": 16.5,
+            "right": 464,
+            "bottom": 166.5
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 38,
+            "y": 258.640625,
+            "w": 426,
+            "h": 224,
+            "right": 464,
+            "bottom": 482.640625
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 38,
+            "y": 506.640625,
+            "w": 426,
+            "h": 43.5,
+            "right": 464,
+            "bottom": 550.140625
+          },
+          "primaryCtaBelowFold": true,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 38,
+            "y": 562.140625,
+            "w": 426,
+            "h": 45.5,
+            "right": 464,
+            "bottom": 607.640625
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 436,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 484,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 207,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 320,
+        "imageHeight": 568,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (207 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bay-colony/",
+      "viewport": {
+        "name": "375x812",
+        "width": 375,
+        "height": 812
+      },
+      "result": {
+        "route": "/markets/bay-colony/",
+        "viewport": {
+          "w": 500,
+          "h": 725
+        },
+        "documentWidth": 500,
+        "documentHeight": 11475,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 500,
+            "renderedHeight": 578.640625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 60.96875,
+            "renderedHeight": 28,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 113,
+            "w": 468,
+            "h": 514.640625,
+            "right": 484,
+            "bottom": 627.640625
+          },
+          "headingBox": {
+            "x": 38,
+            "y": 182.5,
+            "w": 299.71875,
+            "h": 60.140625,
+            "right": 337.71875,
+            "bottom": 242.640625
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 38,
+            "y": 150,
+            "w": 426,
+            "h": 16.5,
+            "right": 464,
+            "bottom": 166.5
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 38,
+            "y": 258.640625,
+            "w": 426,
+            "h": 224,
+            "right": 464,
+            "bottom": 482.640625
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 38,
+            "y": 506.640625,
+            "w": 426,
+            "h": 43.5,
+            "right": 464,
+            "bottom": 550.140625
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 38,
+            "y": 562.140625,
+            "w": 426,
+            "h": 45.5,
+            "right": 464,
+            "bottom": 607.640625
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 436,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 484,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bay Colony",
+            "box": {
+              "x": 38,
+              "y": 506.640625,
+              "w": 426,
+              "h": 43.5,
+              "right": 464,
+              "bottom": 550.140625
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 38,
+              "y": 562.140625,
+              "w": 426,
+              "h": 45.5,
+              "right": 464,
+              "bottom": 607.640625
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 226,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 375,
+        "imageHeight": 812,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (226 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bay-colony/",
+      "viewport": {
+        "name": "768x1024",
+        "width": 768,
+        "height": 1024
+      },
+      "result": {
+        "route": "/markets/bay-colony/",
+        "viewport": {
+          "w": 768,
+          "h": 937
+        },
+        "documentWidth": 768,
+        "documentHeight": 8799,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 768,
+            "renderedHeight": 580.5625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 60.96875,
+            "renderedHeight": 28,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 129,
+            "w": 672,
+            "h": 484.5625,
+            "right": 688,
+            "bottom": 613.5625
+          },
+          "headingBox": {
+            "x": 42,
+            "y": 202,
+            "w": 576,
+            "h": 105.5625,
+            "right": 618,
+            "bottom": 307.5625
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 42,
+            "y": 170,
+            "w": 622,
+            "h": 16,
+            "right": 664,
+            "bottom": 186
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 42,
+            "y": 323.5625,
+            "w": 576,
+            "h": 196,
+            "right": 618,
+            "bottom": 519.5625
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 42,
+            "y": 544.5625,
+            "w": 264.734375,
+            "h": 44,
+            "right": 306.734375,
+            "bottom": 588.5625
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 322.734375,
+            "y": 543.5625,
+            "w": 156.859375,
+            "h": 46,
+            "right": 479.59375,
+            "bottom": 589.5625
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 704,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 752,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bay Colony",
+            "box": {
+              "x": 42,
+              "y": 544.5625,
+              "w": 264.734375,
+              "h": 44,
+              "right": 306.734375,
+              "bottom": 588.5625
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 322.734375,
+              "y": 543.5625,
+              "w": 156.859375,
+              "h": 46,
+              "right": 479.59375,
+              "bottom": 589.5625
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1869,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 768,
+        "imageHeight": 1024,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1869 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bay-colony/",
+      "viewport": {
+        "name": "1280x800",
+        "width": 1280,
+        "height": 800
+      },
+      "result": {
+        "route": "/markets/bay-colony/",
+        "viewport": {
+          "w": 1280,
+          "h": 713
+        },
+        "documentWidth": 1280,
+        "documentHeight": 7076,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 1280,
+            "renderedHeight": 579.625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 69.6875,
+            "renderedHeight": 32,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 32,
+            "y": 125,
+            "w": 672,
+            "h": 483.625,
+            "right": 704,
+            "bottom": 608.625
+          },
+          "headingBox": {
+            "x": 66,
+            "y": 206,
+            "w": 576,
+            "h": 116.625,
+            "right": 642,
+            "bottom": 322.625
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 66,
+            "y": 174,
+            "w": 606,
+            "h": 16,
+            "right": 672,
+            "bottom": 190
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 66,
+            "y": 338.625,
+            "w": 576,
+            "h": 168,
+            "right": 642,
+            "bottom": 506.625
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 66,
+            "y": 531.625,
+            "w": 272.734375,
+            "h": 44,
+            "right": 338.734375,
+            "bottom": 575.625
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 354.734375,
+            "y": 530.625,
+            "w": 164.859375,
+            "h": 46,
+            "right": 519.59375,
+            "bottom": 576.625
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bay Colony",
+            "box": {
+              "x": 66,
+              "y": 531.625,
+              "w": 272.734375,
+              "h": 44,
+              "right": 338.734375,
+              "bottom": 575.625
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 354.734375,
+              "y": 530.625,
+              "w": 164.859375,
+              "h": 46,
+              "right": 519.59375,
+              "bottom": 576.625
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1783,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 1280,
+        "imageHeight": 800,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1783 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bay-colony/",
+      "viewport": {
+        "name": "1440x900",
+        "width": 1440,
+        "height": 900
+      },
+      "result": {
+        "route": "/markets/bay-colony/",
+        "viewport": {
+          "w": 1440,
+          "h": 813
+        },
+        "documentWidth": 1440,
+        "documentHeight": 7076,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 1440,
+            "renderedHeight": 579.625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 69.6875,
+            "renderedHeight": 32,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 112,
+            "y": 125,
+            "w": 672,
+            "h": 483.625,
+            "right": 784,
+            "bottom": 608.625
+          },
+          "headingBox": {
+            "x": 146,
+            "y": 206,
+            "w": 576,
+            "h": 116.625,
+            "right": 722,
+            "bottom": 322.625
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 146,
+            "y": 174,
+            "w": 606,
+            "h": 16,
+            "right": 752,
+            "bottom": 190
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 146,
+            "y": 338.625,
+            "w": 576,
+            "h": 168,
+            "right": 722,
+            "bottom": 506.625
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 146,
+            "y": 531.625,
+            "w": 272.734375,
+            "h": 44,
+            "right": 418.734375,
+            "bottom": 575.625
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 434.734375,
+            "y": 530.625,
+            "w": 164.859375,
+            "h": 46,
+            "right": 599.59375,
+            "bottom": 576.625
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bay Colony",
+            "box": {
+              "x": 146,
+              "y": 531.625,
+              "w": 272.734375,
+              "h": 44,
+              "right": 418.734375,
+              "bottom": 575.625
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 434.734375,
+              "y": 530.625,
+              "w": 164.859375,
+              "h": 46,
+              "right": 599.59375,
+              "bottom": 576.625
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1863,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 1440,
+        "imageHeight": 900,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1863 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bermuda-riviera/",
+      "viewport": {
+        "name": "320x568",
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "route": "/markets/bermuda-riviera/",
+        "viewport": {
+          "w": 500,
+          "h": 481
+        },
+        "documentWidth": 500,
+        "documentHeight": 11463,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 500,
+            "renderedHeight": 542.6875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 60.96875,
+            "renderedHeight": 28,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 113,
+            "w": 468,
+            "h": 478.6875,
+            "right": 484,
+            "bottom": 591.6875
+          },
+          "headingBox": {
+            "x": 38,
+            "y": 182.5,
+            "w": 299.71875,
+            "h": 80.1875,
+            "right": 337.71875,
+            "bottom": 262.6875
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 38,
+            "y": 150,
+            "w": 426,
+            "h": 16.5,
+            "right": 464,
+            "bottom": 166.5
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 38,
+            "y": 278.6875,
+            "w": 426,
+            "h": 168,
+            "right": 464,
+            "bottom": 446.6875
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 38,
+            "y": 470.6875,
+            "w": 426,
+            "h": 43.5,
+            "right": 464,
+            "bottom": 514.1875
+          },
+          "primaryCtaBelowFold": true,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 38,
+            "y": 526.1875,
+            "w": 426,
+            "h": 45.5,
+            "right": 464,
+            "bottom": 571.6875
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 436,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 484,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bermuda Riviera",
+            "box": {
+              "x": 38,
+              "y": 470.6875,
+              "w": 426,
+              "h": 43.5,
+              "right": 464,
+              "bottom": 514.1875
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 198,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 320,
+        "imageHeight": 568,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (198 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bermuda-riviera/",
+      "viewport": {
+        "name": "375x812",
+        "width": 375,
+        "height": 812
+      },
+      "result": {
+        "route": "/markets/bermuda-riviera/",
+        "viewport": {
+          "w": 500,
+          "h": 725
+        },
+        "documentWidth": 500,
+        "documentHeight": 11463,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 500,
+            "renderedHeight": 542.6875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 60.96875,
+            "renderedHeight": 28,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 113,
+            "w": 468,
+            "h": 478.6875,
+            "right": 484,
+            "bottom": 591.6875
+          },
+          "headingBox": {
+            "x": 38,
+            "y": 182.5,
+            "w": 299.71875,
+            "h": 80.1875,
+            "right": 337.71875,
+            "bottom": 262.6875
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 38,
+            "y": 150,
+            "w": 426,
+            "h": 16.5,
+            "right": 464,
+            "bottom": 166.5
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 38,
+            "y": 278.6875,
+            "w": 426,
+            "h": 168,
+            "right": 464,
+            "bottom": 446.6875
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 38,
+            "y": 470.6875,
+            "w": 426,
+            "h": 43.5,
+            "right": 464,
+            "bottom": 514.1875
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 38,
+            "y": 526.1875,
+            "w": 426,
+            "h": 45.5,
+            "right": 464,
+            "bottom": 571.6875
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 436,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 484,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bermuda Riviera",
+            "box": {
+              "x": 38,
+              "y": 470.6875,
+              "w": 426,
+              "h": 43.5,
+              "right": 464,
+              "bottom": 514.1875
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 38,
+              "y": 526.1875,
+              "w": 426,
+              "h": 45.5,
+              "right": 464,
+              "bottom": 571.6875
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 188,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 375,
+        "imageHeight": 812,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (188 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bermuda-riviera/",
+      "viewport": {
+        "name": "768x1024",
+        "width": 768,
+        "height": 1024
+      },
+      "result": {
+        "route": "/markets/bermuda-riviera/",
+        "viewport": {
+          "w": 768,
+          "h": 937
+        },
+        "documentWidth": 768,
+        "documentHeight": 8716,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 768,
+            "renderedHeight": 524.5625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 60.96875,
+            "renderedHeight": 28,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 129,
+            "w": 672,
+            "h": 428.5625,
+            "right": 688,
+            "bottom": 557.5625
+          },
+          "headingBox": {
+            "x": 42,
+            "y": 202,
+            "w": 576,
+            "h": 105.5625,
+            "right": 618,
+            "bottom": 307.5625
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 42,
+            "y": 170,
+            "w": 622,
+            "h": 16,
+            "right": 664,
+            "bottom": 186
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 42,
+            "y": 323.5625,
+            "w": 576,
+            "h": 140,
+            "right": 618,
+            "bottom": 463.5625
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 42,
+            "y": 488.5625,
+            "w": 306.5,
+            "h": 44,
+            "right": 348.5,
+            "bottom": 532.5625
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 364.5,
+            "y": 487.5625,
+            "w": 156.859375,
+            "h": 46,
+            "right": 521.359375,
+            "bottom": 533.5625
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 704,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 752,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bermuda Riviera",
+            "box": {
+              "x": 42,
+              "y": 488.5625,
+              "w": 306.5,
+              "h": 44,
+              "right": 348.5,
+              "bottom": 532.5625
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 364.5,
+              "y": 487.5625,
+              "w": 156.859375,
+              "h": 46,
+              "right": 521.359375,
+              "bottom": 533.5625
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1647,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 768,
+        "imageHeight": 1024,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1647 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bermuda-riviera/",
+      "viewport": {
+        "name": "1280x800",
+        "width": 1280,
+        "height": 800
+      },
+      "result": {
+        "route": "/markets/bermuda-riviera/",
+        "viewport": {
+          "w": 1280,
+          "h": 713
+        },
+        "documentWidth": 1280,
+        "documentHeight": 7067,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 1280,
+            "renderedHeight": 570.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 69.6875,
+            "renderedHeight": 32,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 32,
+            "y": 125,
+            "w": 672,
+            "h": 474.5,
+            "right": 704,
+            "bottom": 599.5
+          },
+          "headingBox": {
+            "x": 66,
+            "y": 206,
+            "w": 576,
+            "h": 155.5,
+            "right": 642,
+            "bottom": 361.5
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 66,
+            "y": 174,
+            "w": 606,
+            "h": 16,
+            "right": 672,
+            "bottom": 190
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 66,
+            "y": 377.5,
+            "w": 576,
+            "h": 120,
+            "right": 642,
+            "bottom": 497.5
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 66,
+            "y": 522.5,
+            "w": 314.5,
+            "h": 44,
+            "right": 380.5,
+            "bottom": 566.5
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 396.5,
+            "y": 521.5,
+            "w": 164.859375,
+            "h": 46,
+            "right": 561.359375,
+            "bottom": 567.5
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bermuda Riviera",
+            "box": {
+              "x": 66,
+              "y": 522.5,
+              "w": 314.5,
+              "h": 44,
+              "right": 380.5,
+              "bottom": 566.5
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 396.5,
+              "y": 521.5,
+              "w": 164.859375,
+              "h": 46,
+              "right": 561.359375,
+              "bottom": 567.5
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1562,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 1280,
+        "imageHeight": 800,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1562 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/bermuda-riviera/",
+      "viewport": {
+        "name": "1440x900",
+        "width": 1440,
+        "height": 900
+      },
+      "result": {
+        "route": "/markets/bermuda-riviera/",
+        "viewport": {
+          "w": 1440,
+          "h": 813
+        },
+        "documentWidth": 1440,
+        "documentHeight": 7067,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 1440,
+            "renderedHeight": 570.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/coral-ridge.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/harbor-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/las-olas-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 257,
+            "naturalHeight": 118,
+            "renderedWidth": 69.6875,
+            "renderedHeight": 32,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 150,
+            "naturalHeight": 161,
+            "renderedWidth": 37.265625,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 112,
+            "y": 125,
+            "w": 672,
+            "h": 474.5,
+            "right": 784,
+            "bottom": 599.5
+          },
+          "headingBox": {
+            "x": 146,
+            "y": 206,
+            "w": 576,
+            "h": 155.5,
+            "right": 722,
+            "bottom": 361.5
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 146,
+            "y": 174,
+            "w": 606,
+            "h": 16,
+            "right": 752,
+            "bottom": 190
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 146,
+            "y": 377.5,
+            "w": 576,
+            "h": 120,
+            "right": 722,
+            "bottom": 497.5
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 146,
+            "y": 522.5,
+            "w": 314.5,
+            "h": 44,
+            "right": 460.5,
+            "bottom": 566.5
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 476.5,
+            "y": 521.5,
+            "w": 164.859375,
+            "h": 46,
+            "right": 641.359375,
+            "bottom": 567.5
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Bermuda Riviera",
+            "box": {
+              "x": 146,
+              "y": 522.5,
+              "w": 314.5,
+              "h": 44,
+              "right": 460.5,
+              "bottom": 566.5
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 476.5,
+              "y": 521.5,
+              "w": 164.859375,
+              "h": 46,
+              "right": 641.359375,
+              "bottom": 567.5
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1709,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 1440,
+        "imageHeight": 900,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1709 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },

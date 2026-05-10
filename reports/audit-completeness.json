@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T12:01:02.389Z",
+  "timestamp": "2026-05-10T13:06:57.518Z",
   "counts": {
     "PASS": 15,
     "WARN": 1,
@@ -12,11 +12,11 @@
       "category": "Sitemap coverage",
       "description": "Every public built route is in sitemap.xml",
       "status": "PASS",
-      "evidence": "25 built · 25 in sitemap · 0 missing",
+      "evidence": "27 built · 27 in sitemap · 0 missing",
       "details": {
         "missing": [],
-        "builtCount": 25,
-        "sitemapCount": 25
+        "builtCount": 27,
+        "sitemapCount": 27
       }
     },
     {
@@ -44,7 +44,7 @@
       "category": "SEO/AEO",
       "description": "Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image",
       "status": "PASS",
-      "evidence": "0 field issues across 25 pages",
+      "evidence": "0 field issues across 27 pages",
       "details": {
         "issues": []
       }
@@ -54,7 +54,7 @@
       "category": "SEO/AEO",
       "description": "Each core/legal/market page has unique <title>",
       "status": "PASS",
-      "evidence": "25 unique titles across 25 pages",
+      "evidence": "27 unique titles across 27 pages",
       "details": {
         "duplicates": []
       }
@@ -74,10 +74,10 @@
       "category": "Local Authority",
       "description": "Market pages have ≥200 visible words",
       "status": "PASS",
-      "evidence": "all 13 market pages exceed 200-word floor",
+      "evidence": "all 15 market pages exceed 200-word floor",
       "details": {
         "thinPages": [],
-        "marketsChecked": 13
+        "marketsChecked": 15
       }
     },
     {
@@ -95,10 +95,10 @@
       "category": "Design/Display Integrity",
       "description": "Core-page <img> tags have alt + width/height + no placeholder names (next/image fill mode exempted from dims check)",
       "status": "PASS",
-      "evidence": "no img-attribute issues (28 next/image fill-mode images correctly classified)",
+      "evidence": "no img-attribute issues (30 next/image fill-mode images correctly classified)",
       "details": {
         "issues": [],
-        "fillModeCount": 28
+        "fillModeCount": 30
       }
     },
     {
@@ -171,7 +171,7 @@
       "category": "Schema",
       "description": "All JSON-LD blocks parse and carry @type",
       "status": "PASS",
-      "evidence": "149 JSON-LD blocks across 25 pages · 0 broken",
+      "evidence": "161 JSON-LD blocks across 27 pages · 0 broken",
       "details": {
         "issues": []
       }

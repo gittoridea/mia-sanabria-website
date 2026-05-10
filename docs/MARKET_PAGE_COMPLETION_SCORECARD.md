@@ -1,8 +1,8 @@
 # Market Page Completion Scorecard — Mia Sanabria Realtor Site
 
-**Generated:** 2026-05-08 PM (post markets-V3 sprint)
+**Generated:** 2026-05-10 (Cycle 13 — Bay Colony + Bermuda Riviera added)
 **Live URL:** https://miasanabriarealtor.trueidea.com
-**Audit basis:** typecheck/lint/build green; audit:all 14 PASS / 2 WARN / 0 FAIL; 13 routes verified live with cache-bust 200 on each.
+**Audit basis:** typecheck/lint/build green; audit:all 15 PASS / 1 WARN / 0 FAIL; 15 market routes verified.
 
 Per-market verdict per axis. Verdicts use PASS / PARTIAL / FAIL / REVIEW. PARTIAL = present but a smaller-scope follow-up is documented.
 
@@ -22,9 +22,11 @@ Per-market verdict per axis. Verdicts use PASS / PARTIAL / FAIL / REVIEW. PARTIA
 | **las-olas-isles** | **Las Olas Isles** | Broward | A | ✅ NEW (Imagen) | ✅ |
 | **seven-isles** | **Seven Isles** | Broward | A | ✅ NEW (Imagen) | – |
 | **sea-ranch-lakes** | **Sea Ranch Lakes** | Broward | B | ✅ NEW (Imagen) | – |
-| **hillsboro-mile** | **Hillsboro Mile** | Broward | B | ✅ NEW (Imagen) | – |
+| **hillsboro-mile** | **Hillsboro Mile** | Broward | B | ✅ existing | – |
+| **bay-colony** | **Bay Colony** | Broward | A | ✅ NEW (Cycle 13 · nano-banana-pro) | ✅ |
+| **bermuda-riviera** | **Bermuda Riviera** | Broward | A | ✅ NEW (Cycle 13 · nano-banana-pro) | ✅ |
 
-Bold rows = added this cycle. ✅ Featured = appears in homepage FEATURED_MARKETS grid (6: fort-lauderdale, las-olas-isles, harbor-beach, victoria-park, boca-raton, delray-beach).
+Bold rows = added in their cycle. ✅ Featured = appears in homepage FEATURED_MARKETS grid (8 as of Cycle 13: fort-lauderdale, las-olas-isles, harbor-beach, victoria-park, boca-raton, delray-beach, bay-colony, bermuda-riviera).
 
 ## Per-market scorecard
 
@@ -42,7 +44,9 @@ Bold rows = added this cycle. ✅ Featured = appears in homepage FEATURED_MARKET
 | **las-olas-isles** | PASS | PASS | PASS | PASS | PASS | PASS | PASS | New this cycle |
 | **seven-isles** | PASS | PASS | PASS | PASS | PASS | PASS | PASS | New this cycle; intentionally narrower deepwater-yacht angle vs las-olas-isles |
 | **sea-ranch-lakes** | PASS | PASS | PASS | PASS | PASS | PASS | PASS | New this cycle |
-| **hillsboro-mile** | PASS | PASS | PASS | PASS | PASS | PASS | PASS | New this cycle |
+| **hillsboro-mile** | PASS | PASS | PASS | PASS | PASS | PASS | PASS | — |
+| **bay-colony** | PASS | PASS | PASS | PASS | PASS | PASS | PASS | New Cycle 13 — Eastern FtL gated waterfront enclave |
+| **bermuda-riviera** | PASS | PASS | PASS | PASS | PASS | PASS | PASS | New Cycle 13 — Eastern FtL waterfront with mid-century-modern heritage |
 
 Axis definitions:
 - **Content** — PASS = ≥150 words unique, locally specific, no fabricated facts; PARTIAL = generic/template-feeling

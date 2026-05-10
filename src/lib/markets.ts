@@ -985,6 +985,146 @@ export const MARKETS: ReadonlyArray<Market> = [
       { slug: "sea-ranch-lakes", label: "Sea Ranch Lakes" },
     ],
   },
+  {
+    slug: "bay-colony",
+    name: "Bay Colony",
+    tagline: "Eastern Fort Lauderdale's gated deepwater enclave off Bayview Drive.",
+    intro:
+      "Bay Colony is a gated single-entry waterfront community in eastern Fort Lauderdale, accessed off Bayview Drive between Sunrise Boulevard and Oakland Park Boulevard. The neighborhood is known for estate-scale homes on private deepwater canals, a controlled buyer pool, and a quiet residential character that distinguishes it from the more public Las Olas finger-isle markets.",
+    highlights: [
+      "Gated single-entry community accessed off Bayview Drive",
+      "Estate-scale waterfront residences on private deepwater canals",
+      "Intracoastal Waterway and ocean access via the inlet",
+      "Established mature landscaping, low-traffic interior streets",
+      "Small, controlled buyer pool — quiet, relationship-driven trades",
+    ],
+    lifestyle:
+      "Bay Colony is for clients who want privacy, deepwater dockage, and a small gated community where day-to-day life is residential rather than public-facing. Mia approaches the neighborhood through brief and relationship rather than open marketing — the buyer pool is small enough that the right introduction matters more than broad exposure.",
+    priceCharacter:
+      "Pricing reflects the gate, the dock, and the architectural era of the residence. Public estimates rarely model the controlled-access premium, the dock specifics, or the right comparable cohort.",
+    latitude: 26.1505,
+    longitude: -80.1078,
+    heroImage: "/markets/bay-colony.jpg",
+    localContext:
+      "Bay Colony sits in eastern Fort Lauderdale off Bayview Drive between Sunrise Boulevard and Oakland Park Boulevard, with a single guarded entry and private interior streets. Its deepwater canals route to the Intracoastal Waterway and onward to ocean access via the inlet. The combination of a security gate, deepwater dockage, and an estate-scale lot pattern is uncommon in Fort Lauderdale's eastern waterfront cohort.",
+    county: "Broward County",
+    aeoAnswer:
+      "Bay Colony is a gated waterfront community in eastern Fort Lauderdale, accessed via a single guarded entry off Bayview Drive between Sunrise Boulevard and Oakland Park Boulevard. The neighborhood is known for estate-scale single-family residences on private deepwater canals, a controlled buyer pool, and Intracoastal access onward to the ocean. Architectural pedigree, lot, and dock specifics drive pricing more than headline market trends, and transactions often happen through relationships before reaching public listings. The character is residential and quiet by design — the gate, the canal frontage, and the interior cul-de-sac pattern create a different daily-life feel than the more public finger-isle markets to the south.",
+    propertyTypes: [
+      "Estate-scale waterfront single-family residences on deepwater canals",
+      "Mediterranean Revival and contemporary architect-designed estates",
+      "Modern new-build estates on tear-down lots",
+      "Renovated estate homes with pool, dock, and outdoor living",
+      "Interior cul-de-sac residences inside the community gate",
+    ],
+    buyerGuidance:
+      "Bay Colony suits buyers who value privacy, deepwater dockage, and estate-scale residences inside a small gated community. The first conversation should establish whether the priority is the dock, the architectural era, the gate-and-privacy lifestyle, or all three. Diligence covers seawall and dock condition, lot orientation, route from the canal to the inlet, renovation history, and any community covenants. Buyers should expect a longer search horizon and treat the neighborhood as a relationship-driven market rather than a public-listing market — the right residence often surfaces through introduction rather than the open MLS.",
+    sellerGuidance:
+      "Sellers in Bay Colony benefit from quiet, relationship-led representation. Local representation matters because the buyer pool is small, well-known to active eastern Fort Lauderdale agents, and trades on architectural pedigree, lot, and dock specifics. Pre-list preparation often emphasizes professional architectural photography, a private comparable-sales brief drawn from the right cohort (gated peers and deepwater estates rather than the broader market), and a controlled introduction strategy that respects the gate. The residence should be positioned as a specific architectural and lifestyle proposition, not a broad luxury single-family.",
+    faqs: [
+      {
+        question: "Where exactly is Bay Colony in Fort Lauderdale?",
+        answer:
+          "Bay Colony sits in eastern Fort Lauderdale off Bayview Drive, between Sunrise Boulevard and Oakland Park Boulevard. Access is through a single guarded entry, with private interior streets and deepwater canal homes inside the gate. It is residential and quiet by design — daily life feels different from the more public finger-isle waterfront markets.",
+      },
+      {
+        question: "What kind of dockage do Bay Colony residences offer?",
+        answer:
+          "Most Bay Colony residences sit on deepwater canals that route to the Intracoastal Waterway and onward to the ocean via the inlet. Bridge clearance, water depth, dock length, and route to open water vary by lot. Buyers focused on a particular vessel should confirm dock and route specifics during diligence rather than rely on neighborhood reputation.",
+      },
+      {
+        question: "Is Bay Colony a public-listing market or a relationship market?",
+        answer:
+          "Many Bay Colony transactions involve private or relationship-driven introductions before, or instead of, broad public marketing. The gate and the small buyer pool make discreet representation common. A clearly written brief — buyer or seller — is what enables the right introduction at the right moment.",
+      },
+      {
+        question: "How does Bay Colony compare to Harbor Beach or Las Olas Isles?",
+        answer:
+          "Harbor Beach combines a guard gate with shared private-beach-club access, which Bay Colony does not include — Bay Colony's identity is gate plus deepwater canal rather than gate plus ocean-club. Las Olas Isles offers walkability to Las Olas Boulevard at the cost of a guard gate. Bay Colony sits between the two: gated and quiet, with deepwater canal access, but residential rather than walkable-urban.",
+      },
+      {
+        question: "How does Mia approach Bay Colony representation?",
+        answer:
+          "Quietly, by brief and relationship, with a comparable-sales packet drawn from gated and deepwater estate peers rather than the broader Fort Lauderdale waterfront. Whether buying or selling, the goal is a small set of qualified, prepared candidates rather than a public open market — which respects both the gate and the buyer profile this neighborhood attracts.",
+      },
+    ],
+    internalLinks: [
+      { slug: "harbor-beach", label: "Harbor Beach" },
+      { slug: "las-olas-isles", label: "Las Olas Isles" },
+      { slug: "coral-ridge", label: "Coral Ridge" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+    ],
+  },
+  {
+    slug: "bermuda-riviera",
+    name: "Bermuda Riviera",
+    tagline: "Eastern Fort Lauderdale waterfront with mid-century-modern architectural heritage.",
+    intro:
+      "Bermuda Riviera is a waterfront residential neighborhood in eastern Fort Lauderdale, east of Bayview Drive and west of the Intracoastal. It is known for deepwater canal homes, tree-lined streets, and mid-century-modern architectural heritage — quieter than Las Olas Isles and convenient to Galt Ocean Mile.",
+    highlights: [
+      "Waterfront residential neighborhood east of Bayview Drive",
+      "Deepwater canal homes with Intracoastal Waterway access",
+      "Mid-century-modern architectural heritage with renovated and tear-down options",
+      "Tree-lined interior streets and a quieter residential feel",
+      "Convenient to Galt Ocean Mile, Lauderdale-by-the-Sea, and the beach",
+    ],
+    lifestyle:
+      "Bermuda Riviera is for clients who want waterfront access with a quieter residential character than Las Olas Isles or Rio Vista. Mid-century-modern architectural fans find a deeper inventory here than in most Fort Lauderdale neighborhoods. Mia helps clients navigate the spectrum from preserved originals to full renovations to new builds on tear-down canal lots.",
+    priceCharacter:
+      "Pricing turns on canal frontage, dock specifics, and the architectural state of the residence — preserved mid-century, renovated, or new build. A property-specific review beats a broad neighborhood average every time.",
+    latitude: 26.1755,
+    longitude: -80.1085,
+    heroImage: "/markets/bermuda-riviera.jpg",
+    localContext:
+      "Bermuda Riviera sits in eastern Fort Lauderdale, east of Bayview Drive and west of the Intracoastal Waterway, with deepwater canal homes routing to the Intracoastal and onward to ocean access. The neighborhood is convenient to Galt Ocean Mile's beach corridor, Lauderdale-by-the-Sea's restaurants and pier, and Coral Ridge to the south. It is one of Fort Lauderdale's better surviving pockets of mid-century-modern residential architecture.",
+    county: "Broward County",
+    aeoAnswer:
+      "Bermuda Riviera is a waterfront residential neighborhood in eastern Fort Lauderdale, east of Bayview Drive between the Intracoastal Waterway and the Coral Ridge corridor. The neighborhood is known for deepwater canal homes with Intracoastal access, tree-lined interior streets, and a notable concentration of mid-century-modern architecture — preserved originals, renovations, and new builds on tear-down canal lots all trade actively. The residential feel is quieter than the more public Las Olas Isles or Rio Vista markets, and the location is convenient to Galt Ocean Mile's beach corridor and Lauderdale-by-the-Sea. Architectural era, canal frontage, and dockage drive pricing more than broad waterfront averages.",
+    propertyTypes: [
+      "Mid-century-modern waterfront single-family residences",
+      "Renovated deepwater canal homes with private dockage",
+      "Contemporary new-build estates on tear-down canal lots",
+      "Tree-lined interior streets with non-waterfront single-family",
+      "Estate-scale waterfront residences with pool, dock, and outdoor living",
+    ],
+    buyerGuidance:
+      "Bermuda Riviera suits buyers who want waterfront access with a residential character quieter than the public finger-isle markets, plus the option of architectural pedigree from the mid-century-modern stock. The first decision is canal selection — dock length, water depth, and Intracoastal route vary by block. Diligence on waterfront homes covers seawall condition, dock pilings, lot orientation, and renovation depth. Buyers should also weigh whether the search needs a preserved original, a renovated residence, or a tear-down lot for new construction — Bermuda Riviera trades in all three categories, and the briefs differ.",
+    sellerGuidance:
+      "Sellers in Bermuda Riviera should lead with the canal and the architectural story — deepwater dockage plus mid-century-modern heritage is a distinctive pitch in eastern Fort Lauderdale. Local representation matters because pricing turns on dock, lot, and architectural state in ways that broad public estimates miss. Pre-list preparation typically includes dock and seawall confirmation, light staging tuned to a luxury single-family buyer, and a comparable-sales brief drawn narrowly from canal-similar trades and architectural peers rather than the neighborhood as a whole.",
+    faqs: [
+      {
+        question: "Where is Bermuda Riviera within Fort Lauderdale?",
+        answer:
+          "Bermuda Riviera sits in eastern Fort Lauderdale, east of Bayview Drive and west of the Intracoastal Waterway, north of the Coral Ridge corridor. The neighborhood is convenient to Galt Ocean Mile's beach corridor and Lauderdale-by-the-Sea, with deepwater canal homes routing to the Intracoastal and onward to the ocean.",
+      },
+      {
+        question: "What architectural styles dominate Bermuda Riviera?",
+        answer:
+          "Bermuda Riviera is one of Fort Lauderdale's better surviving pockets of mid-century-modern residential architecture. The stock ranges from preserved originals to studs-out renovations to contemporary new builds on tear-down canal lots. Buyers comparing residences should evaluate the architectural era as a primary factor and budget renovation accordingly.",
+      },
+      {
+        question: "How does Bermuda Riviera compare to Coral Ridge or Las Olas Isles?",
+        answer:
+          "Coral Ridge sits to the south and centers on the country-club corridor with a mix of waterfront and non-waterfront residences. Las Olas Isles offers walkability to Las Olas Boulevard and a more public-isles character. Bermuda Riviera is quieter and more residential than Las Olas Isles, with a stronger mid-century-modern architectural identity than most Fort Lauderdale waterfront neighborhoods.",
+      },
+      {
+        question: "Is dockage similar to Las Olas Isles or Rio Vista?",
+        answer:
+          "Bermuda Riviera's deepwater canals route to the Intracoastal Waterway and onward to ocean access. Bridge clearance, water depth, dock length, and route to open water vary by canal — buyers focused on a particular vessel should confirm route specifics during diligence rather than rely on neighborhood reputation. Yacht-capable docks are present but not uniform across every block.",
+      },
+      {
+        question: "How does Mia approach Bermuda Riviera representation?",
+        answer:
+          "Property by property — with attention to dock, canal route, and architectural state. Buyers receive a brief tuned to mid-century-modern, renovated, or new-build inventory depending on priorities. Sellers receive a comparable-sales review drawn from the right cohort rather than the whole neighborhood, plus a presentation strategy that leads with the canal and the architectural story.",
+      },
+    ],
+    internalLinks: [
+      { slug: "coral-ridge", label: "Coral Ridge" },
+      { slug: "harbor-beach", label: "Harbor Beach" },
+      { slug: "las-olas-isles", label: "Las Olas Isles" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+    ],
+  },
 ];
 
 export function getMarket(slug: string): Market | undefined {

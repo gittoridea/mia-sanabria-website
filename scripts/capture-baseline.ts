@@ -56,6 +56,8 @@ const ROUTES_DEFAULT = [
   "/markets/boca-raton/",
   "/markets/delray-beach/",
   "/markets/palm-beach/",
+  "/markets/bay-colony/",
+  "/markets/bermuda-riviera/",
   "/insights/",
   "/privacy/",
   "/terms/",

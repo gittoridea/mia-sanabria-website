@@ -50,7 +50,7 @@ const CORE_PAGES = [
 
 const LEGAL_PAGES = ["/privacy/", "/terms/", "/dmca/", "/accessibility/"] as const;
 
-// Updated 2026-05-08 cycle 3 (Team F): list now matches all 13 market routes.
+// Updated 2026-05-10 cycle 13: list now matches all 15 market routes (added bay-colony + bermuda-riviera).
 // Future improvement: derive dynamically from src/lib/markets.ts at audit time.
 const MARKET_PAGES = [
   "/markets/",
@@ -67,6 +67,8 @@ const MARKET_PAGES = [
   "/markets/seven-isles/",
   "/markets/sea-ranch-lakes/",
   "/markets/hillsboro-mile/",
+  "/markets/bay-colony/",
+  "/markets/bermuda-riviera/",
 ] as const;
 
 const SAMPLED_FOOTER_PAGES = [

@@ -96,6 +96,8 @@ const REQUIRED_ROUTES: ReadonlyArray<string> = [
   "/markets/boca-raton/",
   "/markets/delray-beach/",
   "/markets/palm-beach/",
+  "/markets/bay-colony/",
+  "/markets/bermuda-riviera/",
   "/insights/",
   "/privacy/",
   "/terms/",
