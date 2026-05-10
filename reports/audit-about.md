@@ -1,13 +1,13 @@
 # Audit About Report
-**Generated:** 2026-05-10T20:58:59.763Z
+**Generated:** 2026-05-10T21:16:12.156Z
 **Summary:** 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `about.forbidden.deliberately_small_client_list` | ✅ | About page does not contain forbidden phrase "deliberately small client list" | phrase absent |
-| `about.forbidden.global_distribution` | ✅ | About page does not contain forbidden phrase "global distribution" | phrase absent |
-| `about.forbidden.Klein_Morgan` | ✅ | About page does not contain forbidden phrase "Klein Morgan" | phrase absent |
-| `about.forbidden.sunandbreeze` | ✅ | About page does not contain forbidden phrase "sunandbreeze" | phrase absent |
+| `about.forbidden.deliberately_small_client_list` | ✅ | Sitewide service pages do not contain forbidden phrase "deliberately small client list" | phrase absent across 5 routes |
+| `about.forbidden.global_distribution` | ✅ | Sitewide service pages do not contain forbidden phrase "global distribution" | phrase absent across 5 routes |
+| `about.forbidden.Klein_Morgan` | ✅ | Sitewide service pages do not contain forbidden phrase "Klein Morgan" | phrase absent across 5 routes |
+| `about.forbidden.sunandbreeze` | ✅ | Sitewide service pages do not contain forbidden phrase "sunandbreeze" | phrase absent across 5 routes |
 | `about.serviceArea.canonical` | ✅ | About page renders the three canonical service-area entries | Eastern Fort Lauderdale · Eastern Boca Raton · Eastern Delray Beach |
 | `about.no.designations` | ✅ | No unverified NAR designation names rendered | pattern not found |
 | `about.no.yearsLicensed` | ✅ | No unverified 'practicing since YYYY' rendered (experience.since is null) | pattern not found |

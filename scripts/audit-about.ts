@@ -3,13 +3,17 @@
  * audit-about — Cycle 16 sentinel for the About page accuracy contract.
  *
  * Enforces:
- *  - No occurrence of "deliberately small client list" in rendered HTML.
- *  - No occurrence of "global distribution" in rendered HTML.
- *  - Canonical service area text from PUBLIC_FACT_LEDGER §1 is rendered.
+ *  - No occurrence of "deliberately small client list" in rendered HTML — across
+ *    About AND all service pages (buyers, sellers, valuation, contact). This is
+ *    a sitewide overclaim discipline; the audit name is preserved for legacy
+ *    chaining, but the scope expanded in C16 after Forge VERIFY surfaced
+ *    matching phrases on adjacent service pages.
+ *  - No occurrence of "global distribution" sitewide.
+ *  - Canonical service area text from PUBLIC_FACT_LEDGER §1 rendered on About.
  *  - No unverified credentials rendered (designations, languages, awards,
- *    practicing-since, MLS membership).
+ *    practicing-since, MLS membership) on About.
  *  - License # renders only when MIA.unverified.licenseNumber is truthy
- *    AND only on Terms + Footer (not on About).
+ *    AND only on Terms + Footer (not in About body).
  */
 import { readFile, mkdir, writeFile, stat } from "node:fs/promises";
 import { join } from "node:path";
@@ -74,23 +78,41 @@ async function run() {
     return;
   }
 
-  // Forbidden phrases
+  // Forbidden phrases — sitewide sweep across About + service pages.
+  const SITEWIDE_SCAN_ROUTES = [
+    "/about/",
+    "/buyers/",
+    "/sellers/",
+    "/valuation/",
+    "/contact/",
+  ] as const;
+
   for (const { phrase, reason } of FORBIDDEN_PHRASES) {
-    if (html.toLowerCase().includes(phrase.toLowerCase())) {
+    const hits: Array<{ route: string }> = [];
+    for (const route of SITEWIDE_SCAN_ROUTES) {
+      const path = join(OUT_DIR, route.replace(/^\//, "").replace(/\/$/, ""), "index.html");
+      try {
+        const pageHtml = await readFile(path, "utf8");
+        if (pageHtml.toLowerCase().includes(phrase.toLowerCase())) hits.push({ route });
+      } catch {
+        // Page not built; ignore.
+      }
+    }
+    if (hits.length === 0) {
       record({
         id: `about.forbidden.${phrase.replace(/\s+/g, "_")}`,
         category: "Accuracy",
-        description: `About page must not contain forbidden phrase "${phrase}"`,
-        status: "FAIL",
-        evidence: `${reason}; found in /about/index.html`,
+        description: `Sitewide service pages do not contain forbidden phrase "${phrase}"`,
+        status: "PASS",
+        evidence: `phrase absent across ${SITEWIDE_SCAN_ROUTES.length} routes`,
       });
     } else {
       record({
         id: `about.forbidden.${phrase.replace(/\s+/g, "_")}`,
         category: "Accuracy",
-        description: `About page does not contain forbidden phrase "${phrase}"`,
-        status: "PASS",
-        evidence: "phrase absent",
+        description: `Sitewide service pages must not contain forbidden phrase "${phrase}"`,
+        status: "FAIL",
+        evidence: `${reason}; found on: ${hits.map((h) => h.route).join(", ")}`,
       });
     }
   }

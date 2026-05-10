@@ -37,7 +37,7 @@ const SELLER_PROCESS = [
   },
   {
     heading: "Editorial marketing",
-    body: "Cinematic photography, video, copywriting, and global distribution through real estate portals — alongside discreet private brokerage outreach to qualified buyers.",
+    body: "Cinematic photography, video, and copywriting paired with multi-channel listing syndication — alongside discreet private brokerage outreach to qualified buyers.",
   },
   {
     heading: "Closing coordination",
@@ -54,7 +54,7 @@ const SELLER_FAQ = [
   {
     question: "What is the typical commission structure?",
     answer:
-      "Commission is set in writing at engagement and reflects the property, the marketing scope, and the cooperating brokerage commission. Mia's listings receive editorial-tier photography, video, and global distribution as part of the engagement.",
+      "Commission is set in writing at engagement and reflects the property, the marketing scope, and the cooperating brokerage commission. Mia's listings receive editorial-tier photography, video, and multi-channel syndication as part of the engagement.",
   },
   {
     question: "How long does a higher-priced sale take?",

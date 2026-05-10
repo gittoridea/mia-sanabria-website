@@ -112,7 +112,7 @@ export default function BuyersPage() {
       <Hero
         eyebrow="For Buyers"
         heading="Private buyer representation across Southeast Florida."
-        sub="Mia represents buyers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach with a deliberately small client list — every brief written before the first showing, every closing attended in person."
+        sub="Mia represents buyers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach — every brief written before the first showing, every closing attended in person."
         ctaPrimary={{ href: "/contact/?intent=buyer", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
         background="image"

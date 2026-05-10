@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T20:58:59.763Z",
+  "generatedAt": "2026-05-10T21:16:12.155Z",
   "summary": {
     "pass": 12,
     "warn": 0,
@@ -10,30 +10,30 @@
     {
       "id": "about.forbidden.deliberately_small_client_list",
       "category": "Accuracy",
-      "description": "About page does not contain forbidden phrase \"deliberately small client list\"",
+      "description": "Sitewide service pages do not contain forbidden phrase \"deliberately small client list\"",
       "status": "PASS",
-      "evidence": "phrase absent"
+      "evidence": "phrase absent across 5 routes"
     },
     {
       "id": "about.forbidden.global_distribution",
       "category": "Accuracy",
-      "description": "About page does not contain forbidden phrase \"global distribution\"",
+      "description": "Sitewide service pages do not contain forbidden phrase \"global distribution\"",
       "status": "PASS",
-      "evidence": "phrase absent"
+      "evidence": "phrase absent across 5 routes"
     },
     {
       "id": "about.forbidden.Klein_Morgan",
       "category": "Accuracy",
-      "description": "About page does not contain forbidden phrase \"Klein Morgan\"",
+      "description": "Sitewide service pages do not contain forbidden phrase \"Klein Morgan\"",
       "status": "PASS",
-      "evidence": "phrase absent"
+      "evidence": "phrase absent across 5 routes"
     },
     {
       "id": "about.forbidden.sunandbreeze",
       "category": "Accuracy",
-      "description": "About page does not contain forbidden phrase \"sunandbreeze\"",
+      "description": "Sitewide service pages do not contain forbidden phrase \"sunandbreeze\"",
       "status": "PASS",
-      "evidence": "phrase absent"
+      "evidence": "phrase absent across 5 routes"
     },
     {
       "id": "about.serviceArea.canonical",
