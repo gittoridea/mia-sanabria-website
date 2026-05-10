@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-10T21:11:51.849Z",
+  "generated": "2026-05-10T21:22:56.399Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -3418,12 +3418,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 192,
+        "rightEdgeContentPx": 156,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (192 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (156 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -3665,12 +3665,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 193,
+        "rightEdgeContentPx": 187,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (193 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (187 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -3755,56 +3755,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 148.3125,
+            "y": 162.3125,
             "w": 672,
-            "h": 365.375,
+            "h": 337.375,
             "right": 688,
-            "bottom": 513.6875
+            "bottom": 499.6875
           },
           "headingBox": {
             "x": 42,
-            "y": 221.3125,
+            "y": 235.3125,
             "w": 576,
             "h": 70.375,
             "right": 618,
-            "bottom": 291.6875
+            "bottom": 305.6875
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 42,
-            "y": 189.3125,
+            "y": 203.3125,
             "w": 622,
             "h": 16,
             "right": 664,
-            "bottom": 205.3125
+            "bottom": 219.3125
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 42,
-            "y": 307.6875,
+            "y": 321.6875,
             "w": 576,
-            "h": 112,
+            "h": 84,
             "right": 618,
-            "bottom": 419.6875
+            "bottom": 405.6875
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 42,
-            "y": 444.6875,
+            "y": 430.6875,
             "w": 290.125,
             "h": 44,
             "right": 332.125,
-            "bottom": 488.6875
+            "bottom": 474.6875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 348.125,
-            "y": 443.6875,
+            "y": 429.6875,
             "w": 180,
             "h": 46,
             "right": 528.125,
-            "bottom": 489.6875
+            "bottom": 475.6875
           },
           "secondaryCtaTailClips": false
         },
@@ -3831,11 +3831,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 42,
-              "y": 444.6875,
+              "y": 430.6875,
               "w": 290.125,
               "h": 44,
               "right": 332.125,
-              "bottom": 488.6875
+              "bottom": 474.6875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -3847,11 +3847,11 @@
             "text": "Walk the Markets",
             "box": {
               "x": 348.125,
-              "y": 443.6875,
+              "y": 429.6875,
               "w": 180,
               "h": 46,
               "right": 528.125,
-              "bottom": 489.6875
+              "bottom": 475.6875
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -4002,56 +4002,56 @@
         "hero": {
           "panelBox": {
             "x": 32,
-            "y": 131.1875,
+            "y": 143.1875,
             "w": 672,
-            "h": 411.625,
+            "h": 387.625,
             "right": 704,
-            "bottom": 542.8125
+            "bottom": 530.8125
           },
           "headingBox": {
             "x": 66,
-            "y": 212.1875,
+            "y": 224.1875,
             "w": 576,
             "h": 116.625,
             "right": 642,
-            "bottom": 328.8125
+            "bottom": 340.8125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 66,
-            "y": 180.1875,
+            "y": 192.1875,
             "w": 606,
             "h": 16,
             "right": 672,
-            "bottom": 196.1875
+            "bottom": 208.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 66,
-            "y": 344.8125,
+            "y": 356.8125,
             "w": 576,
-            "h": 96,
+            "h": 72,
             "right": 642,
-            "bottom": 440.8125
+            "bottom": 428.8125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 66,
-            "y": 465.8125,
+            "y": 453.8125,
             "w": 298.125,
             "h": 44,
             "right": 364.125,
-            "bottom": 509.8125
+            "bottom": 497.8125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 380.125,
-            "y": 464.8125,
+            "y": 452.8125,
             "w": 188,
             "h": 46,
             "right": 568.125,
-            "bottom": 510.8125
+            "bottom": 498.8125
           },
           "secondaryCtaTailClips": false
         },
@@ -4062,11 +4062,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 66,
-              "y": 465.8125,
+              "y": 453.8125,
               "w": 298.125,
               "h": 44,
               "right": 364.125,
-              "bottom": 509.8125
+              "bottom": 497.8125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -4078,11 +4078,11 @@
             "text": "Walk the Markets",
             "box": {
               "x": 380.125,
-              "y": 464.8125,
+              "y": 452.8125,
               "w": 188,
               "h": 46,
               "right": 568.125,
-              "bottom": 510.8125
+              "bottom": 498.8125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -4233,56 +4233,56 @@
         "hero": {
           "panelBox": {
             "x": 112,
-            "y": 131.1875,
+            "y": 143.1875,
             "w": 672,
-            "h": 411.625,
+            "h": 387.625,
             "right": 784,
-            "bottom": 542.8125
+            "bottom": 530.8125
           },
           "headingBox": {
             "x": 146,
-            "y": 212.1875,
+            "y": 224.1875,
             "w": 576,
             "h": 116.625,
             "right": 722,
-            "bottom": 328.8125
+            "bottom": 340.8125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 146,
-            "y": 180.1875,
+            "y": 192.1875,
             "w": 606,
             "h": 16,
             "right": 752,
-            "bottom": 196.1875
+            "bottom": 208.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 146,
-            "y": 344.8125,
+            "y": 356.8125,
             "w": 576,
-            "h": 96,
+            "h": 72,
             "right": 722,
-            "bottom": 440.8125
+            "bottom": 428.8125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 146,
-            "y": 465.8125,
+            "y": 453.8125,
             "w": 298.125,
             "h": 44,
             "right": 444.125,
-            "bottom": 509.8125
+            "bottom": 497.8125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 460.125,
-            "y": 464.8125,
+            "y": 452.8125,
             "w": 188,
             "h": 46,
             "right": 648.125,
-            "bottom": 510.8125
+            "bottom": 498.8125
           },
           "secondaryCtaTailClips": false
         },
@@ -4293,11 +4293,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 146,
-              "y": 465.8125,
+              "y": 453.8125,
               "w": 298.125,
               "h": 44,
               "right": 444.125,
-              "bottom": 509.8125
+              "bottom": 497.8125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -4309,11 +4309,11 @@
             "text": "Walk the Markets",
             "box": {
               "x": 460.125,
-              "y": 464.8125,
+              "y": 452.8125,
               "w": 188,
               "h": 46,
               "right": 648.125,
-              "bottom": 510.8125
+              "bottom": 498.8125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -14208,12 +14208,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1247,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1247 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -18160,12 +18160,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1174,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1174 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -26570,12 +26570,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1201,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1201 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
