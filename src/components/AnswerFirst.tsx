@@ -45,7 +45,7 @@ export function AnswerFirst({
         </div>
         <h2
           id={headingId}
-          className="mt-3 font-display text-2xl text-navy-800 sm:text-3xl [text-wrap:balance]"
+          className="mt-3 font-display text-xl text-navy-800 [text-wrap:balance] [overflow-wrap:anywhere] min-[360px]:text-[22px] min-[375px]:text-2xl sm:text-3xl"
         >
           {question}
         </h2>

@@ -113,31 +113,41 @@ export function SiteFooter() {
 
       <div className="border-t border-cream-300/15">
         <div
-          className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 px-4 py-8 text-center lg:flex-row lg:items-center lg:justify-center lg:gap-10 lg:px-8"
+          className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-4 py-10 text-center lg:flex-row lg:items-center lg:justify-center lg:gap-14 lg:px-8"
           aria-label="Industry affiliations"
         >
+          {/* Cycle 11 — uniform monochrome white-on-transparent treatment.
+              The three trust-mark assets (LPT white-on-transparent, REALTOR®+MLS dark-on-transparent,
+              EHO black-on-transparent) presented three different visibility outcomes on the navy footer
+              when rendered as-is. Applying `brightness-0 invert opacity-90` normalizes all three to
+              discreet white silhouettes — compliance-permitted monochrome variants for NAR REALTOR®
+              + HUD EHO marks, brand-aligned for LPT (canonical white-on-navy). LPT's prior
+              `bg-white/95 p-1` tile rendered the white-on-transparent logo invisible; tile removed.
+              Heights balanced by visual weight: square LPT + portrait EHO at h-10; the wide 2.18:1
+              REALTOR®+MLS combined mark at h-7 lg:h-8 keeps the row visually balanced. Card 5 (asset
+              swap) remains principal-decision-gated in PRINCIPAL_DECISION_REGISTER; no semantic change. */}
           <FooterTrustMark
             src="/logos/lpt-realty.png"
-            alt="LPT Realty"
-            width={48}
-            height={48}
-            imageClassName="h-10 w-10 rounded-sm bg-white/95 p-1"
+            alt=""
+            width={40}
+            height={40}
+            imageClassName="h-10 w-10 brightness-0 invert opacity-90"
             label="LPT Realty"
           />
           <FooterTrustMark
             src="/logos/realtor-r.png"
-            alt="REALTOR®"
+            alt=""
             width={64}
             height={30}
-            imageClassName="h-7 w-auto"
+            imageClassName="h-7 w-auto brightness-0 invert opacity-90 lg:h-8"
             label="REALTOR®"
           />
           <FooterTrustMark
             src="/logos/equal-housing.png"
-            alt="Equal Housing Opportunity"
-            width={32}
-            height={36}
-            imageClassName="h-9 w-auto"
+            alt=""
+            width={36}
+            height={40}
+            imageClassName="h-10 w-auto brightness-0 invert opacity-90"
             label="Equal Housing Opportunity"
           />
         </div>

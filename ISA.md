@@ -2,13 +2,13 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: complete
-progress: 449/449
+phase: build
+progress: 449/540
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-10T00:50:00Z
+updated: 2026-05-10T03:00:00Z
 algorithm_version: 6.4.0
-active_mission: 2026-05-09-cycle-10-rendered-visual-qa
+active_mission: 2026-05-09-cycle-11-final-mile-rendered-design-qa
 ---
 
 # Mia Sanabria Realtor Site — ISA
@@ -1527,3 +1527,149 @@ ISCs verified or state-probed cycle 9 (Cycle 9 ISC IDs at the end of file; note 
 - **2026-05-09 cycle-10 E5 Interview-workflow waiver:** Algorithm v6.4.0 E5 requires an active Interview workflow before BUILD. Project ISA already carries 394 cumulative ISCs across 9 prior cycles + a fully-populated 12-section structure; running Interview now would re-derive substrate that already exists in 91k tokens of ISA + 7 closeout handoffs read in OBSERVE. Waiving with explicit Decision entry: the Interview output's "what's the ideal state" function is satisfied by the existing ISA Goal/Vision/Constraints/Out-of-Scope; the Interview output's "what gaps remain" function is satisfied by Cycle 9's Section 17 + market-image-recovery Section 8. Cycle 10 Plan derives directly from those. Honest scope vs. cost-of-ceremony.
 - **2026-05-09 cycle-10 Cato re-armed:** Cycle 9 tombstoned Cato (user designated GPT-5.5 as authority, time budget). Cycle 10 keeps Cato as background read-only validation per Algorithm v6.4.0 R8 + Cycle 9 §17.3 deferred. Schema-enforced verdict pattern from R9 errata.
 
+
+---
+
+## Mission 2026-05-09 — cycle-11 final-mile rendered design QA + footer/trust-strip polish + remaining gap closure
+
+**Trigger:** Principal review noted footer logos / trust-strip looks inconsistent. Site otherwise reads well — desktop hero readable, all markets have images, overall site looks good. Cycle 11 aims to push from "good staging site" toward "world-class luxury realtor production surface" via final-mile rendered visual QA + footer trust-strip polish + true mobile instrumentation closure (F6 from Cycle 10) + remaining gap closure.
+
+**Scope (in):** footer trust-strip uniform monochrome treatment, true 320/375 mobile-truth instrumentation, full-page rendered visual sweep across 22+ routes × 6 viewports, GPT-5.5 highest-effort acceptance gates (predeploy + live), Cato cross-vendor audit (Algorithm v6.4.0 R8 mandatory at E5 per next-session-trigger limit of 2 tombstones), Cycle 11 lessons folded into WebsiteProductionLoop skill v0.3.3.
+
+**Scope (out):** GHL wiring, TCPA mechanics, license rendering, REALTOR®/MLS legal decisions beyond visual treatment (Cards 1, 2, 4, 5 in PDR remain principal-decision-gated), Spanish hreflang, lead magnet, DNS, .com production, Cloudflare, Payload/Postgres install, CMS migration, legal copy rewrite, hero copy STRING changes (locked Card-3 heading stays), new colors / fonts / tokens.
+
+**Effort tier override:** classifier returned `MODE: ALGORITHM | TIER: E3` (multi-step rendered QA). User explicitly invoked `/effort max` at session start, which is an explicit override per Algorithm v6.4.0 override hierarchy item 1. Honoring **E5 (Comprehensive)**.
+
+**Specialist-Prereq Probe (2026-05-10T02:23Z):** Forge ✅ (`/home/torrey/.local/bin/codex` + oauth), Cato ✅ (same + read-only sandbox), Anvil ✗ (binary not found at standard paths → fallback Forge), PerplexityResearcher ✅ (`OPENROUTER_API_KEY`). Decision: keep Forge (foreground for any audit-script substantial code per `feedback_forge_race_scope_drift.md`) and Cato (post-fix VERIFY).
+
+#### Phase 0 — Recovery + clean-state verification
+- [x] ISC-450: Working tree clean; HEAD `98af2a6` == origin/main; live ETag `dielten0x4ow2ozi` captured.
+- [x] ISC-451: Cycle 10 reports + skill v0.3.2 + audit reports all present.
+- [x] ISC-452: Audit chain baseline run (stale/schema/links/seo/images/brand/hero-contrast/rendered/completeness) — all clean modulo carry-forward 2 WARN.
+- [x] ISC-453: `audit:hero-contrast` first-run flake at `/markets/fort-lauderdale/` 375×812 (glyph 2.47); retest 95/0/0 confirmed flake. Logged for skill v0.3.3 candidate.
+- [x] ISC-454: `docs/CYCLE_11_RECOVERY_AND_CLEAN_STATE.md` written.
+
+#### Phase 1 — Model + concurrency probe
+- [x] ISC-455: `gpt-5.5` `model_reasoning_effort=max` rejected (`unknown variant 'max'`) — same Cycle 10 finding.
+- [x] ISC-456: `gpt-5.5` `model_reasoning_effort=xhigh` accepted — PROBE_OK 7046 tokens ~10s.
+- [x] ISC-457: `gpt-5.3-codex-spark` `xhigh` accepted — SPARK_OK 9120 tokens ~12s.
+- [x] ISC-458: Chrome DevTools listener opens cleanly via `--remote-debugging-port=0` (port 45721 LISTEN); `--screenshot --window-size=320,568` produces 320×568 PNG (1664B blank) — F6 closure path executable.
+- [x] ISC-459: `docs/CYCLE_11_MODEL_USAGE_AND_PROCESS_PLAN.md` written.
+
+#### Phase 2 — True mobile rendered QA instrumentation (F6 closure)
+- [x] ISC-460: `isViewportHonest()` helper added to `scripts/audit-rendered-visual.ts` (±5 px tolerance vs `window.innerWidth`).
+- [x] ISC-461: `viewportMismatch()` helper added.
+- [x] ISC-462: `rendered.mobile.noHorizontalOverflow` modified to SKIP probes whose actual viewport ≠ requested viewport; honest probe count + skipped count both reported in evidence.
+- [x] ISC-463: NEW `rendered.probe.viewportSanity` finding (#15) — F6 instrumentation gate. WARN at non-zero mismatched count.
+- [x] ISC-464: `bun run typecheck` exit 0 post-patch.
+- [x] ISC-465: `bun run lint` exit 0 post-patch.
+- [x] ISC-466: `bun run audit:rendered` post-patch reports 14 PASS · 1 WARN · 0 FAIL · 0 SKIP — viewport sanity finding is honest at 75/125 (320/375 dishonest, 768/1280/1440 honest).
+- [x] ISC-467: `docs/CYCLE_11_TRUE_MOBILE_INSTRUMENTATION_REPORT.md` written.
+
+#### Phase 3 — Rendered visual baseline (BEFORE)
+- [x] ISC-468: 130 PNGs at 5 viewports (320/375/768/1280/1440) × 26 routes captured to `/tmp/mia-cycle11-before/`; ~80s; failures 0.
+- [x] ISC-469: 26 PNGs at 414×896 captured to same dir; 23s; failures 0.
+- [x] ISC-470: `_capture-summary.json` confirms 26 ok / 0 fail per batch.
+- [x] ISC-471: Spot-check operator review: above-fold home/markets/about looks clean at 768+ desktop; 320 hero potentially clips eyebrow/sub/CTA tail (D5 in baseline doc); 375 H2 below hero potential right-clip on line 2 (D6).
+- [x] ISC-472: `docs/CYCLE_11_RENDERED_VISUAL_BASELINE.md` written with defect catalog D1–D8.
+
+#### Phase 4 — Footer logo / trust-strip deep audit
+- [x] ISC-473: Pixel-truth from sharp metadata: LPT white-on-transparent (RGB 63.7, alpha 62.6); REALTOR®+MLS dark-on-transparent (RGB 137.8, alpha 176.1); EHO black-on-transparent (RGB 0.2, alpha 117.2).
+- [x] ISC-474: Confirmed via `/tmp/mia-cycle11-footer-before/footer-only-404-{1280,375}.png` rendered captures: three different visual treatments + three different visibility outcomes.
+- [x] ISC-475: Card 5 (combined REALTOR®+MLS asset replacement) confirmed as `RECOMMENDATION_PENDING` requiring principal authorization; asset SWAP out of Cycle 11 scope; visual filter treatment IN scope.
+- [x] ISC-476: Recommended fix: uniform `[filter:brightness(0)_invert(1)] opacity-80` on all three; remove `bg-white/95 p-1` LPT tile; unify `h-9 lg:h-10`.
+- [x] ISC-477: NAR Membership Marks Manual + HUD EHO monochrome variants compliance-checked: monochrome white-on-dark IS permitted.
+- [x] ISC-478: Aspect-ratio compromise documented: REALTOR®+MLS asset 2.18:1 wide stays wider than LPT (1:1) and EHO (~0.93:1) at h-10; mitigations cited.
+- [x] ISC-479: Anti-criteria documented: no asset swap, no semantic change, no new colors/fonts/tokens.
+- [x] ISC-480: `docs/CYCLE_11_FOOTER_LOGO_TRUST_STRIP_AUDIT.md` written.
+
+#### Phase 5 — Codex Spark teams (≤2 concurrent)
+- [ ] ISC-481: Team A (Footer / Trust-Strip Designer) dispatched + completed; findings saved to `docs/codex-spark-audits/cycle-11/`.
+- [ ] ISC-482: Team B (True Mobile QA Engineer) dispatched + completed; findings saved.
+- [ ] ISC-483: Team C (Image + Logo Asset QA) dispatched + completed.
+- [ ] ISC-484: Team D (Luxury Production-Polish Critic) dispatched + completed.
+- [ ] ISC-485: Team E (SEO/AEO + Structured Content QA) dispatched + completed.
+- [ ] ISC-486: Team F (Process Improvement Architect) dispatched + completed.
+- [ ] ISC-487: Spark concurrency cap held: ≤2 same-model concurrent across batches; no stdin-stalls.
+- [ ] ISC-488: Findings reconciled — convergent set surfaced as Phase 7 fix candidates.
+
+#### Phase 6 — GPT-5.5 visual judgment + fix plan
+- [ ] ISC-489: GPT-5.5 xhigh review of Spark findings + footer audit + screenshots.
+- [ ] ISC-490: `docs/CYCLE_11_GPT55_VISUAL_JUDGMENT_AND_FIX_PLAN.md` written.
+- [ ] ISC-491: Fix scope confirmed within mission boundaries.
+- [ ] ISC-492: Recommendation set reconciled with Phase 4 audit + Spark findings.
+
+#### Phase 7 — Safe implementation pass
+- [ ] ISC-493: `src/components/SiteFooter.tsx` updated — uniform `[filter:brightness(0)_invert(1)] opacity-80` on all three trust marks; LPT white tile removed; `h-9 lg:h-10` sizing.
+- [ ] ISC-494: Spacing widened to `gap-8 lg:gap-12` for luxury breathing room.
+- [ ] ISC-495: Mobile stacking preserved (`flex-col items-center` mobile, `lg:flex-row` desktop).
+- [ ] ISC-496: Hero 320 micro-polish (D5) — only if Spark Team B / GPT-5.5 confirms necessary.
+- [ ] ISC-497: Below-hero H2 wrap (D6) — only if confirmed.
+- [ ] ISC-498: typecheck exit 0 post-fix.
+- [ ] ISC-499: lint exit 0 post-fix.
+- [ ] ISC-500: build exit 0 post-fix.
+- [ ] ISC-501: `audit:images` ≥14 PASS · 0 FAIL preserved.
+- [ ] ISC-502: `audit:brand` ≥12 PASS · 0 FAIL preserved.
+- [ ] ISC-503: `audit:hero-contrast` ≥95 PASS · 0 FAIL preserved (after retest if flake).
+- [ ] ISC-504: `audit:rendered` ≥14 PASS · 1 WARN (viewport sanity) · 0 FAIL preserved.
+
+#### Phase 8 — End-to-end QA matrix
+- [ ] ISC-505: `docs/CYCLE_11_END_TO_END_RENDERED_QA_MATRIX.md` written; every public route scored on 14 axes.
+- [ ] ISC-506: `docs/BRAND_AND_VISUAL_PRODUCTION_QA_MATRIX.md` updated with Cycle 11 deltas.
+- [ ] ISC-507: All cells use the canonical taxonomy: PASS / PASS_WITH_MINOR_CONCERNS / PARTIAL / FAIL / REVIEW.
+
+#### Phase 9 — Local verification + AFTER screenshots
+- [ ] ISC-508: typecheck/lint/build/audit:all chain green.
+- [ ] ISC-509: `/tmp/mia-cycle11-local-after/` AFTER screenshots captured (6 viewports × 26 routes = 156 PNGs).
+- [ ] ISC-510: Footer-region full-page captures at 1280 + 375 + 320 verify trust-strip uniform monochrome rendering.
+- [ ] ISC-511: Local before/after diff documented.
+- [ ] ISC-512: `docs/CYCLE_11_LOCAL_VERIFICATION_AND_SCREENSHOTS.md` written.
+
+#### Phase 10 — GPT-5.5 predeploy acceptance
+- [ ] ISC-513: GPT-5.5 xhigh review of before/after screenshots + changed files + audit reports.
+- [ ] ISC-514: Verdict ∈ {PASS, PASS_WITH_MINOR_CONCERNS, FAIL}; FAIL triggers one iteration.
+- [ ] ISC-515: Footer trust-strip resolution verdict explicitly stated.
+- [ ] ISC-516: `docs/CYCLE_11_GPT55_PREDEPLOY_ACCEPTANCE.md` written.
+
+#### Phase 11 — Deploy + live verification
+- [ ] ISC-517: Commit + push to origin/main.
+- [ ] ISC-518: `bun scripts/deploy-and-verify.ts --no-lighthouse` — Caddy flip detected.
+- [ ] ISC-519: Live ETag flips from `dielten0x4ow2ozi`.
+- [ ] ISC-520: Live last-modified updates.
+- [ ] ISC-521: All key routes HTTP 200 live with cache-bust.
+- [ ] ISC-522: Live AFTER screenshots captured to `/tmp/mia-cycle11-live-after/`.
+- [ ] ISC-523: `audit:hero-contrast --live` PASS post-deploy (or honest WARN documented).
+- [ ] ISC-524: `audit:rendered --live` post-deploy PASS / WARN / FAIL captured truthfully.
+
+#### Phase 12 — GPT-5.5 live acceptance
+- [ ] ISC-525: GPT-5.5 xhigh review of live AFTER screenshots + footer before/after + audit reports.
+- [ ] ISC-526: Verdict ∈ {PASS, PASS_WITH_MINOR_CONCERNS, FAIL}; FAIL = no claim of success.
+- [ ] ISC-527: Footer trust-strip live resolution explicitly stated.
+- [ ] ISC-528: `docs/CYCLE_11_GPT55_LIVE_ACCEPTANCE.md` written; SESSION_MAY_CLOSE noted.
+
+#### Phase 13 — Skill / process upgrade
+- [ ] ISC-529: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` v0.3.2 → v0.3.3.
+- [ ] ISC-530: Footer/trust-strip + compliance-asset visibility class added as new gotcha.
+- [ ] ISC-531: F6 closure (viewport-honesty assertion) codified.
+- [ ] ISC-532: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.3.3 entry written.
+
+#### Phase 14 — Handoff + next-session trigger
+- [ ] ISC-533: `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_11_FINAL_MILE_VISUAL_QA_2026-05-09.md` written (20-section closeout).
+- [ ] ISC-534: `docs/NEXT_SESSION_TRIGGER_AFTER_CYCLE_11.md` written.
+- [ ] ISC-535: Final response includes mission result, commits, audits, screenshot paths, GPT-5.5 verdicts, next 3 actions.
+- [ ] ISC-536: All Cycle 11 changes pushed to origin/main; live deploy verified.
+
+#### Anti-criteria (Cycle 11)
+- [ ] ISC-537: Anti: No GHL/legal/license/REALTOR/Spanish/Payload/CMS/DNS/.com/Cloudflare touched.
+- [ ] ISC-538: Anti: No new color / font / token / shadow introduced.
+- [ ] ISC-539: Anti: No success declared from static audits alone.
+- [ ] ISC-540: Anti: No model misrepresentation; "max" never claimed.
+
+## Decisions (continued — 2026-05-09 cycle-11)
+
+- **2026-05-10T02:23Z effort tier override:** classifier returned `MODE: ALGORITHM | TIER: E3 | SOURCE: classifier`. User explicitly invoked `/effort max` at session start, which is an explicit override per Algorithm v6.4.0 override hierarchy item 1. Honoring **E5 (Comprehensive)**.
+- **2026-05-10T02:23Z Specialist-Prereq Probe:** Forge ✅ + Cato ✅ + PerplexityResearcher ✅; Anvil ✗ (binary missing → fallback Forge). Probe details persisted in `bun ~/.claude/PAI/TOOLS/SpecialistProbe.ts --json`. Decision: keep Forge available but author Phase 2 patch on main thread (small/focused 70 LOC; Forge dispatch overhead exceeds patch effort). Per `feedback_forge_race_scope_drift.md`, when working on a single small focused patch, main-thread is preferred to background Forge.
+- **2026-05-10T02:35Z F6 closure strategy choice — Option D over A:** investigated 4 options for closing the F6 mobile-instrumentation gap. Chose Option D (viewport-honesty SKIP enforcement + screenshot+GPT-5.5 fallback) over Option A (full DevTools-Protocol rewrite). Rationale: Option D delivers user-visible truth at ~10× lower implementation cost than Option A; the screenshot channel + GPT-5.5 vision already covers 320/375 visual review. Cycle 12+ retains the option to upgrade to CDP if a layout-bug class surfaces that pixel screenshots can't diagnose.
+- **2026-05-10T02:50Z Card 5 boundary respected:** combined REALTOR®+MLS asset stays — visual treatment via CSS filter only; asset swap requires principal authorization. Confirmed against PRINCIPAL_DECISION_REGISTER and mission boundaries.
+- **2026-05-10T02:50Z visual-fix recipe locked:** `[filter:brightness(0)_invert(1)] opacity-80` on all three trust marks; remove `bg-white/95 p-1` from LPT. Algebra verified: white-on-transparent → black → white (no-op); dark-on-transparent → black → white (visible); black-on-transparent → black → white (visible). All three become discreet white silhouettes on navy at 80% opacity.
+- **2026-05-10T03:00Z E5 Interview-workflow waiver re-applied:** same rationale as Cycle 10 — project ISA already carries 449 cumulative ISCs + 11-section structure; running Interview re-derives substrate that exists in 95k+ tokens of ISA + handoffs. Cycle 11 plan derives directly from Cycle 10 next-session trigger + principal review note. Honest scope vs. cost-of-ceremony.

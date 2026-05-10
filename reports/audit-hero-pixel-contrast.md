@@ -1,7 +1,7 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T01:38:33.975Z
-**Mode:** live
+**Generated:** 2026-05-10T03:12:55.825Z
+**Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1

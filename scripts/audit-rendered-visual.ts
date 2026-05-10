@@ -961,6 +961,29 @@ function isMobile(viewport: ViewportSpec): boolean {
   return viewport.width <= 768;
 }
 
+// Cycle 11 (F6 closure): chrome `--dump-dom` mode renders at ~500px regardless
+// of `--window-size`. The probe self-records `viewport.w` from
+// `window.innerWidth`, which exposes the mismatch. A probe is "viewport-honest"
+// only when actual ≈ requested (±5px slack). Findings that depend on layout-at-
+// requested-viewport (mobile overflow, narrow-breakpoint CTAs) MUST filter to
+// honest probes only — never PASS on a dishonest probe. Viewport-stable
+// findings (image presence, stale strings, canonical email) are unaffected.
+const VIEWPORT_HONEST_TOLERANCE_PX = 5;
+
+function isViewportHonest(p: RouteProbe): boolean {
+  if (!p.result) return false;
+  const requested = p.viewport.width;
+  const actual = p.result.viewport.w;
+  if (!actual || actual <= 0) return false;
+  return Math.abs(actual - requested) <= VIEWPORT_HONEST_TOLERANCE_PX;
+}
+
+function viewportMismatch(p: RouteProbe): { requested: number; actual: number } | null {
+  if (!p.result) return null;
+  if (isViewportHonest(p)) return null;
+  return { requested: p.viewport.width, actual: p.result.viewport.w };
+}
+
 function deriveFindings(probes: RouteProbe[]): Finding[] {
   const findings: Finding[] = [];
 
@@ -1182,11 +1205,30 @@ function deriveFindings(probes: RouteProbe[]): Finding[] {
   }
 
   // 10. rendered.mobile.noHorizontalOverflow
+  // Cycle 11 (F6 closure): only count probes that actually rendered at the requested
+  // mobile viewport. Probes whose actual `window.innerWidth` does not match (±5px) the
+  // requested width are marked SKIP — chrome `--dump-dom` clamps to ~500px, so a 320
+  // request that came back as 500 cannot answer the question "does this overflow at
+  // 320?". This converts the prior over-confident PASS into honest SKIP at narrow
+  // widths until the screenshot-channel review (or a future CDP probe path) confirms.
   {
     const offenders: Offender[] = [];
+    const skipped: Offender[] = [];
+    let honestMobileProbes = 0;
     for (const p of probes) {
       if (!p.result) continue;
       if (!isMobile(p.viewport)) continue;
+      const mismatch = viewportMismatch(p);
+      if (mismatch) {
+        skipped.push({
+          route: p.route,
+          viewport: p.viewport.name,
+          requested: mismatch.requested,
+          actual: mismatch.actual,
+        });
+        continue;
+      }
+      honestMobileProbes++;
       if (p.result.hasHorizontalOverflow) {
         offenders.push({
           route: p.route,
@@ -1196,16 +1238,31 @@ function deriveFindings(probes: RouteProbe[]): Finding[] {
         });
       }
     }
+    let status: Status;
+    if (honestMobileProbes === 0) status = "SKIP";
+    else if (offenders.length === 0) status = "PASS";
+    else status = "FAIL";
+    let evidence: string;
+    if (status === "SKIP") {
+      evidence = `0 viewport-honest mobile probes — instrumentation mismatch at ${skipped.length} probe(s); use screenshot review for 320/375/414`;
+    } else if (status === "PASS") {
+      evidence =
+        skipped.length === 0
+          ? `0 mobile probes show horizontal overflow (${honestMobileProbes} viewport-honest probes)`
+          : `0 overflow at ${honestMobileProbes} viewport-honest probes; ${skipped.length} dishonest probes SKIPPED (instrumentation mismatch)`;
+    } else {
+      evidence = `${offenders.length} mobile probes overflow horizontally${skipped.length ? ` (${skipped.length} dishonest probes SKIPPED)` : ""}`;
+    }
     findings.push({
       id: "rendered.mobile.noHorizontalOverflow",
       category: "Mobile",
-      description: "No horizontal overflow at mobile viewports (≤768)",
-      status: offenders.length === 0 ? "PASS" : "FAIL",
-      evidence:
-        offenders.length === 0
-          ? "0 mobile probes show horizontal overflow"
-          : `${offenders.length} mobile probes overflow horizontally`,
-      details: offenders.length > 0 ? { offenders } : undefined,
+      description: "No horizontal overflow at mobile viewports (≤768) — viewport-honest probes only",
+      status,
+      evidence,
+      details:
+        offenders.length > 0 || skipped.length > 0
+          ? { offenders, skipped, honestMobileProbes }
+          : undefined,
     });
   }
 
@@ -1328,6 +1385,59 @@ function deriveFindings(probes: RouteProbe[]): Finding[] {
           ? "0 probe errors"
           : `${offenders.length} (route × viewport) pairs reported probe/runner errors`,
       details: offenders.length > 0 ? { offenders } : undefined,
+    });
+  }
+
+  // 15. rendered.probe.viewportSanity (NEW Cycle 11 — F6 closure HARD gate)
+  //
+  // Surface the dump-dom mobile-clamp behavior as its own finding rather than
+  // letting it lurk inside other categories. Reports the count of probes whose
+  // probed `window.innerWidth` matched the requested `--window-size` width
+  // (±5 px slack), and the per-viewport breakdown of mismatches. WARN — not
+  // FAIL — because the existing fallback path (capture-baseline.ts screenshot
+  // channel + GPT-5.5 visual review) does cover the gap; the gate exists so
+  // future runs don't silently regress.
+  {
+    const sanity: Array<{ requested: string; total: number; honest: number; mismatched: number; sampleActual: number | null }> = [];
+    const byViewport = new Map<string, RouteProbe[]>();
+    for (const p of probes) {
+      const list = byViewport.get(p.viewport.name) ?? [];
+      list.push(p);
+      byViewport.set(p.viewport.name, list);
+    }
+    let totalProbes = 0;
+    let honestProbes = 0;
+    for (const [name, list] of byViewport.entries()) {
+      const honest = list.filter((p) => isViewportHonest(p)).length;
+      const mismatched = list.length - honest;
+      const firstWithResult = list.find((p) => p.result);
+      sanity.push({
+        requested: name,
+        total: list.length,
+        honest,
+        mismatched,
+        sampleActual: firstWithResult?.result?.viewport.w ?? null,
+      });
+      totalProbes += list.length;
+      honestProbes += honest;
+    }
+    sanity.sort((a, b) => a.requested.localeCompare(b.requested));
+    const totalMismatched = totalProbes - honestProbes;
+    const status: Status =
+      totalProbes === 0 ? "SKIP" : totalMismatched === 0 ? "PASS" : "WARN";
+    const evidence =
+      status === "SKIP"
+        ? "no probes captured"
+        : status === "PASS"
+          ? `all ${totalProbes} probes ran at requested viewport (±${VIEWPORT_HONEST_TOLERANCE_PX}px)`
+          : `${honestProbes}/${totalProbes} probes viewport-honest; ${totalMismatched} mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap)`;
+    findings.push({
+      id: "rendered.probe.viewportSanity",
+      category: "Probe Health",
+      description: `Every probe's actual window.innerWidth matches requested viewport width (±${VIEWPORT_HONEST_TOLERANCE_PX}px) — F6 instrumentation gate`,
+      status,
+      evidence,
+      details: { sanity, totalProbes, honestProbes, totalMismatched },
     });
   }
 

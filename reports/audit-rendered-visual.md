@@ -1,13 +1,13 @@
 # Audit Rendered Visual Report
 
-**Generated:** 2026-05-10T01:33:24.518Z
-**Mode:** live
-**Base:** https://miasanabriarealtor.trueidea.com
+**Generated:** 2026-05-10T03:15:24.825Z
+**Mode:** local
+**Base:** http://127.0.0.1:4173
 **Concurrency:** 3
 **Routes:** 25
 **Viewports:** 320x568, 375x812, 768x1024, 1280x800, 1440x900
 
-**Summary:** 12 PASS · 1 WARN · 0 FAIL · 1 SKIP
+**Summary:** 14 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
 ## Results by category
 
@@ -22,7 +22,7 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `rendered.marketCards.allVisibleOnIndex` | ✅ PASS | /markets/ index renders ≥10 market cards with imgVisible=true | 13 visible cards (best viewport: 320x568) |
-| `rendered.principalReportedMarkets.visible` | — SKIP | Lighthouse Point, Coral Ridge, Palm Beach cards visible on /markets/ (1280×800) | /markets/ at 1280x800 not probed |
+| `rendered.principalReportedMarkets.visible` | ✅ PASS | Lighthouse Point, Coral Ridge, Palm Beach cards visible on /markets/ (1280×800) | all 3 principal-reported markets visible |
 
 ### Hero
 
@@ -39,7 +39,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `rendered.mobile.noHorizontalOverflow` | ✅ PASS | No horizontal overflow at mobile viewports (≤768) | 0 mobile probes show horizontal overflow |
+| `rendered.mobile.noHorizontalOverflow` | ✅ PASS | No horizontal overflow at mobile viewports (≤768) — viewport-honest probes only | 0 overflow at 25 viewport-honest probes; 50 dishonest probes SKIPPED (instrumentation mismatch) |
 
 ### CTAs
 
@@ -63,47 +63,58 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `rendered.errors.zero` | ⚠️ WARN | Zero probe-internal errors and zero chrome runner errors | 4 (route × viewport) pairs reported probe/runner errors |
+| `rendered.errors.zero` | ✅ PASS | Zero probe-internal errors and zero chrome runner errors | 0 probe errors |
+| `rendered.probe.viewportSanity` | ⚠️ WARN | Every probe's actual window.innerWidth matches requested viewport width (±5px) — F6 instrumentation gate | 75/125 probes viewport-honest; 50 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap) |
 
 ## Failures and warnings — details
 
-### ⚠️ `rendered.errors.zero`
+### ⚠️ `rendered.probe.viewportSanity`
 
-**Description:** Zero probe-internal errors and zero chrome runner errors
+**Description:** Every probe's actual window.innerWidth matches requested viewport width (±5px) — F6 instrumentation gate
 
-**Evidence:** 4 (route × viewport) pairs reported probe/runner errors
+**Evidence:** 75/125 probes viewport-honest; 50 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap)
 
 ```json
 {
-  "offenders": [
+  "sanity": [
     {
-      "route": "/",
-      "viewport": "768x1024",
-      "errors": [
-        "no probe sentinel; title=Fort Lauderdale REALTOR® | Waterfront &amp; Luxury Homes"
-      ]
+      "requested": "1280x800",
+      "total": 25,
+      "honest": 25,
+      "mismatched": 0,
+      "sampleActual": 1280
     },
     {
-      "route": "/",
-      "viewport": "1280x800",
-      "errors": [
-        "no probe sentinel; title=Fort Lauderdale REALTOR® | Waterfront &amp; Luxury Homes"
-      ]
+      "requested": "1440x900",
+      "total": 25,
+      "honest": 25,
+      "mismatched": 0,
+      "sampleActual": 1440
     },
     {
-      "route": "/markets/",
-      "viewport": "1280x800",
-      "errors": [
-        "no probe sentinel; title=Featured Markets — Southeast Florida | Mia Sanabria"
-      ]
+      "requested": "320x568",
+      "total": 25,
+      "honest": 0,
+      "mismatched": 25,
+      "sampleActual": 500
     },
     {
-      "route": "/markets/fort-lauderdale/",
-      "viewport": "1440x900",
-      "errors": [
-        "no probe sentinel; title=Fort Lauderdale Luxury Real Estate | Mia Sanabria"
-      ]
+      "requested": "375x812",
+      "total": 25,
+      "honest": 0,
+      "mismatched": 25,
+      "sampleActual": 500
+    },
+    {
+      "requested": "768x1024",
+      "total": 25,
+      "honest": 25,
+      "mismatched": 0,
+      "sampleActual": 768
     }
-  ]
+  ],
+  "totalProbes": 125,
+  "honestProbes": 75,
+  "totalMismatched": 50
 }
 ```

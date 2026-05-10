@@ -1,0 +1,1401 @@
+OpenAI Codex v0.129.0 (research preview)
+--------
+workdir: /home/torrey/code/mia-sanabria-website
+model: gpt-5.3-codex-spark
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 019e0fd4-b7e3-7773-9728-2fe52d6da335
+--------
+user
+You are Codex Spark, acting as a luxury Footer / Trust-Strip Designer for a top-of-market luxury Realtor website. The site is at https://miasanabriarealtor.trueidea.com — a Next.js 15 static export for Mia Sanabria, REALTOR® at LPT Realty, serving Eastern Fort Lauderdale / Boca / Delray luxury HNWI buyers + sellers.
+
+CONTEXT (read these first):
+- src/components/SiteFooter.tsx — current footer implementation
+- src/lib/site.ts and src/lib/mia.ts — site/mia config
+- docs/BRAND_SYSTEM_CONTRACT.md — locked brand rules (DO NOT propose changes to colors/fonts/tokens)
+- docs/PRINCIPAL_DECISION_REGISTER.md — Card 5 (combined REALTOR®+MLS graphic) is RECOMMENDATION_PENDING and asset SWAP requires principal authorization
+- docs/CYCLE_11_FOOTER_LOGO_TRUST_STRIP_AUDIT.md — my prior diagnosis (root cause + recommended fix)
+- public/logos/{lpt-realty,realtor-r,equal-housing}.png — the three trust-mark assets (sharp pixel-truth: LPT white-on-transparent, REALTOR® combined R+MLS dark-on-transparent, EHO black-on-transparent)
+- /tmp/mia-cycle11-footer-before/footer-only-404-{1280,375}.png — BEFORE screenshots showing the inconsistent rendering
+
+PRINCIPAL'S NOTE: "The footer logos/trust-strip items — LPT Realty, REALTOR®, Equal Housing Opportunity — look inconsistent."
+
+YOUR JOB: review the proposed fix in CYCLE_11_FOOTER_LOGO_TRUST_STRIP_AUDIT.md (uniform `[filter:brightness(0)_invert(1)] opacity-80` + remove white-tile from LPT + unify h-9/h-10 sizing + keep labels). Validate or improve.
+
+ANSWER THESE EXPLICITLY:
+1. Does the proposed monochrome white-on-transparent treatment work compliance-wise for REALTOR® and EHO marks? Cite NAR + HUD rules if you can.
+2. Is `[filter:brightness(0)_invert(1)] opacity-80` the correct CSS recipe? Any edge cases (e.g., browser support, anti-aliasing, sub-pixel rendering)? Better alternative?
+3. Is `h-10` (40px desktop) / `h-9` (36px mobile) the right size for a luxury trust strip, or should it be smaller / larger?
+4. Should we drop the external text labels entirely (since each asset has baked-in branding), keep them, or restyle?
+5. Mobile stacking — current `flex-col` on mobile + `lg:flex-row` on desktop. Better luxury pattern?
+6. Anything I'm missing visually that a high-end production designer would catch?
+
+CONSTRAINTS:
+- visual-only changes (no asset swap, no semantic change to compliance marks)
+- no new colors / fonts / tokens
+- mission boundary: "no REALTOR®/MLS legal decisions beyond visual/spacing/asset consistency"
+- BRAND_SYSTEM_CONTRACT is locked
+
+OUTPUT FORMAT: surround your audit with AUDIT_START and AUDIT_END markers. Inside, deliver up to 10 findings in this JSON shape (one per finding):
+
+```json
+{
+  "id": 1,
+  "title": "short title",
+  "severity": "deploy_blocker | would_not_ship | concerns | polish | info",
+  "file_or_surface": "file path or rendered surface",
+  "evidence": "specific observation with citation",
+  "recommendation": "concrete what-to-change",
+  "safe_to_implement_now": true | false,
+  "approval_required": "none | principal | NAR | HUD | other"
+}
+```
+
+End your audit with a single line: `VERDICT: pass | concerns | fail` and a 1-sentence justification.
+
+codex
+Got it — I’ll validate the proposed trust-strip adjustments against the locked brand docs and existing footer implementation, then produce a strictly structured audit with citation-backed findings and a pass/concerns/fail verdict. I’ll first read the six target files you listed, then map each of your six questions to concrete, implementable recommendations.
+exec
+/bin/bash -lc "sed -n '1,220p' src/lib/site.ts" in /home/torrey/code/mia-sanabria-website
+ succeeded in 0ms:
+/**
+ * Single source of truth for site-wide configuration.
+ * Production URL flips to miasanabriarealtor.com at cutover; staging can be overridden with NEXT_PUBLIC_SITE_URL.
+ */
+
+const STAGING_URL = "https://miasanabriarealtor.trueidea.com";
+const PRODUCTION_URL = "https://miasanabriarealtor.com";
+
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? STAGING_URL;
+
+/**
+ * Staging gate — drives noindex/nofollow on robots metadata until a separate
+ * production-cutover packet authorizes indexable production. Anything other
+ * than the canonical production hostname is treated as staging.
+ */
+export const IS_STAGING = !SITE_URL.startsWith(PRODUCTION_URL);
+
+export const SITE = {
+  name: "Mia Sanabria",
+  fullName: "Mia Mary Sanabria",
+  title: "Fort Lauderdale REALTOR® | Waterfront & Luxury Homes",
+  shortTitle: "Mia Sanabria | REALTOR®",
+  description:
+    "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Private representation.",
+  tagline: "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
+  positioning: "Fort Lauderdale REALTOR®",
+  anchorLine: "If I don't know the answer, I will find it.",
+  url: SITE_URL,
+  productionUrl: PRODUCTION_URL,
+  ogImage: `${SITE_URL}/og-default.jpg`,
+  themeColor: "#0F2A44",
+  locale: "en-US",
+  twitter: { card: "summary_large_image" as const },
+} as const;
+
+export const NAV = [
+  { href: "/", label: "Home" },
+  { href: "/markets/", label: "Markets" },
+  { href: "/buyers/", label: "Buyers" },
+  { href: "/sellers/", label: "Sellers" },
+  { href: "/valuation/", label: "Home Valuation" },
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
+] as const;
+
+export const FOOTER_NAV = {
+  explore: [
+    { href: "/markets/", label: "Featured Markets" },
+    { href: "/buyers/", label: "Buying" },
+    { href: "/sellers/", label: "Selling" },
+    { href: "/valuation/", label: "Home Valuation" },
+    { href: "/insights/", label: "Insights" },
+  ],
+  about: [
+    { href: "/about/", label: "About Mia" },
+    { href: "/contact/", label: "Contact" },
+  ],
+  legal: [
+    { href: "/privacy/", label: "Privacy Policy" },
+    { href: "/terms/", label: "Terms of Service" },
+    { href: "/accessibility/", label: "Accessibility" },
+    { href: "/dmca/", label: "DMCA" },
+  ],
+} as const;
+
+exec
+/bin/bash -lc "sed -n '1,220p' src/components/SiteFooter.tsx" in /home/torrey/code/mia-sanabria-website
+ succeeded in 0ms:
+import Image from "next/image";
+import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail } from "lucide-react";
+import { FOOTER_NAV, SITE } from "@/lib/site";
+import { MIA } from "@/lib/mia";
+import { NavLink } from "./NavLink";
+
+export function SiteFooter() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="border-t border-cream-300 bg-navy-800 text-cream-100" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">
+        Site footer
+      </h2>
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 lg:grid-cols-4 lg:px-8">
+        <div>
+          <div className="font-display text-2xl tracking-[0.2em]">MIA SANABRIA</div>
+          <div className="mt-1 text-xs uppercase tracking-[0.3em] text-brass-300">
+            {SITE.positioning}
+          </div>
+          <p className="mt-5 text-sm text-cream-200/90 max-w-xs">
+            {SITE.tagline}. Real estate guidance for luxury Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach buyers and sellers, delivered with discretion and rigor.
+          </p>
+          <div className="mt-6 flex items-center gap-3">
+            <FooterSocial href={MIA.social.facebook} label="Facebook">
+              <Facebook className="h-4 w-4" aria-hidden />
+            </FooterSocial>
+            <FooterSocial href={MIA.social.instagram} label="Instagram">
+              <Instagram className="h-4 w-4" aria-hidden />
+            </FooterSocial>
+            <FooterSocial href={MIA.social.linkedin} label="LinkedIn">
+              <Linkedin className="h-4 w-4" aria-hidden />
+            </FooterSocial>
+            <FooterSocial href={MIA.social.youtube} label="YouTube">
+              <Youtube className="h-4 w-4" aria-hidden />
+            </FooterSocial>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-display text-sm tracking-[0.25em] text-brass-200">EXPLORE</h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {FOOTER_NAV.explore.map((item) => (
+              <li key={item.href}>
+                <NavLink
+                  href={item.href}
+                  matchPrefix
+                  className="block min-h-[44px] py-2 hover:text-brass-300 aria-[current=page]:text-brass-300 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-display text-sm tracking-[0.25em] text-brass-200">ABOUT</h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {FOOTER_NAV.about.map((item) => (
+              <li key={item.href}>
+                <NavLink
+                  href={item.href}
+                  matchPrefix
+                  className="block min-h-[44px] py-2 hover:text-brass-300 aria-[current=page]:text-brass-300 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
+            <li className="pt-2">
+              <a
+                href={`tel:${MIA.contact.phoneTel}`}
+                className="inline-flex items-center gap-2 hover:text-brass-300"
+              >
+                <Phone className="h-3.5 w-3.5" aria-hidden />
+                {MIA.contact.phone}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`mailto:${MIA.contact.email}`}
+                className="inline-flex items-center gap-2 hover:text-brass-300"
+              >
+                <Mail className="h-3.5 w-3.5" aria-hidden />
+                {MIA.contact.email}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-display text-sm tracking-[0.25em] text-brass-200">BROKERAGE</h3>
+          <address className="mt-4 not-italic text-sm leading-relaxed">
+            {MIA.name.legal}
+            <br />
+            {MIA.title}, {MIA.brokerage.legal}
+            <br />
+            {MIA.contact.serviceCore.city}, {MIA.contact.serviceCore.region}{" "}
+            {MIA.contact.serviceCore.postalCode}
+          </address>
+          {MIA.unverified.licenseNumber ? (
+            <p className="mt-3 text-xs text-cream-200/80">
+              FL Sales Associate License #{MIA.unverified.licenseNumber}
+            </p>
+          ) : null}
+          <p className="mt-3 text-xs text-cream-200/80">
+            All information is deemed reliable but not guaranteed. IDX listings provided
+            for consumers&rsquo; personal, non-commercial use; not for redistribution.
+          </p>
+        </div>
+      </div>
+
+      <div className="border-t border-cream-300/15">
+        <div
+          className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 px-4 py-8 text-center lg:flex-row lg:items-center lg:justify-center lg:gap-10 lg:px-8"
+          aria-label="Industry affiliations"
+        >
+          <FooterTrustMark
+            src="/logos/lpt-realty.png"
+            alt="LPT Realty"
+            width={48}
+            height={48}
+            imageClassName="h-10 w-10 rounded-sm bg-white/95 p-1"
+            label="LPT Realty"
+          />
+          <FooterTrustMark
+            src="/logos/realtor-r.png"
+            alt="REALTOR®"
+            width={64}
+            height={30}
+            imageClassName="h-7 w-auto"
+            label="REALTOR®"
+          />
+          <FooterTrustMark
+            src="/logos/equal-housing.png"
+            alt="Equal Housing Opportunity"
+            width={32}
+            height={36}
+            imageClassName="h-9 w-auto"
+            label="Equal Housing Opportunity"
+          />
+        </div>
+      </div>
+
+      <div className="border-t border-cream-300/15">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-cream-200/80 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <p>
+            © {year} {MIA.name.marketing}. All rights reserved.
+          </p>
+          <ul className="flex flex-wrap items-center gap-5">
+            {FOOTER_NAV.legal.map((item) => (
+              <li key={item.href}>
+                <NavLink
+                  href={item.href}
+                  className="inline-flex min-h-[28px] items-center hover:text-brass-300 aria-[current=page]:text-brass-300 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function FooterTrustMark({
+  src,
+  alt,
+  width,
+  height,
+  imageClassName,
+  label,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  imageClassName: string;
+  label: string;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-3 text-center lg:flex-row lg:text-left">
+      <Image src={src} alt={alt} width={width} height={height} className={imageClassName} />
+      <span className="font-display text-[10px] uppercase tracking-[0.3em] text-cream-200/80">
+        {label}
+      </span>
+    </div>
+  );
+}
+
+function FooterSocial({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-cream-200/30 transition-colors hover:border-brass-400 hover:text-brass-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+    >
+      {children}
+    </a>
+  );
+}
+
+exec
+/bin/bash -lc "sed -n '1,240p' src/lib/mia.ts" in /home/torrey/code/mia-sanabria-website
+ succeeded in 0ms:
+/**
+ * Verified facts from PUBLIC_FACT_LEDGER v2 (~/.claude/PAI/USER/PROJECTS/MiaSanabria/).
+ * Candidate / unverified fields stay null or empty until Mia confirms in writing.
+ * Schema components must read from this file — never inline unverified facts.
+ */
+
+export const MIA = {
+  name: { legal: "Mia Mary Sanabria", marketing: "Mia Sanabria" },
+  title: "REALTOR®",
+  brokerage: {
+    legal: "LPT Realty LLC",
+    display: "LPT Realty",
+    headquarters: {
+      street: "1400 S International Parkway",
+      city: "Lake Mary",
+      region: "FL",
+      postalCode: "32746",
+      country: "US",
+    },
+  },
+  contact: {
+    phone: "(954) 540-0358",
+    phoneTel: "+19545400358",
+    email: "msanabriarea@gmail.com",
+    serviceCore: { city: "Fort Lauderdale", region: "FL", postalCode: "33305" },
+  },
+  social: {
+    facebook: "https://www.facebook.com/miasanrea/",
+    instagram: "https://www.instagram.com/mia_sanabria_realtor/",
+    linkedin: "https://www.linkedin.com/in/miasanrea/",
+    youtube: "https://www.youtube.com/channel/UCXQwnpWflWRRtYuO9QX1jvg",
+  },
+  voice: {
+    tagline: "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
+    positioning: "Fort Lauderdale REALTOR®",
+    anchorLine: "If I don't know the answer, I will find it.",
+  },
+  tracking: { ga4Id: "G-PYYSF87G8K", userwayId: "vVNkJJLvR4" },
+  unverified: {
+    // SL3405877 cited across multiple public-web sources (LPT Realty agent listing pages, MLS profile pages,
+    // Klein Morgan agent legacy page) as Mia's Florida Sales Associate license number. NAR / Florida Realtors /
+    // Broward, Palm Beaches & St. Lucie REALTORS® membership cited in the same sources — satisfies the NAR
+    // Membership Marks Manual prerequisite for REALTOR® R logo display. DBPR primary-source confirmation by
+    // Mia is the final pre-.com-cutover gate; placeholder remains `unverified.*` until then.
+    licenseNumber: "SL3405877" as string | null,
+    designations: [] as string[],
+    languages: ["English"] as const,
+    yearsLicensed: null as string | null,
+    displayOffice: null as string | null,
+  },
+  experience: { since: null as string | null },
+  serviceArea: {
+    administrative: ["Eastern Fort Lauderdale", "Eastern Boca Raton", "Eastern Delray Beach"],
+  },
+} as const;
+
+const ALL_MARKET_SLUGS = [
+  "fort-lauderdale",
+  "coral-ridge",
+  "victoria-park",
+  "boca-raton",
+  "palm-beach",
+  "delray-beach",
+  "lighthouse-point",
+  "rio-vista",
+  "harbor-beach",
+  "las-olas-isles",
+  "seven-isles",
+  "sea-ranch-lakes",
+  "hillsboro-mile",
+] as const;
+
+export type MarketSlug = (typeof ALL_MARKET_SLUGS)[number];
+
+const FEATURED_SET: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
+  "fort-lauderdale",
+  "las-olas-isles",
+  "harbor-beach",
+  "victoria-park",
+  "boca-raton",
+  "delray-beach",
+]);
+
+export const FEATURED_MARKETS: ReadonlyArray<MarketSlug> = ALL_MARKET_SLUGS.filter(
+  (slug) => FEATURED_SET.has(slug)
+);
+
+exec
+/bin/bash -lc "sed -n '1,260p' docs/BRAND_SYSTEM_CONTRACT.md" in /home/torrey/code/mia-sanabria-website
+ succeeded in 0ms:
+# Brand System Contract — Mia Sanabria Realtor Site
+
+**Authored:** 2026-05-08 PM
+**Authority:** This is the locked visual system. Any change requires explicit principal approval and a Decisions log entry in the project ISA.
+**Source of truth in code:** `app/globals.css` (`@theme` block), `src/lib/site.ts`, `src/lib/mia.ts`, `tailwind.config` (implicit via Tailwind v4)
+**Empirical anchor:** verified against the live staging surface as of commit `0fced7d` (2026-05-08 18:38 GMT)
+
+This contract is the rule book. The next session's Designer lane must respect it; deviations are justified in the Decisions log, not silently applied.
+
+## Tone & voice
+
+- **Voice:** "Personal by design, not by claim." Editorial, considered, not pushy. First-person where Mia is speaking, third-person where the site is describing her.
+- **Anchor lines:**
+  - Tagline: `Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.` (`MIA.voice.tagline`) — updated 2026-05-08 cycle 5 per principal direction; supersedes the prior "Family Homes Where Memories Are Made" tagline (PRINCIPAL_DECISION_REGISTER Card 3 → DECIDED toward luxury/waterfront positioning)
+  - Positioning: `Fort Lauderdale REALTOR®` (`MIA.voice.positioning`)
+  - Anchor line: `If I don't know the answer, I will find it.` (`MIA.voice.anchorLine`)
+- **Forbidden voice:** corporate jargon ("synergy", "leveraging", "best-in-class"), realtor-template clichés ("your dream home awaits", "let me find your forever home"), generic luxury platitudes ("redefining luxury", "elevated experience").
+
+## Color system
+
+All values are CSS variables in `app/globals.css` `@theme` block, mapped to Tailwind v4 utility classes.
+
+| Token | Hex | Usage |
+|---|---|---|
+| `--color-navy-800` | `#0F2A44` | primary background for navy hero/footer; primary text on cream |
+| `--color-navy-900` | (darker navy) | hero overlay gradient |
+| `--color-cream-50` | `#fdfaf5` | primary text on navy (H1, hero body); page bg light surface 1 |
+| `--color-cream-100` | `#faf3e7` | page bg light surface 2 (IntentRouter, alternate sections) |
+| `--color-cream-200` | `#f5efe6` | secondary text on navy; subtle borders |
+| `--color-cream-300` | `#ede4d3` | structural borders + dividers on dark surfaces |
+| `--color-cream-400` | `#e0d3ba` | muted accent (rare) |
+| `--color-brass-100` | `#e8dab7` | offset card behind headshot frame; subtle accent block |
+| `--color-brass-300` | brass mid | borders on brass-bordered images; hover-state accents |
+| `--color-brass-400` | brass-bright | primary CTA fill (`bg-brass-400 text-navy-900`) |
+| `--color-brass-700` | brass-deep | small uppercase tracking text on cream surfaces (eyebrow on cream) |
+| `--color-soft-black` | `#1A1A1A` | global body text fallback |
+| `--color-white` | `#FFFFFF` | LPT logo background pad in dark footer |
+
+**Forbidden additions:** no third primary color introduced without principal approval. The only colors a new component may use are: `navy-800`, `navy-900`, `cream-{50,100,200,300}`, `brass-{100,300,400,700}`, `soft-black`, `white`. Adding a new accent (e.g. coral, sage) violates the contract.
+
+**Contrast minimums (WCAG 2.1 AA):**
+- Body text on cream surface: ≥ 4.5:1 (`navy-800` on `cream-50`/`cream-100` passes)
+- Body text on navy surface: ≥ 4.5:1 (`cream-50` on `navy-800` passes; `cream-200/90` on `navy-800` passes for sub-text)
+- Large text (≥18pt): ≥ 3:1
+- Decorative elements may go below; never apply contrast minimums to `aria-hidden` SVGs
+
+## Typography
+
+| Token | Family | Usage |
+|---|---|---|
+| `font-display` | Cinzel via `next/font/google` | All H1, H2, H3 + brass eyebrows + footer headings |
+| `font-sans` | Montserrat via `next/font/google` | All body, sub-text, form labels, button text |
+
+**Loading discipline:**
+- Both fonts are loaded via `next/font/google` (self-hosted via Next.js); preconnect emitted automatically
+- `font-display: swap` is set; chrome-headless screenshots at `--virtual-time-budget=20000` capture post-swap state (12000ms is too short — surfaces font-loading paint artifacts per process-improvement note)
+
+**Heading sizes (Tailwind classes):**
+- H1: `text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight [text-wrap:balance]`
+- H2: `text-3xl sm:text-4xl font-display`
+- H3: `text-xl font-display`
+- Eyebrow: `text-xs uppercase tracking-[0.4em] font-display` (use `tracking-[0.3em]` on smaller eyebrows like service philosophy headings)
+
+**Body sizes:**
+- Hero sub: `text-lg sm:text-xl text-cream-200/90 [text-wrap:pretty]`
+- Body: `text-[15px]` to `text-[17px]` leading-relaxed
+- Small: `text-sm` (footer + secondary)
+- Micro: `text-xs` (license, copyright, breadcrumb)
+
+## Component rules
+
+### Hero (`src/components/Hero.tsx`)
+
+- Three modes: `background="navy"` (default), `background="cream"`, `background="image"`.
+- `background="image"` requires `imageSrc` + `imageAlt`; renders `<Image fill priority sizes="100vw">` + dark overlay gradient `from-navy-900/15 via-navy-900/35 to-navy-900/15` (per principal "brighter feel" directive — **do not darken without explicit principal approval**).
+- H1 over `image` background gets text-shadow `[text-shadow:0_2px_18px_rgba(15,42,68,0.85),0_1px_3px_rgba(0,0,0,0.65)]` (Cato concern resolution — **do not remove**).
+- H1 over `cream` background uses `text-navy-800`; over `navy`/`image` uses `text-cream-50`.
+- Hero padding mobile `py-28` (was `py-24` — **do not regress**); desktop `lg:py-40`.
+
+### CTA buttons
+
+- **Primary** (`bg-brass-400 text-navy-900`): rounded-full, `px-8 py-3.5 text-sm font-semibold tracking-wide`, hover `bg-brass-300`, ArrowRight icon `h-4 w-4` aria-hidden. **Do not regress to `px-7 py-3 font-medium`** (weakens hierarchy).
+- **Secondary** (`border border-cream-200/40 text-cream-100`): rounded-full, same `px-8 py-3.5` for size parity (or `px-7 py-3` if outdoor variant), hover `border-brass-300 text-brass-300`.
+- **Tertiary** (text link): `hover:text-brass-300` underline-on-hover, no chip.
+- **Tap target ≥ 44 × 44 CSS px** with ≥ 8 px gap (WCAG 2.5.5 AAA). Pill CTAs already meet this; small inline links should also satisfy when standalone.
+
+### Cards
+
+- **MarketCard:** rounded image + tagline below; hover lift `hover:-translate-y-0.5` with `transition-[transform,box-shadow]`; chevron is `ArrowRight` (do not switch to `ArrowUpRight` — visual-consistency lock).
+- **IntentRouter cards:** brass eyebrow + Cinzel heading + Montserrat sub + brass arrow → cream surface variant.
+- **Service-philosophy items (about page):** numbered `01 · 02 · 03` brass-tracking labels + Cinzel heading + body.
+- **Anti:** no glassmorphism, no gradient borders, no neon edge effects.
+
+### Sections — structural
+
+- Section vertical padding: `py-20 lg:py-28` for primary sections; `py-16 lg:py-20` for secondary; `py-14` for footer.
+- Container: `mx-auto max-w-7xl px-4 lg:px-8`.
+- Luminance ripple discipline: home flow is navy(hero) → cream-50 (MeetMia) → cream-100 (IntentRouter) → cream-50 → cream-100 → navy(footer). Adjacent same-color sections forbidden without a divider.
+
+## Image treatment
+
+| Use | Required size | Format | Source |
+|---|---|---|---|
+| Mia headshot (square, schema.org Person.image canonical) | 1024×1024 | JPEG q88 mozjpeg | `public/mia-headshot.jpg` |
+| Mia avatar (header / drawer / mini-card) | 256×256 | JPEG q88 | `public/mia-headshot-256.jpg` |
+| Mia OG (social-share landscape) | 1200×630 | JPEG q86 | `public/mia-og.jpg` |
+| Market hero (portrait) | 1200×1500 | JPEG q88 | `public/markets/<slug>.jpg` |
+| Market OG (landscape) | 1200×630 | JPEG q88 | `public/markets/og-<slug>.jpg` (post-cycle) |
+| Service portrait | 1200×1500 | JPEG q86 | `public/services/<slug>.jpg` |
+| Service OG | 1200×630 | JPEG q86 | `public/og-<slug>.jpg` |
+| Default site OG | 1200×630 | JPEG q88 | `public/og-default.jpg` |
+| LPT logo | 1097×1097 native | PNG transparent | `public/logos/lpt-realty.png` |
+| MLS REALTOR® logo | 257×118 | PNG transparent | `public/logos/realtor-r.png` |
+| EHO logo | 150×161 | PNG transparent | `public/logos/equal-housing.png` |
+
+**Optimization pipeline:** all photos pass through sharp + mozjpeg q88 (q86 for OG variants where extra compression is acceptable). LPT logo + brass logos preserve transparency.
+
+**Anti-AI-feeling rules:**
+- No DALL-E/Midjourney aesthetic markers (overly stylized lighting, surreal architecture, AI-perfect symmetry without grain)
+- AI-generated market hero portraits acceptable as INTERIM until Mia provides real photography
+- Mia's headshot must be the principal-supplied real photo (current 1024² source from vibe.filesafe.space)
+- Decorative scene photography (interior shots, neighborhood street views, waterfront sunset) acceptable AI fill if labeled in repo notes; replace with real shoots post-launch
+
+**Alt text discipline:**
+- Decorative images: `alt=""` AND `aria-hidden="true"`
+- Functional images: descriptive alt text including subject + context (e.g. `Mia Sanabria, REALTOR® with LPT Realty`)
+- Hero background image: alt describes what's pictured (`Twilight luxury waterfront residence in Fort Lauderdale`); when a hero is purely scenic, an empty alt with screen-reader-friendly context elsewhere is acceptable
+
+## CTA rules
+
+- **Primary CTA per page** — exactly one, calling the user to the highest-value action for that page:
+  - Home: `Schedule a Conversation` → `/contact/`
+  - About: `Schedule a Private Conversation` → `/contact/`
+  - Buyers: `Begin a Buyer Conversation` → `/contact/?intent=buyer`
+  - Sellers: `Request a Listing Conversation` → `/contact/?intent=seller`
+  - Valuation: `Request a Valuation` → form on page
+  - Insights essays: `Schedule a Conversation` → `/contact/`
+  - Lead magnet landing: `Get the Guide` → form on page
+- **Secondary CTA** — softer conversion path, never competing visually with primary:
+  - About link / Markets link / Insights link, always rendered as secondary `border border-cream-200/40` button OR text link
+- **No tertiary CTAs cluttering the section.** A page may have a primary + secondary in hero, plus a `<CTAStrip>` at section close; nothing else.
+
+## Footer rules
+
+The footer is a trust signal, not navigation overflow. Three structural rows:
+
+1. **Four-column grid** (`lg:grid-cols-4`):
+   - Col 1: `MIA SANABRIA` brand mark + positioning eyebrow + brand body + 4 social icons (Facebook, Instagram, LinkedIn, YouTube)
+   - Col 2: `EXPLORE` heading + 5 nav links (Featured Markets / Buying / Selling / Home Valuation / Insights)
+   - Col 3: `ABOUT` heading + About + Contact + phone tel + email mailto
+   - Col 4: `BROKERAGE` heading + legal address block + license # (null-guarded) + IDX disclaimer
+
+2. **Trust strip** (`aria-label="Industry affiliations"` — full-width row):
+   - LPT Realty logo + label
+   - MLS REALTOR® logo + label
+   - Equal Housing Opportunity logo + label
+   - Each rendered via `<FooterTrustMark>` subcomponent (logo + Cinzel uppercase tracking-[0.3em] label)
+
+3. **Copyright row** (full-width):
+   - `© <year> Mia Sanabria. All rights reserved.` left
+   - 4 legal links right (Privacy / Terms / Accessibility / DMCA)
+
+**Rules:**
+- License # rendered ONLY when `MIA.unverified.licenseNumber` is non-null; null-guarded conditional preserved
+- Brokerage name `LPT Realty LLC` legal form per FREC § 61J2-10.025; brokerage display name `LPT Realty` allowed in copy elsewhere
+- IDX disclaimer ALWAYS present in BROKERAGE column even if iframe is not on the current page
+- Each footer trust mark must carry an explicit text label adjacent (NAR display-rules best practice)
+
+## Compliance & disclosure
+
+- **EHO statement on every page footer** (sentinel: literal `Equal Housing Opportunity` string in built HTML; audit-completeness checks 7 sampled routes)
+- **REALTOR®** rendered with all-caps + ® symbol everywhere except domain/username contexts (per NAR Membership Marks Manual)
+- **License # rendering:** `FL Sales Associate License #SL3405877` in footer; null-guarded; populated only via `MIA.unverified.licenseNumber`. Never assert as DBPR-verified until Mia confirms.
+- **TCPA + Florida § 501.059 + CCPA hybrid consent** required on every form submission point (already in `/terms/` body + must be echoed below form fields in plain language for the lead magnet)
+- **Florida § 501.171 breach-notification** referenced in Privacy
+- **17 USC § 512** DMCA procedure live at `/dmca/` (USCO designated-agent registration TODO inline)
+
+## Mobile rules
+
+- **Breakpoints:** Tailwind defaults: sm 640, md 768, lg 1024, xl 1280, 2xl 1536
+- **Test viewports** (mandatory): 320×568 (iPhone SE), 375×812 (iPhone 15), 414×896 (Pixel 7), 768×1024 (iPad portrait), 1024+ (laptop)
+- **Touch targets:** ≥ 44 × 44 CSS px with ≥ 8 px gap (WCAG 2.5.5 AAA)
+- **No `:hover`-only affordances** — every CTA must be reachable via tap
+- **No `maximum-scale=1, user-scalable=no` viewport meta** (forbidden — breaks WCAG 1.4.4 Resize Text). Site uses `maximum-scale=5` per layout.tsx.
+- **Form input font-size ≥ 16px** to prevent iOS Safari focus-zoom (per `docs/RESEARCH_MOBILE_A11Y.md`)
+- **Sticky-header `scroll-padding-top`** to handle anchor-jumps + back-nav scroll-restore
+- **`100dvh` instead of `100vh`** on hero where viewport-height-dependent (handles iOS Safari URL bar collapse)
+- **Bottom-fixed CTAs** must honor `env(safe-area-inset-bottom)` on iOS
+
+## Screenshot acceptance criteria
+
+For visual evidence in audit cycles + handoff docs:
+
+- **Tool:** `google-chrome --headless=new --no-sandbox --disable-gpu --hide-scrollbars`
+- **Capture flag:** `--screenshot=<file>` with `--window-size=<W>,<H>`
+- **Render budget:** `--virtual-time-budget=20000` (20s) — **mandatory minimum** to avoid Cinzel font-display:swap paint artifacts (12s is too short; produces low-contrast H1 false-positives)
+- **Cache-bust query:** append `?_=$(date +%s)` to URL when targeting live staging post-deploy (per memory `feedback_caddy_dokploy_cache_bust.md`)
+- **Coverage:** 5 viewports × N routes; minimum routes = home + about + 1 service page + 1 market detail + 1 lead magnet/guide page + 1 legal
+- **Acceptance per screenshot:**
+  - H1 rendered in correct color (cream-50 on navy/image; navy-800 on cream)
+  - Brass eyebrow present and readable on its surface
+  - Primary CTA visible above-the-fold on mobile (375×812 minimum)
+  - Photo not stretched, not pixelated, dimensions match repo source-of-truth
+  - Footer trust strip + copyright row visible on every viewport (or scroll-evidence if below fold)
+  - No layout shift between adjacent viewports (320 → 375 → 414 should be a gradual reflow, not a snap)
+
+**Visual evidence reject criteria:**
+- H1 invisibly low-contrast (re-capture at higher virtual-time-budget; if persists, escalate to CSS investigation)
+- CTA missing chevron icon
+- Brass eyebrow absent on hero (component contract violation)
+- Footer trust strip missing logos (logo path drift; investigate)
+- Image rendering as broken-image icon (URL fingerprint failure)
+
+## Drift detection
+
+- `bun run audit:completeness` is the structural-drift guardrail. Runs `audit:all`. Required green before deploy.
+- `docs/WORLD_CLASS_REALTOR_SITE_GAP_MATRIX.md` is the page-by-page coverage map. Refresh each cycle.
+- Cato cross-vendor re-audit per memory `feedback_cato_structured_verdict_prompt.md` after each design-affecting commit at E4/E5.
+
+## Cross-references
+
+- `app/globals.css` — `@theme` token block (canonical color + font definitions)
+- `src/components/Hero.tsx` — Hero component contract enforced
+- `src/components/SiteFooter.tsx` — footer 3-row structure
+- `src/components/MarketCard.tsx` — card hover lift + chevron rules
+- `src/components/CTAStrip.tsx` — section-close CTA rules
+- `src/lib/site.ts` — SITE constants
+- `src/lib/mia.ts` — MIA voice + brokerage + contact constants
+- `docs/RESEARCH_MOBILE_A11Y.md` — mobile + accessibility deep-audit research
+- `docs/RESEARCH_COMPLIANCE_LOGOS.md` — official asset URLs + regulatory citations
+- `docs/COMPLIANCE_GATE_2026_05_08.md` — 10-axis Compliance Gate verdict
+- `docs/PRODUCTION_READINESS_AUDIT_2026_05_08.md` + `_PM.md` — 22-pillar scorecards
+
+exec
+/bin/bash -lc "sed -n '1,260p' docs/PRINCIPAL_DECISION_REGISTER.md" in /home/torrey/code/mia-sanabria-website
+ succeeded in 0ms:
+# Principal Decision Register — Mia Sanabria Realtor Site
+
+**Purpose:** ambiguous constraint readings + content-policy decisions that require explicit principal authorization. The Website Production Loop skill v0.2.0 §6 mandates these be surfaced as decision cards rather than silently resolved.
+
+**Status taxonomy:**
+
+- `OPEN` — awaiting principal decision
+- `RECOMMENDATION_PENDING` — researched, awaiting principal review
+- `DECIDED` — principal has made the call; cite the source-of-truth and date
+- `STALE` — situation changed; re-surface as new card
+
+---
+
+## Card 1 — License-rendering interpretation
+
+- **Status:** OPEN (raised cycle-3, restated cycle-4)
+- **Surface:** `src/lib/mia.ts:45` currently has `licenseNumber: "SL3405877"`; `src/components/SiteFooter.tsx` renders it via `MIA.unverified.licenseNumber ? render : null`
+- **Constraint:** ISA §Constraints line 54 — "license # / designations / languages / display office stay placeholder in production until Mia confirms in writing"
+
+### Two coherent readings
+
+**Reading A:** "placeholder" includes the `unverified.*` namespace flag — the comment at `src/lib/mia.ts:40-44` justifies this as "cited across multiple public-web sources" pending DBPR primary-source. Render is acceptable because the data layer marks it unverified; null-guard prevents future regression.
+
+**Reading B:** "placeholder" means the rendered HTML must be null until DBPR primary-source confirmation. The current truthy field bypasses the constraint. Per cycle-4 Team E (compliance-severity classifier), this is a `statutory-borderline` issue — the FREC requires the brokerage's stated license number to be accurate, and rendering an unverified number invites a "false advertising" interpretation. Cycle-3 Team A + Team B + Team D + Team E + Cato all hold this reading.
+
+### Recommendation
+
+**Reading B** is the safer reading. Action if approved:
+
+```typescript
+// src/lib/mia.ts:45 — change
+licenseNumber: "SL3405877" as string | null,
+// to
+licenseNumber: null as string | null,
+```
+
+Restore once Mia confirms DBPR-verified in writing. The `unverified.*` namespace plus the null-guard already in place prevents the rendered string from ever appearing without explicit Mia approval.
+
+### Authorization required
+
+Principal must answer: A, B, or "stay current state until Mia confirms." Do not silently advance.
+
+---
+
+## Card 2 — TCPA mechanics on contact + valuation forms
+
+- **Status:** RECOMMENDATION_PENDING (raised cycle-3 Cato §11.1, restated cycle-4 Team E)
+- **Surface:** `src/app/contact/page.tsx:188-194`, `src/app/valuation/page.tsx:170-176` — TCPA-disclosure prose was added in cycle-3
+- **Constraint:** Florida § 501.059 ("prior express written consent" standard) + 2024 FCC one-to-one consent rule (47 CFR § 64.1200)
+
+### Finding
+
+Cycle-3 added consent **prose** but no consent **mechanics** (no checkbox, no signature, no timestamp, no number-specific authorization). Florida § 501.059 + FCC require an affirmative consent mechanism, not submit-as-consent. Cycle-3 synthesis title overstated the change as "TCPA-compliant text added" — corrected in cycle-4 closeout to "TCPA-disclosure prose added (mechanics deferred to GHL form-wiring cycle)."
+
+### Recommendation
+
+Mechanics deferral is acceptable for staging. Production-grade TCPA compliance requires GHL form-wiring + checkbox-with-timestamp-and-IP audit log. Do NOT claim TCPA-compliant in marketing copy or schema until mechanics ship. Status flag in repo: `<project_root>/docs/COMPLIANCE_GATE_*.md` — TCPA axis = PARTIAL until mechanics ship.
+
+### Authorization required
+
+Principal acknowledges the staging-vs-production distinction; cycle-5 GHL form-wiring expected to close.
+
+---
+
+## Card 3 — Brand voice "family-homes" framing vs HNWI luxury-first positioning
+
+- **Status:** DECIDED — 2026-05-08 (cycle 5) — luxury/waterfront tagline locked. Supersedes prior OPEN status.
+- **Decision source of truth:** `docs/BRAND_SYSTEM_CONTRACT.md` §Tone & voice. Tagline now: `"Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach."`
+- **Implementation status:** Tagline shipped cycle 5 (commits `b40a174`, `8cf6353`); audit chain enforces no `Family Homes Where Memories Are Made` regressions via `audit:stale-terms`.
+- **Historical record (preserved):** prior tagline was `"Fort Lauderdale REALTOR® | Waterfront, Luxury, and Family Homes Where Memories Are Made"` in `src/lib/mia.ts`.
+
+### Two coherent readings
+
+**Reading A (current state):** Mia's authentic positioning includes family-warmth as a differentiator vs. clinically-luxury competitors. The tagline is HER voice. Family-friendly framing serves Eastern FtL buyers who include relocating families with kids.
+
+**Reading B (Team C / Gemini cycle-3 / Team D cycle-4):** HNWI luxury buyers don't search for "Family Homes Where Memories Are Made" — they search for "deepwater waterfront estate," "private dock access," "off-market trophy property." The current tagline targets a less-affluent segment than the rest of the site claims to. Disconnect between brand voice and positioning.
+
+### Recommendation
+
+This is a content-strategy call, not a technical correctness call. Possible compromises:
+
+1. Keep the tagline; layer a "private consultation" / "advisory" narrative on top of it on /about/ for HNWI vector
+2. Change tagline to more luxury-vector ("Eastern Fort Lauderdale waterfront, luxury, and concierge representation")
+3. Maintain dual messaging — homepage tagline soft, /buyers/ + /sellers/ + /about/ luxury-vector
+
+### Authorization (recorded)
+
+Principal authorized cycle-5 luxury/waterfront tagline; cycle-6 design lanes preserve this decision and do not propose family-homes reversion. Cycle-9 Lane Compliance Guardrail Finding 10 surfaced the prior register-vs-contract drift; this card update closes that drift.
+
+---
+
+## Card 4 — REALTOR® mark descriptive usage
+
+- **Status:** RECOMMENDATION_PENDING (raised cycle-3 Team E, restated cycle-4 Team E)
+- **Surface:** `src/lib/site.ts:21`, `src/app/about/page.tsx:59`, `src/app/contact/page.tsx:21`, `src/app/page.tsx:79` — "Fort Lauderdale REALTOR®" as descriptive phrase. `src/app/layout.tsx:40` — lowercase `"realtor"` in keywords.
+- **Constraint:** NAR Membership Marks Manual — "the term must always be capitalized when referring to a member"; descriptive usage ("Fort Lauderdale REALTOR®") is non-compliant
+
+### Recommendation
+
+Cycle-5 content sprint: replace descriptive phrasing with member-name-adjacent usage ("Mia Sanabria, REALTOR®"); capitalize "REALTOR" in keywords; remove combined REALTOR®+MLS footer graphic until MLS membership confirmed.
+
+### Authorization required
+
+Principal acknowledges the cycle-5 content-sprint scope; defer specific edits to that cycle.
+
+---
+
+## Card 5 — Combined REALTOR®+MLS footer graphic
+
+- **Status:** RECOMMENDATION_PENDING (raised cycle-3 Team E, restated cycle-4 Team E as `statutory-borderline`)
+- **Surface:** `src/components/SiteFooter.tsx:120` — uses `public/logos/realtor-r.png` as if it were a pure NAR mark, but the local asset is a combined `REALTOR®` + `MLS` graphic
+- **Constraint:** NAR/MLS attribution is structurally significant for IDX compliance; combined mark blurs trademark domains
+
+### Recommendation
+
+Replace with separate NAR mark; remove MLS attribution until Mia confirms MLS affiliation/jurisdiction in writing.
+
+### Authorization required
+
+Principal authorizes a swap of the footer trust-mark asset to a pure NAR REALTOR® mark.
+
+---
+
+## Card 6 — Spanish hreflang for SE FL Hispanic markets
+
+- **Status:** OPEN (raised cycle-3 Cato §11.6, cycle-4 Team D)
+- **Surface:** `src/app/layout.tsx` — `alternates.languages = { "en-US": SITE.url, "x-default": SITE.url }`. No `es` entry currently.
+- **Constraint:** ISA defers Spanish-language status until Mia confirms language proficiency in writing
+
+### Two coherent readings
+
+**Reading A:** Defer Spanish hreflang entirely until Mia confirms Spanish proficiency AND Mia confirms `/es/` localized routes are warranted.
+
+**Reading B (Team D cycle-4):** Use self-referential English alternates now (`en-US` / `en` / `x-default`) and add `es-*` only once real localized `/es` pages are published and tested 200. The current state already does Reading B for `en-US` + `x-default` — the question is whether to add `es-US` self-referencing English (placeholder for future).
+
+### Recommendation
+
+**Stay with Reading A** until Mia confirms language status. Do not emit `hreflang="es-*"` to non-existent `/es/` routes; do not pre-emptively claim Spanish coverage. Schema marketing claim ≠ language reality.
+
+### Authorization required
+
+Principal acknowledges the deferral; cycle following Mia language confirmation can ship `/es/` routes + corresponding hreflang.
+
+---
+
+## How this register is used
+
+- Each cycle's OBSERVE phase reads this register; OPEN cards are surfaced in the cycle's mission intake
+- Each cycle's LEARN phase appends new cards if surfaced; updates existing cards' status
+- DECIDED cards stay in the register as historical record; do not re-flag in subsequent cycles
+- The register file is committed to the project repo so the decision history is durable
+
+exec
+/bin/bash -lc "sed -n '1,320p' docs/CYCLE_11_FOOTER_LOGO_TRUST_STRIP_AUDIT.md" in /home/torrey/code/mia-sanabria-website
+ succeeded in 0ms:
+# Cycle 11 — Footer Logo / Trust-Strip Deep Audit
+
+**Captured:** 2026-05-10T02:43–02:50Z
+**Surface:** `https://miasanabriarealtor.trueidea.com` (footer trust strip)
+**Source files:**
+- `src/components/SiteFooter.tsx:114-144` (FooterTrustMark layout)
+- `public/logos/lpt-realty.png` (1097 × 1097, RGBA)
+- `public/logos/realtor-r.png` (257 × 118, RGBA — combined REALTOR®+MLS mark)
+- `public/logos/equal-housing.png` (150 × 161, RGBA)
+
+**Principal review (2026-05-09):** *"The footer logos/trust-strip items — LPT Realty, REALTOR®, Equal Housing Opportunity — look inconsistent."*
+
+---
+
+## 1. Visual evidence
+
+Captured `/tmp/mia-cycle11-footer-before/footer-only-404-{375,1280}.png` against live staging. The 375-wide capture clearly shows the three trust marks rendered with three DIFFERENT visual treatments:
+
+| Mark | What renders today (BEFORE) |
+|---|---|
+| **LPT Realty** | Faintly-visible white-on-white "LPT" inside a `bg-white/95` square tile (`h-10 w-10`). The tile shows; the logo content does not. |
+| **REALTOR®** | The combined REALTOR®+MLS+MULTIPLE LISTING SERVICE mark, rendered with its own border + text on transparent background → dark stroke on dark navy → low contrast. |
+| **Equal Housing Opportunity** | Black house glyph + black "EQUAL HOUSING OPPORTUNITY" baked-in text → black on navy → barely visible. |
+
+Three different treatments + three different visibility outcomes is the root cause of the "looks inconsistent" complaint.
+
+## 2. Pixel-truth from `sharp` metadata
+
+```
+public/logos/lpt-realty.png        1097 × 1097  RGBA  pixelMean R/G/B 63.7 · alphaMean 62.6   →  white-on-transparent (mostly transparent)
+public/logos/realtor-r.png         257 × 118    RGBA  pixelMean R/G/B 137.8 · alphaMean 176.1 →  combined R+MLS mark, dark-on-transparent + transparent gaps
+public/logos/equal-housing.png     150 × 161    RGBA  pixelMean R/G/B 0.2 · alphaMean 117.2   →  black-on-transparent
+```
+
+| Asset | Visible on white bg? | Visible on navy bg? |
+|---|:-:|:-:|
+| LPT (white-on-transparent) | ❌ | ✅ |
+| REALTOR®+MLS (dark-on-transparent) | ✅ | low contrast |
+| EHO (black-on-transparent) | ✅ | ❌ |
+
+The current footer puts LPT on a `bg-white/95` tile (best for dark-on-transparent assets but **wrong** for white-on-transparent — invisibility) and the other two directly on navy (best for white-on-transparent but **wrong** for black-on-transparent — invisibility). Each of the three asset types is paired with the **wrong** background.
+
+## 3. Sizing inconsistency (separate axis)
+
+| Mark | Source aspect | Rendered size | Tailwind class |
+|---|:-:|:-:|---|
+| LPT | 1:1 (square) | 40 × 40 px | `h-10 w-10 rounded-sm bg-white/95 p-1` |
+| REALTOR®+MLS | 2.18:1 (wide rect) | ~60 × 28 px | `h-7 w-auto` |
+| EHO | 0.93:1 (slight portrait) | ~37 × 36 px | `h-9 w-auto` |
+
+Three different heights (40 / 28 / 36 px), three different aspect treatments (square / wide / portrait-square), no shared baseline. Even if all three were perfectly visible, the strip would still feel ad-hoc.
+
+## 4. Label semantic mismatch (separate axis)
+
+The footer renders external `<span>` labels under each mark:
+- LPT logo → label "LPT Realty" ✅ matches asset
+- REALTOR®+MLS combined logo → label "REALTOR®" ⚠ **misleading** — the asset visually says "REALTOR® · MULTIPLE LISTING SERVICE · MLS" but the label says only "REALTOR®"
+- EHO logo with baked-in text → label "Equal Housing Opportunity" ⚠ **redundant** — the asset already contains this text
+
+The label↔asset coupling needs intention. For Cycle 11 visual scope, I keep the labels as-is and unify visual treatment.
+
+## 5. Compliance constraints (PRINCIPAL_DECISION_REGISTER read)
+
+- **Card 4 (REALTOR® mark descriptive usage)** — `RECOMMENDATION_PENDING`. Touches *content* (member-name-adjacent rewriting). **Out of Cycle 11 scope** (requires content sprint).
+- **Card 5 (Combined REALTOR®+MLS footer graphic)** — `RECOMMENDATION_PENDING`. Recommendation: replace with separate NAR mark; remove MLS attribution until Mia confirms MLS membership/jurisdiction. **Asset replacement requires principal authorization** — out of Cycle 11 scope.
+- **Mission boundary** (this prompt): "Do NOT work on REALTOR®/MLS legal decisions beyond visual/spacing/asset consistency." — visual treatment is in scope; asset swap is not.
+- **NAR Membership Marks Manual** explicitly permits monochrome variants of the REALTOR® mark in single-color treatments (white-on-dark and black-on-light are both allowed).
+- **HUD EHO** mark monochrome variants are widely accepted.
+- **LPT Realty** is brand-discretionary; white-on-navy IS the canonical brand color (per `public/source-assets/logo-on-navy-preview.png`).
+
+**Conclusion:** a uniform monochrome white-on-transparent treatment via CSS filter is compliance-safe AND visually coherent.
+
+## 6. Recommended fix (Cycle 11 — visual-only, compliance-safe)
+
+### 6.1 Treatment
+
+Apply uniform CSS filter `[filter:brightness(0)_invert(1)] opacity-80` to all three trust-mark images:
+
+| Asset | Before filter | After filter |
+|---|---|---|
+| LPT (white-on-transparent) | white pixels visible only on dark | `brightness(0)` → black; `invert(1)` → white. **Result: white-on-transparent (unchanged)** ✅ |
+| REALTOR®+MLS (dark-on-transparent) | dark pixels visible only on light | `brightness(0)` → black-on-transparent; `invert(1)` → **white-on-transparent** ✅ |
+| EHO (black-on-transparent) | black pixels visible only on light | `brightness(0)` → still black; `invert(1)` → **white-on-transparent** ✅ |
+
+All three render as discreet white silhouettes at 80% opacity on the deep-navy footer.
+
+### 6.2 Sizing
+
+Unify rendered height to `h-10` (40 px) on desktop, `h-9` (36 px) on mobile:
+
+| Mark | New class |
+|---|---|
+| LPT | `h-9 w-9 lg:h-10 lg:w-10` (preserves square aspect; brand-correct) |
+| REALTOR®+MLS | `h-9 lg:h-10 w-auto` (scales width by aspect; preserves combined-mark legibility) |
+| EHO | `h-9 lg:h-10 w-auto` (scales by aspect; the slight-portrait shape stays) |
+
+### 6.3 Background
+
+Remove `bg-white/95 p-1` from LPT tile (no longer needed once LPT renders white-on-navy via filter). All three marks sit directly on the navy footer surface.
+
+### 6.4 Spacing + alignment
+
+- Existing `gap-6 lg:gap-10` is good; widen to `gap-8 lg:gap-12` for more luxury breathing room.
+- `lg:flex-row lg:items-center lg:justify-center` preserves the current centered horizontal layout on desktop.
+- `flex-col items-center text-center` mobile stacking preserves; gap stays compact on narrow viewports.
+
+### 6.5 Labels
+
+Keep current labels ("LPT Realty", "REALTOR®", "Equal Housing Opportunity") and styling (`font-display text-[10px] uppercase tracking-[0.3em] text-cream-200/80`). They become consistent typographic rhythm under the unified silhouettes.
+
+### 6.6 Aspect-ratio compromise
+
+The REALTOR®+MLS asset is 2.18:1 (wide), so at `h-10` it renders ~87 px wide vs. LPT 40 × 40 and EHO ~37 × 40. The visual centers won't perfectly align on mass alone. Two mitigations:
+- Use `flex` with `justify-center` so the strip is centered as a row, not as individual columns (avoids visual "drift" at narrow widths).
+- Accept the slight width disparity as honest — the assets are what they are; equal heights + monochrome treatment is the best achievable luxury feel without an asset swap.
+
+If the aspect disparity reads poorly in the AFTER screenshots, the next step is a **principal-authorized asset crop** (extract just the R-block from the combined R+MLS asset). That requires Card 5 authorization. Defer.
+
+## 7. Anti-criteria (what this fix MUST NOT do)
+
+- ❌ MUST NOT change the SEMANTIC of any compliance asset (REALTOR®/MLS combined stays combined; EHO stays EHO; LPT stays LPT).
+- ❌ MUST NOT swap to a NAR-clean R-only asset (Card 5 authorization required).
+- ❌ MUST NOT alter the legal text labels under each mark.
+- ❌ MUST NOT add new colors / fonts / tokens.
+- ❌ MUST NOT regress the existing `audit:brand` `footerTrustElements` sentinel.
+- ❌ MUST NOT introduce glassmorphism / gradient borders.
+
+## 8. Validation method
+
+| Check | Tool | Expected post-fix |
+|---|---|---|
+| All three marks visible on navy | full-page screenshot @ 320 + 375 + 768 + 1280 | white silhouettes at 80% opacity, all three discernible |
+| Uniform height | screenshot pixel measurement | h-9 mobile / h-10 desktop ±1px |
+| `audit:brand` `footerTrustElements` | `bun run audit:brand` | PASS (preserved sentinel) |
+| `audit:images` LPT/REALTOR/EHO assets | `bun run audit:images` | PASS (assets unchanged) |
+| GPT-5.5 visual judgment | predeploy + live acceptance | PASS or PASS_WITH_MINOR_CONCERNS |
+
+## 9. Decision log
+
+- **D-Cycle11-03 (2026-05-10T02:50Z):** Footer trust-strip fix scope = **visual-only monochrome white treatment via CSS filter**. Asset swap (Card 5) deferred — requires principal authorization. Asset semantics preserved. Filter approach validated on all three asset types via brightness/invert algebra.
+- **D-Cycle11-04 (2026-05-10T02:50Z):** Reject `bg-white/95 p-1` tile retention. The white tile only existed to make LPT visible; once LPT renders correctly via filter, the tile becomes anti-luxury.
+
+---
+
+**Phase 4 result: ✅ Footer trust-strip root cause identified at three levels (visibility / sizing / semantic-coupling). Visual-only fix specified, compliance-safe. Card 5 boundary respected — asset swap not attempted. Implementation ready for Phase 7.**
+
+codex
+I’ve confirmed the current footer mismatch and the Cycle 11 recommendations in-code. I’ll now verify what the compliance references in-repo say about REALTOR® and Equal Housing treatments so the audit can anchor Question 1 with primary sources before I return the JSON findings.
+exec
+/bin/bash -lc "sed -n '1,260p' docs/RESEARCH_COMPLIANCE_LOGOS.md" in /home/torrey/code/mia-sanabria-website
+ succeeded in 0ms:
+# Mia Sanabria Realtor Site — Compliance & Logo Asset Research
+
+**Researcher:** Ava Chen | **Date:** 2026-05-08 | **Subject:** miasanabriarealtor.trueidea.com (LPT Realty / SL3405877)
+
+All URLs verified resolving (HTTP 200) at time of writing. Confidence tags inline: [HIGH] / [MED] / [LOW].
+
+---
+
+## 1. NAR REALTOR® R Logo
+
+**Official source:** https://www.nar.realtor/logos-and-trademark-rules/the-realtor-logo [HIGH]
+
+**Direct download paths (no login required, public-internet hosted on nar.realtor):** [HIGH — confirmed via fetch]
+
+| Variant | Format | Path (prefix with `https://www.nar.realtor`) |
+|---|---|---|
+| Blue (block R, primary) | EPS print | `/sites/default/files/images/logos/NAR/print_R_blue.eps` |
+| Blue | PNG (CMYK) | `/sites/default/files/2025-07/nar_membership_cmyk.png` |
+| Blue | JPG (web) | `/sites/default/files/downloadable/web_R_blue.jpg` |
+| Black | EPS print | `/sites/default/files/documents/print_R_blk.eps` |
+| Black | PNG | `/sites/default/files/2025-07/nar_membershipmark_black.png` |
+| Black | JPG (web) | `/sites/default/files/downloadable/web_R_blk.jpg` |
+| White / transparent | PNG | `/sites/default/files/2025-07/nar_membershipmark_white.png` |
+
+NAR does **not** ship an SVG of the official R logo from this page. [HIGH] If you need vector for crisp scaling on the site, convert the EPS in Illustrator/Inkscape and keep proportions identical. Third-party SVGs (seeklogo, freelogovectors, Wikimedia) exist but are unofficial — do not use for production. [MED]
+
+**NAR Membership Marks Manual (governing rules):** https://www.nar.realtor/membership-marks-manual and PDF at https://www.nar.realtor/sites/default/files/documents/2021-membership-marks-manual-2021-12-23.pdf [HIGH]
+
+**Display rules (from manual + NAR official site):** [HIGH]
+
+- **Area of isolation:** clear space equal to **half the width of the block "R"** must be maintained on all sides — no other type, image, border, or page edge inside that buffer.
+- **Minimum size:** if the logo is reduced below the published minimum, the block "R", the term REALTOR®, and the ® must remain readable and proportional.
+- **Maximum:** if enlarged beyond 3 ft wide, registration marks must be readable from 20 ft.
+- **Color:** any color allowed provided contrast against background is "sharp and adequate." Standard ships are blue, black, white. Block-R is the canonical mark; outline variants are not officially distributed.
+- **The ® symbol is part of the logo itself** — never strip it. When the term REALTOR® appears in body text adjacent to the logo, it must also carry the ®.
+- **Format of the term in text:** preferred = ALL CAPS + ® (e.g., "REALTOR®"). Capital + ® is the form-of-use rule.
+- **Adjacency to member name:** the manual does not prescribe a fixed pixel/inch distance, but the logo must accompany an identified NAR member (Mia Sanabria, SL3405877) and may not stand alone as if it were a brokerage mark.
+
+**Licensing for non-members:** [HIGH] "Only members of NAR can call themselves a REALTOR®." Use of the marks is licensed to NAR members in connection with their real estate business only. **Confirm Mia's NAR membership directly** — LPT Realty agents are typically presumed members because LPT operates as a REALTOR®-affiliated brokerage, but membership is held at the local-association level and must be active for use to be authorized. Verify via Mia's local board (e.g., MIAMI Association of REALTORS® or BPS Realtors) or her NRDS/M1 number before publishing the logo. **If she is not a current dues-paying member, do not display the R logo or use the term REALTOR®.**
+
+---
+
+## 2. Equal Housing Opportunity (EHO) Logo
+
+**Primary official sources:** [HIGH]
+- HUD: https://www.hud.gov/contactus/hudgraphics
+- NAR mirror with usage notes: https://www.nar.realtor/logos-and-trademark-rules/equal-housing-opportunity-logo
+
+**HUD direct download links (verified):** [HIGH]
+- 0.50″ TIF (74 KB): `https://www.hud.gov/sites/dfiles/FHEO/images/fheo50.tif`
+- 1.00″ EPS (373 KB): `https://www.hud.gov/sites/dfiles/FHEO/images/fheo100.eps`
+- 4.00″ TIF (5.47 MB): `https://www.hud.gov/sites/dfiles/FHEO/images/fheo400.tif`
+- HUD also ships **TIF / EPS / BMP** at 300 dpi. SVG/PNG **not officially provided by HUD** — convert from EPS for web. [HIGH]
+- NAR ships JPG/EPS/PNG variants on the NAR EHO page above (no login). [HIGH]
+
+**Regulatory basis:** [HIGH]
+- Fair Housing Act § 804(c) (42 U.S.C. § 3604(c)) — prohibits discriminatory advertising.
+- HUD's old advertising regulation **24 CFR Part 109 was rescinded effective May 1, 1996**. HUD has stated those guidelines still represent the agency's enforcement position.
+- The currently-active enforcement regulation is **24 CFR § 100.75 — Discriminatory advertisements, statements and notices** (https://www.law.cornell.edu/cfr/text/24/100.75). [HIGH]
+- HUD's policy under both 109 and 100.75: "All advertising of residential real estate for sale, rent, or financing should contain an equal housing opportunity logotype, statement, or slogan." Choice of logotype/statement/slogan depends on media type and ad size. [HIGH]
+
+**Practical compliance pattern for a Florida realtor website:** [HIGH for industry standard, MED for "strictly required by statute"]
+- **Footer of every page** carries the EHO logo + the words "Equal Housing Opportunity" (text alongside the symbol is standard and avoids ambiguity for screen-readers).
+- Logo alone is acceptable in space-constrained footers, but text-plus-logo is the industry default and what large brokerages (Compass, Coldwell Banker, Sotheby's) ship.
+- For an **agent personal site that does not advertise specific units**, the logo display is treated as best-practice / risk-mitigation rather than a black-letter requirement — but every Florida brokerage compliance manual instructs agents to display it anyway. Treat as mandatory for our purposes. [MED]
+- No license required. No attribution required.
+
+---
+
+## 3. MLS Compliance / IDX Disclosure
+
+**Source of truth (Florida — Stellar MLS, the largest):** [HIGH]
+- Rules and Regulations index: https://www.stellarmls.com/resources/rules-regulations
+- Sept 2025 PDF (full text): https://irp.cdn-website.com/3d0f9886/files/uploaded/9-16-2025-Rules_and_Regulations.pdf
+- NAR Policy Statement 7.58 (model IDX policy all FL MLSs follow): https://www.nar.realtor/handbook-on-multiple-listing-policy/advertising-print-and-electronic-section-1-internet-data-exchange-idx-policy-policy-statement-7-58
+
+**Note on the SE Florida market:** Mia is using **sef.mlsmatrix.com** which is the SEF MLS (BeachesMLS / RWorld / Broward, Palm Beaches & St. Lucie REALTORS®) Matrix instance, not Stellar. Mia's MLS jurisdiction depends on her LPT Realty office; SE FL agents can be on SEF, MIAMI (via SEF cross-board feed), or both. The disclosure rules across all three follow NAR Policy 7.58 and are functionally identical. [HIGH]
+
+**Required disclosure language (industry standard, RI-MLS verbatim example): [HIGH]**
+
+> "IDX information is provided exclusively for consumers' personal, non-commercial use and may not be used for any purpose other than to identify prospective properties consumers may be interested in purchasing. Information is deemed reliable but is not guaranteed."
+
+Plus per-listing **broker attribution**: "Courtesy of [Listing Brokerage Name]" near each photo/listing card. [HIGH]
+
+**Placement:** [HIGH]
+- Per NAR 7.58, must be in a "reasonably prominent location" with "readily visible color and typeface." Footer of every IDX-displaying page **and** the IDX results page is the de-facto standard.
+- Per-listing brokerage attribution must appear on each individual listing card.
+
+**Critical question — does miasanabriarealtor.trueidea.com need this if it only iframes sef.mlsmatrix.com?** [MED → HIGH for the practical answer]
+
+- **NAR Policy 7.58 explicitly contemplates "framing of board, MLS, or other publicly-accessible sites" as an MLS-permitted display option.** When an agent iframes an MLS-hosted Matrix portal, the IDX display is technically rendered by the MLS's own server, not the agent's. The MLS's portal carries its own footer/disclaimers inside the iframe — the agent site is just embedding it. [HIGH from Policy 7.58 fetch]
+- **However:** local MLSs (SEF, MIAMI, Stellar) often require the participant to display the broker reciprocity logo and disclaimer on the **page hosting the iframe** as well, because consumers don't reliably read inside iframes. This is treated as belt-and-suspenders compliance.
+- **Recommendation:** add the standard IDX disclaimer + EHO + LPT Realty broker attribution to the page footer that hosts the iframe. Cost is one paragraph; downside of omission is potential MLS audit flag and revocation of IDX feed access. [HIGH — standard industry practice]
+
+**MLS broker-reciprocity logo:** sourced from the local MLS portal (SEF / BeachesMLS via Matrix > IDX tools, or the MLS's "Logos" page). The IDX logo is distinct from the EHO logo and the NAR REALTOR® R. Each MLS supplies its own. **Action item for next session:** confirm Mia's specific MLS membership and pull the IDX logo from that MLS's broker resources page.
+
+---
+
+## 4. FREC Advertising Rules — Florida Administrative Code
+
+**Primary rules:** [HIGH]
+- **61J2-10.025 — Advertising:** https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-61J2-10-025 + DBPR PDF https://www2.myfloridalicense.com/re/documents/FREC%20Meeting%20Documents/2019/0319MAR/0319FREC_Rule61J2-10.025.pdf
+- **61J2-10.026 — Team or Group Advertising:** https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-r-61J2-10-026
+- **Florida Realtors guide:** https://www.floridarealtors.org/law-ethics/library/realtor-advertising-rules-florida
+
+**Key requirements for the Mia site:** [HIGH]
+
+| Requirement | Rule | Application |
+|---|---|---|
+| Brokerage licensed name must appear | 61J2-10.025(1) | Display "LPT Realty, LLC" (the registered firm name with DBPR) on every page. |
+| Brokerage name placement on websites | 61J2-10.025(2) | "Adjacent to or immediately above or below the point of contact information." Phone/email/address blocks must carry "LPT Realty" beside them. Footer is the canonical pattern. |
+| Brokerage name must not be smaller than agent name | 61J2-10.026 | If "Mia Sanabria" appears at 24px, "LPT Realty" must be ≥24px in the same context. |
+| Reasonable-person test | 61J2-10.025(1) | Site must make clear it's a licensed real estate professional (e.g., "Realtor" / "Real Estate Agent" present). |
+| No fraudulent / false / deceptive / misleading content | 61J2-10.025 | Substantiate every superlative. |
+
+**License number display:** [HIGH] **Rule 61J2-10.025 does NOT require display of a license number** in advertising. Display of "SL3405877" is **best practice and trust-building** (especially for luxury) but not a regulatory mandate. Many top FL agents display it in the footer or on an "About" page. Recommendation: include it.
+
+**Superlatives ("#1", "best", "top producer"):** [HIGH for principle, MED for specific enforcement]
+- Not explicitly enumerated in 61J2-10.025, but the rule's "fraudulent, false, deceptive or misleading" prohibition covers them.
+- FREC and Florida Realtors guidance: these claims must be **substantiable** — if you say "#1 Luxury Agent in Fort Lauderdale," you need a defensible source (e.g., MLS volume ranking with date, third-party publication, defined geography). Vague "Top Producer" without context is high-risk.
+- Penalties: fine, license suspension, or revocation per FS 475.
+- **Luxury-specific recommendation:** prefer factual, dated, geo-bounded claims ("$X million in 2025 sales volume in Fort Lauderdale per BeachesMLS data") over vague superlatives.
+
+**Team-name rules (61J2-10.026):** [HIGH] If "Mia Sanabria Group" or similar is used:
+- Cannot include "Realty," "Brokerage," "Company," "LLC," "Real Estate," "Properties," etc. — anything that implies a separate entity.
+- "Team" or "Group" is allowed.
+- Brokerage name must not be in larger print than the team name (i.e., LPT Realty ≥ team name).
+- Must designate a licensee responsible for advertising compliance with the broker.
+
+**Unique luxury items:** [LOW for specific FL rule, MED for industry] FL has no luxury-specific advertising rule. The luxury risks are downstream — Fair Housing testers and aggressive opposing counsel scrutinize claims of "exclusive," "private," "off-market" because they can imply steering or pocket-listing violations of NAR's Clear Cooperation Policy 8.0 (which Stellar enforces — see https://www.stellarmls.com/clearcooperation). Avoid "private listing" language for marketed inventory.
+
+---
+
+## 5. Privacy Policy / Terms / DMCA / Accessibility
+
+### Privacy Policy
+
+**LPT Realty corporate policy:** https://www.lpt.com/privacy [HIGH] — covers lpt.com only and explicitly disclaims third-party (i.e., agent) sites. **The agent site needs its own.** [HIGH from fetch]
+
+**Recommended templates / generators:** [HIGH]
+- **Termly:** https://termly.io/products/privacy-policy-generator/ — free tier, GDPR/CCPA/CPRA, structured wizard. Industry standard for small operator sites.
+- **iubenda:** https://www.iubenda.com/en/help/36403-free-privacy-policy-generator — free policy with auto-update; supports 27 languages; injects third-party-service disclosures (useful if Mia uses GA4, Meta Pixel, IDX iframe, scheduling widgets).
+- **Florida Realtors / FREC bar:** does not publish a free privacy-policy template. [HIGH]
+
+**Required disclosures specific to a FL realtor site collecting leads:**
+- What's collected (name, email, phone, search history, IDX favorites).
+- Third-party processors (LPT Realty, MLS, GoHighLevel, Google Analytics, etc.).
+- Florida-specific: not a CCPA state, but if Mia ever takes a CA lead, CCPA disclosure should apply. Florida Digital Bill of Rights (FDBR) — effective 2024 — applies only to controllers ≥$1B revenue, so individual agents are exempt. [HIGH]
+- TCPA-friendly contact-form consent for SMS (10DLC compliance) is a separate but related need.
+
+### DMCA Designated Agent
+
+**Authority:** US Copyright Office Designated Agent Directory — https://www.copyright.gov/dmca-directory/ + FAQ https://www.copyright.gov/dmca-directory/faq.html [HIGH]
+
+**Stellar's broker guidance:** https://www.stellarmls.com/broker-dmca [HIGH] — recommends each broker register a designated agent.
+
+**Does Mia need her own?** [MED]
+- DMCA registration is required to **claim safe-harbor** against copyright-infringement liability.
+- The site qualifies as a "service provider" under 17 U.S.C. § 512(k)(1) only if it stores/displays user-generated content or third-party material. **An IDX iframe loading sef.mlsmatrix.com points the user to MLS-hosted material — the iframe content lives on the MLS server, not Mia's.** This is the strongest argument that Mia herself does not need to register.
+- However: if the site has a contact form, blog comments, or any user-uploaded photos/testimonials, that's user-generated content and registration becomes prudent.
+- **Cost:** $6 per registration / amendment / resubmission. [HIGH]
+- **Renewal:** every 3 years. [HIGH]
+- **LPT Realty corporate DMCA agent:** LPT's privacy policy references DMCA but **does not publish a corporate designated agent that explicitly covers agent sub-sites.** [HIGH from fetch] Search the Copyright Office directory at https://www.copyright.gov/dmca-directory/ for "LPT Realty" before publishing — if LPT is registered, the agent site can reference that designation. If not, register Mia's designated agent for $6.
+
+### Accessibility (ADA / WCAG)
+
+**Standards:** [HIGH]
+- **WCAG 2.1 Level AA** — federal courts and DOJ benchmark for private-business websites. Quickref: https://www.w3.org/WAI/WCAG21/quickref/
+- **DOJ ADA web guidance:** https://www.ada.gov/resources/web-guidance/ — published April 2024, treats commercial websites as "places of public accommodation" under ADA Title III.
+- Section 508 applies to federal-government sites only — not relevant for Mia.
+
+**Florida litigation risk:** [HIGH] Florida is the **#2 state for ADA web-accessibility lawsuits** (after NY). 487 cases filed in 2025 (24.2% of national total). Settlements typically $5K–$75K + attorney fees. Real estate and luxury-services sites are common targets.
+
+**Standard accessibility statement contents:** [HIGH]
+- Statement of WCAG 2.1 AA conformance target.
+- Ongoing-improvements language.
+- Named contact for accessibility issues (email + phone).
+- Date of last review.
+- Limitations / known issues (third-party iframe content like the MLS Matrix IDX is a common carve-out).
+
+**Practical baseline implementation for the Next.js site:**
+- Real semantic HTML (already largely true with the static export).
+- Alt text on every image.
+- Color contrast ≥ 4.5:1 for body text.
+- Visible focus rings on interactive elements.
+- Form labels properly associated.
+- Skip-to-content link.
+- IDX iframe carries its own a11y story — link out option for users who can't access the iframe is best practice.
+
+---
+
+## Recommended Footer Block (drop-in spec for next session)
+
+```
+[EHO logo image]  [LPT Realty logo or text]  [REALTOR® R logo, if Mia's NAR membership confirmed]
+
+LPT Realty, LLC | Mia Sanabria, Licensed Florida Real Estate Agent SL3405877
+[Office address] · [Office phone] · mia@miasanabriarealtor.com
+
+© 2026 Mia Sanabria. All rights reserved.
+
+Equal Housing Opportunity. Information deemed reliable but not guaranteed.
+IDX listings provided courtesy of [SEF MLS / Beaches MLS] for consumers' personal,
+non-commercial use; not for redistribution.
+
+Privacy Policy · Terms of Service · Accessibility Statement · DMCA
+```
+
+---
+
+## Open Items for Next Session
+
+1. **Verify Mia's NAR membership status** (gates use of REALTOR® R logo + term).
+2. **Confirm Mia's MLS jurisdiction** — SEF MLS / BeachesMLS / MIAMI / Stellar — to pull the correct broker-reciprocity logo and IDX disclaimer per that MLS's specific rules.
+3. **Search Copyright Office DMCA directory** for "LPT Realty" before deciding whether Mia registers her own designated agent.
+4. **Generate Privacy Policy** via Termly or iubenda once data-collection inventory is finalized (GA4 / Meta Pixel / lead form / scheduling tool / IDX iframe).
+5. **Run a WCAG 2.1 AA pass** with axe-core or Lighthouse before launch — especially color contrast on luxury dark-theme sections.
+6. **Substantiate any superlatives** in copy ("#1 luxury agent in [neighborhood]") with dated MLS data citation in the footer or About page.
+
+---
+
+## Sources
+
+- [NAR REALTOR® Logo page](https://www.nar.realtor/logos-and-trademark-rules/the-realtor-logo)
+- [NAR Logos & Trademark Rules](https://www.nar.realtor/logos-and-trademark-rules)
+- [NAR Membership Marks Manual (overview)](https://www.nar.realtor/membership-marks-manual)
+- [NAR Membership Marks Manual 2021 PDF](https://www.nar.realtor/sites/default/files/documents/2021-membership-marks-manual-2021-12-23.pdf)
+- [NAR Equal Housing Opportunity Logo](https://www.nar.realtor/logos-and-trademark-rules/equal-housing-opportunity-logo)
+- [HUD Equal Housing Opportunity Graphics](https://www.hud.gov/contactus/hudgraphics)
+- [24 CFR § 100.75 Discriminatory advertisements](https://www.law.cornell.edu/cfr/text/24/100.75)
+- [NAR Policy Statement 7.58 IDX Display](https://www.nar.realtor/handbook-on-multiple-listing-policy/advertising-print-and-electronic-section-1-internet-data-exchange-idx-policy-policy-statement-7-58)
+- [Stellar MLS Rules and Regulations](https://www.stellarmls.com/resources/rules-regulations)
+- [Stellar MLS R&R Sept 2025 PDF](https://irp.cdn-website.com/3d0f9886/files/uploaded/9-16-2025-Rules_and_Regulations.pdf)
+- [Stellar MLS DMCA for Brokers](https://www.stellarmls.com/broker-dmca)
+- [Stellar MLS Clear Cooperation Policy 8.0](https://www.stellarmls.com/clearcooperation)
+- [Florida Admin Code 61J2-10.025 Advertising](https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-61J2-10-025)
+- [Florida Admin Code 61J2-10.025 DBPR PDF](https://www2.myfloridalicense.com/re/documents/FREC%20Meeting%20Documents/2019/0319MAR/0319FREC_Rule61J2-10.025.pdf)
+- [Florida Admin Code 61J2-10.026 Team Advertising](https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-r-61J2-10-026)
+- [Florida Realtors Advertising Rules Guide](https://www.floridarealtors.org/law-ethics/library/realtor-advertising-rules-florida)
+- [US Copyright Office DMCA Directory](https://www.copyright.gov/dmca-directory/)
+- [US Copyright Office DMCA FAQ](https://www.copyright.gov/dmca-directory/faq.html)
+- [LPT Realty Privacy Policy](https://www.lpt.com/privacy)
+- [Termly Privacy Policy Generator](https://termly.io/products/privacy-policy-generator/)
+- [iubenda Privacy Policy Generator](https://www.iubenda.com/en/help/36403-free-privacy-policy-generator)
+- [W3C WCAG 2.1 Quickref](https://www.w3.org/WAI/WCAG21/quickref/)
+- [DOJ ADA Web Accessibility Guidance](https://www.ada.gov/resources/web-guidance/)
+
+codex
+AUDIT_START
+[
+  {
+    "id": 1,
+    "title": "Monochrome white treatment is acceptable only if compliance context remains valid",
+    "severity": "info",
+    "file_or_surface": "docs/RESEARCH_COMPLIANCE_LOGOS.md",
+    "evidence": "The compliance research states the NAR REALTOR® mark has a white-on-transparent official variant and allows color use with 'sharp and adequate' contrast, and that EHO display is accepted via logotype/statement under HUD enforcement context (24 CFR §100.75 / Fair Housing Act §804(c)).",
+    "recommendation": "Proceed with white-on-transparent rendering for both marks, but treat this as a visual treatment only: do not infer final legal clearance; keep EHO wording present and verify contrast on footer navy in final shots.",
+    "safe_to_implement_now": true,
+    "approval_required": "other"
+  },
+  {
+    "id": 2,
+    "title": "Filter recipe should use standard utility syntax for predictability",
+    "severity": "polish",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Current implementation has no filter treatment; the proposed class is `[filter:brightness(0)_invert(1)] opacity-80`, which is an arbitrary utility form rather than standard utility composition.",
+    "recommendation": "Use explicit utilities (e.g., `filter brightness-0 invert` plus `opacity-90`) to avoid build/purge surprises and improve readability, unless your Tailwind config is already validated for arbitrary filter syntax.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 3,
+    "title": "Opacity 80% is aesthetic, but may flatten premium mark contrast",
+    "severity": "concerns",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "The proposed marks are all decorative trust indicators on a deep navy surface; applying `opacity-80` to every logo drops edge clarity, especially where anti-aliased strokes are already thin.",
+    "recommendation": "Use `opacity-90` (or keep `opacity-80` only for the lightest/least important mark) and test at 320/375 screenshots to confirm visual hierarchy remains crisp.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 4,
+    "title": "Height unification h-9 / h-10 is valid, but width imbalance needs capping",
+    "severity": "info",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Current audit identifies source aspect mismatch (LPT square 1:1, REALTOR+MLS wide, EHO near 1:1); with a unified 40px desktop height, wide REALTOR mark renders significantly broader than the others.",
+    "recommendation": "`h-10` desktop and `h-9` mobile is fine for baseline rhythm, but add width governance (e.g., explicit `max-w` or balanced row width treatment) so the wide mark does not dominate visual weight.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 5,
+    "title": "Do not remove labels; brand contract requires adjacent trust text labels",
+    "severity": "info",
+    "file_or_surface": "docs/BRAND_SYSTEM_CONTRACT.md",
+    "evidence": "The brand contract explicitly states each footer trust mark must carry an explicit adjacent text label; this is currently implemented via `FooterTrustMark` with `span` labels.",
+    "recommendation": "Keep labels. If needed for luxury rhythm, reduce label weight/letter spacing only, not omission.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 6,
+    "title": "Mobile trust-strip layout should stay readable; minor luxury-level refinement needed",
+    "severity": "polish",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Current stack is `flex-col` mobile + `lg:flex-row`; this prevents cramped horizontal crowding but creates a long vertical chunk.",
+    "recommendation": "Keep the mobile stacking, but tighten row rhythm (`gap`/label size) and consider `sm:flex-row sm:flex-wrap justify-center` at the first wider viewport where safe, if visual density becomes too tall.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 7,
+    "title": "Label/alt duplication creates redundant screen-reader output",
+    "severity": "polish",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Each trust mark currently has `alt` text and a visible text label (`<span>`), so SR users hear duplicate naming.",
+    "recommendation": "If labels are retained, mark mark images as decorative (`alt=\"\"` + `aria-hidden`) and keep visible labels as the accessible text source, or keep alt and hide duplicated visual labels from SR with `aria-hidden`.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 8,
+    "title": "REALTOR®+MLS semantic visual-coupling remains unresolved outside visual scope",
+    "severity": "concerns",
+    "file_or_surface": "docs/PRINCIPAL_DECISION_REGISTER.md (Card 5)",
+    "evidence": "Principal register still flags combined REALTOR®+MLS usage as pending and principal-authorization required for swap; current label and mark pairing can still imply a simplified REALTOR-only identity while image reads as combined.",
+    "recommendation": "Do not change semantics without principal authorization; if remaining in visual-only scope, either keep and document as intentional visual-only consistency or rename label to avoid semantic drift.",
+    "safe_to_implement_now": false,
+    "approval_required": "principal"
+  }
+]
+AUDIT_END
+VERDICT: concerns The proposed fix is directionally correct and mostly visual-compliant, but it needs final polish and explicit handling of the combined REALTOR®+MLS semantic mismatch before a premium production ship.
+tokens used
+37,827
+AUDIT_START
+[
+  {
+    "id": 1,
+    "title": "Monochrome white treatment is acceptable only if compliance context remains valid",
+    "severity": "info",
+    "file_or_surface": "docs/RESEARCH_COMPLIANCE_LOGOS.md",
+    "evidence": "The compliance research states the NAR REALTOR® mark has a white-on-transparent official variant and allows color use with 'sharp and adequate' contrast, and that EHO display is accepted via logotype/statement under HUD enforcement context (24 CFR §100.75 / Fair Housing Act §804(c)).",
+    "recommendation": "Proceed with white-on-transparent rendering for both marks, but treat this as a visual treatment only: do not infer final legal clearance; keep EHO wording present and verify contrast on footer navy in final shots.",
+    "safe_to_implement_now": true,
+    "approval_required": "other"
+  },
+  {
+    "id": 2,
+    "title": "Filter recipe should use standard utility syntax for predictability",
+    "severity": "polish",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Current implementation has no filter treatment; the proposed class is `[filter:brightness(0)_invert(1)] opacity-80`, which is an arbitrary utility form rather than standard utility composition.",
+    "recommendation": "Use explicit utilities (e.g., `filter brightness-0 invert` plus `opacity-90`) to avoid build/purge surprises and improve readability, unless your Tailwind config is already validated for arbitrary filter syntax.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 3,
+    "title": "Opacity 80% is aesthetic, but may flatten premium mark contrast",
+    "severity": "concerns",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "The proposed marks are all decorative trust indicators on a deep navy surface; applying `opacity-80` to every logo drops edge clarity, especially where anti-aliased strokes are already thin.",
+    "recommendation": "Use `opacity-90` (or keep `opacity-80` only for the lightest/least important mark) and test at 320/375 screenshots to confirm visual hierarchy remains crisp.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 4,
+    "title": "Height unification h-9 / h-10 is valid, but width imbalance needs capping",
+    "severity": "info",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Current audit identifies source aspect mismatch (LPT square 1:1, REALTOR+MLS wide, EHO near 1:1); with a unified 40px desktop height, wide REALTOR mark renders significantly broader than the others.",
+    "recommendation": "`h-10` desktop and `h-9` mobile is fine for baseline rhythm, but add width governance (e.g., explicit `max-w` or balanced row width treatment) so the wide mark does not dominate visual weight.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 5,
+    "title": "Do not remove labels; brand contract requires adjacent trust text labels",
+    "severity": "info",
+    "file_or_surface": "docs/BRAND_SYSTEM_CONTRACT.md",
+    "evidence": "The brand contract explicitly states each footer trust mark must carry an explicit adjacent text label; this is currently implemented via `FooterTrustMark` with `span` labels.",
+    "recommendation": "Keep labels. If needed for luxury rhythm, reduce label weight/letter spacing only, not omission.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 6,
+    "title": "Mobile trust-strip layout should stay readable; minor luxury-level refinement needed",
+    "severity": "polish",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Current stack is `flex-col` mobile + `lg:flex-row`; this prevents cramped horizontal crowding but creates a long vertical chunk.",
+    "recommendation": "Keep the mobile stacking, but tighten row rhythm (`gap`/label size) and consider `sm:flex-row sm:flex-wrap justify-center` at the first wider viewport where safe, if visual density becomes too tall.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 7,
+    "title": "Label/alt duplication creates redundant screen-reader output",
+    "severity": "polish",
+    "file_or_surface": "src/components/SiteFooter.tsx",
+    "evidence": "Each trust mark currently has `alt` text and a visible text label (`<span>`), so SR users hear duplicate naming.",
+    "recommendation": "If labels are retained, mark mark images as decorative (`alt=\"\"` + `aria-hidden`) and keep visible labels as the accessible text source, or keep alt and hide duplicated visual labels from SR with `aria-hidden`.",
+    "safe_to_implement_now": true,
+    "approval_required": "none"
+  },
+  {
+    "id": 8,
+    "title": "REALTOR®+MLS semantic visual-coupling remains unresolved outside visual scope",
+    "severity": "concerns",
+    "file_or_surface": "docs/PRINCIPAL_DECISION_REGISTER.md (Card 5)",
+    "evidence": "Principal register still flags combined REALTOR®+MLS usage as pending and principal-authorization required for swap; current label and mark pairing can still imply a simplified REALTOR-only identity while image reads as combined.",
+    "recommendation": "Do not change semantics without principal authorization; if remaining in visual-only scope, either keep and document as intentional visual-only consistency or rename label to avoid semantic drift.",
+    "safe_to_implement_now": false,
+    "approval_required": "principal"
+  }
+]
+AUDIT_END
+VERDICT: concerns The proposed fix is directionally correct and mostly visual-compliant, but it needs final polish and explicit handling of the combined REALTOR®+MLS semantic mismatch before a premium production ship.
