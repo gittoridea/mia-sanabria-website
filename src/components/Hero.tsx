@@ -68,7 +68,7 @@ export function Hero({
           data-hero-cta="primary"
           className={
             useImage
-              ? "inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-brass-400 px-2.5 py-3 text-[11px] font-semibold tracking-normal text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200 min-[375px]:gap-2 min-[375px]:px-4 min-[375px]:text-[13px] min-[375px]:tracking-wide sm:w-auto sm:px-6 sm:text-sm lg:px-7"
+              ? "inline-flex w-full items-center justify-center gap-1 whitespace-nowrap rounded-full bg-brass-400 px-2 py-3 text-[10px] font-semibold tracking-normal text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200 min-[375px]:gap-2 min-[375px]:px-4 min-[375px]:text-[13px] min-[375px]:tracking-wide sm:w-auto sm:px-6 sm:text-sm lg:px-7"
               : "inline-flex items-center gap-2 rounded-full bg-brass-400 px-8 py-3.5 text-sm font-semibold tracking-wide text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200"
           }
         >
@@ -84,7 +84,7 @@ export function Hero({
             isCream
               ? "inline-flex items-center justify-center gap-2 rounded-full border border-navy-800/30 bg-cream-50/80 px-7 py-3 text-sm font-medium tracking-wide text-navy-800 transition-colors hover:border-brass-400 hover:text-brass-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
               : useImage
-                ? "inline-flex w-full items-center justify-center whitespace-nowrap rounded-full border border-cream-100/80 bg-navy-900/80 px-2.5 py-3 text-[11px] font-medium tracking-normal text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-300 min-[375px]:px-4 min-[375px]:text-[13px] min-[375px]:tracking-wide sm:w-auto sm:px-6 sm:text-sm lg:px-7"
+                ? "inline-flex w-full items-center justify-center whitespace-nowrap rounded-full border border-cream-100/80 bg-navy-900/80 px-2 py-3 text-[10px] font-medium tracking-normal text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-300 min-[375px]:px-4 min-[375px]:text-[13px] min-[375px]:tracking-wide sm:w-auto sm:px-6 sm:text-sm lg:px-7"
                 : "inline-flex items-center gap-2 rounded-full border border-cream-100/70 bg-navy-900/40 px-7 py-3 text-sm font-medium tracking-wide text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-300"
           }
         >
@@ -134,7 +134,7 @@ export function Hero({
       <div
         className={
           useImage
-            ? "relative mx-auto flex min-h-[440px] max-w-7xl items-center px-4 py-8 sm:min-h-[500px] sm:py-12 lg:min-h-[560px] lg:px-8 lg:py-16"
+            ? "relative mx-auto flex min-h-[440px] max-w-7xl items-center px-4 py-8 sm:min-h-[500px] sm:py-12 lg:min-h-[520px] lg:px-8 lg:py-12"
             : "relative mx-auto max-w-7xl px-4 py-28 sm:py-32 lg:px-8 lg:py-40"
         }
       >
@@ -143,7 +143,7 @@ export function Hero({
             data-hero-copy-panel={useImage ? "true" : undefined}
             className={
               useImage
-                ? "min-w-0 rounded-sm border-l-2 border-brass-300 bg-navy-900/95 p-4 shadow-luxury min-[375px]:p-5 sm:p-6 lg:p-8"
+                ? "min-w-0 rounded-sm border-l-2 border-brass-300 bg-navy-900/95 p-3 shadow-luxury min-[375px]:p-5 sm:p-6 lg:p-8"
                 : ""
             }
           >
@@ -163,7 +163,7 @@ export function Hero({
                     isCream
                       ? "mt-5 font-display text-[11px] uppercase tracking-[0.3em] text-brass-700 sm:text-xs sm:tracking-[0.4em]"
                       : useImage
-                        ? "mt-4 max-w-full break-words font-display text-[10px] uppercase tracking-[0.22em] text-brass-300 [overflow-wrap:anywhere] sm:text-xs sm:tracking-[0.32em]"
+                        ? "mt-4 max-w-full break-words font-display text-[9px] uppercase tracking-[0.16em] text-brass-300 [overflow-wrap:anywhere] [word-break:break-word] min-[375px]:text-[10px] min-[375px]:tracking-[0.22em] sm:text-xs sm:tracking-[0.32em]"
                         : "mt-5 font-display text-[11px] uppercase tracking-[0.3em] text-brass-300 sm:text-xs sm:tracking-[0.4em]"
                   }
                 >
@@ -177,7 +177,7 @@ export function Hero({
                 isCream
                   ? "mt-5 w-full max-w-full font-display text-[20px] font-semibold leading-[1.2] tracking-normal text-navy-800 sm:max-w-4xl sm:text-[32px] sm:leading-[1.1] md:text-5xl lg:text-6xl break-words [overflow-wrap:anywhere]"
                   : useImage
-                    ? "mt-4 w-full max-w-[27ch] min-w-0 break-words font-display text-[16px] font-bold leading-[1.18] tracking-normal text-cream-50 [overflow-wrap:anywhere] [word-break:normal] min-[375px]:text-[17px] sm:max-w-xl sm:text-[26px] sm:leading-[1.1] md:text-[32px] lg:text-[40px]"
+                    ? "mt-4 w-full max-w-[27ch] min-w-0 break-words font-display text-[16px] font-bold leading-[1.18] tracking-normal text-cream-50 [overflow-wrap:anywhere] [word-break:normal] min-[375px]:text-[17px] sm:max-w-xl sm:text-[26px] sm:leading-[1.1] md:text-[32px] lg:text-[36px] lg:leading-[1.08]"
                     : "mt-5 w-full max-w-full font-display text-[20px] font-semibold leading-[1.2] tracking-normal text-cream-50 sm:max-w-4xl sm:text-[32px] sm:leading-[1.1] md:text-5xl lg:text-6xl break-words [overflow-wrap:anywhere]"
               }
             >
@@ -190,7 +190,7 @@ export function Hero({
                   isCream
                     ? "mt-6 max-w-2xl text-lg text-navy-800/80 [text-wrap:pretty] sm:text-xl"
                     : useImage
-                      ? "mt-4 max-w-xl text-[15px] leading-7 text-cream-200/95 [text-wrap:pretty] sm:text-base md:text-lg"
+                      ? "mt-4 max-w-xl text-[14px] leading-6 text-cream-200/95 [text-wrap:pretty] [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto min-[375px]:text-[15px] min-[375px]:leading-7 sm:text-base md:text-lg lg:leading-6"
                       : "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
                 }
               >

@@ -2,13 +2,13 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: verify
-progress: 355/375
+phase: state-probe
+progress: 355/449
 mode: algorithm
 started: 2026-05-06
-updated: 2026-05-09T23:15:00Z
+updated: 2026-05-10T00:50:00Z
 algorithm_version: 6.4.0
-active_mission: 2026-05-09-cycle-9-acceptance-driven-visual-completion
+active_mission: 2026-05-09-cycle-10-rendered-visual-qa
 ---
 
 # Mia Sanabria Realtor Site — ISA
@@ -1430,3 +1430,100 @@ ISCs verified or state-probed cycle 9 (Cycle 9 ISC IDs at the end of file; note 
 - **Conjecture:** A heuristic verdict matrix designed for one layout will work on another layout if the brand tokens (colors, fonts) are the same.
 - **Refuted-by:** Cycle 9's `audit-screenshot-verdict-matrix.ts` was designed for Cycle 8's free-standing CTA pill arrangement; on Cycle 9's panel-embedded CTAs, the heuristic returns FAIL at 1280/1440 desktop on routes that visually PASS. The brass-pill detection bounds don't account for CTAs surrounded by a navy panel context.
 - **Learned:** Heuristic verdict matrices must document their layout-mode assumptions. Cycle 10 Scope B queues a `--layout-mode=panel-embedded` flag. Skill v0.3.1 #24 (gotcha) codifies that heuristic matrices are "captured-vs-reviewed" sentinels, NOT deploy gates.
+
+## Mission 2026-05-09 cycle-10 — Rendered Visual QA + Remaining Gap Closure
+
+**Goal:** Add a rendered (browser-DOM/pixel) visual QA layer that catches the static-vs-rendered class of misses, identify the highest-impact remaining visible defects on live staging, ship safe targeted fixes within mission boundaries, deploy, and close with a GPT-5.5 live acceptance verdict + skill v0.3.2 codifying the static-presence-vs-rendered-visibility doctrine.
+
+### ISC additions (2026-05-09 cycle-10)
+
+#### Phase 0 — Recovery + state check
+- [ ] ISC-395: `docs/CYCLE_10_RECOVERY_AND_LIVE_STATE_CHECK.md` exists with git/live-state inventory.
+- [ ] ISC-396: HEAD == origin/main verified before BUILD opens.
+- [ ] ISC-397: SpecialistProbe.ts JSON output captured + cited in Decisions.
+
+#### Phase 1 — Model usage + max-effort honesty
+- [ ] ISC-398: `docs/CYCLE_10_MODEL_USAGE_AND_PROCESS_PLAN.md` exists; documents codex-cli 0.129.0 + xhigh = highest accepted variant; "max" rejected.
+- [ ] ISC-399: pre-flight Spark probe defined in process plan.
+- [ ] ISC-400: stdin-discipline + concurrency cap rules documented (≤2 same-model).
+
+#### Phase 2 — Rendered visual baseline
+- [ ] ISC-401: `/tmp/mia-cycle10-rendered-before/` contains ≥120 PNGs (≥24 routes × 5 viewports), captured against the live staging URL.
+- [ ] ISC-402: `_capture-summary.json` written with per-job ok/fail status.
+- [ ] ISC-403: `docs/CYCLE_10_RENDERED_VISUAL_BASELINE.md` exists with per-route notes.
+
+#### Phase 3 — Rendered DOM/pixel audit script
+- [ ] ISC-404: `scripts/audit-rendered-visual.ts` exists and runs.
+- [ ] ISC-405: package.json declares `audit:rendered` script.
+- [ ] ISC-406: rendered audit checks: image naturalWidth>0, render-bbox>0, opacity>0.
+- [ ] ISC-407: rendered audit checks: every market card visible (LP/CR/PB by name).
+- [ ] ISC-408: rendered audit checks: H1 bounding box inside panel; CTA above-fold at desktop.
+- [ ] ISC-409: rendered audit checks: no horizontal overflow at mobile (320/375/768).
+- [ ] ISC-410: rendered audit checks: stale strings absent (Klein Morgan, mia@miasanabriarealtor.com, "Family Homes Where Memories Are Made").
+- [ ] ISC-411: rendered audit produces reports/audit-rendered-visual.{json,md}.
+
+#### Phase 4 — Codex Spark teams (≤2 concurrent)
+- [ ] ISC-412: Team A (Rendered QA Engineer) output saved to `docs/codex-spark-audits/cycle-10/team-A-*.md`.
+- [ ] ISC-413: Team B (Luxury Visual Defect Finder) output saved.
+- [ ] ISC-414: Team C (Mobile Micro-Polish QA) output saved.
+- [ ] ISC-415: Team D (Image + Art Direction QA) output saved.
+- [ ] ISC-416: Team E (Process Improvement Architect) output saved.
+- [ ] ISC-417: All Spark teams ran with `--sandbox read-only` (no main-thread races per `feedback_forge_race_scope_drift.md`).
+- [ ] ISC-418: Spark concurrency ≤2 same-model documented in receipts.
+
+#### Phase 5 — GPT-5.5 visual judgment
+- [ ] ISC-419: `docs/CYCLE_10_GPT55_VISUAL_JUDGMENT_AND_FIX_PLAN.md` exists.
+- [ ] ISC-420: GPT-5.5 receives before screenshots + rendered audit + Spark outputs.
+- [ ] ISC-421: GPT-5.5 returns ranked highest-impact defects + fix-plan + safety classification.
+
+#### Phase 6 — Safe targeted fixes
+- [ ] ISC-422: All implemented fixes are inside the mission boundary (no GHL/license/REALTOR/Spanish/Payload/CMS/DNS/.com/Cloudflare).
+- [ ] ISC-423: After each batch: typecheck/lint/build/audit:all PASS or only-WARN.
+- [ ] ISC-424: audit:images stays at ≥14 PASS · 0 FAIL post-fixes.
+- [ ] ISC-425: audit:brand stays at ≥12 PASS · 0 FAIL post-fixes.
+- [ ] ISC-426: audit:hero-contrast (local) stays at ≥95 PASS · 0 FAIL post-fixes.
+
+#### Phase 7 — Local + live verification
+- [ ] ISC-427: /tmp/mia-cycle10-local-after/ captures complete.
+- [ ] ISC-428: deploy-and-verify.ts run; ETag flips.
+- [ ] ISC-429: /tmp/mia-cycle10-live-after/ captures complete.
+- [ ] ISC-430: audit:hero-contrast --live PASS post-deploy.
+- [ ] ISC-431: audit:rendered (live) PASS post-deploy (or honest WARN with explained reasons).
+- [ ] ISC-432: All changed-route HTTP statuses == 200 live.
+
+#### Phase 8 — GPT-5.5 live acceptance
+- [ ] ISC-433: `docs/CYCLE_10_GPT55_LIVE_ACCEPTANCE.md` exists.
+- [ ] ISC-434: Verdict ∈ {PASS, PASS_WITH_MINOR_CONCERNS, FAIL} with explicit reasoning + per-route notes.
+- [ ] ISC-435: Verdict references rendered audit + screenshots, not just static audits.
+
+#### Phase 9 — Skill upgrade
+- [ ] ISC-436: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL.md` v0.3.1 → v0.3.2.
+- [ ] ISC-437: 3-layer image model added (presence / visibility / aesthetic).
+- [ ] ISC-438: "Twice-failed component → mandatory rendered probe" rule added.
+- [ ] ISC-439: `docs/skills/WEBSITE_PRODUCTION_LOOP_SKILL_CHANGELOG.md` v0.3.2 entry written.
+
+#### Phase 10 — Handoff
+- [ ] ISC-440: `docs/PRODUCTION_READINESS_HANDOFF_CYCLE_10_RENDERED_VISUAL_QA_2026-05-09.md` exists with all sections.
+- [ ] ISC-441: `docs/NEXT_SESSION_TRIGGER_AFTER_CYCLE_10.md` exists.
+- [ ] ISC-442: Final response includes commits, audits, screenshot paths, GPT-5.5 verdict, next 3 actions.
+
+#### Anti-criteria
+- [ ] ISC-443: Anti: No GHL/legal/license/REALTOR/Spanish/Payload/CMS/DNS/.com/Cloudflare touched.
+- [ ] ISC-444: Anti: No new color/font/token introduced.
+- [ ] ISC-445: Anti: No success declared from static audits alone.
+- [ ] ISC-446: Anti: No model misrepresentation; "max" never claimed in any closeout doc.
+- [ ] ISC-447: Anti: No homepage heading copy STRING change (the locked Card-3 heading stays verbatim).
+- [ ] ISC-448: Anti: No commits pushed without local typecheck/lint/build PASS.
+
+#### Antecedent
+- [ ] ISC-449: Antecedent: principal opens any market card on /markets/ on a real device and sees a vivid, distinguishable image with readable text overlay (rendered-DOM bounding-box probe + GPT-5.5 visual judgment confirms).
+
+## Decisions (continued — 2026-05-09 cycle-10)
+
+- **2026-05-09 effort tier override:** classifier returned `MODE: ALGORITHM | TIER: E3 | SOURCE: fail-safe` (Sonnet timeout @25s). User explicitly invoked `/effort max` at session start, which is an explicit override per Algorithm v6.4.0 override hierarchy item 1. Honoring **E5 (Comprehensive)**.
+- **2026-05-09 Specialist-Prereq Probe:** Forge ✅ (`/home/torrey/.local/bin/codex` + oauth), Cato ✅ (same + read-only sandbox), Anvil ✗ (binary not found → fallback Forge), PerplexityResearcher ✅ (`OPENROUTER_API_KEY`), Engineer auto-worktree ✅. Decision: keep Forge (foreground for `audit-rendered-visual.ts` per `feedback_forge_race_scope_drift.md`) and Cato (post-fix VERIFY).
+- **2026-05-09 cycle-10 baseline strategy:** captured rendered screenshots against the LIVE staging URL (not local) — the static-vs-rendered miss class only manifests on the real served page. 130/130 captures completed in 100s with concurrency=5; failures: 0.
+- **2026-05-09 cycle-10 image-model framing:** the Cycle 9 Addendum closeout introduced the "presence ≠ visibility" distinction. Cycle 10 extends it to a 3-layer model: PRESENCE (file exists, src attr present, HTTP 200) — caught by `audit:images` static checks. VISIBILITY (rendered DOM has nonzero bounding box, naturalWidth>0, opacity>0) — caught by NEW `audit:rendered`. AESTHETIC (image content reads as "vivid market portrait" not "flat dark block") — caught by GPT-5.5 visual judgment + spot mean-luminance probe. Each layer needs its own gate; collapsing them is the failure mode.
+- **2026-05-09 cycle-10 E5 Interview-workflow waiver:** Algorithm v6.4.0 E5 requires an active Interview workflow before BUILD. Project ISA already carries 394 cumulative ISCs across 9 prior cycles + a fully-populated 12-section structure; running Interview now would re-derive substrate that already exists in 91k tokens of ISA + 7 closeout handoffs read in OBSERVE. Waiving with explicit Decision entry: the Interview output's "what's the ideal state" function is satisfied by the existing ISA Goal/Vision/Constraints/Out-of-Scope; the Interview output's "what gaps remain" function is satisfied by Cycle 9's Section 17 + market-image-recovery Section 8. Cycle 10 Plan derives directly from those. Honest scope vs. cost-of-ceremony.
+- **2026-05-09 cycle-10 Cato re-armed:** Cycle 9 tombstoned Cato (user designated GPT-5.5 as authority, time budget). Cycle 10 keeps Cato as background read-only validation per Algorithm v6.4.0 R8 + Cycle 9 §17.3 deferred. Schema-enforced verdict pattern from R9 errata.
+
