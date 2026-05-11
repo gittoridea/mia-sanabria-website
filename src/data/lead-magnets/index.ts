@@ -37,6 +37,13 @@ export type LeadMagnet = {
   readonly title: string;
   readonly subtitle: string;
   readonly intro: string;
+  /** Cycle 19B-FL-R1 — optional enrichment for standalone PDF document */
+  readonly whoFor?: string;
+  readonly howToUse?: string;
+  readonly documentsToRequest?: ReadonlyArray<string>;
+  readonly specialists?: ReadonlyArray<string>;
+  readonly redFlags?: ReadonlyArray<string>;
+  readonly notes?: ReadonlyArray<string>;
   readonly sections: ReadonlyArray<LeadMagnetSection>;
   readonly nextStep: { readonly label: string; readonly href: string };
   readonly ledger: ReadonlyArray<LedgerSource>;
@@ -49,7 +56,37 @@ export const LEAD_MAGNETS: ReadonlyArray<LeadMagnet> = [
     title: "Waterfront Buyer Due Diligence Checklist",
     subtitle: "Eastern Fort Lauderdale waterfront residences",
     intro:
-      "A working checklist for serious buyers of Fort Lauderdale waterfront residences. The list is organized by the diligence sequence Mia coordinates privately on her own engagements — survey first, water and dock data next, insurance underwriting before the offer. Each item is a question to bring to a licensed specialist, not a substitute for one.",
+      "A working checklist for serious buyers of Fort Lauderdale waterfront residences. The list is organized by the diligence sequence Mia uses to structure private buyer-side conversations — survey first, water and dock data next, insurance underwriting before the offer. Each item is a question to bring to a licensed specialist, not a substitute for one.",
+    whoFor:
+      "Serious buyers of Eastern Fort Lauderdale waterfront residences who want a private diligence sequence before making an offer.",
+    howToUse:
+      "Work through the sections in order — survey first, then water and dock data, then insurance underwriting. Bring each question to the relevant licensed specialist; this checklist coordinates the conversation, it does not replace expert findings.",
+    documentsToRequest: [
+      "Boundary survey (most recent)",
+      "Elevation certificate",
+      "Dock and seawall inspection reports",
+      "4-point inspection report",
+      "Wind-mitigation report",
+      "Permit history (LauderBuild)",
+      "HOA architectural-review records (if applicable)",
+      "Prior insurance claim history (CLUE report)",
+    ],
+    redFlags: [
+      "Open or expired permits on the property record.",
+      "Seawall inspection older than 5 years with no recent walk-through.",
+      "Dock work in the past 10 years without a closed marine permit.",
+      "Elevation certificate dated before a recent floodplain map revision.",
+      "Insurance broker declines to quote pre-offer.",
+      "Seller refuses to provide a CLUE / prior-claim history.",
+    ],
+    notes: [
+      "Property address:",
+      "Folio number:",
+      "Scheduled inspection date:",
+      "Insurance broker assigned:",
+      "Specialist roster confirmed:",
+      "Other:",
+    ],
     sections: [
       {
         heading: "Parcel basics",
@@ -167,7 +204,43 @@ export const LEAD_MAGNETS: ReadonlyArray<LeadMagnet> = [
     title: "Luxury Seller Pre-Listing Checklist",
     subtitle: "Eastern Fort Lauderdale waterfront residences",
     intro:
-      "A working checklist for owners preparing to list a Fort Lauderdale waterfront residence. The list mirrors the seller-side diligence Mia coordinates privately before any photography or listing prep — current comparables, waterfront documentation, insurance dataroom, buyer-profile positioning. Each item is a deliverable to organize, not advice to follow.",
+      "A working checklist for owners preparing to list a Fort Lauderdale waterfront residence. The list mirrors the seller-side diligence Mia uses to structure private seller-side conversations before any photography or listing prep — current comparables, waterfront documentation, insurance dataroom, buyer-profile positioning. Each item is a deliverable to organize, not advice to follow.",
+    whoFor:
+      "Owners preparing to list a Fort Lauderdale waterfront residence who want to organize comparable sales, documentation, and positioning before any photography or open-house cycle.",
+    howToUse:
+      "Use this as the pre-listing dataroom checklist. Complete the comparables and documentation sections before scheduling photography. The pre-market decision tree at the end is a written decision, not an afterthought.",
+    documentsToRequest: [
+      "Most recent boundary survey",
+      "Current dock and seawall inspection records",
+      "Permit history from LauderBuild (open + closed)",
+      "HOA architectural-review records (if applicable)",
+      "Recent 4-point and wind-mitigation inspections",
+      "Elevation certificate",
+      "Renovation receipts and contractor invoices",
+      "Prior-claim history (CLUE report) for past 5-7 years",
+    ],
+    specialists: [
+      "Pre-listing inspector with waterfront-residence experience.",
+      "Florida-licensed marine contractor (dock, seawall, lift inspection).",
+      "Editorial photographer experienced with waterfront and dock-up narratives.",
+      "Title insurance / closing attorney with Broward County jurisdiction.",
+      "Florida-licensed insurance broker for buyer-side dataroom completeness.",
+    ],
+    redFlags: [
+      "Open permits on the renovation record.",
+      "Seawall age exceeding the inspection interval.",
+      "No recent 4-point or wind-mitigation inspection on file.",
+      "Photography contract that is not residence-specific.",
+      "Comparable cohort uses generic neighborhood comps instead of canal-specific ones.",
+    ],
+    notes: [
+      "Property address:",
+      "Folio number:",
+      "Target list date:",
+      "Photography scheduled:",
+      "Pre-market window (weeks):",
+      "Other:",
+    ],
     sections: [
       {
         heading: "Comparable-sales cohort",
@@ -276,6 +349,38 @@ export const LEAD_MAGNETS: ReadonlyArray<LeadMagnet> = [
     subtitle: "Information to organize before a confidential valuation review",
     intro:
       "A prep sheet for owners requesting a confidential, property-specific valuation. Public estimates miss the variables that drive waterfront price; this is the residence-specific information Mia uses to draw the right comparable cohort and frame an honest valuation conversation.",
+    whoFor:
+      "Owners requesting a confidential, residence-specific valuation review who want to organize parcel, water-frontage, and insurance data before the conversation.",
+    howToUse:
+      "Gather what you can answer; leave blanks where you can't. Mia uses your responses to frame a residence-specific comparable cohort instead of a generic neighborhood range.",
+    documentsToRequest: [
+      "Most recent boundary survey",
+      "Elevation certificate",
+      "Dock and seawall inspection records",
+      "4-point and wind-mitigation inspection reports",
+      "Permit history (LauderBuild)",
+      "Any prior listing history of the residence",
+    ],
+    specialists: [
+      "Florida-licensed insurance broker for dataroom completeness.",
+      "Land surveyor for as-built confirmation if the survey is older than 5 years.",
+      "Title insurance / closing attorney for any pre-listing structural questions.",
+    ],
+    redFlags: [
+      "A public valuation estimate that diverges sharply from owner expectation without a residence-specific reason.",
+      "Recent on-block sales the owner is unaware of.",
+      "Prior listing history at a materially lower price-per-sqft without renovation since.",
+      "Shared-seawall obligations not previously disclosed.",
+    ],
+    notes: [
+      "Property address:",
+      "Folio number:",
+      "Year built:",
+      "Linear feet of frontage:",
+      "Notable architectural pedigree:",
+      "Owner priority — list / hold / refinance:",
+      "Other:",
+    ],
     sections: [
       {
         heading: "Address and parcel basics",
@@ -363,7 +468,7 @@ export const LEAD_MAGNETS: ReadonlyArray<LeadMagnet> = [
         sub: "The information above lets Mia frame a residence-specific comparable cohort rather than a generic neighborhood range.",
         items: [
           "Submit the form on /valuation/ or call (954) 540-0358 to schedule the confidential review.",
-          "Mia or her team will confirm the next-step timeline within the same business day.",
+          "Mia or her team will follow up to confirm the timeline for the confidential review.",
         ],
       },
     ],

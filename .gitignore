@@ -53,3 +53,4 @@ tmp/
 # Cycle audit-generated screenshots — reproducible via audit:mobile-readability:capture
 docs/artifacts/**/*.jpg
 docs/artifacts/**/*.png
+.tmp/
