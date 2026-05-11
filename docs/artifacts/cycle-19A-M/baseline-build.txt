@@ -1,0 +1,26 @@
+├ ○ /markets                                                           216 B           114 kB
+├ ● /markets/[slug]                                                    216 B           114 kB
+├   ├ /markets/fort-lauderdale
+├   ├ /markets/coral-ridge
+├   ├ /markets/victoria-park
+├   └ [+13 more paths]
+├ ○ /privacy                                                           190 B           114 kB
+├ ○ /robots.txt                                                        0 B                0 B
+├ ○ /sellers                                                           216 B           114 kB
+├ ○ /sitemap.xml                                                       0 B                0 B
+├ ○ /terms                                                             190 B           114 kB
+├ ○ /thank-you                                                         216 B           114 kB
+├ ○ /thank-you/buyer-brief                                             216 B           114 kB
+├ ○ /thank-you/market-brief                                            216 B           114 kB
+├ ○ /thank-you/valuation                                               216 B           114 kB
+└ ○ /valuation                                                         216 B           114 kB
++ First Load JS shared by all                                          105 kB
+  ├ chunks/4bd1b696-c41c22badabd4b31.js                                52.9 kB
+  ├ chunks/517-3b41f5e9a4de28b3.js                                     50.5 kB
+  └ other shared chunks (total)                                        1.91 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+---STATUS-build:0

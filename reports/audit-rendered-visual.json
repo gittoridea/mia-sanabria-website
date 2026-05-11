@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-11T01:28:13.116Z",
+  "generated": "2026-05-11T04:35:03.080Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -553,7 +553,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 14935,
+        "documentHeight": 15098,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -704,56 +704,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 117.65625,
+            "y": 117.3125,
             "w": 468,
-            "h": 366.6875,
+            "h": 367.375,
             "right": 484,
-            "bottom": 484.34375
+            "bottom": 484.6875
           },
           "headingBox": {
             "x": 38,
-            "y": 187.15625,
+            "y": 187.5,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 267.34375
+            "bottom": 267.6875
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 154.65625,
+            "y": 154.3125,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 171.15625
+            "bottom": 171.5
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 283.34375,
+            "y": 283.6875,
             "w": 426,
             "h": 56,
             "right": 464,
-            "bottom": 339.34375
+            "bottom": 339.6875
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 363.34375,
+            "y": 363.6875,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 406.84375
+            "bottom": 407.1875
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 418.84375,
+            "y": 419.1875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 464.34375
+            "bottom": 464.6875
           },
           "secondaryCtaTailClips": false
         },
@@ -780,11 +780,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 363.34375,
+              "y": 363.6875,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 406.84375
+              "bottom": 407.1875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -796,11 +796,11 @@
             "text": "Request Home Valuation",
             "box": {
               "x": 38,
-              "y": 418.84375,
+              "y": 419.1875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 464.34375
+              "bottom": 464.6875
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -861,12 +861,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 204,
+        "rightEdgeContentPx": 200,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (204 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (200 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -884,7 +884,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 14935,
+        "documentHeight": 15098,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1035,56 +1035,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 117.65625,
+            "y": 117.3125,
             "w": 468,
-            "h": 366.6875,
+            "h": 367.375,
             "right": 484,
-            "bottom": 484.34375
+            "bottom": 484.6875
           },
           "headingBox": {
             "x": 38,
-            "y": 187.15625,
+            "y": 187.5,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 267.34375
+            "bottom": 267.6875
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 154.65625,
+            "y": 154.3125,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 171.15625
+            "bottom": 171.5
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 283.34375,
+            "y": 283.6875,
             "w": 426,
             "h": 56,
             "right": 464,
-            "bottom": 339.34375
+            "bottom": 339.6875
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 363.34375,
+            "y": 363.6875,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 406.84375
+            "bottom": 407.1875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 418.84375,
+            "y": 419.1875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 464.34375
+            "bottom": 464.6875
           },
           "secondaryCtaTailClips": false
         },
@@ -1111,11 +1111,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 363.34375,
+              "y": 363.6875,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 406.84375
+              "bottom": 407.1875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -1127,11 +1127,11 @@
             "text": "Request Home Valuation",
             "box": {
               "x": 38,
-              "y": 418.84375,
+              "y": 419.1875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 464.34375
+              "bottom": 464.6875
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -1192,12 +1192,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 196,
+        "rightEdgeContentPx": 192,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (196 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (192 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1215,7 +1215,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 11282,
+        "documentHeight": 11298,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1546,7 +1546,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 8806,
+        "documentHeight": 8828,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1861,7 +1861,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 8806,
+        "documentHeight": 8828,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2176,7 +2176,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6707,
+        "documentHeight": 6853,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2255,37 +2255,37 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 214.203125,
+            "y": 213.859375,
             "w": 468,
-            "h": 173.59375,
+            "h": 174.28125,
             "right": 484,
-            "bottom": 387.796875
+            "bottom": 388.140625
           },
           "headingBox": {
             "x": 38,
-            "y": 283.703125,
+            "y": 284.046875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 323.796875
+            "bottom": 324.140625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 251.203125,
+            "y": 250.859375,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 267.703125
+            "bottom": 268.046875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 339.796875,
+            "y": 340.140625,
             "w": 426,
             "h": 28,
             "right": 464,
-            "bottom": 367.796875
+            "bottom": 368.140625
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -2389,7 +2389,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6707,
+        "documentHeight": 6853,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2468,37 +2468,37 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 214.203125,
+            "y": 213.859375,
             "w": 468,
-            "h": 173.59375,
+            "h": 174.28125,
             "right": 484,
-            "bottom": 387.796875
+            "bottom": 388.140625
           },
           "headingBox": {
             "x": 38,
-            "y": 283.703125,
+            "y": 284.046875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 323.796875
+            "bottom": 324.140625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 251.203125,
+            "y": 250.859375,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 267.703125
+            "bottom": 268.046875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 339.796875,
+            "y": 340.140625,
             "w": 426,
             "h": 28,
             "right": 464,
-            "bottom": 367.796875
+            "bottom": 368.140625
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -2602,7 +2602,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6375,
+        "documentHeight": 6391,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2815,7 +2815,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4454,
+        "documentHeight": 4476,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3011,7 +3011,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4454,
+        "documentHeight": 4476,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3207,7 +3207,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7047,
+        "documentHeight": 7148,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3227,7 +3227,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 446.59375,
+            "renderedHeight": 447.28125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -3276,54 +3276,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 382.59375,
+            "h": 383.28125,
             "right": 484,
-            "bottom": 495.59375
+            "bottom": 496.28125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 223.28125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 239.28125,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 350.59375
+            "bottom": 351.28125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 374.59375,
+            "y": 375.28125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 418.09375
+            "bottom": 418.78125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 430.09375,
+            "y": 430.78125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 475.59375
+            "bottom": 476.28125
           },
           "secondaryCtaTailClips": false
         },
@@ -3350,11 +3350,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 374.59375,
+              "y": 375.28125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 418.09375
+              "bottom": 418.78125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -3366,11 +3366,11 @@
             "text": "Walk the Markets",
             "box": {
               "x": 38,
-              "y": 430.09375,
+              "y": 430.78125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 475.59375
+              "bottom": 476.28125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -3454,7 +3454,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7047,
+        "documentHeight": 7148,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3474,7 +3474,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 446.59375,
+            "renderedHeight": 447.28125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -3523,54 +3523,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 382.59375,
+            "h": 383.28125,
             "right": 484,
-            "bottom": 495.59375
+            "bottom": 496.28125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 223.28125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 239.28125,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 350.59375
+            "bottom": 351.28125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 374.59375,
+            "y": 375.28125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 418.09375
+            "bottom": 418.78125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 430.09375,
+            "y": 430.78125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 475.59375
+            "bottom": 476.28125
           },
           "secondaryCtaTailClips": false
         },
@@ -3597,11 +3597,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 374.59375,
+              "y": 375.28125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 418.09375
+              "bottom": 418.78125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -3613,11 +3613,11 @@
             "text": "Walk the Markets",
             "box": {
               "x": 38,
-              "y": 430.09375,
+              "y": 430.78125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 475.59375
+              "bottom": 476.28125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -3701,7 +3701,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6186,
+        "documentHeight": 6203,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3948,7 +3948,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4692,
+        "documentHeight": 4714,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4179,7 +4179,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4692,
+        "documentHeight": 4714,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4410,7 +4410,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7238,
+        "documentHeight": 7335,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4430,7 +4430,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 446.59375,
+            "renderedHeight": 447.28125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -4479,54 +4479,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 382.59375,
+            "h": 383.28125,
             "right": 484,
-            "bottom": 495.59375
+            "bottom": 496.28125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 223.28125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 239.28125,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 350.59375
+            "bottom": 351.28125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 374.59375,
+            "y": 375.28125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 418.09375
+            "bottom": 418.78125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 430.09375,
+            "y": 430.78125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 475.59375
+            "bottom": 476.28125
           },
           "secondaryCtaTailClips": false
         },
@@ -4553,11 +4553,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 374.59375,
+              "y": 375.28125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 418.09375
+              "bottom": 418.78125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -4569,11 +4569,11 @@
             "text": "Request Valuation",
             "box": {
               "x": 38,
-              "y": 430.09375,
+              "y": 430.78125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 475.59375
+              "bottom": 476.28125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -4657,7 +4657,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7238,
+        "documentHeight": 7335,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4677,7 +4677,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 446.59375,
+            "renderedHeight": 447.28125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -4726,54 +4726,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 382.59375,
+            "h": 383.28125,
             "right": 484,
-            "bottom": 495.59375
+            "bottom": 496.28125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 223.28125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 239.28125,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 350.59375
+            "bottom": 351.28125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 374.59375,
+            "y": 375.28125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 418.09375
+            "bottom": 418.78125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 430.09375,
+            "y": 430.78125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 475.59375
+            "bottom": 476.28125
           },
           "secondaryCtaTailClips": false
         },
@@ -4800,11 +4800,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 374.59375,
+              "y": 375.28125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 418.09375
+              "bottom": 418.78125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -4816,11 +4816,11 @@
             "text": "Request Valuation",
             "box": {
               "x": 38,
-              "y": 430.09375,
+              "y": 430.78125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 475.59375
+              "bottom": 476.28125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -4904,7 +4904,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6316,
+        "documentHeight": 6332,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5151,7 +5151,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4875,
+        "documentHeight": 4897,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5382,7 +5382,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4875,
+        "documentHeight": 4897,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5613,7 +5613,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6870,
+        "documentHeight": 7015,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5680,37 +5680,37 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 196.21875,
+            "y": 195.875,
             "w": 468,
-            "h": 209.546875,
+            "h": 210.234375,
             "right": 484,
-            "bottom": 405.765625
+            "bottom": 406.109375
           },
           "headingBox": {
             "x": 38,
-            "y": 265.71875,
+            "y": 266.0625,
             "w": 299.71875,
             "h": 20.046875,
             "right": 337.71875,
-            "bottom": 285.765625
+            "bottom": 286.109375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 233.21875,
+            "y": 232.875,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 249.71875
+            "bottom": 250.0625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 301.765625,
+            "y": 302.109375,
             "w": 426,
             "h": 84,
             "right": 464,
-            "bottom": 385.765625
+            "bottom": 386.109375
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -5814,7 +5814,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6870,
+        "documentHeight": 7015,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5881,37 +5881,37 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 196.21875,
+            "y": 195.875,
             "w": 468,
-            "h": 209.546875,
+            "h": 210.234375,
             "right": 484,
-            "bottom": 405.765625
+            "bottom": 406.109375
           },
           "headingBox": {
             "x": 38,
-            "y": 265.71875,
+            "y": 266.0625,
             "w": 299.71875,
             "h": 20.046875,
             "right": 337.71875,
-            "bottom": 285.765625
+            "bottom": 286.109375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 233.21875,
+            "y": 232.875,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 249.71875
+            "bottom": 250.0625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 301.765625,
+            "y": 302.109375,
             "w": 426,
             "h": 84,
             "right": 464,
-            "bottom": 385.765625
+            "bottom": 386.109375
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -6015,7 +6015,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 5893,
+        "documentHeight": 5909,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6216,7 +6216,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4875,
+        "documentHeight": 4897,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6400,7 +6400,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4875,
+        "documentHeight": 4897,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6584,7 +6584,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 5305,
+        "documentHeight": 5423,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6651,37 +6651,37 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 182.21875,
+            "y": 181.875,
             "w": 468,
-            "h": 237.546875,
+            "h": 238.234375,
             "right": 484,
-            "bottom": 419.765625
+            "bottom": 420.109375
           },
           "headingBox": {
             "x": 38,
-            "y": 251.71875,
+            "y": 252.0625,
             "w": 299.71875,
             "h": 20.046875,
             "right": 337.71875,
-            "bottom": 271.765625
+            "bottom": 272.109375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 219.21875,
+            "y": 218.875,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 235.71875
+            "bottom": 236.0625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 287.765625,
+            "y": 288.109375,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 399.765625
+            "bottom": 400.109375
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -6785,7 +6785,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 5305,
+        "documentHeight": 5423,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6852,37 +6852,37 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 182.21875,
+            "y": 181.875,
             "w": 468,
-            "h": 237.546875,
+            "h": 238.234375,
             "right": 484,
-            "bottom": 419.765625
+            "bottom": 420.109375
           },
           "headingBox": {
             "x": 38,
-            "y": 251.71875,
+            "y": 252.0625,
             "w": 299.71875,
             "h": 20.046875,
             "right": 337.71875,
-            "bottom": 271.765625
+            "bottom": 272.109375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 219.21875,
+            "y": 218.875,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 235.71875
+            "bottom": 236.0625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 287.765625,
+            "y": 288.109375,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 399.765625
+            "bottom": 400.109375
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -6986,7 +6986,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 4829,
+        "documentHeight": 4846,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7187,7 +7187,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 3371,
+        "documentHeight": 3393,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7371,7 +7371,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 3371,
+        "documentHeight": 3393,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7555,7 +7555,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10647,
+        "documentHeight": 10718,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7612,35 +7612,35 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 467.140625,
+            "h": 467.90625,
             "right": 500,
-            "bottom": 548.140625
+            "bottom": 548.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 16,
-            "y": 324.140625,
+            "y": 324.90625,
             "w": 468,
             "h": 112,
             "right": 484,
-            "bottom": 436.140625
+            "bottom": 436.90625
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -7721,12 +7721,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 87,
+        "rightEdgeContentPx": 85,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (87 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (85 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -7744,7 +7744,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10647,
+        "documentHeight": 10718,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7801,35 +7801,35 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 467.140625,
+            "h": 467.90625,
             "right": 500,
-            "bottom": 548.140625
+            "bottom": 548.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 16,
-            "y": 324.140625,
+            "y": 324.90625,
             "w": 468,
             "h": 112,
             "right": 484,
-            "bottom": 436.140625
+            "bottom": 436.90625
           },
           "subClipsRight": false,
           "primaryCtaBox": null,
@@ -7933,7 +7933,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9139,
+        "documentHeight": 9156,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8122,7 +8122,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6436,
+        "documentHeight": 6458,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8294,7 +8294,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6436,
+        "documentHeight": 6458,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8466,7 +8466,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7066,
+        "documentHeight": 7984,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8523,26 +8523,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -8648,7 +8648,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7066,
+        "documentHeight": 7984,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8705,26 +8705,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -8830,7 +8830,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6151,
+        "documentHeight": 6168,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9012,7 +9012,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5354,
+        "documentHeight": 5376,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9177,7 +9177,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5354,
+        "documentHeight": 5376,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9342,7 +9342,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6887,
+        "documentHeight": 7932,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9399,26 +9399,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -9524,7 +9524,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6887,
+        "documentHeight": 7932,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9581,26 +9581,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -9706,7 +9706,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6098,
+        "documentHeight": 6115,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9888,7 +9888,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5301,
+        "documentHeight": 5323,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10053,7 +10053,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5301,
+        "documentHeight": 5323,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10218,7 +10218,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 4012,
+        "documentHeight": 4335,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10275,26 +10275,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -10400,7 +10400,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 4012,
+        "documentHeight": 4335,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10457,26 +10457,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -10582,7 +10582,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 3768,
+        "documentHeight": 3784,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10764,7 +10764,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 2946,
+        "documentHeight": 2968,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10929,7 +10929,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 2946,
+        "documentHeight": 2968,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11094,7 +11094,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 4458,
+        "documentHeight": 4747,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11151,26 +11151,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -11276,7 +11276,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 4458,
+        "documentHeight": 4747,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11333,26 +11333,26 @@
             "x": 0,
             "y": 81,
             "w": 500,
-            "h": 331.140625,
+            "h": 331.90625,
             "right": 500,
-            "bottom": 412.140625
+            "bottom": 412.90625
           },
           "headingBox": {
             "x": 16,
-            "y": 252.140625,
+            "y": 252.90625,
             "w": 468,
             "h": 48,
             "right": 484,
-            "bottom": 300.140625
+            "bottom": 300.90625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 16,
             "y": 214,
-            "w": 468,
-            "h": 18.140625,
-            "right": 484,
-            "bottom": 232.140625
+            "w": 419.421875,
+            "h": 18.90625,
+            "right": 435.421875,
+            "bottom": 232.90625
           },
           "eyebrowClipsRight": false,
           "subBox": null,
@@ -11458,7 +11458,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 4083,
+        "documentHeight": 4099,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11640,7 +11640,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 3261,
+        "documentHeight": 3283,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11805,7 +11805,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 3261,
+        "documentHeight": 3283,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11970,7 +11970,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 14126,
+        "documentHeight": 14196,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -12229,56 +12229,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 123.703125,
+            "y": 123.359375,
             "w": 468,
-            "h": 354.59375,
+            "h": 355.28125,
             "right": 484,
-            "bottom": 478.296875
+            "bottom": 478.640625
           },
           "headingBox": {
             "x": 38,
-            "y": 193.203125,
+            "y": 193.546875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 233.296875
+            "bottom": 233.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 160.703125,
+            "y": 160.359375,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 177.203125
+            "bottom": 177.546875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 249.296875,
+            "y": 249.640625,
             "w": 426,
             "h": 84,
             "right": 464,
-            "bottom": 333.296875
+            "bottom": 333.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 357.296875,
+            "y": 357.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 400.796875
+            "bottom": 401.140625
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 412.796875,
+            "y": 413.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 458.296875
+            "bottom": 458.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -12658,11 +12658,11 @@
             "text": "Begin a private market brief",
             "box": {
               "x": 38,
-              "y": 357.296875,
+              "y": 357.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 400.796875
+              "bottom": 401.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -12674,11 +12674,11 @@
             "text": "Explore the markets",
             "box": {
               "x": 38,
-              "y": 412.796875,
+              "y": 413.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 458.296875
+              "bottom": 458.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -12739,12 +12739,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 199,
+        "rightEdgeContentPx": 195,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (199 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (195 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -12762,7 +12762,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 14126,
+        "documentHeight": 14196,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -13021,56 +13021,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 123.703125,
+            "y": 123.359375,
             "w": 468,
-            "h": 354.59375,
+            "h": 355.28125,
             "right": 484,
-            "bottom": 478.296875
+            "bottom": 478.640625
           },
           "headingBox": {
             "x": 38,
-            "y": 193.203125,
+            "y": 193.546875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 233.296875
+            "bottom": 233.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 160.703125,
+            "y": 160.359375,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 177.203125
+            "bottom": 177.546875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 249.296875,
+            "y": 249.640625,
             "w": 426,
             "h": 84,
             "right": 464,
-            "bottom": 333.296875
+            "bottom": 333.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 357.296875,
+            "y": 357.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 400.796875
+            "bottom": 401.140625
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 412.796875,
+            "y": 413.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 458.296875
+            "bottom": 458.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -13450,11 +13450,11 @@
             "text": "Begin a private market brief",
             "box": {
               "x": 38,
-              "y": 357.296875,
+              "y": 357.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 400.796875
+              "bottom": 401.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -13466,11 +13466,11 @@
             "text": "Explore the markets",
             "box": {
               "x": 38,
-              "y": 412.796875,
+              "y": 413.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 458.296875
+              "bottom": 458.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -13531,12 +13531,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 162,
+        "rightEdgeContentPx": 158,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (162 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (158 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -13554,7 +13554,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8153,
+        "documentHeight": 8169,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -14346,7 +14346,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5946,
+        "documentHeight": 5968,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15122,7 +15122,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5946,
+        "documentHeight": 5968,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15897,8 +15897,8 @@
           "w": 500,
           "h": 481
         },
-        "documentWidth": 541,
-        "documentHeight": 25360,
+        "documentWidth": 538,
+        "documentHeight": 26056,
         "hasHorizontalOverflow": true,
         "images": [
           {
@@ -15918,7 +15918,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -16039,54 +16039,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -16113,11 +16113,11 @@
             "text": "Begin a Private Buyer Brief",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -16129,11 +16129,11 @@
             "text": "Confidential Valuation",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -16216,8 +16216,8 @@
           "w": 500,
           "h": 725
         },
-        "documentWidth": 541,
-        "documentHeight": 25360,
+        "documentWidth": 538,
+        "documentHeight": 26056,
         "hasHorizontalOverflow": true,
         "images": [
           {
@@ -16237,7 +16237,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -16358,54 +16358,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -16432,11 +16432,11 @@
             "text": "Begin a Private Buyer Brief",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -16448,11 +16448,11 @@
             "text": "Confidential Valuation",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -16536,7 +16536,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 18385,
+        "documentHeight": 18401,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16855,7 +16855,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 16257,
+        "documentHeight": 16279,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17158,7 +17158,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 16257,
+        "documentHeight": 16279,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17461,7 +17461,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12783,
+        "documentHeight": 12854,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17481,7 +17481,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 514.6875,
+            "renderedHeight": 515.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -17590,54 +17590,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 450.6875,
+            "h": 451.375,
             "right": 484,
-            "bottom": 563.6875
+            "bottom": 564.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 418.6875
+            "bottom": 419.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 442.6875,
+            "y": 443.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 486.1875
+            "bottom": 486.875
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 498.1875,
+            "y": 498.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 543.6875
+            "bottom": 544.375
           },
           "secondaryCtaTailClips": false
         },
@@ -17664,11 +17664,11 @@
             "text": "Inquire About Coral Ridge",
             "box": {
               "x": 38,
-              "y": 442.6875,
+              "y": 443.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 486.1875
+              "bottom": 486.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -17752,7 +17752,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12783,
+        "documentHeight": 12854,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17772,7 +17772,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 514.6875,
+            "renderedHeight": 515.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -17881,54 +17881,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 450.6875,
+            "h": 451.375,
             "right": 484,
-            "bottom": 563.6875
+            "bottom": 564.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 418.6875
+            "bottom": 419.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 442.6875,
+            "y": 443.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 486.1875
+            "bottom": 486.875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 498.1875,
+            "y": 498.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 543.6875
+            "bottom": 544.375
           },
           "secondaryCtaTailClips": false
         },
@@ -17955,11 +17955,11 @@
             "text": "Inquire About Coral Ridge",
             "box": {
               "x": 38,
-              "y": 442.6875,
+              "y": 443.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 486.1875
+              "bottom": 486.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -17971,11 +17971,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 498.1875,
+              "y": 498.875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 543.6875
+              "bottom": 544.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -18059,7 +18059,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9769,
+        "documentHeight": 9786,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18366,7 +18366,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7461,
+        "documentHeight": 7483,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18657,7 +18657,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7461,
+        "documentHeight": 7483,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18948,7 +18948,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12562,
+        "documentHeight": 12633,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18968,7 +18968,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 514.6875,
+            "renderedHeight": 515.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -19065,54 +19065,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 450.6875,
+            "h": 451.375,
             "right": 484,
-            "bottom": 563.6875
+            "bottom": 564.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 418.6875
+            "bottom": 419.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 442.6875,
+            "y": 443.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 486.1875
+            "bottom": 486.875
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 498.1875,
+            "y": 498.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 543.6875
+            "bottom": 544.375
           },
           "secondaryCtaTailClips": false
         },
@@ -19139,11 +19139,11 @@
             "text": "Inquire About Victoria Park",
             "box": {
               "x": 38,
-              "y": 442.6875,
+              "y": 443.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 486.1875
+              "bottom": 486.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -19227,7 +19227,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12562,
+        "documentHeight": 12633,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19247,7 +19247,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 514.6875,
+            "renderedHeight": 515.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -19344,54 +19344,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 450.6875,
+            "h": 451.375,
             "right": 484,
-            "bottom": 563.6875
+            "bottom": 564.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 418.6875
+            "bottom": 419.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 442.6875,
+            "y": 443.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 486.1875
+            "bottom": 486.875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 498.1875,
+            "y": 498.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 543.6875
+            "bottom": 544.375
           },
           "secondaryCtaTailClips": false
         },
@@ -19418,11 +19418,11 @@
             "text": "Inquire About Victoria Park",
             "box": {
               "x": 38,
-              "y": 442.6875,
+              "y": 443.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 486.1875
+              "bottom": 486.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -19434,11 +19434,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 498.1875,
+              "y": 498.875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 543.6875
+              "bottom": 544.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -19522,7 +19522,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9625,
+        "documentHeight": 9642,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19817,7 +19817,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7733,
+        "documentHeight": 7755,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20096,7 +20096,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7733,
+        "documentHeight": 7755,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20375,7 +20375,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11880,
+        "documentHeight": 11950,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20395,7 +20395,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -20480,54 +20480,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -20554,11 +20554,11 @@
             "text": "Inquire About Boca Raton",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -20570,11 +20570,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -20658,7 +20658,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11880,
+        "documentHeight": 11950,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20678,7 +20678,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -20763,54 +20763,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -20837,11 +20837,11 @@
             "text": "Inquire About Boca Raton",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -20853,11 +20853,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -20941,7 +20941,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9510,
+        "documentHeight": 9527,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21224,7 +21224,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7208,
+        "documentHeight": 7230,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21491,7 +21491,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7208,
+        "documentHeight": 7230,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21758,7 +21758,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10832,
+        "documentHeight": 10903,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21778,7 +21778,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -21851,54 +21851,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -21925,11 +21925,11 @@
             "text": "Inquire About Palm Beach",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -21941,11 +21941,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -22029,7 +22029,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10832,
+        "documentHeight": 10903,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22049,7 +22049,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -22122,54 +22122,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -22196,11 +22196,11 @@
             "text": "Inquire About Palm Beach",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -22212,11 +22212,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -22300,7 +22300,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8824,
+        "documentHeight": 8841,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22571,7 +22571,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6963,
+        "documentHeight": 6985,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22826,7 +22826,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6963,
+        "documentHeight": 6985,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23081,7 +23081,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11848,
+        "documentHeight": 11919,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23101,7 +23101,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 466.640625,
+            "renderedHeight": 467.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -23186,54 +23186,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 402.640625,
+            "h": 403.328125,
             "right": 484,
-            "bottom": 515.640625
+            "bottom": 516.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 370.640625
+            "bottom": 371.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 394.640625,
+            "y": 395.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 438.140625
+            "bottom": 438.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 450.140625,
+            "y": 450.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 495.640625
+            "bottom": 496.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -23260,11 +23260,11 @@
             "text": "Inquire About Delray Beach",
             "box": {
               "x": 38,
-              "y": 394.640625,
+              "y": 395.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 438.140625
+              "bottom": 438.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -23276,11 +23276,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 450.140625,
+              "y": 450.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 495.640625
+              "bottom": 496.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -23364,7 +23364,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11848,
+        "documentHeight": 11919,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23384,7 +23384,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 466.640625,
+            "renderedHeight": 467.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -23469,54 +23469,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 402.640625,
+            "h": 403.328125,
             "right": 484,
-            "bottom": 515.640625
+            "bottom": 516.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 112,
             "right": 464,
-            "bottom": 370.640625
+            "bottom": 371.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 394.640625,
+            "y": 395.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 438.140625
+            "bottom": 438.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 450.140625,
+            "y": 450.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 495.640625
+            "bottom": 496.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -23543,11 +23543,11 @@
             "text": "Inquire About Delray Beach",
             "box": {
               "x": 38,
-              "y": 394.640625,
+              "y": 395.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 438.140625
+              "bottom": 438.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -23559,11 +23559,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 450.140625,
+              "y": 450.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 495.640625
+              "bottom": 496.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -23647,7 +23647,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9489,
+        "documentHeight": 9505,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23930,7 +23930,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7117,
+        "documentHeight": 7139,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24197,7 +24197,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7117,
+        "documentHeight": 7139,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24441,12 +24441,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1798,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1798 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -24464,7 +24464,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12168,
+        "documentHeight": 12238,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24484,7 +24484,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -24581,54 +24581,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -24655,11 +24655,11 @@
             "text": "Inquire About Lighthouse Point",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -24671,11 +24671,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -24759,7 +24759,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12168,
+        "documentHeight": 12238,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24779,7 +24779,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 494.640625,
+            "renderedHeight": 495.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -24876,54 +24876,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 430.640625,
+            "h": 431.328125,
             "right": 484,
-            "bottom": 543.640625
+            "bottom": 544.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 140,
             "right": 464,
-            "bottom": 398.640625
+            "bottom": 399.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 422.640625,
+            "y": 423.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 466.140625
+            "bottom": 466.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 478.140625,
+            "y": 478.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 523.640625
+            "bottom": 524.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -24950,11 +24950,11 @@
             "text": "Inquire About Lighthouse Point",
             "box": {
               "x": 38,
-              "y": 422.640625,
+              "y": 423.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 466.140625
+              "bottom": 466.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -24966,11 +24966,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 478.140625,
+              "y": 478.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 523.640625
+              "bottom": 524.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -25054,7 +25054,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9285,
+        "documentHeight": 9302,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25349,7 +25349,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7476,
+        "documentHeight": 7498,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25628,7 +25628,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7476,
+        "documentHeight": 7498,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25907,7 +25907,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11966,
+        "documentHeight": 12037,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25927,7 +25927,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -26024,54 +26024,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -26098,11 +26098,11 @@
             "text": "Inquire About Rio Vista",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -26186,7 +26186,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11966,
+        "documentHeight": 12037,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26206,7 +26206,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -26303,54 +26303,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -26377,11 +26377,11 @@
             "text": "Inquire About Rio Vista",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -26393,11 +26393,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 506.140625,
+              "y": 506.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 551.640625
+              "bottom": 552.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -26481,7 +26481,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9250,
+        "documentHeight": 9267,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26776,7 +26776,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7434,
+        "documentHeight": 7456,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27055,7 +27055,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7434,
+        "documentHeight": 7456,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27334,7 +27334,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 13174,
+        "documentHeight": 13245,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27354,7 +27354,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -27463,54 +27463,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -27537,11 +27537,11 @@
             "text": "Inquire About Harbor Beach",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -27625,7 +27625,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 13174,
+        "documentHeight": 13245,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27645,7 +27645,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -27754,54 +27754,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -27828,11 +27828,11 @@
             "text": "Inquire About Harbor Beach",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -27844,11 +27844,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 506.140625,
+              "y": 506.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 551.640625
+              "bottom": 552.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -27932,7 +27932,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 10029,
+        "documentHeight": 10046,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28239,7 +28239,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7721,
+        "documentHeight": 7743,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28530,7 +28530,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7721,
+        "documentHeight": 7743,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28821,7 +28821,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 13807,
+        "documentHeight": 13878,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28841,7 +28841,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 542.6875,
+            "renderedHeight": 543.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -28962,54 +28962,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 478.6875,
+            "h": 479.375,
             "right": 484,
-            "bottom": 591.6875
+            "bottom": 592.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 446.6875
+            "bottom": 447.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 470.6875,
+            "y": 471.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 514.1875
+            "bottom": 514.875
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 526.1875,
+            "y": 526.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 571.6875
+            "bottom": 572.375
           },
           "secondaryCtaTailClips": false
         },
@@ -29036,11 +29036,11 @@
             "text": "Inquire About Las Olas Isles",
             "box": {
               "x": 38,
-              "y": 470.6875,
+              "y": 471.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 514.1875
+              "bottom": 514.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -29124,7 +29124,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 13807,
+        "documentHeight": 13878,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29144,7 +29144,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 542.6875,
+            "renderedHeight": 543.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -29265,54 +29265,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 478.6875,
+            "h": 479.375,
             "right": 484,
-            "bottom": 591.6875
+            "bottom": 592.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 446.6875
+            "bottom": 447.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 470.6875,
+            "y": 471.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 514.1875
+            "bottom": 514.875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 526.1875,
+            "y": 526.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 571.6875
+            "bottom": 572.375
           },
           "secondaryCtaTailClips": false
         },
@@ -29339,11 +29339,11 @@
             "text": "Inquire About Las Olas Isles",
             "box": {
               "x": 38,
-              "y": 470.6875,
+              "y": 471.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 514.1875
+              "bottom": 514.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -29355,11 +29355,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 526.1875,
+              "y": 526.875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 571.6875
+              "bottom": 572.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -29443,7 +29443,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 10010,
+        "documentHeight": 10026,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29762,7 +29762,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7757,
+        "documentHeight": 7779,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30065,7 +30065,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7757,
+        "documentHeight": 7779,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30368,7 +30368,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11607,
+        "documentHeight": 11677,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30388,7 +30388,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -30473,54 +30473,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -30547,11 +30547,11 @@
             "text": "Inquire About Seven Isles",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -30635,7 +30635,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11607,
+        "documentHeight": 11677,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30655,7 +30655,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -30740,54 +30740,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -30814,11 +30814,11 @@
             "text": "Inquire About Seven Isles",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -30830,11 +30830,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 506.140625,
+              "y": 506.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 551.640625
+              "bottom": 552.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -30918,7 +30918,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9282,
+        "documentHeight": 9299,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31201,7 +31201,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6979,
+        "documentHeight": 7001,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31445,12 +31445,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1443,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1443 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -31468,7 +31468,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6979,
+        "documentHeight": 7001,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31735,7 +31735,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10509,
+        "documentHeight": 10580,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31755,7 +31755,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 502.59375,
+            "renderedHeight": 503.28125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -31828,54 +31828,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 438.59375,
+            "h": 439.28125,
             "right": 484,
-            "bottom": 551.59375
+            "bottom": 552.28125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 223.28125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 239.28125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 406.59375
+            "bottom": 407.28125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 430.59375,
+            "y": 431.28125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 474.09375
+            "bottom": 474.78125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 486.09375,
+            "y": 486.78125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 531.59375
+            "bottom": 532.28125
           },
           "secondaryCtaTailClips": false
         },
@@ -31902,11 +31902,11 @@
             "text": "Inquire About Sea Ranch Lakes",
             "box": {
               "x": 38,
-              "y": 430.59375,
+              "y": 431.28125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 474.09375
+              "bottom": 474.78125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -31990,7 +31990,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10509,
+        "documentHeight": 10580,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32010,7 +32010,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 502.59375,
+            "renderedHeight": 503.28125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -32083,54 +32083,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 438.59375,
+            "h": 439.28125,
             "right": 484,
-            "bottom": 551.59375
+            "bottom": 552.28125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 222.59375
+            "bottom": 223.28125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 238.59375,
+            "y": 239.28125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 406.59375
+            "bottom": 407.28125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 430.59375,
+            "y": 431.28125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 474.09375
+            "bottom": 474.78125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 486.09375,
+            "y": 486.78125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 531.59375
+            "bottom": 532.28125
           },
           "secondaryCtaTailClips": false
         },
@@ -32157,11 +32157,11 @@
             "text": "Inquire About Sea Ranch Lakes",
             "box": {
               "x": 38,
-              "y": 430.59375,
+              "y": 431.28125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 474.09375
+              "bottom": 474.78125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -32173,11 +32173,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 486.09375,
+              "y": 486.78125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 531.59375
+              "bottom": 532.28125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -32261,7 +32261,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8607,
+        "documentHeight": 8624,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32532,7 +32532,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6939,
+        "documentHeight": 6961,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32787,7 +32787,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6939,
+        "documentHeight": 6961,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33042,7 +33042,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11431,
+        "documentHeight": 11502,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33062,7 +33062,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -33147,54 +33147,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -33221,11 +33221,11 @@
             "text": "Inquire About Hillsboro Mile",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -33309,7 +33309,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11431,
+        "documentHeight": 11502,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33329,7 +33329,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 522.640625,
+            "renderedHeight": 523.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -33414,54 +33414,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 458.640625,
+            "h": 459.328125,
             "right": 484,
-            "bottom": 571.640625
+            "bottom": 572.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 426.640625
+            "bottom": 427.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 450.640625,
+            "y": 451.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 494.140625
+            "bottom": 494.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 506.140625,
+            "y": 506.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 551.640625
+            "bottom": 552.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -33488,11 +33488,11 @@
             "text": "Inquire About Hillsboro Mile",
             "box": {
               "x": 38,
-              "y": 450.640625,
+              "y": 451.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 494.140625
+              "bottom": 494.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -33504,11 +33504,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 506.140625,
+              "y": 506.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 551.640625
+              "bottom": 552.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -33592,7 +33592,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9150,
+        "documentHeight": 9167,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33875,7 +33875,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6935,
+        "documentHeight": 6957,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34119,12 +34119,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1415,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1415 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -34142,7 +34142,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6935,
+        "documentHeight": 6957,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34409,7 +34409,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12776,
+        "documentHeight": 12847,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34429,7 +34429,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 578.640625,
+            "renderedHeight": 579.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -34526,54 +34526,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 514.640625,
+            "h": 515.328125,
             "right": 484,
-            "bottom": 627.640625
+            "bottom": 628.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 224,
             "right": 464,
-            "bottom": 482.640625
+            "bottom": 483.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 506.640625,
+            "y": 507.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 550.140625
+            "bottom": 550.828125
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 562.140625,
+            "y": 562.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 607.640625
+            "bottom": 608.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -34672,7 +34672,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12776,
+        "documentHeight": 12847,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34692,7 +34692,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 578.640625,
+            "renderedHeight": 579.328125,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -34789,54 +34789,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 514.640625,
+            "h": 515.328125,
             "right": 484,
-            "bottom": 627.640625
+            "bottom": 628.328125
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 60.140625,
             "right": 337.71875,
-            "bottom": 242.640625
+            "bottom": 243.328125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 258.640625,
+            "y": 259.328125,
             "w": 426,
             "h": 224,
             "right": 464,
-            "bottom": 482.640625
+            "bottom": 483.328125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 506.640625,
+            "y": 507.328125,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 550.140625
+            "bottom": 550.828125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 562.140625,
+            "y": 562.828125,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 607.640625
+            "bottom": 608.328125
           },
           "secondaryCtaTailClips": false
         },
@@ -34863,11 +34863,11 @@
             "text": "Inquire About Bay Colony",
             "box": {
               "x": 38,
-              "y": 506.640625,
+              "y": 507.328125,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 550.140625
+              "bottom": 550.828125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -34879,11 +34879,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 562.140625,
+              "y": 562.828125,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 607.640625
+              "bottom": 608.328125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -34967,7 +34967,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9754,
+        "documentHeight": 9770,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35262,7 +35262,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7855,
+        "documentHeight": 7877,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35541,7 +35541,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7855,
+        "documentHeight": 7877,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35820,7 +35820,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12792,
+        "documentHeight": 12862,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35840,7 +35840,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 542.6875,
+            "renderedHeight": 543.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -35937,54 +35937,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 478.6875,
+            "h": 479.375,
             "right": 484,
-            "bottom": 591.6875
+            "bottom": 592.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 446.6875
+            "bottom": 447.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 470.6875,
+            "y": 471.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 514.1875
+            "bottom": 514.875
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 526.1875,
+            "y": 526.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 571.6875
+            "bottom": 572.375
           },
           "secondaryCtaTailClips": false
         },
@@ -36011,11 +36011,11 @@
             "text": "Inquire About Bermuda Riviera",
             "box": {
               "x": 38,
-              "y": 470.6875,
+              "y": 471.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 514.1875
+              "bottom": 514.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -36099,7 +36099,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12792,
+        "documentHeight": 12862,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36119,7 +36119,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 542.6875,
+            "renderedHeight": 543.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -36216,54 +36216,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 478.6875,
+            "h": 479.375,
             "right": 484,
-            "bottom": 591.6875
+            "bottom": 592.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 168,
             "right": 464,
-            "bottom": 446.6875
+            "bottom": 447.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 470.6875,
+            "y": 471.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 514.1875
+            "bottom": 514.875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 526.1875,
+            "y": 526.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 571.6875
+            "bottom": 572.375
           },
           "secondaryCtaTailClips": false
         },
@@ -36290,11 +36290,11 @@
             "text": "Inquire About Bermuda Riviera",
             "box": {
               "x": 38,
-              "y": 470.6875,
+              "y": 471.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 514.1875
+              "bottom": 514.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -36306,11 +36306,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 526.1875,
+              "y": 526.875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 571.6875
+              "bottom": 572.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -36394,7 +36394,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9698,
+        "documentHeight": 9714,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36689,7 +36689,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7846,
+        "documentHeight": 7868,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36968,7 +36968,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7846,
+        "documentHeight": 7868,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -37247,7 +37247,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12959,
+        "documentHeight": 13029,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -37267,7 +37267,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 570.6875,
+            "renderedHeight": 571.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -37376,54 +37376,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 506.6875,
+            "h": 507.375,
             "right": 484,
-            "bottom": 619.6875
+            "bottom": 620.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 196,
             "right": 464,
-            "bottom": 474.6875
+            "bottom": 475.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 498.6875,
+            "y": 499.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 542.1875
+            "bottom": 542.875
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 554.1875,
+            "y": 554.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 599.6875
+            "bottom": 600.375
           },
           "secondaryCtaTailClips": false
         },
@@ -37522,7 +37522,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12959,
+        "documentHeight": 13029,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -37542,7 +37542,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 570.6875,
+            "renderedHeight": 571.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -37651,54 +37651,54 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 506.6875,
+            "h": 507.375,
             "right": 484,
-            "bottom": 619.6875
+            "bottom": 620.375
           },
           "headingBox": {
             "x": 38,
-            "y": 182.5,
+            "y": 183.1875,
             "w": 299.71875,
             "h": 80.1875,
             "right": 337.71875,
-            "bottom": 262.6875
+            "bottom": 263.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
             "y": 150,
             "w": 426,
-            "h": 16.5,
+            "h": 17.1875,
             "right": 464,
-            "bottom": 166.5
+            "bottom": 167.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 278.6875,
+            "y": 279.375,
             "w": 426,
             "h": 196,
             "right": 464,
-            "bottom": 474.6875
+            "bottom": 475.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 498.6875,
+            "y": 499.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 542.1875
+            "bottom": 542.875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 554.1875,
+            "y": 554.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 599.6875
+            "bottom": 600.375
           },
           "secondaryCtaTailClips": false
         },
@@ -37725,11 +37725,11 @@
             "text": "Inquire About Pompano Beach",
             "box": {
               "x": 38,
-              "y": 498.6875,
+              "y": 499.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 542.1875
+              "bottom": 542.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -37741,11 +37741,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 554.1875,
+              "y": 554.875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 599.6875
+              "bottom": 600.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -37829,7 +37829,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9843,
+        "documentHeight": 9860,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -38136,7 +38136,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7696,
+        "documentHeight": 7718,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -38427,7 +38427,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7696,
+        "documentHeight": 7718,
         "hasHorizontalOverflow": false,
         "images": [
           {

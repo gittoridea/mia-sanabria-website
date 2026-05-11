@@ -18,8 +18,8 @@ export function SiteFooter() {
           <div className="mt-1 text-xs uppercase tracking-[0.3em] text-brass-300">
             {SITE.positioning}
           </div>
-          <p className="mt-5 text-sm text-cream-200/90 max-w-xs">
-            {SITE.tagline}. Real estate guidance for luxury Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach buyers and sellers, delivered with discretion and rigor.
+          <p className="mt-5 text-sm leading-relaxed text-cream-200/90 max-w-xs">
+            {SITE.tagline} Real estate guidance for luxury Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach buyers and sellers, delivered with discretion and rigor.
           </p>
           <div className="mt-6 flex items-center gap-3">
             <FooterSocial href={MIA.social.facebook} label="Facebook">

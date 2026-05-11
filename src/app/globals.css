@@ -102,6 +102,40 @@ body {
     line-height: 1.65;
     max-width: 70ch;
   }
+
+  /* Cycle 19A-M — mobile readability production pass.
+   * At ≤640px (Tailwind 'sm' breakpoint), bump paragraph line-height to 1.72
+   * for easier line-tracking on small screens, and tighten the measure cap so
+   * paragraphs don't stretch edge-to-edge inside narrow card padding (which
+   * lowered the readable measure to ~28-32ch on iPhone SE). The desktop
+   * 1.65 / 70ch contract is preserved above 640px. Body base stays 16px
+   * (Tailwind v4 default; browser default). This is a single global edit;
+   * no per-component overrides needed and editorial-luxury feel is preserved
+   * because Cinzel/Montserrat scale tokens are untouched.
+   */
+  @media (max-width: 640px) {
+    p {
+      line-height: 1.72;
+      max-width: 62ch;
+    }
+    /* Body copy at sm: slight bump so long paragraphs feel less dense. */
+    main p,
+    article p,
+    section p {
+      font-size: 1.0625rem; /* 17px — between 16 and 18 to add air without losing density */
+    }
+    /* Tap-target floor — any anchor inside main / nav / footer hits ≥ 44px
+     * vertical, per WCAG 2.5.5 (Target Size). We only apply this when no
+     * explicit utility already raised the height (uses :where() so 0
+     * specificity — utilities still win). */
+    :where(main a[href]:not([class*="inline"])),
+    :where(nav a[href]),
+    :where(footer a[href]) {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
 }
 
 a:focus-visible,

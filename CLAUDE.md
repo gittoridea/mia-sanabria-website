@@ -1,0 +1,63 @@
+# mia-sanabria-website — project-local rules
+
+> Loaded automatically by Claude Code when working inside this repo.
+> Keep concise — the global PAI `CLAUDE.md` already handles general doctrine.
+
+## Tech invariants
+
+- **Stack:** Next.js 15 App Router · TypeScript strict + `noUncheckedIndexedAccess: true` · Tailwind v4 · static export.
+- **Runtime:** `bun` always. Never `npm` or `npx`.
+- **Deploy substrate:** Helos VPS via Dokploy (applicationId `XJSRlvH-91ZtUsh0RPGvo`). Never direct VPS edits. Never edit Caddyfile in prod without Dokploy redeploy.
+
+## Reproduce before fixing
+
+- UI bug reported → open the page with `bun run audit:mobile-readability:capture` or `audit:rendered` and look at the screenshot **before** reading code.
+- Stale-copy claim → run `bun run audit:stale` against the latest `out/` first; the audit's regex+string catalog is authoritative.
+
+## Cache + verify
+
+- Caddy on Dokploy serves stale. Every post-deploy live check must add `?_=<ts>` and `Cache-Control: no-cache`. ETag is the deploy-flip signal.
+- After a deploy: confirm the live `etag:` header changed before claiming success.
+
+## Audit gates (must stay green)
+
+- `bun run typecheck` — exits 0.
+- `bun run lint` — exits 0.
+- `bun run build` — exits 0; produces `out/`.
+- `bun run audit:all` — runs the full chain (stale, schema, links, seo, completeness, images, brand, insights, featured-markets, legal, about, hero-contrast, rendered, route-inventory, qa-gate). 0 FAIL is the gate.
+- `bun run audit:qa-gate` — full-site matrix. `critical` count == 0 is the gate; `high` count needs the readiness register classification.
+- `bun run audit:mobile-readability:capture` — re-captures `docs/artifacts/cycle-19A-M/mobile-readability/after/`. Required on any visual edit.
+
+## Honesty contracts (audited by audit-stale-terms)
+
+- No "luxury concierge", "white-glove", "bespoke", "high-net-worth", "off-market", "since 2017", "within two hours", "as seen in/on" — luxury-as-practice or GATED_MIA risks.
+- No "best schools", "good schools", "safe neighborhood", "family-friendly", "bachelor pad", "kid-friendly" — Fair Housing steering risk.
+- No `#1 realtor`, `top realtor`, `best realtor`, `guaranteed sale/price` — FREC superlative risk.
+- No `..` at sentence boundaries — double-period from concatenation defect class.
+- No visible `Updated MONTH YYYY` blog labels — schema `dateModified` stays honest; do not surface a label.
+
+## What never gets written without explicit Torrey approval
+
+- GHL form/webhook endpoints — currently mailto fallback. Do not invent endpoint URLs.
+- DNS / Dokploy production config / branded email creation.
+- Anything that touches Mia's existing surfaces (`miasanabriarealtor.com` Direct Axess host, social profiles, GBP).
+- Token values to chat or logs. `DOKPLOY_API_TOKEN` etc. stay in `~/.claude/.env`.
+
+## sharp + libvips runtime
+
+- Linux runtime requires `LD_LIBRARY_PATH` prefix to find libvips. Package.json scripts using sharp already wrap. New sharp consumers must prefix the same way or fail with `ERR_DLOPEN_FAILED`.
+
+## Port collisions
+
+- `audit:rendered` and `deploy-and-verify` both want port 4173. Use `scripts/lib/port-guard.ts` (`bun port-guard --port=4173 --fallbacks=4174,4175`) before spinning a preview server. Never kill an unknown holder blindly.
+
+## When you touch visual files
+
+- Visual edit = `.tsx` in `src/components/`, `globals.css`, image swap, hero, footer.
+- Required on visual edit: capture mobile screenshots at 320/375/414/768 via `audit:mobile-readability:capture` and store under `docs/artifacts/cycle-<id>/mobile-readability/{before,after}/`.
+
+## When in doubt
+
+- Read the project ISA at `~/code/mia-sanabria-website/ISA.md` (single source of truth, 745 ISCs).
+- Read prior cycle handoffs under `docs/CYCLE_*_HANDOFF.md` and `docs/NEXT_SESSION_TRIGGER.md`.
+- Check `~/.claude/PAI/USER/PROJECTS/MiaSanabria/` for client-context (off-repo).

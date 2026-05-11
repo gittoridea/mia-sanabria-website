@@ -1,0 +1,1111 @@
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "generated_at": "2026-05-11T04:35:03.209Z",
+  "sitemap_route_count": 40,
+  "rows_scanned": 40,
+  "severity_counts": {
+    "critical": 0,
+    "high": 4,
+    "medium": 1,
+    "low": 40
+  },
+  "owner_category_split": {
+    "c1": 0,
+    "c2": 0,
+    "c3": 0,
+    "c4": 1,
+    "c5": 4,
+    "c6": 40
+  },
+  "rows": [
+    {
+      "route": "/",
+      "page_type": "home",
+      "out_file": "out/index.html",
+      "title": "Fort Lauderdale REALTOR® | Waterfront &amp; Luxury Homes",
+      "h1_text": "Luxury and waterfront real estate across Eastern Fort Lauder dale, Boca Raton, and Delray Beach.",
+      "meta_description": "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Private representation.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/",
+      "noindex": true,
+      "schema_blocks": 7,
+      "internal_links": 64,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/about",
+      "page_type": "identity",
+      "out_file": "out/about/index.html",
+      "title": "About Mia — Southeast Florida Luxury REALTOR® | Mia Sanabria",
+      "h1_text": "A personal practice for luxury and waterfront real estate.",
+      "meta_description": "Mia Sanabria is a Fort Lauderdale REALTOR® with LPT Realty representing buyers and sellers across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/about/",
+      "noindex": true,
+      "schema_blocks": 7,
+      "internal_links": 44,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/contact",
+      "page_type": "contact",
+      "out_file": "out/contact/index.html",
+      "title": "Contact Mia Sanabria — Private Consultation | Mia Sanabria",
+      "h1_text": "Begin a private conversation.",
+      "meta_description": "Begin a private conversation with Mia Sanabria — Fort Lauderdale REALTOR® with LPT Realty. Eastern Fort Lauderdale, Boca Raton, Delray Beach.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/contact/",
+      "noindex": true,
+      "schema_blocks": 8,
+      "internal_links": 42,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": true,
+      "contact_form_action_kind": "mailto",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "lead_capture",
+          "status": "warn",
+          "evidence": "contact form uses mailto fallback; GHL endpoint not wired",
+          "severity": "medium",
+          "owner_category": 4
+        },
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/buyers",
+      "page_type": "service",
+      "out_file": "out/buyers/index.html",
+      "title": "Buying — Private Buyer Representation | Mia Sanabria",
+      "h1_text": "Private buyer representation across Southeast Florida.",
+      "meta_description": "Private buyer representation across Southeast Florida — discreet acquisition guidance in Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/buyers/",
+      "noindex": true,
+      "schema_blocks": 8,
+      "internal_links": 49,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/sellers",
+      "page_type": "service",
+      "out_file": "out/sellers/index.html",
+      "title": "Selling — Elevated Marketing &amp; Strategy | Mia Sanabria",
+      "h1_text": "Elevating your property&#x27;s global presence.",
+      "meta_description": "Tailored marketing for Southeast Florida residences — editorial photography, private brokerage relationships, and strategic pricing for market velocity.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/sellers/",
+      "noindex": true,
+      "schema_blocks": 8,
+      "internal_links": 49,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/valuation",
+      "page_type": "service",
+      "out_file": "out/valuation/index.html",
+      "title": "Home Valuation — Southeast Florida | Mia Sanabria",
+      "h1_text": "Discover your home&#x27;s value.",
+      "meta_description": "Receive a complimentary, tailored valuation of your Southeast Florida property. Careful, confidential, and grounded in micro-market dynamics.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/valuation/",
+      "noindex": true,
+      "schema_blocks": 7,
+      "internal_links": 46,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": true,
+      "contact_form_action_kind": "mailto",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/markets",
+      "page_type": "markets_index",
+      "out_file": "out/markets/index.html",
+      "title": "Featured Markets — Southeast Florida | Mia Sanabria",
+      "h1_text": "Southeast Florida&#x27;s most coveted coastal communities.",
+      "meta_description": "South Florida cities and towns plus the Fort Lauderdale waterfront and Northern Broward clusters — Mia Sanabria&#x27;s Broward and Palm Beach County markets.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/",
+      "noindex": true,
+      "schema_blocks": 4,
+      "internal_links": 60,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/insights",
+      "page_type": "insights_index",
+      "out_file": "out/insights/index.html",
+      "title": "Insights — SE Florida Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Notes from the Southeast Florida luxury and waterfront market.",
+      "meta_description": "Twelve evergreen briefs on the SE Florida luxury and waterfront market — buyer guides, market comparisons, and pre-listing positioning by Mia Sanabria.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/",
+      "noindex": true,
+      "schema_blocks": 4,
+      "internal_links": 63,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/privacy",
+      "page_type": "legal",
+      "out_file": "out/privacy/index.html",
+      "title": "Privacy Policy | Mia Sanabria",
+      "h1_text": "How this website collects, uses, and protects personal information.",
+      "meta_description": "How Mia Sanabria collects, uses, and protects personal information on this real estate website, including privacy rights and contact options.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/privacy/",
+      "noindex": true,
+      "schema_blocks": 4,
+      "internal_links": 37,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "legal_review",
+          "status": "info",
+          "evidence": "Privacy/Terms/DMCA require legal review before .com cutover",
+          "severity": "high",
+          "owner_category": 5
+        },
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/terms",
+      "page_type": "legal",
+      "out_file": "out/terms/index.html",
+      "title": "Terms of Service | Mia Sanabria",
+      "h1_text": "Terms governing use of this website and inquiry submissions.",
+      "meta_description": "Terms governing use of the Mia Sanabria real estate website, MLS content, inquiry handling, and when a brokerage relationship is formed.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/terms/",
+      "noindex": true,
+      "schema_blocks": 4,
+      "internal_links": 38,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "legal_review",
+          "status": "info",
+          "evidence": "Privacy/Terms/DMCA require legal review before .com cutover",
+          "severity": "high",
+          "owner_category": 5
+        },
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/accessibility",
+      "page_type": "legal",
+      "out_file": "out/accessibility/index.html",
+      "title": "Accessibility Statement | Mia Sanabria",
+      "h1_text": "Accessibility standards and support for this website.",
+      "meta_description": "Accessibility statement for the Mia Sanabria website, including WCAG 2.1 AA goals, compatibility notes, and how to report barriers.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/accessibility/",
+      "noindex": true,
+      "schema_blocks": 4,
+      "internal_links": 37,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "legal_review",
+          "status": "info",
+          "evidence": "Privacy/Terms/DMCA require legal review before .com cutover",
+          "severity": "high",
+          "owner_category": 5
+        },
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/dmca",
+      "page_type": "legal",
+      "out_file": "out/dmca/index.html",
+      "title": "DMCA Notice | Mia Sanabria",
+      "h1_text": "Copyright takedown and counter-notice procedures.",
+      "meta_description": "How to submit a DMCA takedown notice or counter-notice for content on the Mia Sanabria website under 17 U.S.C. § 512.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/dmca/",
+      "noindex": true,
+      "schema_blocks": 4,
+      "internal_links": 37,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "legal_review",
+          "status": "info",
+          "evidence": "Privacy/Terms/DMCA require legal review before .com cutover",
+          "severity": "high",
+          "owner_category": 5
+        },
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/fort-lauderdale",
+      "page_type": "market_detail",
+      "out_file": "out/markets/fort-lauderdale/index.html",
+      "title": "Fort Lauderdale Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Where deepwater yacht access, a working downtown, and a 165-mile canal system meet.",
+      "meta_description": "Fort Lauderdale is known for waterfront luxury living anchored by more than 165 miles of inland canals — the reason… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/fort-lauderdale/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 75,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/markets/coral-ridge",
+      "page_type": "market_detail",
+      "out_file": "out/markets/coral-ridge/index.html",
+      "title": "Coral Ridge Luxury Real Estate | Mia Sanabria",
+      "h1_text": "A Fort Lauderdale neighborhood known for water access and established streets.",
+      "meta_description": "Coral Ridge is an established Fort Lauderdale neighborhood north of Sunrise Boulevard, framed by the Intracoastal to… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/coral-ridge/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 56,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/victoria-park",
+      "page_type": "market_detail",
+      "out_file": "out/markets/victoria-park/index.html",
+      "title": "Victoria Park Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Walkable Fort Lauderdale living near Las Olas, downtown, and the beach corridor.",
+      "meta_description": "Victoria Park is an in-town Fort Lauderdale neighborhood east of Federal Highway, framed by Sunrise Boulevard, the… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/victoria-park/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 55,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/boca-raton",
+      "page_type": "market_detail",
+      "out_file": "out/markets/boca-raton/index.html",
+      "title": "Boca Raton Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Coastal, club, and city access across South Palm Beach County.",
+      "meta_description": "Boca Raton is a south Palm Beach County city known for layered luxury — Mediterranean Revival architecture inherited… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/boca-raton/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 54,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/markets/palm-beach",
+      "page_type": "market_detail",
+      "out_file": "out/markets/palm-beach/index.html",
+      "title": "Palm Beach Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Island and coastal property decisions that require careful preparation.",
+      "meta_description": "Palm Beach is a barrier-island town in northern Palm Beach County known for generational-wealth real estate, strict… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/palm-beach/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 53,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/delray-beach",
+      "page_type": "market_detail",
+      "out_file": "out/markets/delray-beach/index.html",
+      "title": "Delray Beach Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Beach, downtown, and residential options with a strong local lifestyle draw.",
+      "meta_description": "Delray Beach, the self-styled Village by the Sea in central Palm Beach County, is known for a walkable Atlantic… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/delray-beach/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 54,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/markets/lighthouse-point",
+      "page_type": "market_detail",
+      "out_file": "out/markets/lighthouse-point/index.html",
+      "title": "Lighthouse Point Luxury Real Estate | Mia Sanabria",
+      "h1_text": "A Broward coastal community where water access often drives the search.",
+      "meta_description": "Lighthouse Point is a small residential city in northern Broward County north of Pompano Beach, known for a tight… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/lighthouse-point/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 55,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/rio-vista",
+      "page_type": "market_detail",
+      "out_file": "out/markets/rio-vista/index.html",
+      "title": "Rio Vista Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Walkable deepwater living south of Las Olas in eastern Fort Lauderdale.",
+      "meta_description": "Rio Vista is an eastern Fort Lauderdale waterfront neighborhood south of Las Olas Boulevard across the New River… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/rio-vista/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 55,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/harbor-beach",
+      "page_type": "market_detail",
+      "out_file": "out/markets/harbor-beach/index.html",
+      "title": "Harbor Beach Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Eastern Fort Lauderdale&#x27;s gated ultra-luxury waterfront enclave.",
+      "meta_description": "Harbor Beach is a guard-gated ultra-luxury enclave in eastern Fort Lauderdale, situated south of Las Olas and Bahia… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/harbor-beach/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 56,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/las-olas-isles",
+      "page_type": "market_detail",
+      "out_file": "out/markets/las-olas-isles/index.html",
+      "title": "Las Olas Isles Luxury Real Estate | Mia Sanabria",
+      "h1_text": "The seven finger isles east of downtown Fort Lauderdale, walkable to Las Olas Boulevard.",
+      "meta_description": "Las Olas Isles is the residential isles district east of downtown Fort Lauderdale — the seven finger isles between… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/las-olas-isles/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 57,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/seven-isles",
+      "page_type": "market_detail",
+      "out_file": "out/markets/seven-isles/index.html",
+      "title": "Seven Isles Luxury Real Estate | Mia Sanabria",
+      "h1_text": "The deepwater yacht-capable finger isles east of downtown Fort Lauderdale.",
+      "meta_description": "Seven Isles refers to the seven named finger isles east of downtown Fort Lauderdale — Hendricks Isle, Isle of Venice… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/seven-isles/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 54,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/sea-ranch-lakes",
+      "page_type": "market_detail",
+      "out_file": "out/markets/sea-ranch-lakes/index.html",
+      "title": "Sea Ranch Lakes Luxury Real Estate | Mia Sanabria",
+      "h1_text": "A small private gated coastal village in northern Broward.",
+      "meta_description": "Sea Ranch Lakes is a small private guard-gated village along A1A in northern Broward County, located between… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/sea-ranch-lakes/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 51,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/hillsboro-mile",
+      "page_type": "market_detail",
+      "out_file": "out/markets/hillsboro-mile/index.html",
+      "title": "Hillsboro Mile Luxury Real Estate | Mia Sanabria",
+      "h1_text": "The A1A oceanfront and Intracoastal corridor in Hillsboro Beach.",
+      "meta_description": "Hillsboro Mile is a roughly three-mile A1A corridor through Hillsboro Beach in northern Broward County, running from… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/hillsboro-mile/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 53,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/pompano-beach",
+      "page_type": "market_detail",
+      "out_file": "out/markets/pompano-beach/index.html",
+      "title": "Pompano Beach Luxury Real Estate | Mia Sanabria",
+      "h1_text": "A northern Broward beach city with deepwater boating, redeveloped pier district, and offshore reef.",
+      "meta_description": "Pompano Beach is a northeastern Broward city of approximately 25 square miles, framed on the barrier island by… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/pompano-beach/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/markets/bay-colony",
+      "page_type": "market_detail",
+      "out_file": "out/markets/bay-colony/index.html",
+      "title": "Bay Colony Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Eastern Fort Lauderdale&#x27;s gated deepwater enclave off Bayview Drive.",
+      "meta_description": "Bay Colony is a gated waterfront community in eastern Fort Lauderdale, accessed via a single guarded entry off… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/bay-colony/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 55,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/bermuda-riviera",
+      "page_type": "market_detail",
+      "out_file": "out/markets/bermuda-riviera/index.html",
+      "title": "Bermuda Riviera Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Eastern Fort Lauderdale waterfront with mid-century-modern architectural heritage.",
+      "meta_description": "Bermuda Riviera is a waterfront residential neighborhood in eastern Fort Lauderdale, east of Bayview Drive between… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/bermuda-riviera/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 55,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/fort-lauderdale-waterfront-buyer-guide",
+      "page_type": "insight_post",
+      "out_file": "out/insights/fort-lauderdale-waterfront-buyer-guide/index.html",
+      "title": "Fort Lauderdale Waterfront Homes: A Buyer&#x27;s Guide",
+      "h1_text": "Fort Lauderdale Waterfront Homes: What Serious Buyers Should Know Before Touring",
+      "meta_description": "Serious buyers&#x27; guide to Fort Lauderdale waterfront homes — dockage, route-to-inlet, neighborhood fit, and the questions Mia handles privately.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/fort-lauderdale-waterfront-buyer-guide/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/insights/dockage-seawalls-bridge-clearance-route-to-inlet",
+      "page_type": "insight_post",
+      "out_file": "out/insights/dockage-seawalls-bridge-clearance-route-to-inlet/index.html",
+      "title": "Waterfront Diligence: Dockage, Seawalls, Route-to-Inlet",
+      "h1_text": "Dockage, Seawalls, Bridge Clearance, and Route-to-Inlet: A Buyer&#x27;s Due Diligence Guide",
+      "meta_description": "Dockage, seawall age, bridge clearance, route-to-inlet — four numbers every waterfront buyer should verify on the address before writing an offer.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/dockage-seawalls-bridge-clearance-route-to-inlet/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "page_type": "insight_post",
+      "out_file": "out/insights/positioning-luxury-waterfront-eastern-fort-lauderdale/index.html",
+      "title": "Positioning a Luxury Waterfront Home in Fort Lauderdale",
+      "h1_text": "How to Position a Luxury Waterfront Home in Eastern Fort Lauderdale",
+      "meta_description": "How experienced sellers position waterfront residences in Eastern Fort Lauderdale — pricing, narrative, photography, and private-market introductions.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/positioning-luxury-waterfront-eastern-fort-lauderdale/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/las-olas-vs-seven-isles-vs-harbor-beach",
+      "page_type": "insight_post",
+      "out_file": "out/insights/las-olas-vs-seven-isles-vs-harbor-beach/index.html",
+      "title": "Las Olas Isles vs. Seven Isles vs. Harbor Beach",
+      "h1_text": "Las Olas Isles vs. Seven Isles vs. Harbor Beach: How Buyers Compare the Deepwater Finger-Isle Markets",
+      "meta_description": "How buyers compare Fort Lauderdale&#x27;s three deepwater finger-isle markets — Las Olas Isles, Seven Isles, Harbor Beach — on access, dockage, and feel.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/las-olas-vs-seven-isles-vs-harbor-beach/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/bay-colony-and-bermuda-riviera-private-waterfront",
+      "page_type": "insight_post",
+      "out_file": "out/insights/bay-colony-and-bermuda-riviera-private-waterfront/index.html",
+      "title": "Bay Colony and Bermuda Riviera: Private Waterfront Enclaves",
+      "h1_text": "Bay Colony and Bermuda Riviera: Private Waterfront Living North of Sunrise Boulevard",
+      "meta_description": "Bay Colony and Bermuda Riviera — Eastern Fort Lauderdale&#x27;s quieter waterfront enclaves. Architecture, dockage, and lot character compared.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/bay-colony-and-bermuda-riviera-private-waterfront/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/coral-ridge-victoria-park-rio-vista",
+      "page_type": "insight_post",
+      "out_file": "out/insights/coral-ridge-victoria-park-rio-vista/index.html",
+      "title": "Coral Ridge, Victoria Park, Rio Vista: Eastern FtL",
+      "h1_text": "Coral Ridge, Victoria Park, and Rio Vista: Choosing the Right Eastern Fort Lauderdale Lifestyle",
+      "meta_description": "How buyers choose between Coral Ridge, Victoria Park, and Rio Vista — three distinct Eastern Fort Lauderdale lifestyles compared.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/coral-ridge-victoria-park-rio-vista/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "page_type": "insight_post",
+      "out_file": "out/insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile/index.html",
+      "title": "Lighthouse Point, Sea Ranch Lakes, Hillsboro Mile",
+      "h1_text": "Lighthouse Point, Sea Ranch Lakes, and Hillsboro Mile: Northern Broward Waterfront Tradeoffs",
+      "meta_description": "Lighthouse Point&#x27;s deepwater inlet access, Sea Ranch Lakes&#x27; gated lakefront privacy, Hillsboro Mile&#x27;s A1A address — northern Broward tradeoffs.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/boca-raton-luxury-buyers-club-beach-waterfront",
+      "page_type": "insight_post",
+      "out_file": "out/insights/boca-raton-luxury-buyers-club-beach-waterfront/index.html",
+      "title": "Boca Raton Luxury Homes: Club, Beach, Waterfront",
+      "h1_text": "Boca Raton Luxury Homes: Club, Beach, and Waterfront Considerations",
+      "meta_description": "Boca Raton luxury buyers face three layered identities — country-club, beach-corridor, and waterfront single-family. How experienced buyers choose.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/boca-raton-luxury-buyers-club-beach-waterfront/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 50,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "page_type": "insight_post",
+      "out_file": "out/insights/delray-beach-luxury-buyers-walkability-beach-waterfront/index.html",
+      "title": "Delray Beach Luxury Buyers: Walkability + Waterfront",
+      "h1_text": "Delray Beach Luxury Buyers: Walkability, Beach Proximity, and Waterfront Fit",
+      "meta_description": "Delray Beach luxury buyers weigh Atlantic Avenue walkability, beach proximity, and waterfront grids. How experienced buyers choose between them.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/delray-beach-luxury-buyers-walkability-beach-waterfront/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 50,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/why-automated-valuations-miss-luxury-waterfront",
+      "page_type": "insight_post",
+      "out_file": "out/insights/why-automated-valuations-miss-luxury-waterfront/index.html",
+      "title": "Why Automated Valuations Miss Luxury Waterfront",
+      "h1_text": "Why Automated Valuations Miss Luxury Waterfront Property Value",
+      "meta_description": "Automated home valuations miss what makes a luxury waterfront residence specifically valuable — and what experienced sellers do instead.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/why-automated-valuations-miss-luxury-waterfront/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ],
+      "mobile_readability_pass": true
+    },
+    {
+      "route": "/insights/preparing-waterfront-residence-private-market-conversations",
+      "page_type": "insight_post",
+      "out_file": "out/insights/preparing-waterfront-residence-private-market-conversations/index.html",
+      "title": "Preparing a Waterfront Residence for Private Market",
+      "h1_text": "Preparing a Waterfront Residence for Private Market Conversations",
+      "meta_description": "Private-market sales demand different preparation than MLS — documentation, photography brief, dockage proof, and strategic discretion.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/preparing-waterfront-residence-private-market-conversations/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/insights/private-buyer-brief-defining-the-search",
+      "page_type": "insight_post",
+      "out_file": "out/insights/private-buyer-brief-defining-the-search/index.html",
+      "title": "A Private Buyer Brief: Defining the Search",
+      "h1_text": "A Private Buyer Brief: How to Define the Right Search Before Touring",
+      "meta_description": "Most luxury buyer searches go astray because the brief was never written. What a private buyer brief contains, and why every search starts there.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/insights/private-buyer-brief-defining-the-search/",
+      "noindex": true,
+      "schema_blocks": 5,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    }
+  ]
+}

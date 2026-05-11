@@ -95,9 +95,11 @@ export function FeaturedMarketsPager({ markets, pageSize = 6 }: Props) {
         ))}
       </ul>
 
-      {/* Visually-hidden live region announces page changes to screen readers. */}
+      {/* Visually-hidden live region announces page changes to screen readers.
+       * Cycle 19A-M: explicit "featured" wording to remove ambiguity with the
+       * full /markets index (12 curated of 16 total markets). */}
       <p id={liveRegionId} aria-live="polite" aria-atomic="true" className="sr-only">
-        Showing markets {startIdx + 1}–{endIdx} of {markets.length}. Page {pageIndex + 1} of {totalPages}.
+        Showing featured markets {startIdx + 1}–{endIdx} of {markets.length}. Page {pageIndex + 1} of {totalPages}. Browse all markets at the markets index.
       </p>
 
       {showPager ? (
