@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-11T04:47:58.053Z",
+  "generated": "2026-05-11T05:04:06.459Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -553,7 +553,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 15098,
+        "documentHeight": 15074,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -884,7 +884,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 15098,
+        "documentHeight": 15074,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2176,7 +2176,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6853,
+        "documentHeight": 6829,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2389,7 +2389,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6853,
+        "documentHeight": 6829,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3207,7 +3207,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7148,
+        "documentHeight": 7124,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3454,7 +3454,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7148,
+        "documentHeight": 7124,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4410,7 +4410,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7335,
+        "documentHeight": 7311,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4657,7 +4657,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7335,
+        "documentHeight": 7311,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5613,7 +5613,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7015,
+        "documentHeight": 6991,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5814,7 +5814,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7015,
+        "documentHeight": 6991,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9342,7 +9342,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7932,
+        "documentHeight": 7917,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9524,7 +9524,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7932,
+        "documentHeight": 7917,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15897,8 +15897,8 @@
           "w": 500,
           "h": 481
         },
-        "documentWidth": 538,
-        "documentHeight": 26056,
+        "documentWidth": 541,
+        "documentHeight": 25713,
         "hasHorizontalOverflow": true,
         "images": [
           {
@@ -16216,8 +16216,8 @@
           "w": 500,
           "h": 725
         },
-        "documentWidth": 538,
-        "documentHeight": 26056,
+        "documentWidth": 541,
+        "documentHeight": 25713,
         "hasHorizontalOverflow": true,
         "images": [
           {
@@ -25326,12 +25326,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1618,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1618 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -32764,12 +32764,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1399,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1399 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -33019,12 +33019,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1418,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1418 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -35239,12 +35239,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1869,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1869 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },

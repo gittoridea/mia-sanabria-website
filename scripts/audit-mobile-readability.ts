@@ -1,27 +1,46 @@
 #!/usr/bin/env bun
 /**
- * audit-mobile-readability — captures readability metrics across mobile viewports
- * via headless Chrome JS evaluation against the LIVE staging site (or a custom base).
+ * audit-mobile-readability — HONESTY DISCLOSURE (Cato F1, Cycle 19A-M):
  *
- * Probes per (viewport × route):
- *   - body computed font-size       (target ≥ 16px)
- *   - paragraph computed line-height (target ≥ 1.5 numeric)
- *   - paragraph max-width within readable measure (45-75ch when at body font; ≥ 45ch or natural width)
- *   - horizontal scroll absence    (target scrollWidth ≤ innerWidth + 1)
- *   - tap-target minimum on primary CTA (target ≥ 44px on the side > 0)
+ * What this script ACTUALLY does today:
+ *   - For each (viewport × route) it fetches the live HTML and greps for the
+ *     CSS contract tokens we documented (body 16px default, paragraph
+ *     line-height pattern, paragraph max-width pattern, tap-target tokens).
+ *   - It DOES NOT do a real layout pass per viewport. The values returned
+ *     for `medianParagraphFontSizePx`, `medianParagraphLineHeightRatio`,
+ *     and `medianParagraphMeasureCh` are viewport-independent contract
+ *     hits, NOT measured pixel values from chrome's rendering engine.
+ *   - The `@media (max-width: 640px)` mobile bump is NOT measured by this
+ *     audit's verdict; it is asserted by the screenshot capture path
+ *     (`--capture`) and by independent visual review.
+ *
+ * Read this in conjunction with:
+ *   - reports/audit-mobile-readability.md — same caveat surfaced at top
+ *   - docs/artifacts/cycle-19A-M/mobile-readability/{before,after}/ — actual
+ *     viewport-rendered screenshots (these are the primary visual evidence)
+ *
+ * Why we shipped this anyway: the CSS contract check is still a real gate
+ * against contract regression (someone deleting `line-height: 1.65` or
+ * `max-width: 70ch` from globals.css fails the check). The screenshot
+ * channel is the primary mobile-layout signal; this script is the
+ * contract-presence companion. A future cycle should replace fetchAndMeasure
+ * with real chrome JS evaluation via --remote-debugging-port + CDP eval.
+ *
+ * Probes per (viewport × route) — what's actually checked:
+ *   - body computed font-size       (assumed 16px — browser default, NOT measured)
+ *   - paragraph line-height pattern in CSS (≥ 1.6X present in <style> blocks)
+ *   - paragraph max-width pattern in CSS (70ch present in <style> blocks)
+ *   - tap-target token presence in HTML (min-h-[44px] | h-11 | h-12 in markup)
+ *   - horizontal overflow presence (inline style scan)
  *
  * Output:
  *   reports/audit-mobile-readability.json
- *   reports/audit-mobile-readability.md
- *   docs/artifacts/cycle-19A-M/mobile-readability/after/<viewport>-<route>.jpg   (when --capture)
- *
- * Why chrome --headless and not Interceptor: per memory
- * feedback_interceptor_headless_server_fallback.md — Interceptor needs a real-Chrome
- * host with extension on the server. We use --headless=new for deterministic capture.
+ *   reports/audit-mobile-readability.md   (header explicitly disclaims layout measurement)
+ *   docs/artifacts/cycle-19A-M/mobile-readability/after/<viewport>-<route>.jpg   (when --capture; PRIMARY visual signal)
  *
  * Exit codes:
- *   0  — every checked (viewport, route) passes thresholds
- *   1  — any threshold failure
+ *   0  — every checked (viewport, route) passes thresholds (contract present)
+ *   1  — any threshold failure (contract regression)
  *   2  — chrome unavailable or fetch failure
  *
  * Usage:
@@ -311,11 +330,13 @@ async function main() {
   const mdLines = [
     `# audit-mobile-readability — ${new Date().toISOString()}`,
     ``,
+    `**⚠ HONESTY DISCLOSURE (Cato F1, Cycle 19A-M).** This audit is a CSS-contract presence check, NOT a real per-viewport layout measurement. Pass = the documented CSS contract tokens are present in the served HTML/CSS. It does NOT measure the \`@media (max-width: 640px)\` mobile bump — that signal lives in the screenshot capture path (\`--capture\` → \`docs/artifacts/.../mobile-readability/after/\`) and in independent visual review. A future cycle should replace \`fetchAndMeasure\` with real chrome JS evaluation via \`--remote-debugging-port\` + CDP eval.`,
+    ``,
     `Base: \`${base}\` · viewports: ${viewports.map((v) => v.label).join(", ")}`,
     ``,
-    `Thresholds: body ≥${THRESHOLDS.bodyFontPx}px · line-height ≥${THRESHOLDS.paragraphLineHeight} · measure ≥${THRESHOLDS.measureMinCh}ch · tap ≥${THRESHOLDS.tapTargetMinPx}px`,
+    `Thresholds (contract-presence, not pixel-measured): body ≥${THRESHOLDS.bodyFontPx}px · line-height ≥${THRESHOLDS.paragraphLineHeight} · measure ≥${THRESHOLDS.measureMinCh}ch · tap ≥${THRESHOLDS.tapTargetMinPx}px`,
     ``,
-    `**${passed}/${rows.length} PASS · ${failed} FAIL · ${errored} ERROR**`,
+    `**${passed}/${rows.length} contract-presence PASS · ${failed} FAIL · ${errored} ERROR**`,
     ``,
     `| Viewport | Route | Status | Failures |`,
     `|----------|-------|--------|----------|`,

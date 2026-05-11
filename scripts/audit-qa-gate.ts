@@ -171,8 +171,11 @@ function scanRow(route: string, html: string): Row {
     /sunandbreeze/i,
   ];
   for (const re of STALE) if (re.test(html)) staleHits.push(re.toString());
-  // Footer double period (".." followed by space) — defect class
-  const footerDoublePeriodPresent = /\.\.\s/.test(html);
+  // Footer double period (sentence-boundary [a-z]..\s+[A-Z]) — defect class.
+  // Tightened to match audit-stale-terms regex per Cato F2 (Cycle 19A-M
+  // cross-vendor audit) — the prior loose /\.\.\s/ would false-fire on aria
+  // labels, path fragments, or decorative dots.
+  const footerDoublePeriodPresent = /[a-z]\.\.\s+[A-Z]/.test(html);
   const stale_strings_clean = staleHits.length === 0 && !footerDoublePeriodPresent;
 
   const findings: Finding[] = [];
@@ -250,12 +253,54 @@ async function loadMobileReadabilityIfPresent(): Promise<Map<string, boolean>> {
   return map;
 }
 
+async function discoverFilesystemRoutes(): Promise<string[]> {
+  // Walks out/ for every index.html — returns routes for everything shipped.
+  const found: string[] = [];
+  async function walk(dir: string, prefix: string): Promise<void> {
+    let entries;
+    try {
+      entries = await readdir(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const e of entries) {
+      if (e.isDirectory()) await walk(join(dir, e.name), `${prefix}/${e.name}`);
+      else if (e.isFile() && e.name === "index.html") found.push(prefix || "/");
+    }
+  }
+  await walk(OUT_DIR, "");
+  return found;
+}
+
 async function main() {
-  const { base, routes } = await loadSitemap();
+  const { base, routes: sitemapRoutes } = await loadSitemap();
   const mobilePass = await loadMobileReadabilityIfPresent();
   await mkdir("reports", { recursive: true });
+
+  // Per Cato F4 (Cycle 19A-M) — also discover routes from filesystem so a
+  // shipped page.tsx that's not in sitemap (drafts, filtered routes) is
+  // included in coverage. Sitemap remains authoritative for the route set
+  // we IGNORE-noindex-tag the SR-only thank-you family.
+  const fsRoutes = await discoverFilesystemRoutes();
+  const SITEMAP_OPTIONAL = new Set([
+    "/thank-you",
+    "/thank-you/buyer-brief",
+    "/thank-you/market-brief",
+    "/thank-you/valuation",
+  ]);
+  const sitemapSet = new Set(sitemapRoutes);
+  const fsNotInSitemap = fsRoutes.filter(
+    (r) => !sitemapSet.has(r) && !SITEMAP_OPTIONAL.has(r)
+  );
+  const allRoutes = Array.from(new Set([...sitemapRoutes, ...fsRoutes])).sort();
+  if (fsNotInSitemap.length > 0) {
+    console.warn(
+      `qa-gate: ${fsNotInSitemap.length} fs-only route(s) — scanning anyway: ${fsNotInSitemap.slice(0, 5).join(", ")}${fsNotInSitemap.length > 5 ? "…" : ""}`
+    );
+  }
+
   const rows: Row[] = [];
-  for (const route of routes) {
+  for (const route of allRoutes) {
     const html = await readHtmlForRoute(route);
     if (!html) {
       rows.push({
@@ -292,7 +337,9 @@ async function main() {
   const report = {
     base,
     generated_at: new Date().toISOString(),
-    sitemap_route_count: routes.length,
+    sitemap_route_count: sitemapRoutes.length,
+    filesystem_route_count: fsRoutes.length,
+    fs_only_routes: fsNotInSitemap,
     rows_scanned: rows.length,
     severity_counts: { critical: criticalCount, high: highCount, medium: mediumCount, low: lowCount },
     owner_category_split: ownerSplit,

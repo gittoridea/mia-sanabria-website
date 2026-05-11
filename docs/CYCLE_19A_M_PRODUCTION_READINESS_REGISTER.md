@@ -57,7 +57,11 @@ Items closed this cycle:
 | TP-6 | Manual defect class "visible Updated MONTH YYYY blog label" not deterministically gated | CLOSED | `audit-stale-terms.ts` now matches `>\s*Updated\s+<month>\s+20[0-9][0-9]\s*<` — defect class promoted from manual to gate. |
 | TP-7 | Full-site per-page QA matrix did not exist | CLOSED | `scripts/audit-qa-gate.ts` produces `reports/qa-gate-matrix.{json,md}` covering 40 routes × ~12 columns; classifies every finding into owner_category 1..6. |
 | TP-8 | Route inventory not derived from source-of-truth | CLOSED | `scripts/audit-route-inventory.ts` derives from `out/sitemap.xml`, cross-checks against filesystem `src/app/**/page.tsx` + dynamic templates. |
-| TP-9 | Mobile readability not deterministically gated | CLOSED | `scripts/audit-mobile-readability.ts` probes 4 viewports × 14 routes; checks body font ≥ 16px, paragraph line-height ≥ 1.5, measure 45-90ch, tap-target ≥ 44px, no horizontal overflow. Captures screenshots to `docs/artifacts/cycle-19A-M/mobile-readability/{before,after}/`. |
+| TP-9 | Mobile readability not deterministically gated | PARTIAL — contract presence only | `scripts/audit-mobile-readability.ts` is a CSS-contract-presence check (per Cato F1 cross-vendor audit). The PASS verdict means documented CSS tokens (line-height 1.6X, max-width 70ch, body 16px, tap-target tokens) are present in served HTML — it does NOT do a real per-viewport layout pass. The `@media (max-width: 640px)` mobile bump is asserted via the screenshot capture channel (`--capture` → `docs/artifacts/.../mobile-readability/after/`) plus independent visual review, not by this audit's verdict. Future cycle should add real chrome JS evaluation via `--remote-debugging-port` + CDP eval. Reports honestly disclose this at the top. |
+| TP-10 | qa-gate footer double-period regex broader than audit-stale-terms (Cato F2) | CLOSED | Tightened `audit-qa-gate.ts` to `/[a-z]\.\.\s+[A-Z]/` (sentence-boundary) — matches audit-stale-terms contract. Prevents future false-fires on path-like or aria-label `..` tokens. |
+| TP-11 | qa-gate only iterated sitemap routes (Cato F4) | CLOSED | `audit-qa-gate.ts` now also walks `out/` for every `index.html` and reports `filesystem_route_count` + `fs_only_routes[]`. Routes shipped to live but absent from sitemap are now scanned (still flagged as fs-only for review). |
+| TP-12 | globals.css mobile tap-target selector caught inline prose links (Cato F5) | CLOSED | Tightened from `:where(main a[href]:not([class*="inline"]))` to specifically-targeted selectors: `nav`, `footer`, `a[role="button"]`, `a.btn`, `a[class*="btn-"]`, `a[class*="button"]`, `a[href^="tel:"]`, `a[href^="mailto:"]`. Inline `<p>` prose links no longer forced to `inline-flex`. |
+| TP-13 | qa-gate trust_proof_present satisfied only by footer (Cato F6) | OPEN — c2 (low) | Per-page assertion of EHO/MLS disclaimer/license # not yet wired; current trust-proof passes only because shared footer renders LPT + REALTOR®. Defer to next cycle; risk = a future build regression dropping the EHO logo would still show ✓. |
 
 ---
 
@@ -68,7 +72,7 @@ Items closed this cycle:
 | ID | Item | Required from | Notes |
 |----|------|---------------|-------|
 | P-1 | Branded email + domain decision | Mia | Choose: `info@miasanabriarealtor.com` or `hello@`; affects email-row in footer + contact-page Mail row. Currently uses Mia's personal Gmail `msanabriarea@gmail.com`. |
-| P-2 | License rendering decision | Mia | Footer + Terms currently conditional on `MIA.unverified.licenseNumber`. Decision: do we surface license # in production or leave brokerage-level (LPT Realty) only? |
+| P-2 | License rendering decision (c3 + adjacent c5) | Mia + counsel | Footer + Terms currently conditional on `MIA.unverified.licenseNumber`. Decision: do we surface license # in production or leave brokerage-level (LPT Realty) only? **Cato F3 (Cycle 19A-M cross-vendor audit):** Florida FREC Rule 61J2-10.025 governs licensee identification on advertising; this is a regulatory boundary, not pure principal aesthetics. Confirm with counsel before final decision. |
 
 ---
 

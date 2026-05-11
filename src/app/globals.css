@@ -124,13 +124,23 @@ body {
     section p {
       font-size: 1.0625rem; /* 17px — between 16 and 18 to add air without losing density */
     }
-    /* Tap-target floor — any anchor inside main / nav / footer hits ≥ 44px
-     * vertical, per WCAG 2.5.5 (Target Size). We only apply this when no
-     * explicit utility already raised the height (uses :where() so 0
-     * specificity — utilities still win). */
-    :where(main a[href]:not([class*="inline"])),
+    /* Tap-target floor — anchors that LOOK LIKE BUTTONS or are clearly
+     * navigation/CTA contexts get ≥ 44px vertical per WCAG 2.5.5 (Target Size).
+     * Scoped narrowly to avoid breaking inline prose links inside <p> bodies,
+     * where forcing inline-flex would shift baselines and break wrapping
+     * (Cato F5 — Cycle 19A-M cross-vendor audit).
+     *
+     * Targets: anchors with btn/button classes; anchors inside nav, footer,
+     * or with role="button"; "Call/Tel/Mail" rows. Uses :where() (0
+     * specificity) so utility classes still win the cascade. */
     :where(nav a[href]),
-    :where(footer a[href]) {
+    :where(footer a[href]),
+    :where(a[role="button"]),
+    :where(a[href].btn),
+    :where(a[href][class*="btn-"]),
+    :where(a[href][class*="button"]),
+    :where(a[href^="tel:"]),
+    :where(a[href^="mailto:"]) {
       min-height: 44px;
       display: inline-flex;
       align-items: center;
