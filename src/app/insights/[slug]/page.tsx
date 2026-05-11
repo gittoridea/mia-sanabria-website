@@ -150,8 +150,12 @@ export default async function InsightPostPage({
           <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs uppercase tracking-[0.3em] text-brass-700">
             <span>By Mia Sanabria, REALTOR®</span>
             <span aria-hidden className="text-navy-800/30">·</span>
-            {/* Visible label follows post.dateDisplayMode (Cycle 16). The <time> element
-                stays schema-faithful — datetime is the honest datePublished. */}
+            {/* Visible label follows post.dateDisplayMode (Cycle 16; Cycle 18 removed
+                the secondary "Updated …" line for evergreen-month per
+                CYCLE_18_BLOG_UPDATED_DATE_REMOVAL.md). The <time> element stays
+                schema-faithful — datetime is the honest datePublished. Schema
+                dateModified continues to be emitted in Article JSON-LD via
+                buildArticleSchema. */}
             <time dateTime={post.datePublished} className="text-navy-800/75">
               {visibleDate.primary}
             </time>

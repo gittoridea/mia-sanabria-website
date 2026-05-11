@@ -15,8 +15,17 @@ export type MarketInternalLink = {
  * (Primary service markets vs Eastern Fort Lauderdale neighborhoods) and the
  * `[slug]/page.tsx` related-section heading. Replaces the hardcoded
  * `PRIMARY_SLUGS` / `NEIGHBORHOOD_SLUGS` / `easternBrowardSlugs` Sets.
+ *
+ * Cycle 18 — Added `"northern-broward-waterfront"` to honor the geographic
+ * distinction that Hillsboro Mile (the A1A corridor through Hillsboro Beach)
+ * is NOT in Fort Lauderdale and NOT a city/town the way the `"primary"`
+ * cluster represents — but it sits naturally next to the Fort Lauderdale
+ * waterfront cluster on the /markets/ index. Rendering side: section #2
+ * groups `[neighborhood ∪ northern-broward-waterfront]` under a renamed
+ * heading; geography is honored without claiming Hillsboro Mile is FtLaud.
+ * See docs/CYCLE_18_HILLSBORO_MILE_MARKET_TAXONOMY_FIX.md.
  */
-export type MarketCluster = "primary" | "neighborhood";
+export type MarketCluster = "primary" | "neighborhood" | "northern-broward-waterfront";
 
 export type Market = {
   readonly slug: MarketSlug;
@@ -42,12 +51,24 @@ export type Market = {
   /** County the market sits in — used in schema and copy. */
   readonly county: "Broward County" | "Palm Beach County";
   /**
-   * Cluster classification (Cycle 14). `"primary"` = city/town-level service market
-   * (Fort Lauderdale, Boca Raton, Delray Beach, Palm Beach, Lighthouse Point,
-   * Hillsboro Mile, Sea Ranch Lakes). `"neighborhood"` = Eastern Fort Lauderdale
-   * neighborhood (Coral Ridge, Victoria Park, Rio Vista, Harbor Beach, Las Olas
-   * Isles, Seven Isles, Bay Colony, Bermuda Riviera). Drives `/markets/` index
-   * partition + related-section heading on `[slug]/page.tsx`.
+   * Cluster classification (Cycle 14; extended Cycle 18).
+   *   - `"primary"` = city/town-level service market that renders under the
+   *     "South Florida cities and towns" section (Fort Lauderdale, Boca Raton,
+   *     Delray Beach, Palm Beach, Lighthouse Point, Sea Ranch Lakes, Pompano Beach).
+   *   - `"neighborhood"` = Eastern Fort Lauderdale neighborhood that renders
+   *     in the renamed Fort Lauderdale waterfront cluster section
+   *     (Coral Ridge, Victoria Park, Rio Vista, Harbor Beach, Las Olas Isles,
+   *     Seven Isles, Bay Colony, Bermuda Riviera).
+   *   - `"northern-broward-waterfront"` (Cycle 18) = a Northern Broward
+   *     waterfront municipality / corridor that is NOT Fort Lauderdale but
+   *     belongs in the same /markets/ section visually because the cohort
+   *     a serious waterfront buyer compares includes both. Currently:
+   *     Hillsboro Mile.
+   *
+   * Drives `/markets/` index partition + related-section heading on
+   * `[slug]/page.tsx`. The `getFortLauderdaleClusterSlugs()` helper returns
+   * the union `[neighborhood ∪ northern-broward-waterfront]` so the section
+   * grouping stays single-source.
    */
   readonly cluster: MarketCluster;
   /**
@@ -979,7 +1000,16 @@ export const MARKETS: ReadonlyArray<Market> = [
   },
   {
     slug: "hillsboro-mile",
-    cluster: "primary",
+    // Cycle 18 — moved from cluster:"primary" to a dedicated Northern Broward
+    // waterfront cluster. Hillsboro Mile is the A1A corridor through the town
+    // of Hillsboro Beach (NOT Fort Lauderdale, NOT a primary city/town the way
+    // FtLaud / Boca / Palm Beach / Delray / Lighthouse Point / Pompano Beach
+    // are). Geography is preserved (Broward County) but the /markets/ index
+    // section #2 is renamed to "Fort Lauderdale Waterfront and Northern
+    // Broward Clusters" so the visual grouping makes sense without claiming
+    // Hillsboro Mile is Fort Lauderdale.
+    // See docs/CYCLE_18_HILLSBORO_MILE_MARKET_TAXONOMY_FIX.md.
+    cluster: "northern-broward-waterfront",
     name: "Hillsboro Mile",
     tagline: "The A1A oceanfront and Intracoastal corridor in Hillsboro Beach.",
     intro:
@@ -1044,7 +1074,103 @@ export const MARKETS: ReadonlyArray<Market> = [
     internalLinks: [
       { slug: "lighthouse-point", label: "Lighthouse Point" },
       { slug: "sea-ranch-lakes", label: "Sea Ranch Lakes" },
+      // Cycle 18 — added Pompano Beach as the South Florida cities/towns peer
+      // immediately south on the mainland from the Hillsboro Inlet.
+      { slug: "pompano-beach", label: "Pompano Beach" },
     ],
+  },
+  /**
+   * Cycle 18 — Pompano Beach added as a primary South Florida cities-and-towns
+   * market. All facts trace to the Cycle 18 source ledger
+   * (docs/CYCLE_18_FORT_LAUDERDALE_POMPANO_RESEARCH_LEDGER.md), specifically
+   * Sources B1-B13 (City of Pompano Beach, CRA, Parks, Comprehensive Plan,
+   * Florida DEP Coral ECA, Shipwreck Park, US Census, Broward GeoHub).
+   * Hedges in this entry preserve the operator's "no overclaim" rules:
+   *   - Pier length: described as "approximately 1,000 feet (the City CRA
+   *     Pier Development page describes the renovated structure as 'over 900
+   *     feet')". No marketing rounding.
+   *   - "Wreck Capital of Florida" tourism marketing label NOT used.
+   *   - Hillsboro Inlet Lighthouse always qualified as Hillsboro Beach, not
+   *     Pompano Beach.
+   *   - "Pompano Beach is luxury-only" — NOT claimed.
+   *   - "Pompano Beach is part of Fort Lauderdale" — NOT claimed.
+   *   - Marina counts: framed as "per the City's Coastal Zone Comprehensive
+   *     Plan element" rather than as live current capacity.
+   */
+  {
+    slug: "pompano-beach",
+    cluster: "primary",
+    name: "Pompano Beach",
+    tagline:
+      "A northern Broward beach city with deepwater boating, redeveloped pier district, and offshore reef.",
+    intro:
+      "Pompano Beach is a northeastern Broward city of about 25 square miles between Lauderdale-by-the-Sea (south on the barrier island) and Hillsboro Beach (north). The market combines a roughly three-mile public beachfront, the redeveloped Fisher Family Pier and Pompano Beach Fishing Village, deepwater Intracoastal residences, and one of the most active offshore reef-dive corridors in South Florida — at relative value compared with the Fort Lauderdale and Boca Raton markets that flank it.",
+    highlights: [
+      "Northeastern Broward city of approximately 25 square miles",
+      "Roughly three-mile public beachfront from A1A near Terra Mar Drive to the Hillsboro Inlet",
+      "Fisher Family Pier — dedicated April 2022 — and the six-acre Pompano Beach Fishing Village in the East CRA District",
+      "Active East and Northwest CRA redevelopment districts (downtown Atlantic Boulevard / Old Town / Civic Commons)",
+      "Offshore waters within the state-designated Kristin Jacobs Coral Reef Ecosystem Conservation Area",
+    ],
+    lifestyle:
+      "Pompano Beach suits buyers who want Atlantic beach access, deepwater boating, an active reef-and-wreck dive scene, and a city visibly investing in its oceanfront and downtown — at relative value to its neighbors. Mia helps clients sort A1A-corridor condominium versus Intracoastal-side single-family versus inland canal options, and frames the comparison honestly against Fort Lauderdale, Lighthouse Point, Hillsboro Mile, and the Palm Beach County markets to the north.",
+    priceCharacter:
+      "Pricing depends on whether the residence is oceanfront condominium, A1A-adjacent, Intracoastal-side single-family, inland canal, or interior. A property-specific review beats a corridor average; the city's residential mix is broader than the marketing labels suggest.",
+    latitude: 26.2378,
+    longitude: -80.0998,
+    heroImage: "/markets/pompano-beach.jpg",
+    localContext:
+      "Pompano Beach sits in northeastern Broward County, with mainland borders shared with Lighthouse Point, Deerfield Beach, and Fort Lauderdale; on the barrier island it is framed by Lauderdale-by-the-Sea to the south and Hillsboro Beach to the north. The historic Hillsboro Inlet Lighthouse stands on the Hillsboro Beach side of the inlet, with its museum on the Pompano Beach side at Hillsboro Inlet Park. Per the City's Coastal Zone Comprehensive Plan element, the coastal study area includes four marinas with 100 wet slips, dry storage around Lake Santa Barbara and NE 16th Street, and three public boat ramps at William J. Alsdorf Park.",
+    county: "Broward County",
+    aeoAnswer:
+      "Pompano Beach is a northeastern Broward city of approximately 25 square miles, framed on the barrier island by Lauderdale-by-the-Sea to the south and Hillsboro Beach to the north. The market is known for a roughly three-mile public beachfront, the rebuilt Fisher Family Pier (dedicated April 2022) and the six-acre Pompano Beach Fishing Village in the East CRA District, deepwater Intracoastal residences, and an active reef-and-wreck dive corridor — Florida DEP's state-designated Kristin Jacobs Coral Reef Ecosystem Conservation Area runs offshore. The city's two CRA districts (East and Northwest) are visibly reshaping the downtown Atlantic Boulevard corridor and Old Town. For luxury and waterfront buyers, the market trades at relative value to Fort Lauderdale, Lighthouse Point, and the Palm Beach County markets to the north.",
+    propertyTypes: [
+      "Oceanfront and beach-corridor condominiums along A1A",
+      "Intracoastal-side single-family residences with private dockage",
+      "Inland canal homes routed to the Intracoastal and the Hillsboro Inlet",
+      "Mainland single-family residences in established interior neighborhoods",
+      "Downtown Atlantic Boulevard / Old Town redevelopment-area residences",
+    ],
+    buyerGuidance:
+      "Pompano Beach suits buyers who want Atlantic beach access, deepwater boating, and a city visibly reinvesting in its oceanfront and downtown — at relative value to Fort Lauderdale and the Palm Beach County markets. The first conversation should establish whether the priority is A1A-corridor condominium, Intracoastal-side single-family, inland canal, or interior. Diligence on waterfront residences covers seawall, dock, bridge clearance, and route to the Hillsboro Inlet (or the Hillsboro Inlet versus Port Everglades vector for canals farther south). Diligence on condominiums covers reserves, milestone-inspection status, hurricane and salt-air maintenance history, and rental rules. Buyers shopping the redevelopment corridor should weigh CRA timelines and the construction context of the immediate block.",
+    sellerGuidance:
+      "Sellers in Pompano Beach should position the residence to its specific corridor segment — oceanfront condominium, A1A-adjacent, Intracoastal-side single-family, inland canal, or interior — and to the buyer pool that shops there. Local representation matters because the city's micro-markets diverge quickly across A1A and across the canal-system boundaries; a residence priced against the wrong cohort underperforms. Pre-list preparation typically includes documentation of dock and seawall (for waterfront), milestone-inspection and reserve status (for condominium), and a comparable-sales packet drawn from the same corridor segment. Photography and narrative should emphasize the buyer-specific lifestyle — boating, reef diving, walkable beachfront, or downtown redevelopment access — rather than a generic luxury frame.",
+    faqs: [
+      {
+        question: "Where is Pompano Beach geographically?",
+        answer:
+          "Pompano Beach is in northeastern Broward County. On the barrier island it is framed by Lauderdale-by-the-Sea to the south and Hillsboro Beach to the north; on the mainland it borders Lighthouse Point, Deerfield Beach, and Fort Lauderdale. It is approximately 25 square miles. It is a separate municipality with its own government — not part of Fort Lauderdale.",
+      },
+      {
+        question: "What is the Pompano Beach Pier?",
+        answer:
+          "The Fisher Family Pier was rebuilt as part of the City CRA Pier Development program and dedicated April 2, 2022 — elevated for sea-level resilience, with doubled width, overhead sails, and marine artwork. The City describes the pier as approximately 1,000 feet long; the CRA Pier Development page describes the renovated structure as over 900 feet. It is open daily from 7 a.m. to 10 p.m. and anchors the six-acre Pompano Beach Fishing Village.",
+      },
+      {
+        question: "How does Pompano Beach compare to Fort Lauderdale and Boca Raton for luxury or waterfront buyers?",
+        answer:
+          "Fort Lauderdale anchors the broader yachting and finger-isle waterfront cohort to the south, with a working downtown and beach corridor. Boca Raton, in Palm Beach County, anchors the country-club and Mizner-pedigree cohort to the north. Pompano Beach sits between the two and trades at relative value — with strong Atlantic beach access, deepwater Intracoastal residences, an active redevelopment corridor, and the offshore reef-and-wreck scene as a distinguishing lifestyle anchor.",
+      },
+      {
+        question: "Is Pompano Beach a serious boating market?",
+        answer:
+          "Yes. Per the City's Coastal Zone Comprehensive Plan element, the coastal study area includes four marinas with 100 wet slips, dry storage capacity around Lake Santa Barbara and NE 16th Street, and three public boat ramps at William J. Alsdorf Park. Many Intracoastal-side residences and inland-canal homes route to the Atlantic via the Hillsboro Inlet. Buyers focused on a particular vessel should confirm dock dimensions, water depth, and the route to open water during diligence rather than rely on city-wide reputation.",
+      },
+      {
+        question: "What about the offshore coral reef and dive sites?",
+        answer:
+          "Offshore waters of Broward County, including those off Pompano Beach, fall within the state-designated Kristin Jacobs Coral Reef Ecosystem Conservation Area, a roughly 105-mile coral reef tract managed by Florida DEP's Coral Reef Conservation Program (renamed in 2021 to honor the late State Representative Kristin Jacobs). The City also funds Shipwreck Park, a 501(c)(3) nonprofit creating an artificial-reef and underwater-art system at sites including Wahoo Bay, Lady Luck, and Okinawa. The reef-and-wreck dive scene is a distinguishing lifestyle anchor for Pompano Beach buyers.",
+      },
+    ],
+    internalLinks: [
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+      { slug: "lighthouse-point", label: "Lighthouse Point" },
+      { slug: "hillsboro-mile", label: "Hillsboro Mile" },
+      { slug: "boca-raton", label: "Boca Raton" },
+      { slug: "delray-beach", label: "Delray Beach" },
+    ],
+    comparisonContext:
+      "Pompano Beach is the relative-value beach-and-boating peer in northern Broward, framed by Lighthouse Point and Hillsboro Mile to the north and the Fort Lauderdale waterfront cohort to the south. Buyers usually compare three vectors: Fort Lauderdale for the working-city alongside deepwater living; Lighthouse Point for the dense canal-finger-isle alternative routed to the Hillsboro Inlet; Hillsboro Mile for the linear A1A corridor; and Boca Raton or Delray Beach to the north for the country-club / walkable-Atlantic-Avenue alternatives in Palm Beach County. The right Pompano Beach brief usually centers on whether the priority is beach-corridor condominium, deepwater Intracoastal single-family, the redevelopment corridor, or the offshore-reef lifestyle.",
   },
   {
     slug: "bay-colony",
@@ -1218,4 +1344,37 @@ export function getPrimarySlugs(): ReadonlyArray<MarketSlug> {
 
 export function getNeighborhoodSlugs(): ReadonlyArray<MarketSlug> {
   return getMarketsByCluster("neighborhood").map((m) => m.slug);
+}
+
+/**
+ * Cycle 18 — Northern Broward waterfront (currently: Hillsboro Mile only).
+ * Markets that are NOT Fort Lauderdale and NOT a "primary" city/town the way
+ * the South Florida cities/towns cohort is, but belong visually next to the
+ * Fort Lauderdale waterfront cluster on the /markets/ index because that's
+ * the cohort serious waterfront buyers compare. See
+ * docs/CYCLE_18_HILLSBORO_MILE_MARKET_TAXONOMY_FIX.md.
+ */
+export function getNorthernBrowardWaterfrontSlugs(): ReadonlyArray<MarketSlug> {
+  return getMarketsByCluster("northern-broward-waterfront").map((m) => m.slug);
+}
+
+/**
+ * Cycle 18 — Fort Lauderdale-adjacent cluster (renders under the renamed
+ * "Fort Lauderdale Waterfront and Northern Broward Clusters" section on
+ * `/markets/`). Source-array order preserved (neighborhoods first in their
+ * original sequence, then northern-broward-waterfront in its original sequence).
+ */
+export function getFortLauderdaleClusterMarkets(): ReadonlyArray<Market> {
+  return MARKETS.filter(
+    (m) => m.cluster === "neighborhood" || m.cluster === "northern-broward-waterfront"
+  );
+}
+
+/**
+ * Cycle 18 — Slug list for the Fort Lauderdale cluster section. Used by
+ * `[slug]/page.tsx` to recognize "this peer is rendered under the FtLaud
+ * cluster heading" without claiming geography.
+ */
+export function getFortLauderdaleClusterSlugs(): ReadonlyArray<MarketSlug> {
+  return getFortLauderdaleClusterMarkets().map((m) => m.slug);
 }

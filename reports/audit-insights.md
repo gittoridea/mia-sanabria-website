@@ -1,8 +1,8 @@
 # audit:insights report
 
-Generated: 2026-05-10T23:34:45.932Z
+Generated: 2026-05-11T01:03:51.764Z
 
-Summary: **535 PASS · 0 WARN · 0 FAIL**
+Summary: **547 PASS · 0 WARN · 0 FAIL**
 
 ## Per-post status
 

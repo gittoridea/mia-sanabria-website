@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T23:34:45.645Z",
+  "timestamp": "2026-05-11T01:03:51.342Z",
   "counts": {
     "PASS": 15,
     "WARN": 1,
@@ -12,11 +12,11 @@
       "category": "Sitemap coverage",
       "description": "Every public built route is in sitemap.xml",
       "status": "PASS",
-      "evidence": "39 built · 39 in sitemap · 0 missing",
+      "evidence": "40 built · 40 in sitemap · 0 missing",
       "details": {
         "missing": [],
-        "builtCount": 39,
-        "sitemapCount": 39
+        "builtCount": 40,
+        "sitemapCount": 40
       }
     },
     {
@@ -44,7 +44,7 @@
       "category": "SEO/AEO",
       "description": "Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image",
       "status": "PASS",
-      "evidence": "0 field issues across 27 pages",
+      "evidence": "0 field issues across 28 pages",
       "details": {
         "issues": []
       }
@@ -54,7 +54,7 @@
       "category": "SEO/AEO",
       "description": "Each core/legal/market page has unique <title>",
       "status": "PASS",
-      "evidence": "27 unique titles across 27 pages",
+      "evidence": "28 unique titles across 28 pages",
       "details": {
         "duplicates": []
       }
@@ -74,10 +74,10 @@
       "category": "Local Authority",
       "description": "Market pages have ≥200 visible words",
       "status": "PASS",
-      "evidence": "all 15 market pages exceed 200-word floor",
+      "evidence": "all 16 market pages exceed 200-word floor",
       "details": {
         "thinPages": [],
-        "marketsChecked": 15
+        "marketsChecked": 16
       }
     },
     {
@@ -171,7 +171,7 @@
       "category": "Schema",
       "description": "All JSON-LD blocks parse and carry @type",
       "status": "PASS",
-      "evidence": "159 JSON-LD blocks across 27 pages · 0 broken",
+      "evidence": "165 JSON-LD blocks across 28 pages · 0 broken",
       "details": {
         "issues": []
       }

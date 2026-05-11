@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-10T23:34:45.930Z",
+  "generated": "2026-05-11T01:03:51.763Z",
   "summary": {
-    "pass": 535,
+    "pass": 547,
     "warn": 0,
     "fail": 0
   },
@@ -283,6 +283,12 @@
       "detail": "slug \"fort-lauderdale-waterfront-buyer-guide\""
     },
     {
+      "slug": "fort-lauderdale-waterfront-buyer-guide",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/fort-lauderdale-waterfront-buyer-guide/"
+    },
+    {
       "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
       "check": "field.slug",
       "status": "PASS",
@@ -551,6 +557,12 @@
       "check": "slug.kebabCase",
       "status": "PASS",
       "detail": "slug \"dockage-seawalls-bridge-clearance-route-to-inlet\""
+    },
+    {
+      "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/dockage-seawalls-bridge-clearance-route-to-inlet/"
     },
     {
       "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
@@ -829,6 +841,12 @@
       "detail": "slug \"positioning-luxury-waterfront-eastern-fort-lauderdale\""
     },
     {
+      "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/positioning-luxury-waterfront-eastern-fort-lauderdale/"
+    },
+    {
       "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
       "check": "field.slug",
       "status": "PASS",
@@ -1093,6 +1111,12 @@
       "detail": "slug \"las-olas-vs-seven-isles-vs-harbor-beach\""
     },
     {
+      "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/las-olas-vs-seven-isles-vs-harbor-beach/"
+    },
+    {
       "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
       "check": "field.slug",
       "status": "PASS",
@@ -1351,6 +1375,12 @@
       "detail": "slug \"bay-colony-and-bermuda-riviera-private-waterfront\""
     },
     {
+      "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/bay-colony-and-bermuda-riviera-private-waterfront/"
+    },
+    {
       "slug": "coral-ridge-victoria-park-rio-vista",
       "check": "field.slug",
       "status": "PASS",
@@ -1607,6 +1637,12 @@
       "check": "slug.kebabCase",
       "status": "PASS",
       "detail": "slug \"coral-ridge-victoria-park-rio-vista\""
+    },
+    {
+      "slug": "coral-ridge-victoria-park-rio-vista",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/coral-ridge-victoria-park-rio-vista/"
     },
     {
       "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
@@ -1873,6 +1909,12 @@
       "detail": "slug \"lighthouse-point-sea-ranch-lakes-hillsboro-mile\""
     },
     {
+      "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile/"
+    },
+    {
       "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
       "check": "field.slug",
       "status": "PASS",
@@ -2125,6 +2167,12 @@
       "detail": "slug \"boca-raton-luxury-buyers-club-beach-waterfront\""
     },
     {
+      "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/boca-raton-luxury-buyers-club-beach-waterfront/"
+    },
+    {
       "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
       "check": "field.slug",
       "status": "PASS",
@@ -2375,6 +2423,12 @@
       "check": "slug.kebabCase",
       "status": "PASS",
       "detail": "slug \"delray-beach-luxury-buyers-walkability-beach-waterfront\""
+    },
+    {
+      "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/delray-beach-luxury-buyers-walkability-beach-waterfront/"
     },
     {
       "slug": "why-automated-valuations-miss-luxury-waterfront",
@@ -2653,6 +2707,12 @@
       "detail": "slug \"why-automated-valuations-miss-luxury-waterfront\""
     },
     {
+      "slug": "why-automated-valuations-miss-luxury-waterfront",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/why-automated-valuations-miss-luxury-waterfront/"
+    },
+    {
       "slug": "preparing-waterfront-residence-private-market-conversations",
       "check": "field.slug",
       "status": "PASS",
@@ -2929,6 +2989,12 @@
       "detail": "slug \"preparing-waterfront-residence-private-market-conversations\""
     },
     {
+      "slug": "preparing-waterfront-residence-private-market-conversations",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/preparing-waterfront-residence-private-market-conversations/"
+    },
+    {
       "slug": "private-buyer-brief-defining-the-search",
       "check": "field.slug",
       "status": "PASS",
@@ -3203,6 +3269,12 @@
       "check": "slug.kebabCase",
       "status": "PASS",
       "detail": "slug \"private-buyer-brief-defining-the-search\""
+    },
+    {
+      "slug": "private-buyer-brief-defining-the-search",
+      "check": "builtHtml.noVisibleUpdatedLabel",
+      "status": "PASS",
+      "detail": "no visible \"Updated …\" label in /insights/private-buyer-brief-defining-the-search/"
     },
     {
       "slug": null,

@@ -1,10 +1,10 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-10T23:38:10.414Z
+**Generated:** 2026-05-11T00:37:46.538Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
-**Samples per row:** 1
+**Samples per row:** 3
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
 
 **Summary:** 105 PASS · 0 WARN · 0 FAIL · 0 SKIP
@@ -109,8 +109,8 @@
 | `/markets/delray-beach/` | 320x568 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 375x812 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 768x1024 | 15.71 | 9.03 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |
-| `/markets/delray-beach/` | 1280x800 | 15.93 | 9.66 | 15.93 (15.93..15.93) | 1500 | 800 | ✅ PASS |  |
-| `/markets/delray-beach/` | 1440x900 | 15.97 | 9.70 | 15.97 (15.97..15.97) | 1500 | 800 | ✅ PASS |  |
+| `/markets/delray-beach/` | 1280x800 | 15.93 | 9.66 | 15.93 (5.70..15.93) | 1500 | 800 | ✅ PASS |  |
+| `/markets/delray-beach/` | 1440x900 | 15.97 | 9.70 | 15.97 (5.24..15.97) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 320x568 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 836 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 375x812 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 860 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 768x1024 | 15.92 | 9.85 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
@@ -119,7 +119,10 @@
 
 ## Stability summary
 
-_All rows within 1.0 contrast spread — no high-variance rows._
+| Route | Viewport | Min | Median | Max | Spread |
+|---|---|---:|---:|---:|---:|
+| `/markets/delray-beach/` | 1280x800 | 5.70 | 15.93 | 15.93 | 10.23 |
+| `/markets/delray-beach/` | 1440x900 | 5.24 | 15.97 | 15.97 | 10.73 |
 
 ## Mutation note
 

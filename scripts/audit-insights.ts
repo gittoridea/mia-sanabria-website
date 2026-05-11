@@ -39,7 +39,7 @@
  * Exit 0 on PASS / WARN; exit 1 on any FAIL. Writes JSON + Markdown reports
  * to reports/audit-insights.json and reports/audit-insights.md.
  */
-import { writeFile } from "node:fs/promises";
+import { writeFile, readFile, access } from "node:fs/promises";
 import { join } from "node:path";
 import {
   getAllInsights,
@@ -405,6 +405,63 @@ function checkSlugFilenameMatch(post: InsightPost): CheckRow[] {
   ];
 }
 
+/**
+ * Cycle 18 — built-HTML probe: visible "Updated <Month>" must not appear in
+ * the rendered article HTML. We scan the built `out/insights/<slug>/index.html`,
+ * strip JSON-LD script blocks (Article schema legitimately carries dateModified),
+ * then assert that the residual HTML contains no `>Updated <Month> <year><` text
+ * inside a visible `<time>` element. Schema-side dateModified continues to ship
+ * via the Article JsonLd block — only the visible UI label is removed
+ * (CYCLE_18_BLOG_UPDATED_DATE_REMOVAL.md).
+ *
+ * If the built `out/` directory is absent (CI not yet built), the check is
+ * skipped with a WARN, not a FAIL — to keep the audit runnable pre-build.
+ */
+async function checkBuiltHtmlNoVisibleUpdatedLabel(post: InsightPost): Promise<CheckRow[]> {
+  const builtPath = join(process.cwd(), "out", "insights", post.slug, "index.html");
+  try {
+    await access(builtPath);
+  } catch {
+    return [
+      {
+        slug: post.slug,
+        check: "builtHtml.noVisibleUpdatedLabel",
+        status: "WARN",
+        detail: `out/insights/${post.slug}/index.html not present — run \`bun run build\` to enable this probe`,
+      },
+    ];
+  }
+  const html = await readFile(builtPath, "utf8");
+  // Strip JSON-LD script blocks (Article schema legitimately carries dateModified).
+  const stripped = html.replace(
+    /<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi,
+    ""
+  );
+  // Visible "Updated " inside a <time> element OR as visible text content.
+  // Match either the bare "Updated <Month>" sequence appearing as element body,
+  // or a `<time …>Updated …</time>` block.
+  const visibleUpdatedTime = />\s*Updated\s+[A-Z][a-z]+(\s+\d{4})?\s*</;
+  const m = stripped.match(visibleUpdatedTime);
+  if (m) {
+    return [
+      {
+        slug: post.slug,
+        check: "builtHtml.noVisibleUpdatedLabel",
+        status: "FAIL",
+        detail: `visible "Updated …" found in built HTML: "${m[0].trim()}" — Cycle 18 removed this label`,
+      },
+    ];
+  }
+  return [
+    {
+      slug: post.slug,
+      check: "builtHtml.noVisibleUpdatedLabel",
+      status: "PASS",
+      detail: `no visible "Updated …" label in /insights/${post.slug}/`,
+    },
+  ];
+}
+
 async function main() {
   const posts = getAllInsights();
   const rows: CheckRow[] = [];
@@ -429,6 +486,8 @@ async function main() {
     rows.push(...checkCountyConsistency(post));
     rows.push(...checkPrimaryMarketCounty(post));
     rows.push(...checkSlugFilenameMatch(post));
+    // Cycle 18 — built-HTML probe for the removed "Updated …" label.
+    rows.push(...(await checkBuiltHtmlNoVisibleUpdatedLabel(post)));
   }
 
   // Library uniqueness

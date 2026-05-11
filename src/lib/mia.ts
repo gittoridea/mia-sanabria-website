@@ -70,6 +70,8 @@ export const ALL_MARKET_SLUGS = [
   "hillsboro-mile",
   "bay-colony",
   "bermuda-riviera",
+  // Cycle 18 — Pompano Beach added as a primary South Florida cities-and-towns market.
+  "pompano-beach",
 ] as const;
 
 export type MarketSlug = (typeof ALL_MARKET_SLUGS)[number];

@@ -1,10 +1,10 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-10T23:38:10.414Z",
+  "generated": "2026-05-11T00:37:46.538Z",
   "mode": "local",
   "mutation": false,
   "base": "http://127.0.0.1:4173",
-  "samples": 1,
+  "samples": 3,
   "thresholds": {
     "glyph": 3,
     "edge": 2.5
@@ -1496,10 +1496,10 @@
     {
       "route": "/markets/delray-beach/",
       "viewport": "1280x800",
-      "glyphContrastMin": 15.93,
+      "glyphContrastMin": 5.7,
       "glyphContrastMedian": 15.93,
       "glyphContrastMax": 15.93,
-      "edgeContrastMin": 9.66,
+      "edgeContrastMin": 5.47,
       "edgeContrastMedian": 9.66,
       "edgeContrastMax": 9.66,
       "meanGlyphContrast": 15.93,
@@ -1511,10 +1511,10 @@
     {
       "route": "/markets/delray-beach/",
       "viewport": "1440x900",
-      "glyphContrastMin": 15.97,
+      "glyphContrastMin": 5.24,
       "glyphContrastMedian": 15.97,
       "glyphContrastMax": 15.97,
-      "edgeContrastMin": 9.7,
+      "edgeContrastMin": 5.08,
       "edgeContrastMedian": 9.7,
       "edgeContrastMax": 9.7,
       "meanGlyphContrast": 15.97,

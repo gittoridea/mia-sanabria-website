@@ -10,7 +10,7 @@ import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { FortLauderdaleV2Page } from "@/components/markets/FortLauderdaleV2";
-import { MARKETS, getMarket, getNeighborhoodSlugs, type Market } from "@/lib/markets";
+import { MARKETS, getMarket, getFortLauderdaleClusterSlugs, type Market } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
 type Params = { slug: string };
@@ -80,12 +80,25 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
     .map((link) => getMarket(link.slug))
     .filter((m): m is Market => m !== undefined);
 
-  // Cycle 14 — derived from `Market.cluster` via `getNeighborhoodSlugs()` (DRY
-  // refactor). Hardcoded `easternBrowardSlugs` Set removed; source of truth is
-  // the `cluster: "neighborhood"` field on each Market entry.
-  const easternBrowardSlugs: ReadonlySet<string> = new Set(getNeighborhoodSlugs());
-  const allEasternFTL = relatedMarkets.length > 0 &&
-    relatedMarkets.every((m) => easternBrowardSlugs.has(m.slug));
+  // Cycle 14 — derived from `Market.cluster` via cluster helpers (DRY refactor).
+  // Hardcoded `easternBrowardSlugs` Set removed; source of truth is the
+  // `cluster:` field on each Market entry.
+  // Cycle 18 — uses getFortLauderdaleClusterSlugs() which returns the union of
+  // `neighborhood` and `northern-broward-waterfront` clusters. The auto-detect
+  // heading "Related Eastern Fort Lauderdale neighborhoods." still requires that
+  // EVERY related peer be a "neighborhood" (true Eastern FtLaud) — a peer in the
+  // `northern-broward-waterfront` cluster (Hillsboro Mile) routes the page back
+  // to the generic "Continue your tour." heading, because Hillsboro Mile is in
+  // Hillsboro Beach, not Fort Lauderdale, and we will not claim otherwise.
+  const easternFortLauderdaleSlugs: ReadonlySet<string> = new Set(
+    getFortLauderdaleClusterSlugs().filter((slug) => {
+      const m = MARKETS.find((mm) => mm.slug === slug);
+      return m?.cluster === "neighborhood";
+    })
+  );
+  const allEasternFTL =
+    relatedMarkets.length > 0 &&
+    relatedMarkets.every((m) => easternFortLauderdaleSlugs.has(m.slug));
   const relatedHeading = allEasternFTL
     ? "Related Eastern Fort Lauderdale neighborhoods."
     : "Continue your tour.";

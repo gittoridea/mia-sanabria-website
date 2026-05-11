@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-10T23:34:45.645Z
+**Generated:** 2026-05-11T01:03:51.342Z
 
 **Summary:** 15 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 39 built · 39 in sitemap · 0 missing |
+| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 40 built · 40 in sitemap · 0 missing |
 | `completeness.sitemap.sitemapInBuilt` | ✅ | Every sitemap route resolves to a built page | 0 unresolved |
 
 ### Compliance
@@ -24,8 +24,8 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 27 pages |
-| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 27 unique titles across 27 pages |
+| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 28 pages |
+| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 28 unique titles across 28 pages |
 | `completeness.metadata.uniqueDescriptions` | ✅ | Each core/legal/market page has unique <meta description> | all descriptions unique |
 | `completeness.og.imagesResolve` | ✅ | Every page's og:image resolves to a local file in out/ | all og:images resolve |
 
@@ -33,7 +33,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 15 market pages exceed 200-word floor |
+| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 16 market pages exceed 200-word floor |
 
 ### Design/Display Integrity
 
@@ -60,7 +60,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 159 JSON-LD blocks across 27 pages · 0 broken |
+| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 165 JSON-LD blocks across 28 pages · 0 broken |
 
 ## Failures and warnings — details
 

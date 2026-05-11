@@ -25,6 +25,7 @@
     "audit:about": "bun run scripts/audit-about.ts",
     "audit:trust-logos": "bun run scripts/audit-trust-logos.ts",
     "audit:fort-lauderdale-v3": "bun run scripts/audit-fort-lauderdale-v3.ts",
+    "audit:fort-lauderdale-standard": "bun run scripts/audit-fort-lauderdale-standard.ts",
     "render:og-insights": "bun run scripts/render-insight-og-images.ts",
     "audit:all": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand && bun run audit:insights && bun run audit:featured-markets && bun run audit:legal && bun run audit:about && bun run audit:hero-contrast && bun run audit:rendered",
     "audit:all:stable": "bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand && bun run audit:insights && bun run audit:featured-markets && bun run audit:legal && bun run audit:about && bun run audit:hero-contrast:stable && bun run audit:rendered"

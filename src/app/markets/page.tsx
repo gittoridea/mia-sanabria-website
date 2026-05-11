@@ -6,18 +6,18 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
-import { getMarketsByCluster, type Market } from "@/lib/markets";
+import { getMarketsByCluster, getFortLauderdaleClusterMarkets, type Market } from "@/lib/markets";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Featured Markets — Southeast Florida",
   description:
-    "Eastern Fort Lauderdale neighborhoods plus adjacent South Florida luxury markets — Boca Raton, Delray Beach, Lighthouse Point, Hillsboro Mile, Sea Ranch Lakes.",
+    "South Florida cities and towns plus the Fort Lauderdale waterfront and Northern Broward clusters — Mia Sanabria's Broward and Palm Beach County markets.",
   alternates: { canonical: `${SITE.url}/markets/` },
   openGraph: {
     title: "Featured Markets — Mia Sanabria, Fort Lauderdale REALTOR®",
     description:
-      "Eastern Fort Lauderdale neighborhoods alongside Boca Raton, Delray Beach, Palm Beach, Lighthouse Point, Hillsboro Mile, and Sea Ranch Lakes — neighborhood-by-neighborhood luxury real estate guidance.",
+      "South Florida cities and towns plus the Fort Lauderdale waterfront and Northern Broward clusters — Eastern Fort Lauderdale neighborhoods, Pompano Beach, Hillsboro Mile, and the Palm Beach County peers.",
     url: `${SITE.url}/markets/`,
     images: [
       {
@@ -34,10 +34,19 @@ export const metadata: Metadata = {
 // PRIMARY_SLUGS / NEIGHBORHOOD_SLUGS Sets removed; source of truth is now the
 // `cluster:` field on each Market entry in `src/lib/markets.ts`. Order preserved
 // from MARKETS array — display order matches source-array order.
+//
+// Cycle 18 — section #2 now renders the union of `neighborhood` and
+// `northern-broward-waterfront` clusters via getFortLauderdaleClusterMarkets().
+// Hillsboro Mile (cluster: "northern-broward-waterfront") moved out of the
+// "South Florida cities and towns" section into the renamed waterfront cluster
+// without claiming Hillsboro Mile is Fort Lauderdale. Pompano Beach added to the
+// primary "South Florida cities and towns" cluster. See:
+//   docs/CYCLE_18_HILLSBORO_MILE_MARKET_TAXONOMY_FIX.md
+//   docs/CYCLE_18_POMPANO_BEACH_MARKET_IMPLEMENTATION.md
 
 export default function MarketsIndex() {
   const primary: ReadonlyArray<Market> = getMarketsByCluster("primary");
-  const neighborhoods: ReadonlyArray<Market> = getMarketsByCluster("neighborhood");
+  const fortLauderdaleCluster: ReadonlyArray<Market> = getFortLauderdaleClusterMarkets();
 
   return (
     <>
@@ -65,7 +74,7 @@ export default function MarketsIndex() {
           <SectionHeading
             eyebrow="Primary service markets"
             heading="South Florida cities and towns."
-            sub="The broader luxury and waterfront markets where Mia represents buyers and sellers across Broward and Palm Beach County."
+            sub="The broader luxury and waterfront cities and towns where Mia represents buyers and sellers across Broward and Palm Beach County."
           />
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {primary.map((market) => (
@@ -80,12 +89,12 @@ export default function MarketsIndex() {
       <section className="bg-cream-100 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
-            eyebrow="Eastern Fort Lauderdale neighborhoods"
-            heading="The Fort Lauderdale waterfront and in-town clusters."
-            sub="The core neighborhoods clients compare when shopping eastern Fort Lauderdale — the deepwater isles, the in-town walkable blocks, and the gated waterfront enclaves."
+            eyebrow="Eastern Fort Lauderdale and adjacent waterfront"
+            heading="Fort Lauderdale waterfront and Northern Broward clusters."
+            sub="The Eastern Fort Lauderdale neighborhoods clients compare when shopping the deepwater isles, the in-town walkable blocks, and the gated waterfront enclaves — alongside the Northern Broward A1A waterfront corridor at Hillsboro Mile (in the town of Hillsboro Beach, north of the Fort Lauderdale city limits)."
           />
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {neighborhoods.map((market) => (
+            {fortLauderdaleCluster.map((market) => (
               <li key={market.slug}>
                 <MarketCard market={market} />
               </li>

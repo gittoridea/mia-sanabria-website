@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Anchor, Ship, Compass, Building2, ShieldCheck, FileSearch, AlertCircle } from "lucide-react";
+import { Anchor, Ship, Compass, Building2, ShieldCheck, FileSearch, AlertCircle, Waves, Trees } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Faq } from "@/components/Faq";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -14,44 +14,88 @@ import type { Market } from "@/lib/markets";
  * Cycle 16 — Fort Lauderdale V2 gold-standard market page.
  * Cycle 17 — V3 content lift applied in-place (component name preserved so
  * the rollout template at `src/app/markets/[slug]/page.tsx` does not churn).
- * Lift summary (per docs/CYCLE_17_FORT_LAUDERDALE_ICP_REVIEW.md):
+ * Cycle 18 — V4 deepening applied in-place (component name preserved):
+ *   • New "Research-backed opening" section between prelude and Executive AEO.
+ *     Carries the Cycle-18 source-ledger facts (165-mi waterways within city
+ *     limits, 24-mi regional coastline, ~10% water of 38.6 sq mi city, $18.5B
+ *     regional marine industry, LauderGO Water Trolley as a public mobility
+ *     signal). Every claim hedged per the ledger; no overclaim.
+ *   • Waterfront decision framework grows from 7 cards → 9 (adds canal width
+ *     / turning basin AND outdoor living / dock-side amenities; insurance +
+ *     4-point sequence remains the emphasized full-width 9th card).
+ *   • New "Buyer's comparison cohort" editorial section between the
+ *     waterfront framework and the existing neighborhood-comparison cards.
+ *     Three tiers — Eastern FtLaud finger-isle peers, Northern Broward
+ *     waterfront alternatives (Pompano Beach + Lighthouse Point + Hillsboro
+ *     Mile), Palm Beach County peers (Boca / Palm Beach / Delray) — framed
+ *     as decision logic, NOT a list dump.
+ *   • Buyer playbook grows from 5 steps → 6 (financing / cash / insurance
+ *     considerations as Step 5; private-conversations becomes Step 6).
+ *   • Seller playbook grows from 5 steps → 7 (insurance / flood / elevation
+ *     documentation as Step 3; photography + narrative carved out from the
+ *     original "editorial photography + positioning" as a discrete Step 5).
+ *   • FORT_LAUDERDALE_V2_FAQS grows from 4 items → 6 items (page total
+ *     5 + 6 = 11 FAQs). New entries: no-fixed-bridge access semantics; how
+ *     FtLaud compares to Pompano Beach.
+ *   • All V3 markers preserved as a subset (V3 audit remains green; new V4
+ *     audit treats V3 markers as a subset).
+ *
+ * Source-ledger trace: every research-backed claim added in V4 traces back
+ * to a row in docs/CYCLE_18_FORT_LAUDERDALE_POMPANO_RESEARCH_LEDGER.md
+ * Part C (Verified facts safe to paraphrase in copy), specifically rows
+ * F1-F11. No claim is added that does not appear in the ledger.
+ *
+ * Lift summary (V3, retained):
  *   • Hero `heading` override — HNWI-precision frame (was: `market.tagline`).
  *   • New prelude section "Why Fort Lauderdale is a decision, not a default"
  *     between Hero and Executive AEO.
  *   • Waterfront decision framework grows from 6 cards → 7 (adds insurance +
  *     4-point inspection sequencing; rendered as a `lg:col-span-3` emphasis
- *     card below the 6-card grid).
+ *     card below the 6-card grid). [V4: framework now 9 cards; insurance +
+ *     4-point remains the emphasized full-width card.]
  *   • Neighborhood comparison section adds a per-peer "Comes up when…" italic
  *     pointer above each MarketCard, sourced from V3_PEER_POINTERS.
  *   • Buyer playbook step 1 extends with a relocation-thread sentence.
  *   • Buyer playbook + Seller playbook each carry a closing "What this is not"
  *     anti-pattern aside.
  *   • Seller playbook step 1 inline-links the automated-valuations Insight.
- *   • FORT_LAUDERDALE_V2_FAQS grows from 2 → 4 items (total FAQ count 5+4=9).
+ *   • FORT_LAUDERDALE_V2_FAQS grew from 2 → 4 items (total FAQ count 5+4=9).
+ *     [V4: 4 → 6 V2-specific items; total FAQ count 5+6=11.]
  *
  * Structural pattern intended to be cloned for the other featured markets:
  *   1. Hero
  *   2. (V3) Prelude — "Why Fort Lauderdale is a decision, not a default"
- *   3. Executive AEO answer
- *   4. Market identity (Eastern FL vs broader market)
- *   5. Waterfront decision framework (7 cards as of V3)
- *   6. Neighborhood comparison module (comparisonContext + per-peer pointers + cards)
- *   7. Buyer playbook (brief-first checklist + anti-pattern aside)
- *   8. Seller playbook (positioning checklist + anti-pattern aside)
- *   9. Related Insights
- *  10. FAQ
- *  11. CTA strip
+ *   3. (V4) Research-backed opening — ledger-cited facts
+ *   4. Executive AEO answer
+ *   5. Market identity (Eastern FL vs broader market)
+ *   6. Waterfront decision framework (9 cards as of V4)
+ *   7. (V4) Buyer's comparison cohort — editorial, three tiers
+ *   8. Neighborhood comparison module (comparisonContext + per-peer pointers + cards)
+ *   9. Buyer playbook (6 steps as of V4 + anti-pattern aside)
+ *  10. Seller playbook (7 steps as of V4 + anti-pattern aside)
+ *  11. Related Insights
+ *  12. FAQ (11 as of V4)
+ *  13. CTA strip
  *
  * No invented stats. No school steering. No private-inventory claims. Every
- * content block ties back to `market.*` fields or to neutrally-worded process
- * language. See docs/CYCLE_16_FORT_LAUDERDALE_MARKET_PAGE_V2_BLUEPRINT.md and
- * docs/CYCLE_17_FORT_LAUDERDALE_V3_IMPLEMENTATION.md.
+ * content block ties back to `market.*` fields, the source ledger, or to
+ * neutrally-worded process language. See:
+ *   docs/CYCLE_16_FORT_LAUDERDALE_MARKET_PAGE_V2_BLUEPRINT.md
+ *   docs/CYCLE_17_FORT_LAUDERDALE_V3_IMPLEMENTATION.md
+ *   docs/CYCLE_18_FORT_LAUDERDALE_PAGE_DEFINITION.md
+ *   docs/CYCLE_18_FORT_LAUDERDALE_V4_IMPLEMENTATION.md
  */
 
 // Cycle 17 — V3 lift. The 7th card (insurance + 4-point sequencing) is rendered
 // emphasized (`lg:col-span-3` full-width below the 6-card grid) because it is
 // the single decision HNW buyers ask Mia about most often per principal context.
 // `emphasize: true` triggers the wider treatment in the render loop below.
+//
+// Cycle 18 — V4 deepening. Two cards added (canal width / turning basin;
+// outdoor living / dock-side amenities). Total = 9 cards (8 in the 3-col grid
+// + 1 full-width emphasized "insurance + 4-point" card preserved as the page's
+// most-asked-question card). Every variable still ties back to a survey,
+// permit, inspection, or listing-photo-distortion-correction discipline.
 const WATERFRONT_VARIABLES: ReadonlyArray<{
   icon: typeof Anchor;
   title: string;
@@ -83,6 +127,19 @@ const WATERFRONT_VARIABLES: ReadonlyArray<{
       "Point, finger, canal-wide, or lakefront. Lot frontage. Whether the canal mouth opens to the Intracoastal directly or through an interior basin. These are the variables that predict how a vessel actually leaves the property — and how the residence feels from the seawall back.",
   },
   {
+    // Cycle 18 — V4 NEW card. Canal width / turning basin was implicit in V3
+    // (named in passing in the lot-orientation card). It's promoted to its own
+    // card because the dimension determines whether a specific vessel can
+    // physically maneuver to the dock — independent of bridge clearance and
+    // independent of dock length. Two boats of identical length can need
+    // different turning basins; this is a survey-and-tide question that
+    // belongs in due diligence, not in a showing impression.
+    icon: Waves,
+    title: "Canal width and turning basin",
+    body:
+      "Canal width at the residence and the turning-basin geometry at the dock determine whether a specific vessel can physically maneuver to the slip — independent of bridge clearance. A wide-beam vessel may need a marked turning basin; some interior canals trade narrow with deep, others wide with skinny water. The number is on the survey and confirmed at low tide; do not infer it from drone photography.",
+  },
+  {
     icon: Building2,
     title: "Architectural era and renovation history",
     body:
@@ -93,6 +150,20 @@ const WATERFRONT_VARIABLES: ReadonlyArray<{
     title: "Flood, elevation, and inspection records",
     body:
       "FEMA zone, elevation certificate, and recent inspection records (4-point, wind mitigation, roof, electrical). Carefully understood — not over-claimed. Flood-zone considerations affect insurance and resale; documented improvements affect both.",
+  },
+  {
+    // Cycle 18 — V4 NEW card. Outdoor living + dock-side amenities (outdoor
+    // kitchen, lift, lighting, lanai, pool placement) routinely change the
+    // perceived market value of a waterfront parcel without changing the
+    // structural dock or seawall facts. Buyers ask about it; the surveys
+    // don't capture it; the listing photos compress it. Belongs as a
+    // discrete variable so the brief separates the structural question
+    // (dock + seawall + route) from the lifestyle question (cooking, hosting,
+    // launching).
+    icon: Trees,
+    title: "Outdoor living and dock-side amenities",
+    body:
+      "Outdoor kitchen, lift, dock lighting, lanai orientation, pool placement, salt-air-tolerant landscaping. The dock-side experience routinely sets perceived value without changing the survey. Buyers shopping a vessel-first brief sometimes underweight this; buyers shopping a hosting-first brief routinely overweight it. A property-specific walk-through with the dock and the lanai treated as a single outdoor-living unit beats reading the listing copy on either alone.",
   },
   {
     icon: AlertCircle,
@@ -149,7 +220,18 @@ const BUYER_PLAYBOOK = [
       "Surveyor, marine contractor, title, mortgage advisor where applicable. Mia identifies which licensed specialists will be needed up front so the offer's contingency timeline reflects the actual workload, not an optimistic estimate.",
   },
   {
+    // Cycle 18 — V4 NEW step. Financing / cash / insurance underwriting is the
+    // step that most often delays a closing on Eastern FtLaud waterfront —
+    // particularly the insurance bind. Promoted to its own playbook step so
+    // the buyer brief includes early lender + insurance-broker contact, not
+    // an afterthought during the contingency window.
     n: "05",
+    title: "Confirm financing, cash, and insurance early",
+    body:
+      "Buyers paying in cash should have proof-of-funds organized before the brief; buyers financing should engage a coastal-Florida lender (and a Florida-licensed insurance broker) in parallel with the search. On Eastern FtLaud waterfront, the binding step is often the insurance underwriting — not the lender. Sequencing the broker introduction up front compresses the diligence window from a scramble into a checklist.",
+  },
+  {
+    n: "06",
     title: "Use private conversations for quiet inventory",
     body:
       "Some residences are quietly available before they list publicly. Access varies by market and timing and is not guaranteed; what Mia maintains is the brokerage relationships that surface fits when they exist.",
@@ -170,19 +252,43 @@ const SELLER_PLAYBOOK = [
       "Seawall inspection records, dock permits, renovation history, roof and 4-point inspections, elevation certificate. Listings that arrive with this paperwork in hand close faster and renegotiate less.",
   },
   {
+    // Cycle 18 — V4 NEW step. Insurance / flood / elevation documentation is
+    // carved out as a discrete step (was implicit in V3's "verifiable assets"
+    // catch-all). On Eastern FtLaud waterfront, the buyer's bind almost
+    // always involves insurance underwriting; a seller who has the recent
+    // 4-point, wind-mitigation report, elevation certificate, and prior-claim
+    // history organized for the dataroom shortens the contingency window for
+    // the buyer and reduces post-inspection renegotiation.
     n: "03",
+    title: "Organize the insurance dataroom",
+    body:
+      "Recent 4-point inspection, wind-mitigation report, elevation certificate, prior-claim history (or a CLUE report if available). On waterfront residences, this is what the buyer's insurance broker will request — and what the buyer's lender will require. A seller who has it organized before listing reduces post-inspection renegotiation and shortens the contingency clock for serious buyers.",
+  },
+  {
+    n: "04",
     title: "Position to one buyer profile",
     body:
       "Yachting, in-town walkability, or beach-corridor lifestyle. The listing copy, the photography, the showing strategy each lean to one profile. A residence that tries to be everything tends to feel like nothing.",
   },
   {
-    n: "04",
-    title: "Editorial photography and positioning",
+    // Cycle 18 — V4 NEW step. Photography + narrative carved out from V3's
+    // "Editorial photography and positioning" combined step so the photography
+    // discipline (lot + route + dock + interior + lanai) is treated as a
+    // discrete deliverable separate from the narrative (the listing copy,
+    // the open-house script, the broker-tour story).
+    n: "05",
+    title: "Editorial photography and dock-up narrative",
     body:
-      "Editorial photography that shows the lot and the route, not just the interiors. Tour-ready presentation tuned to the buyer pool. Cinematic, not theatrical — the residence has to feel real on a second visit.",
+      "Editorial photography that shows the lot, the route, the dock, and the lanai, not just the interiors. The narrative — listing copy, open-house script, broker-tour story — should carry the residence's specific identity (architectural era, canal context, lifestyle anchor) without slogan. Cinematic, not theatrical: the residence has to feel real on a second visit.",
   },
   {
-    n: "05",
+    n: "06",
+    title: "Tour-ready presentation tuned to the buyer pool",
+    body:
+      "Showing strategy, staging, and timing tuned to the one buyer profile chosen in step 04. Buyers shopping a vessel-first brief want to see the dock at sunset; buyers shopping a hosting-first brief want to see the lanai at golden hour; buyers shopping a walkable-Las-Olas brief want a daylight foot-traffic stroll. Mismatching the tour to the buyer is a common, fixable error.",
+  },
+  {
+    n: "07",
     title: "Discreet pre-market and targeted introductions",
     body:
       "Some sellers prefer a quiet pre-market period — letting Mia mention the residence privately to brokers whose buyers fit, before the listing becomes public. Whether that's the right strategy depends on the residence, the timeline, and the seller's preference.",
@@ -192,6 +298,14 @@ const SELLER_PLAYBOOK = [
 // FL-specific FAQs beyond the data-driven `market.faqs`. Kept conservatively
 // worded — no school steering, no school-zone copy, no school-rating claim.
 // Cycle 17 — extended from 2 to 4 items (V3 lift; page-total 5+4=9).
+// Cycle 18 — extended from 4 to 6 items (V4 lift; page-total 5+6=11).
+//   New entries:
+//     • "What is no-fixed-bridge access and why does it matter?" — V4 calls
+//       out the precise meaning of the term and where it actually applies
+//       (inlet-bound canals south of the New River drawbridges; NOT the
+//       New River itself, which has multiple drawbridges).
+//     • "How does Fort Lauderdale compare to Pompano Beach?" — V4 closes the
+//       comparison cohort to the new Pompano Beach market page.
 const FORT_LAUDERDALE_V2_FAQS: ReadonlyArray<{ question: string; answer: string }> = [
   {
     question: "How does Eastern Fort Lauderdale differ from broader Broward County?",
@@ -212,6 +326,16 @@ const FORT_LAUDERDALE_V2_FAQS: ReadonlyArray<{ question: string; answer: string 
     question: "Why does route-to-inlet matter for a buyer who isn't a serious yachter?",
     answer:
       "Route-to-inlet is a proxy for what the waterfront residence actually feels like day-to-day, even without a vessel. A no-fixed-bridge run to Port Everglades means open Atlantic water sits a short ride away — the canal carries through-traffic, the views include working boats, and resale captures the deepwater premium. Two opening bridges and a narrow turning basin imply a quieter canal experience and a different buyer pool at resale. The question shows up in lifestyle, view, and price; not only in vessel logistics.",
+  },
+  {
+    question: "What does \"no fixed bridges\" mean and where does it actually apply?",
+    answer:
+      "\"No fixed bridges\" describes a route from a private dock to the open Atlantic that does not require passing under a non-opening (fixed-height) bridge. In Fort Lauderdale this typically applies to canal residences whose run reaches the Port Everglades inlet without crossing under a fixed bridge — the major yacht-capable canals on the Intracoastal-side finger isles south of the New River drawbridges. The New River itself is NOT a no-fixed-bridge corridor: multiple drawbridges (including Davie Boulevard, Andrews Avenue, and the FEC Railroad Bridge) cross it. The term is residence-specific and vessel-specific; confirm by walking the route on the survey before relying on it for a yacht-purchase decision.",
+  },
+  {
+    question: "How does Fort Lauderdale compare to Pompano Beach for waterfront buyers?",
+    answer:
+      "Fort Lauderdale anchors the broader yachting and finger-isle waterfront cohort, with deepwater residences routed to the Atlantic via the Port Everglades inlet and a working downtown alongside the residential canal network. Pompano Beach — about ten miles north, separated by Lauderdale-by-the-Sea on the barrier island — is a separate municipality with its own beach corridor, the redeveloped Fisher Family Pier and Pompano Beach Fishing Village, deepwater Intracoastal residences, and the Hillsboro Inlet route to the Atlantic for canals farther north. Pompano Beach typically trades at relative value to Fort Lauderdale and offers an active offshore reef-and-wreck dive scene as a distinguishing lifestyle anchor. The choice between the two usually comes down to which inlet vector matches the vessel and where the buyer wants downtown-walkable depth versus beach-corridor lifestyle to anchor the search.",
   },
 ];
 
@@ -278,6 +402,43 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
         </div>
       </section>
 
+      {/* SECTION 1.75 — Cycle 18 V4 NEW: Research-backed opening.
+          Sits between the V3 prelude and the Executive AEO. Carries the
+          Cycle-18 source-ledger facts (165-mi waterways within city limits;
+          24-mi regional coastline; ~10% of 38.6 sq mi city is water; $18.5B
+          regional marine industry; LauderGO Water Trolley as a free public
+          mobility signal). Every claim hedged per the ledger; the geographic
+          scope is named on every figure (city vs. county vs. region). See
+          docs/CYCLE_18_FORT_LAUDERDALE_POMPANO_RESEARCH_LEDGER.md, Part C
+          rows F1, F2, F4, F5, F6, F9, F10, F11. */}
+      <section className="bg-cream-100/80 border-y border-navy-800/5 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+          <div className="font-display text-xs tracking-[0.3em] text-brass-700">
+            What the geography actually is
+          </div>
+          <h2 className="mt-3 font-display text-3xl text-navy-800 sm:text-[34px] [text-wrap:balance]">
+            Fort Lauderdale, in honest scope.
+          </h2>
+          <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-navy-800/85 sm:text-[17px]">
+            <p>
+              Fort Lauderdale carries approximately 165 miles of navigable inland waterways within city limits, sitting inside Greater Fort Lauderdale's broader 300-plus-mile Broward County waterway system. The city covers 38.6 square miles in total — of which about 10 percent (3.8 square miles) is water, a structural reflection of its waterfront character (per the U.S. Census Bureau).
+            </p>
+            <p>
+              The city is widely known as the &ldquo;Venice of America&rdquo; for those waterways and as the &ldquo;Yachting Capital of the World&rdquo; for its marine industry — labels used by Visit Lauderdale and the Marine Industries Association of South Florida (MIASF). MIASF estimates South Florida's marine industry generates roughly $18.5 billion in regional economic output and supports 142,000 jobs across Broward, Miami-Dade, and Palm Beach counties.
+            </p>
+            <p>
+              Port Everglades — located within Fort Lauderdale city limits but operated as a self-supporting enterprise fund of Broward County government (not a tax-supported facility) — is one of the busiest cruise ports in the world and South Florida's main petroleum and jet-fuel seaport. The inlet at Port Everglades is the route serious deepwater residences use to reach the open Atlantic. The New River runs approximately three miles through downtown, connecting the Intracoastal to the Atlantic via that inlet (note: the New River itself has multiple drawbridges, so &ldquo;no-fixed-bridge access&rdquo; is a residence-specific question, not a city-wide claim).
+            </p>
+            <p>
+              The City of Fort Lauderdale also operates the LauderGO! Water Trolley — a free public water shuttle along the New River with eight stops, daily 10 a.m. to 10 p.m., in partnership with Water Taxi of Fort Lauderdale and Riverwalk Fort Lauderdale — a measurable signal of city-level investment in waterfront mobility.
+            </p>
+            <p className="text-[14px] italic text-navy-800/65">
+              Sources: U.S. Census Bureau QuickFacts (Fort Lauderdale city, FL); Visit Lauderdale (Greater Fort Lauderdale / Broward County Fact Sheet + city page); Port Everglades; Marine Industries Association of South Florida; City of Fort Lauderdale (LauderGO Water Trolley page). Full ledger and hedges in <Link href="/markets/fort-lauderdale/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">docs/CYCLE_18_FORT_LAUDERDALE_POMPANO_RESEARCH_LEDGER.md</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 2 — Executive AEO answer */}
       <section className="bg-cream-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -341,7 +502,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <SectionHeading
             eyebrow="Waterfront decision framework"
-            heading="Six verifiable variables before any offer."
+            heading="Nine verifiable variables before any offer."
             sub="On a Fort Lauderdale waterfront parcel, the variables that matter most live in surveys, permits, and inspections — not in listing photographs. These are the questions Mia handles privately before the second showing."
           />
           {/* Cycle 17 — V3 lift. 7 cards: first 6 in 3-col grid, 7th (insurance + 4-point)
@@ -390,19 +551,71 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
             })}
           </ul>
           <p className="mt-10 max-w-3xl text-[14px] italic leading-relaxed text-navy-800/70">
-            None of the seven is a substitute for a licensed inspector, marine contractor, surveyor, or insurance broker. Mia coordinates these specialists; their findings — not Mia's summaries — are the ground truth.
+            None of the nine is a substitute for a licensed inspector, marine contractor, surveyor, or insurance broker. Mia coordinates these specialists; their findings — not Mia's summaries — are the ground truth.
           </p>
         </div>
       </section>
 
-      {/* SECTION 5 — Neighborhood comparison */}
+      {/* SECTION 4.5 — Cycle 18 V4 NEW: Buyer's comparison cohort.
+          An editorial framework — three tiers — for what serious Fort Lauderdale
+          buyers are actually comparing. Replaces the implicit "see the cards
+          below" handoff that V3 made. The three tiers are:
+            • Eastern Fort Lauderdale finger-isle peers (the "which sub-market"
+              question — these are the cards in section 5 below)
+            • Northern Broward waterfront alternatives (the "should I look north"
+              question — Pompano Beach + Lighthouse Point + Hillsboro Mile)
+            • Palm Beach County peers (the "should I look out of Broward"
+              question — Boca / Palm Beach / Delray)
+          Editorial prose, not a list dump. No invented rankings. No school /
+          family-composition steering. */}
+      <section className="bg-cream-100 py-20 lg:py-28">
+        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+          <SectionHeading
+            eyebrow="What Fort Lauderdale buyers are actually comparing"
+            heading="Three tiers of decision, not one."
+          />
+          <div className="mt-8 space-y-7 text-[16px] leading-relaxed text-navy-800/85 sm:text-[17px]">
+            <p>
+              Most serious Fort Lauderdale buyer briefs resolve into three comparison tiers — not a single shortlist of houses. Each tier asks a different question, and the answer to the question often filters the others.
+            </p>
+            <div>
+              <h3 className="font-display text-xl text-navy-800">Tier 1 — Eastern Fort Lauderdale finger-isle peers</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-navy-800/85">
+                The &ldquo;which sub-market within the city&rdquo; question. <Link href="/markets/las-olas-isles/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Las Olas Isles</Link> and <Link href="/markets/seven-isles/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Seven Isles</Link> trade as the canonical deepwater finger-isle markets. <Link href="/markets/harbor-beach/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Harbor Beach</Link> adds gated barrier-island privacy and a beach-club component. <Link href="/markets/rio-vista/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Rio Vista</Link> trades as the New River-side counterpart with stronger walkability to Las Olas Boulevard. <Link href="/markets/coral-ridge/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Coral Ridge</Link> and <Link href="/markets/victoria-park/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Victoria Park</Link> are the residential-feel alternatives where dockage is optional rather than the dominant variable. <Link href="/markets/bay-colony/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Bay Colony</Link> is the gated single-entry deepwater enclave; <Link href="/markets/bermuda-riviera/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Bermuda Riviera</Link> is the mid-century-modern architectural alternative within the same broader cohort.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-xl text-navy-800">Tier 2 — Northern Broward waterfront alternatives</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-navy-800/85">
+                The &ldquo;should I be shopping north of Fort Lauderdale&rdquo; question. <Link href="/markets/lighthouse-point/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Lighthouse Point</Link> trades on a denser network of finger-isle canals routed to the Atlantic via the Hillsboro Inlet — quieter, smaller, more single-family than central Fort Lauderdale. <Link href="/markets/hillsboro-mile/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Hillsboro Mile</Link> is the linear A1A corridor through the town of Hillsboro Beach (a separate municipality, not Fort Lauderdale), with both oceanfront estates and Intracoastal-side residences. <Link href="/markets/pompano-beach/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Pompano Beach</Link> sits between the Fort Lauderdale waterfront cohort and the northern barrier-island markets, with the redeveloped Fisher Family Pier and Pompano Beach Fishing Village, deepwater Intracoastal residences, and an active offshore reef-and-wreck dive corridor at relative value to Fort Lauderdale.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-xl text-navy-800">Tier 3 — Palm Beach County peers</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-navy-800/85">
+                The &ldquo;should I be shopping out of Broward&rdquo; question. <Link href="/markets/boca-raton/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Boca Raton</Link> trades on Mizner-pedigree downtown, country-club residential geography, and an A1A oceanfront corridor — a different residential character than central Fort Lauderdale, with country-club-membership considerations independent of homeownership. <Link href="/markets/palm-beach/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Palm Beach</Link> trades on island and coastal property decisions with the most distinct architectural pedigree in the cohort. <Link href="/markets/delray-beach/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Delray Beach</Link> trades on Atlantic Avenue's walkable downtown and a beach-corridor residential mix. The Palm Beach County tier is a different state-of-mind decision; the right Fort Lauderdale brief separates &ldquo;which Broward sub-market&rdquo; from &ldquo;Broward versus Palm Beach County&rdquo; rather than blending the two.
+              </p>
+            </div>
+            <p className="text-[14px] italic text-navy-800/65">
+              The cards in the section below are the canonical Eastern Fort Lauderdale peer set — useful at first contact, but the three tiers above usually open the brief.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 — Neighborhood comparison.
+          Cycle 18 — visually adjacent to the V4 "Buyer's comparison cohort"
+          editorial section above; rendered at the same cream-100 background
+          to read as one continuous comparison module. (The waterfront framework
+          ABOVE is at cream-50, and the buyer playbook BELOW is at cream-50,
+          so the cream-100 pair sits inside its own visual bracket.) */}
       {relatedMarkets.length > 0 ? (
-        <section className="bg-cream-100 py-20 lg:py-28">
+        <section className="bg-cream-100 py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <SectionHeading
-              eyebrow="Neighborhood comparison"
+              eyebrow="Neighborhood comparison cards"
               heading={relatedHeading}
-              sub="The cohort buyers compare against Fort Lauderdale. Each entry leads to a dedicated market guide."
+              sub="The Eastern Fort Lauderdale peer cards. Each entry leads to a dedicated market guide; use the three-tier framework above to choose where to begin."
             />
             {market.comparisonContext ? (
               <p className="mt-6 max-w-3xl text-[17px] leading-relaxed text-navy-800/85">

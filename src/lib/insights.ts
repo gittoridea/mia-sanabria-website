@@ -45,7 +45,12 @@ export type InsightCategory =
  * VISIBLE SORT AND LABEL ONLY — it is NEVER fed to schema.
  *
  *  - "evergreen-month"  → visible label is `editorialMonthLabel` (e.g. "Market Note · May").
- *                          Article header shows "Updated <Month YYYY>" derived from dateModified.
+ *                          (Cycle 18 — visible "Updated <Month YYYY>" secondary label
+ *                          REMOVED from blog UI per CYCLE_18_BLOG_UPDATED_DATE_REMOVAL.md.
+ *                          Schema-side `dateModified` remains honest in Article JSON-LD;
+ *                          `getVisibleDateForPost` no longer emits a `secondary` field
+ *                          for evergreen-month, so the article-page conditional renders
+ *                          nothing under the editorial label.)
  *                          (Cycle 17 — "Market Note · <Month>" replaced "Evergreen Brief · <Month>"
  *                          per CYCLE_17_DECISION_REGISTER.md Card 1. The internal mode name stays
  *                          `evergreen-month` since the underlying architectural choice — posts are
@@ -53,6 +58,7 @@ export type InsightCategory =
  *  - "full-date"        → visible label is the full publication date (e.g. "Published May 10, 2026").
  *  - "updated-only"     → visible label is "Updated <Month YYYY>" only — useful for revisions to
  *                          posts that were originally part of the 12-post launch cohort.
+ *                          (Retained for opt-in revision-only display; not used by current cohort.)
  */
 export type InsightDateDisplayMode = "evergreen-month" | "full-date" | "updated-only";
 
@@ -303,11 +309,20 @@ export function getUpdatedMonthYearLabel(post: InsightPost): string {
  *
  * Returns the structured pieces so the caller can format them with the right
  * <time> elements (only datePublished is schema-faithful).
+ *
+ * Cycle 18 — `evergreen-month` mode no longer emits a `secondary` line.
+ * Visible "Updated <Month YYYY>" was removed from blog UI per
+ * CYCLE_18_BLOG_UPDATED_DATE_REMOVAL.md. Schema-side `dateModified` continues
+ * to be emitted in Article JSON-LD via `buildArticleSchema`; the visible
+ * label noise was a UX cost without a corresponding SEO benefit (Article
+ * dateModified is the canonical update-time signal). The `secondary` field
+ * is preserved on the type so other modes (or future opt-in display modes)
+ * can still emit it; only `evergreen-month` has it removed.
  */
 export type InsightVisibleDate = {
   /** Top-line editorial label, e.g. "Market Note · May" or "Published May 10, 2026". */
   readonly primary: string;
-  /** Optional secondary line, e.g. "Updated May 2026". */
+  /** Optional secondary line, e.g. "Updated May 2026". Cycle 18: not emitted by `evergreen-month` mode. */
   readonly secondary?: string;
 };
 
@@ -323,9 +338,9 @@ export function getVisibleDateForPost(post: InsightPost): InsightVisibleDate {
   if (post.dateDisplayMode === "updated-only") {
     return { primary: `Updated ${getUpdatedMonthYearLabel(post)}` };
   }
-  // evergreen-month
+  // evergreen-month — Cycle 18: no secondary "Updated …" line. Schema dateModified
+  // remains honest in Article JSON-LD; the visible secondary was UI noise.
   return {
     primary: post.editorialMonthLabel,
-    secondary: `Updated ${getUpdatedMonthYearLabel(post)}`,
   };
 }

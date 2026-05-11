@@ -1,0 +1,165 @@
+{
+  "generated": "2026-05-11T01:03:52.264Z",
+  "summary": {
+    "pass": 31,
+    "warn": 0,
+    "fail": 0
+  },
+  "rows": [
+    {
+      "name": "v3.heroPrecisionFrame",
+      "status": "PASS",
+      "detail": "\"Where deepwater yacht access\" present"
+    },
+    {
+      "name": "v3.preludeEyebrow",
+      "status": "PASS",
+      "detail": "\"A decision, not a default\" present"
+    },
+    {
+      "name": "v3.preludeHeading",
+      "status": "PASS",
+      "detail": "\"Fort Lauderdale rewards a written brief\" present"
+    },
+    {
+      "name": "v3.seventhCardTitle",
+      "status": "PASS",
+      "detail": "\"Insurance underwriting and the 4-point sequence\" present"
+    },
+    {
+      "name": "v3.emphasizedCardEyebrow",
+      "status": "PASS",
+      "detail": "\"THE QUESTION BUYERS ASK MOST OFTEN\" present"
+    },
+    {
+      "name": "v3.peerPointers",
+      "status": "PASS",
+      "detail": "12 matches (target ≥ 4)"
+    },
+    {
+      "name": "v3.antiPatternAside",
+      "status": "PASS",
+      "detail": "4 matches (target ≥ 2)"
+    },
+    {
+      "name": "v3.faqPrivateBriefVsAlert",
+      "status": "PASS",
+      "detail": "\"How is a private buyer brief different from a saved-search alert?\" present"
+    },
+    {
+      "name": "v3.faqRouteToInletNonYachter",
+      "status": "PASS",
+      "detail": "\"Why does route-to-inlet matter for a buyer who isn\" present"
+    },
+    {
+      "name": "v3.sellerPlaybookInsightsLink",
+      "status": "PASS",
+      "detail": "\"/insights/why-automated-valuations-miss-luxury-waterfront/\" present"
+    },
+    {
+      "name": "v4.researchBackedEyebrow",
+      "status": "PASS",
+      "detail": "\"What the geography actually is\" present"
+    },
+    {
+      "name": "v4.researchBackedHeading",
+      "status": "PASS",
+      "detail": "\"Fort Lauderdale, in honest scope\" present"
+    },
+    {
+      "name": "v4.researchBackedSourcesLine",
+      "status": "PASS",
+      "detail": "1 matches (target 1)"
+    },
+    {
+      "name": "v4.frameworkNineVariablesHeading",
+      "status": "PASS",
+      "detail": "\"Nine verifiable variables before any offer\" present"
+    },
+    {
+      "name": "v4.frameworkCanalWidthCard",
+      "status": "PASS",
+      "detail": "\"Canal width and turning basin\" present"
+    },
+    {
+      "name": "v4.frameworkOutdoorLivingCard",
+      "status": "PASS",
+      "detail": "\"Outdoor living and dock-side amenities\" present"
+    },
+    {
+      "name": "v4.cohortEyebrow",
+      "status": "PASS",
+      "detail": "\"What Fort Lauderdale buyers are actually comparing\" present"
+    },
+    {
+      "name": "v4.cohortHeading",
+      "status": "PASS",
+      "detail": "\"Three tiers of decision, not one\" present"
+    },
+    {
+      "name": "v4.cohortTier1Heading",
+      "status": "PASS",
+      "detail": "\"Tier 1 — Eastern Fort Lauderdale finger-isle peers\" present"
+    },
+    {
+      "name": "v4.cohortTier2Heading",
+      "status": "PASS",
+      "detail": "\"Tier 2 — Northern Broward waterfront alternatives\" present"
+    },
+    {
+      "name": "v4.cohortTier3Heading",
+      "status": "PASS",
+      "detail": "\"Tier 3 — Palm Beach County peers\" present"
+    },
+    {
+      "name": "v4.cohortPompanoLink",
+      "status": "PASS",
+      "detail": "\"href=\"/markets/pompano-beach/\"\" present"
+    },
+    {
+      "name": "v4.cohortHillsboroLink",
+      "status": "PASS",
+      "detail": "\"href=\"/markets/hillsboro-mile/\"\" present"
+    },
+    {
+      "name": "v4.buyerStep5Financing",
+      "status": "PASS",
+      "detail": "\"Confirm financing, cash, and insurance early\" present"
+    },
+    {
+      "name": "v4.sellerStep3InsuranceDataroom",
+      "status": "PASS",
+      "detail": "\"Organize the insurance dataroom\" present"
+    },
+    {
+      "name": "v4.sellerStep5PhotoNarrative",
+      "status": "PASS",
+      "detail": "\"Editorial photography and dock-up narrative\" present"
+    },
+    {
+      "name": "v4.faqNoFixedBridges",
+      "status": "PASS",
+      "detail": "\"What does &quot;no fixed bridges&quot; mean and where does it actually apply\" present"
+    },
+    {
+      "name": "v4.faqPompanoComparison",
+      "status": "PASS",
+      "detail": "\"How does Fort Lauderdale compare to Pompano Beach for waterfront buyers\" present"
+    },
+    {
+      "name": "v4.anti.no300MilesCityScope",
+      "status": "PASS",
+      "detail": "no banned match"
+    },
+    {
+      "name": "v4.anti.noFixedBridgesNewRiverClaim",
+      "status": "PASS",
+      "detail": "no banned match"
+    },
+    {
+      "name": "v4.faqPageCountIs11",
+      "status": "PASS",
+      "detail": "FAQPage schema has 11 Question entries (target 11 = market.faqs:5 + V2 specifics:6)"
+    }
+  ]
+}
