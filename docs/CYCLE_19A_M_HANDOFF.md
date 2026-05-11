@@ -8,7 +8,8 @@
 | **Repo** | `~/code/mia-sanabria-website/` |
 | **Live staging** | `https://miasanabriarealtor.trueidea.com/` |
 | **Pre-cycle live ETag** | `difgit5lydj44nrd` |
-| **Post-cycle live ETag** | `difks13fqrcw4ntl` ✓ flipped |
+| **Post-cycle live ETag (1st deploy, commit 7d4774c)** | `difks13fqrcw4ntl` ✓ flipped |
+| **Post-Cato-fix live ETag (2nd deploy, commit 65c311f)** | second deploy triggered; Dokploy status=done, but Caddy/CDN slow to flip ETag. New CSS hash `90daf75e7b1e55d0` returns 404 on live at handoff time. Classified c2 tool issue; main branch is correct; safe transient (CSS narrowing is conservative). |
 | **Algorithm version** | 6.4.0 |
 | **Effort tier** | E5 (explicit `/effort max`) |
 | **Task ISA** | `~/.claude/PAI/MEMORY/WORK/cycle-19a-m-mobile-qa-hardening/ISA.md` |
@@ -149,14 +150,25 @@ Site is launch-grade for c1. Holding for c4/c5/c6 ownership.
 | Tool | Status | Reliability verdict |
 |------|--------|---------------------|
 | Forge (GPT-5.4 via codex exec) | ✓ available — oauth at `~/.codex/auth.json` | NOT invoked this cycle (race-scope-drift risk; main-thread edits all over) |
-| Cato (codex exec --sandbox read-only) | ✓ available; schema-enforced verdict per v6.4.0 errata | NOT invoked this cycle (everything green; will run on next cycle if needed) |
+| Cato (codex exec --sandbox read-only) | ✓ available; schema-enforced verdict per v6.4.0 errata | **INVOKED at VERIFY** — returned `concerns` (high confidence) with 6 findings; 4 fixed inline + redeployed, 2 routed to register. **NO PARTIAL this cycle.** Schema enforcement worked as designed. |
 | Anvil (Kimi K2.6) | ✗ binary not present at any known path | fallback = Forge (not used this cycle) |
 | Perplexity (via OPENROUTER_API_KEY) | ✓ available | NOT used this cycle (no external research need) |
 | ClaudeResearcher / GeminiResearcher | available via Research skill | NOT used this cycle |
 | Interceptor | available BUT headless-server unreliable (memory: `feedback_interceptor_headless_server_fallback.md`) | NOT used; chrome --headless screenshot path used directly |
 | Playwright / equivalent | not adopted; zero-new-dependency posture preserved | n/a |
 
-**External model summary:** clean main-thread edits, no overlapping subagent work. No PARTIAL verdicts surfaced this cycle.
+**External model summary:** Cato VERIFY pass surfaced 6 findings; 4 actioned + redeployed within the cycle. No PARTIAL verdicts. Forge stayed out (zero race risk).
+
+### Cato findings — disposition
+
+| ID | Severity | Field | Disposition |
+|----|----------|-------|-------------|
+| F1 | high | `audit:mobile-readability` is CSS-contract presence check, not real layout measurement | **PARTIAL CLOSE** — audit reframed honestly in code docblock + report header + register TP-9; primary visual signal remains screenshot capture. Real CDP eval queued for next cycle. |
+| F2 | medium | qa-gate footer double-period regex `/\.\.\s/` broader than audit-stale-terms | **CLOSED** — tightened to `/[a-z]\.\.\s+[A-Z]/` to match the stale-terms contract. |
+| F3 | medium | License-rendering classification c3 understates regulatory exposure | **DOC UPDATE** — register P-2 now notes FL FREC 61J2-10.025 + counsel confirmation required. |
+| F4 | medium | qa-gate iterated sitemap routes only | **CLOSED** — qa-gate now walks `out/` for all `index.html` and reports `fs_only_routes[]`. /404 discovered as expected fs-only. |
+| F5 | medium | globals.css mobile tap-target selector caught inline `<p>` prose links | **CLOSED** — selector tightened to nav/footer/role=button/btn/btn-*/button/tel:/mailto: only. |
+| F6 | low | Trust-proof per-page satisfied only by shared footer | **OPEN** — register TP-13 c2(low); next cycle. |
 
 ---
 
@@ -211,11 +223,13 @@ The QA gate has 0 critical and 0 c1 (site/content/design) findings. Mobile reada
 ## Receipts
 
 - Pre-cycle live ETag: `difgit5lydj44nrd`
-- Post-cycle live ETag: `difks13fqrcw4ntl`
+- Post-1st-deploy live ETag: `difks13fqrcw4ntl`
+- Cato-fix 2nd-deploy live ETag: pending Caddy cache flip; new CSS `90daf75e7b1e55d0` not yet served at handoff write (404 on live); Dokploy says status=done. Classified c2 tool issue (LC-7 cache propagation, not a deploy failure).
 - Pre-cycle commit: `d0bf560` (Cycle 18 closeout)
-- Cycle 19A-M commit hash: `7d4774c`
-- Cycle 19A-M deploy duration: 156s (Dokploy poll start → status=done)
-- Post-deploy mobile-readability capture: 56/56 PASS in 1m45s
+- Cycle 19A-M first commit: `7d4774c` (major fixes + new audits + docs)
+- Cycle 19A-M Cato-fix commit: `65c311f` (F1 honesty, F2 regex unify, F4 fs-route coverage, F5 selector scope, F3/F6 doc updates)
+- Cycle 19A-M deploy duration: 156s for 1st deploy; 2nd deploy in progress at handoff write
+- Post-1st-deploy mobile-readability capture: 56/56 PASS in 1m45s
 - QA-gate matrix path: `reports/qa-gate-matrix.{json,md}`
 - Mobile-readability matrix path: `reports/audit-mobile-readability.{json,md}`
 - Mobile screenshot evidence: `docs/artifacts/cycle-19A-M/mobile-readability/{before,after}/` (gitignored; reproducible)
