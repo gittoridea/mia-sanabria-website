@@ -124,7 +124,43 @@ scripts/audit-completeness.ts
 
 ## 8. Live verification (deploy)
 
-*Live ETag + smoke results to be appended to this section after deploy completes.*
+**Commit:** `afdfff0` pushed to `origin/main` at 2026-05-11.
+**Deploy:** Triggered via `bun scripts/deploy-and-verify.ts --no-lighthouse`. Completed in 157s. Pre-flight `audit:completeness` gate PASS before deploy trigger.
+
+**ETag flip (cache-busted with `?cb=<hex>`):**
+
+| Route | Pre-deploy | Post-deploy |
+|---|---|---|
+| `/` | `dig0ig79i6f44nbt-gzip` | `dig4vprowpog4p3k-gzip` ✓ |
+| `/markets/fort-lauderdale/` | `dig0ig79i6f45dq2-gzip` | `dig4vprowpog5eh3-gzip` ✓ |
+| `/contact/` | `dig0ig79i6f42463-gzip` | `dig4vprowpog24vv-gzip` ✓ |
+| `/valuation/` | `dig0ig79i6f427j6-gzip` | `dig4vprowpog26jg-gzip` ✓ |
+| `/insights/` | `dig0ig79i6f4367b-gzip` | `dig4vprowpog36sd-gzip` ✓ |
+| `/markets/boca-raton/` | (not probed) | `dig4vprowpog2u2g-gzip` ✓ |
+| `/thank-you/` | (not probed) | `dig4vprowpog15yf-gzip` ✓ |
+
+**HTTP-status smoke sweep:** all 200.
+
+| Route | Status |
+|---|---|
+| `/markets/`, `/markets/pompano-beach/`, `/markets/delray-beach/` | 200 |
+| `/buyers/`, `/sellers/`, `/about/` | 200 |
+| `/404` | 308 (redirect to 404 page — expected) |
+| `/downloads/waterfront-buyer-due-diligence-checklist.pdf` | 200 |
+| `/downloads/luxury-seller-pre-listing-checklist.pdf` | 200 |
+| `/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf` | 200 |
+
+**Live content checks:**
+- Homepage `source=idx-search` present (1 match) — A8 attribution CTA confirmed
+- Homepage "Open the property search in a new tab" present — A7 fallback link confirmed
+- `/contact/` `lead-source` hidden input present — A9 source-stamp wiring confirmed
+- `/valuation/` `lead-source` hidden input present — A9 confirmed
+- `/thank-you/` "same business day" — **0 matches** (A1 honesty fix confirmed)
+- Homepage primary NAV: `href="/insights/">Insights` link present — A12 confirmed
+- Homepage FAQPage entity count = 1 (was 2 pre-A4) — A4 dedup confirmed
+- Staging noindex: `meta name="robots" content="noindex, nofollow, nocache"` present — staging-noindex preserved (T1-008 green)
+
+**Cache caveat:** deploy-script's own `Last-Modified` probe reported "did not change" — Caddy stale-serve as documented in project CLAUDE.md and prior cycles. ETag flip (cache-busted) is the authoritative deploy-flip signal and confirms success.
 
 ## 9. What remains blocked
 
