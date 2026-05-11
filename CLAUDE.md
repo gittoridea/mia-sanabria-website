@@ -61,3 +61,20 @@
 - Read the project ISA at `~/code/mia-sanabria-website/ISA.md` (single source of truth, 745 ISCs).
 - Read prior cycle handoffs under `docs/CYCLE_*_HANDOFF.md` and `docs/NEXT_SESSION_TRIGGER.md`.
 - Check `~/.claude/PAI/USER/PROJECTS/MiaSanabria/` for client-context (off-repo).
+
+## Cycle closeout learning rule
+
+At the end of every **major** cycle (wrap, regression repair, deploy, or continuation that changes repo/process state), emit a `## Smarter-AI Closeout` block — 7 bullets, ≤120 words:
+
+- Earlier catch: <name the artifact/log/probe from this cycle that would have caught it>
+- Pattern type: one-off | recurring | system defect
+- Smallest durable improvement: <concrete edit; name the file/script/section, or write "none">
+- Promotion target: audit | CLAUDE.md | checklist | hook | prompt | issue matrix | GHL plan | deploy script | memory | discard | no promotion — one-off or already covered
+- Bloat guard: <name the existing file/section already carrying this OR write `discard — see Promotion target`>
+- Action taken: none | updated <file/script> | added issue <id> | queued next-cycle trigger
+- Owner category: site/content/design defect | tool/process defect | principal decision | GHL/ops dependency | legal/compliance dependency | launch/cutover dependency
+
+Rules:
+- Promote at most **one** durable change per cycle. Each lesson must cite a concrete artifact from this cycle's evidence; speculative rules are rejected.
+- Prefer audits > existing files > new files. Reject vague closeouts and closeouts naming no concrete file/script/issue.
+- `Promotion target: no promotion — one-off or already covered` is a valid first-class output.

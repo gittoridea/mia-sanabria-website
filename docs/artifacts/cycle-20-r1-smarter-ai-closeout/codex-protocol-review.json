@@ -1,0 +1,21 @@
+{
+  "verdict": "concerns",
+  "recommendation": "handoff template",
+  "bloat_risk": "medium",
+  "smallest_change": "Add one handoff-template line: for reusable closeout lessons, record earlier-catch artifact, pattern type, owner category, and one bloat-guarded promotion target; otherwise mark discard.",
+  "missing_guard": "Require evidence from the just-finished cycle before any promotion; this catches speculative rules that name a file/script but were not actually implicated by an observed failure.",
+  "no_preserve_cases": [
+    "Deploy-only verification/cutover after a known fix: a forced 7-bullet block distracts from ETag/cache evidence already governed by CLAUDE.md L17-20.",
+    "Tiny regression repair where audit gates already encode the lesson: forcing promotion analysis adds churn when no reusable learning exists (CLAUDE.md L22-29)."
+  ],
+  "concerns": [
+    "Owner enum matches exactly: existing/protocol both c1..c6 site/content/design defect; tool/process defect; principal decision; GHL/ops dependency; legal/compliance dependency; launch/cutover dependency (final-pm §10 L187-207; issue L13-20).",
+    "Over-prompt: quoted rule 'emit a ## Smarter-AI Closeout block — 7 bullets, <=120 words' (prompt protocol first paragraph) conflicts with CLAUDE.md's 'Keep concise' rule (L3-4).",
+    "Redundant/general doctrine: 'Prefer deterministic audits > editing existing files > new files. Never create a new doc for one small lesson' (prompt Rules bullet 2) belongs outside project CLAUDE.md per L3-4.",
+    "Existing artifacts already show closeout learning, owner categories, and next-cycle prompts without this block: final-pm L11, L181, L183-223; make it template-local, not auto-loaded doctrine.",
+    "One-off risk: the protocol appears shaped around Cycle 20's cache-bust lesson and issue taxonomy; durable value is classification plus bloat guard, not a mandatory seven-field ritual."
+  ],
+  "confidence": 0.92,
+  "should_main_thread_act": true,
+  "rationale": "Concerns: the owner taxonomy matches (final-pm §10 L187-207; issue-matrix L13-20), but appending a mandatory 7-bullet ritual to concise CLAUDE.md conflicts with CLAUDE.md L3-4."
+}

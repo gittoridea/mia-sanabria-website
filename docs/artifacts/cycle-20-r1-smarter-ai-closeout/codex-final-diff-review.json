@@ -1,0 +1,10 @@
+{
+  "verdict": "pass",
+  "diff_well_formed": true,
+  "missing_guard_adopted": true,
+  "compression_acceptable": true,
+  "residual_concerns": [],
+  "tiny_fix_recommendation": "none",
+  "confidence": 0.94,
+  "rationale": "Actual diff hits the 16-line target, includes the from-cycle evidence guard and speculative-rule rejection, and §10 substantively documents adopted/non-adopted items. No diff-specific blocker remains."
+}
