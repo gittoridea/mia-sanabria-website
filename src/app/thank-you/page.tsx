@@ -42,10 +42,10 @@ export default function ThankYouPage() {
           </div>
           <p className="text-[17px] leading-relaxed text-navy-800/85">
             Every inquiry Mia receives is read personally. Replies are drafted by Mia rather than
-            an automated system, which means the timing reflects her schedule — typically the same
-            business day, occasionally the next. The reply will reference your inquiry directly and
-            propose the most useful first step, whether that is a phone conversation, a written
-            response to a specific question, or a private property review.
+            an automated system, which means the timing reflects her schedule. The reply will
+            reference your inquiry directly and propose the most useful first step, whether that
+            is a phone conversation, a written response to a specific question, or a private
+            property review.
           </p>
           <h3 className="mt-10 font-display text-2xl text-navy-800">
             While you wait.

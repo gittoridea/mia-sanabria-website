@@ -114,6 +114,7 @@ export default function ContactPage() {
             className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10"
             noValidate
           >
+            <input type="hidden" id="lead-source" name="source" defaultValue="direct" />
             <h2 className="font-display text-2xl text-navy-800">Private Inquiry</h2>
             <p className="mt-2 text-sm text-navy-800/70">
               All fields marked with an asterisk are required. Inquiries are confidential.
@@ -184,7 +185,7 @@ export default function ContactPage() {
             <button
               type="submit"
               aria-describedby="contact-form-helper"
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium tracking-wide text-cream-50 transition-colors hover:bg-navy-700"
+              className="mt-8 inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium tracking-wide text-cream-50 transition-colors hover:bg-navy-700"
             >
               Send Private Inquiry
             </button>

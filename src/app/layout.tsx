@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cinzel, Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { LeadSourceStamp } from "@/components/LeadSourceStamp";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { WebSiteSchema } from "@/components/schema/WebSiteSchema";
 import { SITE, IS_STAGING } from "@/lib/site";
@@ -112,6 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <LeadSourceStamp />
       </body>
     </html>
   );

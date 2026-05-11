@@ -1,0 +1,4 @@
+$ bun run scripts/audit-links.ts
+audit-links: scanned 49 pages, checked 2425 internal links (216ms).
+✓ All internal links resolve.
+EXIT=0

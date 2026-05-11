@@ -125,6 +125,7 @@ export default function SellersPage() {
         answer="Position the residence for the buyer who is already searching for it. Pricing comes from current comparable sales on the same street, building, or block — not broad public ranges. Photography, twilight imagery, video, and copywriting present the residence as an architectural object. For dock-capable estates, dock specifications, water depth, and route to the inlet are documented as marketable infrastructure. Distribution layers brokerage introductions on top of MLS exposure so prepared buyers see the residence first. Showings are coordinated to protect the household's privacy and the residence's condition."
         relatedMarkets={["fort-lauderdale", "boca-raton", "delray-beach"]}
         cta={{ href: "/valuation/", label: "Request a valuation" }}
+        emitFaqSchema={false}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

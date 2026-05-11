@@ -95,6 +95,7 @@ export default function ValuationPage() {
         answer="Automated valuation models miss the variables that decide a luxury waterfront price. A serious valuation accounts for dock specifics — length, water depth, fixed-bridge clearance, route to the inlet, and any yacht-capacity history — alongside lot orientation to prevailing winds, view corridor, hurricane shutters, generator coverage, flood-zone elevation, and HOA or country-club access. It cross-checks recent comparable sales on the same street, building, or block; reviews architectural era and renovation depth; and weighs the residence's scarcity within its sub-market. Mia delivers a confidential walk-through (or virtual equivalent) plus a written strategic positioning recommendation — useful for estate planning, refinancing, or a future sale."
         relatedMarkets={["fort-lauderdale", "boca-raton", "lighthouse-point"]}
         cta={{ href: "/contact/", label: "Talk through your property" }}
+        emitFaqSchema={false}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">
@@ -107,6 +108,7 @@ export default function ValuationPage() {
             className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10"
             noValidate
           >
+            <input type="hidden" id="lead-source" name="source" defaultValue="direct" />
             <h2 className="font-display text-2xl text-navy-800">Request Valuation</h2>
             <p className="mt-2 text-sm text-navy-800/70">
               All conversations are confidential. Valuations are returned after a private walk-through (or virtual equivalent) and a comparable-sales pull tuned to the residence.

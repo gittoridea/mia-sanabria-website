@@ -1,0 +1,4 @@
+$ bun run scripts/audit-schema.ts
+audit-schema: scanned 49 pages, found 247 JSON-LD blocks (65ms).
+✓ All JSON-LD blocks parse with @context + @type.
+EXIT=0

@@ -36,6 +36,7 @@ export const SITE = {
 export const NAV = [
   { href: "/", label: "Home" },
   { href: "/markets/", label: "Markets" },
+  { href: "/insights/", label: "Insights" },
   { href: "/buyers/", label: "Buyers" },
   { href: "/sellers/", label: "Sellers" },
   { href: "/valuation/", label: "Home Valuation" },

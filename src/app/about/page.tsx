@@ -74,6 +74,7 @@ export default function AboutPage() {
         relatedMarkets={["las-olas-isles", "harbor-beach", "boca-raton"]}
         cta={{ href: "/contact/", label: "Begin a private conversation" }}
         background="cream-tint"
+        emitFaqSchema={false}
       />
 
       <section className="bg-cream-50 py-20 lg:py-28">

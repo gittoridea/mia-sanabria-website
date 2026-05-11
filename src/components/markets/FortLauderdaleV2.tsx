@@ -822,31 +822,34 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
             </p>
             <ul className="mt-5 flex flex-col gap-2 text-[13px]">
               <li>
-                <Link
+                <a
                   href="/downloads/waterfront-buyer-due-diligence-checklist.pdf"
+                  download
                   className="inline-flex w-full items-center justify-between gap-3 rounded-sm border border-cream-200/30 bg-navy-800/40 px-4 py-3 text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200"
                 >
                   <span>Waterfront Buyer Due Diligence Checklist</span>
-                  <span aria-hidden="true">↓ PDF</span>
-                </Link>
+                  <span><span aria-hidden="true">↓ </span>PDF</span>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/downloads/luxury-seller-pre-listing-checklist.pdf"
+                  download
                   className="inline-flex w-full items-center justify-between gap-3 rounded-sm border border-cream-200/30 bg-navy-800/40 px-4 py-3 text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200"
                 >
                   <span>Luxury Seller Pre-Listing Checklist</span>
-                  <span aria-hidden="true">↓ PDF</span>
-                </Link>
+                  <span><span aria-hidden="true">↓ </span>PDF</span>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf"
+                  download
                   className="inline-flex w-full items-center justify-between gap-3 rounded-sm border border-cream-200/30 bg-navy-800/40 px-4 py-3 text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200"
                 >
                   <span>Fort Lauderdale Waterfront Valuation Prep Sheet</span>
-                  <span aria-hidden="true">↓ PDF</span>
-                </Link>
+                  <span><span aria-hidden="true">↓ </span>PDF</span>
+                </a>
               </li>
             </ul>
             <Link

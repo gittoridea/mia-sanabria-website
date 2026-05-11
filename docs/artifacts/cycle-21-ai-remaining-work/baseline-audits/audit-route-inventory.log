@@ -1,0 +1,17 @@
+$ bun run scripts/audit-route-inventory.ts
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "sitemap_routes": 40,
+  "filesystem_static_pages": 16,
+  "sitemap_only_unmatched": [],
+  "filesystem_only_unmatched_unexpected": [],
+  "filesystem_only_optional_present": [
+    "/thank-you/buyer-brief",
+    "/thank-you/valuation",
+    "/thank-you",
+    "/thank-you/market-brief"
+  ],
+  "pass": true
+}
+✓ audit-route-inventory: 40 sitemap routes reconcile to filesystem
+EXIT=0

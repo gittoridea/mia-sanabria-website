@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-11T18:08:46.313Z",
+  "timestamp": "2026-05-11T20:15:19.266Z",
   "counts": {
-    "PASS": 15,
+    "PASS": 16,
     "WARN": 1,
     "FAIL": 0,
     "SKIP": 0
@@ -83,11 +83,21 @@
     {
       "id": "completeness.footer.trust",
       "category": "Compliance",
-      "description": "Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on sampled pages",
+      "description": "Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route",
       "status": "PASS",
-      "evidence": "all 7 sampled pages carry full footer trust set",
+      "evidence": "all 48 built routes carry full footer trust set",
       "details": {
         "failsByRoute": {}
+      }
+    },
+    {
+      "id": "completeness.idx.iframe",
+      "category": "IDX",
+      "description": "IDX iframe host + wrapper integrity (Matrix MLS host, title, fallback link, disclaimer, source attribution)",
+      "status": "PASS",
+      "evidence": "5/5 IDX sentinels present on homepage",
+      "details": {
+        "fails": []
       }
     },
     {
@@ -171,7 +181,7 @@
       "category": "Schema",
       "description": "All JSON-LD blocks parse and carry @type",
       "status": "PASS",
-      "evidence": "165 JSON-LD blocks across 28 pages · 0 broken",
+      "evidence": "160 JSON-LD blocks across 28 pages · 0 broken",
       "details": {
         "issues": []
       }

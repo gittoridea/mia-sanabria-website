@@ -87,12 +87,16 @@ function buildArticleSchema(post: InsightPost): WithContext<Article> {
 }
 
 function buildFaqSchema(post: InsightPost): WithContext<FAQPage> | null {
-  if (!post.faqs || post.faqs.length === 0) return null;
+  const items: ReadonlyArray<{ question: string; answer: string }> = [
+    { question: post.aeoQuestion, answer: post.aeoAnswer },
+    ...(post.faqs ?? []),
+  ];
+  if (items.length === 0) return null;
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${SITE.url}/insights/${post.slug}/#faq`,
-    mainEntity: post.faqs.map((item) => ({
+    mainEntity: items.map((item) => ({
       "@type": "Question" as const,
       name: item.question,
       acceptedAnswer: { "@type": "Answer" as const, text: item.answer },

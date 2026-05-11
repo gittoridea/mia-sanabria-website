@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-11T18:15:27.778Z",
+  "generated": "2026-05-11T20:22:11.659Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -553,7 +553,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 15023,
+        "documentHeight": 15283,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -884,7 +884,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 15023,
+        "documentHeight": 15283,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1215,7 +1215,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 11248,
+        "documentHeight": 11427,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1546,7 +1546,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 8714,
+        "documentHeight": 8926,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1861,7 +1861,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 8714,
+        "documentHeight": 8926,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22548,12 +22548,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1554,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1554 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -36945,12 +36945,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1510,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1510 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },

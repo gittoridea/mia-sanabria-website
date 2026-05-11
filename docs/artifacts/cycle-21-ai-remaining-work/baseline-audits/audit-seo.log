@@ -1,0 +1,3 @@
+$ bun run scripts/audit-seo.ts
+✓ audit-seo: 0 warning(s), no errors across out/. (153ms)
+EXIT=0

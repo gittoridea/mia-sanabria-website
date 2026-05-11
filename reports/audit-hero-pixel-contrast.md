@@ -1,6 +1,6 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-11T18:12:31.547Z
+**Generated:** 2026-05-11T20:19:04.850Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
@@ -110,7 +110,7 @@
 | `/markets/lighthouse-point/` | 375x812 | 15.18 | 8.76 | 15.18 (15.18..15.18) | 949 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 768x1024 | 15.38 | 9.60 | 15.38 (15.38..15.38) | 1500 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 1280x800 | 15.78 | 9.89 | 15.78 (15.78..15.78) | 1500 | 800 | ✅ PASS |  |
-| `/markets/lighthouse-point/` | 1440x900 | 4.81 | 4.17 | 4.81 (4.81..4.81) | 1500 | 800 | ✅ PASS |  |
+| `/markets/lighthouse-point/` | 1440x900 | 15.82 | 9.89 | 15.82 (15.82..15.82) | 1500 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 320x568 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 375x812 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 768x1024 | 15.71 | 9.03 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |

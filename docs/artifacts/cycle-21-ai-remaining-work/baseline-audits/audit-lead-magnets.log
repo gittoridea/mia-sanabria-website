@@ -1,0 +1,10 @@
+$ bun run scripts/audit-lead-magnets.ts
+✓ public/downloads/waterfront-buyer-due-diligence-checklist.pdf
+   warning: page-render skipped — @napi-rs/canvas not installed
+✓ public/downloads/luxury-seller-pre-listing-checklist.pdf
+   warning: page-render skipped — @napi-rs/canvas not installed
+✓ public/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf
+   warning: page-render skipped — @napi-rs/canvas not installed
+✓ fort-lauderdale-cta-section
+audit-lead-magnets — 4/4 checks pass
+EXIT=0

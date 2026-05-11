@@ -1,0 +1,21 @@
+$ bun run scripts/audit-copy-density.ts
+audit-copy-density — paragraph-limit=55 sentence-limit=28 footer-max=220 strict=false
+· Home — p>55: 2 · s>28: 6 · rep-geo: 7 · max-p: 170w · max-s: 52w · footer: present
+· Markets index — p>55: 1 · s>28: 2 · rep-geo: 2 · max-p: 58w · max-s: 45w · footer: present
+· Fort Lauderdale — p>55: 21 · s>28: 35 · rep-geo: 8 · max-p: 922w · max-s: 49w · footer: present
+· Pompano Beach — p>55: 5 · s>28: 8 · rep-geo: 2 · max-p: 129w · max-s: 51w · footer: present
+· Boca Raton — p>55: 4 · s>28: 4 · rep-geo: 2 · max-p: 104w · max-s: 45w · footer: present
+· Delray Beach — p>55: 4 · s>28: 2 · rep-geo: 2 · max-p: 111w · max-s: 35w · footer: present
+· Buyers — p>55: 1 · s>28: 2 · rep-geo: 3 · max-p: 108w · max-s: 35w · footer: present
+· Sellers — p>55: 1 · s>28: 1 · rep-geo: 3 · max-p: 105w · max-s: 35w · footer: present
+· Contact — p>55: 0 · s>28: 2 · rep-geo: 3 · max-p: 48w · max-s: 42w · footer: present
+· Home Valuation — p>55: 1 · s>28: 2 · rep-geo: 1 · max-p: 103w · max-s: 41w · footer: present
+· About — p>55: 1 · s>28: 2 · rep-geo: 3 · max-p: 90w · max-s: 35w · footer: present
+· Insights index — p>55: 1 · s>28: 13 · rep-geo: 4 · max-p: 65w · max-s: 43w · footer: present
+✓ Privacy (exempt) (density-exempt) — banned: 0; footer-line n/a
+✓ Terms (exempt) (density-exempt) — banned: 0; footer-line n/a
+✓ DMCA (exempt) (density-exempt) — banned: 0; footer-line n/a
+✓ Accessibility (exempt) (density-exempt) — banned: 0; footer-line n/a
+audit-copy-density — 0 FAIL · 133 WARN
+report: reports/copy-density.json
+EXIT=0

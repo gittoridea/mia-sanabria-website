@@ -1,8 +1,8 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-11T18:08:46.313Z
+**Generated:** 2026-05-11T20:15:19.266Z
 
-**Summary:** 15 PASS · 1 WARN · 0 FAIL · 0 SKIP
+**Summary:** 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
 ## Results by category
 
@@ -18,7 +18,7 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `completeness.legal.routesExist` | ✅ | Required legal routes /privacy/, /terms/, /dmca/, /accessibility/ are built | all 4 legal routes built |
-| `completeness.footer.trust` | ✅ | Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on sampled pages | all 7 sampled pages carry full footer trust set |
+| `completeness.footer.trust` | ✅ | Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route | all 48 built routes carry full footer trust set |
 
 ### SEO/AEO
 
@@ -34,6 +34,12 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 16 market pages exceed 200-word floor |
+
+### IDX
+
+| ID | Status | Description | Evidence |
+|---|:-:|---|---|
+| `completeness.idx.iframe` | ✅ | IDX iframe host + wrapper integrity (Matrix MLS host, title, fallback link, disclaimer, source attribution) | 5/5 IDX sentinels present on homepage |
 
 ### Design/Display Integrity
 
@@ -60,7 +66,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 165 JSON-LD blocks across 28 pages · 0 broken |
+| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 160 JSON-LD blocks across 28 pages · 0 broken |
 
 ## Failures and warnings — details
 

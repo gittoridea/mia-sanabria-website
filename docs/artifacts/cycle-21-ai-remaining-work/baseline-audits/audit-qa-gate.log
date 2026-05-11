@@ -1,0 +1,6 @@
+$ bun run scripts/audit-qa-gate.ts
+qa-gate: 4 fs-only route(s) — scanning anyway: /downloads/luxury-seller-pre-listing-checklist, /downloads/waterfront-buyer-due-diligence-checklist, /downloads/fort-lauderdale-waterfront-valuation-prep-sheet, /404
+audit-qa-gate — 48 routes · critical 0 · high 4 · medium 1 · low 48
+→ reports/qa-gate-matrix.json
+→ reports/qa-gate-matrix.md
+EXIT=0

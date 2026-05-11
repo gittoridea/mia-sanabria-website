@@ -62,16 +62,6 @@ const MARKET_PAGES: ReadonlyArray<string> = [
   ...getAllMarketRoutes(),
 ];
 
-const SAMPLED_FOOTER_PAGES = [
-  "/",
-  "/about/",
-  "/contact/",
-  "/buyers/",
-  "/markets/fort-lauderdale/",
-  "/insights/",
-  "/privacy/",
-] as const;
-
 const MARKET_VISIBLE_WORD_FLOOR = 200;
 
 /** Extract visible text by stripping <script>/<style>/<template>/comments + tags + entities. */
@@ -336,6 +326,10 @@ async function checkMarketWordFloor(): Promise<CheckResult> {
 }
 
 async function checkFooterTrust(): Promise<CheckResult> {
+  // Cycle 21 — full-route fan-out. Replaces the 7-route SAMPLED_FOOTER_PAGES
+  // pattern that let single-page footer regressions slip outside the sample.
+  // SiteFooter is rendered via RootLayout on every built route, so every
+  // index.html under out/ must carry the trust sentinels.
   const sentinels = {
     lpt: /LPT Realty/,
     licenseSlot: /Sales Associate License #|License #SL/,
@@ -347,7 +341,8 @@ async function checkFooterTrust(): Promise<CheckResult> {
     dmcaLink: /href="\/dmca\/"/,
   };
   const failsByRoute: Record<string, string[]> = {};
-  for (const route of SAMPLED_FOOTER_PAGES) {
+  const allRoutes = await listBuiltRoutes();
+  for (const route of allRoutes) {
     const html = await readBuiltHtml(route);
     if (!html) continue;
     const fails: string[] = [];
@@ -359,13 +354,50 @@ async function checkFooterTrust(): Promise<CheckResult> {
   return {
     id: "completeness.footer.trust",
     category: "Compliance",
-    description: "Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on sampled pages",
+    description: "Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route",
     status: Object.keys(failsByRoute).length === 0 ? "PASS" : "FAIL",
     evidence:
       Object.keys(failsByRoute).length === 0
-        ? `all ${SAMPLED_FOOTER_PAGES.length} sampled pages carry full footer trust set`
-        : `${Object.keys(failsByRoute).length} pages missing sentinels`,
+        ? `all ${allRoutes.length} built routes carry full footer trust set`
+        : `${Object.keys(failsByRoute).length}/${allRoutes.length} routes missing sentinels`,
     details: { failsByRoute },
+  };
+}
+
+async function checkIdxIframeIntegrity(): Promise<CheckResult> {
+  // Cycle 21 — IDX iframe is the highest-traffic surface; lock the contract.
+  // 5 sentinels: Matrix MLS host, refined iframe title, visible fallback link,
+  // in-page MLS disclaimer, IDX→form source attribution CTA.
+  const html = await readBuiltHtml("/");
+  if (!html) {
+    return {
+      id: "completeness.idx.iframe",
+      category: "IDX",
+      description: "IDX iframe host + wrapper integrity on homepage",
+      status: "FAIL",
+      evidence: "/ not built — run `bun run build` first",
+    };
+  }
+  const sentinels = {
+    matrixHost: /sef\.mlsmatrix\.com\/Matrix\/Public\/IDXSearch/,
+    iframeTitle: /<iframe[^>]+title="Southeast Florida property search/,
+    fallbackLink: /Open the property search in a new tab/i,
+    disclaimer: /Listing data deemed reliable but not guaranteed/i,
+    sourceAttribution: /\?source=idx-search/,
+  };
+  const fails: string[] = [];
+  for (const [key, re] of Object.entries(sentinels)) {
+    if (!re.test(html)) fails.push(key);
+  }
+  return {
+    id: "completeness.idx.iframe",
+    category: "IDX",
+    description: "IDX iframe host + wrapper integrity (Matrix MLS host, title, fallback link, disclaimer, source attribution)",
+    status: fails.length === 0 ? "PASS" : "FAIL",
+    evidence: fails.length === 0
+      ? `5/5 IDX sentinels present on homepage`
+      : `missing: ${fails.join(", ")}`,
+    details: { fails },
   };
 }
 
@@ -637,6 +669,7 @@ async function main() {
   results.push(...(await checkPerPageMetadata()));
   results.push(await checkMarketWordFloor());
   results.push(await checkFooterTrust());
+  results.push(await checkIdxIframeIntegrity());
   results.push(...(await checkCorePageImages()));
   results.push(await checkOgImagesResolve());
   results.push(await checkFormsClassification());

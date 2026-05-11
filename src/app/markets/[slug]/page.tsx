@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { MarketCard } from "@/components/MarketCard";
 import { PlaceSchema } from "@/components/schema/PlaceSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
+import { FaqSchema } from "@/components/schema/FaqSchema";
 import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema";
 import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { FortLauderdaleV2Page } from "@/components/markets/FortLauderdaleV2";
@@ -308,11 +309,22 @@ export default async function MarketPage({ params }: { params: Promise<Params> }
         </div>
       </section>
 
-      {/* SECTION 6 — Market-specific FAQ (single emission via Faq's built-in FaqSchema) */}
+      {/* SECTION 6 — Market-specific FAQ. Visible accordion shows market.faqs only;
+          schema emission unifies the visible AEO answer (Section 1) with the FAQ items
+          so AEO/Quick-Answer surfaces resolve cleanly. Single FAQPage entity per page. */}
       <Faq
         heading={`Frequently asked questions about ${market.name}.`}
         items={market.faqs}
-        emitSchema
+        emitSchema={false}
+      />
+      <FaqSchema
+        items={[
+          {
+            question: `What is ${market.name} known for in luxury real estate?`,
+            answer: market.aeoAnswer,
+          },
+          ...market.faqs,
+        ]}
       />
 
       {/* SECTION 7 — Related markets, driven by market.internalLinks.
