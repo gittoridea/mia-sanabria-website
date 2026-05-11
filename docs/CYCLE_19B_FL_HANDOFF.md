@@ -19,8 +19,12 @@
 |---|---|
 | Live homepage ETag — before deploy | `difl9krf8phc4ntl` |
 | Live FL page ETag — before deploy | `difl9krf8phc50vl` |
-| Live homepage ETag — after deploy | _to be filled by deploy-and-verify_ |
-| Live FL page ETag — after deploy | _to be filled by deploy-and-verify_ |
+| Live homepage ETag — after deploy | `difooo2ml81s4pcu` (flipped at 2026-05-11T07:54:47Z) |
+| Live FL page ETag — after deploy | `difooo2ml81s5fv6` |
+| Live route smoke (15 paths) | 15/15 HTTP 200 (/, /markets/fort-lauderdale/, /insights/, /contact/, /valuation/, /about/, /buyers/, /sellers/, /markets/, /thank-you/buyer-brief/, /thank-you/valuation/, /thank-you/market-brief/, + 3 /downloads/*.pdf) |
+| Live trust-row grep — homepage | `REALTOR®`, `LPT Realty LLC`, `FL License #SL3405877`, `Fort Lauderdale-based` all present |
+| Live PDF headers | `content-type: application/pdf`, `content-length: 133736` bytes for waterfront-buyer-due-diligence-checklist.pdf |
+| Live `robots.txt` | `User-Agent: *` `Disallow: /` (staging noindex preserved) |
 | Deploy script | `bun scripts/deploy-and-verify.ts` (Dokploy applicationId `XJSRlvH-91ZtUsh0RPGvo`) |
 
 ## Screenshots captured

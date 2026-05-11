@@ -1,6 +1,6 @@
 # QA-Gate Matrix — Cycle 19A-M
 
-Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T07:40:32.493Z
+Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T07:51:45.433Z
 
 **48 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 48
 
