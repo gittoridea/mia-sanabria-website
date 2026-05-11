@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-11T00:40:31.805Z",
+  "generated": "2026-05-11T01:20:48.940Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -38,7 +38,8 @@
     "/markets/sea-ranch-lakes/",
     "/markets/hillsboro-mile/",
     "/markets/bay-colony/",
-    "/markets/bermuda-riviera/"
+    "/markets/bermuda-riviera/",
+    "/markets/pompano-beach/"
   ],
   "counts": {
     "pass": 14,
@@ -52,14 +53,14 @@
       "category": "Rendered Images",
       "description": "Every non-lazy image renders with naturalWidth>0, renderedWidth>0, opacity>0",
       "status": "PASS",
-      "evidence": "0 broken images across 135 probes"
+      "evidence": "0 broken images across 140 probes"
     },
     {
       "id": "rendered.marketCards.allVisibleOnIndex",
       "category": "Market Index",
       "description": "/markets/ index renders ≥10 market cards with imgVisible=true",
       "status": "PASS",
-      "evidence": "15 visible cards (best viewport: 320x568)"
+      "evidence": "16 visible cards (best viewport: 320x568)"
     },
     {
       "id": "rendered.principalReportedMarkets.visible",
@@ -73,21 +74,21 @@
       "category": "Hero",
       "description": "Hero heading stays inside the copy panel (no right-edge clipping)",
       "status": "PASS",
-      "evidence": "0 offenders across 135 probes"
+      "evidence": "0 offenders across 140 probes"
     },
     {
       "id": "rendered.hero.eyebrowFitsPanel",
       "category": "Hero",
       "description": "Hero eyebrow stays inside the copy panel (no right-edge clipping)",
       "status": "PASS",
-      "evidence": "0 offenders across 135 probes"
+      "evidence": "0 offenders across 140 probes"
     },
     {
       "id": "rendered.hero.subFitsPanel",
       "category": "Hero",
       "description": "Hero sub-paragraph stays inside the copy panel (no right-edge clipping)",
       "status": "PASS",
-      "evidence": "0 offenders across 135 probes"
+      "evidence": "0 offenders across 140 probes"
     },
     {
       "id": "rendered.hero.primaryCtaAboveFoldDesktop",
@@ -115,7 +116,7 @@
       "category": "Mobile",
       "description": "No horizontal overflow at mobile viewports (≤768) — viewport-honest probes only",
       "status": "PASS",
-      "evidence": "0 overflow at 27 viewport-honest probes; 54 dishonest probes SKIPPED (instrumentation mismatch)",
+      "evidence": "0 overflow at 28 viewport-honest probes; 56 dishonest probes SKIPPED (instrumentation mismatch)",
       "details": {
         "offenders": [],
         "skipped": [
@@ -442,9 +443,21 @@
             "viewport": "375x812",
             "requested": 375,
             "actual": 500
+          },
+          {
+            "route": "/markets/pompano-beach/",
+            "viewport": "320x568",
+            "requested": 320,
+            "actual": 500
+          },
+          {
+            "route": "/markets/pompano-beach/",
+            "viewport": "375x812",
+            "requested": 375,
+            "actual": 500
           }
         ],
-        "honestMobileProbes": 27
+        "honestMobileProbes": 28
       }
     },
     {
@@ -480,48 +493,48 @@
       "category": "Probe Health",
       "description": "Every probe's actual window.innerWidth matches requested viewport width (±5px) — F6 instrumentation gate",
       "status": "WARN",
-      "evidence": "81/135 probes viewport-honest; 54 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap)",
+      "evidence": "84/140 probes viewport-honest; 56 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap)",
       "details": {
         "sanity": [
           {
             "requested": "1280x800",
-            "total": 27,
-            "honest": 27,
+            "total": 28,
+            "honest": 28,
             "mismatched": 0,
             "sampleActual": 1280
           },
           {
             "requested": "1440x900",
-            "total": 27,
-            "honest": 27,
+            "total": 28,
+            "honest": 28,
             "mismatched": 0,
             "sampleActual": 1440
           },
           {
             "requested": "320x568",
-            "total": 27,
+            "total": 28,
             "honest": 0,
-            "mismatched": 27,
+            "mismatched": 28,
             "sampleActual": 500
           },
           {
             "requested": "375x812",
-            "total": 27,
+            "total": 28,
             "honest": 0,
-            "mismatched": 27,
+            "mismatched": 28,
             "sampleActual": 500
           },
           {
             "requested": "768x1024",
-            "total": 27,
-            "honest": 27,
+            "total": 28,
+            "honest": 28,
             "mismatched": 0,
             "sampleActual": 768
           }
         ],
-        "totalProbes": 135,
-        "honestProbes": 81,
-        "totalMismatched": 54
+        "totalProbes": 140,
+        "honestProbes": 84,
+        "totalMismatched": 56
       }
     }
   ],
@@ -11957,7 +11970,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 13390,
+        "documentHeight": 14126,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -12057,7 +12070,7 @@
             "selectorPath": "body > section#primary-markets > div > ul > li > a > div > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -12130,6 +12143,18 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/seven-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -12391,7 +12416,7 @@
             "headingText": "Sea Ranch Lakes"
           },
           {
-            "href": "/markets/hillsboro-mile/",
+            "href": "/markets/pompano-beach/",
             "cardBox": {
               "x": 16,
               "y": 4499.125,
@@ -12410,25 +12435,25 @@
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
-            "headingText": "Hillsboro Mile"
+            "headingText": "Pompano Beach"
           },
           {
             "href": "/markets/coral-ridge/",
             "cardBox": {
               "x": 16,
-              "y": 5526.75,
+              "y": 5653.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 6111.25
+              "bottom": 6238.375
             },
             "imgBox": {
               "x": 17,
-              "y": 5527.75,
+              "y": 5654.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 6110.25
+              "bottom": 6237.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -12438,19 +12463,19 @@
             "href": "/markets/victoria-park/",
             "cardBox": {
               "x": 16,
-              "y": 6135.25,
+              "y": 6262.375,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 6719.75
+              "bottom": 6846.875
             },
             "imgBox": {
               "x": 17,
-              "y": 6136.25,
+              "y": 6263.375,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 6718.75
+              "bottom": 6845.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -12460,19 +12485,19 @@
             "href": "/markets/rio-vista/",
             "cardBox": {
               "x": 16,
-              "y": 6743.75,
+              "y": 6870.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 7328.25
+              "bottom": 7455.375
             },
             "imgBox": {
               "x": 17,
-              "y": 6744.75,
+              "y": 6871.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 7327.25
+              "bottom": 7454.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -12482,19 +12507,19 @@
             "href": "/markets/harbor-beach/",
             "cardBox": {
               "x": 16,
-              "y": 7352.25,
+              "y": 7479.375,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 7936.75
+              "bottom": 8063.875
             },
             "imgBox": {
               "x": 17,
-              "y": 7353.25,
+              "y": 7480.375,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 7935.75
+              "bottom": 8062.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -12504,19 +12529,19 @@
             "href": "/markets/las-olas-isles/",
             "cardBox": {
               "x": 16,
-              "y": 7960.75,
+              "y": 8087.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 8545.25
+              "bottom": 8672.375
             },
             "imgBox": {
               "x": 17,
-              "y": 7961.75,
+              "y": 8088.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 8544.25
+              "bottom": 8671.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -12526,41 +12551,63 @@
             "href": "/markets/seven-isles/",
             "cardBox": {
               "x": 16,
-              "y": 8569.25,
+              "y": 8696.375,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 9153.75
+              "bottom": 9280.875
             },
             "imgBox": {
               "x": 17,
-              "y": 8570.25,
+              "y": 8697.375,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 9152.75
+              "bottom": 9279.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
           },
           {
-            "href": "/markets/bay-colony/",
+            "href": "/markets/hillsboro-mile/",
             "cardBox": {
               "x": 16,
-              "y": 9177.75,
+              "y": 9304.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 9762.25
+              "bottom": 9889.375
             },
             "imgBox": {
               "x": 17,
-              "y": 9178.75,
+              "y": 9305.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 9761.25
+              "bottom": 9888.375
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Hillsboro Mile"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 16,
+              "y": 9913.375,
+              "w": 468,
+              "h": 584.5,
+              "right": 484,
+              "bottom": 10497.875
+            },
+            "imgBox": {
+              "x": 17,
+              "y": 9914.375,
+              "w": 466,
+              "h": 582.5,
+              "right": 483,
+              "bottom": 10496.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -12570,19 +12617,19 @@
             "href": "/markets/bermuda-riviera/",
             "cardBox": {
               "x": 16,
-              "y": 9786.25,
+              "y": 10521.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 10370.75
+              "bottom": 11106.375
             },
             "imgBox": {
               "x": 17,
-              "y": 9787.25,
+              "y": 10522.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 10369.75
+              "bottom": 11105.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -12715,7 +12762,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 13390,
+        "documentHeight": 14126,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -12815,7 +12862,7 @@
             "selectorPath": "body > section#primary-markets > div > ul > li > a > div > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -12888,6 +12935,18 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/seven-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -13149,7 +13208,7 @@
             "headingText": "Sea Ranch Lakes"
           },
           {
-            "href": "/markets/hillsboro-mile/",
+            "href": "/markets/pompano-beach/",
             "cardBox": {
               "x": 16,
               "y": 4499.125,
@@ -13168,25 +13227,25 @@
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
-            "headingText": "Hillsboro Mile"
+            "headingText": "Pompano Beach"
           },
           {
             "href": "/markets/coral-ridge/",
             "cardBox": {
               "x": 16,
-              "y": 5526.75,
+              "y": 5653.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 6111.25
+              "bottom": 6238.375
             },
             "imgBox": {
               "x": 17,
-              "y": 5527.75,
+              "y": 5654.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 6110.25
+              "bottom": 6237.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13196,19 +13255,19 @@
             "href": "/markets/victoria-park/",
             "cardBox": {
               "x": 16,
-              "y": 6135.25,
+              "y": 6262.375,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 6719.75
+              "bottom": 6846.875
             },
             "imgBox": {
               "x": 17,
-              "y": 6136.25,
+              "y": 6263.375,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 6718.75
+              "bottom": 6845.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13218,19 +13277,19 @@
             "href": "/markets/rio-vista/",
             "cardBox": {
               "x": 16,
-              "y": 6743.75,
+              "y": 6870.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 7328.25
+              "bottom": 7455.375
             },
             "imgBox": {
               "x": 17,
-              "y": 6744.75,
+              "y": 6871.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 7327.25
+              "bottom": 7454.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13240,19 +13299,19 @@
             "href": "/markets/harbor-beach/",
             "cardBox": {
               "x": 16,
-              "y": 7352.25,
+              "y": 7479.375,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 7936.75
+              "bottom": 8063.875
             },
             "imgBox": {
               "x": 17,
-              "y": 7353.25,
+              "y": 7480.375,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 7935.75
+              "bottom": 8062.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13262,19 +13321,19 @@
             "href": "/markets/las-olas-isles/",
             "cardBox": {
               "x": 16,
-              "y": 7960.75,
+              "y": 8087.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 8545.25
+              "bottom": 8672.375
             },
             "imgBox": {
               "x": 17,
-              "y": 7961.75,
+              "y": 8088.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 8544.25
+              "bottom": 8671.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13284,41 +13343,63 @@
             "href": "/markets/seven-isles/",
             "cardBox": {
               "x": 16,
-              "y": 8569.25,
+              "y": 8696.375,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 9153.75
+              "bottom": 9280.875
             },
             "imgBox": {
               "x": 17,
-              "y": 8570.25,
+              "y": 8697.375,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 9152.75
+              "bottom": 9279.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
           },
           {
-            "href": "/markets/bay-colony/",
+            "href": "/markets/hillsboro-mile/",
             "cardBox": {
               "x": 16,
-              "y": 9177.75,
+              "y": 9304.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 9762.25
+              "bottom": 9889.375
             },
             "imgBox": {
               "x": 17,
-              "y": 9178.75,
+              "y": 9305.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 9761.25
+              "bottom": 9888.375
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Hillsboro Mile"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 16,
+              "y": 9913.375,
+              "w": 468,
+              "h": 584.5,
+              "right": 484,
+              "bottom": 10497.875
+            },
+            "imgBox": {
+              "x": 17,
+              "y": 9914.375,
+              "w": 466,
+              "h": 582.5,
+              "right": 483,
+              "bottom": 10496.875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13328,19 +13409,19 @@
             "href": "/markets/bermuda-riviera/",
             "cardBox": {
               "x": 16,
-              "y": 9786.25,
+              "y": 10521.875,
               "w": 468,
               "h": 584.5,
               "right": 484,
-              "bottom": 10370.75
+              "bottom": 11106.375
             },
             "imgBox": {
               "x": 17,
-              "y": 9787.25,
+              "y": 10522.875,
               "w": 466,
               "h": 582.5,
               "right": 483,
-              "bottom": 10369.75
+              "bottom": 11105.375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13473,7 +13554,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 7635,
+        "documentHeight": 8153,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -13573,7 +13654,7 @@
             "selectorPath": "body > section#primary-markets > div > ul > li > a > div > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 354,
@@ -13646,6 +13727,18 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/seven-isles.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 354,
@@ -13907,7 +14000,7 @@
             "headingText": "Sea Ranch Lakes"
           },
           {
-            "href": "/markets/hillsboro-mile/",
+            "href": "/markets/pompano-beach/",
             "cardBox": {
               "x": 16,
               "y": 2257.25,
@@ -13926,25 +14019,25 @@
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
-            "headingText": "Hillsboro Mile"
+            "headingText": "Pompano Beach"
           },
           {
             "href": "/markets/coral-ridge/",
             "cardBox": {
               "x": 16,
-              "y": 3092.5,
+              "y": 3141.25,
               "w": 356,
               "h": 444.5,
               "right": 372,
-              "bottom": 3537
+              "bottom": 3585.75
             },
             "imgBox": {
               "x": 17,
-              "y": 3093.5,
+              "y": 3142.25,
               "w": 354,
               "h": 442.5,
               "right": 371,
-              "bottom": 3536
+              "bottom": 3584.75
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13954,19 +14047,19 @@
             "href": "/markets/victoria-park/",
             "cardBox": {
               "x": 396,
-              "y": 3092.5,
+              "y": 3141.25,
               "w": 356,
               "h": 444.5,
               "right": 752,
-              "bottom": 3537
+              "bottom": 3585.75
             },
             "imgBox": {
               "x": 397,
-              "y": 3093.5,
+              "y": 3142.25,
               "w": 354,
               "h": 442.5,
               "right": 751,
-              "bottom": 3536
+              "bottom": 3584.75
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13976,19 +14069,19 @@
             "href": "/markets/rio-vista/",
             "cardBox": {
               "x": 16,
-              "y": 3561,
+              "y": 3609.75,
               "w": 356,
               "h": 444.5,
               "right": 372,
-              "bottom": 4005.5
+              "bottom": 4054.25
             },
             "imgBox": {
               "x": 17,
-              "y": 3562,
+              "y": 3610.75,
               "w": 354,
               "h": 442.5,
               "right": 371,
-              "bottom": 4004.5
+              "bottom": 4053.25
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -13998,19 +14091,19 @@
             "href": "/markets/harbor-beach/",
             "cardBox": {
               "x": 396,
-              "y": 3561,
+              "y": 3609.75,
               "w": 356,
               "h": 444.5,
               "right": 752,
-              "bottom": 4005.5
+              "bottom": 4054.25
             },
             "imgBox": {
               "x": 397,
-              "y": 3562,
+              "y": 3610.75,
               "w": 354,
               "h": 442.5,
               "right": 751,
-              "bottom": 4004.5
+              "bottom": 4053.25
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14020,19 +14113,19 @@
             "href": "/markets/las-olas-isles/",
             "cardBox": {
               "x": 16,
-              "y": 4029.5,
+              "y": 4078.25,
               "w": 356,
               "h": 444.5,
               "right": 372,
-              "bottom": 4474
+              "bottom": 4522.75
             },
             "imgBox": {
               "x": 17,
-              "y": 4030.5,
+              "y": 4079.25,
               "w": 354,
               "h": 442.5,
               "right": 371,
-              "bottom": 4473
+              "bottom": 4521.75
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14042,41 +14135,63 @@
             "href": "/markets/seven-isles/",
             "cardBox": {
               "x": 396,
-              "y": 4029.5,
+              "y": 4078.25,
               "w": 356,
               "h": 444.5,
               "right": 752,
-              "bottom": 4474
+              "bottom": 4522.75
             },
             "imgBox": {
               "x": 397,
-              "y": 4030.5,
+              "y": 4079.25,
               "w": 354,
               "h": 442.5,
               "right": 751,
-              "bottom": 4473
+              "bottom": 4521.75
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
           },
           {
-            "href": "/markets/bay-colony/",
+            "href": "/markets/hillsboro-mile/",
             "cardBox": {
               "x": 16,
-              "y": 4498,
+              "y": 4546.75,
               "w": 356,
               "h": 444.5,
               "right": 372,
-              "bottom": 4942.5
+              "bottom": 4991.25
             },
             "imgBox": {
               "x": 17,
-              "y": 4499,
+              "y": 4547.75,
               "w": 354,
               "h": 442.5,
               "right": 371,
-              "bottom": 4941.5
+              "bottom": 4990.25
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Hillsboro Mile"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 396,
+              "y": 4546.75,
+              "w": 356,
+              "h": 444.5,
+              "right": 752,
+              "bottom": 4991.25
+            },
+            "imgBox": {
+              "x": 397,
+              "y": 4547.75,
+              "w": 354,
+              "h": 442.5,
+              "right": 751,
+              "bottom": 4990.25
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14085,20 +14200,20 @@
           {
             "href": "/markets/bermuda-riviera/",
             "cardBox": {
-              "x": 396,
-              "y": 4498,
+              "x": 16,
+              "y": 5015.25,
               "w": 356,
               "h": 444.5,
-              "right": 752,
-              "bottom": 4942.5
+              "right": 372,
+              "bottom": 5459.75
             },
             "imgBox": {
-              "x": 397,
-              "y": 4499,
+              "x": 17,
+              "y": 5016.25,
               "w": 354,
               "h": 442.5,
-              "right": 751,
-              "bottom": 4941.5
+              "right": 371,
+              "bottom": 5458.75
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14231,7 +14346,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5897,
+        "documentHeight": 5946,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -14331,7 +14446,7 @@
             "selectorPath": "body > section#primary-markets > div > ul > li > a > div > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 387.328125,
@@ -14415,6 +14530,18 @@
             "selectorPath": "body > section > div > ul > li > a > div > img"
           },
           {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
             "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
@@ -14430,8 +14557,8 @@
             "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
-            "renderedWidth": 387.328125,
-            "renderedHeight": 484.15625,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": false,
@@ -14665,7 +14792,7 @@
             "headingText": "Sea Ranch Lakes"
           },
           {
-            "href": "/markets/hillsboro-mile/",
+            "href": "/markets/pompano-beach/",
             "cardBox": {
               "x": 32,
               "y": 1920.09375,
@@ -14684,25 +14811,25 @@
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
-            "headingText": "Hillsboro Mile"
+            "headingText": "Pompano Beach"
           },
           {
             "href": "/markets/coral-ridge/",
             "cardBox": {
               "x": 32,
-              "y": 2861,
+              "y": 2909.75,
               "w": 389.328125,
               "h": 486.15625,
               "right": 421.328125,
-              "bottom": 3347.15625
+              "bottom": 3395.90625
             },
             "imgBox": {
               "x": 33,
-              "y": 2862,
+              "y": 2910.75,
               "w": 387.328125,
               "h": 484.15625,
               "right": 420.328125,
-              "bottom": 3346.15625
+              "bottom": 3394.90625
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14712,19 +14839,19 @@
             "href": "/markets/victoria-park/",
             "cardBox": {
               "x": 445.328125,
-              "y": 2861,
+              "y": 2909.75,
               "w": 389.328125,
               "h": 486.15625,
               "right": 834.65625,
-              "bottom": 3347.15625
+              "bottom": 3395.90625
             },
             "imgBox": {
               "x": 446.328125,
-              "y": 2862,
+              "y": 2910.75,
               "w": 387.328125,
               "h": 484.15625,
               "right": 833.65625,
-              "bottom": 3346.15625
+              "bottom": 3394.90625
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14734,19 +14861,19 @@
             "href": "/markets/rio-vista/",
             "cardBox": {
               "x": 858.65625,
-              "y": 2861,
+              "y": 2909.75,
               "w": 389.34375,
               "h": 486.171875,
               "right": 1248,
-              "bottom": 3347.171875
+              "bottom": 3395.921875
             },
             "imgBox": {
               "x": 859.65625,
-              "y": 2862,
+              "y": 2910.75,
               "w": 387.34375,
               "h": 484.171875,
               "right": 1247,
-              "bottom": 3346.171875
+              "bottom": 3394.921875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14756,19 +14883,19 @@
             "href": "/markets/harbor-beach/",
             "cardBox": {
               "x": 32,
-              "y": 3371.171875,
+              "y": 3419.921875,
               "w": 389.328125,
               "h": 486.15625,
               "right": 421.328125,
-              "bottom": 3857.328125
+              "bottom": 3906.078125
             },
             "imgBox": {
               "x": 33,
-              "y": 3372.171875,
+              "y": 3420.921875,
               "w": 387.328125,
               "h": 484.15625,
               "right": 420.328125,
-              "bottom": 3856.328125
+              "bottom": 3905.078125
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14778,19 +14905,19 @@
             "href": "/markets/las-olas-isles/",
             "cardBox": {
               "x": 445.328125,
-              "y": 3371.171875,
+              "y": 3419.921875,
               "w": 389.328125,
               "h": 486.15625,
               "right": 834.65625,
-              "bottom": 3857.328125
+              "bottom": 3906.078125
             },
             "imgBox": {
               "x": 446.328125,
-              "y": 3372.171875,
+              "y": 3420.921875,
               "w": 387.328125,
               "h": 484.15625,
               "right": 833.65625,
-              "bottom": 3856.328125
+              "bottom": 3905.078125
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14800,41 +14927,63 @@
             "href": "/markets/seven-isles/",
             "cardBox": {
               "x": 858.65625,
-              "y": 3371.171875,
+              "y": 3419.921875,
               "w": 389.34375,
               "h": 486.171875,
               "right": 1248,
-              "bottom": 3857.34375
+              "bottom": 3906.09375
             },
             "imgBox": {
               "x": 859.65625,
-              "y": 3372.171875,
+              "y": 3420.921875,
               "w": 387.34375,
               "h": 484.171875,
               "right": 1247,
-              "bottom": 3856.34375
+              "bottom": 3905.09375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
           },
           {
-            "href": "/markets/bay-colony/",
+            "href": "/markets/hillsboro-mile/",
             "cardBox": {
               "x": 32,
-              "y": 3881.34375,
+              "y": 3930.09375,
               "w": 389.328125,
               "h": 486.15625,
               "right": 421.328125,
-              "bottom": 4367.5
+              "bottom": 4416.25
             },
             "imgBox": {
               "x": 33,
-              "y": 3882.34375,
+              "y": 3931.09375,
               "w": 387.328125,
               "h": 484.15625,
               "right": 420.328125,
-              "bottom": 4366.5
+              "bottom": 4415.25
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Hillsboro Mile"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 445.328125,
+              "y": 3930.09375,
+              "w": 389.328125,
+              "h": 486.15625,
+              "right": 834.65625,
+              "bottom": 4416.25
+            },
+            "imgBox": {
+              "x": 446.328125,
+              "y": 3931.09375,
+              "w": 387.328125,
+              "h": 484.15625,
+              "right": 833.65625,
+              "bottom": 4415.25
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14843,20 +14992,20 @@
           {
             "href": "/markets/bermuda-riviera/",
             "cardBox": {
-              "x": 445.328125,
-              "y": 3881.34375,
-              "w": 389.328125,
-              "h": 486.15625,
-              "right": 834.65625,
-              "bottom": 4367.5
+              "x": 858.65625,
+              "y": 3930.09375,
+              "w": 389.34375,
+              "h": 486.171875,
+              "right": 1248,
+              "bottom": 4416.265625
             },
             "imgBox": {
-              "x": 446.328125,
-              "y": 3882.34375,
-              "w": 387.328125,
-              "h": 484.15625,
-              "right": 833.65625,
-              "bottom": 4366.5
+              "x": 859.65625,
+              "y": 3931.09375,
+              "w": 387.34375,
+              "h": 484.171875,
+              "right": 1247,
+              "bottom": 4415.265625
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -14973,7 +15122,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5897,
+        "documentHeight": 5946,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15073,7 +15222,7 @@
             "selectorPath": "body > section#primary-markets > div > ul > li > a > div > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 387.328125,
@@ -15157,6 +15306,18 @@
             "selectorPath": "body > section > div > ul > li > a > div > img"
           },
           {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
             "src": "http://127.0.0.1:4173/markets/bay-colony.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
@@ -15172,8 +15333,8 @@
             "src": "http://127.0.0.1:4173/markets/bermuda-riviera.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
-            "renderedWidth": 387.328125,
-            "renderedHeight": 484.15625,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": false,
@@ -15407,7 +15568,7 @@
             "headingText": "Sea Ranch Lakes"
           },
           {
-            "href": "/markets/hillsboro-mile/",
+            "href": "/markets/pompano-beach/",
             "cardBox": {
               "x": 112,
               "y": 1920.09375,
@@ -15426,25 +15587,25 @@
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
-            "headingText": "Hillsboro Mile"
+            "headingText": "Pompano Beach"
           },
           {
             "href": "/markets/coral-ridge/",
             "cardBox": {
               "x": 112,
-              "y": 2861,
+              "y": 2909.75,
               "w": 389.328125,
               "h": 486.15625,
               "right": 501.328125,
-              "bottom": 3347.15625
+              "bottom": 3395.90625
             },
             "imgBox": {
               "x": 113,
-              "y": 2862,
+              "y": 2910.75,
               "w": 387.328125,
               "h": 484.15625,
               "right": 500.328125,
-              "bottom": 3346.15625
+              "bottom": 3394.90625
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -15454,19 +15615,19 @@
             "href": "/markets/victoria-park/",
             "cardBox": {
               "x": 525.328125,
-              "y": 2861,
+              "y": 2909.75,
               "w": 389.328125,
               "h": 486.15625,
               "right": 914.65625,
-              "bottom": 3347.15625
+              "bottom": 3395.90625
             },
             "imgBox": {
               "x": 526.328125,
-              "y": 2862,
+              "y": 2910.75,
               "w": 387.328125,
               "h": 484.15625,
               "right": 913.65625,
-              "bottom": 3346.15625
+              "bottom": 3394.90625
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -15476,19 +15637,19 @@
             "href": "/markets/rio-vista/",
             "cardBox": {
               "x": 938.65625,
-              "y": 2861,
+              "y": 2909.75,
               "w": 389.34375,
               "h": 486.171875,
               "right": 1328,
-              "bottom": 3347.171875
+              "bottom": 3395.921875
             },
             "imgBox": {
               "x": 939.65625,
-              "y": 2862,
+              "y": 2910.75,
               "w": 387.34375,
               "h": 484.171875,
               "right": 1327,
-              "bottom": 3346.171875
+              "bottom": 3394.921875
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -15498,19 +15659,19 @@
             "href": "/markets/harbor-beach/",
             "cardBox": {
               "x": 112,
-              "y": 3371.171875,
+              "y": 3419.921875,
               "w": 389.328125,
               "h": 486.15625,
               "right": 501.328125,
-              "bottom": 3857.328125
+              "bottom": 3906.078125
             },
             "imgBox": {
               "x": 113,
-              "y": 3372.171875,
+              "y": 3420.921875,
               "w": 387.328125,
               "h": 484.15625,
               "right": 500.328125,
-              "bottom": 3856.328125
+              "bottom": 3905.078125
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -15520,19 +15681,19 @@
             "href": "/markets/las-olas-isles/",
             "cardBox": {
               "x": 525.328125,
-              "y": 3371.171875,
+              "y": 3419.921875,
               "w": 389.328125,
               "h": 486.15625,
               "right": 914.65625,
-              "bottom": 3857.328125
+              "bottom": 3906.078125
             },
             "imgBox": {
               "x": 526.328125,
-              "y": 3372.171875,
+              "y": 3420.921875,
               "w": 387.328125,
               "h": 484.15625,
               "right": 913.65625,
-              "bottom": 3856.328125
+              "bottom": 3905.078125
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -15542,41 +15703,63 @@
             "href": "/markets/seven-isles/",
             "cardBox": {
               "x": 938.65625,
-              "y": 3371.171875,
+              "y": 3419.921875,
               "w": 389.34375,
               "h": 486.171875,
               "right": 1328,
-              "bottom": 3857.34375
+              "bottom": 3906.09375
             },
             "imgBox": {
               "x": 939.65625,
-              "y": 3372.171875,
+              "y": 3420.921875,
               "w": 387.34375,
               "h": 484.171875,
               "right": 1327,
-              "bottom": 3856.34375
+              "bottom": 3905.09375
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
             "headingText": "Seven Isles"
           },
           {
-            "href": "/markets/bay-colony/",
+            "href": "/markets/hillsboro-mile/",
             "cardBox": {
               "x": 112,
-              "y": 3881.34375,
+              "y": 3930.09375,
               "w": 389.328125,
               "h": 486.15625,
               "right": 501.328125,
-              "bottom": 4367.5
+              "bottom": 4416.25
             },
             "imgBox": {
               "x": 113,
-              "y": 3882.34375,
+              "y": 3931.09375,
               "w": 387.328125,
               "h": 484.15625,
               "right": 500.328125,
-              "bottom": 4366.5
+              "bottom": 4415.25
+            },
+            "imgNaturalWidth": 1200,
+            "imgVisible": true,
+            "headingText": "Hillsboro Mile"
+          },
+          {
+            "href": "/markets/bay-colony/",
+            "cardBox": {
+              "x": 525.328125,
+              "y": 3930.09375,
+              "w": 389.328125,
+              "h": 486.15625,
+              "right": 914.65625,
+              "bottom": 4416.25
+            },
+            "imgBox": {
+              "x": 526.328125,
+              "y": 3931.09375,
+              "w": 387.328125,
+              "h": 484.15625,
+              "right": 913.65625,
+              "bottom": 4415.25
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -15585,20 +15768,20 @@
           {
             "href": "/markets/bermuda-riviera/",
             "cardBox": {
-              "x": 525.328125,
-              "y": 3881.34375,
-              "w": 389.328125,
-              "h": 486.15625,
-              "right": 914.65625,
-              "bottom": 4367.5
+              "x": 938.65625,
+              "y": 3930.09375,
+              "w": 389.34375,
+              "h": 486.171875,
+              "right": 1328,
+              "bottom": 4416.265625
             },
             "imgBox": {
-              "x": 526.328125,
-              "y": 3882.34375,
-              "w": 387.328125,
-              "h": 484.15625,
-              "right": 913.65625,
-              "bottom": 4366.5
+              "x": 939.65625,
+              "y": 3931.09375,
+              "w": 387.34375,
+              "h": 484.171875,
+              "right": 1327,
+              "bottom": 4415.265625
             },
             "imgNaturalWidth": 1200,
             "imgVisible": true,
@@ -15714,9 +15897,9 @@
           "w": 500,
           "h": 481
         },
-        "documentWidth": 500,
-        "documentHeight": 20473,
-        "hasHorizontalOverflow": false,
+        "documentWidth": 541,
+        "documentHeight": 25360,
+        "hasHorizontalOverflow": true,
         "images": [
           {
             "src": "http://127.0.0.1:4173/logo-lpt.png",
@@ -16033,9 +16216,9 @@
           "w": 500,
           "h": 725
         },
-        "documentWidth": 500,
-        "documentHeight": 20473,
-        "hasHorizontalOverflow": false,
+        "documentWidth": 541,
+        "documentHeight": 25360,
+        "hasHorizontalOverflow": true,
         "images": [
           {
             "src": "http://127.0.0.1:4173/logo-lpt.png",
@@ -16353,7 +16536,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 14823,
+        "documentHeight": 18385,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16672,7 +16855,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 12476,
+        "documentHeight": 16257,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16975,7 +17158,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 12476,
+        "documentHeight": 16257,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19611,12 +19794,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1360,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1360 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -20169,12 +20352,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1462,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1462 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -32859,7 +33042,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10823,
+        "documentHeight": 11431,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32900,6 +33083,18 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/sea-ranch-lakes.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -33114,7 +33309,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10823,
+        "documentHeight": 11431,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33155,6 +33350,18 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/sea-ranch-lakes.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 466,
@@ -33385,7 +33592,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8682,
+        "documentHeight": 9150,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33426,6 +33633,18 @@
           },
           {
             "src": "http://127.0.0.1:4173/markets/sea-ranch-lakes.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 354,
@@ -33708,6 +33927,18 @@
             "selectorPath": "body > section > div > ul > li > a > div > img"
           },
           {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
             "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
             "naturalWidth": 1097,
             "naturalHeight": 1097,
@@ -33956,6 +34187,18 @@
             "naturalHeight": 1500,
             "renderedWidth": 387.328125,
             "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": false,
@@ -36987,6 +37230,1477 @@
         "imageHeight": 900,
         "flagged": true,
         "reason": "right-edge content reaches viewport boundary (1709 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "viewport": {
+        "name": "320x568",
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "route": "/markets/pompano-beach/",
+        "viewport": {
+          "w": 500,
+          "h": 481
+        },
+        "documentWidth": 500,
+        "documentHeight": 12959,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 500,
+            "renderedHeight": 570.6875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/lighthouse-point.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/boca-raton.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/delray-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 600,
+            "naturalHeight": 600,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 113,
+            "w": 468,
+            "h": 506.6875,
+            "right": 484,
+            "bottom": 619.6875
+          },
+          "headingBox": {
+            "x": 38,
+            "y": 182.5,
+            "w": 299.71875,
+            "h": 80.1875,
+            "right": 337.71875,
+            "bottom": 262.6875
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 38,
+            "y": 150,
+            "w": 426,
+            "h": 16.5,
+            "right": 464,
+            "bottom": 166.5
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 38,
+            "y": 278.6875,
+            "w": 426,
+            "h": 196,
+            "right": 464,
+            "bottom": 474.6875
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 38,
+            "y": 498.6875,
+            "w": 426,
+            "h": 43.5,
+            "right": 464,
+            "bottom": 542.1875
+          },
+          "primaryCtaBelowFold": true,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 38,
+            "y": 554.1875,
+            "w": 426,
+            "h": 45.5,
+            "right": 464,
+            "bottom": 599.6875
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 436,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 484,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 241,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 320,
+        "imageHeight": 568,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (241 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "viewport": {
+        "name": "375x812",
+        "width": 375,
+        "height": 812
+      },
+      "result": {
+        "route": "/markets/pompano-beach/",
+        "viewport": {
+          "w": 500,
+          "h": 725
+        },
+        "documentWidth": 500,
+        "documentHeight": 12959,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 500,
+            "renderedHeight": 570.6875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/lighthouse-point.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/boca-raton.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/delray-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 466,
+            "renderedHeight": 582.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 600,
+            "naturalHeight": 600,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 113,
+            "w": 468,
+            "h": 506.6875,
+            "right": 484,
+            "bottom": 619.6875
+          },
+          "headingBox": {
+            "x": 38,
+            "y": 182.5,
+            "w": 299.71875,
+            "h": 80.1875,
+            "right": 337.71875,
+            "bottom": 262.6875
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 38,
+            "y": 150,
+            "w": 426,
+            "h": 16.5,
+            "right": 464,
+            "bottom": 166.5
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 38,
+            "y": 278.6875,
+            "w": 426,
+            "h": 196,
+            "right": 464,
+            "bottom": 474.6875
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 38,
+            "y": 498.6875,
+            "w": 426,
+            "h": 43.5,
+            "right": 464,
+            "bottom": 542.1875
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 38,
+            "y": 554.1875,
+            "w": 426,
+            "h": 45.5,
+            "right": 464,
+            "bottom": 599.6875
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 436,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 484,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Pompano Beach",
+            "box": {
+              "x": 38,
+              "y": 498.6875,
+              "w": 426,
+              "h": 43.5,
+              "right": 464,
+              "bottom": 542.1875
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 38,
+              "y": 554.1875,
+              "w": 426,
+              "h": 45.5,
+              "right": 464,
+              "bottom": 599.6875
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 231,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 375,
+        "imageHeight": 812,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (231 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "viewport": {
+        "name": "768x1024",
+        "width": 768,
+        "height": 1024
+      },
+      "result": {
+        "route": "/markets/pompano-beach/",
+        "viewport": {
+          "w": 768,
+          "h": 937
+        },
+        "documentWidth": 768,
+        "documentHeight": 9843,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 768,
+            "renderedHeight": 587.75,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/lighthouse-point.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/boca-raton.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/delray-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 354,
+            "renderedHeight": 442.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 600,
+            "naturalHeight": 600,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 16,
+            "y": 129,
+            "w": 672,
+            "h": 491.75,
+            "right": 688,
+            "bottom": 620.75
+          },
+          "headingBox": {
+            "x": 42,
+            "y": 202,
+            "w": 576,
+            "h": 140.75,
+            "right": 618,
+            "bottom": 342.75
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 42,
+            "y": 170,
+            "w": 622,
+            "h": 16,
+            "right": 664,
+            "bottom": 186
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 42,
+            "y": 358.75,
+            "w": 576,
+            "h": 168,
+            "right": 618,
+            "bottom": 526.75
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 42,
+            "y": 551.75,
+            "w": 305.078125,
+            "h": 44,
+            "right": 347.078125,
+            "bottom": 595.75
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 363.078125,
+            "y": 550.75,
+            "w": 156.859375,
+            "h": 46,
+            "right": 519.9375,
+            "bottom": 596.75
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > header > div > button",
+            "text": "",
+            "box": {
+              "x": 704,
+              "y": 16,
+              "w": 48,
+              "h": 48,
+              "right": 752,
+              "bottom": 64
+            },
+            "bgRgba": "rgba(253,250,245,1)",
+            "fgRgba": "rgba(15,42,68,1)",
+            "contrast": 14.06,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Pompano Beach",
+            "box": {
+              "x": 42,
+              "y": 551.75,
+              "w": 305.078125,
+              "h": 44,
+              "right": 347.078125,
+              "bottom": 595.75
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 363.078125,
+              "y": 550.75,
+              "w": 156.859375,
+              "h": 46,
+              "right": 519.9375,
+              "bottom": 596.75
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1275,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 768,
+        "imageHeight": 1024,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1275 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "viewport": {
+        "name": "1280x800",
+        "width": 1280,
+        "height": 800
+      },
+      "result": {
+        "route": "/markets/pompano-beach/",
+        "viewport": {
+          "w": 1280,
+          "h": 713
+        },
+        "documentWidth": 1280,
+        "documentHeight": 7696,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 1280,
+            "renderedHeight": 594.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/lighthouse-point.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/boca-raton.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/delray-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 600,
+            "naturalHeight": 600,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 32,
+            "y": 125,
+            "w": 672,
+            "h": 498.5,
+            "right": 704,
+            "bottom": 623.5
+          },
+          "headingBox": {
+            "x": 66,
+            "y": 206,
+            "w": 576,
+            "h": 155.5,
+            "right": 642,
+            "bottom": 361.5
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 66,
+            "y": 174,
+            "w": 606,
+            "h": 16,
+            "right": 672,
+            "bottom": 190
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 66,
+            "y": 377.5,
+            "w": 576,
+            "h": 144,
+            "right": 642,
+            "bottom": 521.5
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 66,
+            "y": 546.5,
+            "w": 313.078125,
+            "h": 44,
+            "right": 379.078125,
+            "bottom": 590.5
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 395.078125,
+            "y": 545.5,
+            "w": 164.859375,
+            "h": 46,
+            "right": 559.9375,
+            "bottom": 591.5
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Pompano Beach",
+            "box": {
+              "x": 66,
+              "y": 546.5,
+              "w": 313.078125,
+              "h": 44,
+              "right": 379.078125,
+              "bottom": 590.5
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 395.078125,
+              "y": 545.5,
+              "w": 164.859375,
+              "h": 46,
+              "right": 559.9375,
+              "bottom": 591.5
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1303,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 1280,
+        "imageHeight": 800,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1303 non-bg px in rightmost 4 cols, upper 70%)"
+      },
+      "errors": []
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "viewport": {
+        "name": "1440x900",
+        "width": 1440,
+        "height": 900
+      },
+      "result": {
+        "route": "/markets/pompano-beach/",
+        "viewport": {
+          "w": 1440,
+          "h": 813
+        },
+        "documentWidth": 1440,
+        "documentHeight": 7696,
+        "hasHorizontalOverflow": false,
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/logo-lpt.png",
+            "naturalWidth": 200,
+            "naturalHeight": 200,
+            "renderedWidth": 44,
+            "renderedHeight": 44,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > header > div > a > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/pompano-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 1440,
+            "renderedHeight": 594.5,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": true,
+            "loadingLazy": false,
+            "selectorPath": "body > main#main > section[data-component=hero] > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/lighthouse-point.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/hillsboro-mile.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.34375,
+            "renderedHeight": 484.171875,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/boca-raton.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/markets/delray-beach.jpg",
+            "naturalWidth": 1200,
+            "naturalHeight": 1500,
+            "renderedWidth": 387.328125,
+            "renderedHeight": 484.15625,
+            "opacity": 1,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > section > div > ul > li > a > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/lpt-realty.png",
+            "naturalWidth": 1097,
+            "naturalHeight": 1097,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/realtor-r.png",
+            "naturalWidth": 600,
+            "naturalHeight": 600,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          },
+          {
+            "src": "http://127.0.0.1:4173/logos/equal-housing.png",
+            "naturalWidth": 1000,
+            "naturalHeight": 1000,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "opacity": 0.9,
+            "visibility": "visible",
+            "inViewport": false,
+            "loadingLazy": true,
+            "selectorPath": "body > footer > div > div > div > img"
+          }
+        ],
+        "hero": {
+          "panelBox": {
+            "x": 112,
+            "y": 125,
+            "w": 672,
+            "h": 498.5,
+            "right": 784,
+            "bottom": 623.5
+          },
+          "headingBox": {
+            "x": 146,
+            "y": 206,
+            "w": 576,
+            "h": 155.5,
+            "right": 722,
+            "bottom": 361.5
+          },
+          "headingClipsRight": false,
+          "eyebrowBox": {
+            "x": 146,
+            "y": 174,
+            "w": 606,
+            "h": 16,
+            "right": 752,
+            "bottom": 190
+          },
+          "eyebrowClipsRight": false,
+          "subBox": {
+            "x": 146,
+            "y": 377.5,
+            "w": 576,
+            "h": 144,
+            "right": 722,
+            "bottom": 521.5
+          },
+          "subClipsRight": false,
+          "primaryCtaBox": {
+            "x": 146,
+            "y": 546.5,
+            "w": 313.078125,
+            "h": 44,
+            "right": 459.078125,
+            "bottom": 590.5
+          },
+          "primaryCtaBelowFold": false,
+          "primaryCtaTailClips": false,
+          "secondaryCtaBox": {
+            "x": 475.078125,
+            "y": 545.5,
+            "w": 164.859375,
+            "h": 46,
+            "right": 639.9375,
+            "bottom": 591.5
+          },
+          "secondaryCtaTailClips": false
+        },
+        "marketCards": [],
+        "ctas": [
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Inquire About Pompano Beach",
+            "box": {
+              "x": 146,
+              "y": 546.5,
+              "w": 313.078125,
+              "h": 44,
+              "right": 459.078125,
+              "bottom": 590.5
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "text": "Other Markets",
+            "box": {
+              "x": 475.078125,
+              "y": 545.5,
+              "w": 164.859375,
+              "h": 46,
+              "right": 639.9375,
+              "bottom": 591.5
+            },
+            "bgRgba": "rgba(10,29,48,1)",
+            "fgRgba": "rgba(253,250,245,1)",
+            "contrast": 16.38,
+            "tailClips": false
+          }
+        ],
+        "staleStrings": [
+          {
+            "needle": "Klein Morgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "kleinmorgan",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "Family Homes Where Memories Are Made",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "mia@miasanabriarealtor.com",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Mia Confirm]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Legal Brokerage Name]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "[Privacy Email]",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "sunandbreeze",
+            "found": false,
+            "context": ""
+          },
+          {
+            "needle": "accessibility@agent3000.com",
+            "found": false,
+            "context": ""
+          }
+        ],
+        "emails": [
+          "msanabriarea@gmail.com"
+        ],
+        "errors": []
+      },
+      "edge": {
+        "rightEdgeContentPx": 1304,
+        "bottomEdgeContentPx": 0,
+        "imageWidth": 1440,
+        "imageHeight": 900,
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1304 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     }

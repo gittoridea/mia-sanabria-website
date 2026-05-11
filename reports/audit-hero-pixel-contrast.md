@@ -1,13 +1,13 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-11T00:37:46.538Z
+**Generated:** 2026-05-11T01:13:11.826Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
 **Samples per row:** 3
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
 
-**Summary:** 105 PASS · 0 WARN · 0 FAIL · 0 SKIP
+**Summary:** 110 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 | Route | Viewport | Glyph contrast | Edge contrast | Stability | Glyph samples | Edge samples | Status | Note |
 |---|---|---:|---:|---:|---:|---:|:-:|---|
@@ -23,7 +23,7 @@
 | `/about/` | 1440x900 | 15.63 | 10.12 | 15.63 (15.63..15.63) | 1500 | 800 | ✅ PASS |  |
 | `/markets/` | 320x568 | 15.58 | 9.14 | 15.58 (15.58..15.58) | 693 | 800 | ✅ PASS |  |
 | `/markets/` | 375x812 | 15.58 | 9.14 | 15.58 (15.58..15.58) | 694 | 800 | ✅ PASS |  |
-| `/markets/` | 768x1024 | 15.85 | 9.90 | 15.85 (15.85..15.85) | 1500 | 800 | ✅ PASS |  |
+| `/markets/` | 768x1024 | 15.85 | 9.90 | 15.85 (3.38..15.85) | 1500 | 800 | ✅ PASS |  |
 | `/markets/` | 1280x800 | 15.86 | 9.95 | 15.86 (15.86..15.86) | 1500 | 800 | ✅ PASS |  |
 | `/markets/` | 1440x900 | 15.92 | 9.96 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
 | `/buyers/` | 320x568 | 15.33 | 9.01 | 15.33 (15.33..15.33) | 743 | 800 | ✅ PASS |  |
@@ -76,6 +76,11 @@
 | `/markets/victoria-park/` | 768x1024 | 15.57 | 10.12 | 15.57 (15.57..15.57) | 1500 | 800 | ✅ PASS |  |
 | `/markets/victoria-park/` | 1280x800 | 15.74 | 10.17 | 15.74 (15.74..15.74) | 1500 | 800 | ✅ PASS |  |
 | `/markets/victoria-park/` | 1440x900 | 15.79 | 10.22 | 15.79 (15.79..15.79) | 1500 | 800 | ✅ PASS |  |
+| `/markets/pompano-beach/` | 320x568 | 15.34 | 8.84 | 15.34 (15.34..15.34) | 1424 | 800 | ✅ PASS |  |
+| `/markets/pompano-beach/` | 375x812 | 15.34 | 8.84 | 15.34 (15.34..15.34) | 1429 | 800 | ✅ PASS |  |
+| `/markets/pompano-beach/` | 768x1024 | 15.70 | 10.26 | 15.70 (15.70..15.70) | 1500 | 800 | ✅ PASS |  |
+| `/markets/pompano-beach/` | 1280x800 | 15.85 | 10.17 | 15.85 (15.85..15.85) | 1500 | 800 | ✅ PASS |  |
+| `/markets/pompano-beach/` | 1440x900 | 15.82 | 10.12 | 15.82 (2.94..15.82) | 1500 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 320x568 | 15.57 | 9.00 | 15.57 (15.57..15.57) | 959 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 375x812 | 15.57 | 9.00 | 15.57 (15.57..15.57) | 959 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 768x1024 | 15.80 | 9.67 | 15.80 (15.80..15.80) | 1500 | 800 | ✅ PASS |  |
@@ -109,8 +114,8 @@
 | `/markets/delray-beach/` | 320x568 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 375x812 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 768x1024 | 15.71 | 9.03 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |
-| `/markets/delray-beach/` | 1280x800 | 15.93 | 9.66 | 15.93 (5.70..15.93) | 1500 | 800 | ✅ PASS |  |
-| `/markets/delray-beach/` | 1440x900 | 15.97 | 9.70 | 15.97 (5.24..15.97) | 1500 | 800 | ✅ PASS |  |
+| `/markets/delray-beach/` | 1280x800 | 15.93 | 9.66 | 15.93 (15.93..15.93) | 1500 | 800 | ✅ PASS |  |
+| `/markets/delray-beach/` | 1440x900 | 15.97 | 9.70 | 15.97 (15.97..15.97) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 320x568 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 836 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 375x812 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 860 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 768x1024 | 15.92 | 9.85 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
@@ -121,8 +126,8 @@
 
 | Route | Viewport | Min | Median | Max | Spread |
 |---|---|---:|---:|---:|---:|
-| `/markets/delray-beach/` | 1280x800 | 5.70 | 15.93 | 15.93 | 10.23 |
-| `/markets/delray-beach/` | 1440x900 | 5.24 | 15.97 | 15.97 | 10.73 |
+| `/markets/` | 768x1024 | 3.38 | 15.85 | 15.85 | 12.47 |
+| `/markets/pompano-beach/` | 1440x900 | 2.94 | 15.82 | 15.82 | 12.88 |
 
 ## Mutation note
 

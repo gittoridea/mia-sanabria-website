@@ -1104,7 +1104,7 @@ export const MARKETS: ReadonlyArray<Market> = [
     tagline:
       "A northern Broward beach city with deepwater boating, redeveloped pier district, and offshore reef.",
     intro:
-      "Pompano Beach is a northeastern Broward city of about 25 square miles between Lauderdale-by-the-Sea (south on the barrier island) and Hillsboro Beach (north). The market combines a roughly three-mile public beachfront, the redeveloped Fisher Family Pier and Pompano Beach Fishing Village, deepwater Intracoastal residences, and one of the most active offshore reef-dive corridors in South Florida — at relative value compared with the Fort Lauderdale and Boca Raton markets that flank it.",
+      "Pompano Beach is a northeastern Broward city framed by Lauderdale-by-the-Sea to the south and Hillsboro Beach to the north. The market pairs a public beachfront and the redeveloped Fisher Family Pier with deepwater Intracoastal residences and an active offshore reef-dive corridor — at relative value to Fort Lauderdale and Boca Raton.",
     highlights: [
       "Northeastern Broward city of approximately 25 square miles",
       "Roughly three-mile public beachfront from A1A near Terra Mar Drive to the Hillsboro Inlet",
