@@ -491,7 +491,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
           <div>
             <SectionHeading
               eyebrow="Market identity"
-              heading="Why Fort Lauderdale matters in luxury and waterfront real estate."
+              heading="Why Fort Lauderdale matters."
             />
             <div className="mt-6 space-y-5 text-[17px] leading-relaxed text-navy-800/85">
               <p>
@@ -501,7 +501,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
                 {market.localContext}
               </p>
               <p>
-                For luxury and waterfront buyers comparing Eastern Fort Lauderdale to its Palm Beach County peers, the distinction is structural. Boca Raton and Palm Beach trade on architectural pedigree and country-club residential geography; Delray Beach trades on Atlantic Avenue's walkable downtown. Fort Lauderdale trades on the combination — a working city alongside private dockage, a beach corridor, and established residential neighborhoods that have evolved across architectural eras from the 1920s onward.
+                For buyers comparing Eastern Fort Lauderdale to its Palm Beach County peers, the distinction is structural. Boca Raton and Palm Beach trade on architectural pedigree and country-club residential geography; Delray Beach trades on Atlantic Avenue's walkable downtown. Fort Lauderdale trades on the combination — a working city alongside private dockage, a beach corridor, and established residential neighborhoods that have evolved across architectural eras from the 1920s onward.
               </p>
             </div>
           </div>
@@ -807,7 +807,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
               The same waterfront diligence reads differently from each side of the transaction.
             </h2>
             <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-cream-200/85">
-              For buyers the diligence sequence is a filter — survey first, dock and seawall next, insurance underwriting before the offer. For sellers the same sequence becomes a dataroom — the documents that compress the contingency window and shorten renegotiation. Mia coordinates the same set of licensed specialists; the deliverable changes shape depending on whether the residence is being bought or listed.
+              For buyers the diligence sequence is a filter — survey first, dock and seawall next, insurance underwriting before the offer. For sellers it becomes a dataroom — the documents that compress the contingency window and shorten renegotiation. Mia coordinates the same licensed specialists; the deliverable changes shape depending on whether the residence is being bought or listed.
             </p>
           </div>
           <aside className="rounded-sm border border-cream-200/20 bg-navy-700/40 p-6 lg:p-8">
@@ -995,7 +995,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
             Four ways to begin a Fort Lauderdale conversation.
           </h2>
           <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-cream-200/85">
-            Each path opens a different conversation — sized to where you are in the decision. None of them obligates anything beyond a private, time-bound discussion.
+            Each path opens a different conversation, sized to where you are in the decision. No path obligates anything beyond a private, time-bound discussion.
           </p>
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[

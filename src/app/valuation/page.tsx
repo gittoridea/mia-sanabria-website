@@ -109,7 +109,7 @@ export default function ValuationPage() {
           >
             <h2 className="font-display text-2xl text-navy-800">Request Valuation</h2>
             <p className="mt-2 text-sm text-navy-800/70">
-              All conversations are confidential. Most valuations are returned within five business days.
+              All conversations are confidential. Valuations are returned after a private walk-through (or virtual equivalent) and a comparable-sales pull tuned to the residence.
             </p>
             <p className="mt-3 rounded-sm border border-brass-400/30 bg-brass-400/5 px-3 py-2 text-xs text-navy-800/80">
               This form opens your default email app to send your valuation details directly to
@@ -198,7 +198,7 @@ export default function ValuationPage() {
           },
           {
             heading: "Brokerage relationship context",
-            body: "Where available, Mia's brokerage relationships add color from recent quietly-traded residences that public data feeds miss.",
+            body: "Where available, brokerage relationships add color from recent comparable sales that public data feeds reflect with a lag — context, not a substitute for licensed appraisal.",
           },
           {
             heading: "Strategic positioning",

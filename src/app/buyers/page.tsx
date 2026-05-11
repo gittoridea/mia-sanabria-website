@@ -33,7 +33,7 @@ const BUYER_PROCESS = [
   },
   {
     heading: "Brokerage-relationship sourcing",
-    body: "Mia activates her brokerage and ownership relationships to surface relevant residences — including any informally available opportunities those relationships uncover. Access varies by market and timing.",
+    body: "Mia's brokerage and ownership relationships surface residences that match the brief, including any informally available. Availability varies by market and timing.",
   },
   {
     heading: "Curated showings",
@@ -112,7 +112,7 @@ export default function BuyersPage() {
       <Hero
         eyebrow="For Buyers"
         heading="Private buyer representation across Southeast Florida."
-        sub="Mia represents buyers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach — every brief written before the first showing, every closing attended in person."
+        sub="Mia represents buyers across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Every brief is written before the first showing; every closing is attended in person."
         ctaPrimary={{ href: "/contact/?intent=buyer", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/markets/", label: "Walk the Markets" }}
         background="image"
@@ -122,7 +122,7 @@ export default function BuyersPage() {
 
       <AnswerFirst
         question="How should buyers approach luxury and waterfront homes in Eastern Fort Lauderdale?"
-        answer="A successful luxury or waterfront acquisition in Eastern Fort Lauderdale begins with a precise brief, not a public IDX scroll. Decisions turn on dock specifics — length, water depth, fixed-bridge clearance, and the route to the inlet — plus architectural era, lot orientation, hurricane shutters, flood elevation, and HOA or country-club access. Curated showings (three to five carefully matched residences, not thirty) outperform large-list tours every time. Mia activates her brokerage and ownership relationships across Las Olas Isles, Harbor Beach, Rio Vista, and the in-town clusters to surface relevant residences — including informally available opportunities those relationships uncover. Title, financing, and inspection partners stay matched to the residence's price tier."
+        answer="A serious Eastern Fort Lauderdale acquisition begins with a written brief, not a public IDX scroll. Decisions turn on the verifiable variables — dock length, water depth, fixed-bridge clearance, route to the inlet, architectural era, lot orientation, hurricane shutters, flood elevation, and HOA or country-club access. Three to five carefully matched showings outperform thirty mismatches. Mia's brokerage and ownership relationships across Las Olas Isles, Harbor Beach, Rio Vista, and the in-town clusters surface relevant residences, including any informally available. Title, financing, and inspection partners are matched to the residence's price tier."
         relatedMarkets={["las-olas-isles", "harbor-beach", "rio-vista"]}
         cta={{ href: "/contact/?intent=buyer", label: "Begin a buyer brief" }}
       />

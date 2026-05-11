@@ -49,7 +49,7 @@ const SELLER_FAQ = [
   {
     question: "Should I list publicly or pursue a private sale?",
     answer:
-      "Both have a place. Public listing maximizes exposure and tends to produce the strongest pricing in active markets; a privately marketed sale preserves privacy and often appeals to owners who value discretion above marginal price. Strategy is set together based on the residence and the market.",
+      "Both have a place. A public MLS listing maximizes exposure and tends to produce the strongest pricing in active markets. A privately marketed sale preserves privacy and often appeals to owners who value discretion above marginal price. The right path is decided in writing, with the seller's reasoning recorded, so the strategy stays coherent if conditions change mid-listing.",
   },
   {
     question: "What is the typical commission structure?",
@@ -59,7 +59,7 @@ const SELLER_FAQ = [
   {
     question: "How long does a higher-priced sale take?",
     answer:
-      "Highly market-dependent. Well-positioned waterfront and country-club residences often move within 60-120 days; properties in tightly defined estate sections can take longer by design. Your timeline shapes the strategy.",
+      "Market-dependent. Well-positioned waterfront and country-club residences often move within 60-120 days; properties in tightly defined estate sections can take longer by design. The seller's timeline shapes the strategy.",
   },
   {
     question: "What does the marketing scope include?",
@@ -111,8 +111,8 @@ export default function SellersPage() {
 
       <Hero
         eyebrow="For Sellers"
-        heading="Elevating your property's global presence."
-        sub="Pricing, presentation, and considered introductions — sequenced by Mia personally for residences across Mia's core Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach markets."
+        heading="Selling a luxury or waterfront residence in Southeast Florida."
+        sub="Pricing, presentation, and discreet introductions — sequenced by Mia personally across Eastern Fort Lauderdale, Boca Raton, and Delray Beach."
         ctaPrimary={{ href: "/contact/?intent=seller", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/valuation/", label: "Request Valuation" }}
         background="image"
@@ -122,7 +122,7 @@ export default function SellersPage() {
 
       <AnswerFirst
         question="How should sellers position a luxury or waterfront home in Eastern Fort Lauderdale?"
-        answer="A luxury or waterfront residence is positioned for the buyer who is already searching for it — not a generic public listing. The work begins with disciplined pricing built from current comparable sales on the same street, building, or block — never broad public ranges. Editorial photography, twilight imagery, drone, video, and copywriting present the residence as an architectural object. For dock-capable estates, dock specifications, water depth, and route to the inlet are documented as marketable infrastructure. Distribution layers private brokerage introductions on top of MLS exposure so qualified, prepared buyers see the residence first. Showings are coordinated to protect the household's privacy and the residence's condition."
+        answer="Position the residence for the buyer who is already searching for it. Pricing comes from current comparable sales on the same street, building, or block — not broad public ranges. Photography, twilight imagery, video, and copywriting present the residence as an architectural object. For dock-capable estates, dock specifications, water depth, and route to the inlet are documented as marketable infrastructure. Distribution layers brokerage introductions on top of MLS exposure so prepared buyers see the residence first. Showings are coordinated to protect the household's privacy and the residence's condition."
         relatedMarkets={["fort-lauderdale", "boca-raton", "delray-beach"]}
         cta={{ href: "/valuation/", label: "Request a valuation" }}
       />
@@ -154,7 +154,7 @@ export default function SellersPage() {
         items={[
           {
             heading: "Editorial-tier presentation",
-            body: "Cinematic photography, twilight imagery, video, drone, and copywriting that present the residence as the architectural object it is.",
+            body: "Photography, twilight imagery, video, and copywriting that present the residence as the architectural object it is.",
           },
           {
             heading: "Brokerage relationships",
@@ -162,11 +162,11 @@ export default function SellersPage() {
           },
           {
             heading: "Strategic pricing",
-            body: "Data-driven micro-market analysis combined with global luxury context to optimize price and velocity.",
+            body: "Micro-market analysis grounded in current comparable sales — pricing tuned to the buyer pool the residence actually competes for.",
           },
           {
             heading: "Closing precision",
-            body: "Title, escrow, financing, and tax-structuring partners aligned with the discretion and complexity higher-priced transactions demand.",
+            body: "Title, escrow, financing, and tax partners experienced with the complexity these transactions require.",
           },
         ]}
       />

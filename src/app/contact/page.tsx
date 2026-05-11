@@ -29,7 +29,7 @@ const CONTACT_FAQ = [
   {
     question: "How does Mia handle a private inquiry?",
     answer:
-      "Inquiries received during business hours are reviewed and replied to during the same business day; after-hours messages are returned the following morning. For urgent matters, call (954) 540-0358 directly.",
+      "Inquiries are reviewed in order of priority and returned personally. For time-sensitive matters, call (954) 540-0358 directly.",
   },
   {
     question: "Is the initial consultation confidential?",
@@ -95,13 +95,13 @@ export default function ContactPage() {
                 Icon={MapPin}
                 heading="Service Area"
                 value={`${MIA.contact.serviceCore.city}, ${MIA.contact.serviceCore.region} ${MIA.contact.serviceCore.postalCode}`}
-                hint="Representing Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach"
+                hint="Eastern Fort Lauderdale, Boca Raton, and Delray Beach"
               />
               <ContactRow
                 Icon={Clock}
-                heading="Response Window"
-                value="Same business day"
-                hint="After-hours inquiries returned the following morning"
+                heading="Response"
+                value="By appointment"
+                hint="Inquiries are reviewed in order of priority and returned personally"
               />
             </ul>
           </div>

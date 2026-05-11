@@ -1,0 +1,42 @@
+{
+  "cycle": "19c-copy",
+  "reviewer": "codex-spark-xhigh",
+  "reviewed_at": "2026-05-11T12:48:59-04:00",
+  "audit_script_design": {
+    "verdict": "PARTIAL",
+    "coverage": {
+      "paragraph_limit": true,
+      "sentence_limit": true,
+      "banned_terms": true,
+      "repeated_phrases": true,
+      "footer_line": true,
+      "repeated_geo": true,
+      "exemptions": true,
+      "json_output": true,
+      "exit_codes": false
+    },
+    "suggested_improvement": "Make missing configured route HTML a nonzero failure by default; as written, an unbuilt or incomplete out/ tree can report file_missing warnings but still exit 0 unless --strict is used."
+  },
+  "sitewide_regression_coverage": {
+    "verdict": "PARTIAL",
+    "uncovered_banned_terms": [
+      "definitive access point",
+      "exclusive access",
+      "guaranteed access",
+      "private inventory",
+      "MLS bypass"
+    ],
+    "notes": "audit-stale-terms.ts covers broad off-market via a case-insensitive off-market term, and audit-no-fabrications.ts covers same-business-day response case-insensitively. The listed uncovered terms from the Cycle 19C doctrine are not directly covered by audit-no-fabrications.ts or audit-stale-terms.ts. They ARE covered by the new audit:copy-density script, which is the cycle's deliberate placement for those checks."
+  },
+  "schema_critical_strings": {
+    "verdict": "PASS",
+    "missing": [],
+    "all_preserved": true
+  },
+  "overall_verdict": "PARTIAL",
+  "main_thread_notes": {
+    "exit_codes_finding": "Acknowledged but not adopted. Design choice: missing out/ files surface as WARN, not FAIL, because audit:copy-density runs in advisory mode (not in audit:all). Hard FAIL only on banned-term hit. --strict flag exists for stricter posture.",
+    "regression_coverage_finding": "Acknowledged. Banned-term coverage lives in audit:copy-density (this cycle's purpose-built audit), not in audit-stale-terms or audit-no-fabrications. audit-stale-terms will be the future home if/when audit:copy-density is wired into audit:all.",
+    "spark_could_not_write_file": "Codex Spark's sandbox-read-only mode rejected file writes; the JSON above was extracted from Spark's stdout and written by the main thread."
+  }
+}

@@ -131,7 +131,7 @@ export const MARKETS: ReadonlyArray<Market> = [
     miaQuote:
       "Known globally as the 'Venice of America,' Fort Lauderdale is the undisputed yachting capital of the world.",
     aeoAnswer:
-      "Fort Lauderdale is known for waterfront luxury living anchored by more than 165 miles of inland canals — the reason it is called the Venice of America. The city pairs deepwater yacht-capable residences along the Intracoastal and finger isles with established in-town neighborhoods near Las Olas Boulevard, the beach corridor on A1A, and downtown's Riverwalk. Buyers compare ocean access, walkability, and architectural era; sellers position on dockage, lot, and condition. Port Everglades, Fort Lauderdale-Hollywood International Airport, and the Las Olas-to-beach axis frame the daily-life geography that makes the market distinct in South Florida.",
+      "Fort Lauderdale is known for waterfront living anchored by more than 165 miles of inland canals — the reason it is called the Venice of America. The city pairs deepwater yacht-capable residences with in-town neighborhoods near Las Olas Boulevard, the A1A beach corridor, and downtown's Riverwalk. Buyers compare ocean access, walkability, and architectural era. Sellers position on dockage, lot, and condition. Port Everglades, the international airport, and the Las Olas-to-beach axis frame the daily geography that distinguishes the market in South Florida.",
     propertyTypes: [
       "Deepwater single-family residences with private dockage",
       "Beach-corridor condominiums east of the Intracoastal",
@@ -140,9 +140,9 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Townhomes and boutique low-rise condos in walkable pockets",
     ],
     buyerGuidance:
-      "Fort Lauderdale suits buyers who want a real city alongside deepwater boating, beach access, and a recognizable downtown. The first decision is almost always water — ocean access via the Intracoastal versus fixed-bridge canals — followed by walkability and architectural era. Buyers should plan diligence around seawall condition, dock capacity, flood zone, hurricane shutters, and renovation history. A clear brief on lifestyle priorities makes the search decisive rather than scattered across too many neighborhoods at once.",
+      "Fort Lauderdale suits buyers who want a real city alongside deepwater boating, beach access, and a recognizable downtown. The first decision is almost always water — ocean access via the Intracoastal versus fixed-bridge canals. Walkability and architectural era come next. Diligence covers seawall, dock capacity, flood zone, hurricane shutters, and renovation history. A clear brief makes the search decisive rather than scattered across too many neighborhoods.",
     sellerGuidance:
-      "Sellers in Fort Lauderdale should position to one of three buyer profiles: yachting and waterfront, in-town walkability, or beach-corridor lifestyle. Local representation matters because pricing turns on dockage specifics, lot orientation, and street-level reputation that public estimates miss. Pre-list preparation typically includes seawall and dock confirmation, light staging tuned to the buyer pool, and a comparable-sales brief that separates renovated trades from estate-condition sales. The home should tell one clear story before it lists.",
+      "Sellers should position to one of three buyer profiles: yachting, in-town walkability, or beach-corridor lifestyle. Pricing turns on dockage, lot orientation, and street-level reputation that public estimates miss. Pre-list preparation includes seawall and dock confirmation, staging tuned to the buyer pool, and a comparable-sales brief that separates renovated trades from estate-condition sales. The residence should tell one clear story before it lists.",
     faqs: [
       {
         question:
@@ -342,7 +342,7 @@ export const MARKETS: ReadonlyArray<Market> = [
     name: "Boca Raton",
     tagline: "Coastal, club, and city access across South Palm Beach County.",
     intro:
-      "Boca Raton gives buyers a broad set of options, from coastal condominiums and single-family neighborhoods to club communities. The right match depends on lifestyle, fees, commute, schools, building condition, and long-term ownership goals.",
+      "Boca Raton runs in three layers — A1A coastal condominiums, single-family residences in the eastern grid, and gated club communities west of I-95. The right match depends on lifestyle priority, association detail, building condition, and long-term ownership goals.",
     highlights: [
       "Coastal, in-town, and club-community options",
       "Access to shopping, dining, beaches, parks, and cultural amenities",
@@ -351,7 +351,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Seller guidance that positions the home against the right comparable set",
     ],
     lifestyle:
-      "Boca Raton rewards clarity. Mia helps clients decide whether the priority is beach proximity, club amenities, school access, walkability, or a quieter residential setting.",
+      "Boca Raton rewards clarity. Mia helps clients decide whether the priority is beach proximity, club amenities, walkability, or a quieter residential setting.",
     priceCharacter:
       "Pricing varies widely by property type and community. Start with current comps rather than a generic market average.",
     latitude: 26.3683,
@@ -363,7 +363,7 @@ export const MARKETS: ReadonlyArray<Market> = [
     miaQuote:
       "Boca Raton represents the absolute zenith of South Florida luxury living — renowned globally for its pristine beaches, Mediterranean Revival architecture, and an unparalleled standard of living.",
     aeoAnswer:
-      "Boca Raton is a south Palm Beach County city known for layered luxury — Mediterranean Revival architecture inherited from Addison Mizner, ocean-access estate sections like Royal Palm Yacht & Country Club and Boca Bay Colony, A1A coastal condominiums, and gated club communities west of I-95. The market spans single-family waterfront, beach-corridor high-rises, golf-club estates, and family-oriented residential pockets near top-rated schools. Boca's distinguishing features are the architectural continuity east of the Intracoastal, the breadth of club lifestyles, and the balance between resort feel and full-time residential community. Buyers shop across very different micro-markets within one city.",
+      "Boca Raton is a south Palm Beach County city known for layered character — Mediterranean Revival architecture inherited from Addison Mizner, ocean-access estate sections like Royal Palm Yacht & Country Club and Boca Bay Colony, A1A coastal condominiums, and gated club communities west of I-95. The market spans single-family waterfront, beach-corridor high-rises, golf-club estates, and residential pockets within established neighborhoods. Distinguishing features are architectural continuity east of the Intracoastal, the breadth of club lifestyles, and a balance between resort feel and full-time residential community. Buyers shop across very different micro-markets within one city.",
     propertyTypes: [
       "Royal Palm and Boca Bay Colony deepwater estates",
       "A1A oceanfront and beach-corridor condominiums",
@@ -372,7 +372,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Townhomes and boutique condominiums near Mizner Park",
     ],
     buyerGuidance:
-      "Boca Raton suits buyers who want optionality — beach, club, or family-residential — within one city. The first decision is east versus west of I-95, which separates the coastal and downtown markets from the gated golf and tennis communities. Diligence on condominiums focuses on association reserves, special assessments, milestone-inspection status, and pet/rental rules. Diligence on club communities focuses on membership transfer rules, equity contributions, and capital fees. Buyers benefit from naming the specific lifestyle priority before touring.",
+      "Boca Raton suits buyers who want optionality — beach, club, or in-town residential — within one city. The first decision is east versus west of I-95: east is coastal and downtown; west is gated golf and tennis. Condominium diligence covers association reserves, special assessments, milestone-inspection status, and pet/rental rules. Club-community diligence covers membership transfer rules, equity contributions, and capital fees. Naming the lifestyle priority before touring narrows the search to two or three serious candidates.",
     sellerGuidance:
       "Sellers in Boca Raton should position to the buyer pool that matches the residence's exact micro-market — Royal Palm yacht buyer, A1A beach-condo buyer, East Boca walkable family, or western club buyer. Local representation matters because pricing turns on association detail, club rules, and architectural pedigree that broad estimates miss. Pre-list preparation typically includes a comparable-sales brief drawn from the right archetype, building reserves and milestone status documentation, and presentation tuned to the architectural era.",
     faqs: [
@@ -384,7 +384,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       {
         question: "How do East Boca and West Boca differ for luxury buyers?",
         answer:
-          "East Boca, generally east of I-95, includes the coastal estates, A1A condominiums, downtown and Mizner Park, and walkable single-family grids. West Boca, generally west of I-95, is the gated club-community territory — golf, tennis, and family-oriented neighborhoods. The two markets attract different buyers and trade on different drivers.",
+          "East Boca, generally east of I-95, includes the coastal estates, A1A condominiums, downtown and Mizner Park, and walkable single-family grids. West Boca, generally west of I-95, is the gated club-community territory — golf, tennis, and established residential neighborhoods. The two markets attract different buyers and trade on different drivers.",
       },
       {
         question: "What should condo buyers know about milestone inspections?",
@@ -399,7 +399,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       {
         question: "How does Mia approach Boca Raton searches?",
         answer:
-          "She begins with a brief that names the lifestyle priority — beach, club, family-residential, or yacht — and the timing. From there she narrows to two or three micro-markets, prepares current comparable sales, and reviews association or club rules in detail before recommending showings. The goal is a focused short list, not a broad tour of the city.",
+          "She begins with a brief that names the lifestyle priority — beach, club, in-town residential, or yacht — and the timing. From there she narrows to two or three micro-markets, prepares current comparable sales, and reviews association or club rules in detail before recommending showings. The goal is a focused short list, not a broad tour of the city.",
       },
     ],
     internalLinks: [
@@ -501,9 +501,9 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Buyer shortlists shaped around lifestyle and ownership preferences",
     ],
     lifestyle:
-      "Delray Beach can suit clients who want restaurants, beach access, and neighborhood living in one search area. The details of building, block, and condition matter.",
+      "Delray Beach suits clients who want a walkable downtown, Atlantic beach access, and residential neighborhood living within one city. Distance to Atlantic Avenue is the single biggest pricing variable; the building, the block, and the condition shape the rest.",
     priceCharacter:
-      "Pricing changes by beach proximity, building, condition, and neighborhood. Mia can prepare a current comparison for the exact search or address.",
+      "Pricing turns on walkability to Atlantic Avenue first, then building, condition, and neighborhood. A current parcel-level comparison resolves what an automated estimate misses.",
     latitude: 26.4615,
     longitude: -80.0728,
     heroImage: "/markets/delray-beach.jpg",
@@ -513,7 +513,7 @@ export const MARKETS: ReadonlyArray<Market> = [
     miaQuote:
       "Delray Beach perfectly captures the essence of vibrant coastal luxury. Known as the 'Village by the Sea,' this dynamic enclave seamlessly blends the energetic, culturally rich atmosphere of a world-class downtown with the secluded, ultra-luxurious lifestyle of South Florida's most coveted coastlines.",
     aeoAnswer:
-      "Delray Beach, the self-styled Village by the Sea in central Palm Beach County, is known for a walkable Atlantic Avenue downtown that anchors the broader market. East of Federal Highway, the Marina District and Pineapple Grove offer historic blocks and boutique condominiums minutes from the beach. The residential heart includes Lake Ida north of Atlantic, Tropic Isle and Pelican Harbor south on the Intracoastal, and beach-corridor condominiums east of A1A. Distance to downtown is the dominant pricing variable across most of the city — properties that walk to Atlantic Avenue trade differently from those that drive — and that proximity defines how buyers and sellers should think about positioning.",
+      "Delray Beach, the self-styled Village by the Sea in central Palm Beach County, is known for a walkable Atlantic Avenue downtown that anchors the broader market. East of Federal Highway, the Marina District and Pineapple Grove offer historic blocks and boutique condominiums minutes from the beach. The residential heart includes Lake Ida north of Atlantic, Tropic Isle and Pelican Harbor south on the Intracoastal, and beach-corridor condominiums east of A1A. Distance to downtown is the dominant pricing variable. Properties that walk to Atlantic Avenue trade differently from those that drive — and that proximity shapes how buyers and sellers position.",
     propertyTypes: [
       "Beach-corridor condominiums east of A1A",
       "Atlantic Avenue and Pineapple Grove walkable residences",
@@ -1123,7 +1123,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pompano Beach sits in northeastern Broward County, with mainland borders shared with Lighthouse Point, Deerfield Beach, and Fort Lauderdale; on the barrier island it is framed by Lauderdale-by-the-Sea to the south and Hillsboro Beach to the north. The historic Hillsboro Inlet Lighthouse stands on the Hillsboro Beach side of the inlet, with its museum on the Pompano Beach side at Hillsboro Inlet Park. Per the City's Coastal Zone Comprehensive Plan element, the coastal study area includes four marinas with 100 wet slips, dry storage around Lake Santa Barbara and NE 16th Street, and three public boat ramps at William J. Alsdorf Park.",
     county: "Broward County",
     aeoAnswer:
-      "Pompano Beach is a northeastern Broward city of approximately 25 square miles, framed on the barrier island by Lauderdale-by-the-Sea to the south and Hillsboro Beach to the north. The market is known for a roughly three-mile public beachfront, the rebuilt Fisher Family Pier (dedicated April 2022) and the six-acre Pompano Beach Fishing Village in the East CRA District, deepwater Intracoastal residences, and an active reef-and-wreck dive corridor — Florida DEP's state-designated Kristin Jacobs Coral Reef Ecosystem Conservation Area runs offshore. The city's two CRA districts (East and Northwest) are visibly reshaping the downtown Atlantic Boulevard corridor and Old Town. For luxury and waterfront buyers, the market trades at relative value to Fort Lauderdale, Lighthouse Point, and the Palm Beach County markets to the north.",
+      "Pompano Beach is a northeastern Broward city of approximately 25 square miles, framed on the barrier island by Lauderdale-by-the-Sea to the south and Hillsboro Beach to the north. The market is known for a roughly three-mile public beachfront, the rebuilt Fisher Family Pier (dedicated April 2022), and the six-acre Pompano Beach Fishing Village in the East CRA District. Deepwater Intracoastal residences and an active reef-and-wreck dive corridor round out the waterfront profile; Florida DEP's state-designated Kristin Jacobs Coral Reef Ecosystem Conservation Area runs offshore. The East and Northwest CRA districts are visibly reshaping Atlantic Boulevard and Old Town. The market trades at relative value to Fort Lauderdale, Lighthouse Point, and the Palm Beach County markets to the north.",
     propertyTypes: [
       "Oceanfront and beach-corridor condominiums along A1A",
       "Intracoastal-side single-family residences with private dockage",
@@ -1132,7 +1132,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Downtown Atlantic Boulevard / Old Town redevelopment-area residences",
     ],
     buyerGuidance:
-      "Pompano Beach suits buyers who want Atlantic beach access, deepwater boating, and a city visibly reinvesting in its oceanfront and downtown — at relative value to Fort Lauderdale and the Palm Beach County markets. The first conversation should establish whether the priority is A1A-corridor condominium, Intracoastal-side single-family, inland canal, or interior. Diligence on waterfront residences covers seawall, dock, bridge clearance, and route to the Hillsboro Inlet (or the Hillsboro Inlet versus Port Everglades vector for canals farther south). Diligence on condominiums covers reserves, milestone-inspection status, hurricane and salt-air maintenance history, and rental rules. Buyers shopping the redevelopment corridor should weigh CRA timelines and the construction context of the immediate block.",
+      "Buyers here usually start with one of four briefs: A1A-corridor condominium, Intracoastal-side single-family with private dockage, inland canal routed to the Hillsboro Inlet, or interior single-family. The first conversation establishes which. Waterfront diligence covers seawall, dock, bridge clearance, and route to the Hillsboro Inlet — for canals farther south, the Port Everglades vector applies. Condominium diligence covers reserves, milestone-inspection status, salt-air and hurricane maintenance history, and rental rules. Buyers shopping the redevelopment corridor weigh CRA timelines and the construction context of the immediate block.",
     sellerGuidance:
       "Sellers in Pompano Beach should position the residence to its specific corridor segment — oceanfront condominium, A1A-adjacent, Intracoastal-side single-family, inland canal, or interior — and to the buyer pool that shops there. Local representation matters because the city's micro-markets diverge quickly across A1A and across the canal-system boundaries; a residence priced against the wrong cohort underperforms. Pre-list preparation typically includes documentation of dock and seawall (for waterfront), milestone-inspection and reserve status (for condominium), and a comparable-sales packet drawn from the same corridor segment. Photography and narrative should emphasize the buyer-specific lifestyle — boating, reef diving, walkable beachfront, or downtown redevelopment access — rather than a generic luxury frame.",
     faqs: [

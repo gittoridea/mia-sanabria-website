@@ -70,7 +70,7 @@ export default function AboutPage() {
 
       <AnswerFirst
         question="How does Mia Sanabria represent luxury and waterfront clients?"
-        answer="Mia represents buyers and sellers across Southeast Florida's luxury and waterfront markets — concentrated in Eastern Fort Lauderdale's deepwater isles and in-town neighborhoods, plus adjacent Boca Raton and Delray Beach. Engagements start with a private brief — timeline, architectural preference, dock or beach access, lifestyle — long before the first showing. Listings are positioned with editorial photography and disciplined pricing built from current comparables on the specific street, building, or block. Every transaction is scaffolded by experienced title, escrow, financing, and inspection partners, and Mia stays present from first conversation through closing."
+        answer="Mia represents buyers and sellers across the waterfront and luxury corridors of Southeast Florida — concentrated in Eastern Fort Lauderdale's deepwater finger isles and in-town neighborhoods, with adjacent practice in Boca Raton and Delray Beach. Engagements start with a private brief: timeline, architectural preference, dock or beach access, lifestyle. Listings are positioned with editorial photography and pricing built from current comparables on the specific street, building, or block. Every transaction is scaffolded by experienced title, escrow, financing, and inspection partners — and Mia is present from first conversation through closing."
         relatedMarkets={["las-olas-isles", "harbor-beach", "boca-raton"]}
         cta={{ href: "/contact/", label: "Begin a private conversation" }}
         background="cream-tint"

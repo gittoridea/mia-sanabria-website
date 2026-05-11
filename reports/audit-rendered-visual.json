@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-11T12:50:43.131Z",
+  "generated": "2026-05-11T16:58:00.010Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -553,7 +553,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 15098,
+        "documentHeight": 15023,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -861,12 +861,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 200,
+        "rightEdgeContentPx": 231,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (200 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (231 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -884,7 +884,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 15098,
+        "documentHeight": 15023,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1215,7 +1215,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 11298,
+        "documentHeight": 11248,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1546,7 +1546,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 8788,
+        "documentHeight": 8714,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1861,7 +1861,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 8788,
+        "documentHeight": 8714,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2176,7 +2176,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6829,
+        "documentHeight": 6806,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2389,7 +2389,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6829,
+        "documentHeight": 6806,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2602,7 +2602,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6391,
+        "documentHeight": 6369,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2815,7 +2815,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4436,
+        "documentHeight": 4358,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3011,7 +3011,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4436,
+        "documentHeight": 4358,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3207,7 +3207,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7124,
+        "documentHeight": 7021,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3431,12 +3431,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 156,
+        "rightEdgeContentPx": 196,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (156 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (196 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -3454,7 +3454,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7124,
+        "documentHeight": 7021,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3701,7 +3701,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6203,
+        "documentHeight": 6100,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -3948,7 +3948,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4674,
+        "documentHeight": 4544,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4179,7 +4179,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4674,
+        "documentHeight": 4544,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4410,7 +4410,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7311,
+        "documentHeight": 7201,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4430,7 +4430,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 447.28125,
+            "renderedHeight": 440,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -4477,56 +4477,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 113,
+            "y": 123.359375,
             "w": 468,
-            "h": 383.28125,
+            "h": 355.28125,
             "right": 484,
-            "bottom": 496.28125
+            "bottom": 478.640625
           },
           "headingBox": {
             "x": 38,
-            "y": 183.1875,
+            "y": 193.546875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 223.28125
+            "bottom": 233.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 150,
+            "y": 160.359375,
             "w": 426,
             "h": 17.1875,
             "right": 464,
-            "bottom": 167.1875
+            "bottom": 177.546875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 239.28125,
+            "y": 249.640625,
             "w": 426,
-            "h": 112,
+            "h": 84,
             "right": 464,
-            "bottom": 351.28125
+            "bottom": 333.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 375.28125,
+            "y": 357.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 418.78125
+            "bottom": 401.140625
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 430.78125,
+            "y": 413.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 476.28125
+            "bottom": 458.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -4553,11 +4553,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 375.28125,
+              "y": 357.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 418.78125
+              "bottom": 401.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -4569,11 +4569,11 @@
             "text": "Request Valuation",
             "box": {
               "x": 38,
-              "y": 430.78125,
+              "y": 413.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 476.28125
+              "bottom": 458.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -4634,12 +4634,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 143,
+        "rightEdgeContentPx": 219,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (143 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (219 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -4657,7 +4657,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7311,
+        "documentHeight": 7201,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4677,7 +4677,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 447.28125,
+            "renderedHeight": 440,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -4724,56 +4724,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 113,
+            "y": 123.359375,
             "w": 468,
-            "h": 383.28125,
+            "h": 355.28125,
             "right": 484,
-            "bottom": 496.28125
+            "bottom": 478.640625
           },
           "headingBox": {
             "x": 38,
-            "y": 183.1875,
+            "y": 193.546875,
             "w": 299.71875,
             "h": 40.09375,
             "right": 337.71875,
-            "bottom": 223.28125
+            "bottom": 233.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 150,
+            "y": 160.359375,
             "w": 426,
             "h": 17.1875,
             "right": 464,
-            "bottom": 167.1875
+            "bottom": 177.546875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 239.28125,
+            "y": 249.640625,
             "w": 426,
-            "h": 112,
+            "h": 84,
             "right": 464,
-            "bottom": 351.28125
+            "bottom": 333.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 375.28125,
+            "y": 357.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 418.78125
+            "bottom": 401.140625
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 430.78125,
+            "y": 413.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 476.28125
+            "bottom": 458.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -4800,11 +4800,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 375.28125,
+              "y": 357.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 418.78125
+              "bottom": 401.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -4816,11 +4816,11 @@
             "text": "Request Valuation",
             "box": {
               "x": 38,
-              "y": 430.78125,
+              "y": 413.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 476.28125
+              "bottom": 458.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -4881,12 +4881,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 187,
+        "rightEdgeContentPx": 209,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (187 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (209 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -4904,7 +4904,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6332,
+        "documentHeight": 6282,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -4971,56 +4971,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 148.3125,
+            "y": 162.3125,
             "w": 672,
-            "h": 365.375,
+            "h": 337.375,
             "right": 688,
-            "bottom": 513.6875
+            "bottom": 499.6875
           },
           "headingBox": {
             "x": 42,
-            "y": 221.3125,
+            "y": 235.3125,
             "w": 576,
             "h": 70.375,
             "right": 618,
-            "bottom": 291.6875
+            "bottom": 305.6875
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 42,
-            "y": 189.3125,
+            "y": 203.3125,
             "w": 622,
             "h": 16,
             "right": 664,
-            "bottom": 205.3125
+            "bottom": 219.3125
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 42,
-            "y": 307.6875,
+            "y": 321.6875,
             "w": 576,
-            "h": 112,
+            "h": 84,
             "right": 618,
-            "bottom": 419.6875
+            "bottom": 405.6875
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 42,
-            "y": 444.6875,
+            "y": 430.6875,
             "w": 290.125,
             "h": 44,
             "right": 332.125,
-            "bottom": 488.6875
+            "bottom": 474.6875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 348.125,
-            "y": 443.6875,
+            "y": 429.6875,
             "w": 186.328125,
             "h": 46,
             "right": 534.453125,
-            "bottom": 489.6875
+            "bottom": 475.6875
           },
           "secondaryCtaTailClips": false
         },
@@ -5047,11 +5047,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 42,
-              "y": 444.6875,
+              "y": 430.6875,
               "w": 290.125,
               "h": 44,
               "right": 332.125,
-              "bottom": 488.6875
+              "bottom": 474.6875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -5063,11 +5063,11 @@
             "text": "Request Valuation",
             "box": {
               "x": 348.125,
-              "y": 443.6875,
+              "y": 429.6875,
               "w": 186.328125,
               "h": 46,
               "right": 534.453125,
-              "bottom": 489.6875
+              "bottom": 475.6875
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -5151,7 +5151,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4857,
+        "documentHeight": 4752,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5218,56 +5218,56 @@
         "hero": {
           "panelBox": {
             "x": 32,
-            "y": 130.625,
+            "y": 123.1875,
             "w": 672,
-            "h": 372.75,
+            "h": 387.625,
             "right": 704,
-            "bottom": 503.375
+            "bottom": 510.8125
           },
           "headingBox": {
             "x": 66,
-            "y": 211.625,
+            "y": 204.1875,
             "w": 576,
-            "h": 77.75,
+            "h": 116.625,
             "right": 642,
-            "bottom": 289.375
+            "bottom": 320.8125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 66,
-            "y": 179.625,
+            "y": 172.1875,
             "w": 606,
             "h": 16,
             "right": 672,
-            "bottom": 195.625
+            "bottom": 188.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 66,
-            "y": 305.375,
+            "y": 336.8125,
             "w": 576,
-            "h": 96,
+            "h": 72,
             "right": 642,
-            "bottom": 401.375
+            "bottom": 408.8125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 66,
-            "y": 426.375,
+            "y": 433.8125,
             "w": 298.125,
             "h": 44,
             "right": 364.125,
-            "bottom": 470.375
+            "bottom": 477.8125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 380.125,
-            "y": 425.375,
+            "y": 432.8125,
             "w": 194.328125,
             "h": 46,
             "right": 574.453125,
-            "bottom": 471.375
+            "bottom": 478.8125
           },
           "secondaryCtaTailClips": false
         },
@@ -5278,11 +5278,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 66,
-              "y": 426.375,
+              "y": 433.8125,
               "w": 298.125,
               "h": 44,
               "right": 364.125,
-              "bottom": 470.375
+              "bottom": 477.8125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -5294,11 +5294,11 @@
             "text": "Request Valuation",
             "box": {
               "x": 380.125,
-              "y": 425.375,
+              "y": 432.8125,
               "w": 194.328125,
               "h": 46,
               "right": 574.453125,
-              "bottom": 471.375
+              "bottom": 478.8125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -5382,7 +5382,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4857,
+        "documentHeight": 4752,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5449,56 +5449,56 @@
         "hero": {
           "panelBox": {
             "x": 112,
-            "y": 130.625,
+            "y": 123.1875,
             "w": 672,
-            "h": 372.75,
+            "h": 387.625,
             "right": 784,
-            "bottom": 503.375
+            "bottom": 510.8125
           },
           "headingBox": {
             "x": 146,
-            "y": 211.625,
+            "y": 204.1875,
             "w": 576,
-            "h": 77.75,
+            "h": 116.625,
             "right": 722,
-            "bottom": 289.375
+            "bottom": 320.8125
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 146,
-            "y": 179.625,
+            "y": 172.1875,
             "w": 606,
             "h": 16,
             "right": 752,
-            "bottom": 195.625
+            "bottom": 188.1875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 146,
-            "y": 305.375,
+            "y": 336.8125,
             "w": 576,
-            "h": 96,
+            "h": 72,
             "right": 722,
-            "bottom": 401.375
+            "bottom": 408.8125
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 146,
-            "y": 426.375,
+            "y": 433.8125,
             "w": 298.125,
             "h": 44,
             "right": 444.125,
-            "bottom": 470.375
+            "bottom": 477.8125
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 460.125,
-            "y": 425.375,
+            "y": 432.8125,
             "w": 194.328125,
             "h": 46,
             "right": 654.453125,
-            "bottom": 471.375
+            "bottom": 478.8125
           },
           "secondaryCtaTailClips": false
         },
@@ -5509,11 +5509,11 @@
             "text": "Begin a Private Conversation",
             "box": {
               "x": 146,
-              "y": 426.375,
+              "y": 433.8125,
               "w": 298.125,
               "h": 44,
               "right": 444.125,
-              "bottom": 470.375
+              "bottom": 477.8125
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -5525,11 +5525,11 @@
             "text": "Request Valuation",
             "box": {
               "x": 460.125,
-              "y": 425.375,
+              "y": 432.8125,
               "w": 194.328125,
               "h": 46,
               "right": 654.453125,
-              "bottom": 471.375
+              "bottom": 478.8125
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -5613,7 +5613,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 6991,
+        "documentHeight": 7012,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -5814,7 +5814,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 6991,
+        "documentHeight": 7012,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6015,7 +6015,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 5909,
+        "documentHeight": 5931,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6216,7 +6216,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 4857,
+        "documentHeight": 4876,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6400,7 +6400,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 4857,
+        "documentHeight": 4876,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6584,7 +6584,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 5423,
+        "documentHeight": 5400,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6785,7 +6785,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 5423,
+        "documentHeight": 5400,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -6986,7 +6986,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 4846,
+        "documentHeight": 4823,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7187,7 +7187,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 3353,
+        "documentHeight": 3303,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7371,7 +7371,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 3353,
+        "documentHeight": 3303,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7555,7 +7555,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10718,
+        "documentHeight": 10695,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7744,7 +7744,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10718,
+        "documentHeight": 10695,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -7933,7 +7933,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9116,
+        "documentHeight": 9093,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8122,7 +8122,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6418,
+        "documentHeight": 6368,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8294,7 +8294,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6418,
+        "documentHeight": 6368,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8466,7 +8466,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7984,
+        "documentHeight": 7961,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8648,7 +8648,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7984,
+        "documentHeight": 7961,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8830,7 +8830,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6168,
+        "documentHeight": 6145,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9012,7 +9012,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5376,
+        "documentHeight": 5326,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9177,7 +9177,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5376,
+        "documentHeight": 5326,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9342,7 +9342,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7917,
+        "documentHeight": 7894,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9524,7 +9524,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7917,
+        "documentHeight": 7894,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9706,7 +9706,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 6115,
+        "documentHeight": 6092,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9888,7 +9888,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5323,
+        "documentHeight": 5273,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10053,7 +10053,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5323,
+        "documentHeight": 5273,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10218,7 +10218,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 4335,
+        "documentHeight": 4312,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10400,7 +10400,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 4335,
+        "documentHeight": 4312,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10582,7 +10582,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 3784,
+        "documentHeight": 3761,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10764,7 +10764,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 2968,
+        "documentHeight": 2918,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -10929,7 +10929,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 2968,
+        "documentHeight": 2918,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11094,7 +11094,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 4747,
+        "documentHeight": 4725,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11276,7 +11276,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 4747,
+        "documentHeight": 4725,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11458,7 +11458,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 4099,
+        "documentHeight": 4076,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11640,7 +11640,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 3283,
+        "documentHeight": 3233,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11805,7 +11805,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 3283,
+        "documentHeight": 3233,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -11970,7 +11970,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 14196,
+        "documentHeight": 14173,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -12762,7 +12762,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 14196,
+        "documentHeight": 14173,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -13554,7 +13554,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8169,
+        "documentHeight": 8146,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -14346,7 +14346,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 5928,
+        "documentHeight": 5878,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15122,7 +15122,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 5928,
+        "documentHeight": 5878,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -15898,7 +15898,7 @@
           "h": 481
         },
         "documentWidth": 541,
-        "documentHeight": 27949,
+        "documentHeight": 27752,
         "hasHorizontalOverflow": true,
         "images": [
           {
@@ -16217,7 +16217,7 @@
           "h": 725
         },
         "documentWidth": 541,
-        "documentHeight": 27949,
+        "documentHeight": 27752,
         "hasHorizontalOverflow": true,
         "images": [
           {
@@ -16536,7 +16536,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 20123,
+        "documentHeight": 19936,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -16855,7 +16855,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 16715,
+        "documentHeight": 16528,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17158,7 +17158,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 16715,
+        "documentHeight": 16528,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17461,7 +17461,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12854,
+        "documentHeight": 12831,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -17752,7 +17752,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12854,
+        "documentHeight": 12831,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18059,7 +18059,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9786,
+        "documentHeight": 9763,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18366,7 +18366,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7435,
+        "documentHeight": 7385,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18657,7 +18657,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7435,
+        "documentHeight": 7385,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -18948,7 +18948,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12633,
+        "documentHeight": 12610,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19227,7 +19227,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12633,
+        "documentHeight": 12610,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19522,7 +19522,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9642,
+        "documentHeight": 9619,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -19817,7 +19817,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7707,
+        "documentHeight": 7657,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20096,7 +20096,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7707,
+        "documentHeight": 7657,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20352,12 +20352,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1349,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1349 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -20375,7 +20375,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11950,
+        "documentHeight": 11845,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20635,12 +20635,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 216,
+        "rightEdgeContentPx": 248,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (216 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (248 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -20658,7 +20658,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11950,
+        "documentHeight": 11845,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -20918,12 +20918,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 209,
+        "rightEdgeContentPx": 216,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (209 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (216 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -20941,7 +20941,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9527,
+        "documentHeight": 9504,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21224,7 +21224,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7182,
+        "documentHeight": 7077,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21491,7 +21491,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7182,
+        "documentHeight": 7077,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -21758,7 +21758,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10903,
+        "documentHeight": 10880,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22029,7 +22029,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10903,
+        "documentHeight": 10880,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22300,7 +22300,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8841,
+        "documentHeight": 8818,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22571,7 +22571,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6937,
+        "documentHeight": 6887,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -22826,7 +22826,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6937,
+        "documentHeight": 6887,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23081,7 +23081,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11919,
+        "documentHeight": 11924,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23364,7 +23364,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11919,
+        "documentHeight": 11924,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23647,7 +23647,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9505,
+        "documentHeight": 9534,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -23930,7 +23930,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7099,
+        "documentHeight": 7101,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24197,7 +24197,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7099,
+        "documentHeight": 7101,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24464,7 +24464,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12238,
+        "documentHeight": 12215,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -24759,7 +24759,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12238,
+        "documentHeight": 12215,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25054,7 +25054,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9302,
+        "documentHeight": 9279,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25349,7 +25349,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7450,
+        "documentHeight": 7400,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25628,7 +25628,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7450,
+        "documentHeight": 7400,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -25907,7 +25907,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12037,
+        "documentHeight": 12014,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26186,7 +26186,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12037,
+        "documentHeight": 12014,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26481,7 +26481,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9267,
+        "documentHeight": 9244,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -26776,7 +26776,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7408,
+        "documentHeight": 7358,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27055,7 +27055,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7408,
+        "documentHeight": 7358,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27334,7 +27334,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 13245,
+        "documentHeight": 13222,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27625,7 +27625,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 13245,
+        "documentHeight": 13222,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -27932,7 +27932,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 10046,
+        "documentHeight": 10023,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28239,7 +28239,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7695,
+        "documentHeight": 7645,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28530,7 +28530,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7695,
+        "documentHeight": 7645,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -28821,7 +28821,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 13878,
+        "documentHeight": 13855,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29124,7 +29124,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 13878,
+        "documentHeight": 13855,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29443,7 +29443,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 10026,
+        "documentHeight": 10003,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -29762,7 +29762,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7731,
+        "documentHeight": 7681,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30065,7 +30065,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7731,
+        "documentHeight": 7681,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30368,7 +30368,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11677,
+        "documentHeight": 11655,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30635,7 +30635,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11677,
+        "documentHeight": 11655,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -30918,7 +30918,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9299,
+        "documentHeight": 9276,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31201,7 +31201,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6953,
+        "documentHeight": 6903,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31468,7 +31468,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6953,
+        "documentHeight": 6903,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31735,7 +31735,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 10580,
+        "documentHeight": 10557,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -31990,7 +31990,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 10580,
+        "documentHeight": 10557,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32261,7 +32261,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 8624,
+        "documentHeight": 8601,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32532,7 +32532,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6913,
+        "documentHeight": 6863,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -32787,7 +32787,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6913,
+        "documentHeight": 6863,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33042,7 +33042,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 11502,
+        "documentHeight": 11479,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33309,7 +33309,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 11502,
+        "documentHeight": 11479,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33592,7 +33592,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9167,
+        "documentHeight": 9144,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -33875,7 +33875,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 6909,
+        "documentHeight": 6859,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34142,7 +34142,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 6909,
+        "documentHeight": 6859,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34409,7 +34409,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12847,
+        "documentHeight": 12824,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34672,7 +34672,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12847,
+        "documentHeight": 12824,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -34967,7 +34967,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9770,
+        "documentHeight": 9747,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35262,7 +35262,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7829,
+        "documentHeight": 7779,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35541,7 +35541,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7829,
+        "documentHeight": 7779,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -35820,7 +35820,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12862,
+        "documentHeight": 12840,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36099,7 +36099,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12862,
+        "documentHeight": 12840,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36394,7 +36394,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9714,
+        "documentHeight": 9691,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36689,7 +36689,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7820,
+        "documentHeight": 7770,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -36968,7 +36968,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7820,
+        "documentHeight": 7770,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -37247,7 +37247,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 13029,
+        "documentHeight": 12924,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -37522,7 +37522,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 13029,
+        "documentHeight": 12924,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -37829,7 +37829,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9860,
+        "documentHeight": 9782,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -38136,7 +38136,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7670,
+        "documentHeight": 7565,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -38427,7 +38427,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7670,
+        "documentHeight": 7565,
         "hasHorizontalOverflow": false,
         "images": [
           {

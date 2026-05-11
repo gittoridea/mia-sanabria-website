@@ -1,0 +1,1757 @@
+{
+  "generated_at": "2026-05-11T16:51:19.582Z",
+  "config": {
+    "PARA_LIMIT": 55,
+    "SENT_LIMIT": 28,
+    "FOOTER_MAX": 220,
+    "STRICT": false,
+    "FOOTER_APPROVED": "Private guidance for waterfront and luxury homes from Fort Lauderdale to Boca Raton and Delray Beach. Expect a patient conversation delivered with discretion and nuance."
+  },
+  "totals": {
+    "routes": 16,
+    "fail": 0,
+    "warn": 133
+  },
+  "routes": [
+    {
+      "route": "/",
+      "file": "out/index.html",
+      "label": "Home",
+      "present": true,
+      "paragraphs": 33,
+      "paragraph_max_words": 170,
+      "paragraphs_over_limit": 2,
+      "sentences": 64,
+      "sentence_max_words": 52,
+      "sentences_over_limit": 6,
+      "repeated_geo_paragraphs": 7,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "luxury and waterfront",
+          "count": 1
+        },
+        {
+          "term": "eastern fort lauderdale",
+          "count": 4
+        },
+        {
+          "term": "eastern boca raton",
+          "count": 1
+        },
+        {
+          "term": "eastern delray beach",
+          "count": 1
+        },
+        {
+          "term": "guidance",
+          "count": 2
+        },
+        {
+          "term": "discretion",
+          "count": 3
+        },
+        {
+          "term": "private",
+          "count": 16
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/markets/",
+      "file": "out/markets/index.html",
+      "label": "Markets index",
+      "present": true,
+      "paragraphs": 29,
+      "paragraph_max_words": 58,
+      "paragraphs_over_limit": 1,
+      "sentences": 39,
+      "sentence_max_words": 45,
+      "sentences_over_limit": 2,
+      "repeated_geo_paragraphs": 2,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "luxury and waterfront",
+          "count": 1
+        },
+        {
+          "term": "eastern fort lauderdale",
+          "count": 6
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 5
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "file": "out/markets/fort-lauderdale/index.html",
+      "label": "Fort Lauderdale",
+      "present": true,
+      "paragraphs": 80,
+      "paragraph_max_words": 922,
+      "paragraphs_over_limit": 21,
+      "sentences": 217,
+      "sentence_max_words": 49,
+      "sentences_over_limit": 35,
+      "repeated_geo_paragraphs": 8,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "luxury and waterfront",
+          "count": 1
+        },
+        {
+          "term": "eastern fort lauderdale",
+          "count": 16
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 27
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "file": "out/markets/pompano-beach/index.html",
+      "label": "Pompano Beach",
+      "present": true,
+      "paragraphs": 26,
+      "paragraph_max_words": 129,
+      "paragraphs_over_limit": 5,
+      "sentences": 49,
+      "sentence_max_words": 51,
+      "sentences_over_limit": 8,
+      "repeated_geo_paragraphs": 2,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 7
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "file": "out/markets/boca-raton/index.html",
+      "label": "Boca Raton",
+      "present": true,
+      "paragraphs": 28,
+      "paragraph_max_words": 104,
+      "paragraphs_over_limit": 4,
+      "sentences": 51,
+      "sentence_max_words": 45,
+      "sentences_over_limit": 4,
+      "repeated_geo_paragraphs": 2,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "guidance",
+          "count": 3
+        },
+        {
+          "term": "discretion",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 6
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "file": "out/markets/delray-beach/index.html",
+      "label": "Delray Beach",
+      "present": true,
+      "paragraphs": 28,
+      "paragraph_max_words": 111,
+      "paragraphs_over_limit": 4,
+      "sentences": 52,
+      "sentence_max_words": 35,
+      "sentences_over_limit": 2,
+      "repeated_geo_paragraphs": 2,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 7
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/buyers/",
+      "file": "out/buyers/index.html",
+      "label": "Buyers",
+      "present": true,
+      "paragraphs": 22,
+      "paragraph_max_words": 108,
+      "paragraphs_over_limit": 1,
+      "sentences": 37,
+      "sentence_max_words": 35,
+      "sentences_over_limit": 2,
+      "repeated_geo_paragraphs": 3,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "luxury and waterfront",
+          "count": 1
+        },
+        {
+          "term": "eastern fort lauderdale",
+          "count": 3
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 2
+        },
+        {
+          "term": "rigor",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 9
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/sellers/",
+      "file": "out/sellers/index.html",
+      "label": "Sellers",
+      "present": true,
+      "paragraphs": 22,
+      "paragraph_max_words": 105,
+      "paragraphs_over_limit": 1,
+      "sentences": 33,
+      "sentence_max_words": 35,
+      "sentences_over_limit": 1,
+      "repeated_geo_paragraphs": 3,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "eastern fort lauderdale",
+          "count": 3
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 2
+        },
+        {
+          "term": "private",
+          "count": 10
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/contact/",
+      "file": "out/contact/index.html",
+      "label": "Contact",
+      "present": true,
+      "paragraphs": 13,
+      "paragraph_max_words": 48,
+      "paragraphs_over_limit": 0,
+      "sentences": 23,
+      "sentence_max_words": 42,
+      "sentences_over_limit": 2,
+      "repeated_geo_paragraphs": 3,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "eastern fort lauderdale",
+          "count": 2
+        },
+        {
+          "term": "eastern boca raton",
+          "count": 1
+        },
+        {
+          "term": "eastern delray beach",
+          "count": 1
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 12
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/valuation/",
+      "file": "out/valuation/index.html",
+      "label": "Home Valuation",
+      "present": true,
+      "paragraphs": 20,
+      "paragraph_max_words": 103,
+      "paragraphs_over_limit": 1,
+      "sentences": 33,
+      "sentence_max_words": 41,
+      "sentences_over_limit": 2,
+      "repeated_geo_paragraphs": 1,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "eastern fort lauderdale",
+          "count": 1
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 5
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/about/",
+      "file": "out/about/index.html",
+      "label": "About",
+      "present": true,
+      "paragraphs": 18,
+      "paragraph_max_words": 90,
+      "paragraphs_over_limit": 1,
+      "sentences": 30,
+      "sentence_max_words": 35,
+      "sentences_over_limit": 2,
+      "repeated_geo_paragraphs": 3,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "luxury and waterfront",
+          "count": 2
+        },
+        {
+          "term": "eastern fort lauderdale",
+          "count": 2
+        },
+        {
+          "term": "eastern boca raton",
+          "count": 1
+        },
+        {
+          "term": "eastern delray beach",
+          "count": 1
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 3
+        },
+        {
+          "term": "rigor",
+          "count": 1
+        },
+        {
+          "term": "private",
+          "count": 8
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/insights/",
+      "file": "out/insights/index.html",
+      "label": "Insights index",
+      "present": true,
+      "paragraphs": 24,
+      "paragraph_max_words": 65,
+      "paragraphs_over_limit": 1,
+      "sentences": 49,
+      "sentence_max_words": 43,
+      "sentences_over_limit": 13,
+      "repeated_geo_paragraphs": 4,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ],
+      "concern": [
+        {
+          "term": "luxury and waterfront",
+          "count": 1
+        },
+        {
+          "term": "eastern fort lauderdale",
+          "count": 6
+        },
+        {
+          "term": "guidance",
+          "count": 1
+        },
+        {
+          "term": "discretion",
+          "count": 2
+        },
+        {
+          "term": "private",
+          "count": 14
+        }
+      ],
+      "footer_present": true
+    },
+    {
+      "route": "/privacy/",
+      "file": "out/privacy/index.html",
+      "label": "Privacy (exempt)",
+      "densityExempt": true,
+      "present": true,
+      "exempt": true,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "route": "/terms/",
+      "file": "out/terms/index.html",
+      "label": "Terms (exempt)",
+      "densityExempt": true,
+      "present": true,
+      "exempt": true,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "route": "/dmca/",
+      "file": "out/dmca/index.html",
+      "label": "DMCA (exempt)",
+      "densityExempt": true,
+      "present": true,
+      "exempt": true,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "route": "/accessibility/",
+      "file": "out/accessibility/index.html",
+      "label": "Accessibility (exempt)",
+      "densityExempt": true,
+      "present": true,
+      "exempt": true,
+      "banned": [
+        {
+          "term": "definitive access point",
+          "count": 0
+        },
+        {
+          "term": "exclusive access",
+          "count": 0
+        },
+        {
+          "term": "guaranteed access",
+          "count": 0
+        },
+        {
+          "term": "off-market access",
+          "count": 0
+        },
+        {
+          "term": "private inventory",
+          "count": 0
+        },
+        {
+          "term": "mls bypass",
+          "count": 0
+        },
+        {
+          "term": "same-business-day response",
+          "count": 0
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "route": "/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "106w > 55: \"Request Home Valuation The Practice What kind of real estate does Mia Sanabria specialize in? Mia Sanabria represents bu...\""
+    },
+    {
+      "route": "/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "170w > 55: \"Frequently asked questions Where does Mia serve clients? + Mia is based in Fort Lauderdale and serves clients across Eas...\""
+    },
+    {
+      "route": "/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"Market guides for Fort Lauderdale, Boca Raton, Palm Beach, Victoria Park, Lighthouse Point, and Delray Beach — written t...\""
+    },
+    {
+      "route": "/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "52w > 28: \"Market Note · January 5 min read Fort Lauderdale Waterfront Homes: What Serious Buyers Should Know Before Touring Before...\""
+    },
+    {
+      "route": "/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "32w > 28: \"Market Note · November 6 min read Preparing a Waterfront Residence for Private Market Conversations Private-market conve...\""
+    },
+    {
+      "route": "/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"Frequently asked questions Where does Mia serve clients? + Mia is based in Fort Lauderdale and serves clients across Eas...\""
+    },
+    {
+      "route": "/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "40w > 28: \"What sets Mia Sanabria apart as a Fort Lauderdale REALTOR®? + It means a guided process: clarify the goal, narrow the ri...\""
+    },
+    {
+      "route": "/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "7 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/markets/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "58w > 55: \"Eastern Fort Lauderdale and adjacent waterfront Fort Lauderdale waterfront and Northern Broward clusters. The Eastern Fo...\""
+    },
+    {
+      "route": "/markets/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "45w > 28: \"The Eastern Fort Lauderdale neighborhoods clients compare when shopping the deepwater isles, the in-town walkable blocks...\""
+    },
+    {
+      "route": "/markets/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/markets/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "2 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "75w > 55: \"Confidential Valuation A decision, not a default Fort Lauderdale rewards a written brief. For luxury and waterfront buye...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "65w > 55: \"The city is widely known as the “Venice of America” for those waterways and as the “Yachting Capital of the World” for i...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "97w > 55: \"Port Everglades — located within Fort Lauderdale city limits but operated as a self-supporting enterprise fund of Browar...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "82w > 55: \"Fort Lauderdale is known for waterfront living anchored by more than 165 miles of inland canals — the reason it is calle...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "66w > 55: \"Fort Lauderdale is the city in South Florida where deep-water living, a real downtown, and Atlantic beach access exist i...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "67w > 55: \"For buyers comparing Eastern Fort Lauderdale to its Palm Beach County peers, the distinction is structural. Boca Raton a...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "72w > 55: \"Canal width and turning basin Canal width at the residence and the turning-basin geometry at the dock determine whether ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "66w > 55: \"Outdoor living and dock-side amenities Outdoor kitchen, lift, dock lighting, lanai orientation, pool placement, salt-air...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "79w > 55: \"On Eastern Fort Lauderdale waterfront, the binding decision is rarely listing price — it is whether the residence is und...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "83w > 55: \"The “which sub-market within the city” question. Las Olas Isles and Seven Isles trade as the canonical deepwater finger-...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "104w > 55: \"The “should I be shopping north of Fort Lauderdale” question. Lighthouse Point trades on a denser network of finger-isle...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "99w > 55: \"The “should I be shopping out of Broward” question. Boca Raton trades on Mizner-pedigree downtown, country-club resident...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "89w > 55: \"Fort Lauderdale is the anchor for the Eastern Fort Lauderdale waterfront cohort. Buyers usually compare three vectors ag...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "74w > 55: \"Buyer playbook Considering Fort Lauderdale as a buyer. Fort Lauderdale suits buyers who want a real city alongside deepw...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "56w > 55: \"Some residences are quietly available before they list publicly. Access varies by market and timing and is not guarantee...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "57w > 55: \"For buyers the diligence sequence is a filter — survey first, dock and seawall next, insurance underwriting before the o...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "62w > 55: \"Sellers should position to one of three buyer profiles: yachting, in-town walkability, or beach-corridor lifestyle. Pric...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "56w > 55: \"Current comparable sales drawn from the right cohort — the same block, the same canal, the same lot profile. Broad avera...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "61w > 55: \"Showing strategy, staging, and timing tuned to the one buyer profile chosen in step 04. Buyers shopping a vessel-first b...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "58w > 55: \"Some sellers prefer a quiet pre-market period — letting Mia mention the residence privately to brokers whose buyers fit,...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "922w > 55: \"Frequently asked questions about Fort Lauderdale. What makes Fort Lauderdale's waterfront different from other South Flo...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"The pages that follow are organized around the conversations Mia handles privately before any address is opened — for bu...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"The city covers 38.6 square miles in total — of which about 10 percent (3.8 square miles) is water, a structural reflect...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "40w > 28: \"The city is widely known as the “Venice of America” for those waterways and as the “Yachting Capital of the World” for i...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "43w > 28: \"Port Everglades — located within Fort Lauderdale city limits but operated as a self-supporting enterprise fund of Browar...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "37w > 28: \"The New River runs approximately three miles through downtown, connecting the Intracoastal to the Atlantic via that inle...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "43w > 28: \"Water Trolley — a free public water shuttle along the New River with eight stops, daily 10 a.m. to 10 p.m., in partnersh...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "36w > 28: \"Census Bureau QuickFacts (Fort Lauderdale city, FL); Visit Lauderdale (Greater Fort Lauderdale / Broward County Fact She...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "44w > 28: \"More than 165 miles of navigable inland waterways thread the city; the major yacht-capable canals reach Port Everglades ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "34w > 28: \"Fort Lauderdale stretches from the Atlantic across the Intracoastal to the New River and downtown — buyer briefs typical...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"Fort Lauderdale trades on the combination — a working city alongside private dockage, a beach corridor, and established ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "34w > 28: \"Bridge clearance and route-to-inlet Vessel routing — bridge clearances from the dock to the Intracoastal, and from the I...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "33w > 28: \"Canal width and turning basin Canal width at the residence and the turning-basin geometry at the dock determine whether ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"Order matters: a 4-point inspection (roof, electrical, plumbing, HVAC), a wind-mitigation report, an elevation certifica...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "41w > 28: \"Pompano Beach sits between the Fort Lauderdale waterfront cohort and the northern barrier-island markets, with the redev...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"Boca Raton trades on Mizner-pedigree downtown, country-club residential geography, and an A1A oceanfront corridor — a di...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"The Palm Beach County tier is a different state-of-mind decision; the right Fort Lauderdale brief separates “which Browa...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "44w > 28: \"Buyers usually compare three vectors against the city itself: Las Olas Isles for deepwater dockage with walkable Las Ola...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"Buyers shopping a vessel-first brief want to see the dock at sunset; buyers shopping a hosting-first brief want to see t...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"The seller playbook above operates the residence-specific way; the related note on why public estimates miss luxury wate...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "42w > 28: \"What makes Fort Lauderdale's waterfront different from other South Florida cities? + Fort Lauderdale has more than 165 m...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"That combination, plus a working downtown and beach in one city, is rare in South Florida and is why the market is consi...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "38w > 28: \"Which neighborhoods do most luxury buyers compare first? + Buyers commonly weigh Las Olas Isles and Rio Vista (deepwater...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"How does Mia approach a Fort Lauderdale search or listing? + It begins with a private conversation about the brief — lif...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "33w > 28: \"From there she narrows the search or shapes the listing strategy block by block, with current comparable sales, dockage ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "40w > 28: \"How does Eastern Fort Lauderdale differ from broader Broward County? + Eastern Fort Lauderdale — the area east of US-1 a...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "37w > 28: \"The brief is a written priority hierarchy — lifestyle anchors, vessel profile, architectural era, dockage requirements, ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "36w > 28: \"Mia's role is to read the brief carefully enough to rule out three quarters of the market before any address is opened, ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"Why does route-to-inlet matter for a buyer who isn't a serious yachter? + Route-to-inlet is a proxy for what the waterfr...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "31w > 28: \"A no-fixed-bridge run to Port Everglades means open Atlantic water sits a short ride away — the canal carries through-tr...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "37w > 28: \"What does \"no fixed bridges\" mean and where does it actually apply? + \"No fixed bridges\" describes a route from a privat...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "38w > 28: \"In Fort Lauderdale this typically applies to canal residences whose run reaches the Port Everglades inlet without crossi...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "43w > 28: \"How does Fort Lauderdale compare to Pompano Beach for waterfront buyers? + Fort Lauderdale anchors the broader yachting ...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "49w > 28: \"Pompano Beach — about ten miles north, separated by Lauderdale-by-the-Sea on the barrier island — is a separate municipa...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"The choice between the two usually comes down to which inlet vector matches the vessel and where the buyer wants downtow...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/markets/fort-lauderdale/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "8 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "129w > 55: \"Other Markets What Pompano Beach is known for An honest summary. Pompano Beach is a northeastern Broward city of approxi...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "67w > 55: \"Pompano Beach suits buyers who want Atlantic beach access, deepwater boating, an active reef-and-wreck dive scene, and a...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "84w > 55: \"Buyers here usually start with one of four briefs: A1A-corridor condominium, Intracoastal-side single-family with privat...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "108w > 55: \"Sellers in Pompano Beach should position the residence to its specific corridor segment — oceanfront condominium, A1A-ad...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "104w > 55: \"Pompano Beach is the relative-value beach-and-boating peer in northern Broward, framed by Lighthouse Point and Hillsboro...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "32w > 28: \"The market pairs a public beachfront and the redeveloped Fisher Family Pier with deepwater Intracoastal residences and a...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"The market is known for a roughly three-mile public beachfront, the rebuilt Fisher Family Pier (dedicated April 2022), a...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "33w > 28: \"Pompano Beach suits buyers who want Atlantic beach access, deepwater boating, an active reef-and-wreck dive scene, and a...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "34w > 28: \"Mia helps clients sort A1A-corridor condominium versus Intracoastal-side single-family versus inland canal options, and ...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "32w > 28: \"Sellers in Pompano Beach should position the residence to its specific corridor segment — oceanfront condominium, A1A-ad...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "29w > 28: \"Pompano Beach is the relative-value beach-and-boating peer in northern Broward, framed by Lighthouse Point and Hillsboro...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "51w > 28: \"Buyers usually compare three vectors: Fort Lauderdale for the working-city alongside deepwater living; Lighthouse Point ...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/markets/pompano-beach/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "2 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "104w > 55: \"Other Markets What Boca Raton is known for An honest summary. Boca Raton is a south Palm Beach County city known for lay...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "75w > 55: \"Boca Raton suits buyers who want optionality — beach, club, or in-town residential — within one city. The first decision...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "75w > 55: \"Sellers in Boca Raton should position to the buyer pool that matches the residence's exact micro-market — Royal Palm yac...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "99w > 55: \"Boca Raton sits within the Palm Beach County primary luxury cohort alongside Delray Beach and Palm Beach. Boca offers th...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "45w > 28: \"Boca Raton is a south Palm Beach County city known for layered character — Mediterranean Revival architecture inherited ...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "32w > 28: \"Sellers in Boca Raton should position to the buyer pool that matches the residence's exact micro-market — Royal Palm yac...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "31w > 28: \"Boca offers three identity layers — coastal condominiums east of A1A, single-family neighborhoods around the country-clu...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/markets/boca-raton/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "2 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "111w > 55: \"Other Markets What Delray Beach is known for An honest summary. Delray Beach, the self-styled Village by the Sea in cent...\""
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "77w > 55: \"Delray Beach suits buyers who want a walkable downtown alongside beach and residential options in one city. The first de...\""
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "84w > 55: \"Sellers in Delray Beach should position the residence to its specific location — walkable downtown, beach corridor, Mari...\""
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "94w > 55: \"Delray Beach pairs with Boca Raton and Palm Beach in the Palm Beach County primary luxury cohort. Delray's center of gra...\""
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "32w > 28: \"Sellers in Delray Beach should position the residence to its specific location — walkable downtown, beach corridor, Mari...\""
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/markets/delray-beach/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "2 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/buyers/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "108w > 55: \"Walk the Markets The Practice How should buyers approach luxury and waterfront homes in Eastern Fort Lauderdale? A serio...\""
+    },
+    {
+      "route": "/buyers/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"Decisions turn on the verifiable variables — dock length, water depth, fixed-bridge clearance, route to the inlet, archi...\""
+    },
+    {
+      "route": "/buyers/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/buyers/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "3 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/sellers/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "105w > 55: \"Request Valuation The Practice How should sellers position a luxury or waterfront home in Eastern Fort Lauderdale? Posit...\""
+    },
+    {
+      "route": "/sellers/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/sellers/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "3 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/contact/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "42w > 28: \"Call (954) 540-0358 Email msanabriarea@gmail.com Service Area Fort Lauderdale, FL 33305 Eastern Fort Lauderdale, Boca Ra...\""
+    },
+    {
+      "route": "/contact/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/contact/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "3 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/valuation/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "103w > 55: \"Automated valuation models miss the variables that decide a luxury waterfront price. A serious valuation accounts for do...\""
+    },
+    {
+      "route": "/valuation/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "41w > 28: \"A serious valuation accounts for dock specifics — length, water depth, fixed-bridge clearance, route to the inlet, and a...\""
+    },
+    {
+      "route": "/valuation/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/valuation/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "1 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/about/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "90w > 55: \"Mia represents buyers and sellers across the waterfront and luxury corridors of Southeast Florida — concentrated in East...\""
+    },
+    {
+      "route": "/about/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"Mia represents buyers and sellers across the waterfront and luxury corridors of Southeast Florida — concentrated in East...\""
+    },
+    {
+      "route": "/about/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/about/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "3 paragraph(s) with ≥3 geo mentions"
+    },
+    {
+      "route": "/insights/",
+      "rule": "paragraph_too_long",
+      "severity": "warn",
+      "detail": "65w > 55: \"These briefs are written for the buyers and sellers Mia works with directly — waterfront and luxury across Eastern Fort ...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"These briefs are written for the buyers and sellers Mia works with directly — waterfront and luxury across Eastern Fort ...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "34w > 28: \"Before the first showing, the right Fort Lauderdale waterfront search starts with a private brief — lifestyle fit, water...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "38w > 28: \"Market Note · February 6 min read Dockage, Seawalls, Bridge Clearance, and Route-to-Inlet: A Buyer's Due Diligence Guide...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "39w > 28: \"Market Note · March 5 min read How to Position a Luxury Waterfront Home in Eastern Fort Lauderdale Pricing discipline, p...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "43w > 28: \"Market Note · May 5 min read Bay Colony and Bermuda Riviera: Private Waterfront Living North of Sunrise Boulevard Two of...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "31w > 28: \"Market Note · June 5 min read Coral Ridge, Victoria Park, and Rio Vista: Choosing the Right Eastern Fort Lauderdale Life...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "39w > 28: \"Market Note · July 5 min read Lighthouse Point, Sea Ranch Lakes, and Hillsboro Mile: Northern Broward Waterfront Tradeof...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "30w > 28: \"Market Note · August 6 min read Boca Raton Luxury Homes: Club, Beach, and Waterfront Considerations Boca Raton's luxury ...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "36w > 28: \"Market Note · September 5 min read Delray Beach Luxury Buyers: Walkability, Beach Proximity, and Waterfront Fit Delray B...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"Market Note · October 6 min read Why Automated Valuations Miss Luxury Waterfront Property Value Automated home valuation...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "32w > 28: \"Market Note · November 6 min read Preparing a Waterfront Residence for Private Market Conversations Private-market conve...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "31w > 28: \"Market Note · December 6 min read A Private Buyer Brief: How to Define the Right Search Before Touring Most luxury buyer...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "sentence_too_long",
+      "severity": "warn",
+      "detail": "35w > 28: \"EXPLORE Featured Markets Buying Selling Home Valuation Insights ABOUT About Mia Contact (954) 540-0358 msanabriarea@gmai...\""
+    },
+    {
+      "route": "/insights/",
+      "rule": "repeated_geo_in_paragraph",
+      "severity": "warn",
+      "detail": "4 paragraph(s) with ≥3 geo mentions"
+    }
+  ]
+}

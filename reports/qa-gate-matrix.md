@@ -1,6 +1,6 @@
 # QA-Gate Matrix — Cycle 19A-M
 
-Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T12:47:54.743Z
+Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T16:58:00.141Z
 
 **48 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 48
 
@@ -85,10 +85,10 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T12:47
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
 | `/markets/bay-colony` | ✓ | 44 | 151 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/bermuda-riviera` | ✓ | 49 | 155 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/boca-raton` | ✓ | 44 | 157 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/boca-raton` | ✓ | 44 | 150 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/coral-ridge` | ✓ | 45 | 157 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/delray-beach` | ✓ | 46 | 152 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/fort-lauderdale` | ✓ | 49 | 156 | 6 | 79 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/fort-lauderdale` | ✓ | 49 | 155 | 6 | 79 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/harbor-beach` | ✓ | 46 | 156 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/hillsboro-mile` | ✓ | 48 | 157 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/las-olas-isles` | ✓ | 48 | 155 | 6 | 57 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |

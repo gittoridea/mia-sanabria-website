@@ -27,7 +27,7 @@ const HOME_FAQ = [
   {
     question: "Where does Mia serve clients?",
     answer:
-      "Mia is based in Fort Lauderdale and serves clients across luxury Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach, with featured market guides for Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach.",
+      "Mia is based in Fort Lauderdale and serves clients across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach. Featured market guides cover Fort Lauderdale, Coral Ridge, Victoria Park, Boca Raton, and Delray Beach.",
   },
   {
     question: "What sets Mia Sanabria apart as a Fort Lauderdale REALTOR®?",
@@ -53,7 +53,7 @@ const HOME_VALUE_PROPS = [
   },
   {
     heading: "Brokerage relationships",
-    body: "Quiet introductions when Mia's brokerage and ownership relationships across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray Beach surface a fit. Access varies by market and timing.",
+    body: "Quiet introductions when Mia's brokerage and ownership relationships surface a fit across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Access varies by market and timing.",
   },
   {
     heading: "Current-market clarity",
@@ -81,7 +81,7 @@ export default function HomePage() {
 
       <Hero
         eyebrow="Mia Sanabria · REALTOR® with LPT Realty"
-        heading="Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach."
+        heading="Luxury and waterfront real estate across Fort Lauderdale, Pompano Beach, and Boca Raton."
         sub="A small, deliberate practice — private representation for buyers and sellers of distinctive coastal residences."
         ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         ctaSecondary={{ href: "/valuation/", label: "Request Home Valuation" }}
@@ -92,7 +92,7 @@ export default function HomePage() {
 
       <AnswerFirst
         question="What kind of real estate does Mia Sanabria specialize in?"
-        answer="Mia Sanabria represents buyers and sellers of luxury and waterfront residences across Eastern Fort Lauderdale, with adjacent primary service in Boca Raton (Palm Beach County) and Delray Beach (Palm Beach County). Her practice centers on deepwater estates and finger-isle homes along Las Olas Isles, Harbor Beach, and Rio Vista; in-town Eastern Fort Lauderdale neighborhoods such as Coral Ridge and Victoria Park; and the Mediterranean Revival, Atlantic Avenue, and beach-block trade in Boca Raton and Delray Beach. Engagements begin with a private brief — preferences, timeline, and the residence in mind — long before any showing."
+        answer="Mia Sanabria represents buyers and sellers of waterfront and luxury residences across Eastern Fort Lauderdale, with adjacent practice in Boca Raton and Delray Beach (both Palm Beach County). The work centers on the deepwater finger isles — Las Olas Isles, Harbor Beach, Rio Vista — and the in-town neighborhoods like Coral Ridge and Victoria Park. In Boca and Delray, the trade runs from Mediterranean Revival to Atlantic Avenue walk-blocks to the beach corridor. Engagements begin with a private brief — preferences, timeline, the residence in mind — long before any showing."
         relatedMarkets={["fort-lauderdale", "boca-raton", "delray-beach"]}
         cta={{ href: "/markets/", label: "Walk the markets" }}
       />

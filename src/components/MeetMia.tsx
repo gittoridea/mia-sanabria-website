@@ -32,10 +32,10 @@ export function MeetMia() {
             </h2>
             <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-navy-800/80">
               <p>
-                Mia Sanabria is a Fort Lauderdale REALTOR® with LPT Realty representing buyers and
-                sellers across Eastern Fort Lauderdale, Eastern Boca Raton, and Eastern Delray
-                Beach. Each engagement begins with a private conversation about timing, criteria,
-                and the residence itself.
+                Mia Sanabria is a Fort Lauderdale REALTOR® with LPT Realty. She represents buyers
+                and sellers across the Eastern Fort Lauderdale waterfront and the adjacent Boca
+                Raton and Delray Beach corridors. Each engagement begins with a private
+                conversation about timing, criteria, and the residence itself.
               </p>
               <p>
                 Her practice is built on long relationships, current-market evidence, and the

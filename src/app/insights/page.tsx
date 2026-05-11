@@ -83,11 +83,11 @@ export default function InsightsIndexPage() {
             A twelve-part editorial library.
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-navy-800/85">
-            These briefs are written for the buyers and sellers Mia works with directly — luxury and
-            waterfront across Eastern Fort Lauderdale, Boca Raton, Delray Beach, and the surrounding
-            municipalities. Each brief is built to make the first private conversation more
-            productive: it frames what to verify on a specific address, how to separate similar
-            markets, and where the leverage points sit before any introduction is made.
+            These briefs are written for the buyers and sellers Mia works with directly —
+            waterfront and luxury across Eastern Fort Lauderdale and the adjacent Boca Raton and
+            Delray Beach corridors. Each brief is built to make the first private conversation
+            more productive. It frames what to verify on a specific address, how to separate
+            similar markets, and where the leverage points sit before any introduction.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
             The library is a guide series, not a chronological dispatch. The topic-month labels
