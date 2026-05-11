@@ -1,4 +1,4 @@
-# audit-mobile-readability — 2026-05-11T04:12:47.778Z
+# audit-mobile-readability — 2026-05-11T04:53:01.591Z
 
 Base: `https://miasanabriarealtor.trueidea.com` · viewports: 320×568 iPhone SE 1, 375×812 iPhone 15, 414×896 Pixel 7, 768×1024 iPad
 

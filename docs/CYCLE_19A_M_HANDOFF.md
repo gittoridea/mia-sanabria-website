@@ -8,7 +8,7 @@
 | **Repo** | `~/code/mia-sanabria-website/` |
 | **Live staging** | `https://miasanabriarealtor.trueidea.com/` |
 | **Pre-cycle live ETag** | `difgit5lydj44nrd` |
-| **Post-cycle live ETag** | `<filled by Phase 14 below>` |
+| **Post-cycle live ETag** | `difks13fqrcw4ntl` ✓ flipped |
 | **Algorithm version** | 6.4.0 |
 | **Effort tier** | E5 (explicit `/effort max`) |
 | **Task ISA** | `~/.claude/PAI/MEMORY/WORK/cycle-19a-m-mobile-qa-hardening/ISA.md` |
@@ -176,16 +176,19 @@ Site is launch-grade for c1. Holding for c4/c5/c6 ownership.
 
 | Route | Expected | Result |
 |-------|----------|--------|
-| `/` | 200 + new ETag | `<filled by Phase 14>` |
-| `/markets/` | 200 | `<filled>` |
-| `/markets/fort-lauderdale/` | 200 | `<filled>` |
-| `/markets/pompano-beach/` | 200 | `<filled>` |
-| `/markets/boca-raton/` | 200 | `<filled>` |
-| `/markets/delray-beach/` | 200 | `<filled>` |
-| `/contact/` | 200 | `<filled>` |
-| `/valuation/` | 200 | `<filled>` |
-| ETag changed from `difgit5lydj44nrd` | yes | `<filled>` |
-| Staging noindex preserved | yes | `<filled>` |
+| `/` | 200 + new ETag | ✓ 200 · ETag `difks13fqrcw4ntl` |
+| `/markets/` | 200 | ✓ 200 |
+| `/markets/fort-lauderdale/` | 200 | ✓ 200 |
+| `/markets/pompano-beach/` | 200 | ✓ 200 |
+| `/markets/boca-raton/` | 200 | ✓ 200 |
+| `/markets/delray-beach/` | 200 | ✓ 200 |
+| `/contact/` | 200 | ✓ 200 |
+| `/valuation/` | 200 | ✓ 200 |
+| ETag changed from `difgit5lydj44nrd` | yes | ✓ → `difks13fqrcw4ntl` |
+| Staging noindex preserved | yes | ✓ `<meta name="robots" content="noindex">` present on home (and all 40 routes per qa-gate) |
+| "Showing featured markets" appears live | yes | ✓ visible in `curl https://.../?_=ts` HTML |
+| Footer double-period absent live | yes | ✓ no `.. ` sentence-boundary defect in live home |
+| Mobile readability post-deploy | 56/56 PASS | ✓ 4 viewports × 14 routes via `audit:mobile-readability` |
 | Secrets in logs | none | confirmed — `DOKPLOY_API_TOKEN` never echoed |
 
 ---
@@ -208,9 +211,11 @@ The QA gate has 0 critical and 0 c1 (site/content/design) findings. Mobile reada
 ## Receipts
 
 - Pre-cycle live ETag: `difgit5lydj44nrd`
+- Post-cycle live ETag: `difks13fqrcw4ntl`
 - Pre-cycle commit: `d0bf560` (Cycle 18 closeout)
-- Cycle 19A-M commit hash: `<filled at commit time>`
-- Cycle 19A-M deploy ID: `<filled at deploy time>`
+- Cycle 19A-M commit hash: `7d4774c`
+- Cycle 19A-M deploy duration: 156s (Dokploy poll start → status=done)
+- Post-deploy mobile-readability capture: 56/56 PASS in 1m45s
 - QA-gate matrix path: `reports/qa-gate-matrix.{json,md}`
 - Mobile-readability matrix path: `reports/audit-mobile-readability.{json,md}`
 - Mobile screenshot evidence: `docs/artifacts/cycle-19A-M/mobile-readability/{before,after}/` (gitignored; reproducible)
