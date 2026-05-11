@@ -9,7 +9,7 @@
 | **Live staging** | `https://miasanabriarealtor.trueidea.com/` |
 | **Pre-cycle live ETag** | `difgit5lydj44nrd` |
 | **Post-cycle live ETag (1st deploy, commit 7d4774c)** | `difks13fqrcw4ntl` ✓ flipped |
-| **Post-Cato-fix live ETag (2nd deploy, commit 65c311f)** | second deploy triggered; Dokploy status=done, but Caddy/CDN slow to flip ETag. New CSS hash `90daf75e7b1e55d0` returns 404 on live at handoff time. Classified c2 tool issue; main branch is correct; safe transient (CSS narrowing is conservative). |
+| **Post-Cato-fix live ETag (2nd deploy, commit 65c311f)** | `difl9krf8phc4ntl` ✓ flipped (after ~22 min cache propagation; Dokploy status=done at 90s, Caddy cache flipped ~21 min later). Live CSS path now references `1cc037050ff5b8c4.css` containing the tightened tap-target selectors (`btn-`, `tel:`, `mailto:`, `role="button"`, etc.) per Cato F5. |
 | **Algorithm version** | 6.4.0 |
 | **Effort tier** | E5 (explicit `/effort max`) |
 | **Task ISA** | `~/.claude/PAI/MEMORY/WORK/cycle-19a-m-mobile-qa-hardening/ISA.md` |
@@ -224,12 +224,13 @@ The QA gate has 0 critical and 0 c1 (site/content/design) findings. Mobile reada
 
 - Pre-cycle live ETag: `difgit5lydj44nrd`
 - Post-1st-deploy live ETag: `difks13fqrcw4ntl`
-- Cato-fix 2nd-deploy live ETag: pending Caddy cache flip; new CSS `90daf75e7b1e55d0` not yet served at handoff write (404 on live); Dokploy says status=done. Classified c2 tool issue (LC-7 cache propagation, not a deploy failure).
+- Cato-fix 2nd-deploy live ETag: `difl9krf8phc4ntl` ✓ flipped after ~22 min cache propagation. Live CSS `1cc037050ff5b8c4.css` confirmed to contain narrowed tap-target selectors.
 - Pre-cycle commit: `d0bf560` (Cycle 18 closeout)
 - Cycle 19A-M first commit: `7d4774c` (major fixes + new audits + docs)
 - Cycle 19A-M Cato-fix commit: `65c311f` (F1 honesty, F2 regex unify, F4 fs-route coverage, F5 selector scope, F3/F6 doc updates)
-- Cycle 19A-M deploy duration: 156s for 1st deploy; 2nd deploy in progress at handoff write
+- Cycle 19A-M deploy duration: 156s for 1st deploy; 90s for 2nd deploy (Dokploy poll → status=done), then ~21 min Caddy cache propagation before live ETag flipped
 - Post-1st-deploy mobile-readability capture: 56/56 PASS in 1m45s
+- 2nd-deploy live smoke: 8/8 critical routes 200, new ETag `difl9krf8phc4ntl`, new CSS path live with narrowed selectors
 - QA-gate matrix path: `reports/qa-gate-matrix.{json,md}`
 - Mobile-readability matrix path: `reports/audit-mobile-readability.{json,md}`
 - Mobile screenshot evidence: `docs/artifacts/cycle-19A-M/mobile-readability/{before,after}/` (gitignored; reproducible)
