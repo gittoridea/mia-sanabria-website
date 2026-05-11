@@ -1,7 +1,7 @@
 # Cycle 18 Production-Readiness Handoff — Fort Lauderdale Research-Backed V4 + Pompano Beach Market + Hillsboro Mile Taxonomy + Blog Updated-Date Removal
 
 **Date:** 2026-05-10
-**Mission result:** PENDING DEPLOY (this doc updated post-deploy)
+**Mission result:** **PASS** — staging deploy verified live; all 12 success criteria met; 1 minor in-cycle fix landed (Pompano Beach hero CTA above-fold regression at 1280x800 caught and fixed pre-deploy)
 
 ## 1. Mission summary
 
@@ -118,19 +118,25 @@ Forge dispatched as separate-context VERIFY (Anthropic-family pair to the missin
 
 ## 13. Deploy + live verification
 
-(Updated post-deploy)
+- Commits:
+  - `ab991f7` feat(MIA-SITE-CYCLE-18): research-backed Fort Lauderdale V4 + Pompano Beach market + Hillsboro Mile taxonomy + blog Updated-date removal
+  - `e03cf4b` fix(MIA-SITE-CYCLE-18): trim Pompano Beach intro to keep hero CTA above fold at 1280x800
+- Push: both commits pushed to `origin/main` (`9b7f828..ab991f7..e03cf4b`)
+- Deploy: `bun scripts/deploy-and-verify.ts --no-lighthouse` — pre-flight audit:all PASS (1 carry-forward WARN: `forms.classification` mailto x2; 1 carry-forward WARN: `viewportSanity`); deploy.applicationOne polled 131s to status=done
+- **ETag delta:** `dife89spr4sg4nrd` (Cycle 17) → `difgit5lydj44nrd` (Cycle 18) ✓
+- **Last-modified delta:** `Sun, 10 May 2026 23:42:25 GMT` → `Mon, 11 May 2026 01:30:13 GMT` ✓
+- Live grep `Updated [A-Z][a-z]+ [0-9]{4}` in /insights/why-automated-valuations-miss-luxury-waterfront/: **0 matches** ✓ (was 2x in Cycle 17 baseline)
+- Live grep `Hillsboro Mile` on /markets/: **12 matches** (now in Northern Broward section, NOT in South Florida cities/towns); section heading "Fort Lauderdale waterfront and Northern Broward clusters" appears 6x ✓
+- **Pompano Beach route status:** HTTP 200 ✓ (was 404 pre-deploy)
+- Pompano Beach hero image: rendered ✓ (auto-via OG)
+- Sitemap `/markets/pompano-beach/`: present ✓
+- **FtLaud V4 markers verified live:** "Nine verifiable variables" 2x, "Three tiers of decision" 2x, "What the geography actually is" 2x, "Confirm financing, cash, and insurance" 2x, "Organize the insurance dataroom" 2x ✓
+- Canonical email check on live: `msanabriarea@gmail.com` only (no `mia@miasanabriarealtor.com`) ✓
+- Live AFTER screenshots: `/tmp/mia-cycle18-live-after/` — 13 routes captured at 1280px
 
-- Commit:
-- Push:
-- Deploy:
-- ETag delta:
-- Live grep `Updated [A-Z][a-z]+ [0-9]{4}` in blog HTML:
-- Live grep `Hillsboro Mile` placement check:
-- Pompano Beach route status:
-- Pompano Beach image status:
-- Sitemap `/markets/pompano-beach/` status:
-- FtLaud V4 markers verified:
-- Live AFTER screenshots:
+### In-cycle fix detail
+
+After committing the initial Cycle 18 work as `ab991f7` and pushing to origin/main, `audit:all:stable` flagged `rendered.hero.primaryCtaAboveFoldDesktop` as FAIL for `/markets/pompano-beach/` at 1280x800. The Pompano Beach `intro` field (~70 words) made the hero too tall at desktop 1280x800. Trimmed to ~50 words while preserving all source-ledger-derived content (Lauderdale-by-the-Sea / Hillsboro Beach borders, Fisher Family Pier, deepwater Intracoastal residences, offshore reef-dive corridor, relative-value framing). Committed as `e03cf4b`. Re-ran `audit:rendered` → 14/1/0 (1 WARN = carry-forward `viewportSanity`). Deploy pre-flight then PASSed and the deploy fired cleanly.
 
 ## 14. Production-readiness remaining list
 
