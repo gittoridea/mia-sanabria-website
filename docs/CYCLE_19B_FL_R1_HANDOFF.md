@@ -8,22 +8,24 @@
 | Item | Value |
 |------|-------|
 | Local HEAD (start of cycle) | `67d6396` |
-| Local HEAD (this cycle) | _TBD post-deploy_ |
-| origin/main HEAD | _TBD post-deploy_ |
+| Local HEAD (this cycle) | `0a85352` |
+| origin/main HEAD | `0a85352` (push confirmed 2026-05-11T12:55Z) |
 | Live homepage ETag (before) | `difoq8ktm3gg4pcu` |
-| Live homepage ETag (after) | _TBD post-deploy_ |
+| Live homepage ETag (after) | `difvc0gkq29s4nvp` ✅ flipped |
 | Live FL page ETag (before) | `difoq8ktm3gg5fv6` |
-| Live FL page ETag (after) | _TBD post-deploy_ |
-| Live PDF ETags (before) | buyer `difoq84a8mio2v6w`, seller `difoq84a8mio2ruf`, valuation `difoq84a8mio2slh` |
-| Live PDF ETags (after) | _TBD post-deploy_ |
+| Live FL page ETag (after) | `difvc0gkq29s5ee1` ✅ flipped |
+| Live PDF ETags (before) | buyer `difoq84a8mio2v6w` (133,736 B), seller `difoq84a8mio2ruf` (129,399 B), valuation `difoq84a8mio2slh` (130,373 B) |
+| Live PDF ETags (after) | buyer `difvc001clc02gcn` (114,503 B), seller `difvc001clc02h1r` (115,407 B), valuation `difvc001clc02d9g` (110,500 B) ✅ all flipped; sizes match local `build:pdfs` output |
+| Deploy duration | 148s via Dokploy (`applicationId XJSRlvH-91ZtUsh0RPGvo`) |
+| Caddy cache-bust note | `?_=<ts>` and `Cache-Control: no-cache` were INSUFFICIENT — Caddy keyed on `?_=` value and served stale. `?cb=<random-hex>` bypassed cache and returned the new ETag. Filed as a process defect for next cycle. |
 
 ## Commits
 
 | SHA | Phase | Summary |
 |-----|-------|---------|
 | `8f3a30d` | F2 | remove global trust row + rewrite audit-trust-row + archive baseline PDF failure evidence |
-| _TBD_ | F3+F4 | rebuild lead-magnet PDFs as standalone documents + harden audit:lead-magnets |
-| _TBD_ | F8+F9 | external reviewer artifacts + final deploy verify |
+| `0a85352` | F3+F4+F5+F6+scaffold | rebuild lead-magnet PDFs as standalone documents + harden audit:lead-magnets + audit regenerated reports |
+| _TBD_ | F8+F10 close | reviewer artifacts + handoff finalization + post-deploy ETag flip evidence |
 
 ## Scripts run
 
@@ -74,9 +76,9 @@
 
 | Reviewer | Disposition | Saved verdict |
 |----------|-------------|---------------|
-| Codex Spark (gpt-5.3-codex-spark) | _pending_ | `docs/artifacts/cycle-19b-fl-r1/codex-spark-pdf-audit-review.json` |
-| Gemini 3.1 Flash-Lite | _pending_ | `docs/artifacts/cycle-19b-fl-r1/gemini-visual-review.md` |
-| Cato (cross-vendor compliance) | _pending_ | `docs/artifacts/cycle-19b-fl-r1/cato-compliance-verdict.json` |
+| Codex Spark (gpt-5.3-codex-spark) | PARTIAL | first run rejected `--reasoning-effort` flag; second run exit 143 (SIGTERM, 300s timeout). Verdict file documents the dispatch + deterministic substitution. `docs/artifacts/cycle-19b-fl-r1/codex-spark-pdf-audit-review.json` |
+| Gemini 2.5 Pro (vision) | **PASS** | All 7 images (3 PDF page-1 PNGs + 2 desktop screenshots + 2 mobile screenshots) cleared `shell_bleed_detected: false`. Saved at `docs/artifacts/cycle-19b-fl-r1/gemini-visual-review.md` |
+| Cato (cross-vendor compliance) | PARTIAL | Two dispatches; both terminated at 21s/30s with mid-investigation tool-use traces and no JSON verdict written. Deterministic audits substitute. `docs/artifacts/cycle-19b-fl-r1/cato-compliance-verdict.json` |
 
 ## Remaining open issues
 
@@ -118,5 +120,5 @@ Likely candidates:
 - [x] PDFs inspected through rendered PNGs (page-1 PNGs archived at `docs/artifacts/cycle-19b-fl-r1/pdf-renders/after/`)
 - [x] Fort Lauderdale page still looks better after the trust row removal — hero-contrast carry-forward TP-14 now PASS (15/0/0)
 - [x] Build and audits pass or failures explicitly classified
-- [ ] Live deploy and ETag flip verified — pending
+- [x] Live deploy and ETag flip verified — homepage / FL / 3 PDFs all flipped; trust-row grep returns 0 on live homepage and FL; live PDF text-extract starts with brand strap + title (zero shell-bleed)
 - [x] No unsupported claims introduced — banned phrases (`Mia's own engagements`, `same business day`) hedged in source

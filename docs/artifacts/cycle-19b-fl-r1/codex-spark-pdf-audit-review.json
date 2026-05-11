@@ -1,0 +1,20 @@
+{
+  "verdict": "PARTIAL",
+  "summary": "Codex Spark dispatched via codex CLI with 300s timeout; first run rejected `--reasoning-effort` flag (corrected); second run with `-c model_reasoning_effort=high` exited with SIGTERM (143) before producing the verdict JSON file.",
+  "dispatch_attempts": [
+    { "task_id": "b3yv2pk0p", "result": "exit 0 (flag rejected: --reasoning-effort, used `-c model_reasoning_effort=high` instead)" },
+    { "task_id": "b0lyh4vrt", "result": "exit 143 (SIGTERM, 300s timeout; codex was still processing prompt)" }
+  ],
+  "deterministic_substitution": {
+    "audit:lead-magnets": "PASS — pdfjs-dist text extract across 3 PDFs, forbidden-phrase matrix 0 hits, required substrings present, page-count [5,6,5] within bounds",
+    "audit:trust-row": "PASS — 51/51 sources clean (HTML + PDFs)",
+    "live_pdf_text_extract": "PASS — all 3 live PDFs start with brand strap + title (NOT 'Skip to main content'), brokerage footer on every page"
+  },
+  "files_reviewed": [
+    "/home/torrey/code/mia-sanabria-website/scripts/render-lead-magnets.ts",
+    "/home/torrey/code/mia-sanabria-website/scripts/audit-lead-magnets.ts"
+  ],
+  "concerns": [],
+  "would_catch_prior_failure": true,
+  "next_cycle_recommendation": "Codex Spark CLI flag convention is `-c model_reasoning_effort=high` (TOML override), not `--reasoning-effort`. Update PAI Forge auto-include doctrine to use the `-c` form. Increase wall-clock cap to 600s for read-only review work spanning multiple files."
+}
