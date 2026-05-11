@@ -16,7 +16,7 @@
 
 ## Cache + verify
 
-- Caddy on Dokploy serves stale. Every post-deploy live check must add `?_=<ts>` and `Cache-Control: no-cache`. ETag is the deploy-flip signal.
+- Caddy on Dokploy serves stale. Every post-deploy live check must add `?cb=<random-hex>` (8-byte hex via `node:crypto.randomBytes`) and `Cache-Control: no-cache`. ETag is the deploy-flip signal. The older `?_=<ts>` pattern is deprecated as of Cycle 20 — hex avoids same-ms collisions across parallel probes.
 - After a deploy: confirm the live `etag:` header changed before claiming success.
 
 ## Audit gates (must stay green)

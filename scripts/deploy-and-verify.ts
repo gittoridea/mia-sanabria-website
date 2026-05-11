@@ -15,6 +15,14 @@
  */
 import { readFile, mkdir } from "node:fs/promises";
 import { spawn, spawnSync } from "node:child_process";
+import { randomBytes } from "node:crypto";
+
+// Cache-buster query param. Caddy/Dokploy will pass through any query string
+// that doesn't match its cache key, so a random hex token forces an origin
+// hit even when the path is otherwise cached. Hex (not Date.now ms) avoids
+// the case where two same-millisecond requests in the same deploy share a
+// token and confuse a downstream proxy.
+const cb = () => `cb=${randomBytes(8).toString("hex")}`;
 
 const APP_ID = "XJSRlvH-91ZtUsh0RPGvo";
 const STAGING_BASE = "https://miasanabriarealtor.trueidea.com";
@@ -161,7 +169,7 @@ async function main() {
   console.log("→ triggering deploy");
   await api<unknown>("application.deploy", { method: "POST", body: JSON.stringify({ applicationId: APP_ID }) });
 
-  const before = await curlHead(`${STAGING_BASE}/?_=${Date.now()}`);
+  const before = await curlHead(`${STAGING_BASE}/?${cb()}`);
   console.log(`  pre-deploy last-modified: ${before.lastModified ?? "?"}`);
 
   console.log("→ polling application status");
@@ -180,7 +188,7 @@ async function main() {
   console.log(`✓ deploy done in ${((Date.now() - start) / 1000).toFixed(0)}s`);
 
   await new Promise((r) => setTimeout(r, 3000));
-  const after = await curlHead(`${STAGING_BASE}/?_=${Date.now()}`);
+  const after = await curlHead(`${STAGING_BASE}/?${cb()}`);
   console.log(`  post-deploy last-modified: ${after.lastModified ?? "?"}`);
   if (after.lastModified === before.lastModified) {
     console.warn("  ⚠ last-modified did not change — Caddy may be caching even with bust headers");
@@ -194,7 +202,7 @@ async function main() {
   await mkdir(auditDir, { recursive: true });
   const results = await Promise.all(
     Object.entries(pages).map(async ([slug, path]) => {
-      const url = `${STAGING_BASE}${path}?_=${Date.now()}`;
+      const url = `${STAGING_BASE}${path}?${cb()}`;
       const out = `${auditDir}/lh-${slug}.json`;
       try {
         const r = await lighthouseRun(url, out);

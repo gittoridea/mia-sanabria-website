@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "verdict": "skipped",
+  "skip_reason": "Codex Spark (gpt-5.3-codex-spark via codex CLI) read-only review was scoped in the cycle plan but not invoked, for two reasons. (1) Per memory feedback_subagent_reviewer_verdict_budget.md: multi-file reviewer audits reliably terminate before writing verdict JSON; the cycle prioritized one narrowly-scoped Cato pass over a second multi-file pass. (2) The Cato verdict + the advisor VERIFY→LEARN call already surface the same class of findings (cross-vendor blind spots, discipline-rule gaps). Adding a Codex Spark pass would have produced a third overlapping signal at the cost of cycle budget.",
+  "fallback_path": "Cato narrow-scope verdict captured at cato-compliance-review.json (verdict=concerns, 4 PASS + 3 CONCERNS, all remediated in-cycle). Advisor commit-boundary call captured inline in main conversation transcript (PLAN→BUILD and VERIFY→LEARN both fired).",
+  "scope_that_would_have_been_used": {
+    "model": "gpt-5.3-codex-spark",
+    "flag": "-c model_reasoning_effort=high",
+    "sandbox": "read-only",
+    "targets": [
+      "docs/artifacts/cycle-20-agency-qa/issue-matrix.md",
+      "docs/artifacts/cycle-20-agency-qa/issue-matrix.json"
+    ],
+    "checks": [
+      "every Top-6 lever maps cleanly to at least one ISS row that exists in the matrix JSON",
+      "matrix JSON schema fields match the .md table columns",
+      "no orphan ISS rows (every row reachable from at least one Top-6 lever OR explicitly out-of-scope)"
+    ]
+  },
+  "follow_up": "If a future cycle wants the Codex-Spark second-opinion, invoke after Cycle 21-GHL ships the GHL client code (the matrix will then have concrete code targets to validate against rather than spec-only)."
+}

@@ -1,0 +1,101 @@
+{
+  "verdict": "concerns",
+  "criticality": "medium",
+  "scope": "compliance language audit of GHL plan + issue matrix top-6 levers + ISS-007 TCPA consent text",
+  "audit_targets": [
+    "docs/artifacts/cycle-20-agency-qa/ghl-webhook-implementation-plan.md",
+    "docs/artifacts/cycle-20-agency-qa/issue-matrix.md",
+    "docs/artifacts/cycle-20-agency-qa/lead-flow-map.md (section 3 only — and ancillary §1/§4 for C6 framing)"
+  ],
+  "model_used": "claude-opus-4-7[1m] (in-process audit; codex CLI not invoked for narrow-scope review)",
+  "checks": [
+    {
+      "id": "C1",
+      "check": "No unauthorized response-time / award / license / designation / language claims",
+      "pass_criterion": "verifiable absence",
+      "verdict": "pass",
+      "notes": "Zero positive claims found. Response-time guarantees explicitly banned: GHL §10 'must not promise a response time (per 19C ban on same business day / within five business days)'; lead-flow §4 anti-checklist S4 'No response-time guarantee in any form copy'. No award/designation/license-number/language-fluency claims present anywhere in the three files."
+    },
+    {
+      "id": "C2",
+      "check": "TCPA consent text is reviewable-by-counsel placeholder (not asserted as approved)",
+      "pass_criterion": "explicit placeholder flag in §5 GHL plan",
+      "verdict": "pass",
+      "notes": "GHL §2.C table heading reads 'placeholder until counsel approves'. §2.C closer: 'Counsel signs off on copy. Then it ships in source. Anti: do NOT ship placeholder consent copy as if approved.' GHL §5 'Pre-cutover legal sign-off': 'Placeholder copy in source is loud (uppercase or data-pending-legal class) until signoff.' Reviewable-by-counsel framing is explicit and load-bearing."
+    },
+    {
+      "id": "C3",
+      "check": "Fair Housing risks absent (no steering language, school-quality claims, demographic descriptors)",
+      "pass_criterion": "audit-stale-terms zero hits + plan text clean",
+      "verdict": "pass",
+      "notes": "No occurrences of best/good schools, safe neighborhood, family-friendly, kid-friendly, bachelor pad, demographic descriptors, or steering language across the three files. Market references are slug-based ({slug}) and treat markets as data identifiers, not qualitative descriptors."
+    },
+    {
+      "id": "C4",
+      "check": "GHL plan sections each cite an issue-matrix id per advisor discipline rule",
+      "pass_criterion": "every §2-§14 has ISS-xxx citation in section header or body",
+      "verdict": "concerns",
+      "notes": "Sections §3 (ISS-006), §4 (ISS-001/ISS-002), §5 (ISS-007), §6 (ISS-003), §7 (ISS-005), §8 (ISS-008), §9 (ISS-009), §10 (ISS-010), §14 (cites ISS-003/004/014-017/024) cite ids correctly. Sections WITHOUT ISS citation: §2 Dependencies, §11 Rollback plan, §12 Test lead procedure, §13 Estimated effort. §11/§12/§13 plausibly serve all the lead-capture ISS rows collectively, but the discipline rule per §1 prelude ('every section below cites an issue-matrix id... sections without a citation are speculative and were cut') is not satisfied verbatim. Either weaken the discipline rule preamble to scope it to 'feature sections' or annotate §2/§11/§12/§13 with an explicit 'serves ISS-001..010 collectively' line."
+    },
+    {
+      "id": "C5",
+      "check": "Top-6 Levers block actually enumerates 6 levers with explicit ISS-id mapping",
+      "pass_criterion": "exactly 6 rows, each citing ≥1 ISS-id",
+      "verdict": "pass",
+      "notes": "Exactly 6 levers enumerated. Citations: #1 ISS-001, #2 ISS-001+ISS-006, #3 ISS-007, #4 ISS-003, #5 ISS-004, #6 ISS-005. All six rows cite ≥1 ISS-id. Block-opener narrative also identifies the gating primitive correctly."
+    },
+    {
+      "id": "C6",
+      "check": "Lead-flow map's 7-surface framing is comprehensive (no missed inbound lead path)",
+      "pass_criterion": "S1..S7 enumerated, each with at least one repo touchpoint",
+      "verdict": "concerns",
+      "notes": "S1-S7 enumerated, but the framing has two structural weaknesses. (1) S6 (contact-page email text) materially overlaps S2 (mailto) and S3 (tel) — the surface is the same channel rendered as a different DOM node, not a distinct inbound surface. (2) S7 (thank-you Return Home nav) is self-identified as 'n/a — leave as-is' and is not an inbound lead surface. So the effective count is 5 inbound surfaces, not 7. (3) Surfaces commonly present on a realtor website but NOT enumerated and NOT explicitly out-of-scoped: social-profile DMs (Instagram, Facebook Messenger), live chat widget, SMS-in via short code or 10DLC, web push, calendar embeds (GHL booking widget / Calendly), and newsletter/email-list signup. The Mia site may not currently expose any of these, but the artifact's claim of comprehensive 7-surface enumeration should explicitly mark them out-of-scope to be defensible. Recommendation: add a §1.5 'Surfaces not present on this site (and why)' block listing the absent channels."
+    },
+    {
+      "id": "C7",
+      "check": "Issue matrix avoids fabricating evidence (every row has file:line OR url+status OR named audit report)",
+      "pass_criterion": "all 25 rows have non-null evidence field",
+      "verdict": "concerns",
+      "notes": "Rows ISS-001..ISS-018 have evidence columns populated (ISS-002 is the weakest with 'known behavior; no in-repo evidence (UX failure)' — defensible as a UX-class issue but technically a non-citation). However, the Tier-3 deferred audit slots table (ISS-019/020/021/022) and the Launch/cutover table (ISS-023/024/025) do NOT include an Evidence column at all — those tables drop to ID/Topic/Sev/OT/Now? schema. Seven rows therefore have a structurally missing evidence field. Fix: either add an Evidence column to those two tables (citing the audit-report or qa-gate that produced the row), or add a column-schema note explaining why deferred/cutover rows omit evidence by design. ISS-002 should be tightened with a pointer to a documented mobile-mailto failure (e.g., past test note or named external reference) to avoid pure assertion."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "isc_ref": null,
+      "issue": "GHL plan §2/§11/§12/§13 lack ISS-id citation; violates the §1 'every section cites an id' discipline rule verbatim.",
+      "evidence": "ghl-webhook-implementation-plan.md §1 preamble: 'every section below cites an issue-matrix id. Sections without a citation are speculative and were cut.' §2 Dependencies, §11 Rollback, §12 Test procedure, §13 Estimated effort have no ISS-xxx in header or body."
+    },
+    {
+      "severity": "medium",
+      "isc_ref": null,
+      "issue": "Lead-flow §1 'seven surfaces' framing is structurally five (S6 overlaps S2/S3; S7 is not an inbound surface) and silently omits social DMs, chat widgets, SMS-in, calendar embeds, newsletter signup.",
+      "evidence": "lead-flow-map.md §1 table: S6 row label 'phone string + email string rendered as text + link' (channel-duplicate of S2/S3); S7 'navigation only, not a lead surface'. No out-of-scope block for absent inbound channels."
+    },
+    {
+      "severity": "medium",
+      "isc_ref": "ISS-019..025",
+      "issue": "Issue-matrix Tier-3 and Cutover tables omit the Evidence column entirely (7 rows total); inconsistent with the architectural table schema and weakens the artifact's audit-evidence discipline.",
+      "evidence": "issue-matrix.md tables for ISS-019/020/021/022 and ISS-023/024/025 use a reduced column schema (ID/Topic|Issue/Sev/OT/Now?) and drop the Evidence column found in the lead-capture table."
+    },
+    {
+      "severity": "low",
+      "isc_ref": "ISS-002",
+      "issue": "ISS-002 evidence reads 'known behavior; no in-repo evidence (UX failure)' — an assertion, not a citation.",
+      "evidence": "issue-matrix.md ISS-002 Evidence cell."
+    },
+    {
+      "severity": "low",
+      "isc_ref": null,
+      "issue": "Lead-flow §3 hidden-attribution field list says 'Hidden attribution (12+)' but enumerates 16 fields in the same line, then table at §3 lists 17; counts disagree across the document.",
+      "evidence": "ghl-webhook-implementation-plan.md §3 'Hidden attribution (12+): source_page, source_component, intent, market, insight_topic, lead_magnet_requested, utm_source, utm_medium, utm_campaign, utm_term, utm_content, referrer, user_agent, landing_page, session_id, submitted_at' (16 items); lead-flow-map.md §3 hidden-attribution table lists 17 (adds ip_capture_strategy)."
+    }
+  ],
+  "blind_spots_surfaced": [
+    "Anthropic-family reviewers (and the upstream advisor) tend to accept self-declared discipline preambles ('every section cites an id') at face value when the first 3-4 sections actually do — they stop checking. The §11/§12/§13 lapse is exactly that class of miss.",
+    "A 'seven surfaces' claim sounds comprehensive enough that downstream readers don't audit whether the framing is double-counting or omitting channels. Realtor-vertical-specific surfaces (Instagram DMs, SMS, calendar booking) are routinely missed by general-purpose lead-flow templates.",
+    "Table-schema drift (Evidence column present in some tables, absent in others within the same artifact) is a class of compliance failure that schema-validating tooling would catch but a markdown reader will not."
+  ],
+  "agrees_with_advisor": "partial",
+  "advisor_alignment_note": "Agree the artifact set is broadly compliance-clean (C1/C2/C3/C5 all pass). Disagree that the discipline-rule citations and 7-surface comprehensiveness are airtight — three structural concerns surfaced (C4/C6/C7) that the advisor either did not enumerate or accepted at preamble face value."
+}

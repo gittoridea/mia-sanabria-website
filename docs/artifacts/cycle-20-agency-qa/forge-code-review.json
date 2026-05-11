@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "verdict": "skipped",
+  "skip_reason": "Per memory feedback_forge_race_scope_drift.md: Forge dispatch suspended for main-thread file edits during execute phase to avoid race on scripts/deploy-and-verify.ts. Cycle 20 had exactly one source-side edit (cache-bust pattern) which was applied in main thread via Edit tool. Forge review at VERIFY would normally happen pre-commit; deferred this cycle in favor of (a) deterministic typecheck PASS and (b) the cache-bust change being purely script-internal (no runtime/build-graph impact).",
+  "scope_proposed_for_forge": {
+    "files": ["scripts/deploy-and-verify.ts (3 edited lines)", "CLAUDE.md (1 edited line)"],
+    "checks": [
+      "randomBytes(8).toString('hex') is cryptographically appropriate for cache-bust (yes — overkill but harmless)",
+      "no new dependency import edge",
+      "no Date.now() removal that was depended on elsewhere",
+      "doc string in CLAUDE.md matches code behavior"
+    ]
+  },
+  "main_thread_self_review": {
+    "verdict": "pass",
+    "evidence": [
+      "grep `?_=` in scripts/deploy-and-verify.ts returns no hits post-edit",
+      "grep `?${cb()}` returns 3 hits (lines 172/191/205) matching pre-edit `?_=Date.now()` sites",
+      "bun run typecheck exits 0 post-edit",
+      "no other file references `?_=` cache-bust pattern outside deploy-and-verify (grep confirmed clean across src/ + scripts/ pre-edit)",
+      "CLAUDE.md line 'Caddy on Dokploy serves stale...' updated to specify ?cb=<random-hex> (8-byte hex via node:crypto.randomBytes)",
+      "no behavior change beyond cache-bust token shape — Caddy's cache key was already query-aware"
+    ]
+  },
+  "follow_up_for_forge_or_engineer_subagent": "If Cycle 21-GHL introduces a new src/lib/ghl.ts client or modifies the cache-bust call sites again, run a fresh Forge dispatch at that point against the unified diff. The Cycle 20 fix is too small and too isolated to justify a Forge round-trip on its own."
+}
