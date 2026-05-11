@@ -163,12 +163,18 @@ async function checkRouteSitemapMatch(): Promise<CheckResult[]> {
   // architecture: redirect targets only, never user-discoverable navigation)
   // and must NOT appear in sitemap.xml. Excluded from "built but not in
   // sitemap" check.
+  // Cycle 19B-FL: /downloads/ routes are PDF-source HTML pages that exist as
+  // the print-friendly canonical for each lead-magnet PDF. They are noindex'd
+  // (the PDF artifact is the user-facing deliverable) and must NOT appear in
+  // sitemap.xml. Same exclusion treatment as /thank-you/.
   const isExcluded = (r: string) =>
     r === "/_not-found/" ||
     r === "/404/" ||
     r.startsWith("/_") ||
     r === "/thank-you/" ||
-    r.startsWith("/thank-you/");
+    r.startsWith("/thank-you/") ||
+    r === "/downloads/" ||
+    r.startsWith("/downloads/");
   const built = (await listBuiltRoutes()).filter((r) => !isExcluded(r));
   const sitemap = parseSitemapRoutes(await readSitemapXml()).map((r) => (r.endsWith("/") || r === "" ? r : `${r}/`));
   const sitemapSet = new Set(sitemap.map((r) => r || "/"));

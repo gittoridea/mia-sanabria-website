@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cinzel, Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
+import { TrustRow } from "@/components/TrustRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { WebSiteSchema } from "@/components/schema/WebSiteSchema";
@@ -110,6 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
         <SiteHeader />
+        <TrustRow />
         <main id="main">{children}</main>
         <SiteFooter />
       </body>

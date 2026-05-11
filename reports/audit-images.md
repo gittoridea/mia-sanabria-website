@@ -1,6 +1,6 @@
 # Audit Images Report
 
-**Generated:** 2026-05-11T05:05:11.906Z
+**Generated:** 2026-05-11T07:37:32.546Z
 
 **Summary:** 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -10,8 +10,8 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 306 <img> tags across 46 pages — all local references resolve |
-| `images.ogImagesResolve` | ✅ | Every og:image referencing a local /public/* path resolves to an actual file | 46 og:image entries across 46 pages — all local references resolve |
+| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 318 <img> tags across 49 pages — all local references resolve |
+| `images.ogImagesResolve` | ✅ | Every og:image referencing a local /public/* path resolves to an actual file | 49 og:image entries across 49 pages — all local references resolve |
 | `images.twitterImagesResolve` | ✅ | Every twitter:image referencing a local /public/* path resolves to an actual file | 0 broken twitter:image references |
 
 ### Production Polish
@@ -24,7 +24,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 306 <img> tags — all have alt attribute |
+| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 318 <img> tags — all have alt attribute |
 
 ### Static Export Integrity
 

@@ -1,10 +1,10 @@
 # QA-Gate Matrix — Cycle 19A-M
 
-Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T05:11:52.167Z
+Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T07:40:32.493Z
 
-**45 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 45
+**48 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 48
 
-**Owner-category split** → c1 site:0 · c2 tool:0 · c3 principal:0 · c4 GHL:1 · c5 legal:4 · c6 launch:45
+**Owner-category split** → c1 site:0 · c2 tool:0 · c3 principal:0 · c4 GHL:1 · c5 legal:4 · c6 launch:48
 
 ## home (1 routes)
 
@@ -12,11 +12,14 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T05:11
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
 | `/` | ✓ | 56 | 154 | 7 | 64 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 
-## other (1 routes)
+## other (4 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
 | `/404` | ✓ | 39 | 132 | 2 | 39 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/downloads/fort-lauderdale-waterfront-valuation-prep-sheet` | ✓ | 62 | 97 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/downloads/luxury-seller-pre-listing-checklist` | ✓ | 50 | 85 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/downloads/waterfront-buyer-due-diligence-checklist` | ✓ | 55 | 90 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
 
 ## identity (1 routes)
 
@@ -51,7 +54,7 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T05:11
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/insights` | ✓ | 55 | 151 | 4 | 63 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
+| `/insights` | ✓ | 55 | 152 | 4 | 63 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
 
 ## insight_post (12 routes)
 
@@ -85,7 +88,7 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-11T05:11
 | `/markets/boca-raton` | ✓ | 44 | 157 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/coral-ridge` | ✓ | 45 | 157 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/delray-beach` | ✓ | 46 | 152 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/fort-lauderdale` | ✓ | 49 | 156 | 6 | 75 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/fort-lauderdale` | ✓ | 49 | 156 | 6 | 79 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/harbor-beach` | ✓ | 46 | 156 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/hillsboro-mile` | ✓ | 48 | 157 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/las-olas-isles` | ✓ | 48 | 155 | 6 | 57 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |

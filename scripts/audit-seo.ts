@@ -77,6 +77,14 @@ try {
     // 404 page is allowed to be lighter — skip body-word floor for it.
     const is404 = /\b404\.html$/.test(rel);
 
+    // Cycle 19B-FL — noindex routes (e.g. /downloads/* PDF-source pages, /thank-you/*)
+    // are NOT user-facing SERP surfaces. Title length, description length, and OG/
+    // twitter-card metadata DO NOT apply to them. We still enforce structural rules
+    // (<html lang>, single <h1>, canonical, hreflang) on every route.
+    const robotsMatch = html.match(/<meta[^>]+name=["']robots["'][^>]*content=["']([^"']*)["']/i);
+    const robotsContent = (robotsMatch?.[1] ?? "").toLowerCase();
+    const isNoindex = robotsContent.includes("noindex");
+
     // <html lang="...">
     const htmlTagMatch = html.match(/<html\b[^>]*>/i);
     const htmlTag = htmlTagMatch ? htmlTagMatch[0] : "";
@@ -98,7 +106,7 @@ try {
       const titleText = (titleMatch[1] ?? "").trim();
       if (titleText.length === 0)
         findings.push({ file: rel, rule: "title-non-empty", detail: "<title> is empty", level: "error" });
-      else if (titleText.length > TITLE_MAX)
+      else if (!isNoindex && titleText.length > TITLE_MAX)
         findings.push({
           file: rel,
           rule: "title-length",
@@ -115,7 +123,7 @@ try {
       const desc = (descMatch[1] ?? "").trim();
       if (desc.length === 0)
         findings.push({ file: rel, rule: "description-non-empty", detail: "description is empty", level: "error" });
-      else if (desc.length > DESCRIPTION_MAX)
+      else if (!isNoindex && desc.length > DESCRIPTION_MAX)
         findings.push({
           file: rel,
           rule: "description-length",

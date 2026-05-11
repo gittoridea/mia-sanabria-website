@@ -194,104 +194,137 @@ const V3_PEER_POINTERS: Readonly<Record<string, string>> = {
     "Comes up when mid-century-modern architecture and a quiet residential rhythm anchor the search.",
 };
 
-const BUYER_PLAYBOOK = [
+// Cycle 19B-FL — Buyer playbook redesign. Each step retains its canonical
+// Cycle 18 ordering (Brief → Neighborhood → Lot data → Diligence sequence →
+// Financing/insurance → Private availability) and source-ledger backing.
+// Added: optional `tag` (one-line eyebrow above the title for scannability)
+// and `gate` flag (renders the step as an emphasized full-width decision-gate
+// card with the brass-400 accent — mirrors the WATERFRONT_VARIABLES pattern).
+// No factual claim added; all body strings preserve verifiable language.
+const BUYER_PLAYBOOK: ReadonlyArray<{
+  n: string;
+  tag: string;
+  title: string;
+  body: string;
+  gate?: boolean;
+}> = [
   {
     n: "01",
+    tag: "Brief",
     title: "Begin with a brief, not a search",
     body:
-      "The first 60-90 minutes is conversation. Lifestyle anchors, timeline, vessel profile, architectural preference, and target price band. The brief filters listings; aesthetic enthusiasm does not. If the brief crosses a relocation — Northeast, Midwest, or West Coast — the diligence sequence accounts for remote initial conversations and a defined in-person stage.",
+      "The first 60-90 minutes is conversation. Lifestyle anchors, timeline, vessel profile, architectural preference, and target price band. The brief filters listings; aesthetic enthusiasm does not. Relocation briefs add a remote-first phase, then a defined in-person stage.",
   },
   {
     n: "02",
+    tag: "Neighborhood shortlist",
     title: "Narrow to two or three neighborhoods",
     body:
       "Eastern Fort Lauderdale resolves into deepwater finger isles, in-town walkable streets, mid-century waterfront pockets, and gated barrier-island enclaves. Most serious buyers belong in two or three of those, not all of them.",
   },
   {
     n: "03",
+    tag: "Lot and waterfront data",
     title: "Treat the lot as data, not aesthetic",
     body:
-      "Survey, dock permits, seawall inspection, route-to-inlet — the verifiable variables that listing photographs flatten. The conversation Mia leads on the address typically opens with these, not the kitchen finishes.",
+      "Survey, dock permits, seawall inspection, route-to-inlet — the verifiable variables that listing photographs flatten. The conversation Mia leads on the address opens with these, not with the kitchen finishes.",
   },
   {
     n: "04",
+    tag: "Diligence sequence",
     title: "Sequence diligence before offer",
     body:
       "Surveyor, marine contractor, title, mortgage advisor where applicable. Mia identifies which licensed specialists will be needed up front so the offer's contingency timeline reflects the actual workload, not an optimistic estimate.",
   },
   {
-    // Cycle 18 — V4 NEW step. Financing / cash / insurance underwriting is the
-    // step that most often delays a closing on Eastern FtLaud waterfront —
-    // particularly the insurance bind. Promoted to its own playbook step so
-    // the buyer brief includes early lender + insurance-broker contact, not
-    // an afterthought during the contingency window.
     n: "05",
+    tag: "Financing and insurance",
     title: "Confirm financing, cash, and insurance early",
     body:
-      "Buyers paying in cash should have proof-of-funds organized before the brief; buyers financing should engage a coastal-Florida lender (and a Florida-licensed insurance broker) in parallel with the search. On Eastern FtLaud waterfront, the binding step is often the insurance underwriting — not the lender. Sequencing the broker introduction up front compresses the diligence window from a scramble into a checklist.",
+      "Cash buyers organize proof-of-funds before the brief; financing buyers engage a coastal-Florida lender and a Florida-licensed insurance broker in parallel with the search. On Eastern FtLaud waterfront, the binding step is often the insurance underwriting — not the lender. Sequencing the broker up front compresses the diligence window from a scramble into a checklist.",
   },
   {
+    // Cycle 19B-FL — emphasized decision-gate card. The "private availability"
+    // step is the buyer-side question that most often decides whether the brief
+    // becomes a public-listing search or a brokerage-relationship conversation.
+    // Hedged language preserved verbatim: access is not guaranteed; the gate
+    // names what Mia maintains, not what she promises.
     n: "06",
+    tag: "Private availability — when it exists",
     title: "Use private conversations for quiet inventory",
     body:
-      "Some residences are quietly available before they list publicly. Access varies by market and timing and is not guaranteed; what Mia maintains is the brokerage relationships that surface fits when they exist.",
+      "Some residences are quietly available before they list publicly. Access varies by market and timing and is not guaranteed; what Mia maintains is the brokerage relationships that surface fits when they exist. Buyers who want only public-listing exposure say so up front; buyers who want both ask for the private-conversation channel to remain open in parallel.",
+    gate: true,
   },
 ];
 
-const SELLER_PLAYBOOK = [
+// Cycle 19B-FL — Seller playbook redesign mirrors the buyer pattern: each step
+// carries its canonical Cycle 18 ordering (Property-specific valuation →
+// Documentation → Insurance dataroom → Buyer-profile positioning → Photography
+// & narrative → Tour strategy → Quiet pre-market option) plus an eyebrow `tag`
+// and an optional `gate` flag for the final decision-gate emphasis (the
+// quiet-pre-market option is the most-asked seller-side question and earns the
+// full-width treatment). All hedged language preserved verbatim.
+const SELLER_PLAYBOOK: ReadonlyArray<{
+  n: string;
+  tag: string;
+  title: string;
+  body: string;
+  gate?: boolean;
+}> = [
   {
     n: "01",
+    tag: "Property-specific valuation",
     title: "Begin with a property-specific valuation",
     body:
       "Current comparable sales drawn from the right cohort — the same block, the same canal, the same lot profile. Broad averages do not predict what a deepwater point-lot trades at relative to an interior canal residence. Why public estimates miss this is its own conversation; the short version lives in the Insights note on automated valuations.",
   },
   {
     n: "02",
+    tag: "Waterfront documentation",
     title: "Document the verifiable assets",
     body:
       "Seawall inspection records, dock permits, renovation history, roof and 4-point inspections, elevation certificate. Listings that arrive with this paperwork in hand close faster and renegotiate less.",
   },
   {
-    // Cycle 18 — V4 NEW step. Insurance / flood / elevation documentation is
-    // carved out as a discrete step (was implicit in V3's "verifiable assets"
-    // catch-all). On Eastern FtLaud waterfront, the buyer's bind almost
-    // always involves insurance underwriting; a seller who has the recent
-    // 4-point, wind-mitigation report, elevation certificate, and prior-claim
-    // history organized for the dataroom shortens the contingency window for
-    // the buyer and reduces post-inspection renegotiation.
     n: "03",
+    tag: "Insurance dataroom",
     title: "Organize the insurance dataroom",
     body:
       "Recent 4-point inspection, wind-mitigation report, elevation certificate, prior-claim history (or a CLUE report if available). On waterfront residences, this is what the buyer's insurance broker will request — and what the buyer's lender will require. A seller who has it organized before listing reduces post-inspection renegotiation and shortens the contingency clock for serious buyers.",
   },
   {
     n: "04",
+    tag: "Buyer-profile positioning",
     title: "Position to one buyer profile",
     body:
       "Yachting, in-town walkability, or beach-corridor lifestyle. The listing copy, the photography, the showing strategy each lean to one profile. A residence that tries to be everything tends to feel like nothing.",
   },
   {
-    // Cycle 18 — V4 NEW step. Photography + narrative carved out from V3's
-    // "Editorial photography and positioning" combined step so the photography
-    // discipline (lot + route + dock + interior + lanai) is treated as a
-    // discrete deliverable separate from the narrative (the listing copy,
-    // the open-house script, the broker-tour story).
     n: "05",
+    tag: "Photography and dock-up narrative",
     title: "Editorial photography and dock-up narrative",
     body:
       "Editorial photography that shows the lot, the route, the dock, and the lanai, not just the interiors. The narrative — listing copy, open-house script, broker-tour story — should carry the residence's specific identity (architectural era, canal context, lifestyle anchor) without slogan. Cinematic, not theatrical: the residence has to feel real on a second visit.",
   },
   {
     n: "06",
+    tag: "Tour strategy",
     title: "Tour-ready presentation tuned to the buyer pool",
     body:
       "Showing strategy, staging, and timing tuned to the one buyer profile chosen in step 04. Buyers shopping a vessel-first brief want to see the dock at sunset; buyers shopping a hosting-first brief want to see the lanai at golden hour; buyers shopping a walkable-Las-Olas brief want a daylight foot-traffic stroll. Mismatching the tour to the buyer is a common, fixable error.",
   },
   {
+    // Cycle 19B-FL — emphasized decision-gate card. The quiet-pre-market option
+    // is the single seller decision that distinguishes a public-listing strategy
+    // from a brokerage-relationship strategy. Full-width emphasis mirrors the
+    // buyer-side ISC-21 gate. Hedged language preserved verbatim.
     n: "07",
+    tag: "Quiet pre-market option",
     title: "Discreet pre-market and targeted introductions",
     body:
-      "Some sellers prefer a quiet pre-market period — letting Mia mention the residence privately to brokers whose buyers fit, before the listing becomes public. Whether that's the right strategy depends on the residence, the timeline, and the seller's preference.",
+      "Some sellers prefer a quiet pre-market period — letting Mia mention the residence privately to brokers whose buyers fit, before the listing becomes public. Whether that's the right strategy depends on the residence, the timeline, and the seller's preference. The decision happens in writing, with the seller's reasoning recorded, so the strategy stays coherent if conditions change mid-listing.",
+    gate: true,
   },
 ];
 
@@ -644,117 +677,296 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
         </section>
       ) : null}
 
-      {/* SECTION 6 — Buyer playbook */}
-      <section className="bg-cream-50 py-20 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-14 px-4 lg:grid-cols-[1.4fr_1fr] lg:gap-20 lg:px-8">
-          <div>
-            <SectionHeading
-              eyebrow="Buyer playbook"
-              heading={`Considering ${market.name} as a buyer.`}
-            />
-            <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-navy-800/85">
-              {market.buyerGuidance}
-            </p>
-            <ol className="mt-12 space-y-8">
-              {BUYER_PLAYBOOK.map((step) => (
-                <li key={step.n} className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2">
-                  <div className="font-display text-[14px] tracking-[0.3em] text-brass-700">
-                    {step.n}
+      {/* SECTION 6 — Buyer playbook (Cycle 19B-FL redesign).
+          Replaces the prior stacked 2-col grid (number + body) with a card grid
+          system. Each step renders as a hairline-bordered panel with eyebrow
+          tag, step number, title, and a focused body. The final step (private
+          availability) is rendered as an emphasized full-width decision-gate
+          card — `gate: true` in the BUYER_PLAYBOOK data above. The CTA aside
+          drops below the cards on every viewport so the card grid uses the
+          full editorial width rather than competing with a sidebar. */}
+      <section id="buyer-playbook" className="bg-cream-50 py-20 lg:py-28 scroll-mt-24">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <SectionHeading
+            eyebrow="Buyer playbook"
+            heading={`Considering ${market.name} as a buyer.`}
+          />
+          <p className="mt-6 max-w-3xl text-[17px] leading-relaxed text-navy-800/85">
+            {market.buyerGuidance}
+          </p>
+          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {BUYER_PLAYBOOK.map((step) => {
+              if (step.gate) {
+                return (
+                  <li
+                    key={step.n}
+                    className="group rounded-sm border border-brass-400/30 bg-cream-100 p-7 shadow-card sm:col-span-2 lg:col-span-3 lg:p-10"
+                  >
+                    <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:gap-10">
+                      <div className="flex items-start gap-4">
+                        <span className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-navy-800 font-display text-[14px] tracking-[0.2em] text-cream-50">
+                          {step.n}
+                        </span>
+                        <div className="lg:hidden">
+                          <div className="font-display text-[11px] uppercase tracking-[0.3em] text-brass-700">
+                            DECISION GATE · {step.tag}
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="hidden font-display text-[11px] uppercase tracking-[0.3em] text-brass-700 lg:block">
+                          DECISION GATE · {step.tag}
+                        </div>
+                        <h3 className="mt-2 font-display text-2xl text-navy-800">{step.title}</h3>
+                        <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-navy-800/85">
+                          {step.body}
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                );
+              }
+              return (
+                <li
+                  key={step.n}
+                  className="flex flex-col rounded-sm border border-navy-800/10 bg-cream-100 p-6 shadow-card lg:p-7"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-navy-800 font-display text-[12px] tracking-[0.2em] text-cream-50">
+                      {step.n}
+                    </span>
+                    <div className="font-display text-[11px] uppercase tracking-[0.3em] text-brass-700">
+                      {step.tag}
+                    </div>
                   </div>
-                  <h3 className="font-display text-xl text-navy-800">{step.title}</h3>
-                  <div aria-hidden />
-                  <p className="text-[15px] leading-relaxed text-navy-800/80">{step.body}</p>
+                  <h3 className="mt-4 font-display text-xl text-navy-800 [text-wrap:balance]">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 text-[14px] leading-relaxed text-navy-800/80">{step.body}</p>
                 </li>
-              ))}
-            </ol>
-            {/* Cycle 17 — V3 lift. Anti-pattern aside at the end of the buyer playbook. */}
-            <aside className="mt-10 rounded-sm border border-navy-800/10 bg-cream-100 px-6 py-5 text-[14px] leading-relaxed text-navy-800/80">
-              <span className="block font-display text-xs uppercase tracking-[0.3em] text-brass-700">
-                What this is not
-              </span>
-              <p className="mt-2">
-                The brief is not a saved-search alert; it is a written priority hierarchy. Saved-search alerts surface listings; a brief surfaces decisions — which neighborhoods, which lot profiles, and which trade-offs are inside the search and which are outside it.
-              </p>
-            </aside>
-          </div>
-          <aside className="rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:p-10">
-            <div className="font-display text-xs tracking-[0.3em] text-brass-700">
-              BUYER NEXT STEPS
-            </div>
-            <h3 className="mt-3 font-display text-2xl text-navy-800">Begin a buyer brief.</h3>
-            <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
-              A short conversation establishes timeline, lifestyle priorities, and the residence in mind. From there the search narrows to two or three serious candidates rather than a broad open tour.
+              );
+            })}
+          </ol>
+          {/* Cycle 17 — V3 lift, preserved. */}
+          <aside className="mt-10 rounded-sm border border-navy-800/10 bg-cream-100 px-6 py-5 text-[14px] leading-relaxed text-navy-800/80">
+            <span className="block font-display text-xs uppercase tracking-[0.3em] text-brass-700">
+              What this is not
+            </span>
+            <p className="mt-2">
+              The brief is not a saved-search alert; it is a written priority hierarchy. Saved-search alerts surface listings; a brief surfaces decisions — which neighborhoods, which lot profiles, and which trade-offs are inside the search and which are outside it.
             </p>
-            <Link
-              href="/contact/?intent=buyer-brief&market=fort-lauderdale&source=market-v2-buyer"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium text-cream-50 transition-colors hover:bg-navy-700"
-            >
-              Submit a Private Buyer Brief
-            </Link>
-            <Link
-              href="/buyers/"
-              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full border border-navy-800/30 px-6 py-3 text-sm font-medium text-navy-800 transition-colors hover:border-navy-800"
-            >
-              How Mia Represents Buyers
-            </Link>
+          </aside>
+          {/* Cycle 19B-FL — Buyer-CTA panel moved below the card grid so the
+              cards can use the full editorial width. Two CTAs: submit a buyer
+              brief (primary) and read how Mia represents buyers (secondary). */}
+          <aside className="mt-10 grid gap-6 rounded-sm border border-navy-800/10 bg-cream-100 p-7 shadow-card lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-10 lg:p-10">
+            <div>
+              <div className="font-display text-xs tracking-[0.3em] text-brass-700">
+                BUYER NEXT STEPS
+              </div>
+              <h3 className="mt-3 font-display text-2xl text-navy-800">Begin a buyer brief.</h3>
+              <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-navy-800/85">
+                A short conversation establishes timeline, lifestyle priorities, and the residence in mind. From there the search narrows to two or three serious candidates rather than a broad open tour.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/contact/?intent=buyer-brief&market=fort-lauderdale&source=market-v2-buyer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium text-cream-50 transition-colors hover:bg-navy-700"
+              >
+                Submit a Private Buyer Brief
+              </Link>
+              <Link
+                href="/buyers/"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-navy-800/30 px-6 py-3 text-sm font-medium text-navy-800 transition-colors hover:border-navy-800"
+              >
+                How Mia Represents Buyers
+              </Link>
+            </div>
           </aside>
         </div>
       </section>
 
-      {/* SECTION 7 — Seller playbook */}
-      <section className="bg-cream-100 py-20 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-14 px-4 lg:grid-cols-[1fr_1.4fr] lg:gap-20 lg:px-8">
-          <aside className="rounded-sm border border-navy-800/10 bg-cream-50 p-7 shadow-card lg:p-10 lg:order-2 order-2">
-            <div className="font-display text-xs tracking-[0.3em] text-brass-700">
-              SELLER NEXT STEPS
+      {/* SECTION 6.5 — Cycle 19B-FL NEW: Buyer → Seller transition + Waterfront
+          diligence snapshot module. A one-paragraph hinge between the buyer
+          playbook (above) and the seller playbook (below) plus a downloadable
+          checklist anchor pointing to the Cycle-19B-FL lead magnets. Honest
+          fallback gating per principal directive: direct download links plus a
+          private-brief CTA — no fake email capture. PDF URLs are routed under
+          /downloads/, which the build pipeline writes at build time. */}
+      <section
+        id="waterfront-diligence-snapshot"
+        className="bg-navy-800 py-16 text-cream-50 lg:py-20 scroll-mt-24"
+      >
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:px-8">
+          <div>
+            <div className="luxury-divider mb-5 [&>span]:text-brass-300">
+              <span>Bridge — buyer to seller logic</span>
             </div>
-            <h3 className="mt-3 font-display text-2xl text-navy-800">Position the residence.</h3>
-            <p className="mt-4 text-[15px] leading-relaxed text-navy-800/85">
-              A focused listing brief begins with a current valuation, a comparable-sales review against the right cohort, and a presentation strategy tuned to the residence's specific story.
+            <h2 className="font-display text-3xl text-cream-50 sm:text-4xl [text-wrap:balance]">
+              The same waterfront diligence reads differently from each side of the transaction.
+            </h2>
+            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-cream-200/85">
+              For buyers the diligence sequence is a filter — survey first, dock and seawall next, insurance underwriting before the offer. For sellers the same sequence becomes a dataroom — the documents that compress the contingency window and shorten renegotiation. Mia coordinates the same set of licensed specialists; the deliverable changes shape depending on whether the residence is being bought or listed.
             </p>
-            <Link
-              href="/valuation/?market=fort-lauderdale&source=market-v2-seller"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium text-cream-50 transition-colors hover:bg-navy-700"
-            >
-              Request a Confidential Valuation
-            </Link>
-            <Link
-              href="/sellers/"
-              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full border border-navy-800/30 px-6 py-3 text-sm font-medium text-navy-800 transition-colors hover:border-navy-800"
-            >
-              How Mia Represents Sellers
-            </Link>
-          </aside>
-          <div className="lg:order-1 order-1">
-            <SectionHeading
-              eyebrow="Seller playbook"
-              heading={`Listing in ${market.name}.`}
-            />
-            <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-navy-800/85">
-              {market.sellerGuidance}
-            </p>
-            <ol className="mt-12 space-y-8">
-              {SELLER_PLAYBOOK.map((step) => (
-                <li key={step.n} className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2">
-                  <div className="font-display text-[14px] tracking-[0.3em] text-brass-700">
-                    {step.n}
-                  </div>
-                  <h3 className="font-display text-xl text-navy-800">{step.title}</h3>
-                  <div aria-hidden />
-                  <p className="text-[15px] leading-relaxed text-navy-800/80">{step.body}</p>
-                </li>
-              ))}
-            </ol>
-            {/* Cycle 17 — V3 lift. Anti-pattern aside + Insights cross-link at the end of the seller playbook. */}
-            <aside className="mt-10 rounded-sm border border-navy-800/10 bg-cream-50 px-6 py-5 text-[14px] leading-relaxed text-navy-800/80">
-              <span className="block font-display text-xs uppercase tracking-[0.3em] text-brass-700">
-                What this is not
-              </span>
-              <p className="mt-2">
-                Pricing is not a number drawn from a public estimate, and positioning is not a slogan. The seller playbook above operates the residence-specific way; the related note on why public estimates miss luxury waterfront — <Link href="/insights/why-automated-valuations-miss-luxury-waterfront/?source=market-v2-seller" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">read the brief</Link> — covers the category limitation in writing.
-              </p>
-            </aside>
           </div>
+          <aside className="rounded-sm border border-cream-200/20 bg-navy-700/40 p-6 lg:p-8">
+            <div className="font-display text-[11px] uppercase tracking-[0.3em] text-brass-300">
+              Waterfront diligence snapshot
+            </div>
+            <h3 className="mt-2 font-display text-2xl text-cream-50">
+              Take the diligence list with you.
+            </h3>
+            <p className="mt-3 text-[14px] leading-relaxed text-cream-200/85">
+              Three brand-quality checklists, written in Mia's voice, drawn from the same Eastern Fort Lauderdale diligence sequence used on private engagements. No email required.
+            </p>
+            <ul className="mt-5 flex flex-col gap-2 text-[13px]">
+              <li>
+                <Link
+                  href="/downloads/waterfront-buyer-due-diligence-checklist.pdf"
+                  className="inline-flex w-full items-center justify-between gap-3 rounded-sm border border-cream-200/30 bg-navy-800/40 px-4 py-3 text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200"
+                >
+                  <span>Waterfront Buyer Due Diligence Checklist</span>
+                  <span aria-hidden="true">↓ PDF</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/downloads/luxury-seller-pre-listing-checklist.pdf"
+                  className="inline-flex w-full items-center justify-between gap-3 rounded-sm border border-cream-200/30 bg-navy-800/40 px-4 py-3 text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200"
+                >
+                  <span>Luxury Seller Pre-Listing Checklist</span>
+                  <span aria-hidden="true">↓ PDF</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf"
+                  className="inline-flex w-full items-center justify-between gap-3 rounded-sm border border-cream-200/30 bg-navy-800/40 px-4 py-3 text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200"
+                >
+                  <span>Fort Lauderdale Waterfront Valuation Prep Sheet</span>
+                  <span aria-hidden="true">↓ PDF</span>
+                </Link>
+              </li>
+            </ul>
+            <Link
+              href="/contact/?intent=waterfront-review&market=fort-lauderdale&source=market-v2-magnets"
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-brass-300 px-5 py-2.5 text-[12px] uppercase tracking-[0.25em] text-brass-300 transition-colors hover:bg-brass-300 hover:text-navy-800"
+            >
+              Request a private brief instead
+            </Link>
+            <p className="mt-3 text-[11px] leading-snug text-cream-200/60">
+              Not legal, insurance, inspection, marine survey, engineering, tax, or lending advice. Mia coordinates; licensed specialists confirm.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      {/* SECTION 7 — Seller playbook (Cycle 19B-FL redesign).
+          Mirrors the buyer playbook card-grid pattern. Seven steps: six render
+          as standard cards (3-col grid at lg), the seventh (quiet pre-market
+          option) renders as the emphasized full-width decision-gate card via
+          `gate: true` in the SELLER_PLAYBOOK data above. CTA aside moved below
+          the cards (parallel to the buyer-side rearrangement) so the card grid
+          uses the full editorial width. */}
+      <section id="seller-playbook" className="bg-cream-100 py-20 lg:py-28 scroll-mt-24">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <SectionHeading
+            eyebrow="Seller playbook"
+            heading={`Listing in ${market.name}.`}
+          />
+          <p className="mt-6 max-w-3xl text-[17px] leading-relaxed text-navy-800/85">
+            {market.sellerGuidance}
+          </p>
+          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {SELLER_PLAYBOOK.map((step) => {
+              if (step.gate) {
+                return (
+                  <li
+                    key={step.n}
+                    className="group rounded-sm border border-brass-400/30 bg-cream-50 p-7 shadow-card sm:col-span-2 lg:col-span-3 lg:p-10"
+                  >
+                    <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:gap-10">
+                      <div className="flex items-start gap-4">
+                        <span className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-navy-800 font-display text-[14px] tracking-[0.2em] text-cream-50">
+                          {step.n}
+                        </span>
+                        <div className="lg:hidden">
+                          <div className="font-display text-[11px] uppercase tracking-[0.3em] text-brass-700">
+                            DECISION GATE · {step.tag}
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="hidden font-display text-[11px] uppercase tracking-[0.3em] text-brass-700 lg:block">
+                          DECISION GATE · {step.tag}
+                        </div>
+                        <h3 className="mt-2 font-display text-2xl text-navy-800">{step.title}</h3>
+                        <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-navy-800/85">
+                          {step.body}
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                );
+              }
+              return (
+                <li
+                  key={step.n}
+                  className="flex flex-col rounded-sm border border-navy-800/10 bg-cream-50 p-6 shadow-card lg:p-7"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-navy-800 font-display text-[12px] tracking-[0.2em] text-cream-50">
+                      {step.n}
+                    </span>
+                    <div className="font-display text-[11px] uppercase tracking-[0.3em] text-brass-700">
+                      {step.tag}
+                    </div>
+                  </div>
+                  <h3 className="mt-4 font-display text-xl text-navy-800 [text-wrap:balance]">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 text-[14px] leading-relaxed text-navy-800/80">{step.body}</p>
+                </li>
+              );
+            })}
+          </ol>
+          {/* Cycle 17 — V3 lift, preserved with Insights cross-link. */}
+          <aside className="mt-10 rounded-sm border border-navy-800/10 bg-cream-50 px-6 py-5 text-[14px] leading-relaxed text-navy-800/80">
+            <span className="block font-display text-xs uppercase tracking-[0.3em] text-brass-700">
+              What this is not
+            </span>
+            <p className="mt-2">
+              Pricing is not a number drawn from a public estimate, and positioning is not a slogan. The seller playbook above operates the residence-specific way; the related note on why public estimates miss luxury waterfront — <Link href="/insights/why-automated-valuations-miss-luxury-waterfront/?source=market-v2-seller" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">read the brief</Link> — covers the category limitation in writing.
+            </p>
+          </aside>
+          {/* Cycle 19B-FL — Seller CTA panel moved below the card grid, mirroring
+              the buyer playbook. */}
+          <aside className="mt-10 grid gap-6 rounded-sm border border-navy-800/10 bg-cream-50 p-7 shadow-card lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-10 lg:p-10">
+            <div>
+              <div className="font-display text-xs tracking-[0.3em] text-brass-700">
+                SELLER NEXT STEPS
+              </div>
+              <h3 className="mt-3 font-display text-2xl text-navy-800">Position the residence.</h3>
+              <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-navy-800/85">
+                A focused listing brief begins with a current valuation, a comparable-sales review against the right cohort, and a presentation strategy tuned to the residence's specific story.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/valuation/?market=fort-lauderdale&source=market-v2-seller"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3 text-sm font-medium text-cream-50 transition-colors hover:bg-navy-700"
+              >
+                Request a Confidential Valuation
+              </Link>
+              <Link
+                href="/sellers/"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-navy-800/30 px-6 py-3 text-sm font-medium text-navy-800 transition-colors hover:border-navy-800"
+              >
+                How Mia Represents Sellers
+              </Link>
+            </div>
+          </aside>
         </div>
       </section>
 

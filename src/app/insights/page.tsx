@@ -13,12 +13,12 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Insights — SE Florida Luxury Real Estate",
   description:
-    "Twelve evergreen briefs on the SE Florida luxury and waterfront market — buyer guides, market comparisons, and pre-listing positioning by Mia Sanabria.",
+    "Twelve field-note briefs on the SE Florida luxury and waterfront market — buyer guides, market comparisons, and pre-listing positioning by Mia Sanabria.",
   alternates: { canonical: `${SITE.url}/insights/` },
   openGraph: {
     title: "Insights — Mia Sanabria, REALTOR® · SE Florida Luxury & Waterfront",
     description:
-      "A twelve-part evergreen guide to the Southeast Florida luxury and waterfront market. Read in any order.",
+      "A twelve-part editorial guide to the Southeast Florida luxury and waterfront market. Read in any order.",
     url: `${SITE.url}/insights/`,
     images: [
       {
@@ -41,7 +41,7 @@ export default function InsightsIndexPage() {
     "@id": `${SITE.url}/insights/#blog`,
     name: "Mia Sanabria — Southeast Florida Luxury & Waterfront Insights",
     description:
-      "A twelve-part evergreen guide to the Southeast Florida luxury and waterfront market — buyer guides, market comparisons, neighborhood reads, and pre-listing positioning.",
+      "A twelve-part editorial guide to the Southeast Florida luxury and waterfront market — buyer guides, market comparisons, neighborhood reads, and pre-listing positioning.",
     url: `${SITE.url}/insights/`,
     inLanguage: "en-US",
     publisher: { "@id": `${SITE.url}/#organization` },
@@ -69,9 +69,9 @@ export default function InsightsIndexPage() {
       <JsonLd data={blogSchema} />
 
       <Hero
-        eyebrow="Insights · A Twelve-Part Evergreen Guide"
+        eyebrow="Insights · A Twelve-Part Editorial Library"
         heading="Notes from the Southeast Florida luxury and waterfront market."
-        sub="Twelve evergreen briefs — buyer guides, market comparisons, neighborhood reads, and pre-listing positioning. Read in any order; each is written for a specific decision."
+        sub="Twelve editorial briefs — buyer guides, market comparisons, neighborhood reads, and pre-listing positioning. Read in any order; each is written for a specific decision."
       />
 
       <section className="bg-cream-50 py-16 lg:py-24">
@@ -80,7 +80,7 @@ export default function InsightsIndexPage() {
             <span>The Library</span>
           </div>
           <h2 className="font-display text-3xl text-navy-800 sm:text-4xl">
-            A twelve-part evergreen guide series.
+            A twelve-part editorial library.
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-navy-800/85">
             These briefs are written for the buyers and sellers Mia works with directly — luxury and

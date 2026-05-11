@@ -15,7 +15,7 @@ export function InsightsTeaser({
   slugs,
   count = 3,
   heading = "Latest Insights",
-  sub = "A twelve-part evergreen guide to the Southeast Florida luxury and waterfront market.",
+  sub = "Selected field notes on Southeast Florida luxury, waterfront, and market decisions — written to support private buyer and seller conversations.",
   background = "cream",
 }: {
   slugs?: ReadonlyArray<string>;

@@ -136,7 +136,7 @@ export default function HomePage() {
           "preparing-waterfront-residence-private-market-conversations",
         ]}
         heading="Latest Insights"
-        sub="A twelve-part evergreen guide to the Southeast Florida luxury and waterfront market — read in any order."
+        sub="Selected field notes on Southeast Florida luxury, waterfront, and market decisions — written to support private buyer and seller conversations."
         background="cream"
       />
 

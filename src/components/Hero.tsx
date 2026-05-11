@@ -134,7 +134,7 @@ export function Hero({
       <div
         className={
           useImage
-            ? "relative mx-auto flex min-h-[440px] max-w-7xl items-center px-4 py-8 sm:min-h-[500px] sm:py-12 lg:min-h-[520px] lg:px-8 lg:py-12"
+            ? "relative mx-auto flex min-h-[440px] max-w-7xl items-center px-4 py-8 sm:min-h-[500px] sm:py-12 lg:min-h-[480px] lg:px-8 lg:py-6"
             : "relative mx-auto max-w-7xl px-4 py-28 sm:py-32 lg:px-8 lg:py-40"
         }
       >

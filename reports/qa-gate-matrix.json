@@ -1,17 +1,20 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-11T05:11:52.167Z",
+  "generated_at": "2026-05-11T07:40:32.492Z",
   "sitemap_route_count": 40,
-  "filesystem_route_count": 45,
+  "filesystem_route_count": 48,
   "fs_only_routes": [
+    "/downloads/luxury-seller-pre-listing-checklist",
+    "/downloads/waterfront-buyer-due-diligence-checklist",
+    "/downloads/fort-lauderdale-waterfront-valuation-prep-sheet",
     "/404"
   ],
-  "rows_scanned": 45,
+  "rows_scanned": 48,
   "severity_counts": {
     "critical": 0,
     "high": 4,
     "medium": 1,
-    "low": 45
+    "low": 48
   },
   "owner_category_split": {
     "c1": 0,
@@ -19,7 +22,7 @@
     "c3": 0,
     "c4": 1,
     "c5": 4,
-    "c6": 45
+    "c6": 48
   },
   "rows": [
     {
@@ -230,12 +233,90 @@
       ]
     },
     {
+      "route": "/downloads/fort-lauderdale-waterfront-valuation-prep-sheet",
+      "page_type": "other",
+      "out_file": "out/downloads/fort-lauderdale-waterfront-valuation-prep-sheet/index.html",
+      "title": "Fort Lauderdale Waterfront Valuation Prep Sheet | Mia Sanabria",
+      "h1_text": "Fort Lauderdale Waterfront Valuation Prep Sheet",
+      "meta_description": "Fort Lauderdale Waterfront Valuation Prep Sheet — print-friendly source for the downloadable PDF.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/downloads/fort-lauderdale-waterfront-valuation-prep-sheet/",
+      "noindex": true,
+      "schema_blocks": 2,
+      "internal_links": 37,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/downloads/luxury-seller-pre-listing-checklist",
+      "page_type": "other",
+      "out_file": "out/downloads/luxury-seller-pre-listing-checklist/index.html",
+      "title": "Luxury Seller Pre-Listing Checklist | Mia Sanabria",
+      "h1_text": "Luxury Seller Pre-Listing Checklist",
+      "meta_description": "Luxury Seller Pre-Listing Checklist — print-friendly source for the downloadable PDF.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/downloads/luxury-seller-pre-listing-checklist/",
+      "noindex": true,
+      "schema_blocks": 2,
+      "internal_links": 37,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/downloads/waterfront-buyer-due-diligence-checklist",
+      "page_type": "other",
+      "out_file": "out/downloads/waterfront-buyer-due-diligence-checklist/index.html",
+      "title": "Waterfront Buyer Due Diligence Checklist | Mia Sanabria",
+      "h1_text": "Waterfront Buyer Due Diligence Checklist",
+      "meta_description": "Waterfront Buyer Due Diligence Checklist — print-friendly source for the downloadable PDF.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/downloads/waterfront-buyer-due-diligence-checklist/",
+      "noindex": true,
+      "schema_blocks": 2,
+      "internal_links": 37,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
       "route": "/insights",
       "page_type": "insights_index",
       "out_file": "out/insights/index.html",
       "title": "Insights — SE Florida Luxury Real Estate | Mia Sanabria",
       "h1_text": "Notes from the Southeast Florida luxury and waterfront market.",
-      "meta_description": "Twelve evergreen briefs on the SE Florida luxury and waterfront market — buyer guides, market comparisons, and pre-listing positioning by Mia Sanabria.",
+      "meta_description": "Twelve field-note briefs on the SE Florida luxury and waterfront market — buyer guides, market comparisons, and pre-listing positioning by Mia Sanabria.",
       "canonical": "https://miasanabriarealtor.trueidea.com/insights/",
       "noindex": true,
       "schema_blocks": 4,
@@ -739,7 +820,7 @@
       "canonical": "https://miasanabriarealtor.trueidea.com/markets/fort-lauderdale/",
       "noindex": true,
       "schema_blocks": 6,
-      "internal_links": 75,
+      "internal_links": 79,
       "trust_proof_present": true,
       "has_faq": true,
       "contact_form_present": false,

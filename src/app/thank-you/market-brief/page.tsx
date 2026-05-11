@@ -52,7 +52,7 @@ export default function MarketBriefThankYouPage() {
             While you wait.
           </h3>
           <p className="mt-3 text-[15px] leading-relaxed text-navy-800/85">
-            The Insights library has twelve evergreen briefs that frame the markets and the
+            The Insights library has twelve editorial briefs that frame the markets and the
             decisions a market brief sometimes touches on. Read in any order; each stands alone.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

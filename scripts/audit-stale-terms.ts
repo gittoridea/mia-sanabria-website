@@ -70,6 +70,11 @@ const FORBIDDEN: ReadonlyArray<Pattern> = [
   { term: "priceRange", reason: "schema priceRange tier claim has no verified source", safeReplacement: "remove priceRange from JSON-LD" },
   { term: "since 2017", ci: true, reason: "GATED_MIA: practice-history claim unverified in fact ledger", safeReplacement: "remove year claim until Mia confirms" },
   { term: "within two hours", ci: true, reason: "GATED_MIA: response-SLA claim unverified", safeReplacement: "use 'same business day' without specific SLA" },
+  // Cycle 19B-FL — Latest Insights wording cleanup. "evergreen" framing surfaced
+  // through the InsightsTeaser default and homepage override; the cycle-19A-M
+  // wording (twelve-part evergreen guide) was retired in favor of honest current
+  // language ("Selected field notes ..."). Audit catches future regression.
+  { term: "evergreen", ci: true, reason: "Cycle 19B-FL wording cleanup — visible 'evergreen' framing retired", safeReplacement: "use 'Selected field notes' / 'editorial briefs' / 'recent notes' or omit" },
   // Cycle 19A-M defect classes manual review caught — promoted to deterministic checks.
   // 1. Double-period in body text. Defect pattern: SITE.tagline ends with "." and template
   //    appended ". " before next sentence. Anchored to <letter>..<whitespace><Capital> to
