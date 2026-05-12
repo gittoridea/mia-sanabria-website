@@ -1,0 +1,25 @@
+=== typecheck ===
+$ tsc --noEmit
+exit=0
+=== audit:stale ===
+$ bun run scripts/audit-stale-terms.ts
+✓ audit-stale-terms: clean across out/. (784ms)
+exit=0
+=== audit:no-fabrications ===
+$ bun run scripts/audit-no-fabrications.ts
+audit-no-fabrications — 0 hits
+exit=0
+=== audit:schema ===
+$ bun run scripts/audit-schema.ts
+audit-schema: scanned 49 pages, found 242 JSON-LD blocks (27ms).
+✓ All JSON-LD blocks parse with @context + @type.
+exit=0
+=== audit:seo ===
+$ bun run scripts/audit-seo.ts
+✓ audit-seo: 0 warning(s), no errors across out/. (53ms)
+exit=0
+=== audit:trust-row ===
+✓ public/downloads/waterfront-buyer-due-diligence-checklist.pdf
+✓ public/downloads/luxury-seller-pre-listing-checklist.pdf
+audit-trust-row — 51/51 sources clean (HTML routes + PDFs)
+exit=0
