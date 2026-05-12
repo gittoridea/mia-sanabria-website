@@ -11,7 +11,7 @@
 | Needs Mia / principal decision | 9 | `MIA_DECISION_PACKET.md` |
 | Needs GHL endpoint / auth / test plan | 10 | `GHL_READY_PACKET.md` + `GHL_FIELD_MAP_FINAL.md` + `GHL_TEST_PLAN.md` |
 | Needs Google Analytics / Search Console / GBP access | 6 | `GOOGLE_ANALYTICS_SEARCH_READY_PACKET.md` |
-| Needs legal / compliance review | 7 | `LEGAL_COMPLIANCE_PACKET.md` |
+| Needs legal / compliance review | 8 | `LEGAL_COMPLIANCE_PACKET.md` |
 | Needs launch / cutover access | 4 | `LAUNCH_CUTOVER_READY_PACKET.md` |
 | Should be discarded / already resolved | 5 | recorded as `discard` rows in `remaining-work-register.md` |
 
@@ -88,7 +88,7 @@ Cycle 22 ran narrower than Cycle 21 because the cycle's primary work was packet 
 
 | Packet | Lines | Key open questions |
 |---|---|---|
-| `MIA_DECISION_PACKET.md` | ~175 | 14 decisions, all with recommended defaults |
+| `MIA_DECISION_PACKET.md` | ~175 | 14 decisions across 9 register rows (some rows group multiple sub-decisions, e.g., 5 miaQuotes → one row C-2), all with recommended defaults |
 | `GHL_READY_PACKET.md` + `GHL_FIELD_MAP_FINAL.md` + `GHL_TEST_PLAN.md` | ~430 combined | 9 env vars + 31 fields + 10-step test |
 | `GOOGLE_ANALYTICS_SEARCH_READY_PACKET.md` | ~135 | GA4 ID + GTM optional + Search Console + GBP |
 | `LEGAL_COMPLIANCE_PACKET.md` | ~165 | 14 items, classified into 4 buckets, one question each |

@@ -4,6 +4,15 @@
 > Full Cato analysis: `external-reviews/cato-compliance-review.md` + `.json`.
 > This addendum sits *next to* the original `LEGAL_COMPLIANCE_PACKET.md` rather than rewriting it — the original packet's questions are already in flight; these are sharpening additions.
 
+## Advisor cross-check note (Cycle 22 LEARN, 2026-05-11)
+
+The Algorithm advisor cross-check (Inference.ts --mode advisor) added the following context to Cato's findings before LEARN sealed:
+
+- **CATO-01 FCC-2024 1:1 status:** the FCC's one-to-one consent rule under 47 CFR §64.1200(a)(10) was **vacated by the 11th Circuit** in *Insurance Marketing Coalition v FCC* (issued Jan 2025). The underlying TCPA prior-express-written-consent framework (47 CFR §64.1200(f)(9)) remains in force, but the specific "one-to-one" addition Cato cites is not currently effective. Cycle 24 counsel question should be rephrased: "TCPA PEWC requirements" not "FCC 2024 one-to-one." The substantive gaps Cato flagged (seller+brokerage in consent string, ATDS/prerecorded disclosure, page-snapshot retention) remain valid TCPA-PEWC concerns regardless of 1:1 status.
+- **CATO-02 F.S. 475.278 attaches to advertising.** Spot-check confirmed (Cycle 22 LEARN, live): `LPT Realty LLC` and `License #SL3405877` and REALTOR® mark appear on the live-site footer across all 96 HTML routes. The advertising-disclosure obligation is *substantively met* in production today via the Cycle-17 footer trust-mark upgrade. Cycle 24 counsel question is about LPT-specified statutory language refinement (Single Agent / Transaction Broker / No Brokerage Relationship classification), not about adding missing disclosure. No "verify before next deploy" emergency.
+
+---
+
 ## CATO-01 (HIGH) — TCPA FCC-2024 one-to-one mechanics
 
 **Where:** `LEGAL_COMPLIANCE_PACKET.md` §9.1 + `GHL_READY_PACKET.md` §4.

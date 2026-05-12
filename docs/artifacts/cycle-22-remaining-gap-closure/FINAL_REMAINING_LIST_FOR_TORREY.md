@@ -80,7 +80,13 @@ These are safe edits but were deliberately deferred because they pair naturally 
 
 ## Bucket F — Needs legal / compliance review
 
-(All in `LEGAL_COMPLIANCE_PACKET.md`.)
+(All in `LEGAL_COMPLIANCE_PACKET.md` + Cato addendum.)
+
+**Advisor + Cato spot-check finding (already live, no emergency):** F.S. 475.278 brokerage-relationship advertising disclosure is *substantively met* — `LPT Realty LLC` + `License #SL3405877` + REALTOR® mark appear on the footer of all 96 HTML routes in current production (Cycle-17 footer trust-mark upgrade). Cycle 24 counsel work is *refinement* (Single-Agent / Transaction-Broker / No-Brokerage classification + specific statutory text) not *closing a missing disclosure*.
+
+**Highest-priority Cato concerns (HIGH severity, route to top of Cycle 24):**
+- **CATO-01** TCPA prior-express-written-consent (PEWC) refinement — note FCC 2024 1:1 vacated by 11th Circuit; underlying PEWC framework still in force; sharpen consent string to name Mia + LPT and add ATDS/prerecorded disclosure.
+- **CATO-02** F.S. 475.278 brokerage-classification language (Single Agent / Transaction Broker / No Brokerage Relationship).
 
 - **F-1** DBPR primary-source verification of `SL3405877` (Mia + Torrey).
 - **F-2** NAR + local-board active membership written confirmation (Mia).

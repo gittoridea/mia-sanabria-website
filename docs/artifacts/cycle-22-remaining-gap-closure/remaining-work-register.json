@@ -9,7 +9,7 @@
     "needs-mia": 9,
     "needs-ghl-credential": 10,
     "needs-google-analytics": 6,
-    "needs-legal": 7,
+    "needs-legal": 8,
     "needs-dns": 4,
     "discard": 5
   },

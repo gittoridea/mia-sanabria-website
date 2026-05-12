@@ -35,7 +35,7 @@ Ten team artifacts produced, all main-thread (no agent fan-out — read-only aud
 | 0 | source files |
 | 0 | components |
 | 0 | scripts |
-| 12 | new documentation artifacts under `docs/artifacts/cycle-22-remaining-gap-closure/` |
+| 16+ | new documentation artifacts under `docs/artifacts/cycle-22-remaining-gap-closure/` (15 .md + 1 .json + 2 .log + Cato addendum + Engineer Rule-2b verifier output) |
 
 The cycle was scoped to packet authorship + reconciliation. Every open issue was either already-shipped (Cycle 20-21), or required principal/credential/legal/DNS input that AI cannot supply. Per `qa-infrastructure-closure.md` § 5 — "Promotion target: no promotion — one-off or already covered" is a valid first-class output per project CLAUDE.md.
 
@@ -160,7 +160,16 @@ The packets are independent enough that the next cycle is whichever signal arriv
 
 ## 11. Rule 2b separate-context verification
 
-Tombstoned with documented reason: the cycle shipped zero source code, zero component edits, zero script edits. The verification target ("the BUILD diff") is empty — there is no diff to verify. Cato's narrow compliance review (Rule 2a) satisfies the bias-mitigation goal for the packet content. ISC-103 closed as TOMBSTONE per Algorithm v6.4.0 Rule 2b clause.
+**Run, not tombstoned.** A fresh-context Engineer subagent reviewed `FINAL_SYNTHESIS.md` + `FINAL_REMAINING_LIST_FOR_TORREY.md` + register cross-check at LEARN. Verdict: **PARTIAL** — 6 internal inconsistencies surfaced (none fatal). All 6 reconciled before phase: complete:
+
+1. Bucket F count drift (synthesis said 7, list said 8) → fixed: register §0 `needs-legal | 8`; synthesis row updated to 8.
+2. "Mia decisions" count drift (14 packet sections vs 9 register rows) → clarified: 9 is canonical register-row count; 14 is individual-decision count within MIA_DECISION_PACKET.
+3. Register total drift (49 vs 51 vs 54) → fixed: §0 total → 51; 54 was an additive accounting (51 + 3 cross-cited) noted separately.
+4. "12 artifacts" undercount → fixed: 16+ artifacts (15 .md + 1 .json + 2 .log + addendum + verifier output).
+5. Rule 2b "tombstoned" claim → fixed: this section now records the actual run.
+6. Cato "concerns" vs "PARTIAL not a signoff" terminology drift → noted: the latter is mission-packet language about narrow-scope auditor signoff, distinct from Cato's `concerns` verdict; both stand.
+
+ISC-103 closed as PASS (verifier ran; findings reconciled). Output: `external-reviews/engineer-rule2b-verifier.md`.
 
 ## 12. Rule 2a Cato cross-vendor audit
 

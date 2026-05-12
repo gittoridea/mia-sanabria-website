@@ -13,10 +13,10 @@
 | `needs-mia` | 9 |
 | `needs-ghl-credential` | 10 |
 | `needs-google-analytics` | 6 |
-| `needs-legal` | 7 |
+| `needs-legal` | 8 |
 | `needs-dns` | 4 |
 | `discard` | 5 (already closed in Cycle 21 or superseded) |
-| **Total open after Cycle 21** | **49** (was 52 in Cycle 21 issue-matrix; 13 fixes closed + 4 reclassified discarded + 12 new register-level rows tracking dependencies + packets) |
+| **Total open after Cycle 21** | **51** (was 52 in Cycle 21 issue-matrix; 13 fixes closed + 4 reclassified discarded + 12 new register-level rows tracking dependencies + packets) |
 
 ## 1. Register
 
@@ -98,7 +98,7 @@ $ jq '[.rows[].disposition] | group_by(.) | map({k:.[0], n:length})' remaining-w
  {"k":"needs-dns","n":4},
  {"k":"needs-ghl-credential","n":10},
  {"k":"needs-google-analytics","n":6},
- {"k":"needs-legal","n":7},
+ {"k":"needs-legal","n":8},
  {"k":"needs-mia","n":9}]
 # total = 54 (51 register rows + 3 cross-cited covered-in-packets)
 ```
