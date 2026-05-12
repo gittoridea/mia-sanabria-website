@@ -1,0 +1,77 @@
+=== POST-BUILD typecheck ===
+$ tsc --noEmit
+exit=0
+=== POST-BUILD audit:all ===
+✓ public/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf
+   warning: page-render skipped — @napi-rs/canvas not installed
+✓ fort-lauderdale-cta-section
+audit-lead-magnets — 4/4 checks pass
+$ bun run scripts/audit-no-fabrications.ts
+audit-no-fabrications — 0 hits
+$ bun run scripts/audit-fort-lauderdale-standard.ts
+✓ v3.heroPrecisionFrame                    "Where deepwater yacht access" present
+✓ v3.preludeEyebrow                        "A decision, not a default" present
+✓ v3.preludeHeading                        "Fort Lauderdale rewards a written brief" present
+✓ v3.seventhCardTitle                      "Insurance underwriting and the 4-point sequence" present
+✓ v3.emphasizedCardEyebrow                 "THE QUESTION BUYERS ASK MOST OFTEN" present
+✓ v3.peerPointers                          12 matches (target ≥ 4)
+✓ v3.antiPatternAside                      4 matches (target ≥ 2)
+✓ v3.faqPrivateBriefVsAlert                "How is a private buyer brief different from a saved-search alert?" present
+✓ v3.faqRouteToInletNonYachter             "Why does route-to-inlet matter for a buyer who isn" present
+✓ v3.sellerPlaybookInsightsLink            "/insights/why-automated-valuations-miss-luxury-waterfront/" present
+✓ v4.researchBackedEyebrow                 "What the geography actually is" present
+✓ v4.researchBackedHeading                 "Fort Lauderdale, in honest scope" present
+✓ v4.researchBackedSourcesLine             1 matches (target 1)
+✓ v4.frameworkNineVariablesHeading         "Nine verifiable variables before any offer" present
+✓ v4.frameworkCanalWidthCard               "Canal width and turning basin" present
+✓ v4.frameworkOutdoorLivingCard            "Outdoor living and dock-side amenities" present
+✓ v4.cohortEyebrow                         "What Fort Lauderdale buyers are actually comparing" present
+✓ v4.cohortHeading                         "Three tiers of decision, not one" present
+✓ v4.cohortTier1Heading                    "Tier 1 — Eastern Fort Lauderdale finger-isle peers" present
+✓ v4.cohortTier2Heading                    "Tier 2 — Northern Broward waterfront alternatives" present
+✓ v4.cohortTier3Heading                    "Tier 3 — Palm Beach County peers" present
+✓ v4.cohortPompanoLink                     "href="/markets/pompano-beach/"" present
+✓ v4.cohortHillsboroLink                   "href="/markets/hillsboro-mile/"" present
+✓ v4.buyerStep5Financing                   "Confirm financing, cash, and insurance early" present
+✓ v4.sellerStep3InsuranceDataroom          "Organize the insurance dataroom" present
+✓ v4.sellerStep5PhotoNarrative             "Editorial photography and dock-up narrative" present
+✓ v4.faqNoFixedBridges                     "What does &quot;no fixed bridges&quot; mean and where does it actually apply" present
+✓ v4.faqPompanoComparison                  "How does Fort Lauderdale compare to Pompano Beach for waterfront buyers" present
+✓ v4.anti.no300MilesCityScope              no banned match
+✓ v4.anti.noFixedBridgesNewRiverClaim      no banned match
+✓ v4.faqPageCountIs11                      FAQPage schema has 11 Question entries (target 11 = market.faqs:5 + V2 specifics:6)
+
+audit:fort-lauderdale-standard — 31 PASS · 0 WARN · 0 FAIL
+exit=0
+=== POST-BUILD audit:qa-gate ===
+$ bun run scripts/audit-qa-gate.ts
+qa-gate: 4 fs-only route(s) — scanning anyway: /downloads/luxury-seller-pre-listing-checklist, /downloads/waterfront-buyer-due-diligence-checklist, /downloads/fort-lauderdale-waterfront-valuation-prep-sheet, /404
+audit-qa-gate — 48 routes · critical 0 · high 4 · medium 1 · low 48
+→ reports/qa-gate-matrix.json
+→ reports/qa-gate-matrix.md
+exit=0
+=== POST-BUILD audit:trust-row ===
+✓ out/about/index.html
+✓ public/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf
+✓ public/downloads/waterfront-buyer-due-diligence-checklist.pdf
+✓ public/downloads/luxury-seller-pre-listing-checklist.pdf
+audit-trust-row — 51/51 sources clean (HTML routes + PDFs)
+exit=0
+=== POST-BUILD audit:lead-magnets ===
+   warning: page-render skipped — @napi-rs/canvas not installed
+✓ public/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf
+   warning: page-render skipped — @napi-rs/canvas not installed
+✓ fort-lauderdale-cta-section
+audit-lead-magnets — 4/4 checks pass
+exit=0
+=== POST-BUILD audit:no-fabrications ===
+$ bun run scripts/audit-no-fabrications.ts
+audit-no-fabrications — 0 hits
+exit=0
+=== POST-BUILD audit:copy-density ===
+✓ Terms (exempt) (density-exempt) — banned: 0; footer-line n/a
+✓ DMCA (exempt) (density-exempt) — banned: 0; footer-line n/a
+✓ Accessibility (exempt) (density-exempt) — banned: 0; footer-line n/a
+audit-copy-density — 0 FAIL · 133 WARN
+report: reports/copy-density.json
+exit=0

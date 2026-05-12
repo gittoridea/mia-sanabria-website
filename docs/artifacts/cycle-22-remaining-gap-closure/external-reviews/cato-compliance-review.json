@@ -1,0 +1,21 @@
+{
+  "agent": "Cato",
+  "model": "gpt-5.4 via codex exec",
+  "cycle": "22-remaining-gap-closure",
+  "scope": "narrow — MIA_DECISION_PACKET §2.1-§2.5/§6-§9 + LEGAL_COMPLIANCE_PACKET §1.1/§1.2/§2.1/§3.1/§9.1/§10.1 + GHL_READY_PACKET §4/§12",
+  "verdict": "concerns",
+  "findings": [
+    {"id":"CATO-01","severity":"high","where":"LEGAL_COMPLIANCE_PACKET.md:§9.1 + GHL_READY_PACKET.md:§4","summary":"TCPA consent missing FCC 2024 one-to-one mechanics: no seller+brokerage legal name inside consent string, no ATDS/prerecorded-voice disclosure, no page-snapshot retention policy alongside consent_text+timestamp."},
+    {"id":"CATO-02","severity":"high","where":"LEGAL_COMPLIANCE_PACKET.md:§4.1","summary":"Florida brokerage-relationship disclosure under F.S. §475.278 / FREC Rule 61J2-10.033 (Transaction Broker Notice family) is not named; LPT question is framed too generically to elicit the statutory answer."},
+    {"id":"CATO-03","severity":"medium","where":"LEGAL_COMPLIANCE_PACKET.md:§1.2 + MIA_DECISION_PACKET.md:§9","summary":"NAR Membership Marks Manual specifics missed: adjacency-punctuation rule (comma between name and REALTOR®), plural/possessive handling, domain-name usage; local board reference is stale (RAGFL absorbed into BPSR in 2020)."},
+    {"id":"CATO-04","severity":"medium","where":"LEGAL_COMPLIANCE_PACKET.md:§2.1","summary":"EHO question is not bounded to HUD spec: no ask about relative-size/prominence vs other logos, no choice between EHO logotype vs slogan vs full statement, and county-level Fair Housing classes (Broward source-of-income) are not in scope."},
+    {"id":"CATO-05","severity":"medium","where":"LEGAL_COMPLIANCE_PACKET.md:§3.1","summary":"SEF MLS ask narrows to disclaimer text; misses last-updated timestamp, per-listing broker attribution, prohibited-modifications, co-mingling, and opt-out obligations — and the iframe vs direct-feed scope boundary."},
+    {"id":"CATO-06","severity":"medium","where":"GHL_READY_PACKET.md:§4","summary":"Consent string references SMS ('Reply STOP') but form may capture email-only; STOP/HELP keyword handling and sms_opt_out_at audit fields are absent from §3 custom fields and §8 audit log."},
+    {"id":"CATO-07","severity":"low","where":"LEGAL_COMPLIANCE_PACKET.md:§10.1","summary":"PDF disclaimer recommendation is generic; FL-specific items missing — flood/wind/Citizens insurance currency date, F.S. §718.503/§720.401 condo-HOA disclosure, Johnson v Davis duty-to-disclose for prior storm damage."},
+    {"id":"CATO-08","severity":"low","where":"LEGAL_COMPLIANCE_PACKET.md:§1.1 + MIA_DECISION_PACKET.md:§8","summary":"DBPR verification step records only active y/n; should record employing broker linkage + expiration date and schedule a renewal-cadence audit (24-month FL renewal)."},
+    {"id":"CATO-09","severity":"low","where":"LEGAL_COMPLIANCE_PACKET.md:§2.1 + §12.1","summary":"audit-stale-terms Fair Housing list is federal-proxy-only; missing source-of-income proxies (Broward), disability proxies ('walk-up', 'must climb stairs'), HOPA 55+ wording rules, national-origin proxies."},
+    {"id":"CATO-10","severity":"low","where":"MIA_DECISION_PACKET.md:§9","summary":"REALTOR® mark gated on NAR confirmation but no fallback rendering specified if confirmation is not in hand at launch — risks copy-paste scramble at cutover."}
+  ],
+  "disposition": "Findings routed to packet addenda; none rise to `critical`, so no phase:complete block per Algorithm v6.4.0 Rule 2a verdict table. Two `high` findings (CATO-01, CATO-02) lift to TOP of Cycle 24-LEGAL-CLOSURE.",
+  "verdict_action": "Cycle 22 commits packet addenda. Cycle 24 ships findings into source/text."
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T19:38:04.170Z",
+  "generated_at": "2026-05-12T00:22:54.114Z",
   "config": {
     "PARA_LIMIT": 55,
     "SENT_LIMIT": 28,
@@ -18,10 +18,10 @@
       "file": "out/index.html",
       "label": "Home",
       "present": true,
-      "paragraphs": 33,
+      "paragraphs": 37,
       "paragraph_max_words": 170,
       "paragraphs_over_limit": 2,
-      "sentences": 64,
+      "sentences": 71,
       "sentence_max_words": 52,
       "sentences_over_limit": 6,
       "repeated_geo_paragraphs": 7,
@@ -82,7 +82,7 @@
         },
         {
           "term": "private",
-          "count": 16
+          "count": 18
         }
       ],
       "footer_present": true
