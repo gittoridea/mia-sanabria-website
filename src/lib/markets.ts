@@ -129,7 +129,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Fort Lauderdale stretches from the Atlantic across the Intracoastal to the New River and downtown — buyer briefs typically segment by water access (deep-water dockage vs. fixed-bridge), proximity to Las Olas, and beach corridor.",
     county: "Broward County",
     miaQuote:
-      "Known globally as the 'Venice of America,' Fort Lauderdale is the undisputed yachting capital of the world.",
+      "Known as the Venice of America, Fort Lauderdale is built around more than 165 miles of inland canals — the geography that anchors the deepwater yachting market.",
     aeoAnswer:
       "Fort Lauderdale is known for waterfront living anchored by more than 165 miles of inland canals — the reason it is called the Venice of America. The city pairs deepwater yacht-capable residences with in-town neighborhoods near Las Olas Boulevard, the A1A beach corridor, and downtown's Riverwalk. Buyers compare ocean access, walkability, and architectural era. Sellers position on dockage, lot, and condition. Port Everglades, the international airport, and the Las Olas-to-beach axis frame the daily geography that distinguishes the market in South Florida.",
     propertyTypes: [
@@ -361,7 +361,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Boca Raton spans from the Atlantic west into central Palm Beach County, with distinct micro-markets along A1A, the East Boca grid, the Royal Palm and Boca Bay Colony estate sections, and the gated club communities west of I-95. Each set has its own buyer profile, fee structure, and resale dynamics.",
     county: "Palm Beach County",
     miaQuote:
-      "Boca Raton represents the absolute zenith of South Florida luxury living — renowned globally for its pristine beaches, Mediterranean Revival architecture, and an unparalleled standard of living.",
+      "Boca Raton's distinctive layer is Addison Mizner's Mediterranean Revival architecture, ocean-access estate sections, and a balance between resort feel and a full-time residential community.",
     aeoAnswer:
       "Boca Raton is a south Palm Beach County city known for layered character — Mediterranean Revival architecture inherited from Addison Mizner, ocean-access estate sections like Royal Palm Yacht & Country Club and Boca Bay Colony, A1A coastal condominiums, and gated club communities west of I-95. The market spans single-family waterfront, beach-corridor high-rises, golf-club estates, and residential pockets within established neighborhoods. Distinguishing features are architectural continuity east of the Intracoastal, the breadth of club lifestyles, and a balance between resort feel and full-time residential community. Buyers shop across very different micro-markets within one city.",
     propertyTypes: [
@@ -440,7 +440,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "The Town of Palm Beach is a barrier island with strict building review, established estate sections in the North End and South End, and the Worth Avenue / Mid-Town corridor in between. Off-island, the Palm Beach area extends through West Palm Beach and the Intracoastal communities — buyer briefs need to specify which side of the bridges.",
     county: "Palm Beach County",
     miaQuote:
-      "Palm Beach stands as the absolute pinnacle of generational wealth and exclusivity.",
+      "Palm Beach is a small barrier-island town defined by architectural review, generational tenure, and three distinct sections — North End, Mid-Town, and South End.",
     aeoAnswer:
       "Palm Beach is a barrier-island town in northern Palm Beach County known for generational-wealth real estate, strict architectural review, and three distinct sections — the North End estate corridor, the Worth Avenue and Mid-Town residential and shopping core, and the South End condominiums. The on-island market is small, controlled, and trades on architectural pedigree, lot, ocean or lake frontage, and renovation depth. Off-island, the broader Palm Beach area extends to West Palm Beach, the Intracoastal communities, and the bridge-access neighborhoods. The defining feature is preparation — building rules, seasonal timing, and property-specific due diligence shape every decision more than headline market trends.",
     propertyTypes: [
@@ -511,7 +511,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Delray Beach centers on Atlantic Avenue, with beach blocks east of A1A, the historic Marina District and Pineapple Grove just inland, and established residential pockets like Lake Ida and Tropic Isle pushing west and south. The walkable downtown is the demand driver — distance to it shapes pricing as much as the property itself.",
     county: "Palm Beach County",
     miaQuote:
-      "Delray Beach perfectly captures the essence of vibrant coastal luxury. Known as the 'Village by the Sea,' this dynamic enclave seamlessly blends the energetic, culturally rich atmosphere of a world-class downtown with the secluded, ultra-luxurious lifestyle of South Florida's most coveted coastlines.",
+      "Delray Beach — the Village by the Sea — is organized around a walkable Atlantic Avenue downtown. Proximity to Atlantic is the dominant pricing variable; the residential heart spans Lake Ida, Tropic Isle, and the A1A beach corridor.",
     aeoAnswer:
       "Delray Beach, the self-styled Village by the Sea in central Palm Beach County, is known for a walkable Atlantic Avenue downtown that anchors the broader market. East of Federal Highway, the Marina District and Pineapple Grove offer historic blocks and boutique condominiums minutes from the beach. The residential heart includes Lake Ida north of Atlantic, Tropic Isle and Pelican Harbor south on the Intracoastal, and beach-corridor condominiums east of A1A. Distance to downtown is the dominant pricing variable. Properties that walk to Atlantic Avenue trade differently from those that drive — and that proximity shapes how buyers and sellers position.",
     propertyTypes: [
@@ -591,7 +591,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Lighthouse Point is a small Broward city north of Pompano Beach with a network of finger isles and ocean-access canals. Property evaluation hinges on the canal — bridge clearances, water depth, seawall condition, and dockage capacity vary block by block and have a larger pricing impact than square footage.",
     county: "Broward County",
     miaQuote:
-      "Lighthouse Point is the ultimate sanctuary for the avid boater and yachtsman — an exclusive nautical enclave globally recognized for its pristine deep-water canals, offering seamless, no-fixed-bridge access to the Atlantic Ocean via the Hillsboro Inlet.",
+      "Lighthouse Point is a small Broward city north of Pompano Beach, known for finger-isle canals with no-fixed-bridge ocean access via the Hillsboro Inlet — a defining feature for yacht-capable single-family residences.",
     aeoAnswer:
       "Lighthouse Point is a small residential city in northern Broward County north of Pompano Beach, known for a tight network of finger isles and ocean-access canals routed to the Atlantic via the Hillsboro Inlet. Many of the canals offer no-fixed-bridge access, which makes the city a recognized destination for yacht-capable single-family residences. The market is predominantly single-family, quieter than Fort Lauderdale, and centered on water — bridge clearance, dock length, and seawall condition often matter more to pricing than interior square footage. The Lighthouse Point Yacht & Racquet Club anchors the social geography for many residents.",
     propertyTypes: [
