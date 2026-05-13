@@ -1,6 +1,6 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-13T18:24:04.209Z",
+  "generated_at": "2026-05-13T18:55:54.246Z",
   "sitemap_route_count": 47,
   "filesystem_route_count": 55,
   "fs_only_routes": [
@@ -491,8 +491,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/insights/las-olas-vs-seven-isles-vs-harbor-beach",
@@ -648,8 +647,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets",
@@ -754,8 +752,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/coral-ridge",
@@ -807,7 +804,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/davie",
@@ -815,7 +813,7 @@
       "out_file": "out/markets/davie/index.html",
       "title": "Davie Luxury Real Estate | Mia Sanabria",
       "h1_text": "Central Broward town with equestrian heritage, Tree City USA designation, and a college corridor.",
-      "meta_description": "Davie is a central Broward County town, incorporated in 1925, distinguished by an equestrian heritage and active… Mia Sanabria, REALTOR® with LPT Realty.",
+      "meta_description": "Davie is a central Broward County town — first incorporated in 1925 and re-established as a municipal corporation in… Mia Sanabria, REALTOR® with LPT Realty.",
       "canonical": "https://miasanabriarealtor.trueidea.com/markets/davie/",
       "noindex": true,
       "schema_blocks": 6,
@@ -833,7 +831,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/deerfield-beach",
@@ -859,7 +858,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/delray-beach",
@@ -885,8 +885,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/fort-lauderdale",
@@ -991,7 +990,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/las-olas-isles",
@@ -1095,7 +1095,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/pompano-beach",
@@ -1226,7 +1227,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/victoria-park",
@@ -1278,7 +1280,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/privacy",
@@ -1501,8 +1504,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     }
   ]
 }

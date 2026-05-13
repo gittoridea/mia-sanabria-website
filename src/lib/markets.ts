@@ -1704,9 +1704,9 @@ export const MARKETS: ReadonlyArray<Market> = [
     tagline:
       "Central Broward town with equestrian heritage, Tree City USA designation, and a college corridor.",
     intro:
-      "Davie is a central Broward town, incorporated in 1925, with a distinct equestrian heritage, Tree City USA designation, and a college corridor that includes Nova Southeastern University's main campus, Broward College Central Campus, and FAU Davie. The market is known for lower-density residential character relative to most Broward cities and zoning that supports agricultural and equestrian uses in named pockets.",
+      "Davie is a central Broward town — first incorporated in 1925 and re-established as a municipal corporation in 1961 — with a distinct equestrian heritage, Tree City USA designation, and a college corridor that includes Nova Southeastern University's main campus, Broward College Central Campus, and FAU Davie. The market is known for lower-density residential character relative to most Broward cities and zoning that supports agricultural and equestrian uses in named pockets.",
     highlights: [
-      "Central Broward County town, incorporated 1925",
+      "Central Broward County town — first incorporated 1925, reincorporated 1961",
       "Distinct equestrian heritage and an active Equestrian Trail network",
       "Tree City USA designation (Arbor Day Foundation)",
       "College corridor — Nova Southeastern University, Broward College Central Campus, FAU Davie",
@@ -1720,10 +1720,10 @@ export const MARKETS: ReadonlyArray<Market> = [
     longitude: -80.2331,
     heroImage: "/markets/davie.jpg",
     localContext:
-      "Davie sits in central Broward County, bordered on the north by Plantation, on the south by Pembroke Pines, and on the east by Fort Lauderdale and the unincorporated areas. The town was incorporated in 1925. Davie maintains an active Equestrian Trail network that runs through several named residential pockets, and carries a Tree City USA designation from the Arbor Day Foundation. The college corridor includes Nova Southeastern University's main campus, the Broward College Central Campus, and Florida Atlantic University's Davie campus. Major axes run along Griffin Road, Stirling Road, Nova Drive, Davie Road, and University Drive.",
+      "Davie sits in central Broward County, bordered on the north by Plantation, on the south by Pembroke Pines, and on the east by Fort Lauderdale and the unincorporated areas. The town was first incorporated in 1925 and re-established as a municipal corporation in 1961. Davie maintains an active Equestrian Trail network that runs through several named residential pockets, and carries a Tree City USA designation from the Arbor Day Foundation. The college corridor includes Nova Southeastern University's main campus, the Broward College Central Campus, and Florida Atlantic University's Davie campus. Major axes run along Griffin Road, Stirling Road, Nova Drive, Davie Road, and University Drive.",
     county: "Broward County",
     aeoAnswer:
-      "Davie is a central Broward County town, incorporated in 1925, distinguished by an equestrian heritage and active Equestrian Trail network, a Tree City USA designation from the Arbor Day Foundation, and a college corridor that includes Nova Southeastern University's main campus, Broward College Central Campus, and FAU Davie. The market runs from lower-density equestrian-overlay residences with agricultural zoning use in named pockets to higher-density established named subdivisions and college-corridor single-family. Major axes run along Griffin Road, Stirling Road, Nova Drive, Davie Road, and University Drive. The residential character is distinctively lower-density relative to most Broward cities.",
+      "Davie is a central Broward County town — first incorporated in 1925 and re-established as a municipal corporation in 1961 — distinguished by an equestrian heritage and active Equestrian Trail network, a Tree City USA designation from the Arbor Day Foundation, and a college corridor that includes Nova Southeastern University's main campus, Broward College Central Campus, and FAU Davie. The market runs from lower-density equestrian-overlay residences with agricultural zoning use in named pockets to higher-density established named subdivisions and college-corridor single-family. Major axes run along Griffin Road, Stirling Road, Nova Drive, Davie Road, and University Drive. The residential character is distinctively lower-density relative to most Broward cities.",
     propertyTypes: [
       "Larger-lot single-family with agricultural or equestrian zoning use",
       "Equestrian-overlay residences along the town's Equestrian Trail network",
@@ -1739,7 +1739,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       {
         question: "Where is Davie in Broward County?",
         answer:
-          "Davie sits in central Broward County, framed by Plantation to the north, Pembroke Pines to the south, and Fort Lauderdale and the adjacent unincorporated areas to the east. It is a separately incorporated Broward town with its own town government. The town was incorporated in 1925.",
+          "Davie sits in central Broward County, framed by Plantation to the north, Pembroke Pines to the south, and Fort Lauderdale and the adjacent unincorporated areas to the east. It is a separately incorporated Broward town with its own town government. Davie was first incorporated in 1925 and re-established as a municipal corporation in 1961.",
       },
       {
         question: "What is Davie's equestrian heritage?",

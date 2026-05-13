@@ -44,11 +44,19 @@
  *   2  — chrome unavailable or fetch failure
  *
  * Usage:
- *   bun scripts/audit-mobile-readability.ts                      # default 4 viewports × 14 routes vs live staging
- *   bun scripts/audit-mobile-readability.ts --base=URL           # alt base
- *   bun scripts/audit-mobile-readability.ts --routes=/,/about/   # alt routes
- *   bun scripts/audit-mobile-readability.ts --capture            # also save screenshots
- *   bun scripts/audit-mobile-readability.ts --quick              # 2 viewports × 4 routes (debug)
+ *   bun scripts/audit-mobile-readability.ts                                              # contract-presence check, no screenshots
+ *   bun scripts/audit-mobile-readability.ts --base=URL                                   # alt base
+ *   bun scripts/audit-mobile-readability.ts --routes=/,/about/                           # alt routes (comma-separated)
+ *   bun scripts/audit-mobile-readability.ts --capture --cycle=cycle-26-readiness-qa     # capture into docs/artifacts/cycle-26-readiness-qa/mobile-readability/after/
+ *   bun scripts/audit-mobile-readability.ts --capture --outDir=path/to/custom/dir       # capture into an explicit custom directory
+ *   bun scripts/audit-mobile-readability.ts --quick                                      # 2 viewports × 4 routes (debug)
+ *
+ * Cycle 26 capture-path safety (post-Cycle 24 R2 / Cycle 25 carry-over):
+ *   When `--capture` is passed WITHOUT either `--cycle=<slug>` or `--outDir=<path>`,
+ *   the script EXITS WITH AN ERROR rather than writing to the historic Cycle 19A-M
+ *   baseline directory. This prevents silent overwrite of `docs/artifacts/cycle-19A-M/
+ *   mobile-readability/after/` — the original baseline screenshot set. To intentionally
+ *   re-render the Cycle 19A-M baseline, pass `--cycle=cycle-19A-M` explicitly.
  */
 import { spawn } from "node:child_process";
 import { writeFile, mkdir } from "node:fs/promises";
@@ -60,6 +68,15 @@ const VIEWPORTS = [
   { name: "ipad-portrait", width: 768, height: 1024, label: "768×1024 iPad" },
 ] as const;
 
+// DEFAULT_ROUTES targets the pre-Cycle-25 live staging deployment. Cycle 25
+// added seven new Mia-approved neighborhood pages (deerfield-beach, coral-springs,
+// plantation, weston, hollywood, davie, sunrise) but the live staging deploy
+// has not yet shipped that commit (`e32310d`). Until that deploy happens, the
+// default route list cannot include those seven without producing 404 errors
+// against live staging. For Cycle 26 capture against the local preview server
+// or any future deploy that includes the seven, pass them explicitly:
+//   --routes=/,/markets/,/markets/fort-lauderdale/,/markets/deerfield-beach/,...
+// See `MIA_APPROVED_CYCLE25_ROUTES` below for the canonical list.
 const DEFAULT_ROUTES = [
   "/",
   "/markets/",
@@ -76,6 +93,22 @@ const DEFAULT_ROUTES = [
   "/insights/fort-lauderdale-waterfront-buyer-guide/",
   "/insights/why-automated-valuations-miss-luxury-waterfront/",
 ];
+
+/**
+ * Cycle 25 — Mia-approved neighborhood pages that joined the site in commit
+ * `e32310d` but are not yet on the public staging deploy. Use this constant
+ * via `--routes=` when capturing against a local preview server (e.g. one
+ * spun up against `out/`) so the seven new pages get their visual baseline.
+ */
+export const MIA_APPROVED_CYCLE25_ROUTES = [
+  "/markets/deerfield-beach/",
+  "/markets/coral-springs/",
+  "/markets/plantation/",
+  "/markets/weston/",
+  "/markets/hollywood/",
+  "/markets/davie/",
+  "/markets/sunrise/",
+] as const;
 
 const THRESHOLDS = {
   bodyFontPx: 16,
@@ -282,12 +315,37 @@ async function main() {
   const routes = routesArg ? routesArg.slice("--routes=".length).split(",") : DEFAULT_ROUTES;
   const capture = args.includes("--capture");
   const quick = args.includes("--quick");
+  const cycleArg = args.find((a) => a.startsWith("--cycle="))?.slice("--cycle=".length);
+  const outDirArg = args.find((a) => a.startsWith("--outDir="))?.slice("--outDir=".length);
 
   const viewports = quick ? VIEWPORTS.slice(0, 2) : VIEWPORTS;
   const selectedRoutes = quick ? routes.slice(0, 4) : routes;
 
-  const screenshotDir = "docs/artifacts/cycle-19A-M/mobile-readability/after";
-  if (capture) await mkdir(screenshotDir, { recursive: true });
+  // Cycle 26 — capture-path safety. The historic default (`docs/artifacts/
+  // cycle-19A-M/mobile-readability/after`) silently overwrote the baseline
+  // every time `--capture` ran. Now: `--capture` REQUIRES either `--cycle=`
+  // or `--outDir=`. The `--cycle=cycle-19A-M` form is the explicit way to
+  // re-render the baseline; any other `--cycle=` slug writes to a
+  // cycle-specific path; `--outDir=` writes to a fully custom path.
+  let screenshotDir: string | null = null;
+  if (capture) {
+    if (outDirArg) {
+      screenshotDir = outDirArg.replace(/\/$/, "");
+    } else if (cycleArg) {
+      screenshotDir = `docs/artifacts/${cycleArg}/mobile-readability/after`;
+    } else {
+      console.error(
+        "audit-mobile-readability --capture: refusing to write to the historic Cycle 19A-M baseline path without explicit opt-in.\n" +
+          "  Pass --cycle=<slug>   to write into docs/artifacts/<slug>/mobile-readability/after/\n" +
+          "  Pass --outDir=<path>  to write into an explicit custom directory\n" +
+          "  Pass --cycle=cycle-19A-M  to intentionally re-render the original baseline.\n" +
+          "  See script header for usage notes.",
+      );
+      process.exit(2);
+    }
+    await mkdir(screenshotDir, { recursive: true });
+    console.log(`audit-mobile-readability --capture: writing screenshots to ${screenshotDir}/`);
+  }
   await mkdir("reports", { recursive: true });
 
   const rows: ProbeRow[] = [];
