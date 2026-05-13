@@ -35,7 +35,10 @@ export const MIA = {
     positioning: "Fort Lauderdale REALTOR®",
     anchorLine: "If I don't know the answer, I will find it.",
   },
-  tracking: { ga4Id: "G-PYYSF87G8K", userwayId: "vVNkJJLvR4" },
+  tracking: {
+    ga4Id: (process.env.NEXT_PUBLIC_GA_ID ?? null) as string | null,
+    userwayId: (process.env.NEXT_PUBLIC_USERWAY_ID ?? null) as string | null,
+  },
   unverified: {
     // SL3405877 cited across multiple public-web sources (LPT Realty agent listing pages, MLS profile pages,
     // Klein Morgan agent legacy page) as Mia's Florida Sales Associate license number. NAR / Florida Realtors /

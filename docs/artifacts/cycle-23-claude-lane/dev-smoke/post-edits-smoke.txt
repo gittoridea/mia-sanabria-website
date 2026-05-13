@@ -1,0 +1,12 @@
+[200] /
+[200] /contact/
+[200] /valuation/
+[200] /insights/
+[200] /privacy/
+[200] /downloads/waterfront-buyer-due-diligence-checklist.pdf
+Form mailto preserved + Mia copy needles
+action="mailto:msanabriarea@gmail.com?subject=Private%20Inquiry%20%E2%80%94%20Mia%20Sanabria"
+action="mailto:msanabriarea@gmail.com?subject=Valuation%20Request%20%E2%80%94%20Mia%20Sanabria"
+Privacy disclosure honesty (should be 0):
+  hits=0  Google Analytics 4 for website analytics
+  hits=0  accessibility widget used to support on-site

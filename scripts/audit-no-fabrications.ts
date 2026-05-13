@@ -68,6 +68,85 @@ const FORBIDDEN: ReadonlyArray<Forbid> = [
     pattern: /Same-business-day\s+response/i,
     reason: "Cycle 19B-FL principal directive Q2 — omit until vetted. Re-enable behind a principal-approved flag.",
   },
+  // Cycle 23 Claude lane — overclaim-adjective regression guard.
+  // Queued in docs/artifacts/cycle-22-remaining-gap-closure/qa-infrastructure-closure.md §2.
+  // Calibrated to post-Cycle-22-R1 Mia-approved copy: each phrase below was
+  // pre-grepped against src/ and confirmed at 0 hits (so this audit guards future
+  // regression, not current copy).
+  //
+  // Note: "most coveted" appears 2x in source (MeetMia.tsx, markets/page.tsx) and
+  // is Mia voice. Intentionally NOT added — it requires a Mia content decision,
+  // not an audit gate.
+  {
+    label: "overclaim-undisputed-yachting",
+    pattern: /undisputed\s+yachting/i,
+    reason: "Overclaim adjective; remove or cite source.",
+  },
+  {
+    label: "overclaim-absolute-zenith",
+    pattern: /absolute\s+zenith/i,
+    reason: "Overclaim adjective; use 'high point' or restate concretely.",
+  },
+  {
+    label: "overclaim-absolute-pinnacle",
+    pattern: /absolute\s+pinnacle/i,
+    reason: "Overclaim adjective; use 'top tier' or restate concretely.",
+  },
+  {
+    label: "overclaim-pinnacle-of",
+    pattern: /pinnacle\s+of/i,
+    reason: "Overclaim framing; restate without superlative.",
+  },
+  {
+    label: "overclaim-perfectly-captures",
+    pattern: /perfectly\s+captures/i,
+    reason: "Overclaim adjective; use 'reflects' or 'expresses'.",
+  },
+  {
+    label: "overclaim-ultra-luxurious",
+    pattern: /ultra[\s-]?luxurious/i,
+    reason: "Overclaim adjective; use 'luxury' or describe concretely.",
+  },
+  {
+    label: "overclaim-unparalleled-standard",
+    pattern: /unparalleled\s+standard/i,
+    reason: "Overclaim adjective; describe the standard concretely or cite source.",
+  },
+  {
+    label: "overclaim-unparalleled",
+    pattern: /\bunparalleled\b/i,
+    reason: "Overclaim adjective; describe concretely or cite source.",
+  },
+  {
+    label: "overclaim-globally-recognized",
+    pattern: /globally\s+recognized/i,
+    reason: "Overclaim adjective; cite the recognition body + year or omit.",
+  },
+  {
+    label: "overclaim-ultimate-sanctuary",
+    pattern: /ultimate\s+sanctuary/i,
+    reason: "Overclaim adjective; describe the residence concretely.",
+  },
+  {
+    label: "overclaim-unrivaled",
+    pattern: /\bunrivaled\b/i,
+    reason: "Overclaim adjective; restate concretely or cite source.",
+  },
+  {
+    label: "overclaim-unmatched",
+    pattern: /\bunmatched\b/i,
+    reason: "Overclaim adjective; restate concretely or cite source.",
+  },
+  {
+    label: "overclaim-flawless",
+    pattern: /\bflawless\b/i,
+    reason: "Overclaim adjective; describe the work concretely.",
+  },
+  {
+    label: "overclaim-seamlessly",
+    pattern: /\bseamlessly\b/i,
+    reason: "Overclaim filler; use 'cleanly' or describe the mechanism.",
+  },
 ];
 
 async function* walkHtml(dir: string): AsyncGenerator<string> {

@@ -1,0 +1,29 @@
+[200] /
+[200] /contact/
+[200] /valuation/
+[200] /buyers/
+[200] /sellers/
+[200] /about/
+[200] /markets/
+[200] /insights/
+[200] /downloads/waterfront-buyer-due-diligence-checklist.pdf
+[200] /downloads/luxury-seller-pre-listing-checklist.pdf
+[200] /downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf
+[200] /privacy/
+[200] /terms/
+[200] /accessibility/
+[200] /dmca/
+  hits=1  Fort Lauderdale, Pompano Beach, and Boca Raton
+  hits=1  more than 165 miles
+  hits=1  Addison
+  hits=1  barrier-island town
+  hits=1  walkable Atlantic
+  hits=1  finger-isle canals
+Privacy disclosure honesty (should be 0 hits when GA env unset):
+  hits=0  Google Analytics 4 for website analytics
+  hits=0  Usage and performance information collected through Google Analytics
+  hits=0  accessibility widget used to support on-site
+---
+Form fallback shape (contact + valuation should still be mailto fallback):
+  /contact/  →  action="mailto:msanabriarea@gmail.com?subject=Private%20Inquiry%20%E2%80%94%20Mia%20Sanabria"
+  /valuation/  →  action="mailto:msanabriarea@gmail.com?subject=Valuation%20Request%20%E2%80%94%20Mia%20Sanabria"

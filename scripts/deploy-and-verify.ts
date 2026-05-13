@@ -71,6 +71,34 @@ async function curlHead(url: string): Promise<{ status: number; lastModified?: s
   };
 }
 
+// Cycle 22 R1 §135 followup — Caddy s-maxage=600 can serve stale HTML for up
+// to ~5min after Dokploy reports status=done. Operators sometimes need to
+// confirm a specific copy needle from the new build is actually live before
+// claiming success. Polls GET (not HEAD) with cache-bust + no-cache headers.
+async function waitForNeedle(
+  url: string,
+  needle: string,
+  timeoutSec: number,
+  intervalSec: number
+): Promise<{ matched: boolean; elapsedSec: number; lastEtag?: string }> {
+  const deadline = Date.now() + timeoutSec * 1000;
+  let lastEtag: string | undefined;
+  while (Date.now() < deadline) {
+    const probeUrl = `${url}${url.includes("?") ? "&" : "?"}${cb()}`;
+    const r = await fetch(probeUrl, {
+      headers: { "Cache-Control": "no-cache", Pragma: "no-cache" },
+      redirect: "follow",
+    });
+    lastEtag = r.headers.get("etag") ?? lastEtag;
+    const body = await r.text();
+    if (body.includes(needle)) {
+      return { matched: true, elapsedSec: (Date.now() - (deadline - timeoutSec * 1000)) / 1000, lastEtag };
+    }
+    await new Promise((rs) => setTimeout(rs, intervalSec * 1000));
+  }
+  return { matched: false, elapsedSec: timeoutSec, lastEtag };
+}
+
 async function lighthouseRun(url: string, outPath: string): Promise<{ perf: number; a11y: number; bp: number; seo: number; lcp?: string; fcp?: string }> {
   return new Promise((resolve, reject) => {
     const p = spawn("bunx", [
@@ -140,14 +168,29 @@ async function preflightAuditCompleteness(): Promise<void> {
 async function main() {
   const args = process.argv.slice(2);
   if (args.includes("--help") || args.includes("-h")) {
-    console.log(`Usage: bun scripts/deploy-and-verify.ts [--no-preflight] [--no-lighthouse] [--pages=slug,slug]
+    console.log(`Usage: bun scripts/deploy-and-verify.ts [--no-preflight] [--no-lighthouse] [--pages=slug,slug] [--wait-for-needle=<substring> [--wait-timeout=<seconds>] [--wait-interval=<seconds>]] [--wait-page=<path>]
   Pre-flight gates (typecheck → lint → build → audit:all → audit-completeness FAIL gate),
   triggers Dokploy deploy, polls until done, cache-bust verifies the live URL, and runs
-  Lighthouse on critical pages by default.`);
+  Lighthouse on critical pages by default.
+
+  --wait-for-needle  After ETag verify, poll the live HTML for <substring> until it
+                     appears (Caddy s-maxage=600 stale-serve window). Exits non-zero
+                     on timeout. Multi-word: --wait-for-needle="some phrase".
+  --wait-timeout     Wait deadline in seconds (default 600 ≈ Caddy s-maxage window).
+  --wait-interval    Poll interval in seconds (default 15).
+  --wait-page        Path to poll against (default /). Multi-needle? run twice.`);
     return;
   }
   const skipPreflight = args.includes("--no-preflight");
   const skipLh = args.includes("--no-lighthouse");
+  const needleArg = args.find((a) => a.startsWith("--wait-for-needle="));
+  const waitNeedle = needleArg ? needleArg.slice("--wait-for-needle=".length) : null;
+  const waitTimeoutArg = args.find((a) => a.startsWith("--wait-timeout="));
+  const waitTimeoutSec = waitTimeoutArg ? Number(waitTimeoutArg.slice("--wait-timeout=".length)) : 600;
+  const waitIntervalArg = args.find((a) => a.startsWith("--wait-interval="));
+  const waitIntervalSec = waitIntervalArg ? Number(waitIntervalArg.slice("--wait-interval=".length)) : 15;
+  const waitPageArg = args.find((a) => a.startsWith("--wait-page="));
+  const waitPage = waitPageArg ? waitPageArg.slice("--wait-page=".length) : "/";
   const pagesArg = args.find((a) => a.startsWith("--pages="));
   const pages = pagesArg
     ? Object.fromEntries(pagesArg.slice("--pages=".length).split(",").map((slug) => [slug, DEFAULT_PAGES[slug] ?? `/${slug}/`]))
@@ -192,6 +235,17 @@ async function main() {
   console.log(`  post-deploy last-modified: ${after.lastModified ?? "?"}`);
   if (after.lastModified === before.lastModified) {
     console.warn("  ⚠ last-modified did not change — Caddy may be caching even with bust headers");
+  }
+
+  if (waitNeedle) {
+    console.log(`\n→ wait-for-needle: polling ${STAGING_BASE}${waitPage} for "${waitNeedle}" (timeout ${waitTimeoutSec}s, interval ${waitIntervalSec}s)`);
+    const w = await waitForNeedle(`${STAGING_BASE}${waitPage}`, waitNeedle, waitTimeoutSec, waitIntervalSec);
+    if (w.matched) {
+      console.log(`✓ needle present after ~${w.elapsedSec.toFixed(0)}s (etag=${w.lastEtag ?? "?"})`);
+    } else {
+      console.error(`✗ needle "${waitNeedle}" did not appear within ${waitTimeoutSec}s (last etag=${w.lastEtag ?? "?"})`);
+      process.exit(1);
+    }
   }
 
   if (skipLh) return;

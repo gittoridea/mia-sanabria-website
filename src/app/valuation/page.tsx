@@ -180,7 +180,7 @@ export default function ValuationPage() {
             >
               Request Valuation
             </button>
-            <p id="valuation-form-helper" className="mt-3 text-xs text-navy-800/60">
+            <p id="valuation-form-helper" className="mt-3 text-xs text-navy-800/80">
               This is a confidential request. By submitting, you agree to receive a private
               response from Mia or her team at the email or phone number provided. Consent to
               receive calls or text messages is not a condition of any service. We never share your

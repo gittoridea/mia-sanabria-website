@@ -26,14 +26,13 @@
         "innerWidth": 320,
         "innerHeight": 568,
         "bodyFontSizePx": 16,
-        "paragraphCount": 33,
+        "paragraphCount": 37,
         "medianParagraphFontSizePx": 16,
         "medianParagraphLineHeightRatio": 1.5,
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-root.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -52,8 +51,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-markets.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -72,8 +70,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-markets-fort-lauderdale.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -92,8 +89,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-markets-pompano-beach.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -112,8 +108,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-markets-boca-raton.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -132,8 +127,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-markets-delray-beach.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -152,8 +146,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-contact.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -172,8 +165,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-valuation.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -192,8 +184,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-buyers.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -212,8 +203,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-sellers.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -232,8 +222,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-about.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -252,8 +241,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-insights.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -272,8 +260,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-insights-fort-lauderdale-waterfront-buyer-guide.jpg"
+      }
     },
     {
       "viewport": "iphone-se",
@@ -292,8 +279,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-se-insights-why-automated-valuations-miss-luxury-waterfront.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -306,14 +292,13 @@
         "innerWidth": 375,
         "innerHeight": 812,
         "bodyFontSizePx": 16,
-        "paragraphCount": 33,
+        "paragraphCount": 37,
         "medianParagraphFontSizePx": 16,
         "medianParagraphLineHeightRatio": 1.5,
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-root.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -332,8 +317,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-markets.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -352,8 +336,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-markets-fort-lauderdale.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -372,8 +355,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-markets-pompano-beach.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -392,8 +374,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-markets-boca-raton.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -412,8 +393,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-markets-delray-beach.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -432,8 +412,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-contact.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -452,8 +431,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-valuation.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -472,8 +450,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-buyers.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -492,8 +469,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-sellers.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -512,8 +488,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-about.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -532,8 +507,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-insights.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -552,8 +526,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-insights-fort-lauderdale-waterfront-buyer-guide.jpg"
+      }
     },
     {
       "viewport": "iphone-15",
@@ -572,8 +545,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/iphone-15-insights-why-automated-valuations-miss-luxury-waterfront.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -586,14 +558,13 @@
         "innerWidth": 414,
         "innerHeight": 896,
         "bodyFontSizePx": 16,
-        "paragraphCount": 33,
+        "paragraphCount": 37,
         "medianParagraphFontSizePx": 16,
         "medianParagraphLineHeightRatio": 1.5,
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-root.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -612,8 +583,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-markets.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -632,8 +602,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-markets-fort-lauderdale.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -652,8 +621,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-markets-pompano-beach.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -672,8 +640,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-markets-boca-raton.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -692,8 +659,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-markets-delray-beach.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -712,8 +678,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-contact.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -732,8 +697,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-valuation.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -752,8 +716,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-buyers.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -772,8 +735,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-sellers.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -792,8 +754,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-about.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -812,8 +773,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-insights.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -832,8 +792,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-insights-fort-lauderdale-waterfront-buyer-guide.jpg"
+      }
     },
     {
       "viewport": "pixel-7",
@@ -852,8 +811,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/pixel-7-insights-why-automated-valuations-miss-luxury-waterfront.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -866,14 +824,13 @@
         "innerWidth": 768,
         "innerHeight": 1024,
         "bodyFontSizePx": 16,
-        "paragraphCount": 33,
+        "paragraphCount": 37,
         "medianParagraphFontSizePx": 16,
         "medianParagraphLineHeightRatio": 1.5,
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-root.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -892,8 +849,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-markets.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -912,8 +868,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-markets-fort-lauderdale.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -932,8 +887,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-markets-pompano-beach.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -952,8 +906,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-markets-boca-raton.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -972,8 +925,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-markets-delray-beach.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -992,8 +944,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-contact.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -1012,8 +963,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-valuation.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -1032,8 +982,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-buyers.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -1052,8 +1001,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-sellers.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -1072,8 +1020,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-about.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -1092,8 +1039,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-insights.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -1112,8 +1058,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-insights-fort-lauderdale-waterfront-buyer-guide.jpg"
+      }
     },
     {
       "viewport": "ipad-portrait",
@@ -1132,8 +1077,7 @@
         "medianParagraphMeasureCh": 80,
         "noHorizontalOverflow": true,
         "tapTargetMinPx": 44
-      },
-      "screenshotPath": "docs/artifacts/cycle-19A-M/mobile-readability/after/ipad-portrait-insights-why-automated-valuations-miss-luxury-waterfront.jpg"
+      }
     }
   ]
 }

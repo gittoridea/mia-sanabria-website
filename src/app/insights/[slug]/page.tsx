@@ -168,7 +168,7 @@ export default async function InsightPostPage({
                 <span aria-hidden className="text-navy-800/30">·</span>
                 <time
                   dateTime={post.dateModified}
-                  className="text-navy-800/60"
+                  className="text-navy-800/70"
                 >
                   {visibleDate.secondary}
                 </time>
@@ -245,7 +245,7 @@ export default async function InsightPostPage({
             </section>
           )}
 
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-navy-800/10 pt-6 text-xs uppercase tracking-[0.3em] text-navy-800/65">
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-navy-800/10 pt-6 text-xs uppercase tracking-[0.3em] text-navy-800/75">
             <span>{post.editorialMonthLabel}</span>
             <Link
               href="/insights/"

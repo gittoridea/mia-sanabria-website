@@ -49,7 +49,7 @@ export function IdxEmbed() {
           .
         </p>
 
-        <p className="mt-2 text-xs text-navy-800/60">
+        <p className="mt-2 text-xs text-navy-800/70">
           Listing data deemed reliable but not guaranteed. Search provided by Matrix MLS;
           data reflects participating Southeast Florida brokerages.
         </p>

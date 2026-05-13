@@ -465,7 +465,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
             <p>
               The City of Fort Lauderdale also operates the LauderGO! Water Trolley — a free public water shuttle along the New River with eight stops, daily 10 a.m. to 10 p.m., in partnership with Water Taxi of Fort Lauderdale and Riverwalk Fort Lauderdale — a measurable signal of city-level investment in waterfront mobility.
             </p>
-            <p className="text-[14px] italic text-navy-800/65">
+            <p className="text-[14px] italic text-navy-800/75">
               Sources: U.S. Census Bureau QuickFacts (Fort Lauderdale city, FL); Visit Lauderdale (Greater Fort Lauderdale / Broward County Fact Sheet + city page); Port Everglades; Marine Industries Association of South Florida; City of Fort Lauderdale (LauderGO Water Trolley page). Full ledger and hedges in <Link href="/markets/fort-lauderdale/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">docs/CYCLE_18_FORT_LAUDERDALE_POMPANO_RESEARCH_LEDGER.md</Link>.
             </p>
           </div>
@@ -629,7 +629,7 @@ export function FortLauderdaleV2Page({ market, relatedMarkets, relatedHeading }:
                 The &ldquo;should I be shopping out of Broward&rdquo; question. <Link href="/markets/boca-raton/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Boca Raton</Link> trades on Mizner-pedigree downtown, country-club residential geography, and an A1A oceanfront corridor — a different residential character than central Fort Lauderdale, with country-club-membership considerations independent of homeownership. <Link href="/markets/palm-beach/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Palm Beach</Link> trades on island and coastal property decisions with the most distinct architectural pedigree in the cohort. <Link href="/markets/delray-beach/" className="text-brass-700 underline decoration-brass-400/40 underline-offset-4 hover:decoration-brass-600">Delray Beach</Link> trades on Atlantic Avenue's walkable downtown and a beach-corridor residential mix. The Palm Beach County tier is a different state-of-mind decision; the right Fort Lauderdale brief separates &ldquo;which Broward sub-market&rdquo; from &ldquo;Broward versus Palm Beach County&rdquo; rather than blending the two.
               </p>
             </div>
-            <p className="text-[14px] italic text-navy-800/65">
+            <p className="text-[14px] italic text-navy-800/75">
               The cards in the section below are the canonical Eastern Fort Lauderdale peer set — useful at first contact, but the three tiers above usually open the brief.
             </p>
           </div>

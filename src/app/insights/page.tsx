@@ -142,7 +142,7 @@ export default function InsightsIndexPage() {
                   <span className="text-xs uppercase tracking-[0.3em] text-brass-700">
                     {String(tm.month).padStart(2, "0")} · {tm.label}
                   </span>
-                  <span className="text-[12px] text-navy-800/55 group-hover:text-brass-700">
+                  <span className="text-[12px] text-navy-800/70 group-hover:text-brass-700">
                     {tm.seasonalFocus}
                   </span>
                 </Link>

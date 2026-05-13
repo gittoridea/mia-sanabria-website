@@ -140,12 +140,17 @@ export function FeaturedMarketsPager({ markets, pageSize = 6 }: Props) {
                       onClick={() => setPageIndex(i)}
                       aria-current={isCurrent ? "page" : undefined}
                       aria-label={`Go to featured markets page ${i + 1} of ${totalPages}`}
-                      className={`inline-flex h-2.5 w-2.5 items-center justify-center rounded-full transition-[background-color,box-shadow] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400 ${
-                        isCurrent
-                          ? "bg-brass-500"
-                          : "bg-navy-800/25 hover:bg-navy-800/55"
-                      }`}
-                    />
+                      className="group inline-flex h-6 w-6 items-center justify-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+                    >
+                      <span
+                        aria-hidden
+                        className={`inline-block h-2.5 w-2.5 rounded-full transition-[background-color,box-shadow] ${
+                          isCurrent
+                            ? "bg-brass-500"
+                            : "bg-navy-800/25 group-hover:bg-navy-800/55"
+                        }`}
+                      />
+                    </button>
                   </li>
                 );
               })}

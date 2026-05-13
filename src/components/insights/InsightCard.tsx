@@ -25,7 +25,7 @@ export function InsightCard({ post }: { post: InsightPost }) {
     >
       <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.3em] text-brass-700">
         <span>{post.editorialMonthLabel}</span>
-        <span className="text-navy-800/55">{readingTime} min read</span>
+        <span className="text-navy-800/70">{readingTime} min read</span>
       </div>
       <h3 className="mt-4 font-display text-2xl text-navy-800 [text-wrap:balance] sm:text-[28px]">
         {post.title}
