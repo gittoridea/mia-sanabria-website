@@ -1318,6 +1318,535 @@ export const MARKETS: ReadonlyArray<Market> = [
     comparisonContext:
       "Bermuda Riviera is the mid-century-modern waterfront alternative within Eastern Fort Lauderdale. Buyers usually compare Coral Ridge as the architectural and geographic cousin to the south, Harbor Beach for the gated trophy alternative with a beach-club component, Las Olas Isles for the walkable-deepwater alternative with stronger Las Olas Boulevard adjacency, and Fort Lauderdale as the broader anchor city. The right Bermuda Riviera brief usually centers on architectural era — preserved mid-century-modern original, studs-out renovation, or contemporary new build — alongside dockage and canal-route specifics, rather than competing on walkability or formal-club access.",
   },
+  // ──────────────────────────────────────────────────────────────────────────
+  // Cycle 25 — seven Mia-approved Broward neighborhood pages.
+  // Source-grounded geographic + municipal-identity framing. No school/safety/
+  // familial-status/protected-class claims. No fabricated metrics. Brand-tone
+  // placeholder hero JPGs render until Mia provides licensed photography.
+  // Centroids per implementation-engineer memo (U.S. Census / GNIS).
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: "deerfield-beach",
+    cluster: "primary",
+    name: "Deerfield Beach",
+    tagline:
+      "Northeastern Broward beach city framed by Boca Raton, Pompano Beach, and the Hillsboro Inlet.",
+    intro:
+      "Deerfield Beach is a northeastern Broward coastal city framed by Boca Raton (Palm Beach County) to the north and Pompano Beach and Lighthouse Point to the south. The market pairs Atlantic beach access — anchored by the public Deerfield Beach Pier — with Intracoastal-side single-family residences and named city pockets like the Cove, often at relative value to its Palm Beach County neighbor.",
+    highlights: [
+      "Northeastern Broward County coastal municipality",
+      "Atlantic Ocean frontage anchored by the public Deerfield Beach Pier",
+      "Intracoastal Waterway through the city, with canal-routed residential blocks",
+      "Cove residential pocket near the Hillsboro Inlet",
+      "Quiet Waters Park (Broward County Parks system) as a named regional landmark",
+    ],
+    lifestyle:
+      "Deerfield Beach suits buyers who want Atlantic beach access and Intracoastal-side single-family residences without committing to the Palm Beach County price band. Mia helps clients sort the A1A-and-pier corridor, the Cove residential pocket, and Intracoastal-side canal homes against each other, and frames the comparison honestly against Pompano Beach and southern Boca Raton so the brief is decisive rather than scattered across three counties of inventory.",
+    priceCharacter:
+      "Pricing changes corridor by corridor. Oceanfront condominium, pier-adjacent single-family, Cove residential, Intracoastal-side, and interior all trade against different cohorts. A property-specific review beats a city-wide average.",
+    latitude: 26.3184,
+    longitude: -80.0998,
+    heroImage: "/markets/deerfield-beach.jpg",
+    localContext:
+      "Deerfield Beach occupies the northeastern corner of Broward County, bordered on the north by Boca Raton in Palm Beach County and on the south by Pompano Beach and Lighthouse Point. The Hillsboro Inlet to the south anchors the deepwater route to the Atlantic for boat-routed canal residences. The Hillsboro Boulevard / Federal Highway / A1A axis frames the public-corridor identity. Quiet Waters Park, a regional Broward Parks system facility, sits inland and is one of the city's better-known named landmarks.",
+    county: "Broward County",
+    aeoAnswer:
+      "Deerfield Beach is a northeastern Broward coastal city of roughly 17 square miles, framed by Boca Raton (Palm Beach County) to the north and Pompano Beach and Lighthouse Point to the south. The market is known for Atlantic beach access anchored by the public Deerfield Beach Pier, the Cove residential pocket near the Hillsboro Inlet, and Intracoastal-side single-family residences with canal-routed access. The Hillsboro Boulevard / Federal Highway / A1A axis frames the public corridor. Quiet Waters Park, a Broward Parks system facility, sits inland. The market often trades at relative value to its Palm Beach County neighbor while sharing the same Atlantic and Intracoastal water-access logic.",
+    propertyTypes: [
+      "Oceanfront and beach-corridor condominiums along A1A",
+      "Pier-adjacent and Cove single-family residences",
+      "Intracoastal-side single-family with private dockage",
+      "Inland canal residences routed toward the Hillsboro Inlet",
+      "Interior single-family in the established Deerfield neighborhoods",
+    ],
+    buyerGuidance:
+      "Buyers here usually start with one of four briefs: A1A-corridor or pier-adjacent condominium; Cove or other beach-corridor single-family; Intracoastal-side with private dockage; or interior single-family. The first conversation establishes which. Waterfront diligence covers seawall, dock specifics, bridge clearance, and the route to the Hillsboro Inlet. Condominium diligence covers reserves, milestone-inspection status, and rental rules. Buyers comparing against southern Boca Raton should weigh county tax-roll and pricing differences alongside the lifestyle comparison.",
+    sellerGuidance:
+      "Sellers in Deerfield Beach should position the residence to its specific corridor — oceanfront condominium, pier-adjacent, Cove residential, Intracoastal-side, or interior — and to the buyer pool that shops there. Pre-list preparation typically includes dock and seawall documentation for waterfront, milestone-inspection and reserve status for condominium, and a comparable-sales packet drawn from the same corridor rather than the city average. Photography and narrative should emphasize the corridor-specific lifestyle rather than a generic luxury frame.",
+    faqs: [
+      {
+        question: "Where is Deerfield Beach geographically?",
+        answer:
+          "Deerfield Beach sits in northeastern Broward County. It is bordered on the north by Boca Raton (Palm Beach County) and on the south by Pompano Beach and Lighthouse Point. It is a separately incorporated Broward municipality with its own city government — not a part of Pompano Beach or Boca Raton.",
+      },
+      {
+        question: "What is the Cove in Deerfield Beach?",
+        answer:
+          "The Cove is a named residential pocket in Deerfield Beach near the Hillsboro Inlet. It is one of the city's better-known waterfront-residential cohorts and is referenced by name in city addressing. Buyers comparing the Cove against other Deerfield corridors should treat it as its own comparable-sales cohort.",
+      },
+      {
+        question: "How does Deerfield Beach compare to Boca Raton for waterfront buyers?",
+        answer:
+          "Both share Atlantic and Intracoastal water-access logic, but Deerfield Beach sits in Broward County while Boca Raton sits in Palm Beach County — which means different county tax rolls, different municipal services, and often a different price band for comparable property profiles. Many waterfront buyers compare the two side by side rather than choosing one without the comparison.",
+      },
+      {
+        question: "Is Deerfield Beach a serious boating market?",
+        answer:
+          "Yes, for buyers focused on Atlantic access via the Hillsboro Inlet. Intracoastal-side residences and canal-routed homes share the inlet with Lighthouse Point and Hillsboro Beach to the south. Bridge clearance, water depth, dock length, and the inlet route should be confirmed during diligence rather than assumed from a city-wide reputation.",
+      },
+      {
+        question: "How does Mia approach a Deerfield Beach search or listing?",
+        answer:
+          "She begins with a private conversation about the brief — lifestyle anchors, timeline, and the residence in mind. From there the search narrows to a specific corridor or the listing strategy shapes to one of Deerfield's distinct buyer cohorts, with current comparable sales, dock-and-seawall context, and any relevant informally available residences her network surfaces along the way.",
+      },
+    ],
+    internalLinks: [
+      { slug: "pompano-beach", label: "Pompano Beach" },
+      { slug: "hillsboro-mile", label: "Hillsboro Mile" },
+      { slug: "lighthouse-point", label: "Lighthouse Point" },
+      { slug: "boca-raton", label: "Boca Raton" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+    ],
+    comparisonContext:
+      "Deerfield Beach is the northeastern Broward coastal peer immediately south of Boca Raton. Buyers usually compare four vectors: Boca Raton for the Palm Beach County country-club and walkable-Atlantic-Avenue alternative; Pompano Beach for the redevelopment-corridor and reef-diving Broward peer to the south; Lighthouse Point for the dense canal-finger-isle alternative routed to the Hillsboro Inlet; and Hillsboro Mile for the linear A1A corridor north of the inlet. The right Deerfield Beach brief usually centers on whether the priority is the pier-and-Cove residential character, deepwater Intracoastal with inlet routing, or beach-corridor condominium at relative value to the Palm Beach County alternative immediately north.",
+  },
+  {
+    slug: "hollywood",
+    cluster: "primary",
+    name: "Hollywood",
+    tagline:
+      "South Broward coastal city anchored by the Hollywood Broadwalk and Young Circle / ArtsPark.",
+    intro:
+      "Hollywood, Florida, is a south Broward coastal city — distinct from Los Angeles — framed by Hallandale Beach to the south and Dania Beach to the north. The market is known for the Hollywood Broadwalk along the Atlantic, Young Circle and ArtsPark in the downtown core, and an Intracoastal-and-canal residential network that runs west from the beach corridor.",
+    highlights: [
+      "South Broward County coastal municipality, incorporated 1925",
+      "Hollywood Broadwalk — public oceanfront pedestrian promenade along the Atlantic",
+      "Young Circle and ArtsPark at Young Circle as named downtown landmarks",
+      "Intracoastal Waterway and a network of residential canals routed to the inlet",
+      "Mixed residential mix from beach-corridor condominium to interior single-family",
+    ],
+    lifestyle:
+      "Hollywood suits buyers who want Atlantic beach access, a walkable downtown distinct from the Fort Lauderdale cohort, and a residential mix that ranges from A1A condominium to canal-routed single-family. Mia frames the comparison against Pompano Beach to the north and Hallandale Beach to the south, and helps clients sort the Broadwalk corridor, the downtown / Young Circle pocket, the Intracoastal residential streets, and the western interior subdivisions against each other.",
+    priceCharacter:
+      "Pricing depends on corridor. Beach-corridor condominium, A1A-adjacent, Intracoastal-side single-family, downtown / Young Circle, and interior single-family all trade against different cohorts. A property-specific review beats a city-wide average.",
+    latitude: 26.0112,
+    longitude: -80.1495,
+    heroImage: "/markets/hollywood.jpg",
+    localContext:
+      "Hollywood occupies south Broward County between Hallandale Beach to the south and Dania Beach to the north, with West Park on the western boundary. The Atlantic Ocean frames the east; the Hollywood Broadwalk is the public-corridor anchor. Young Circle in the downtown core hosts ArtsPark at Young Circle. The Intracoastal Waterway and a network of residential canals route inland buyers to the inlet shared with Port Everglades to the north. The city was founded in 1925 by Joseph W. Young as a planned Florida-coast development.",
+    county: "Broward County",
+    aeoAnswer:
+      "Hollywood, Florida — a south Broward coastal city distinct from Los Angeles — is anchored by the Hollywood Broadwalk along the Atlantic Ocean and Young Circle with ArtsPark in the downtown core. The city was incorporated in 1925 and developed by Joseph W. Young as a planned Florida-coast city. The market spans beach-corridor condominium along A1A, Intracoastal-side single-family with canal-routed dockage, the downtown / Young Circle pocket, and an interior single-family residential mix west of the Intracoastal. The city is framed by Hallandale Beach to the south and Dania Beach to the north, and shares the inlet routing with Port Everglades immediately north.",
+    propertyTypes: [
+      "A1A oceanfront and beach-corridor condominiums",
+      "Hollywood Broadwalk-adjacent and beach-corridor single-family",
+      "Intracoastal-side single-family with private dockage",
+      "Inland canal residences and Lakes-section single-family",
+      "Downtown / Young Circle condominium and mixed-use residential",
+    ],
+    buyerGuidance:
+      "Buyers in Hollywood usually start with one of four briefs: A1A or Broadwalk-adjacent condominium; Intracoastal-side or canal-routed single-family; downtown / Young Circle pocket; or interior single-family. The first conversation establishes which corridor and which residential cohort. Waterfront diligence covers seawall, dock specifics, and the route through the Intracoastal toward the inlet. Condominium diligence covers reserves, milestone-inspection, and rental rules in towers along A1A. Buyers comparing Hollywood against Pompano Beach or eastern Fort Lauderdale should weigh downtown-walkability and price-corridor differences carefully.",
+    sellerGuidance:
+      "Sellers in Hollywood should position the residence to its specific corridor and the buyer pool that shops there. Comparable-sales cohorts diverge sharply across the A1A condominium tier, the Intracoastal-side single-family pool, and the inland residential streets — a residence priced against the wrong cohort underperforms. Pre-list preparation typically includes dock and seawall documentation for waterfront, milestone-inspection and reserve status for condominium, and a comparable-sales packet drawn from the same corridor rather than the city average.",
+    faqs: [
+      {
+        question: "Where is Hollywood, Florida?",
+        answer:
+          "Hollywood is a south Broward County coastal city — not in Los Angeles. It is bordered on the south by Hallandale Beach, on the north by Dania Beach, and on the west by West Park. The Atlantic Ocean frames the east. It is a separately incorporated Broward municipality with its own city government.",
+      },
+      {
+        question: "What is the Hollywood Broadwalk?",
+        answer:
+          "The Hollywood Broadwalk is a public oceanfront pedestrian promenade running along the Atlantic Ocean in Hollywood. It is one of the city's defining named landmarks and frames the residential character of the A1A corridor and the immediately adjacent beach-corridor pockets.",
+      },
+      {
+        question: "How does Hollywood compare to Pompano Beach or eastern Fort Lauderdale?",
+        answer:
+          "Pompano Beach sits to the north of Fort Lauderdale and shares a redevelopment-corridor and reef-diving identity. Hollywood sits south of Fort Lauderdale and pairs the Broadwalk and Young Circle / ArtsPark downtown with the same Intracoastal water-access logic. Buyers comparing the two should weigh downtown character, beach-corridor density, and the price band each market trades in.",
+      },
+      {
+        question: "Is Hollywood a serious boating market?",
+        answer:
+          "Yes, for buyers focused on Intracoastal-side or canal-routed single-family. The Intracoastal Waterway and the network of residential canals route inland residences toward the inlet shared with Port Everglades immediately to the north. Bridge clearance, water depth, dock length, and the route to open water should be confirmed during diligence.",
+      },
+      {
+        question: "How does Mia approach a Hollywood search or listing?",
+        answer:
+          "She begins with a private conversation about the brief and the corridor — Broadwalk-adjacent, Intracoastal-side, downtown / Young Circle, or interior. The search or listing then narrows to a specific cohort, with current comparable sales, condominium-reserve or dock context as appropriate, and any relevant informally available residences her network surfaces along the way.",
+      },
+    ],
+    internalLinks: [
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+      { slug: "davie", label: "Davie" },
+      { slug: "pompano-beach", label: "Pompano Beach" },
+      { slug: "plantation", label: "Plantation" },
+    ],
+    comparisonContext:
+      "Hollywood is the south Broward coastal peer that pairs Atlantic-Ocean Broadwalk frontage with a walkable downtown around Young Circle. Buyers usually compare three vectors: Fort Lauderdale for the broader anchor city to the north with its deepwater finger-isle cohort; Pompano Beach for the redevelopment-corridor alternative also to the north; and Davie, Plantation, or interior cohorts for buyers who want central- or western-Broward residential density without the beach-corridor premium. The right Hollywood brief usually centers on whether the priority is the Broadwalk / A1A condominium tier, an Intracoastal-side single-family with canal dockage, or a downtown / Young Circle walkable residence.",
+  },
+  {
+    slug: "plantation",
+    cluster: "primary",
+    name: "Plantation",
+    tagline:
+      "Central Broward city with mature tree canopy and a central-Broward connector position.",
+    intro:
+      "Plantation is a central Broward city, incorporated in 1953, framed by Sunrise to the north, Davie to the south, and Fort Lauderdale to the east. The market is known for established residential streets, a mature tree canopy along several corridors, and central-Broward connector access via Broward Boulevard, University Drive, Sunrise Boulevard, and Peters Road.",
+    highlights: [
+      "Central Broward County municipality, incorporated 1953",
+      "Mature tree-canopy character along several established residential corridors",
+      "Plantation Heritage Park (Broward Parks system) as a named regional landmark",
+      "Volunteer Park as a named city facility",
+      "Central-Broward connector access via Broward Boulevard, University Drive, Sunrise Boulevard, and Peters Road",
+    ],
+    lifestyle:
+      "Plantation suits buyers who want central-Broward residential character with mature landscaping and convenient connector access to Fort Lauderdale, Sunrise, and Davie. Mia helps clients compare the established mature-canopy streets, the newer gated-community subdivisions, and the mixed-use corridors block by block, and frames the comparison honestly against the master-planned alternatives in Coral Springs, Sunrise, and Weston.",
+    priceCharacter:
+      "Pricing turns on lot, canopy adjacency, and the architectural state of the residence. Established single-family on a mature-canopy street trades against a different cohort than a newer gated-subdivision residence. A property-specific review beats a city average.",
+    latitude: 26.1275,
+    longitude: -80.2331,
+    heroImage: "/markets/plantation.jpg",
+    localContext:
+      "Plantation sits in central Broward County, bordered on the north by Sunrise, on the south by Davie, and on the east by Fort Lauderdale and the unincorporated areas adjacent to it. The city was incorporated in 1953. Major civic and commercial spines run along Broward Boulevard (east-west), University Drive (north-south), Sunrise Boulevard, Peters Road, and Pine Island Road. Plantation Heritage Park, a Broward County Parks system facility, is a named regional landmark. The city is predominantly single-family residential with mixed-use along the major commercial corridors.",
+    county: "Broward County",
+    aeoAnswer:
+      "Plantation is a central Broward County municipality, incorporated in 1953, framed by Sunrise to the north, Davie to the south, and Fort Lauderdale to the east. The market is known for established residential streets, a mature tree canopy along several corridors, and central-Broward connector access via Broward Boulevard, University Drive, Sunrise Boulevard, and Peters Road. Plantation Heritage Park (Broward Parks system) and Volunteer Park (city) are named landmarks. The residential mix runs from established mature-canopy single-family to newer gated-community subdivisions, with mixed-use along the major commercial spines.",
+    propertyTypes: [
+      "Established single-family on mature-canopy streets",
+      "Gated-community single-family in newer subdivisions",
+      "Townhomes and villas along mixed-use commercial corridors",
+      "Renovated residences on established Plantation lots",
+      "Larger-lot single-family in older Plantation neighborhoods",
+    ],
+    buyerGuidance:
+      "Buyers in Plantation usually start with one of three briefs: established mature-canopy single-family on a residential street; newer gated-community single-family or townhome; or a mixed-use-corridor residence. The first conversation establishes which. Diligence covers tree-canopy impact on hurricane-shutter strategy, roof and impact-window status, prior renovation, lot orientation, and HOA / community-covenant scope where relevant. Buyers comparing Plantation against Coral Springs, Sunrise, Weston, or Davie should weigh the canopy and connector character against the master-planned alternative.",
+    sellerGuidance:
+      "Sellers in Plantation should position the residence to the specific corridor and architectural state. Comparable-sales cohorts diverge across the mature-canopy and newer-subdivision pools — a residence priced against the wrong cohort underperforms. Pre-list preparation typically includes ordinance-compliant tree trimming, photography that captures the canopy as a feature where it applies, a comparable-sales packet drawn narrowly from similar residences, and HOA documentation where the residence sits inside a gated community.",
+    faqs: [
+      {
+        question: "Where is Plantation in Broward County?",
+        answer:
+          "Plantation sits in central Broward County, framed by Sunrise to the north, Davie to the south, and Fort Lauderdale to the east. It is a separately incorporated Broward municipality with its own city government. The city was incorporated in 1953 and has its name from the earlier land-use history of the site.",
+      },
+      {
+        question: "What is the tree-canopy character of Plantation?",
+        answer:
+          "Several established residential corridors in Plantation carry a mature tree canopy that distinguishes them from the newer master-planned subdivisions in the surrounding cities. Buyers shopping a canopy street should treat tree-condition diligence, ordinance-compliant trimming, and hurricane-shutter strategy as part of the brief rather than a generic city-wide feature.",
+      },
+      {
+        question: "How does Plantation compare to Coral Springs or Sunrise?",
+        answer:
+          "Coral Springs and Sunrise are largely master-planned with deliberate road grids and newer subdivisions. Plantation pairs an older established residential character with newer gated-community pockets, and sits closer to Fort Lauderdale and the eastern Broward corridor. Buyers comparing the three should weigh canopy and connector character against the master-planned alternative.",
+      },
+      {
+        question: "Is there waterfront in Plantation?",
+        answer:
+          "Plantation is predominantly inland; it does not have Atlantic or Intracoastal frontage. Buyers seeking Atlantic, Intracoastal, or canal water-access should compare to Fort Lauderdale, Pompano Beach, Deerfield Beach, or Hollywood. Plantation residences may sit on lakes or man-made water features within named subdivisions, which is a different diligence conversation.",
+      },
+      {
+        question: "How does Mia approach a Plantation search or listing?",
+        answer:
+          "She begins with a private conversation about the brief — mature-canopy street, newer gated subdivision, or a mixed-use-corridor residence. The search or listing then narrows to a specific cohort, with current comparable sales, canopy and lot context, HOA documentation where applicable, and any relevant informally available residences her network surfaces along the way.",
+      },
+    ],
+    internalLinks: [
+      { slug: "davie", label: "Davie" },
+      { slug: "sunrise", label: "Sunrise" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+      { slug: "coral-springs", label: "Coral Springs" },
+    ],
+    comparisonContext:
+      "Plantation is the central-Broward connector peer between Sunrise to the north and Davie to the south, immediately west of Fort Lauderdale. Buyers usually compare four vectors: Sunrise for the western-Broward civic-and-retail spine with the Sawgrass Mills district; Davie for the lower-density / equestrian-overlay alternative immediately south; Coral Springs for the northwestern Broward master-planned alternative; and Fort Lauderdale for the broader anchor city to the east. The right Plantation brief usually centers on whether the priority is a mature-canopy street, a newer gated subdivision, or a mixed-use corridor residence — and how much central-Broward connector convenience matters in the lifestyle.",
+  },
+  {
+    slug: "weston",
+    cluster: "primary",
+    name: "Weston",
+    tagline:
+      "Western Broward master-planned communities at the Everglades Water Conservation Area edge.",
+    intro:
+      "Weston is a western Broward municipality, incorporated in 1996, developed beginning in the 1980s under an Arvida master plan. The city sits at the western edge of urbanized Broward against the Everglades Water Conservation Area, organized around named Weston communities including Weston Hills, the Falls, Country Isles, Bonaventure, Savanna, and Windmill Ranch Estates.",
+    highlights: [
+      "Western Broward County municipality, incorporated 1996",
+      "Original master plan developed by Arvida beginning in the 1980s",
+      "Bounded on the west by the Everglades Water Conservation Area",
+      "Named Weston communities (Weston Hills, the Falls, Country Isles, Bonaventure, Savanna, Windmill Ranch Estates) — each a distinct cohort",
+      "Parkway-style road grid centered on Royal Palm Boulevard, Indian Trace, Bonaventure Boulevard, and Saddle Club Road",
+    ],
+    lifestyle:
+      "Weston suits buyers who want a master-planned western-Broward residential character with named-community identity and lower density than most Broward cities. Mia helps clients sort the Weston communities against each other — Weston Hills and Windmill Ranch Estates for the estate-scale single-family cohort; the Falls, Country Isles, Bonaventure, and Savanna for the established single-family and townhome cohorts — and frames the comparison honestly against the alternative master-planned cities in Coral Springs and Parkland.",
+    priceCharacter:
+      "Pricing turns on the named community first and the residence second. Comparable-sales cohorts diverge sharply across Weston communities. A property-specific review against the right named-community cohort beats a city-wide average.",
+    latitude: 26.1003,
+    longitude: -80.3997,
+    heroImage: "/markets/weston.jpg",
+    localContext:
+      "Weston sits at the western edge of urbanized Broward County, bordered on the west by the Everglades Water Conservation Area. The city was incorporated in 1996 after Arvida had been developing the area under the Weston master plan since the 1980s. Named Weston communities include Weston Hills, the Falls, Country Isles, Bonaventure, Savanna, and Windmill Ranch Estates — each is a distinct residential cohort with its own community-covenant scope, road-grid pattern, and architectural era. The civic and commercial spine runs along Royal Palm Boulevard, Indian Trace, Bonaventure Boulevard, and Saddle Club Road.",
+    county: "Broward County",
+    aeoAnswer:
+      "Weston is a western Broward County municipality, incorporated in 1996, developed beginning in the 1980s under an Arvida master plan. The city sits at the western edge of urbanized Broward against the Everglades Water Conservation Area. The market is organized around named Weston communities — Weston Hills, the Falls, Country Isles, Bonaventure, Savanna, Windmill Ranch Estates — each with its own architectural era and community-covenant scope. Pricing and comparable-sales cohorts diverge sharply across these named communities, and a serious Weston brief is community-specific rather than city-wide. The parkway-style road grid centers on Royal Palm Boulevard, Indian Trace, Bonaventure Boulevard, and Saddle Club Road.",
+    propertyTypes: [
+      "Estate-scale single-family in Weston Hills and Windmill Ranch Estates",
+      "Established single-family in the Falls, Country Isles, and Savanna",
+      "Townhomes and villas in named Bonaventure cohorts",
+      "Newer gated-subdivision single-family across the western Weston perimeter",
+      "Renovated single-family on legacy Weston-community lots",
+    ],
+    buyerGuidance:
+      "Buyers in Weston usually start with the named community first and the residence second. The first conversation establishes which Weston community fits the brief — Weston Hills or Windmill Ranch Estates for the estate-scale cohort; the Falls or Country Isles for the established single-family cohort; Bonaventure or Savanna for townhome / villa or established single-family. Diligence covers HOA and community-covenant scope, lot orientation, impact-window status, prior renovation, and Everglades-perimeter context where applicable. Comparable-sales review must draw narrowly from the same named community.",
+    sellerGuidance:
+      "Sellers in Weston should position the residence to the named community and the buyer pool that shops there. Buyer pools are heavily community-segmented; a residence priced against the wrong community underperforms. Pre-list preparation typically includes HOA documentation review, a comparable-sales packet drawn from the same Weston community, photography tuned to the named-community character, and a brief that acknowledges the master-planned identity without drifting into superlative claims.",
+    faqs: [
+      {
+        question: "Where is Weston in Broward County?",
+        answer:
+          "Weston sits in western Broward County, at the edge of urbanized Broward against the Everglades Water Conservation Area. It is a separately incorporated Broward municipality with its own city government. The city was incorporated in 1996 after Arvida had been developing the area since the 1980s under the Weston master plan.",
+      },
+      {
+        question: "What are the named Weston communities?",
+        answer:
+          "Weston organizes around named communities including Weston Hills, the Falls, Country Isles, Bonaventure, Savanna, and Windmill Ranch Estates. Each is a distinct residential cohort with its own community-covenant scope, road-grid pattern, and architectural era. Buyers and sellers should treat the named community as the primary segmenter — not the city as a whole.",
+      },
+      {
+        question: "How does Weston compare to Coral Springs or Parkland?",
+        answer:
+          "All three are western or northwestern Broward master-planned cities with strong named-subdivision identity. Coral Springs centers on the original 1963 Coral Ridge Properties master plan. Parkland sits to the north of Coral Springs. Weston was developed later under Arvida and sits at the western perimeter. Buyers comparing the three should weigh the named-community cohort, the architectural era, and the parkway-style road grid.",
+      },
+      {
+        question: "Is there waterfront in Weston?",
+        answer:
+          "Weston is inland; it does not have Atlantic or Intracoastal frontage. Many Weston-community residences sit on lakes or man-made water features within named subdivisions, which is a different diligence conversation than ocean or Intracoastal water access. Buyers seeking Atlantic, Intracoastal, or canal access should compare to Fort Lauderdale, Pompano Beach, or Hollywood.",
+      },
+      {
+        question: "How does Mia approach a Weston search or listing?",
+        answer:
+          "She begins with a private conversation about the named community and the brief — Weston Hills estate-scale, the Falls or Country Isles established single-family, or Bonaventure / Savanna townhome cohort. From there the search or listing narrows to a specific community-level cohort with HOA documentation, comparable sales drawn narrowly, and any relevant informally available residences her network surfaces along the way.",
+      },
+    ],
+    internalLinks: [
+      { slug: "davie", label: "Davie" },
+      { slug: "coral-springs", label: "Coral Springs" },
+      { slug: "sunrise", label: "Sunrise" },
+      { slug: "plantation", label: "Plantation" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+    ],
+    comparisonContext:
+      "Weston is the western-Broward master-planned peer at the edge of urbanized Broward. Buyers usually compare four vectors: Coral Springs for the northwestern Broward master-planned alternative with the original 1963 Coral Ridge Properties master plan; Davie for the lower-density / equestrian-overlay alternative to the east; Sunrise for the western-Broward civic-and-retail spine alternative; and Plantation for the central-Broward connector alternative with mature canopy character. The right Weston brief usually centers on the named Weston community first — Weston Hills, the Falls, Country Isles, Bonaventure, Savanna, or Windmill Ranch Estates — and the residence specifics second, with Everglades-perimeter and HOA-covenant scope as part of the brief rather than incidental detail.",
+  },
+  {
+    slug: "coral-springs",
+    cluster: "primary",
+    name: "Coral Springs",
+    tagline:
+      "Northwestern Broward planned city with a deliberate road grid and named subdivisions.",
+    intro:
+      "Coral Springs is a northwestern Broward municipality, incorporated in 1963 and named for the original Coral Ridge Properties master plan filed the same year. The city is framed by Parkland to the north, Tamarac and Margate to the south and east, and Coconut Creek to the east. The market centers on an established planned-community character with a deliberate parkway road grid.",
+    highlights: [
+      "Northwestern Broward County municipality, incorporated 1963",
+      "Original master plan developed by Coral Ridge Properties",
+      "Major civic and commercial spine along Sample Road, University Drive, and Atlantic Boulevard",
+      "Established city parks and recreation system, including the Coral Springs Sportsplex",
+      "Predominantly single-family residential with named subdivisions and a parkway road grid",
+    ],
+    lifestyle:
+      "Coral Springs suits buyers who want a northwestern-Broward planned-community character with a deliberate road grid and named subdivisions, at relative distance from the beach corridor. Mia helps clients sort the original 1960s and 1970s single-family subdivisions, the 1980s and 1990s subdivisions along Sample Road and University Drive, and the newer gated-community pockets against each other, and frames the comparison honestly against Parkland, Tamarac, and the Weston alternative further west.",
+    priceCharacter:
+      "Pricing turns on the named subdivision, architectural era, and lot specifics. Comparable-sales cohorts diverge by subdivision; a subdivision-specific brief outperforms a city-wide average.",
+    latitude: 26.2710,
+    longitude: -80.2706,
+    heroImage: "/markets/coral-springs.jpg",
+    localContext:
+      "Coral Springs occupies northwestern Broward County, bordered on the north by Parkland, on the east by Coconut Creek, and on the south and east by Tamarac and Margate. The city was incorporated in 1963 and is named for the original Coral Ridge Properties master plan filed the same year. The civic and commercial spine runs along Sample Road (east-west), University Drive (north-south), and Atlantic Boulevard. The Coral Springs Sportsplex and named city parks frame the public-recreation identity. The residential mix runs from original 1960s and 1970s single-family subdivisions to newer gated-community pockets.",
+    county: "Broward County",
+    aeoAnswer:
+      "Coral Springs is a northwestern Broward County municipality, incorporated in 1963, named for the original Coral Ridge Properties master plan filed the same year. The city is framed by Parkland to the north and Tamarac, Margate, and Coconut Creek to the south and east. The market is known for a deliberate parkway road grid, named single-family subdivisions, and an established city parks and recreation system that includes the Coral Springs Sportsplex. The civic and commercial spine runs along Sample Road, University Drive, and Atlantic Boulevard. The residential mix runs from original 1960s and 1970s single-family to newer gated-community pockets, with pricing strongly segmented by named subdivision.",
+    propertyTypes: [
+      "Original 1960s and 1970s single-family on the Coral Ridge Properties road grid",
+      "1980s and 1990s subdivision single-family along the Sample Road / University Drive corridors",
+      "Newer gated-community single-family in the western Coral Springs subdivisions",
+      "Townhomes and villas in named Coral Springs cohorts",
+      "Renovated single-family on legacy Coral Springs subdivision lots",
+    ],
+    buyerGuidance:
+      "Buyers in Coral Springs usually start with the named subdivision and the architectural era. The first conversation establishes which — original 1960s and 1970s single-family, 1980s and 1990s subdivision, or newer gated community. Diligence covers HOA and community-covenant scope where applicable, roof and impact-window status, prior renovation, lot orientation, and proximity to the Sample Road / University Drive commercial corridor. Buyers comparing Coral Springs against Parkland, Weston, or Sunrise should weigh the named-subdivision cohort and the parkway road-grid character.",
+    sellerGuidance:
+      "Sellers in Coral Springs should position the residence to the named subdivision and the architectural era. Comparable-sales cohorts diverge by subdivision; a residence priced against the wrong cohort underperforms. Pre-list preparation typically includes HOA documentation where the residence sits inside a gated community, a comparable-sales packet drawn narrowly from the same subdivision, and photography tuned to the residence's specific architectural era rather than a generic city frame.",
+    faqs: [
+      {
+        question: "Where is Coral Springs in Broward County?",
+        answer:
+          "Coral Springs sits in northwestern Broward County, framed by Parkland to the north, Coconut Creek to the east, and Tamarac and Margate to the south and east. It is a separately incorporated Broward municipality with its own city government. The city was incorporated in 1963 and named for the original Coral Ridge Properties master plan filed the same year.",
+      },
+      {
+        question: "What is the Coral Springs master-plan origin?",
+        answer:
+          "Coral Springs was named for and originally master-planned by Coral Ridge Properties, with the plan filed in 1963. The deliberate parkway road grid, the named subdivisions, and the established parks-and-recreation system all trace back to that master-planned origin. The character distinguishes Coral Springs from incrementally-developed Broward cities.",
+      },
+      {
+        question: "How does Coral Springs compare to Parkland or Weston?",
+        answer:
+          "Parkland sits immediately to the north and shares the master-planned northwestern Broward identity. Weston sits to the south and was developed later under Arvida. All three pair planned-community road grids with named subdivisions. Buyers comparing the three should weigh the architectural era, the named-subdivision cohort, and the proximity to the western Broward perimeter against the Everglades.",
+      },
+      {
+        question: "Is there waterfront in Coral Springs?",
+        answer:
+          "Coral Springs is inland; it does not have Atlantic or Intracoastal frontage. Many Coral Springs subdivisions sit on lakes or man-made water features, which is a different diligence conversation than ocean or Intracoastal water access. Buyers seeking Atlantic, Intracoastal, or canal access should compare to Fort Lauderdale, Pompano Beach, Deerfield Beach, or Hollywood.",
+      },
+      {
+        question: "How does Mia approach a Coral Springs search or listing?",
+        answer:
+          "She begins with a private conversation about the named subdivision and the architectural era. The search or listing then narrows to a specific subdivision-level cohort, with HOA documentation where applicable, comparable sales drawn narrowly from the same subdivision, and any relevant informally available residences her network surfaces along the way.",
+      },
+    ],
+    internalLinks: [
+      { slug: "plantation", label: "Plantation" },
+      { slug: "sunrise", label: "Sunrise" },
+      { slug: "weston", label: "Weston" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+    ],
+    comparisonContext:
+      "Coral Springs is the northwestern Broward master-planned peer in the cohort that includes Parkland to the north and Weston to the south. Buyers usually compare four vectors: Weston for the later Arvida master plan at the Everglades perimeter; Sunrise for the western-Broward civic-and-retail spine with Sawgrass Mills; Plantation for the central-Broward connector alternative with mature canopy; and Fort Lauderdale for the broader anchor city to the southeast. The right Coral Springs brief usually centers on the named subdivision first and the architectural era second, with the parkway road grid and the deliberate planned-community character as the through-line of the city's identity.",
+  },
+  {
+    slug: "davie",
+    cluster: "primary",
+    name: "Davie",
+    tagline:
+      "Central Broward town with equestrian heritage, Tree City USA designation, and a college corridor.",
+    intro:
+      "Davie is a central Broward town, incorporated in 1925, with a distinct equestrian heritage, Tree City USA designation, and a college corridor that includes Nova Southeastern University's main campus, Broward College Central Campus, and FAU Davie. The market is known for lower-density residential character relative to most Broward cities and zoning that supports agricultural and equestrian uses in named pockets.",
+    highlights: [
+      "Central Broward County town, incorporated 1925",
+      "Distinct equestrian heritage and an active Equestrian Trail network",
+      "Tree City USA designation (Arbor Day Foundation)",
+      "College corridor — Nova Southeastern University, Broward College Central Campus, FAU Davie",
+      "Lower-density residential character relative to most Broward cities, with named equestrian-overlay pockets",
+    ],
+    lifestyle:
+      "Davie suits buyers who want a central-Broward residential character at lower density than most surrounding Broward cities, with the option of equestrian or agricultural-zoning use in named pockets. Mia helps clients sort the larger-lot equestrian-overlay residences, the established higher-density named subdivisions, and the college-corridor single-family pool against each other, and frames the comparison honestly against the master-planned alternatives in Weston, Plantation, and Cooper City.",
+    priceCharacter:
+      "Pricing turns on lot size, zoning use, architectural state, and proximity to the equestrian-trail corridor or the college campuses. Comparable-sales cohorts diverge sharply across these briefs.",
+    latitude: 26.0628,
+    longitude: -80.2331,
+    heroImage: "/markets/davie.jpg",
+    localContext:
+      "Davie sits in central Broward County, bordered on the north by Plantation, on the south by Pembroke Pines, and on the east by Fort Lauderdale and the unincorporated areas. The town was incorporated in 1925. Davie maintains an active Equestrian Trail network that runs through several named residential pockets, and carries a Tree City USA designation from the Arbor Day Foundation. The college corridor includes Nova Southeastern University's main campus, the Broward College Central Campus, and Florida Atlantic University's Davie campus. Major axes run along Griffin Road, Stirling Road, Nova Drive, Davie Road, and University Drive.",
+    county: "Broward County",
+    aeoAnswer:
+      "Davie is a central Broward County town, incorporated in 1925, distinguished by an equestrian heritage and active Equestrian Trail network, a Tree City USA designation from the Arbor Day Foundation, and a college corridor that includes Nova Southeastern University's main campus, Broward College Central Campus, and FAU Davie. The market runs from lower-density equestrian-overlay residences with agricultural zoning use in named pockets to higher-density established named subdivisions and college-corridor single-family. Major axes run along Griffin Road, Stirling Road, Nova Drive, Davie Road, and University Drive. The residential character is distinctively lower-density relative to most Broward cities.",
+    propertyTypes: [
+      "Larger-lot single-family with agricultural or equestrian zoning use",
+      "Equestrian-overlay residences along the town's Equestrian Trail network",
+      "Established higher-density single-family in named Davie subdivisions",
+      "College-corridor single-family near NSU, Broward College, and FAU Davie",
+      "Renovated single-family on legacy Davie lots",
+    ],
+    buyerGuidance:
+      "Buyers in Davie usually start with one of three briefs: larger-lot single-family with agricultural or equestrian-zoning potential; established single-family in named higher-density subdivisions; or college-corridor single-family or townhome near NSU, Broward College, or FAU Davie. The first conversation establishes which. Diligence covers zoning use, easements, well-or-septic versus municipal water, equestrian-trail access where applicable, lot orientation, and HOA documentation in subdivisions. Buyers comparing Davie against Plantation, Cooper City, or Weston should weigh the lower-density and equestrian-overlay character against the master-planned alternative.",
+    sellerGuidance:
+      "Sellers in Davie should position the residence to the specific brief — equestrian / larger-lot, established subdivision, or college-corridor — and to the buyer pool that shops there. Comparable-sales cohorts diverge sharply across these three. Pre-list preparation typically includes zoning and use documentation for the equestrian and larger-lot pool, HOA documentation for the subdivision pool, and a brief that frames the college-corridor demand for that segment. Photography should reflect the lot character and zoning use rather than a generic city frame.",
+    faqs: [
+      {
+        question: "Where is Davie in Broward County?",
+        answer:
+          "Davie sits in central Broward County, framed by Plantation to the north, Pembroke Pines to the south, and Fort Lauderdale and the adjacent unincorporated areas to the east. It is a separately incorporated Broward town with its own town government. The town was incorporated in 1925.",
+      },
+      {
+        question: "What is Davie's equestrian heritage?",
+        answer:
+          "Davie maintains an active Equestrian Trail network that runs through several named residential pockets, with zoning that supports agricultural and equestrian uses on larger lots. The town is one of the more distinctive equestrian-overlay residential markets in Broward County, and equestrian-trail access is part of the diligence conversation for buyers in those pockets.",
+      },
+      {
+        question: "What is Tree City USA and how does it apply to Davie?",
+        answer:
+          "Tree City USA is a designation from the Arbor Day Foundation that recognizes municipal commitment to community forestry programs. Davie carries the designation, which corresponds to the town's tree-canopy character and ordinance approach. For buyers, the practical implication is ordinance-aware tree management and a residential character that runs cooler than higher-density Broward cities.",
+      },
+      {
+        question: "How does Davie compare to Plantation or Weston?",
+        answer:
+          "Plantation sits to the north and pairs an older established residential character with newer gated-community pockets at higher density. Weston sits to the west and is largely master-planned at the Everglades perimeter. Davie is distinctly lower-density and carries the equestrian-overlay and Tree City USA character. Buyers comparing the three should weigh density, zoning use, and master-planned-versus-equestrian character.",
+      },
+      {
+        question: "How does Mia approach a Davie search or listing?",
+        answer:
+          "She begins with a private conversation about the brief — equestrian / larger-lot, established subdivision, or college-corridor. The search or listing then narrows to a specific cohort with zoning and use documentation where applicable, comparable sales drawn narrowly from the right cohort, and any relevant informally available residences her network surfaces along the way.",
+      },
+    ],
+    internalLinks: [
+      { slug: "plantation", label: "Plantation" },
+      { slug: "weston", label: "Weston" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+      { slug: "hollywood", label: "Hollywood" },
+      { slug: "sunrise", label: "Sunrise" },
+    ],
+    comparisonContext:
+      "Davie is the central-Broward lower-density / equestrian-overlay peer between Plantation to the north and Pembroke Pines to the south. Buyers usually compare four vectors: Plantation for the established mature-canopy connector alternative immediately north; Weston for the western-Broward master-planned alternative at the Everglades perimeter; Hollywood for the south-Broward coastal alternative with the Broadwalk and Young Circle / ArtsPark; and Fort Lauderdale for the broader anchor city to the east. The right Davie brief usually centers on whether the priority is the equestrian-overlay / larger-lot character, a named higher-density subdivision, or a college-corridor residence near NSU, Broward College, or FAU Davie.",
+  },
+  {
+    slug: "sunrise",
+    cluster: "primary",
+    name: "Sunrise",
+    tagline:
+      "Western Broward city anchored by the Sawgrass Mills retail district and the Florida Panthers arena.",
+    intro:
+      "Sunrise is a western Broward municipality, incorporated in 1961 (originally as Sunrise Golf Village). The city is anchored by the Sawgrass Mills retail district on its western edge and by the BB&T Center / Amerant Bank Arena, home of the NHL Florida Panthers. The residential market spans established single-family in central Sunrise and master-planned subdivisions in the western Sawgrass Lakes corridor.",
+    highlights: [
+      "Western Broward County municipality, incorporated 1961 (originally Sunrise Golf Village)",
+      "Sawgrass Mills retail district as a named regional landmark",
+      "BB&T Center / Amerant Bank Arena — home of the NHL Florida Panthers",
+      "Sawgrass Expressway, Florida Turnpike, and I-595 access",
+      "Established single-family in central Sunrise plus master-planned subdivisions in the western Sawgrass Lakes corridor",
+    ],
+    lifestyle:
+      "Sunrise suits buyers who want a western-Broward residential character with strong civic-and-retail proximity and convenient expressway access. Mia helps clients sort the established single-family in central Sunrise — the Springs and the Pine Island corridor — against the newer master-planned subdivisions in the Sawgrass Lakes corridor on the west side of the city, and frames the comparison honestly against the Weston, Coral Springs, and Plantation alternatives.",
+    priceCharacter:
+      "Pricing turns on the named subdivision, architectural era, and proximity to the Sawgrass Expressway or Sawgrass Mills corridor. Comparable-sales cohorts diverge by subdivision; a subdivision-specific brief outperforms a city-wide average.",
+    latitude: 26.1670,
+    longitude: -80.2566,
+    heroImage: "/markets/sunrise.jpg",
+    localContext:
+      "Sunrise occupies western Broward County. The city was incorporated in 1961, originally as Sunrise Golf Village, and shifted to its current name as the residential character broadened beyond the original golf-community plan. The civic and commercial identity is anchored by the Sawgrass Mills retail district on the western perimeter and by the BB&T Center / Amerant Bank Arena, home of the NHL Florida Panthers. The Sawgrass Expressway, Florida Turnpike, and I-595 provide expressway access. The residential mix runs from established single-family in central Sunrise — the Springs, Pine Island corridor — to newer master-planned subdivisions in the western Sawgrass Lakes corridor.",
+    county: "Broward County",
+    aeoAnswer:
+      "Sunrise is a western Broward County municipality, incorporated in 1961 (originally as Sunrise Golf Village). The city is anchored by the Sawgrass Mills retail district on its western perimeter and by the BB&T Center / Amerant Bank Arena, home of the NHL Florida Panthers. Sawgrass Expressway, Florida Turnpike, and I-595 provide expressway access. The residential market runs from established single-family in central Sunrise — the Springs and the Pine Island corridor — to newer master-planned subdivisions in the Sawgrass Lakes corridor on the west side of the city, with pricing strongly segmented by named subdivision and architectural era.",
+    propertyTypes: [
+      "Established single-family in central Sunrise (the Springs, Pine Island corridor)",
+      "Newer master-planned single-family in the Sawgrass Lakes corridor",
+      "Townhomes and villas in named Sunrise subdivisions",
+      "Renovated single-family on legacy Sunrise lots",
+      "Newer gated-community single-family across the western Sunrise perimeter",
+    ],
+    buyerGuidance:
+      "Buyers in Sunrise usually start with one of two briefs: established single-family in central Sunrise (the Springs, Pine Island corridor); or newer master-planned single-family in the Sawgrass Lakes corridor on the west side. Diligence covers HOA and community-covenant scope, lot orientation, expressway-corridor sound and light impact, roof and impact-window status, and prior renovation. Buyers weighing Sunrise against Weston, Coral Springs, or Plantation should compare the named-subdivision cohort, the expressway access, and the civic-and-retail proximity.",
+    sellerGuidance:
+      "Sellers in Sunrise should position the residence to the named subdivision and the architectural era. Comparable-sales cohorts diverge by subdivision; a residence priced against the wrong cohort underperforms. Pre-list preparation typically includes HOA documentation, a subdivision-specific comparable-sales packet, and photography that captures the residence's specific architectural era rather than a generic 'near Sawgrass Mills' framing.",
+    faqs: [
+      {
+        question: "Where is Sunrise in Broward County?",
+        answer:
+          "Sunrise sits in western Broward County, framed by Plantation to the east, Lauderhill and Tamarac to the north, Davie and Weston to the south and west. It is a separately incorporated Broward municipality with its own city government. The city was incorporated in 1961, originally as Sunrise Golf Village.",
+      },
+      {
+        question: "What is the Sawgrass Mills retail district?",
+        answer:
+          "Sawgrass Mills is a large retail district on the western perimeter of Sunrise, one of the city's defining named landmarks. The district frames the western Sunrise residential cohort and is part of the daily-geography brief for buyers shopping in the Sawgrass Lakes corridor or the adjacent newer master-planned subdivisions.",
+      },
+      {
+        question: "What is the BB&T Center / Amerant Bank Arena?",
+        answer:
+          "The BB&T Center, now under naming rights as Amerant Bank Arena, is the home arena of the NHL Florida Panthers and a regional event venue. Both names are publicly cited; the arena sits in Sunrise and is part of the city's civic-and-retail identity alongside the Sawgrass Mills district.",
+      },
+      {
+        question: "How does Sunrise compare to Weston or Coral Springs?",
+        answer:
+          "Weston sits to the south and west at the Everglades perimeter, organized around named Arvida-era communities. Coral Springs sits to the north and is centered on the original 1963 Coral Ridge Properties master plan. Sunrise pairs the established central single-family with newer master-planned subdivisions in the Sawgrass Lakes corridor and adds the civic-and-retail spine of Sawgrass Mills and the arena.",
+      },
+      {
+        question: "How does Mia approach a Sunrise search or listing?",
+        answer:
+          "She begins with a private conversation about the brief — established central single-family or newer Sawgrass Lakes master-planned. The search or listing then narrows to a specific subdivision-level cohort, with HOA documentation where applicable, comparable sales drawn narrowly from the same subdivision, and any relevant informally available residences her network surfaces along the way.",
+      },
+    ],
+    internalLinks: [
+      { slug: "plantation", label: "Plantation" },
+      { slug: "weston", label: "Weston" },
+      { slug: "coral-springs", label: "Coral Springs" },
+      { slug: "davie", label: "Davie" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+    ],
+    comparisonContext:
+      "Sunrise is the western-Broward civic-and-retail anchor in the cohort framed by Weston to the south, Coral Springs to the north, and Plantation to the east. Buyers usually compare four vectors: Weston for the Arvida master-planned alternative at the Everglades perimeter; Coral Springs for the northwestern Broward Coral Ridge Properties master-planned alternative; Plantation for the central-Broward connector alternative with mature canopy; and Davie for the lower-density / equestrian-overlay alternative to the south. The right Sunrise brief usually centers on whether the priority is established central single-family along the Pine Island corridor, a newer master-planned residence in the Sawgrass Lakes corridor, or a position with strong civic-and-retail proximity to Sawgrass Mills and the arena.",
+  },
 ];
 
 export function getMarket(slug: string): Market | undefined {

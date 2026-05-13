@@ -1,16 +1,16 @@
 # QA-Gate Matrix — Cycle 19A-M
 
-Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-13T17:38:17.087Z
+Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-13T18:24:04.210Z
 
-**48 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 48
+**55 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 55
 
-**Owner-category split** → c1 site:0 · c2 tool:0 · c3 principal:0 · c4 GHL:1 · c5 legal:4 · c6 launch:48
+**Owner-category split** → c1 site:0 · c2 tool:0 · c3 principal:0 · c4 GHL:1 · c5 legal:4 · c6 launch:55
 
 ## home (1 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/` | ✓ | 56 | 154 | 6 | 75 | ✓ | ✓ | other | ✓ | ✓ | l:noindex(c6) |
+| `/` | ✓ | 56 | 159 | 6 | 75 | ✓ | ✓ | other | ✓ | ✓ | l:noindex(c6) |
 
 ## other (4 routes)
 
@@ -77,9 +77,9 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-13T17:38
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/markets` | ✓ | 51 | 157 | 4 | 60 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets` | ✓ | 51 | 157 | 4 | 67 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
 
-## market_detail (16 routes)
+## market_detail (23 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
@@ -87,18 +87,25 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-13T17:38
 | `/markets/bermuda-riviera` | ✓ | 49 | 155 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/boca-raton` | ✓ | 44 | 150 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/coral-ridge` | ✓ | 45 | 157 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/coral-springs` | ✓ | 47 | 158 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/davie` | ✓ | 39 | 153 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/deerfield-beach` | ✓ | 49 | 156 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/delray-beach` | ✓ | 46 | 152 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/fort-lauderdale` | ✓ | 49 | 155 | 6 | 79 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/harbor-beach` | ✓ | 46 | 156 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/hillsboro-mile` | ✓ | 48 | 157 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/hollywood` | ✓ | 43 | 157 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/las-olas-isles` | ✓ | 48 | 155 | 6 | 57 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/lighthouse-point` | ✓ | 50 | 154 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/palm-beach` | ✓ | 44 | 156 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/plantation` | ✓ | 44 | 156 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/pompano-beach` | ✓ | 47 | 151 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/rio-vista` | ✓ | 43 | 153 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/sea-ranch-lakes` | ✓ | 49 | 149 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/seven-isles` | ✓ | 45 | 157 | 6 | 54 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/sunrise` | ✓ | 41 | 148 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/victoria-park` | ✓ | 47 | 155 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/weston` | ✓ | 40 | 153 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 
 ## thank_you (4 routes)
 

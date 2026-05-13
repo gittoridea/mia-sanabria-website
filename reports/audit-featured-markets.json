@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13T17:20:14.971Z",
+  "generatedAt": "2026-05-13T18:24:07.495Z",
   "summary": {
     "pass": 17,
     "warn": 0,
@@ -124,7 +124,7 @@
       "category": "Coverage",
       "description": "/markets/ index links to every market in ALL_MARKET_SLUGS",
       "status": "PASS",
-      "evidence": "16 markets linked"
+      "evidence": "23 markets linked"
     }
   ]
 }

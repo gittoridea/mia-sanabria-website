@@ -1,20 +1,20 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-13T17:38:17.086Z",
-  "sitemap_route_count": 40,
-  "filesystem_route_count": 48,
+  "generated_at": "2026-05-13T18:24:04.209Z",
+  "sitemap_route_count": 47,
+  "filesystem_route_count": 55,
   "fs_only_routes": [
     "/downloads/luxury-seller-pre-listing-checklist",
     "/downloads/waterfront-buyer-due-diligence-checklist",
     "/downloads/fort-lauderdale-waterfront-valuation-prep-sheet",
     "/404"
   ],
-  "rows_scanned": 48,
+  "rows_scanned": 55,
   "severity_counts": {
     "critical": 0,
     "high": 4,
     "medium": 1,
-    "low": 48
+    "low": 55
   },
   "owner_category_split": {
     "c1": 0,
@@ -22,7 +22,7 @@
     "c3": 0,
     "c4": 1,
     "c5": 4,
-    "c6": 48
+    "c6": 55
   },
   "rows": [
     {
@@ -31,7 +31,7 @@
       "out_file": "out/index.html",
       "title": "Fort Lauderdale REALTOR® | Waterfront &amp; Luxury Homes",
       "h1_text": "South Florida Lifestyle Home Search",
-      "meta_description": "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Private representation.",
+      "meta_description": "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Southeast Florida. Private representation for buyers, sellers, and absentee owners.",
       "canonical": "https://miasanabriarealtor.trueidea.com/",
       "noindex": true,
       "schema_blocks": 6,
@@ -661,7 +661,7 @@
       "canonical": "https://miasanabriarealtor.trueidea.com/markets/",
       "noindex": true,
       "schema_blocks": 4,
-      "internal_links": 60,
+      "internal_links": 67,
       "trust_proof_present": true,
       "has_faq": false,
       "contact_form_present": false,
@@ -784,6 +784,84 @@
       ]
     },
     {
+      "route": "/markets/coral-springs",
+      "page_type": "market_detail",
+      "out_file": "out/markets/coral-springs/index.html",
+      "title": "Coral Springs Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Northwestern Broward planned city with a deliberate road grid and named subdivisions.",
+      "meta_description": "Coral Springs is a northwestern Broward County municipality, incorporated in 1963, named for the original Coral Ridge… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/coral-springs/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 51,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/davie",
+      "page_type": "market_detail",
+      "out_file": "out/markets/davie/index.html",
+      "title": "Davie Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Central Broward town with equestrian heritage, Tree City USA designation, and a college corridor.",
+      "meta_description": "Davie is a central Broward County town, incorporated in 1925, distinguished by an equestrian heritage and active… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/davie/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/deerfield-beach",
+      "page_type": "market_detail",
+      "out_file": "out/markets/deerfield-beach/index.html",
+      "title": "Deerfield Beach Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Northeastern Broward beach city framed by Boca Raton, Pompano Beach, and the Hillsboro Inlet.",
+      "meta_description": "Deerfield Beach is a northeastern Broward coastal city of roughly 17 square miles, framed by Boca Raton (Palm Beach… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/deerfield-beach/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
       "route": "/markets/delray-beach",
       "page_type": "market_detail",
       "out_file": "out/markets/delray-beach/index.html",
@@ -890,6 +968,32 @@
       ]
     },
     {
+      "route": "/markets/hollywood",
+      "page_type": "market_detail",
+      "out_file": "out/markets/hollywood/index.html",
+      "title": "Hollywood Luxury Real Estate | Mia Sanabria",
+      "h1_text": "South Broward coastal city anchored by the Hollywood Broadwalk and Young Circle / ArtsPark.",
+      "meta_description": "Hollywood, Florida — a south Broward coastal city distinct from Los Angeles — is anchored by the Hollywood Broadwalk… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/hollywood/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 51,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
       "route": "/markets/las-olas-isles",
       "page_type": "market_detail",
       "out_file": "out/markets/las-olas-isles/index.html",
@@ -952,6 +1056,32 @@
       "noindex": true,
       "schema_blocks": 6,
       "internal_links": 53,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/plantation",
+      "page_type": "market_detail",
+      "out_file": "out/markets/plantation/index.html",
+      "title": "Plantation Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Central Broward city with mature tree canopy and a central-Broward connector position.",
+      "meta_description": "Plantation is a central Broward County municipality, incorporated in 1953, framed by Sunrise to the north, Davie to… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/plantation/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 51,
       "trust_proof_present": true,
       "has_faq": true,
       "contact_form_present": false,
@@ -1073,6 +1203,32 @@
       ]
     },
     {
+      "route": "/markets/sunrise",
+      "page_type": "market_detail",
+      "out_file": "out/markets/sunrise/index.html",
+      "title": "Sunrise Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Western Broward city anchored by the Sawgrass Mills retail district and the Florida Panthers arena.",
+      "meta_description": "Sunrise is a western Broward County municipality, incorporated in 1961 (originally as Sunrise Golf Village). Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/sunrise/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 52,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
       "route": "/markets/victoria-park",
       "page_type": "market_detail",
       "out_file": "out/markets/victoria-park/index.html",
@@ -1083,6 +1239,32 @@
       "noindex": true,
       "schema_blocks": 6,
       "internal_links": 55,
+      "trust_proof_present": true,
+      "has_faq": true,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/markets/weston",
+      "page_type": "market_detail",
+      "out_file": "out/markets/weston/index.html",
+      "title": "Weston Luxury Real Estate | Mia Sanabria",
+      "h1_text": "Western Broward master-planned communities at the Everglades Water Conservation Area edge.",
+      "meta_description": "Weston is a western Broward County municipality, incorporated in 1996, developed beginning in the 1980s under an… Mia Sanabria, REALTOR® with LPT Realty.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/markets/weston/",
+      "noindex": true,
+      "schema_blocks": 6,
+      "internal_links": 52,
       "trust_proof_present": true,
       "has_faq": true,
       "contact_form_present": false,

@@ -81,6 +81,18 @@ export const ALL_MARKET_SLUGS = [
   "bermuda-riviera",
   // Cycle 18 — Pompano Beach added as a primary South Florida cities-and-towns market.
   "pompano-beach",
+  // Cycle 25 — seven Mia-approved Broward neighborhoods registered as primary
+  // cities-and-towns markets. Slug order matches the implementation-engineer
+  // memo's content-adjacency apply order (coastal cohort first; western-Broward
+  // master-planned cohort last). docs/mia-client-decision-record.md is the
+  // authoritative source for the nine-city approved working set.
+  "deerfield-beach",
+  "hollywood",
+  "plantation",
+  "weston",
+  "coral-springs",
+  "davie",
+  "sunrise",
 ] as const;
 
 export type MarketSlug = (typeof ALL_MARKET_SLUGS)[number];
@@ -162,13 +174,16 @@ export const HOMEPAGE_FEATURED_PAGE_SIZE = 6 as const;
 export const MIA_APPROVED_NEIGHBORHOODS = [
   { slug: "fort-lauderdale", label: "Fort Lauderdale", hasPage: true },
   { slug: "pompano-beach", label: "Pompano Beach", hasPage: true },
-  { slug: "deerfield-beach", label: "Deerfield Beach", hasPage: false },
-  { slug: "coral-springs", label: "Coral Springs", hasPage: false },
-  { slug: "plantation", label: "Plantation", hasPage: false },
-  { slug: "weston", label: "Weston", hasPage: false },
-  { slug: "hollywood", label: "Hollywood", hasPage: false },
-  { slug: "davie", label: "Davie", hasPage: false },
-  { slug: "sunrise", label: "Sunrise", hasPage: false },
+  // Cycle 25 — seven Broward cities promoted from `hasPage: false` to `true`.
+  // Backing /markets/<slug>/ pages added in the same cycle; brand-tone
+  // placeholder hero JPGs are stand-ins until Mia provides licensed photography.
+  { slug: "deerfield-beach", label: "Deerfield Beach", hasPage: true },
+  { slug: "coral-springs", label: "Coral Springs", hasPage: true },
+  { slug: "plantation", label: "Plantation", hasPage: true },
+  { slug: "weston", label: "Weston", hasPage: true },
+  { slug: "hollywood", label: "Hollywood", hasPage: true },
+  { slug: "davie", label: "Davie", hasPage: true },
+  { slug: "sunrise", label: "Sunrise", hasPage: true },
 ] as const;
 
 export type MiaApprovedNeighborhoodSlug =

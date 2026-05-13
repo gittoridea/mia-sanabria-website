@@ -1,6 +1,6 @@
 # audit:insights report
 
-Generated: 2026-05-13T17:20:14.937Z
+Generated: 2026-05-13T18:24:07.459Z
 
 Summary: **547 PASS · 0 WARN · 0 FAIL**
 
