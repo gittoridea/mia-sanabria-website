@@ -1,6 +1,6 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-13T20:42:03.341Z",
+  "generated_at": "2026-05-13T23:21:00.580Z",
   "sitemap_route_count": 47,
   "filesystem_route_count": 55,
   "fs_only_routes": [
@@ -102,7 +102,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/accessibility",
@@ -161,7 +162,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/contact",
@@ -194,7 +196,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/dmca",
@@ -331,7 +334,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/insights/bay-colony-and-bermuda-riviera-private-waterfront",
@@ -487,7 +491,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/insights/las-olas-vs-seven-isles-vs-harbor-beach",
@@ -643,7 +648,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets",
@@ -748,7 +754,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/coral-ridge",
@@ -826,8 +833,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/deerfield-beach",
@@ -879,7 +885,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/fort-lauderdale",
@@ -1330,7 +1337,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/terms",
@@ -1493,7 +1501,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     }
   ]
 }
