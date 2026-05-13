@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 
 export function Hero({
@@ -13,7 +14,13 @@ export function Hero({
   imageAlt,
 }: {
   eyebrow?: string;
-  heading: string;
+  /**
+   * Heading content — string or ReactNode. ReactNode supports explicit
+   * line breaks (e.g., two-line H1 on the homepage per Cycle 24 Mia-decision:
+   * `<>South Florida Lifestyle<br />Home Search</>`). String inputs may
+   * activate the Cycle-9 wbr-break path below.
+   */
+  heading: string | ReactNode;
   sub?: string;
   ctaPrimary?: { href: string; label: string };
   ctaSecondary?: { href: string; label: string };
@@ -29,10 +36,12 @@ export function Hero({
   // proper-noun cluster ("LAUDERDALE", "BOCA RATON", "DELRAY BEACH") that previously
   // forced right-edge clipping in Cycle 8 deploy. The string match is exact — any future
   // copy edit on `/` reverts this branch and the bounding-box audit must re-fire.
+  // Cycle 24 — heading prop now accepts ReactNode; the wbr-break only fires for the
+  // legacy exact-string match. Two-line ReactNode headings (e.g., homepage) fall through.
   const homeHeroHeading =
     "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.";
   const headingContent =
-    heading === homeHeroHeading ? (
+    typeof heading === "string" && heading === homeHeroHeading ? (
       <>
         {"Luxury and waterfront real estate across Eastern Fort Lauder"}
         <wbr />

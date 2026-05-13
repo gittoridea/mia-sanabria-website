@@ -45,8 +45,14 @@ export const MIA = {
     // Broward, Palm Beaches & St. Lucie REALTORS® membership cited in the same sources — satisfies the NAR
     // Membership Marks Manual prerequisite for REALTOR® R logo display. DBPR primary-source confirmation by
     // Mia is the final pre-.com-cutover gate; placeholder remains `unverified.*` until then.
+    //
+    // Cycle 24 Mia-Live-Decisions (2026-05-13): Mia verbally confirmed the license number is correct AND
+    // approved the six designations below for display. Per the file-level docstring, fields stay in the
+    // `unverified` block until a written attestation lands; they are now populated rather than empty so
+    // downstream schema / About / footer components can read the canonical set. Site components must still
+    // gate visible display on a separate verified attestation flag before publishing to production.
     licenseNumber: "SL3405877" as string | null,
-    designations: [] as string[],
+    designations: ["PSA", "RENE", "CDPE", "ABR", "SFR", "AHWD"] as string[],
     languages: ["English"] as const,
     yearsLicensed: null as string | null,
     displayOffice: null as string | null,
@@ -137,6 +143,36 @@ export const HOMEPAGE_FEATURED_ORDER: ReadonlyArray<MarketSlug> = [
 ];
 
 export const HOMEPAGE_FEATURED_PAGE_SIZE = 6 as const;
+
+/**
+ * Cycle 24 Mia-Live-Decisions (2026-05-13): Mia confirmed her canonical
+ * neighborhood working set — the 9 Broward cities below. This list is the
+ * single source of truth for "Neighborhoods" nav emphasis going forward.
+ *
+ * Coverage state vs existing market routes is tracked in
+ * docs/mia-client-decision-record.md. Two slugs already have market pages
+ * (`fort-lauderdale`, `pompano-beach`); the other seven are content gaps
+ * requiring Mia copy + photos in a separate cycle.
+ *
+ * Legacy markets in MARKETS / ALL_MARKET_SLUGS that are NOT on this list
+ * remain in place this cycle for SEO continuity (per mission boundary "avoid
+ * destructive removal unless safe"); their retain-vs-redirect-vs-deprecate
+ * decision is a separate Mia-content cycle.
+ */
+export const MIA_APPROVED_NEIGHBORHOODS = [
+  { slug: "fort-lauderdale", label: "Fort Lauderdale", hasPage: true },
+  { slug: "pompano-beach", label: "Pompano Beach", hasPage: true },
+  { slug: "deerfield-beach", label: "Deerfield Beach", hasPage: false },
+  { slug: "coral-springs", label: "Coral Springs", hasPage: false },
+  { slug: "plantation", label: "Plantation", hasPage: false },
+  { slug: "weston", label: "Weston", hasPage: false },
+  { slug: "hollywood", label: "Hollywood", hasPage: false },
+  { slug: "davie", label: "Davie", hasPage: false },
+  { slug: "sunrise", label: "Sunrise", hasPage: false },
+] as const;
+
+export type MiaApprovedNeighborhoodSlug =
+  (typeof MIA_APPROVED_NEIGHBORHOODS)[number]["slug"];
 
 /* ─────────────────────────────────────────────────────────────────────────
  * Cycle 14 — canonical route + image-path helpers (DRY refactor).

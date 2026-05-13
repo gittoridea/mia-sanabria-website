@@ -79,12 +79,26 @@ export default function HomePage() {
       <RealEstateAgentSchema />
       <BreadcrumbSchema items={[{ name: "Home", href: "/" }]} />
 
+      {/*
+        Cycle 24 Mia-Live-Decisions (2026-05-13): H1 locked by Mia to a two-line
+        search-forward format. The sub-heading retains the practice framing; the
+        primary CTA now leads to the property-search anchor so the hero reads as
+        search-forward, with the private-conversation path retained as secondary.
+        The Bridge IDX inline search-input scaffold is deferred pending the
+        runtime decision documented in src/lib/bridge.ts.
+      */}
       <Hero
         eyebrow="Mia Sanabria · REALTOR® with LPT Realty"
-        heading="Luxury and waterfront real estate across Fort Lauderdale, Pompano Beach, and Boca Raton."
-        sub="A small, deliberate practice — private representation for buyers and sellers of distinctive coastal residences."
-        ctaPrimary={{ href: "/contact/", label: "Begin a Private Conversation" }}
-        ctaSecondary={{ href: "/valuation/", label: "Request Home Valuation" }}
+        heading={
+          <>
+            South Florida Lifestyle
+            <br />
+            Home Search
+          </>
+        }
+        sub="Discreet, local guidance for Southeast Florida luxury homeowners, absentee owners, and qualified buyers — from a small, deliberate practice."
+        ctaPrimary={{ href: "/markets/#property-search", label: "Search Listings" }}
+        ctaSecondary={{ href: "/contact/", label: "Begin a Private Conversation" }}
         background="image"
         imageSrc="/markets/fort-lauderdale.jpg"
         imageAlt="Twilight luxury waterfront residence, Eastern Fort Lauderdale"

@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-13T15:54:59.354Z",
+  "generated": "2026-05-13T16:38:11.732Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -704,56 +704,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 117.3125,
+            "y": 123.359375,
             "w": 468,
-            "h": 367.375,
+            "h": 355.28125,
             "right": 484,
-            "bottom": 484.6875
+            "bottom": 478.640625
           },
           "headingBox": {
             "x": 38,
-            "y": 187.5,
+            "y": 193.546875,
             "w": 299.71875,
-            "h": 80.1875,
+            "h": 40.09375,
             "right": 337.71875,
-            "bottom": 267.6875
+            "bottom": 233.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 154.3125,
+            "y": 160.359375,
             "w": 426,
             "h": 17.1875,
             "right": 464,
-            "bottom": 171.5
+            "bottom": 177.546875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 283.6875,
+            "y": 249.640625,
             "w": 426,
-            "h": 56,
+            "h": 84,
             "right": 464,
-            "bottom": 339.6875
+            "bottom": 333.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 363.6875,
+            "y": 357.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 407.1875
+            "bottom": 401.140625
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 419.1875,
+            "y": 413.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 464.6875
+            "bottom": 458.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -777,14 +777,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Search Listings",
             "box": {
               "x": 38,
-              "y": 363.6875,
+              "y": 357.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 407.1875
+              "bottom": 401.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -793,14 +793,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Request Home Valuation",
+            "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 419.1875,
+              "y": 413.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 464.6875
+              "bottom": 458.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -861,12 +861,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 231,
+        "rightEdgeContentPx": 224,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (231 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (224 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1035,56 +1035,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 117.3125,
+            "y": 123.359375,
             "w": 468,
-            "h": 367.375,
+            "h": 355.28125,
             "right": 484,
-            "bottom": 484.6875
+            "bottom": 478.640625
           },
           "headingBox": {
             "x": 38,
-            "y": 187.5,
+            "y": 193.546875,
             "w": 299.71875,
-            "h": 80.1875,
+            "h": 40.09375,
             "right": 337.71875,
-            "bottom": 267.6875
+            "bottom": 233.640625
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 38,
-            "y": 154.3125,
+            "y": 160.359375,
             "w": 426,
             "h": 17.1875,
             "right": 464,
-            "bottom": 171.5
+            "bottom": 177.546875
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 38,
-            "y": 283.6875,
+            "y": 249.640625,
             "w": 426,
-            "h": 56,
+            "h": 84,
             "right": 464,
-            "bottom": 339.6875
+            "bottom": 333.640625
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 363.6875,
+            "y": 357.640625,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 407.1875
+            "bottom": 401.140625
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 419.1875,
+            "y": 413.140625,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 464.6875
+            "bottom": 458.640625
           },
           "secondaryCtaTailClips": false
         },
@@ -1108,14 +1108,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Search Listings",
             "box": {
               "x": 38,
-              "y": 363.6875,
+              "y": 357.640625,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 407.1875
+              "bottom": 401.140625
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -1124,14 +1124,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Request Home Valuation",
+            "text": "Begin a Private Conversation",
             "box": {
               "x": 38,
-              "y": 419.1875,
+              "y": 413.140625,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 464.6875
+              "bottom": 458.640625
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -1192,12 +1192,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 192,
+        "rightEdgeContentPx": 215,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (192 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (215 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1366,56 +1366,56 @@
         "hero": {
           "panelBox": {
             "x": 16,
-            "y": 141.125,
+            "y": 162.3125,
             "w": 672,
-            "h": 379.75,
+            "h": 337.375,
             "right": 688,
-            "bottom": 520.875
+            "bottom": 499.6875
           },
           "headingBox": {
             "x": 42,
-            "y": 214.125,
+            "y": 235.3125,
             "w": 576,
-            "h": 140.75,
+            "h": 70.375,
             "right": 618,
-            "bottom": 354.875
+            "bottom": 305.6875
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 42,
-            "y": 182.125,
+            "y": 203.3125,
             "w": 622,
             "h": 16,
             "right": 664,
-            "bottom": 198.125
+            "bottom": 219.3125
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 42,
-            "y": 370.875,
+            "y": 321.6875,
             "w": 576,
-            "h": 56,
+            "h": 84,
             "right": 618,
-            "bottom": 426.875
+            "bottom": 405.6875
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 42,
-            "y": 451.875,
-            "w": 290.125,
+            "y": 430.6875,
+            "w": 186.46875,
             "h": 44,
-            "right": 332.125,
-            "bottom": 495.875
+            "right": 228.46875,
+            "bottom": 474.6875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
-            "x": 348.125,
-            "y": 450.875,
-            "w": 235.46875,
+            "x": 244.46875,
+            "y": 429.6875,
+            "w": 264.53125,
             "h": 46,
-            "right": 583.59375,
-            "bottom": 496.875
+            "right": 509,
+            "bottom": 475.6875
           },
           "secondaryCtaTailClips": false
         },
@@ -1439,14 +1439,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Search Listings",
             "box": {
               "x": 42,
-              "y": 451.875,
-              "w": 290.125,
+              "y": 430.6875,
+              "w": 186.46875,
               "h": 44,
-              "right": 332.125,
-              "bottom": 495.875
+              "right": 228.46875,
+              "bottom": 474.6875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -1455,14 +1455,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Request Home Valuation",
+            "text": "Begin a Private Conversation",
             "box": {
-              "x": 348.125,
-              "y": 450.875,
-              "w": 235.46875,
+              "x": 244.46875,
+              "y": 429.6875,
+              "w": 264.53125,
               "h": 46,
-              "right": 583.59375,
-              "bottom": 496.875
+              "right": 509,
+              "bottom": 475.6875
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -1697,56 +1697,56 @@
         "hero": {
           "panelBox": {
             "x": 32,
-            "y": 115.75,
+            "y": 142.625,
             "w": 672,
-            "h": 402.5,
+            "h": 348.75,
             "right": 704,
-            "bottom": 518.25
+            "bottom": 491.375
           },
           "headingBox": {
             "x": 66,
-            "y": 196.75,
+            "y": 223.625,
             "w": 576,
-            "h": 155.5,
+            "h": 77.75,
             "right": 642,
-            "bottom": 352.25
+            "bottom": 301.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 66,
-            "y": 164.75,
+            "y": 191.625,
             "w": 606,
             "h": 16,
             "right": 672,
-            "bottom": 180.75
+            "bottom": 207.625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 66,
-            "y": 368.25,
+            "y": 317.375,
             "w": 576,
-            "h": 48,
+            "h": 72,
             "right": 642,
-            "bottom": 416.25
+            "bottom": 389.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 66,
-            "y": 441.25,
-            "w": 298.125,
+            "y": 414.375,
+            "w": 194.46875,
             "h": 44,
-            "right": 364.125,
-            "bottom": 485.25
+            "right": 260.46875,
+            "bottom": 458.375
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
-            "x": 380.125,
-            "y": 440.25,
-            "w": 243.46875,
+            "x": 276.46875,
+            "y": 413.375,
+            "w": 272.53125,
             "h": 46,
-            "right": 623.59375,
-            "bottom": 486.25
+            "right": 549,
+            "bottom": 459.375
           },
           "secondaryCtaTailClips": false
         },
@@ -1754,14 +1754,14 @@
         "ctas": [
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Search Listings",
             "box": {
               "x": 66,
-              "y": 441.25,
-              "w": 298.125,
+              "y": 414.375,
+              "w": 194.46875,
               "h": 44,
-              "right": 364.125,
-              "bottom": 485.25
+              "right": 260.46875,
+              "bottom": 458.375
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -1770,14 +1770,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Request Home Valuation",
+            "text": "Begin a Private Conversation",
             "box": {
-              "x": 380.125,
-              "y": 440.25,
-              "w": 243.46875,
+              "x": 276.46875,
+              "y": 413.375,
+              "w": 272.53125,
               "h": 46,
-              "right": 623.59375,
-              "bottom": 486.25
+              "right": 549,
+              "bottom": 459.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -2012,56 +2012,56 @@
         "hero": {
           "panelBox": {
             "x": 112,
-            "y": 115.75,
+            "y": 142.625,
             "w": 672,
-            "h": 402.5,
+            "h": 348.75,
             "right": 784,
-            "bottom": 518.25
+            "bottom": 491.375
           },
           "headingBox": {
             "x": 146,
-            "y": 196.75,
+            "y": 223.625,
             "w": 576,
-            "h": 155.5,
+            "h": 77.75,
             "right": 722,
-            "bottom": 352.25
+            "bottom": 301.375
           },
           "headingClipsRight": false,
           "eyebrowBox": {
             "x": 146,
-            "y": 164.75,
+            "y": 191.625,
             "w": 606,
             "h": 16,
             "right": 752,
-            "bottom": 180.75
+            "bottom": 207.625
           },
           "eyebrowClipsRight": false,
           "subBox": {
             "x": 146,
-            "y": 368.25,
+            "y": 317.375,
             "w": 576,
-            "h": 48,
+            "h": 72,
             "right": 722,
-            "bottom": 416.25
+            "bottom": 389.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 146,
-            "y": 441.25,
-            "w": 298.125,
+            "y": 414.375,
+            "w": 194.46875,
             "h": 44,
-            "right": 444.125,
-            "bottom": 485.25
+            "right": 340.46875,
+            "bottom": 458.375
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
-            "x": 460.125,
-            "y": 440.25,
-            "w": 243.46875,
+            "x": 356.46875,
+            "y": 413.375,
+            "w": 272.53125,
             "h": 46,
-            "right": 703.59375,
-            "bottom": 486.25
+            "right": 629,
+            "bottom": 459.375
           },
           "secondaryCtaTailClips": false
         },
@@ -2069,14 +2069,14 @@
         "ctas": [
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Search Listings",
             "box": {
               "x": 146,
-              "y": 441.25,
-              "w": 298.125,
+              "y": 414.375,
+              "w": 194.46875,
               "h": 44,
-              "right": 444.125,
-              "bottom": 485.25
+              "right": 340.46875,
+              "bottom": 458.375
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -2085,14 +2085,14 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Request Home Valuation",
+            "text": "Begin a Private Conversation",
             "box": {
-              "x": 460.125,
-              "y": 440.25,
-              "w": 243.46875,
+              "x": 356.46875,
+              "y": 413.375,
+              "w": 272.53125,
               "h": 46,
-              "right": 703.59375,
-              "bottom": 486.25
+              "right": 629,
+              "bottom": 459.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -18925,12 +18925,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1128,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1128 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -27909,12 +27909,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 100,
+        "rightEdgeContentPx": 230,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (100 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (230 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },

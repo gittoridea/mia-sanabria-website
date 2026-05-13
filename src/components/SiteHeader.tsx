@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
-import { NAV } from "@/lib/site";
+import { Menu, X, Phone, Search } from "lucide-react";
+import { NAV, SEARCH_ICON_HREF } from "@/lib/site";
 import { MIA } from "@/lib/mia";
 import { cn } from "@/lib/cn";
 import { NavLink } from "./NavLink";
@@ -79,13 +79,23 @@ export function SiteHeader() {
               <li key={item.href}>
                 <NavLink
                   href={item.href}
-                  matchPrefix={item.href !== "/"}
+                  matchPrefix
                   className="text-sm tracking-wide text-navy-800 transition-colors hover:text-brass-700 aria-[current=page]:text-brass-700 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
                 >
                   {item.label}
                 </NavLink>
               </li>
             ))}
+            <li>
+              <Link
+                href={SEARCH_ICON_HREF}
+                aria-label="Home Search"
+                title="Home Search"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-navy-800 text-navy-800 transition-colors hover:bg-navy-800 hover:text-cream-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+              >
+                <Search className="h-4 w-4" aria-hidden />
+              </Link>
+            </li>
             <li>
               <a
                 href={`tel:${MIA.contact.phoneTel}`}
@@ -128,7 +138,7 @@ export function SiteHeader() {
             <li key={item.href}>
               <NavLink
                 href={item.href}
-                matchPrefix={item.href !== "/"}
+                matchPrefix
                 onNavigate={() => setOpen(false)}
                 className="block min-h-[44px] py-3 text-base text-navy-800 hover:text-brass-700 aria-[current=page]:text-brass-700 aria-[current=page]:underline aria-[current=page]:underline-offset-4"
               >
@@ -136,6 +146,18 @@ export function SiteHeader() {
               </NavLink>
             </li>
           ))}
+          <li className="pt-2">
+            <Link
+              href={SEARCH_ICON_HREF}
+              aria-label="Home Search"
+              title="Home Search"
+              onClick={() => setOpen(false)}
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-navy-800 px-4 py-2 text-sm tracking-wide text-navy-800"
+            >
+              <Search className="h-4 w-4" aria-hidden />
+              Home Search
+            </Link>
+          </li>
           <li className="pt-2">
             <a
               href={`tel:${MIA.contact.phoneTel}`}
