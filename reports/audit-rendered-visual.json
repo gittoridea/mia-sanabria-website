@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-13T18:32:19.699Z",
+  "generated": "2026-05-13T20:00:31.995Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -49,9 +49,9 @@
     "/markets/sunrise/"
   ],
   "counts": {
-    "pass": 14,
+    "pass": 13,
     "warn": 1,
-    "fail": 0,
+    "fail": 1,
     "skip": 0
   },
   "results": [
@@ -101,8 +101,16 @@
       "id": "rendered.hero.primaryCtaAboveFoldDesktop",
       "category": "Hero",
       "description": "Hero primary CTA stays above the fold at desktop viewports (1280x800 + 1440x900)",
-      "status": "PASS",
-      "evidence": "0 desktop probes show primary CTA below fold"
+      "status": "FAIL",
+      "evidence": "1 desktop probes push primary CTA below fold",
+      "details": {
+        "offenders": [
+          {
+            "route": "/markets/davie/",
+            "viewport": "1280x800"
+          }
+        ]
+      }
     },
     {
       "id": "rendered.hero.primaryCtaTextFits",
@@ -673,8 +681,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
-            "naturalWidth": 800,
-            "naturalHeight": 1000,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024,
             "renderedWidth": 466,
             "renderedHeight": 583,
             "opacity": 1,
@@ -1004,8 +1012,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
-            "naturalWidth": 800,
-            "naturalHeight": 1000,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024,
             "renderedWidth": 466,
             "renderedHeight": 583,
             "opacity": 1,
@@ -1335,8 +1343,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
-            "naturalWidth": 800,
-            "naturalHeight": 1000,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024,
             "renderedWidth": 734,
             "renderedHeight": 918,
             "opacity": 1,
@@ -1682,8 +1690,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
-            "naturalWidth": 800,
-            "naturalHeight": 1000,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024,
             "renderedWidth": 458.796875,
             "renderedHeight": 573.984375,
             "opacity": 1,
@@ -2013,8 +2021,8 @@
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
-            "naturalWidth": 800,
-            "naturalHeight": 1000,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024,
             "renderedWidth": 458.796875,
             "renderedHeight": 573.984375,
             "opacity": 1,
@@ -25503,12 +25511,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1597,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1597 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -47222,7 +47230,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 12553,
+        "documentHeight": 12633,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -47242,7 +47250,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 599.375,
+            "renderedHeight": 627.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -47351,9 +47359,9 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 535.375,
+            "h": 563.375,
             "right": 484,
-            "bottom": 648.375
+            "bottom": 676.375
           },
           "headingBox": {
             "x": 38,
@@ -47377,28 +47385,28 @@
             "x": 38,
             "y": 279.375,
             "w": 426,
-            "h": 224,
+            "h": 252,
             "right": 464,
-            "bottom": 503.375
+            "bottom": 531.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 527.375,
+            "y": 555.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 570.875
+            "bottom": 598.875
           },
           "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 582.875,
+            "y": 610.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 628.375
+            "bottom": 656.375
           },
           "secondaryCtaTailClips": false
         },
@@ -47474,12 +47482,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 103,
+        "rightEdgeContentPx": 116,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (103 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (116 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -47497,7 +47505,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 12553,
+        "documentHeight": 12633,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -47517,7 +47525,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 500,
-            "renderedHeight": 599.375,
+            "renderedHeight": 627.375,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -47626,9 +47634,9 @@
             "x": 16,
             "y": 113,
             "w": 468,
-            "h": 535.375,
+            "h": 563.375,
             "right": 484,
-            "bottom": 648.375
+            "bottom": 676.375
           },
           "headingBox": {
             "x": 38,
@@ -47652,28 +47660,28 @@
             "x": 38,
             "y": 279.375,
             "w": 426,
-            "h": 224,
+            "h": 252,
             "right": 464,
-            "bottom": 503.375
+            "bottom": 531.375
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 38,
-            "y": 527.375,
+            "y": 555.375,
             "w": 426,
             "h": 43.5,
             "right": 464,
-            "bottom": 570.875
+            "bottom": 598.875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 38,
-            "y": 582.875,
+            "y": 610.875,
             "w": 426,
             "h": 45.5,
             "right": 464,
-            "bottom": 628.375
+            "bottom": 656.375
           },
           "secondaryCtaTailClips": false
         },
@@ -47700,11 +47708,11 @@
             "text": "Inquire About Davie",
             "box": {
               "x": 38,
-              "y": 527.375,
+              "y": 555.375,
               "w": 426,
               "h": 43.5,
               "right": 464,
-              "bottom": 570.875
+              "bottom": 598.875
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -47716,11 +47724,11 @@
             "text": "Other Markets",
             "box": {
               "x": 38,
-              "y": 582.875,
+              "y": 610.875,
               "w": 426,
               "h": 45.5,
               "right": 464,
-              "bottom": 628.375
+              "bottom": 656.375
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -47781,12 +47789,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 141,
+        "rightEdgeContentPx": 149,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (141 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (149 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -47804,7 +47812,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 9541,
+        "documentHeight": 9597,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -47824,7 +47832,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 768,
-            "renderedHeight": 615.75,
+            "renderedHeight": 643.75,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -47933,9 +47941,9 @@
             "x": 16,
             "y": 129,
             "w": 672,
-            "h": 519.75,
+            "h": 547.75,
             "right": 688,
-            "bottom": 648.75
+            "bottom": 676.75
           },
           "headingBox": {
             "x": 42,
@@ -47959,28 +47967,28 @@
             "x": 42,
             "y": 358.75,
             "w": 576,
-            "h": 196,
+            "h": 224,
             "right": 618,
-            "bottom": 554.75
+            "bottom": 582.75
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 42,
-            "y": 579.75,
+            "y": 607.75,
             "w": 223.453125,
             "h": 44,
             "right": 265.453125,
-            "bottom": 623.75
+            "bottom": 651.75
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 281.453125,
-            "y": 578.75,
+            "y": 606.75,
             "w": 156.859375,
             "h": 46,
             "right": 438.3125,
-            "bottom": 624.75
+            "bottom": 652.75
           },
           "secondaryCtaTailClips": false
         },
@@ -48007,11 +48015,11 @@
             "text": "Inquire About Davie",
             "box": {
               "x": 42,
-              "y": 579.75,
+              "y": 607.75,
               "w": 223.453125,
               "h": 44,
               "right": 265.453125,
-              "bottom": 623.75
+              "bottom": 651.75
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -48023,11 +48031,11 @@
             "text": "Other Markets",
             "box": {
               "x": 281.453125,
-              "y": 578.75,
+              "y": 606.75,
               "w": 156.859375,
               "h": 46,
               "right": 438.3125,
-              "bottom": 624.75
+              "bottom": 652.75
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -48111,7 +48119,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 7431,
+        "documentHeight": 7455,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -48131,7 +48139,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 1280,
-            "renderedHeight": 570.5,
+            "renderedHeight": 594.5,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -48240,9 +48248,9 @@
             "x": 32,
             "y": 101,
             "w": 672,
-            "h": 522.5,
+            "h": 546.5,
             "right": 704,
-            "bottom": 623.5
+            "bottom": 647.5
           },
           "headingBox": {
             "x": 66,
@@ -48266,28 +48274,28 @@
             "x": 66,
             "y": 353.5,
             "w": 576,
-            "h": 168,
+            "h": 192,
             "right": 642,
-            "bottom": 521.5
+            "bottom": 545.5
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 66,
-            "y": 546.5,
+            "y": 570.5,
             "w": 231.453125,
             "h": 44,
             "right": 297.453125,
-            "bottom": 590.5
+            "bottom": 614.5
           },
-          "primaryCtaBelowFold": false,
+          "primaryCtaBelowFold": true,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 313.453125,
-            "y": 545.5,
+            "y": 569.5,
             "w": 164.859375,
             "h": 46,
             "right": 478.3125,
-            "bottom": 591.5
+            "bottom": 615.5
           },
           "secondaryCtaTailClips": false
         },
@@ -48298,11 +48306,11 @@
             "text": "Inquire About Davie",
             "box": {
               "x": 66,
-              "y": 546.5,
+              "y": 570.5,
               "w": 231.453125,
               "h": 44,
               "right": 297.453125,
-              "bottom": 590.5
+              "bottom": 614.5
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -48314,11 +48322,11 @@
             "text": "Other Markets",
             "box": {
               "x": 313.453125,
-              "y": 545.5,
+              "y": 569.5,
               "w": 164.859375,
               "h": 46,
               "right": 478.3125,
-              "bottom": 591.5
+              "bottom": 615.5
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
@@ -48402,7 +48410,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 7431,
+        "documentHeight": 7455,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -48422,7 +48430,7 @@
             "naturalWidth": 1200,
             "naturalHeight": 1500,
             "renderedWidth": 1440,
-            "renderedHeight": 570.5,
+            "renderedHeight": 594.5,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
@@ -48531,9 +48539,9 @@
             "x": 112,
             "y": 101,
             "w": 672,
-            "h": 522.5,
+            "h": 546.5,
             "right": 784,
-            "bottom": 623.5
+            "bottom": 647.5
           },
           "headingBox": {
             "x": 146,
@@ -48557,28 +48565,28 @@
             "x": 146,
             "y": 353.5,
             "w": 576,
-            "h": 168,
+            "h": 192,
             "right": 722,
-            "bottom": 521.5
+            "bottom": 545.5
           },
           "subClipsRight": false,
           "primaryCtaBox": {
             "x": 146,
-            "y": 546.5,
+            "y": 570.5,
             "w": 231.453125,
             "h": 44,
             "right": 377.453125,
-            "bottom": 590.5
+            "bottom": 614.5
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
             "x": 393.453125,
-            "y": 545.5,
+            "y": 569.5,
             "w": 164.859375,
             "h": 46,
             "right": 558.3125,
-            "bottom": 591.5
+            "bottom": 615.5
           },
           "secondaryCtaTailClips": false
         },
@@ -48589,11 +48597,11 @@
             "text": "Inquire About Davie",
             "box": {
               "x": 146,
-              "y": 546.5,
+              "y": 570.5,
               "w": 231.453125,
               "h": 44,
               "right": 377.453125,
-              "bottom": 590.5
+              "bottom": 614.5
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -48605,11 +48613,11 @@
             "text": "Other Markets",
             "box": {
               "x": 393.453125,
-              "y": 545.5,
+              "y": 569.5,
               "w": 164.859375,
               "h": 46,
               "right": 558.3125,
-              "bottom": 591.5
+              "bottom": 615.5
             },
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
