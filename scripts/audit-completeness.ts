@@ -514,26 +514,37 @@ async function checkOgImagesResolve(): Promise<CheckResult> {
 }
 
 async function checkFormsClassification(): Promise<CheckResult> {
-  type FormClass = "live-ghl" | "mailto" | "disabled" | "other";
+  // Cycle 24 R2 — added "search" class for hero-search-style navigation forms
+  // (method=get, internal action, sentinel data-component="hero-search"). The
+  // audit's design intent is to flag *unwired lead-capture* forms; search
+  // forms that just navigate with query params are a different category and
+  // should not trigger FAIL just by existing.
+  type FormClass = "live-ghl" | "mailto" | "disabled" | "search" | "other";
   const classifications: Record<FormClass, { route: string; action: string; type: FormClass }[]> = {
     "live-ghl": [],
     mailto: [],
     disabled: [],
+    search: [],
     other: [],
   };
   for (const route of [...CORE_PAGES, "/markets/fort-lauderdale/"]) {
     const html = await readBuiltHtml(route);
     if (!html) continue;
-    const forms = html.match(/<form\b[^>]*action="([^"]*)"/g) ?? [];
+    // Capture the full opening <form ...> tag so we can inspect data-component
+    // and method alongside action.
+    const forms = html.match(/<form\b[^>]*>/g) ?? [];
     for (const f of forms) {
       const action = extractAttr(f, /action="([^"]*)"/) ?? "";
-      const cls: FormClass = action.includes("leadconnectorhq")
-        ? "live-ghl"
-        : action.startsWith("mailto:")
-          ? "mailto"
-          : action === "" || action === "#"
-            ? "disabled"
-            : "other";
+      const isSearchSentinel = /data-form-type="search"/.test(f);
+      const cls: FormClass = isSearchSentinel
+        ? "search"
+        : action.includes("leadconnectorhq")
+          ? "live-ghl"
+          : action.startsWith("mailto:")
+            ? "mailto"
+            : action === "" || action === "#"
+              ? "disabled"
+              : "other";
       classifications[cls].push({ route, action, type: cls });
     }
   }
@@ -541,9 +552,11 @@ async function checkFormsClassification(): Promise<CheckResult> {
   const live = classifications["live-ghl"].length;
   const mailto = classifications["mailto"].length;
   const disabled = classifications["disabled"].length;
+  const search = classifications["search"].length;
   const other = classifications["other"].length;
 
-  // Mailto forms WARN — accepted as fallback per ISA but should be flagged
+  // Mailto forms WARN — accepted as fallback per ISA but should be flagged.
+  // Search forms PASS — navigation, not lead capture.
   let status: CheckStatus = "PASS";
   if (other > 0) status = "FAIL";
   else if (mailto > 0 && live === 0) status = "WARN";
@@ -551,9 +564,9 @@ async function checkFormsClassification(): Promise<CheckResult> {
   return {
     id: "completeness.forms.classification",
     category: "Forms/CTAs",
-    description: "Form actions classified: live-ghl / mailto / disabled / other",
+    description: "Form actions classified: live-ghl / mailto / disabled / search / other",
     status,
-    evidence: `${total} forms · ${live} live-ghl · ${mailto} mailto · ${disabled} disabled · ${other} other`,
+    evidence: `${total} forms · ${live} live-ghl · ${mailto} mailto · ${disabled} disabled · ${search} search · ${other} other`,
     details: classifications,
   };
 }

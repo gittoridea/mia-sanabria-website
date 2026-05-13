@@ -1,10 +1,10 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-13T16:35:27.770Z
+**Generated:** 2026-05-13T17:35:14.634Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
-**Samples per row:** 1
+**Samples per row:** 3
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
 
 **Summary:** 110 PASS · 0 WARN · 0 FAIL · 0 SKIP
@@ -65,7 +65,7 @@
 | `/markets/sea-ranch-lakes/` | 375x812 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 768x1024 | 15.79 | 9.56 | 15.79 (15.79..15.79) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 1280x800 | 15.76 | 9.62 | 15.76 (15.76..15.76) | 1500 | 800 | ✅ PASS |  |
-| `/markets/sea-ranch-lakes/` | 1440x900 | 15.69 | 9.62 | 15.69 (15.69..15.69) | 1500 | 800 | ✅ PASS |  |
+| `/markets/sea-ranch-lakes/` | 1440x900 | 15.69 | 9.62 | 15.69 (5.57..15.69) | 1500 | 800 | ✅ PASS |  |
 | `/markets/seven-isles/` | 320x568 | 15.37 | 9.26 | 15.37 (15.37..15.37) | 1008 | 800 | ✅ PASS |  |
 | `/markets/seven-isles/` | 375x812 | 15.36 | 9.26 | 15.36 (15.36..15.36) | 1018 | 800 | ✅ PASS |  |
 | `/markets/seven-isles/` | 768x1024 | 15.80 | 10.37 | 15.80 (15.80..15.80) | 1500 | 800 | ✅ PASS |  |
@@ -75,7 +75,7 @@
 | `/markets/victoria-park/` | 375x812 | 15.22 | 9.12 | 15.22 (15.22..15.22) | 1201 | 800 | ✅ PASS |  |
 | `/markets/victoria-park/` | 768x1024 | 15.57 | 10.12 | 15.57 (15.57..15.57) | 1500 | 800 | ✅ PASS |  |
 | `/markets/victoria-park/` | 1280x800 | 15.74 | 10.17 | 15.74 (15.74..15.74) | 1500 | 800 | ✅ PASS |  |
-| `/markets/victoria-park/` | 1440x900 | 15.79 | 10.22 | 15.79 (15.79..15.79) | 1500 | 800 | ✅ PASS |  |
+| `/markets/victoria-park/` | 1440x900 | 15.79 | 10.22 | 15.79 (4.71..15.79) | 1500 | 800 | ✅ PASS |  |
 | `/markets/pompano-beach/` | 320x568 | 15.39 | 8.93 | 15.39 (15.39..15.39) | 1424 | 800 | ✅ PASS |  |
 | `/markets/pompano-beach/` | 375x812 | 15.39 | 8.93 | 15.39 (15.39..15.39) | 1429 | 800 | ✅ PASS |  |
 | `/markets/pompano-beach/` | 768x1024 | 15.72 | 10.24 | 15.72 (15.72..15.72) | 1500 | 800 | ✅ PASS |  |
@@ -105,7 +105,7 @@
 | `/markets/palm-beach/` | 375x812 | 15.31 | 8.51 | 15.31 (15.31..15.31) | 1049 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 768x1024 | 15.67 | 9.49 | 15.67 (15.67..15.67) | 1500 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 1280x800 | 15.59 | 10.18 | 15.59 (15.59..15.59) | 1500 | 800 | ✅ PASS |  |
-| `/markets/palm-beach/` | 1440x900 | 15.56 | 10.17 | 15.56 (15.56..15.56) | 1500 | 800 | ✅ PASS |  |
+| `/markets/palm-beach/` | 1440x900 | 15.56 | 10.17 | 15.56 (5.82..15.56) | 1500 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 320x568 | 15.18 | 8.77 | 15.18 (15.18..15.18) | 938 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 375x812 | 15.18 | 8.76 | 15.18 (15.18..15.18) | 949 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 768x1024 | 15.38 | 9.60 | 15.38 (15.38..15.38) | 1500 | 800 | ✅ PASS |  |
@@ -115,16 +115,22 @@
 | `/markets/delray-beach/` | 375x812 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 768x1024 | 15.71 | 9.03 | 15.71 (15.71..15.71) | 1500 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 1280x800 | 15.93 | 9.66 | 15.93 (15.93..15.93) | 1500 | 800 | ✅ PASS |  |
-| `/markets/delray-beach/` | 1440x900 | 15.98 | 9.70 | 15.98 (15.98..15.98) | 1500 | 800 | ✅ PASS |  |
+| `/markets/delray-beach/` | 1440x900 | 15.98 | 9.70 | 15.98 (5.20..15.98) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 320x568 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 836 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 375x812 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 860 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 768x1024 | 15.92 | 9.85 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
-| `/markets/harbor-beach/` | 1280x800 | 15.95 | 10.51 | 15.95 (15.95..15.95) | 1500 | 800 | ✅ PASS |  |
+| `/markets/harbor-beach/` | 1280x800 | 15.95 | 10.51 | 15.95 (5.17..15.95) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 1440x900 | 15.92 | 10.51 | 15.92 (15.92..15.92) | 1500 | 800 | ✅ PASS |  |
 
 ## Stability summary
 
-_All rows within 1.0 contrast spread — no high-variance rows._
+| Route | Viewport | Min | Median | Max | Spread |
+|---|---|---:|---:|---:|---:|
+| `/markets/sea-ranch-lakes/` | 1440x900 | 5.57 | 15.69 | 15.69 | 10.12 |
+| `/markets/victoria-park/` | 1440x900 | 4.71 | 15.79 | 15.79 | 11.08 |
+| `/markets/palm-beach/` | 1440x900 | 5.82 | 15.56 | 15.56 | 9.74 |
+| `/markets/delray-beach/` | 1440x900 | 5.20 | 15.98 | 15.98 | 10.78 |
+| `/markets/harbor-beach/` | 1280x800 | 5.17 | 15.95 | 15.95 | 10.78 |
 
 ## Mutation note
 

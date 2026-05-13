@@ -9,6 +9,16 @@
 - **Runtime:** `bun` always. Never `npm` or `npx`.
 - **Deploy substrate:** Helos VPS via Dokploy (applicationId `XJSRlvH-91ZtUsh0RPGvo`). Never direct VPS edits. Never edit Caddyfile in prod without Dokploy redeploy.
 
+## Canonical client invariants
+
+When a Mia-confirmed fact changes, edit exactly these locations (in order). Cross-check with the decision record before publishing.
+
+- **Canonical domain** — `src/lib/site.ts` `PRODUCTION_URL`.
+- **Top nav structure** — `src/lib/site.ts` `NAV` + `SEARCH_ICON_HREF` (consumed by `src/components/SiteHeader.tsx`).
+- **Approved neighborhoods** — `src/lib/mia.ts` `MIA_APPROVED_NEIGHBORHOODS` (consumed by `src/components/NeighborhoodsRail.tsx` + `src/components/HeroSearch.tsx`).
+- **Bridge IDX env-var names** — `src/lib/bridge.ts` (scaffold only — no credentials in repo).
+- **Source of truth doc** — `docs/mia-client-decision-record.md`.
+
 ## Reproduce before fixing
 
 - UI bug reported → open the page with `bun run audit:mobile-readability:capture` or `audit:rendered` and look at the screenshot **before** reading code.

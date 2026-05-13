@@ -28,9 +28,15 @@ export const SITE = {
   fullName: "Mia Mary Sanabria",
   title: "Fort Lauderdale REALTOR® | Waterfront & Luxury Homes",
   shortTitle: "Mia Sanabria | REALTOR®",
+  // Cycle 24 R2 (2026-05-13): description + tagline geo-broadened from
+  // "Eastern Fort Lauderdale, Boca Raton, and Delray Beach" → "Southeast Florida"
+  // to track Mia's confirmed broader positioning and the homepage H1
+  // "South Florida Lifestyle / Home Search". SITE.title preserved (Mia is
+  // explicitly a Fort Lauderdale REALTOR® and the About page canonical
+  // service-area sentence is unchanged).
   description:
-    "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Eastern Fort Lauderdale, Boca Raton, and Delray Beach. Private representation.",
-  tagline: "Luxury and waterfront real estate across Eastern Fort Lauderdale, Boca Raton, and Delray Beach.",
+    "Mia Sanabria, REALTOR® with LPT Realty — luxury and waterfront homes across Southeast Florida. Private representation for buyers, sellers, and absentee owners.",
+  tagline: "Luxury and waterfront real estate across Southeast Florida.",
   positioning: "Fort Lauderdale REALTOR®",
   anchorLine: "If I don't know the answer, I will find it.",
   url: SITE_URL,

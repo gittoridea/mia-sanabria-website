@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
+import { HeroSearch } from "@/components/HeroSearch";
+import { NeighborhoodsRail } from "@/components/NeighborhoodsRail";
 import { AnswerFirst } from "@/components/AnswerFirst";
 import { MeetMia } from "@/components/MeetMia";
 import { IntentRouter } from "@/components/IntentRouter";
@@ -103,6 +105,17 @@ export default function HomePage() {
         imageSrc="/markets/fort-lauderdale.jpg"
         imageAlt="Twilight luxury waterfront residence, Eastern Fort Lauderdale"
       />
+
+      {/* Cycle 24 R2 — listings search box scaffold per Mia's live-meeting request.
+          Plain HTML form (no JS) → /markets/#property-search; query params are
+          inert until a Bridge runtime consumer reads them (see src/lib/bridge.ts). */}
+      <HeroSearch />
+
+      {/* Cycle 24 R2 — Mia's 9 approved working neighborhoods surfaced as a
+          service-area rail. Two with hasPage=true link to /markets/<slug>/,
+          the other seven anchor to the property-search section. No invented
+          per-neighborhood copy. */}
+      <NeighborhoodsRail />
 
       <AnswerFirst
         question="What kind of real estate does Mia Sanabria specialize in?"

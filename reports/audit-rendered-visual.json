@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-13T16:38:11.732Z",
+  "generated": "2026-05-13T17:38:10.374Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -553,7 +553,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 15283,
+        "documentHeight": 16510,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -884,7 +884,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 15283,
+        "documentHeight": 16510,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1192,12 +1192,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 215,
+        "rightEdgeContentPx": 219,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (215 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (219 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1215,7 +1215,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 11427,
+        "documentHeight": 12315,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1468,6 +1468,22 @@
             "fgRgba": "rgba(253,250,245,1)",
             "contrast": 16.38,
             "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero-search] > div > form > div > div > button",
+            "text": "Search Homes",
+            "box": {
+              "x": 393,
+              "y": 670,
+              "w": 339,
+              "h": 44,
+              "right": 732,
+              "bottom": 714
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
           }
         ],
         "staleStrings": [
@@ -1523,12 +1539,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1577,
+        "rightEdgeContentPx": 1569,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1577 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1569 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1546,7 +1562,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 8926,
+        "documentHeight": 9779,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1783,6 +1799,22 @@
             "fgRgba": "rgba(253,250,245,1)",
             "contrast": 16.38,
             "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero-search] > div > form > div > div > button",
+            "text": "Search Homes",
+            "box": {
+              "x": 1043.671875,
+              "y": 569.5,
+              "w": 180.3125,
+              "h": 44,
+              "right": 1223.984375,
+              "bottom": 613.5
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
           }
         ],
         "staleStrings": [
@@ -1838,12 +1870,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1344,
+        "rightEdgeContentPx": 1299,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1344 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1299 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1861,7 +1893,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 8926,
+        "documentHeight": 9779,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2098,6 +2130,22 @@
             "fgRgba": "rgba(253,250,245,1)",
             "contrast": 16.38,
             "tailClips": false
+          },
+          {
+            "selector": "body > main#main > section[data-component=hero-search] > div > form > div > div > button",
+            "text": "Search Homes",
+            "box": {
+              "x": 1123.671875,
+              "y": 569.5,
+              "w": 180.3125,
+              "h": 44,
+              "right": 1303.984375,
+              "bottom": 613.5
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
+            "tailClips": false
           }
         ],
         "staleStrings": [
@@ -2153,12 +2201,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1241,
+        "rightEdgeContentPx": 1222,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1241 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1222 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -2792,12 +2840,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1235,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1235 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -18925,12 +18973,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1128,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1128 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },

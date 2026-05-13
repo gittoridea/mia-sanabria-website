@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-13T16:31:51.565Z
+**Generated:** 2026-05-13T17:39:52.453Z
 
 **Summary:** 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -52,7 +52,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.forms.classification` | ⚠️ | Form actions classified: live-ghl / mailto / disabled / other | 2 forms · 0 live-ghl · 2 mailto · 0 disabled · 0 other |
+| `completeness.forms.classification` | ⚠️ | Form actions classified: live-ghl / mailto / disabled / search / other | 3 forms · 0 live-ghl · 2 mailto · 0 disabled · 1 search · 0 other |
 
 ### Blog
 
@@ -72,9 +72,9 @@
 
 ### ⚠️ `completeness.forms.classification`
 
-**Description:** Form actions classified: live-ghl / mailto / disabled / other
+**Description:** Form actions classified: live-ghl / mailto / disabled / search / other
 
-**Evidence:** 2 forms · 0 live-ghl · 2 mailto · 0 disabled · 0 other
+**Evidence:** 3 forms · 0 live-ghl · 2 mailto · 0 disabled · 1 search · 0 other
 
 ```json
 {
@@ -92,6 +92,13 @@
     }
   ],
   "disabled": [],
+  "search": [
+    {
+      "route": "/",
+      "action": "/markets/#property-search",
+      "type": "search"
+    }
+  ],
   "other": []
 }
 ```

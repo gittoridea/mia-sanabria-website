@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export function SectionHeading({
   eyebrow,
   heading,
@@ -6,7 +8,8 @@ export function SectionHeading({
   inverted = false,
 }: {
   eyebrow?: string;
-  heading: string;
+  /** Heading content — string or ReactNode (e.g., wrapped span for aria-labelledby). */
+  heading: string | ReactNode;
   sub?: string;
   align?: "left" | "center";
   inverted?: boolean;

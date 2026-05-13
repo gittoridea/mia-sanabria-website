@@ -1,6 +1,6 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-13T16:38:11.863Z",
+  "generated_at": "2026-05-13T17:38:17.086Z",
   "sitemap_route_count": 40,
   "filesystem_route_count": 48,
   "fs_only_routes": [
@@ -35,11 +35,11 @@
       "canonical": "https://miasanabriarealtor.trueidea.com/",
       "noindex": true,
       "schema_blocks": 6,
-      "internal_links": 66,
+      "internal_links": 75,
       "trust_proof_present": true,
       "has_faq": true,
-      "contact_form_present": false,
-      "contact_form_action_kind": "none",
+      "contact_form_present": true,
+      "contact_form_action_kind": "other",
       "stale_strings_clean": true,
       "findings": [
         {
