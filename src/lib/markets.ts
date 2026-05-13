@@ -1704,7 +1704,7 @@ export const MARKETS: ReadonlyArray<Market> = [
     tagline:
       "Central Broward town with equestrian heritage, Tree City USA designation, and a college corridor.",
     intro:
-      "Davie is a central Broward town — first incorporated in 1925 and re-established as a municipal corporation in 1961 — with a distinct equestrian heritage, Tree City USA designation, and a college corridor that includes Nova Southeastern University's main campus, Broward College Central Campus, and FAU Davie. The market is known for lower-density residential character relative to most Broward cities and zoning that supports agricultural and equestrian uses in named pockets.",
+      "Davie is a central Broward town with a distinct equestrian heritage, Tree City USA designation, and a college corridor that includes Nova Southeastern University, Broward College Central Campus, and FAU Davie. The market is known for lower-density residential character relative to most Broward cities and zoning that supports agricultural and equestrian uses in named pockets.",
     highlights: [
       "Central Broward County town — first incorporated 1925, reincorporated 1961",
       "Distinct equestrian heritage and an active Equestrian Trail network",

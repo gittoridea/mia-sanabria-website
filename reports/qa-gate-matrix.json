@@ -1,6 +1,6 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-13T18:55:54.246Z",
+  "generated_at": "2026-05-13T20:42:03.341Z",
   "sitemap_route_count": 47,
   "filesystem_route_count": 55,
   "fs_only_routes": [
@@ -102,8 +102,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/accessibility",
@@ -162,8 +161,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/contact",
@@ -196,8 +194,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/dmca",
@@ -334,8 +331,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/insights/bay-colony-and-bermuda-riviera-private-waterfront",
@@ -804,8 +800,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/davie",
@@ -858,8 +853,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/delray-beach",
@@ -990,8 +984,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/las-olas-isles",
@@ -1095,8 +1088,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/pompano-beach",
@@ -1227,8 +1219,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/markets/victoria-park",
@@ -1280,8 +1271,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/privacy",
@@ -1340,8 +1330,7 @@
           "severity": "low",
           "owner_category": 6
         }
-      ],
-      "mobile_readability_pass": true
+      ]
     },
     {
       "route": "/terms",

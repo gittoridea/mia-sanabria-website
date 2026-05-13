@@ -1,13 +1,13 @@
 # Audit Rendered Visual Report
 
-**Generated:** 2026-05-13T20:00:31.995Z
+**Generated:** 2026-05-13T20:46:03.378Z
 **Mode:** local
 **Base:** http://127.0.0.1:4173
 **Concurrency:** 3
 **Routes:** 35
 **Viewports:** 320x568, 375x812, 768x1024, 1280x800, 1440x900
 
-**Summary:** 13 PASS · 1 WARN · 1 FAIL · 0 SKIP
+**Summary:** 14 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
 ## Results by category
 
@@ -31,7 +31,7 @@
 | `rendered.hero.headingFitsPanel` | ✅ PASS | Hero heading stays inside the copy panel (no right-edge clipping) | 0 offenders across 175 probes |
 | `rendered.hero.eyebrowFitsPanel` | ✅ PASS | Hero eyebrow stays inside the copy panel (no right-edge clipping) | 0 offenders across 175 probes |
 | `rendered.hero.subFitsPanel` | ✅ PASS | Hero sub-paragraph stays inside the copy panel (no right-edge clipping) | 0 offenders across 175 probes |
-| `rendered.hero.primaryCtaAboveFoldDesktop` | ❌ FAIL | Hero primary CTA stays above the fold at desktop viewports (1280x800 + 1440x900) | 1 desktop probes push primary CTA below fold |
+| `rendered.hero.primaryCtaAboveFoldDesktop` | ✅ PASS | Hero primary CTA stays above the fold at desktop viewports (1280x800 + 1440x900) | 0 desktop probes show primary CTA below fold |
 | `rendered.hero.primaryCtaTextFits` | ✅ PASS | Hero primary CTA text does not tail-clip (scrollWidth > clientWidth) | 0 primary-CTA tail-clips |
 | `rendered.hero.secondaryCtaTextFits` | ✅ PASS | Hero secondary CTA text does not tail-clip | 0 secondary-CTA tail-clips |
 
@@ -67,23 +67,6 @@
 | `rendered.probe.viewportSanity` | ⚠️ WARN | Every probe's actual window.innerWidth matches requested viewport width (±5px) — F6 instrumentation gate | 105/175 probes viewport-honest; 70 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap) |
 
 ## Failures and warnings — details
-
-### ❌ `rendered.hero.primaryCtaAboveFoldDesktop`
-
-**Description:** Hero primary CTA stays above the fold at desktop viewports (1280x800 + 1440x900)
-
-**Evidence:** 1 desktop probes push primary CTA below fold
-
-```json
-{
-  "offenders": [
-    {
-      "route": "/markets/davie/",
-      "viewport": "1280x800"
-    }
-  ]
-}
-```
 
 ### ⚠️ `rendered.probe.viewportSanity`
 
