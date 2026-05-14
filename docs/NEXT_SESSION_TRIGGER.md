@@ -1,5 +1,7 @@
 # Mia Site — Next Session Trigger Prompt
 
+> **⚠ SUPERSEDED — DO NOT PASTE AS-IS (2026-05-13, Cycle 30 audit).** This trigger predates Cycle 24 Mia-Live-Decisions and Cycle 30 Mia-staging-review packet. Pasting it into a fresh session would re-anchor on the prior canonical (`miasanabriarealtor.com`) and miss the new launch-blocker matrix. **Use instead:** `docs/artifacts/cycle-30-mia-staging-review/torrey-action-list.md` + `launch-blocker-matrix.md` for the actual current next move; canonical target is `https://miasanabria.com` (see `docs/mia-client-decision-record.md`). Body below is preserved as historical record of the prior trigger.
+
 > Paste this entire block into a fresh Claude Code session in `~/code/mia-sanabria-website/`. It is self-contained, expert-team-aware, and verification-bound.
 
 ---

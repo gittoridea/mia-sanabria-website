@@ -1,6 +1,8 @@
 # Mia Sanabria Realtor Site — Ideal Production State
 
-> **Target:** `https://miasanabriarealtor.com` (post-cutover production).
+> **⚠ CANONICAL TARGET UPDATED (2026-05-13, Cycle 24 Mia-Live-Decisions / Cycle 30 audit):** the final production canonical is **`https://miasanabria.com`**, not `miasanabriarealtor.com`. Section 11 ("Launch / Cutover") rows below name `miasanabriarealtor.com` as the cutover host — that target is **stale**. The **technical actions** (DNS A flip, Dokploy domain bind, `NEXT_PUBLIC_SITE_URL` build-arg, sitemap re-submit, TLS issue, staging 301) are still correct in shape; only the destination host changed. Source-of-truth: `docs/mia-client-decision-record.md` §"Production canonical" + `src/lib/site.ts:14-15`. A future cutover-rev cycle will rewrite §11 against the live canonical.
+>
+> **Target:** `https://miasanabriarealtor.com` (post-cutover production). *[Stale per Cycle 24/30 banner above — read as `https://miasanabria.com`.]*
 > **Scope:** the full articulation of "production-ready" for this site, written so each row is testable.
 > **Authority order when this doc and another disagree:** `ISA.md` › `PUBLIC_FACT_LEDGER.md` v2 › this doc › supplemental BSS templates.
 > **What this doc is not:** it does not invent new copy, claim unverified facts, or specify GHL/DNS/cutover work — those are gated.

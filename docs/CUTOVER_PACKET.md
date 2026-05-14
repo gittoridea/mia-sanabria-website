@@ -1,5 +1,7 @@
 # CUTOVER_PACKET — miasanabriarealtor.trueidea.com → miasanabriarealtor.com
 
+> **⚠ CANONICAL TARGET UPDATED (2026-05-13, Cycle 24 Mia-Live-Decisions / Cycle 30 audit):** the final production canonical is **`https://miasanabria.com`**, not `miasanabriarealtor.com`. The legacy `miasanabriarealtor.com` Direct Axess host becomes a 301-redirect surface, not the canonical target. Source-of-truth: `docs/mia-client-decision-record.md` §"Production canonical" + `src/lib/site.ts:14-15` (`PRODUCTION_URL = "https://miasanabria.com"`). Body below was authored 2026-05-08 under the prior canonical assumption — preserved as historical record. A future cutover-rev cycle will rewrite the technical actions against `miasanabria.com`. Do not run cutover from this packet as-written.
+
 **Author:** Jarvis (DA)
 **Date:** 2026-05-08
 **Audience:** Torrey (operator) + Mia Sanabria (client confirmation gate)
