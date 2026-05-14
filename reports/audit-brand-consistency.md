@@ -1,6 +1,6 @@
 # Audit Brand Consistency Report
 
-**Generated:** 2026-05-13T23:13:10.609Z
+**Generated:** 2026-05-14T16:31:08.058Z
 
 **Summary:** 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `brand.noForbiddenColors` | ✅ | No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/ | no off-brand color tokens |
+| `brand.noForbiddenColors` | ✅ | No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/ unless annotated with data-brand-exception="demo-warning" | no off-brand color tokens (3 allowed by data-brand-exception="demo-warning") |
 
 ### Typography
 

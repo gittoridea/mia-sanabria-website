@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T23:13:10.609Z",
+  "timestamp": "2026-05-14T16:31:08.058Z",
   "counts": {
     "pass": 12,
     "warn": 0,
@@ -10,9 +10,32 @@
     {
       "id": "brand.noForbiddenColors",
       "category": "Color System",
-      "description": "No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/",
+      "description": "No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/ unless annotated with data-brand-exception=\"demo-warning\"",
       "status": "PASS",
-      "evidence": "no off-brand color tokens"
+      "evidence": "no off-brand color tokens (3 allowed by data-brand-exception=\"demo-warning\")",
+      "details": {
+        "hits": [],
+        "allowedHits": [
+          {
+            "file": "src/components/bridge/BridgeSearch.tsx",
+            "line": 53,
+            "match": "text-amber-700",
+            "reason": "off-brand color token (allowed by data-brand-exception=\"demo-warning\")"
+          },
+          {
+            "file": "src/components/bridge/BridgeSearch.tsx",
+            "line": 125,
+            "match": "border-amber-400",
+            "reason": "off-brand color token (allowed by data-brand-exception=\"demo-warning\")"
+          },
+          {
+            "file": "src/components/bridge/BridgeListingCard.tsx",
+            "line": 50,
+            "match": "bg-amber-500",
+            "reason": "off-brand color token (allowed by data-brand-exception=\"demo-warning\")"
+          }
+        ]
+      }
     },
     {
       "id": "brand.noForbiddenFonts",

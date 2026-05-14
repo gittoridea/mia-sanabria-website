@@ -45,7 +45,10 @@ export function BridgeListingCard({ listing, demoMode = false }: Props) {
           </span>
         )}
         {demoMode && (
-          <span className="absolute right-3 top-3 rounded-full bg-amber-500/90 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm">
+          <span
+            data-brand-exception="demo-warning"
+            className="absolute right-3 top-3 rounded-full bg-amber-500/90 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm"
+          >
             DEMO
           </span>
         )}

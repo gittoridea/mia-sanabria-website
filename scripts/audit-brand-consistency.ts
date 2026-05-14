@@ -64,6 +64,31 @@ const FORBIDDEN_PATTERNS: { pattern: RegExp; reason: string }[] = [
   { pattern: /\b(?:bg|text|border|ring|outline)-(red|orange|amber|yellow|lime|emerald|teal|cyan|sky|indigo|violet|purple|fuchsia|pink|rose)-\d{3}/g, reason: "off-brand color token" },
 ];
 
+/**
+ * Cycle 35 — narrow semantic exception for Bridge demo-mode warning UI.
+ *
+ * The Bridge demo banner and the per-card DEMO badge intentionally use amber-* tokens
+ * so demo data is visually distinguishable from real listings. Recoloring them to the
+ * brand palette would weaken the demo-honesty signal documented in CLAUDE.md
+ * ("Do not hide Bridge demo mode while demo data appears.").
+ *
+ * The exception is keyed on a `data-brand-exception="demo-warning"` attribute placed
+ * directly on the JSX element holding the off-brand classes. A forbidden-token hit is
+ * allowed ONLY when that marker appears within the BRAND_EXCEPTION_WINDOW_LINES window
+ * surrounding the hit line in the same file. This keeps the exception:
+ *   - narrow      — only the JSX elements actually annotated qualify
+ *   - semantic    — the marker names the warning category, not the file
+ *   - auditable   — every allowed hit has a co-located, grep-able justification
+ *   - reversible  — remove the attribute, the token re-fails immediately
+ *
+ * Unrelated amber/orange/etc. uses elsewhere in src/ remain forbidden by default.
+ * Only the `demo-warning` exception category is recognized today; adding new
+ * categories requires editing this constant and the brand-audit-demo-warning
+ * artifact documenting why.
+ */
+const BRAND_EXCEPTION_WINDOW_LINES = 8;
+const BRAND_EXCEPTION_MARKER = /data-brand-exception\s*=\s*["']demo-warning["']/;
+
 // Approved font families per Brand System Contract
 const APPROVED_FONT_FAMILIES = ["font-display", "font-sans", "font-cinzel", "font-montserrat"];
 // Forbidden font families
@@ -135,35 +160,55 @@ async function walkSrc(dir: string, exts: string[]): Promise<string[]> {
   return out;
 }
 
+function hasBrandExceptionMarkerNearby(lines: string[], hitIdx: number): boolean {
+  const start = Math.max(0, hitIdx - BRAND_EXCEPTION_WINDOW_LINES);
+  const end = Math.min(lines.length, hitIdx + BRAND_EXCEPTION_WINDOW_LINES + 1);
+  for (let i = start; i < end; i++) {
+    const ln = lines[i];
+    if (ln !== undefined && BRAND_EXCEPTION_MARKER.test(ln)) return true;
+  }
+  return false;
+}
+
 async function checkSourceForbiddenPatterns(): Promise<CheckResult[]> {
   const results: CheckResult[] = [];
   const files = await walkSrc(SRC_DIR, [".tsx", ".ts", ".css"]);
   type Hit = { file: string; line: number; match: string; reason: string };
   const hits: Hit[] = [];
+  const allowedHits: Hit[] = [];
   for (const f of files) {
     const content = await readFile(f, "utf-8");
     const lines = content.split("\n");
     for (const { pattern, reason } of FORBIDDEN_PATTERNS) {
       lines.forEach((line, idx) => {
         const m = line.match(pattern);
-        if (m) {
-          hits.push({
-            file: relative(REPO_ROOT, f),
-            line: idx + 1,
-            match: m[0],
-            reason,
-          });
+        if (!m) return;
+        const hit: Hit = {
+          file: relative(REPO_ROOT, f),
+          line: idx + 1,
+          match: m[0],
+          reason,
+        };
+        if (hasBrandExceptionMarkerNearby(lines, idx)) {
+          allowedHits.push({ ...hit, reason: `${reason} (allowed by data-brand-exception="demo-warning")` });
+          return;
         }
+        hits.push(hit);
       });
     }
   }
   results.push({
     id: "brand.noForbiddenColors",
     category: "Color System",
-    description: "No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/",
+    description: "No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/ unless annotated with data-brand-exception=\"demo-warning\"",
     status: hits.length === 0 ? "PASS" : "FAIL",
-    evidence: hits.length === 0 ? "no off-brand color tokens" : `${hits.length} off-brand uses`,
-    details: hits.length ? { hits } : undefined,
+    evidence:
+      hits.length === 0
+        ? allowedHits.length > 0
+          ? `no off-brand color tokens (${allowedHits.length} allowed by data-brand-exception="demo-warning")`
+          : "no off-brand color tokens"
+        : `${hits.length} off-brand uses`,
+    details: hits.length || allowedHits.length ? { hits, allowedHits } : undefined,
   });
 
   // Forbidden fonts

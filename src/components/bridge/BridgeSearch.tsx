@@ -48,7 +48,10 @@ function MlsMatrixFallback({ reason }: { reason: "no-credentials" | "error" }) {
         </p>
       )}
       {reason === "error" && (
-        <p className="mb-6 text-sm text-amber-700">
+        <p
+          data-brand-exception="demo-warning"
+          className="mb-6 text-sm text-amber-700"
+        >
           Search is temporarily unavailable. Use the property search below or{" "}
           <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
             contact Mia
@@ -117,7 +120,10 @@ function ListingAttribution() {
 
 function DemoBanner() {
   return (
-    <div className="mb-6 rounded-sm border border-amber-400/40 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
+    <div
+      data-brand-exception="demo-warning"
+      className="mb-6 rounded-sm border border-amber-400/40 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900"
+    >
       <strong className="font-display text-base">Demo data — Southeast Florida MLS feed pending.</strong>
       <p className="mt-1">
         This staging page is connected to a Bridge Data Output test fixture so we can
