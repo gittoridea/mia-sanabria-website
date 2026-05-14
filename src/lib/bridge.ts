@@ -48,8 +48,9 @@
  *   BRIDGE_CLIENT_ID                 # account identifier
  *   BRIDGE_SECRET_ID                 # SERVER-ONLY — never ship client-side
  *   BRIDGE_SERVER_TOKEN              # SERVER-ONLY — never ship client-side
- *   NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN # only if Bridge docs permit browser use
- *   BRIDGE_DATASET_NAME              # MLS / dataset target slug
+ *   NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN # browser token — Bridge docs permit browser use
+ *   NEXT_PUBLIC_BRIDGE_DATASET_ID    # dataset identifier — baked into client bundle
+ *   BRIDGE_DATASET_NAME              # legacy name (prefer NEXT_PUBLIC_BRIDGE_DATASET_ID)
  *
  * ─── COMPLIANCE INTERSECTIONS ──────────────────────────────────────────
  * Bridge IDX flows interact with:
@@ -76,8 +77,16 @@ export const BRIDGE_ENV_NAMES = {
   secretId: "BRIDGE_SECRET_ID",
   serverToken: "BRIDGE_SERVER_TOKEN",
   browserToken: "NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN",
+  datasetId: "NEXT_PUBLIC_BRIDGE_DATASET_ID",
   datasetName: "BRIDGE_DATASET_NAME",
 } as const;
+
+/** Bridge API base URL (v2 OData). */
+export const BRIDGE_API_BASE =
+  "https://api.bridgedataoutput.com/api/v2/OData" as const;
+
+/** IDX-filtered Properties endpoint suffix. Append /{dataset_id}/idx/Properties. */
+export const BRIDGE_IDX_RESOURCE = "idx/Properties" as const;
 
 /**
  * Sanitized listing shape — what the future server-side proxy returns to

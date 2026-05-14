@@ -129,25 +129,53 @@ The Mia-approved 9 are now also surfaced as `MIA_APPROVED_NEIGHBORHOODS` in `src
 
 - **Provider chosen by Mia:** Bridge Data Output (`bridgedataoutput.com/docs/platform/`)
 - **Credentials state:** Torrey has client ID, secret ID, server token, browser token ready. **No credentials are in this repo, in `.env`, or in chat. Claude has not seen them.**
-- **Static-export blocker:** Site is Next.js 15 App Router with `next.config.ts` static export. Static export has **no server runtime** — there is no Next.js API route, no serverless function, no Node middleware to safely hold the server token or secret ID.
-- **Safe options (any of):**
-  1. Add a **Cloudflare Worker / Vercel Edge Function / Dokploy Node sidecar** that holds Bridge server token; site calls Worker URL with browser token. Worker proxies + sanitizes.
-  2. Switch the affected routes to Next.js SSR/Server Components (drop static export for those routes) and call Bridge from server actions.
-  3. Use Bridge's browser-safe public endpoints ONLY if Bridge docs explicitly permit browser token use against those endpoints; never use server token client-side.
-- **Decision required:** Torrey owns the platform choice; counsel may need to review consent + tracking implications of new client-side data flow.
-- **Code scaffold this cycle:** `src/lib/bridge.ts` — placeholder env var names + types + provider-pattern documentation. NO API calls, NO secrets, NO baked tokens. Build never executes against Bridge.
 
-Env var placeholder names (values to be added to `~/.claude/.env` by Torrey when the runtime path is chosen — not now, not in this repo):
+### Bridge Runtime Decision (Cycle 33 — 2026-05-14)
 
+```yaml
+decision_id: MIA-BRIDGE-RUNTIME-001
+date: 2026-05-14
+decision: Option D — Bridge Browser Token direct client
+status: implemented (code complete; not deployed; not live)
+credential_policy: browser-token-only (NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN baked into static bundle at build time)
+server_token_ships_to_browser: false
+client_secret_ships_to_browser: false
+browser_token_ships_to_browser: true — Bridge explicitly documents it for browser use
+deployment_policy: no deploy in this cycle; requires Torrey authorization
+rollback: set BRIDGE_INTEGRATION_LIVE=false in src/lib/bridge.ts and redeploy
+evidence:
+  - Bridge docs reviewed (docs.bundle.js extracted 2026-05-14)
+  - Bridge API probed with public docs demo token (CORS, rate limits confirmed)
+  - Repo deployment model reviewed (static export confirmed, no server runtime)
+  - Secret scan performed (repo and out/ clean)
+  - typecheck/lint/build/audit gates all pass
 ```
-BRIDGE_CLIENT_ID
-BRIDGE_SECRET_ID
-BRIDGE_SERVER_TOKEN
-NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN  # only if Bridge docs explicitly permit browser-side use
-BRIDGE_DATASET_NAME               # MLS / dataset target slug
+
+**Bridge doc basis for browser token:**
+Bridge platform docs state: "Browser Token — Used for websites that may query the API directly from the browser; be sure to set the Referrer Domain if you use this approach."
+
+**Pre-production gates (Torrey action required):**
+1. Set Referrer Domain in Bridge dashboard to `https://miasanabria.com`
+2. Place `NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN` in Dokploy build args (not repo, not chat)
+3. Place `NEXT_PUBLIC_BRIDGE_DATASET_ID` in Dokploy build args
+4. Counsel sign-off on IDX display attribution text
+5. Live smoke test: real listings load, attribution correct
+6. Flip `BRIDGE_INTEGRATION_LIVE = true` in `src/lib/bridge.ts`
+7. Change robots from `noindex` to `index` on `/home-search/`
+8. Torrey authorizes Dokploy redeploy
+
+**Env var contract (Cycle 33 final):**
+```
+BRIDGE_CLIENT_ID                    # account identifier (not needed for browser-token architecture)
+BRIDGE_SECRET_ID                    # SERVER-ONLY — never ship client-side
+BRIDGE_SERVER_TOKEN                 # SERVER-ONLY — never ship client-side
+NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN    # browser token — Dokploy build arg
+NEXT_PUBLIC_BRIDGE_DATASET_ID       # dataset ID — Dokploy build arg
 ```
 
-**Compliance reminder:** SEF MLS reciprocity disclaimer language (CATO-05), F.S. 475.278 brokerage-relationship statutory text (CATO-02), and TCPA PEWC consent (CATO-01) all interact with the IDX flow. Counsel review remains an external blocker.
+**IDX endpoint:** `https://api.bridgedataoutput.com/api/v2/OData/{DATASET_ID}/idx/Properties`
+
+**Compliance reminder:** SEF MLS reciprocity disclaimer language (CATO-05), F.S. 475.278 brokerage-relationship statutory text (CATO-02), and TCPA PEWC consent (CATO-01) all interact with the IDX flow. Counsel review remains an external blocker before BRIDGE_INTEGRATION_LIVE flips to true.
 
 ## Testimonials
 

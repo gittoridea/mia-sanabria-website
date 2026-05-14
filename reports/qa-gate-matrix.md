@@ -1,10 +1,10 @@
 # QA-Gate Matrix — Cycle 19A-M
 
-Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-14T01:32:43.790Z
+Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-14T12:14:54.030Z
 
-**55 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 55
+**56 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 56
 
-**Owner-category split** → c1 site:0 · c2 tool:0 · c3 principal:0 · c4 GHL:1 · c5 legal:4 · c6 launch:55
+**Owner-category split** → c1 site:0 · c2 tool:0 · c3 principal:0 · c4 GHL:1 · c5 legal:4 · c6 launch:56
 
 ## home (1 routes)
 
@@ -12,7 +12,7 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-14T01:32
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
 | `/` | ✓ | 56 | 159 | 6 | 75 | ✓ | ✓ | other | ✓ | ✓ | l:noindex(c6) |
 
-## other (4 routes)
+## other (5 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
@@ -20,6 +20,7 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-14T01:32
 | `/downloads/fort-lauderdale-waterfront-valuation-prep-sheet` | ✓ | 62 | 97 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
 | `/downloads/luxury-seller-pre-listing-checklist` | ✓ | 50 | 85 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
 | `/downloads/waterfront-buyer-due-diligence-checklist` | ✓ | 55 | 90 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/home-search` | ✓ | 50 | 144 | 3 | 43 | ✓ | — | — | ✓ | — | l:noindex(c6) |
 
 ## identity (1 routes)
 

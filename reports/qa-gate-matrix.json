@@ -1,20 +1,20 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-14T01:32:43.789Z",
-  "sitemap_route_count": 47,
-  "filesystem_route_count": 55,
+  "generated_at": "2026-05-14T12:14:54.029Z",
+  "sitemap_route_count": 48,
+  "filesystem_route_count": 56,
   "fs_only_routes": [
     "/downloads/luxury-seller-pre-listing-checklist",
     "/downloads/waterfront-buyer-due-diligence-checklist",
     "/downloads/fort-lauderdale-waterfront-valuation-prep-sheet",
     "/404"
   ],
-  "rows_scanned": 55,
+  "rows_scanned": 56,
   "severity_counts": {
     "critical": 0,
     "high": 4,
     "medium": 1,
-    "low": 55
+    "low": 56
   },
   "owner_category_split": {
     "c1": 0,
@@ -22,7 +22,7 @@
     "c3": 0,
     "c4": 1,
     "c5": 4,
-    "c6": 55
+    "c6": 56
   },
   "rows": [
     {
@@ -295,6 +295,32 @@
       "noindex": true,
       "schema_blocks": 2,
       "internal_links": 37,
+      "trust_proof_present": true,
+      "has_faq": false,
+      "contact_form_present": false,
+      "contact_form_action_kind": "none",
+      "stale_strings_clean": true,
+      "findings": [
+        {
+          "field": "noindex",
+          "status": "info",
+          "evidence": "meta noindex present (intentional on staging)",
+          "severity": "low",
+          "owner_category": 6
+        }
+      ]
+    },
+    {
+      "route": "/home-search",
+      "page_type": "other",
+      "out_file": "out/home-search/index.html",
+      "title": "Home Search | Mia Sanabria REALTOR® | Mia Sanabria",
+      "h1_text": "Home Search",
+      "meta_description": "Search available Southeast Florida listings — Fort Lauderdale, Pompano Beach, Coral Springs, Weston, and surrounding Broward County communities.",
+      "canonical": "https://miasanabriarealtor.trueidea.com/home-search/",
+      "noindex": true,
+      "schema_blocks": 3,
+      "internal_links": 43,
       "trust_proof_present": true,
       "has_faq": false,
       "contact_form_present": false,
