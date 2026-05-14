@@ -89,8 +89,19 @@ export default function HomePage() {
         The Bridge IDX inline search-input scaffold is deferred pending the
         runtime decision documented in src/lib/bridge.ts.
       */}
+      {/*
+        Cycle 34 World-Class Completion (2026-05-14): hero eyebrow + primary CTA
+        target aligned with Torrey's locked direction. The eyebrow now carries the
+        "South Florida Lifestyle" theme (previously the brokerage attribution
+        line). The primary CTA routes to the dedicated Bridge-backed Home Search
+        page introduced in Cycle 33; the secondary CTA preserves the private-
+        conversation path. Heading and image fallback unchanged — `vibe.filesafe.space`
+        hero asset on the current public miasanabria.com is third-party-hosted
+        and not safely re-licensable for this repo (see
+        docs/artifacts/cycle-34-world-class-completion/current-site-hero-background-audit.md).
+      */}
       <Hero
-        eyebrow="Mia Sanabria · REALTOR® with LPT Realty"
+        eyebrow="South Florida Lifestyle"
         heading={
           <>
             South Florida Lifestyle
@@ -99,8 +110,8 @@ export default function HomePage() {
           </>
         }
         sub="Discreet, local guidance for Southeast Florida luxury homeowners, absentee owners, and qualified buyers — from a small, deliberate practice."
-        ctaPrimary={{ href: "/markets/#property-search", label: "Search Listings" }}
-        ctaSecondary={{ href: "/contact/", label: "Begin a Private Conversation" }}
+        ctaPrimary={{ href: "/home-search/", label: "Search available homes" }}
+        ctaSecondary={{ href: "/contact/", label: "Talk with Mia" }}
         background="image"
         imageSrc="/markets/fort-lauderdale.jpg"
         imageAlt="Twilight luxury waterfront residence, Eastern Fort Lauderdale"

@@ -23,11 +23,20 @@ export default function HomeSearchPage() {
         ]}
       />
 
+      {/*
+        Cycle 34 World-Class Completion (2026-05-14): eyebrow aligned with the
+        homepage hero theme lock ("South Florida Lifestyle"). Primary CTA now
+        anchor-jumps to the in-page Bridge search section so the hero has a
+        concrete affordance above the fold; secondary CTA preserves the
+        Talk-to-Mia path. Bridge demo-mode honesty is preserved by the
+        <BridgeSearch /> component below and by the page-level robots: noindex.
+      */}
       <Hero
-        eyebrow="Search Listings"
+        eyebrow="South Florida Lifestyle"
         heading="Home Search"
         sub="Browse available Southeast Florida listings across Mia's working market — Fort Lauderdale, Pompano Beach, Coral Springs, Weston, and surrounding communities."
-        ctaPrimary={{ href: "/contact/?source=home-search", label: "Talk to Mia" }}
+        ctaPrimary={{ href: "#listing-search", label: "Search available homes" }}
+        ctaSecondary={{ href: "/contact/?source=home-search", label: "Talk with Mia" }}
         background="image"
         imageSrc="/markets/fort-lauderdale.jpg"
         imageAlt="Fort Lauderdale waterfront"

@@ -1,5 +1,5 @@
 # Audit Legal Report
-**Generated:** 2026-05-14T12:37:46.564Z
+**Generated:** 2026-05-14T14:38:08.977Z
 **Summary:** 18 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
 | ID | Status | Description | Evidence |
