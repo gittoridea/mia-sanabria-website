@@ -1,0 +1,107 @@
+=== bun run typecheck ===
+$ tsc --noEmit
+exit=0
+
+=== bun run lint ===
+$ next lint
+✔ No ESLint warnings or errors
+exit=0
+
+=== bun run build ===
+├ ○ /buyers                                                            216 B           114 kB
+├ ○ /contact                                                           216 B           114 kB
+├ ○ /dmca                                                              190 B           114 kB
+├ ● /downloads/[slug]                                                  138 B           106 kB
+├   ├ /downloads/waterfront-buyer-due-diligence-checklist
+├   ├ /downloads/luxury-seller-pre-listing-checklist
+├   └ /downloads/fort-lauderdale-waterfront-valuation-prep-sheet
+├ ○ /home-search                                                       6.28 kB         121 kB
+├ ○ /insights                                                          216 B           114 kB
+├ ● /insights/[slug]                                                   216 B           114 kB
+├   ├ /insights/fort-lauderdale-waterfront-buyer-guide
+├   ├ /insights/dockage-seawalls-bridge-clearance-route-to-inlet
+├   ├ /insights/positioning-luxury-waterfront-eastern-fort-lauderdale
+├   └ [+9 more paths]
+├ ○ /manifest.webmanifest                                              0 B                0 B
+├ ○ /markets                                                           216 B           114 kB
+├ ● /markets/[slug]                                                    216 B           114 kB
+├   ├ /markets/fort-lauderdale
+├   ├ /markets/coral-ridge
+├   ├ /markets/victoria-park
+├   └ [+20 more paths]
+├ ○ /privacy                                                           190 B           114 kB
+├ ○ /robots.txt                                                        0 B                0 B
+├ ○ /sellers                                                           216 B           114 kB
+├ ○ /sitemap.xml                                                       0 B                0 B
+├ ○ /terms                                                             190 B           114 kB
+├ ○ /thank-you                                                         216 B           114 kB
+├ ○ /thank-you/buyer-brief                                             216 B           114 kB
+├ ○ /thank-you/market-brief                                            216 B           114 kB
+├ ○ /thank-you/valuation                                               216 B           114 kB
+└ ○ /valuation                                                         216 B           114 kB
++ First Load JS shared by all                                          105 kB
+  ├ chunks/4bd1b696-c41c22badabd4b31.js                                52.9 kB
+  ├ chunks/517-e142ec6174824ab2.js                                     50.5 kB
+  └ other shared chunks (total)                                        1.91 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+exit=0
+
+=== audit:brand ===
+  ✓ brand.heroNoCycle7WeakOverlay — copy panel present — overlay strength is decorative not load-bearing
+  ✓ brand.heroOverlayLayers — all 3 overlay layers present (mood, content-scrim, cta-scrim)
+  ✓ brand.publicEmailConsistency — 1 distinct email(s) in src/, all canonical
+
+Summary: 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-brand-consistency.json
+→ reports/audit-brand-consistency.md
+exit=0
+
+=== audit:route-inventory ===
+    "/thank-you/buyer-brief",
+    "/thank-you/valuation",
+    "/thank-you",
+    "/thank-you/market-brief"
+  ],
+  "pass": true
+}
+✓ audit-route-inventory: 48 sitemap routes reconcile to filesystem
+exit=0
+
+=== audit:no-fabrications ===
+$ bun run scripts/audit-no-fabrications.ts
+audit-no-fabrications — 0 hits
+exit=0
+
+=== audit:qa-gate ===
+$ bun run scripts/audit-qa-gate.ts
+qa-gate: 4 fs-only route(s) — scanning anyway: /downloads/luxury-seller-pre-listing-checklist, /downloads/waterfront-buyer-due-diligence-checklist, /downloads/fort-lauderdale-waterfront-valuation-prep-sheet, /404
+audit-qa-gate — 56 routes · critical 0 · high 4 · medium 1 · low 56
+→ reports/qa-gate-matrix.json
+→ reports/qa-gate-matrix.md
+exit=0
+
+=== narrow source secret-assignment scan ===
+docs/artifacts/cycle-30b-expert-gap-closure/bridge-runtime-readiness-dossier.md:12:| Public docs URL constant | `BRIDGE_DOCS_URL = "https://bridgedataoutput.com/docs/platform/"` — public Bridge documentation URL, not a token. |
+docs/artifacts/cycle-30b-expert-gap-closure/master-claim-vs-reality.md:35:| 22 | Bridge IDX runtime architecture | `src/lib/bridge.ts` scaffold; `BRIDGE_INTEGRATION_LIVE = false`; only public `BRIDGE_DOCS_URL = "https://bridgedataoutput.com/docs/platform/"`; no credential values in repo | **BLOCKED — design decision pending** | partially (Claude designs architecture in dossier; Torrey decides + credentials stay external) | n/a (no credential touch this cycle) | Torrey (decision) | Lane F — `bridge-runtime-readiness-dossier.md` + paste-ready Cycle 33 prompt. **IMPORTANT:** prior docs may say "iframe v1 ships fine" — that is NOT an explicit launch exception until Torrey + Mia approve it. Classify as "launch decision required." | False "Bridge non-critical" claim |
+docs/artifacts/cycle-35-recovery-full-completion/secret-safety-report.md:15:| `docs/artifacts/cycle-30b-expert-gap-closure/bridge-runtime-readiness-dossier.md` | `BRIDGE_DOCS_URL = "https://bridgedataoutput.com/docs/platform/"` | public documentation URL, not a token |
+docs/artifacts/cycle-35-recovery-full-completion/secret-safety-report.md:17:| `src/lib/bridge-client.ts:26` | `BRIDGE_API_BASE = "https://api.bridgedataoutput.com/api/v2/OData"` | public API host URL, not a token |
+docs/artifacts/cycle-35-recovery-full-completion/secret-safety-report.md:18:| `src/lib/bridge.ts:74` | `BRIDGE_DOCS_URL = "https://bridgedataoutput.com/docs/platform/"` | public documentation URL, not a token |
+docs/artifacts/cycle-35-recovery-full-completion/secret-safety-report.md:19:| `src/lib/bridge.ts:95` | `BRIDGE_IDX_RESOURCE = "idx/Properties"` | public resource path, not a token |
+src/lib/bridge-client.ts:26:const BRIDGE_API_BASE = "https://api.bridgedataoutput.com/api/v2/OData";
+src/lib/bridge.ts:74:export const BRIDGE_DOCS_URL = "https://bridgedataoutput.com/docs/platform/" as const;
+src/lib/bridge.ts:95:export const BRIDGE_IDX_RESOURCE = "idx/Properties" as const;
+
+=== generated bundle secret-like scan (out/ + .next/) ===
+
+=== env-var presence (no values) ===
+GOOGLE_API_KEY present
+GEMINI_API_KEY present
+OPENAI_API_KEY missing
+ANTHROPIC_API_KEY missing
+DOKPLOY_API_URL present
+DOKPLOY_API_TOKEN present

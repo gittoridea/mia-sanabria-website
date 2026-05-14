@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T23:13:10.350Z",
+  "timestamp": "2026-05-14T17:13:20.700Z",
   "counts": {
     "PASS": 16,
     "WARN": 1,
@@ -12,11 +12,11 @@
       "category": "Sitemap coverage",
       "description": "Every public built route is in sitemap.xml",
       "status": "PASS",
-      "evidence": "47 built · 47 in sitemap · 0 missing",
+      "evidence": "48 built · 48 in sitemap · 0 missing",
       "details": {
         "missing": [],
-        "builtCount": 47,
-        "sitemapCount": 47
+        "builtCount": 48,
+        "sitemapCount": 48
       }
     },
     {
@@ -85,7 +85,7 @@
       "category": "Compliance",
       "description": "Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route",
       "status": "PASS",
-      "evidence": "all 55 built routes carry full footer trust set",
+      "evidence": "all 56 built routes carry full footer trust set",
       "details": {
         "failsByRoute": {}
       }

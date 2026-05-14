@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-13T23:13:10.350Z
+**Generated:** 2026-05-14T17:13:20.700Z
 
 **Summary:** 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 47 built · 47 in sitemap · 0 missing |
+| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 48 built · 48 in sitemap · 0 missing |
 | `completeness.sitemap.sitemapInBuilt` | ✅ | Every sitemap route resolves to a built page | 0 unresolved |
 
 ### Compliance
@@ -18,7 +18,7 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `completeness.legal.routesExist` | ✅ | Required legal routes /privacy/, /terms/, /dmca/, /accessibility/ are built | all 4 legal routes built |
-| `completeness.footer.trust` | ✅ | Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route | all 55 built routes carry full footer trust set |
+| `completeness.footer.trust` | ✅ | Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route | all 56 built routes carry full footer trust set |
 
 ### SEO/AEO
 

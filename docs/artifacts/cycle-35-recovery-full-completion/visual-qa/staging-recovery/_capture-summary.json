@@ -1,0 +1,12 @@
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "out": "docs/artifacts/cycle-35-recovery-full-completion/visual-qa/staging-recovery",
+  "routes": 36,
+  "viewports": 2,
+  "jobs": 72,
+  "ok": 72,
+  "fail": 0,
+  "duration_seconds": 51,
+  "failures": [],
+  "timestamp": "2026-05-14T17:04:49.285Z"
+}

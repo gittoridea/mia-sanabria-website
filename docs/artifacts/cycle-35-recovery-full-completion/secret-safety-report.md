@@ -63,3 +63,56 @@ exposure of the server-side credentials. None are present.
 
 **No secret values exposed in source, output, artifacts, or logs.** Cleared for commit
 and push.
+
+---
+
+## Cycle 35B post-recovery addendum (2026-05-14)
+
+After the SSH `Broken pipe` event and the recovery work in Cycle 35B, the same scans
+were re-run. Results unchanged:
+
+- Source scan: same 5 non-secret hits (`BRIDGE_API_BASE`, `BRIDGE_DOCS_URL` ×2, `BRIDGE_IDX_RESOURCE`,
+  plus the two prior-cycle dossier references). No new secret-shaped assignments.
+- Generated-output scan against the freshly built `out/` + `.next/`: no matches.
+- Live-staging HTML scan (23 captured files under `live-html-check/`): no matches for
+  `BRIDGE_SERVER_TOKEN`, `BRIDGE_CLIENT_SECRET`, `GOOGLE_API_KEY`, `GEMINI_API_KEY`,
+  `OPENAI_API_KEY`, `access_token=`, `refresh_token=`, `Bearer …`, or `DOKPLOY_API_TOKEN`.
+- Local-final screenshot capture set: same images as staging-recovery (deterministic
+  static export); no rendered token strings.
+
+Environment presence check (key names only):
+```
+GOOGLE_API_KEY        present
+GEMINI_API_KEY        present
+OPENAI_API_KEY        missing
+ANTHROPIC_API_KEY     missing
+DOKPLOY_API_URL       present
+DOKPLOY_API_TOKEN     present
+BRIDGE_SERVER_TOKEN   missing (Docker-baked, not shell-exported)
+BRIDGE_CLIENT_ID      missing (same)
+BRIDGE_DATASET_ID     missing (same)
+NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN  missing (build-time only)
+```
+
+Posture preserved across the crash-recovery boundary. No rotation performed.
+No new secret material introduced.
+
+---
+
+## Cycle 35C resume re-scan (2026-05-14)
+
+After the Phase N drop in Cycle 35B and resumption as Cycle 35C, the source + generated-bundle scans were re-run from a fresh subshell. Results:
+
+- Source scan: identical 8 hits — the 5 prior public-Bridge-URL constants plus 3 documentation references in `cycle-35-recovery-full-completion/secret-safety-report.md` (this file's own classification table). No new secret-shaped assignments.
+- Generated bundle scan (`out/` + `.next/`): clean. The freshly-built static export carries no token-shaped strings.
+- Environment presence (key names only, never values):
+  ```
+  GOOGLE_API_KEY        present
+  GEMINI_API_KEY        present
+  OPENAI_API_KEY        missing
+  ANTHROPIC_API_KEY     missing
+  DOKPLOY_API_URL       present
+  DOKPLOY_API_TOKEN     present
+  ```
+
+Phase 8 will add the live-staging HTML re-scan after the final deploy. Until then, posture remains: no secret values printed, logged, committed, or screenshotted in Cycle 35C.

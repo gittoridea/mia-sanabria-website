@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-13T23:21:00.442Z",
+  "generated": "2026-05-14T16:43:56.886Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -868,7 +868,7 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Search Listings",
+            "text": "Search available homes",
             "box": {
               "x": 38,
               "y": 357.640625,
@@ -884,7 +884,7 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Talk with Mia",
             "box": {
               "x": 38,
               "y": 413.140625,
@@ -952,12 +952,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 224,
+        "rightEdgeContentPx": 227,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (224 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (227 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1199,7 +1199,7 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Search Listings",
+            "text": "Search available homes",
             "box": {
               "x": 38,
               "y": 357.640625,
@@ -1215,7 +1215,7 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Talk with Mia",
             "box": {
               "x": 38,
               "y": 413.140625,
@@ -1493,19 +1493,19 @@
           "primaryCtaBox": {
             "x": 42,
             "y": 430.6875,
-            "w": 186.46875,
+            "w": 249.515625,
             "h": 44,
-            "right": 228.46875,
+            "right": 291.515625,
             "bottom": 474.6875
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
-            "x": 244.46875,
+            "x": 307.515625,
             "y": 429.6875,
-            "w": 264.53125,
+            "w": 148.21875,
             "h": 46,
-            "right": 509,
+            "right": 455.734375,
             "bottom": 475.6875
           },
           "secondaryCtaTailClips": false
@@ -1530,13 +1530,13 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Search Listings",
+            "text": "Search available homes",
             "box": {
               "x": 42,
               "y": 430.6875,
-              "w": 186.46875,
+              "w": 249.515625,
               "h": 44,
-              "right": 228.46875,
+              "right": 291.515625,
               "bottom": 474.6875
             },
             "bgRgba": "rgba(184,155,94,1)",
@@ -1546,13 +1546,13 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Talk with Mia",
             "box": {
-              "x": 244.46875,
+              "x": 307.515625,
               "y": 429.6875,
-              "w": 264.53125,
+              "w": 148.21875,
               "h": 46,
-              "right": 509,
+              "right": 455.734375,
               "bottom": 475.6875
             },
             "bgRgba": "rgba(10,29,48,1)",
@@ -1840,19 +1840,19 @@
           "primaryCtaBox": {
             "x": 66,
             "y": 414.375,
-            "w": 194.46875,
+            "w": 257.515625,
             "h": 44,
-            "right": 260.46875,
+            "right": 323.515625,
             "bottom": 458.375
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
-            "x": 276.46875,
+            "x": 339.515625,
             "y": 413.375,
-            "w": 272.53125,
+            "w": 156.21875,
             "h": 46,
-            "right": 549,
+            "right": 495.734375,
             "bottom": 459.375
           },
           "secondaryCtaTailClips": false
@@ -1861,13 +1861,13 @@
         "ctas": [
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Search Listings",
+            "text": "Search available homes",
             "box": {
               "x": 66,
               "y": 414.375,
-              "w": 194.46875,
+              "w": 257.515625,
               "h": 44,
-              "right": 260.46875,
+              "right": 323.515625,
               "bottom": 458.375
             },
             "bgRgba": "rgba(184,155,94,1)",
@@ -1877,13 +1877,13 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Talk with Mia",
             "box": {
-              "x": 276.46875,
+              "x": 339.515625,
               "y": 413.375,
-              "w": 272.53125,
+              "w": 156.21875,
               "h": 46,
-              "right": 549,
+              "right": 495.734375,
               "bottom": 459.375
             },
             "bgRgba": "rgba(10,29,48,1)",
@@ -2171,19 +2171,19 @@
           "primaryCtaBox": {
             "x": 146,
             "y": 414.375,
-            "w": 194.46875,
+            "w": 257.515625,
             "h": 44,
-            "right": 340.46875,
+            "right": 403.515625,
             "bottom": 458.375
           },
           "primaryCtaBelowFold": false,
           "primaryCtaTailClips": false,
           "secondaryCtaBox": {
-            "x": 356.46875,
+            "x": 419.515625,
             "y": 413.375,
-            "w": 272.53125,
+            "w": 156.21875,
             "h": 46,
-            "right": 629,
+            "right": 575.734375,
             "bottom": 459.375
           },
           "secondaryCtaTailClips": false
@@ -2192,13 +2192,13 @@
         "ctas": [
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Search Listings",
+            "text": "Search available homes",
             "box": {
               "x": 146,
               "y": 414.375,
-              "w": 194.46875,
+              "w": 257.515625,
               "h": 44,
-              "right": 340.46875,
+              "right": 403.515625,
               "bottom": 458.375
             },
             "bgRgba": "rgba(184,155,94,1)",
@@ -2208,13 +2208,13 @@
           },
           {
             "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
-            "text": "Begin a Private Conversation",
+            "text": "Talk with Mia",
             "box": {
-              "x": 356.46875,
+              "x": 419.515625,
               "y": 413.375,
-              "w": 272.53125,
+              "w": 156.21875,
               "h": 46,
-              "right": 629,
+              "right": 575.734375,
               "bottom": 459.375
             },
             "bgRgba": "rgba(10,29,48,1)",
@@ -25770,12 +25770,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1686,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1686 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -33838,12 +33838,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1244,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1244 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },

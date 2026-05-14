@@ -1,0 +1,158 @@
+=== bun run audit:brand ===
+$ bun run scripts/audit-brand-consistency.ts
+  ✓ brand.noForbiddenColors — no off-brand color tokens (3 allowed by data-brand-exception="demo-warning")
+  ✓ brand.noForbiddenFonts — no forbidden font families
+  ✓ brand.noForbiddenInBuilt — 0 off-brand classes in built output
+  ✓ brand.footerTrustElements — 8 sampled pages carry full footer trust set
+  ✓ brand.siteFooterStructure — all 3 named footer columns present
+  ✓ brand.siteFooterTrustStripAria — trust-strip aria-label present
+  ✓ brand.mobileNavPresent — mobile nav toggle + breakpoint visibility classes detected
+  ✓ brand.heroH1ContrastTokens — panel attr + navy-9X bg + brass-300 left edge + bold weight all present in Hero.tsx
+  ✓ brand.heroNoNavyGlowHalo — no navy-tint text-shadow halo present
+  ✓ brand.heroNoCycle7WeakOverlay — copy panel present — overlay strength is decorative not load-bearing
+  ✓ brand.heroOverlayLayers — all 3 overlay layers present (mood, content-scrim, cta-scrim)
+  ✓ brand.publicEmailConsistency — 1 distinct email(s) in src/, all canonical
+
+Summary: 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-brand-consistency.json
+→ reports/audit-brand-consistency.md
+exit=0
+
+=== bun run audit:route-inventory ===
+$ bun run scripts/audit-route-inventory.ts
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "sitemap_routes": 48,
+  "filesystem_static_pages": 17,
+  "sitemap_only_unmatched": [],
+  "filesystem_only_unmatched_unexpected": [],
+  "filesystem_only_optional_present": [
+    "/thank-you/buyer-brief",
+    "/thank-you/valuation",
+    "/thank-you",
+    "/thank-you/market-brief"
+  ],
+  "pass": true
+}
+✓ audit-route-inventory: 48 sitemap routes reconcile to filesystem
+exit=0
+
+=== bun run audit:no-fabrications ===
+$ bun run scripts/audit-no-fabrications.ts
+audit-no-fabrications — 0 hits
+exit=0
+
+=== bun run audit:legal ===
+$ bun run scripts/audit-legal.ts
+  ✓ legal.canonical.privacy — canonical present
+  ✓ legal.breadcrumb.privacy — BreadcrumbList present
+  ✓ legal.footerLinks.privacy — all legal links present
+  ✓ legal.email.privacy — email msanabriarea@gmail.com present
+  ✓ legal.canonical.terms — canonical present
+  ✓ legal.breadcrumb.terms — BreadcrumbList present
+  ✓ legal.footerLinks.terms — all legal links present
+  ✓ legal.email.terms — email msanabriarea@gmail.com present
+  ✓ legal.canonical.accessibility — canonical present
+  ✓ legal.breadcrumb.accessibility — BreadcrumbList present
+  ✓ legal.footerLinks.accessibility — all legal links present
+  ✓ legal.email.accessibility — email msanabriarea@gmail.com present
+  ✓ legal.canonical.dmca — canonical present
+  ✓ legal.breadcrumb.dmca — BreadcrumbList present
+  ✓ legal.footerLinks.dmca — all legal links present
+  ✓ legal.email.dmca — email msanabriarea@gmail.com present
+  ⚠ legal.dmca.uscoFlag — USCO + in-process language present (acceptable for staging; BLOCKED for production cutover per CYCLE_16_LEGAL_PAGE_ACCURACY_AUDIT.md)
+  ✓ legal.privacy.ghlConditional — conditional language present
+  ✓ legal.terms.realtorAndFL — REALTOR® definition + FL governing law present
+
+Summary: 18 PASS · 1 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-legal.json
+→ reports/audit-legal.md
+exit=0
+
+=== bun run audit:about ===
+$ bun run scripts/audit-about.ts
+  ✓ about.forbidden.deliberately_small_client_list — phrase absent across 5 routes
+  ✓ about.forbidden.global_distribution — phrase absent across 5 routes
+  ✓ about.forbidden.Klein_Morgan — phrase absent across 5 routes
+  ✓ about.forbidden.sunandbreeze — phrase absent across 5 routes
+  ✓ about.serviceArea.canonical — Eastern Fort Lauderdale · Eastern Boca Raton · Eastern Delray Beach
+  ✓ about.no.designations — pattern not found
+  ✓ about.no.yearsLicensed — pattern not found
+  ✓ about.no.salesVolume — pattern not found
+  ✓ about.no.awardClaims — pattern not found
+  ✓ about.no.testimonials — pattern not found
+  ✓ about.license.notOnAbout — license # absent from body (correctly lives on Footer + Terms)
+  ✓ about.brokerage.lpt — LPT Realty present
+
+Summary: 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-about.json
+→ reports/audit-about.md
+exit=0
+
+=== bun run audit:stale ===
+$ bun run scripts/audit-stale-terms.ts
+✓ audit-stale-terms: clean across out/. (880ms)
+exit=0
+
+=== bun run audit:qa-gate ===
+$ bun run scripts/audit-qa-gate.ts
+qa-gate: 4 fs-only route(s) — scanning anyway: /downloads/luxury-seller-pre-listing-checklist, /downloads/waterfront-buyer-due-diligence-checklist, /downloads/fort-lauderdale-waterfront-valuation-prep-sheet, /404
+audit-qa-gate — 56 routes · critical 0 · high 4 · medium 1 · low 56
+→ reports/qa-gate-matrix.json
+→ reports/qa-gate-matrix.md
+exit=0
+
+=== bun run audit:images ===
+$ bun run scripts/audit-images.ts
+  ✓ images.localFilesResolve — 397 <img> tags across 57 pages — all local references resolve
+  ✓ images.ogImagesResolve — 57 og:image entries across 57 pages — all local references resolve
+  ✓ images.twitterImagesResolve — 0 broken twitter:image references
+  ✓ images.noPlaceholderFilenames — no placeholder filenames detected
+  ✓ images.altPresent — 397 <img> tags — all have alt attribute
+  ✓ images.noUnresolvableRemote — no remote <img> URLs detected
+  ✓ images.requiredAssetsExist — all required assets present
+  ✓ images.homepageFeaturedCards — all 6 first-page featured cards render <img src="/markets/SLUG.jpg">
+  ✓ images.hubPageHeroImage — 2 hub pages — all render image-mode hero
+  ✓ images.everyMarketCardImagePresent — all 23 markets have card images on /markets/
+  ✓ images.everyMarketPageHeroImagePresent — all 23 market pages have a hero image
+  ✓ images.everyMarketOgImageExists — all 23 markets have OG image asset + reference
+  ✓ images.principalReportedMarkets — all 3 principal-reported markets PASS — Lighthouse Point, Coral Ridge, Palm Beach
+  ✓ images.publicEmailConsistency — single canonical email: msanabriarea@gmail.com
+
+Summary: 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-images.json
+→ reports/audit-images.md
+exit=0
+
+=== bun run audit:completeness ===
+
+=== IDX ===
+  ✓ completeness.idx.iframe — 5/5 IDX sentinels present on homepage
+
+=== Design/Display Integrity ===
+  ✓ completeness.images.dimsAltPlaceholder — no img-attribute issues (32 next/image fill-mode images correctly classified)
+  ✓ completeness.images.localFilesExist — all referenced local images exist
+
+=== Forms/CTAs ===
+  ⚠ completeness.forms.classification — 3 forms · 0 live-ghl · 2 mailto · 0 disabled · 1 search · 0 other
+
+=== Blog ===
+  ✓ completeness.blog.inNav — insights linked from homepage
+  ✓ completeness.blog.inSitemap — /insights/ in sitemap
+  ✓ completeness.blog.articleSchema — Blog schema on index + Article on representative post
+
+=== Schema ===
+  ✓ completeness.schema.valid — 202 JSON-LD blocks across 35 pages · 0 broken
+
+Summary: 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-completeness.json
+→ reports/audit-completeness.md
+
+✓ audit-completeness exit 0
+exit=0
+
