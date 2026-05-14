@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Search } from "lucide-react";
 import {
   BRIDGE_AVAILABLE,
+  BRIDGE_DEMO_MODE,
   searchListings,
   type BridgeSearchQuery,
   type ListingCard,
@@ -114,6 +115,20 @@ function ListingAttribution() {
   );
 }
 
+function DemoBanner() {
+  return (
+    <div className="mb-6 rounded-sm border border-amber-400/40 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
+      <strong className="font-display text-base">Demo data — Southeast Florida MLS feed pending.</strong>
+      <p className="mt-1">
+        This staging page is connected to a Bridge Data Output test fixture so we can
+        verify the integration end-to-end. Listings shown below are placeholder data —
+        not real Southeast Florida inventory. Real listings will appear automatically
+        once SEF MLS approves Mia&rsquo;s IDX feed on this Bridge account.
+      </p>
+    </div>
+  );
+}
+
 export function BridgeSearch() {
   const [query, setQuery] = useState<BridgeSearchQuery>({});
   const [listings, setListings] = useState<ListingCard[] | null>(null);
@@ -121,6 +136,13 @@ export function BridgeSearch() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searched, setSearched] = useState(false);
+  const inFlightRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    return () => {
+      inFlightRef.current?.abort();
+    };
+  }, []);
 
   if (!BRIDGE_AVAILABLE) {
     return <MlsMatrixFallback reason="no-credentials" />;
@@ -128,11 +150,19 @@ export function BridgeSearch() {
 
   async function handleSearch(e: React.FormEvent) {
     e.preventDefault();
+
+    // Cancel any in-flight request before starting a new one.
+    inFlightRef.current?.abort();
+    const controller = new AbortController();
+    inFlightRef.current = controller;
+
     setLoading(true);
     setError(null);
     setSearched(true);
 
-    const result = await searchListings({ ...query, page: 1 });
+    const result = await searchListings({ ...query, page: 1 }, controller.signal);
+
+    if (controller.signal.aborted) return;
 
     if (result.error === "search-unavailable") {
       setError("unavailable");
@@ -266,12 +296,17 @@ export function BridgeSearch() {
               </div>
             ) : (
               <>
+                {BRIDGE_DEMO_MODE && <DemoBanner />}
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {listings.map((l) => (
-                    <BridgeListingCard key={l.listingKey} listing={l} />
+                    <BridgeListingCard
+                      key={l.listingKey}
+                      listing={l}
+                      demoMode={BRIDGE_DEMO_MODE}
+                    />
                   ))}
                 </div>
-                <ListingAttribution />
+                {!BRIDGE_DEMO_MODE && <ListingAttribution />}
               </>
             )}
           </>

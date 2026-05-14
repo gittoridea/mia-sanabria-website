@@ -61,8 +61,14 @@
  * Counsel review remains an external blocker before flipping the switch.
  */
 
-/** Public-side feature flag. Stays false until the secure runtime exists. */
-export const BRIDGE_INTEGRATION_LIVE = false as const;
+/**
+ * Public-side feature flag.
+ * Cycle 33B (2026-05-14): flipped true with Browser Token runtime (Option D).
+ * Live behavior gated additionally by BRIDGE_AVAILABLE in bridge-client.ts —
+ * when credentials are absent at build time, the MLS Matrix iframe fallback
+ * renders instead. Rollback path: flip this back to false and redeploy.
+ */
+export const BRIDGE_INTEGRATION_LIVE = true as const;
 
 /** Provider documentation pointer for future maintainers. */
 export const BRIDGE_DOCS_URL = "https://bridgedataoutput.com/docs/platform/" as const;

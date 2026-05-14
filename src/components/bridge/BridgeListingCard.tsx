@@ -8,9 +8,9 @@ const FMT_PRICE = new Intl.NumberFormat("en-US", {
 
 const FMT_SQFT = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 
-type Props = { listing: ListingCard };
+type Props = { listing: ListingCard; demoMode?: boolean };
 
-export function BridgeListingCard({ listing }: Props) {
+export function BridgeListingCard({ listing, demoMode = false }: Props) {
   const {
     listPrice,
     beds,
@@ -42,6 +42,11 @@ export function BridgeListingCard({ listing }: Props) {
         {status && (
           <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-0.5 text-xs font-medium text-navy-800 shadow-sm">
             {status}
+          </span>
+        )}
+        {demoMode && (
+          <span className="absolute right-3 top-3 rounded-full bg-amber-500/90 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm">
+            DEMO
           </span>
         )}
       </div>
@@ -76,12 +81,18 @@ export function BridgeListingCard({ listing }: Props) {
         )}
 
         <div className="mt-4">
-          <a
-            href={`/contact/?source=listing&mlsid=${encodeURIComponent(listing.listingKey)}`}
-            className="inline-flex min-h-[40px] items-center justify-center gap-2 rounded-full border border-navy-800/20 px-4 py-2 text-sm font-medium text-navy-800 transition-colors hover:border-brass-400"
-          >
-            Inquire About This Property
-          </a>
+          {demoMode ? (
+            <span className="inline-flex min-h-[40px] items-center justify-center gap-2 rounded-full border border-navy-800/10 px-4 py-2 text-sm font-medium text-navy-800/40">
+              Inquiry disabled in demo mode
+            </span>
+          ) : (
+            <a
+              href={`/contact/?source=listing&mlsid=${encodeURIComponent(listing.listingKey)}`}
+              className="inline-flex min-h-[40px] items-center justify-center gap-2 rounded-full border border-navy-800/20 px-4 py-2 text-sm font-medium text-navy-800 transition-colors hover:border-brass-400"
+            >
+              Inquire About This Property
+            </a>
+          )}
         </div>
       </div>
     </article>

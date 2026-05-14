@@ -28,6 +28,25 @@ const MAX_PAGE_SIZE = 12;
 
 const BROWSER_TOKEN = process.env.NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN ?? "";
 const DATASET_ID = process.env.NEXT_PUBLIC_BRIDGE_DATASET_ID ?? "";
+/**
+ * Production default: "idx/Properties" — the IDX-license-filtered endpoint.
+ * Override with "Property" for test datasets that don't have an IDX feed
+ * provisioned (e.g., test_sf, test_sd). Allow-listed to prevent path injection.
+ */
+const RAW_RESOURCE_PATH =
+  process.env.NEXT_PUBLIC_BRIDGE_RESOURCE_PATH ?? "idx/Properties";
+const ALLOWED_RESOURCE_PATHS = new Set(["idx/Properties", "Property"]);
+const RESOURCE_PATH = ALLOWED_RESOURCE_PATHS.has(RAW_RESOURCE_PATH)
+  ? RAW_RESOURCE_PATH
+  : "idx/Properties";
+
+/**
+ * Demo mode flag — surfaces a "Demo Data" banner above results and
+ * disables the inquiry CTA on cards, so test fixture data is never
+ * presented to visitors as real listings.
+ */
+export const BRIDGE_DEMO_MODE =
+  (process.env.NEXT_PUBLIC_BRIDGE_DEMO ?? "").toLowerCase() === "true";
 
 /** True when both required public env vars are present in the bundle. */
 export const BRIDGE_AVAILABLE = !!(BROWSER_TOKEN && DATASET_ID);
@@ -115,6 +134,41 @@ function buildODataParams(query: BridgeSearchQuery): Record<string, string> {
 
 const SAFE_PHOTO_PATTERN = /\.(jpe?g|png|webp|avif)(\?|$)/i;
 
+/**
+ * Allowlist for media URL hosts. Default set covers Bridge's documented CDN
+ * (cloudfront.net) and S3 origin used by Bridge ("retsly-api-production").
+ * Operators can extend at build time via NEXT_PUBLIC_BRIDGE_MEDIA_HOSTS as a
+ * comma-separated list of additional hostnames (e.g., SEF MLS photo CDN).
+ * Defense in depth — even if Bridge response is poisoned, photos render only
+ * from allowlisted hosts.
+ */
+const DEFAULT_MEDIA_HOSTS = [
+  "cloudfront.net",
+  "amazonaws.com",
+  "bridgedataoutput.com",
+];
+const EXTRA_MEDIA_HOSTS = (process.env.NEXT_PUBLIC_BRIDGE_MEDIA_HOSTS ?? "")
+  .split(",")
+  .map((s) => s.trim().toLowerCase())
+  .filter(Boolean);
+const ALLOWED_MEDIA_HOST_SUFFIXES = [
+  ...DEFAULT_MEDIA_HOSTS,
+  ...EXTRA_MEDIA_HOSTS,
+];
+
+function isAllowedMediaHost(rawUrl: string): boolean {
+  try {
+    const u = new URL(rawUrl);
+    if (u.protocol !== "https:") return false;
+    const host = u.hostname.toLowerCase();
+    return ALLOWED_MEDIA_HOST_SUFFIXES.some(
+      (suffix) => host === suffix || host.endsWith("." + suffix)
+    );
+  } catch {
+    return false;
+  }
+}
+
 function sanitizeListing(raw: BridgeProperty): ListingCard | null {
   const key = raw.ListingKey;
   if (!key) return null;
@@ -123,8 +177,8 @@ function sanitizeListing(raw: BridgeProperty): ListingCard | null {
   const cover = media.find((m) => m.Order === 0) ?? media[0];
   const mediaUrl =
     cover?.MediaURL &&
-    cover.MediaURL.startsWith("https://") &&
-    SAFE_PHOTO_PATTERN.test(cover.MediaURL)
+    SAFE_PHOTO_PATTERN.test(cover.MediaURL) &&
+    isAllowedMediaHost(cover.MediaURL)
       ? cover.MediaURL
       : null;
 
@@ -148,7 +202,8 @@ function sanitizeListing(raw: BridgeProperty): ListingCard | null {
 }
 
 export async function searchListings(
-  query: BridgeSearchQuery
+  query: BridgeSearchQuery,
+  signal?: AbortSignal
 ): Promise<BridgeSearchResult> {
   if (!BRIDGE_AVAILABLE) {
     return { listings: [], total: null, error: "search-unavailable" };
@@ -156,7 +211,7 @@ export async function searchListings(
 
   const params = buildODataParams(query);
   const url = new URL(
-    `${BRIDGE_API_BASE}/${DATASET_ID}/idx/Properties`
+    `${BRIDGE_API_BASE}/${DATASET_ID}/${RESOURCE_PATH}`
   );
   for (const [k, v] of Object.entries(params)) {
     url.searchParams.set(k, v);
@@ -165,9 +220,14 @@ export async function searchListings(
   try {
     const res = await fetch(url.toString(), {
       headers: { Accept: "application/json" },
+      signal,
     });
 
     if (!res.ok) {
+      // Operator visibility — no body content, status only.
+      // Bridge error envelopes can include diagnostic text; we deliberately
+      // do not surface it client-side or in logs.
+      console.warn(`bridge: search failed status=${res.status}`);
       return { listings: [], total: null, error: "search-error" };
     }
 
@@ -179,7 +239,11 @@ export async function searchListings(
       typeof data["@odata.count"] === "number" ? data["@odata.count"] : null;
 
     return { listings, total, error: null };
-  } catch {
+  } catch (err) {
+    if (err instanceof DOMException && err.name === "AbortError") {
+      return { listings: [], total: null, error: null };
+    }
+    console.warn("bridge: search threw network error");
     return { listings: [], total: null, error: "search-error" };
   }
 }
