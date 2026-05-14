@@ -2,7 +2,7 @@
 project: mia-sanabria-website
 slug: mia-sanabria-website
 effort: E5
-phase: complete
+phase: verify
 progress: 745/745
 mode: algorithm
 started: 2026-05-06
@@ -15,6 +15,8 @@ active_mission: 2026-05-10-cycle-15-insights-library-and-lead-capture-architectu
 
 > Single source of truth for the codebase at `~/code/mia-sanabria-website/`.
 > Broader client/content context lives in `~/.claude/PAI/USER/PROJECTS/MiaSanabria/` (40+ docs, ledger v2, defects, content strategy).
+>
+> **⚠ CANONICAL TARGET UPDATE (2026-05-13, Cycle 24 Mia-Live-Decisions / Cycle 30 audit / Cycle 30B refresh):** the final production canonical is **`https://miasanabria.com`**, not `miasanabriarealtor.com`. The Vision (below) and Out-of-Scope rows authored before 2026-05-13 still name `miasanabriarealtor.com` as the cutover target — that target is **stale**. Current doctrine: `src/lib/site.ts:14-15` (`STAGING_URL = "https://miasanabriarealtor.trueidea.com"`, `PRODUCTION_URL = "https://miasanabria.com"`) and `docs/mia-client-decision-record.md` §"Production canonical". A future ISA-rev cycle (post-cutover) will rewrite the Vision and the Decision-Log appropriately; until then, prefer the decision record + site.ts as the cutover-target source of truth. Decision-log entries below remain as honest dated history.
 
 ## Problem
 
@@ -276,6 +278,8 @@ Ship `miasanabriarealtor.trueidea.com` as a production-grade Next.js 15 static-e
 | F16: Mission verify + ISA hygiene | ISC-124–130 | F11–F15 | sequential |
 
 ## Decisions
+
+- 2026-05-14T01:18:48.123Z —— STRICT GATE BLOCK: tier E5 missing sections: Deliverables, Quality Gates, Risks. Phase reverted from complete to verify.
 
 - 2026-05-10T13:34:35.371Z —— STRICT GATE BLOCK: tier E5 missing sections: Deliverables, Quality Gates, Risks. Phase reverted from complete to verify.
 

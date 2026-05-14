@@ -68,22 +68,46 @@ const VIEWPORTS = [
   { name: "ipad-portrait", width: 768, height: 1024, label: "768×1024 iPad" },
 ] as const;
 
-// DEFAULT_ROUTES targets the pre-Cycle-25 live staging deployment. Cycle 25
-// added seven new Mia-approved neighborhood pages (deerfield-beach, coral-springs,
-// plantation, weston, hollywood, davie, sunrise) but the live staging deploy
-// has not yet shipped that commit (`e32310d`). Until that deploy happens, the
-// default route list cannot include those seven without producing 404 errors
-// against live staging. For Cycle 26 capture against the local preview server
-// or any future deploy that includes the seven, pass them explicitly:
-//   --routes=/,/markets/,/markets/fort-lauderdale/,/markets/deerfield-beach/,...
-// See `MIA_APPROVED_CYCLE25_ROUTES` below for the canonical list.
+// DEFAULT_ROUTES — full Mia-approved 9-neighborhood coverage + remaining core
+// surfaces.
+//
+// History:
+//   - Pre-Cycle-25: 4 neighborhood pages on live (fort-lauderdale, pompano-beach,
+//     boca-raton, delray-beach) plus core surfaces.
+//   - Cycle 25 (commit `e32310d`): added 7 new Mia-approved neighborhood pages
+//     (deerfield-beach, coral-springs, plantation, weston, hollywood, davie,
+//     sunrise) — held out of default sweep until live deploy shipped them.
+//   - Cycle 29 (commit `78de8bf`): TrueIdea staging deploy shipped the cycle-25
+//     pages; all 7 verified 200 live with fresh ETags per §14.6.
+//   - Cycle 30B: integrated the 7 into the default sweep so `audit:all` and
+//     `audit:mobile-readability` cover all 9 Mia-approved neighborhoods at
+//     every device profile.
+//
+// Boca Raton and Delray Beach are retained as references (mentioned in copy
+// across the site even though Mia's approved-9 list does not include them).
+// They remain in coverage because dropping them would lose existing visual
+// baseline against still-shipping routes.
+//
+// `MIA_APPROVED_CYCLE25_ROUTES` export below is preserved for explicit
+// `--routes=` callers (e.g. cycle-25 capture scripts).
 const DEFAULT_ROUTES = [
   "/",
   "/markets/",
+  // Mia-approved 9-neighborhood roster (Cycle 24 Mia-Live-Decisions / Cycle 25).
   "/markets/fort-lauderdale/",
   "/markets/pompano-beach/",
+  "/markets/deerfield-beach/",
+  "/markets/coral-springs/",
+  "/markets/plantation/",
+  "/markets/weston/",
+  "/markets/hollywood/",
+  "/markets/davie/",
+  "/markets/sunrise/",
+  // Reference-only markets (in copy but not in Mia's approved-9 — kept for
+  // existing visual baseline; remove only if those pages are removed).
   "/markets/boca-raton/",
   "/markets/delray-beach/",
+  // Core surfaces.
   "/contact/",
   "/valuation/",
   "/buyers/",

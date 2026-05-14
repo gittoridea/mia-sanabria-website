@@ -1,4 +1,4 @@
-# audit-mobile-readability — 2026-05-14T00:34:36.062Z
+# audit-mobile-readability — 2026-05-14T01:32:36.773Z
 
 **⚠ HONESTY DISCLOSURE (Cato F1, Cycle 19A-M).** This audit is a CSS-contract presence check, NOT a real per-viewport layout measurement. Pass = the documented CSS contract tokens are present in the served HTML/CSS. It does NOT measure the `@media (max-width: 640px)` mobile bump — that signal lives in the screenshot capture path (`--capture` → `docs/artifacts/.../mobile-readability/after/`) and in independent visual review. A future cycle should replace `fetchAndMeasure` with real chrome JS evaluation via `--remote-debugging-port` + CDP eval.
 
@@ -6,7 +6,7 @@ Base: `https://miasanabriarealtor.trueidea.com` · viewports: 320×568 iPhone SE
 
 Thresholds (contract-presence, not pixel-measured): body ≥16px · line-height ≥1.5 · measure ≥45ch · tap ≥44px
 
-**56/56 contract-presence PASS · 0 FAIL · 0 ERROR**
+**84/84 contract-presence PASS · 0 FAIL · 0 ERROR**
 
 | Viewport | Route | Status | Failures |
 |----------|-------|--------|----------|
@@ -14,6 +14,13 @@ Thresholds (contract-presence, not pixel-measured): body ≥16px · line-height 
 | iphone-se | `/markets/` | ✓ | — |
 | iphone-se | `/markets/fort-lauderdale/` | ✓ | — |
 | iphone-se | `/markets/pompano-beach/` | ✓ | — |
+| iphone-se | `/markets/deerfield-beach/` | ✓ | — |
+| iphone-se | `/markets/coral-springs/` | ✓ | — |
+| iphone-se | `/markets/plantation/` | ✓ | — |
+| iphone-se | `/markets/weston/` | ✓ | — |
+| iphone-se | `/markets/hollywood/` | ✓ | — |
+| iphone-se | `/markets/davie/` | ✓ | — |
+| iphone-se | `/markets/sunrise/` | ✓ | — |
 | iphone-se | `/markets/boca-raton/` | ✓ | — |
 | iphone-se | `/markets/delray-beach/` | ✓ | — |
 | iphone-se | `/contact/` | ✓ | — |
@@ -28,6 +35,13 @@ Thresholds (contract-presence, not pixel-measured): body ≥16px · line-height 
 | iphone-15 | `/markets/` | ✓ | — |
 | iphone-15 | `/markets/fort-lauderdale/` | ✓ | — |
 | iphone-15 | `/markets/pompano-beach/` | ✓ | — |
+| iphone-15 | `/markets/deerfield-beach/` | ✓ | — |
+| iphone-15 | `/markets/coral-springs/` | ✓ | — |
+| iphone-15 | `/markets/plantation/` | ✓ | — |
+| iphone-15 | `/markets/weston/` | ✓ | — |
+| iphone-15 | `/markets/hollywood/` | ✓ | — |
+| iphone-15 | `/markets/davie/` | ✓ | — |
+| iphone-15 | `/markets/sunrise/` | ✓ | — |
 | iphone-15 | `/markets/boca-raton/` | ✓ | — |
 | iphone-15 | `/markets/delray-beach/` | ✓ | — |
 | iphone-15 | `/contact/` | ✓ | — |
@@ -42,6 +56,13 @@ Thresholds (contract-presence, not pixel-measured): body ≥16px · line-height 
 | pixel-7 | `/markets/` | ✓ | — |
 | pixel-7 | `/markets/fort-lauderdale/` | ✓ | — |
 | pixel-7 | `/markets/pompano-beach/` | ✓ | — |
+| pixel-7 | `/markets/deerfield-beach/` | ✓ | — |
+| pixel-7 | `/markets/coral-springs/` | ✓ | — |
+| pixel-7 | `/markets/plantation/` | ✓ | — |
+| pixel-7 | `/markets/weston/` | ✓ | — |
+| pixel-7 | `/markets/hollywood/` | ✓ | — |
+| pixel-7 | `/markets/davie/` | ✓ | — |
+| pixel-7 | `/markets/sunrise/` | ✓ | — |
 | pixel-7 | `/markets/boca-raton/` | ✓ | — |
 | pixel-7 | `/markets/delray-beach/` | ✓ | — |
 | pixel-7 | `/contact/` | ✓ | — |
@@ -56,6 +77,13 @@ Thresholds (contract-presence, not pixel-measured): body ≥16px · line-height 
 | ipad-portrait | `/markets/` | ✓ | — |
 | ipad-portrait | `/markets/fort-lauderdale/` | ✓ | — |
 | ipad-portrait | `/markets/pompano-beach/` | ✓ | — |
+| ipad-portrait | `/markets/deerfield-beach/` | ✓ | — |
+| ipad-portrait | `/markets/coral-springs/` | ✓ | — |
+| ipad-portrait | `/markets/plantation/` | ✓ | — |
+| ipad-portrait | `/markets/weston/` | ✓ | — |
+| ipad-portrait | `/markets/hollywood/` | ✓ | — |
+| ipad-portrait | `/markets/davie/` | ✓ | — |
+| ipad-portrait | `/markets/sunrise/` | ✓ | — |
 | ipad-portrait | `/markets/boca-raton/` | ✓ | — |
 | ipad-portrait | `/markets/delray-beach/` | ✓ | — |
 | ipad-portrait | `/contact/` | ✓ | — |

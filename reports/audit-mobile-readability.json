@@ -95,6 +95,139 @@
       "viewport": "iphone-se",
       "width": 320,
       "height": 568,
+      "route": "/markets/deerfield-beach/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 320,
+        "innerHeight": 568,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-se",
+      "width": 320,
+      "height": 568,
+      "route": "/markets/coral-springs/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 320,
+        "innerHeight": 568,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-se",
+      "width": 320,
+      "height": 568,
+      "route": "/markets/plantation/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 320,
+        "innerHeight": 568,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-se",
+      "width": 320,
+      "height": 568,
+      "route": "/markets/weston/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 320,
+        "innerHeight": 568,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-se",
+      "width": 320,
+      "height": 568,
+      "route": "/markets/hollywood/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 320,
+        "innerHeight": 568,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-se",
+      "width": 320,
+      "height": 568,
+      "route": "/markets/davie/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 320,
+        "innerHeight": 568,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-se",
+      "width": 320,
+      "height": 568,
+      "route": "/markets/sunrise/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 320,
+        "innerHeight": 568,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-se",
+      "width": 320,
+      "height": 568,
       "route": "/markets/boca-raton/",
       "ok": true,
       "failures": [],
@@ -343,6 +476,139 @@
       "width": 375,
       "height": 812,
       "route": "/markets/pompano-beach/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-15",
+      "width": 375,
+      "height": 812,
+      "route": "/markets/deerfield-beach/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-15",
+      "width": 375,
+      "height": 812,
+      "route": "/markets/coral-springs/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-15",
+      "width": 375,
+      "height": 812,
+      "route": "/markets/plantation/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-15",
+      "width": 375,
+      "height": 812,
+      "route": "/markets/weston/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-15",
+      "width": 375,
+      "height": 812,
+      "route": "/markets/hollywood/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-15",
+      "width": 375,
+      "height": 812,
+      "route": "/markets/davie/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "iphone-15",
+      "width": 375,
+      "height": 812,
+      "route": "/markets/sunrise/",
       "ok": true,
       "failures": [],
       "result": {
@@ -627,6 +893,139 @@
       "viewport": "pixel-7",
       "width": 414,
       "height": 896,
+      "route": "/markets/deerfield-beach/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 414,
+        "innerHeight": 896,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "pixel-7",
+      "width": 414,
+      "height": 896,
+      "route": "/markets/coral-springs/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 414,
+        "innerHeight": 896,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "pixel-7",
+      "width": 414,
+      "height": 896,
+      "route": "/markets/plantation/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 414,
+        "innerHeight": 896,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "pixel-7",
+      "width": 414,
+      "height": 896,
+      "route": "/markets/weston/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 414,
+        "innerHeight": 896,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "pixel-7",
+      "width": 414,
+      "height": 896,
+      "route": "/markets/hollywood/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 414,
+        "innerHeight": 896,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "pixel-7",
+      "width": 414,
+      "height": 896,
+      "route": "/markets/davie/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 414,
+        "innerHeight": 896,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "pixel-7",
+      "width": 414,
+      "height": 896,
+      "route": "/markets/sunrise/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 414,
+        "innerHeight": 896,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "pixel-7",
+      "width": 414,
+      "height": 896,
       "route": "/markets/boca-raton/",
       "ok": true,
       "failures": [],
@@ -875,6 +1274,139 @@
       "width": 768,
       "height": 1024,
       "route": "/markets/pompano-beach/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "ipad-portrait",
+      "width": 768,
+      "height": 1024,
+      "route": "/markets/deerfield-beach/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "ipad-portrait",
+      "width": 768,
+      "height": 1024,
+      "route": "/markets/coral-springs/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "ipad-portrait",
+      "width": 768,
+      "height": 1024,
+      "route": "/markets/plantation/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "ipad-portrait",
+      "width": 768,
+      "height": 1024,
+      "route": "/markets/weston/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "ipad-portrait",
+      "width": 768,
+      "height": 1024,
+      "route": "/markets/hollywood/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 25,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "ipad-portrait",
+      "width": 768,
+      "height": 1024,
+      "route": "/markets/davie/",
+      "ok": true,
+      "failures": [],
+      "result": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "bodyFontSizePx": 16,
+        "paragraphCount": 26,
+        "medianParagraphFontSizePx": 16,
+        "medianParagraphLineHeightRatio": 1.5,
+        "medianParagraphMeasureCh": 80,
+        "noHorizontalOverflow": true,
+        "tapTargetMinPx": 44
+      }
+    },
+    {
+      "viewport": "ipad-portrait",
+      "width": 768,
+      "height": 1024,
+      "route": "/markets/sunrise/",
       "ok": true,
       "failures": [],
       "result": {

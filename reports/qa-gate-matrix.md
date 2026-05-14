@@ -1,6 +1,6 @@
 # QA-Gate Matrix — Cycle 19A-M
 
-Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-14T00:44:39.872Z
+Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-14T01:32:43.790Z
 
 **55 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 55
 
@@ -87,25 +87,25 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-14T00:44
 | `/markets/bermuda-riviera` | ✓ | 49 | 155 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/boca-raton` | ✓ | 44 | 150 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/coral-ridge` | ✓ | 45 | 157 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/coral-springs` | ✓ | 47 | 158 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/davie` | ✓ | 39 | 157 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/deerfield-beach` | ✓ | 49 | 156 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/coral-springs` | ✓ | 47 | 158 | 6 | 51 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/davie` | ✓ | 39 | 157 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/deerfield-beach` | ✓ | 49 | 156 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/delray-beach` | ✓ | 46 | 152 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/fort-lauderdale` | ✓ | 49 | 155 | 6 | 79 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/harbor-beach` | ✓ | 46 | 156 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/hillsboro-mile` | ✓ | 48 | 157 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/hollywood` | ✓ | 43 | 157 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/hollywood` | ✓ | 43 | 157 | 6 | 51 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/las-olas-isles` | ✓ | 48 | 155 | 6 | 57 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/lighthouse-point` | ✓ | 50 | 154 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/palm-beach` | ✓ | 44 | 156 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/plantation` | ✓ | 44 | 156 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/plantation` | ✓ | 44 | 156 | 6 | 51 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/pompano-beach` | ✓ | 47 | 151 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/rio-vista` | ✓ | 43 | 153 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/sea-ranch-lakes` | ✓ | 49 | 149 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
 | `/markets/seven-isles` | ✓ | 45 | 157 | 6 | 54 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/sunrise` | ✓ | 41 | 148 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/sunrise` | ✓ | 41 | 148 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 | `/markets/victoria-park` | ✓ | 47 | 155 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/weston` | ✓ | 40 | 153 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/weston` | ✓ | 40 | 153 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 
 ## thank_you (4 routes)
 

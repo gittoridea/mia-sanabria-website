@@ -1,6 +1,6 @@
 {
   "base": "https://miasanabriarealtor.trueidea.com",
-  "generated_at": "2026-05-14T00:44:39.871Z",
+  "generated_at": "2026-05-14T01:32:43.789Z",
   "sitemap_route_count": 47,
   "filesystem_route_count": 55,
   "fs_only_routes": [
@@ -807,7 +807,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/davie",
@@ -833,7 +834,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/deerfield-beach",
@@ -859,7 +861,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/delray-beach",
@@ -991,7 +994,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/las-olas-isles",
@@ -1095,7 +1099,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/pompano-beach",
@@ -1226,7 +1231,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/markets/victoria-park",
@@ -1278,7 +1284,8 @@
           "severity": "low",
           "owner_category": 6
         }
-      ]
+      ],
+      "mobile_readability_pass": true
     },
     {
       "route": "/privacy",
