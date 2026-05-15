@@ -1,0 +1,12 @@
+{
+  "base": "http://127.0.0.1:4176",
+  "out": "docs/artifacts/cycle-36-bridge-live-integration/visual-qa/local",
+  "routes": 13,
+  "viewports": 3,
+  "jobs": 39,
+  "ok": 39,
+  "fail": 0,
+  "duration_seconds": 44,
+  "failures": [],
+  "timestamp": "2026-05-14T22:06:28.054Z"
+}

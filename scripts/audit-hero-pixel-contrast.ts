@@ -251,6 +251,38 @@ function injectAuditCss(html: string, hideHeading: boolean, mutate: boolean): st
   return html.replace("</head>", `${css}</head>`);
 }
 
+// In-memory asset cache primed at server start. Hero images (~280KB each) need
+// to be hot when Chrome process #1 (normal) and Chrome process #2 (hidden) make
+// network requests; otherwise the first capture races --virtual-time-budget and
+// screenshots before the image renders, while the second capture loads instantly
+// because the OS page cache is warm. The diff then measures no-image-vs-image,
+// not text-on-bg contrast, producing false FAILs at samples=1 on heavier hero
+// images. Cycle 36 fix.
+const ASSET_CACHE = new Map<string, { data: Buffer; contentType: string }>();
+
+async function primeAssetCache(): Promise<number> {
+  let primed = 0;
+  try {
+    const marketsPublic = join(REPO, "public", "markets");
+    const entries = await readdir(marketsPublic, { withFileTypes: true });
+    for (const e of entries) {
+      if (!e.isFile()) continue;
+      if (!/\.(jpe?g|png|webp)$/i.test(e.name)) continue;
+      const filePath = join(marketsPublic, e.name);
+      const data = await readFile(filePath);
+      const urlPath = `/markets/${e.name}`;
+      ASSET_CACHE.set(urlPath, {
+        data,
+        contentType: contentTypeFromPath(filePath),
+      });
+      primed += 1;
+    }
+  } catch {
+    // public/markets may not exist in some test contexts; warmup is best-effort
+  }
+  return primed;
+}
+
 async function startStaticServer(port: number, mutation: boolean, liveBase?: string): Promise<StaticServer> {
   const indexFor = (urlPath: string): string => {
     let p = urlPath;
@@ -266,6 +298,19 @@ async function startStaticServer(port: number, mutation: boolean, liveBase?: str
       const auditMode = url.searchParams.get("auditMode") || "normal";
       const mutate = (url.searchParams.get("mutation") || "").toLowerCase() === "true" || mutation;
       const path = decodeURIComponent(url.pathname);
+
+      const cached = ASSET_CACHE.get(path);
+      if (cached) {
+        // Buffer's slice into a fresh ArrayBuffer satisfies the dom Response BodyInit
+        // constraint that Bun-runtime accepts but tsc strict-mode won't from a plain Buffer.
+        const ab = cached.data.buffer.slice(
+          cached.data.byteOffset,
+          cached.data.byteOffset + cached.data.byteLength,
+        ) as ArrayBuffer;
+        return new Response(ab, {
+          headers: { "content-type": cached.contentType, "cache-control": "no-cache" },
+        });
+      }
 
       // --live mode: reverse-proxy to the staging URL and inject audit CSS into HTML responses.
       // The audit-CSS injection IS the only mechanism that makes the hide-vs-normal capture diff
@@ -491,6 +536,13 @@ function safeName(s: string): string {
 async function main(): Promise<void> {
   await mkdir(REPORTS_DIR, { recursive: true });
   await mkdir(SHOTS_DIR, { recursive: true });
+
+  if (!isLive) {
+    const primed = await primeAssetCache();
+    if (primed > 0) {
+      console.log(`audit:hero-contrast — primed ${primed} hero asset(s) into in-memory cache`);
+    }
+  }
 
   let server: StaticServer | null = null;
   let baseUrl: string;

@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-14T16:40:19.493Z",
+  "generated": "2026-05-15T20:53:44.928Z",
   "mode": "local",
   "mutation": false,
   "base": "http://127.0.0.1:4173",

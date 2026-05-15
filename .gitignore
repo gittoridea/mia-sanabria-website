@@ -54,3 +54,10 @@ tmp/
 docs/artifacts/**/*.jpg
 docs/artifacts/**/*.png
 .tmp/
+
+# Cycle 36 — saved staging chunk JS may contain the public browser token literal
+# (NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN — public-by-design in the bundle but excluded
+# from this repo per the never-commit-secret-shaped-values commitment). Sanitized
+# HTML-needle reports remain committable.
+docs/artifacts/**/staging-html/*chunk*.js
+docs/artifacts/**/staging-html/*page-*.js

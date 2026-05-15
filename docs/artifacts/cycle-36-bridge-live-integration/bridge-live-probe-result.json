@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-05-15T20:45:35.667Z",
+  "credentialPresence": {
+    "NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN": "missing",
+    "NEXT_PUBLIC_BRIDGE_DATASET_ID": "missing",
+    "NEXT_PUBLIC_BRIDGE_RESOURCE_PATH": "missing",
+    "NEXT_PUBLIC_BRIDGE_DEMO": "missing",
+    "BRIDGE_SERVER_TOKEN": "missing",
+    "BRIDGE_CLIENT_ID": "missing",
+    "BRIDGE_DATASET_ID": "missing"
+  },
+  "endpointConfigured": false,
+  "endpointHostRedacted": "api.bridgedataoutput.com",
+  "resourcePath": "idx/Properties",
+  "datasetIdRedacted": "[missing]",
+  "requestAttempted": false,
+  "ok": false,
+  "recordCount": 0,
+  "sampleClassification": "unknown",
+  "geographySignals": [],
+  "listingIdSignals": [],
+  "mediaSignals": [],
+  "nextAction": "Bridge credentials missing locally — this is expected per Cycle 33B credential policy (values live in Dokploy build args only). Probe staging site directly via bridge-staging-* reports to determine deployed chunk's actual mode."
+}

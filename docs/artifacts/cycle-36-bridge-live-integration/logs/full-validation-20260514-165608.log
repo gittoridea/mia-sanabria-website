@@ -1,0 +1,29 @@
+=== typecheck ===
+$ tsc --noEmit
+scripts/audit-hero-pixel-contrast.ts(304,29): error TS2345: Argument of type 'Uint8Array<ArrayBufferLike>' is not assignable to parameter of type 'BodyInit | null | undefined'.
+  Type 'Uint8Array<ArrayBufferLike>' is missing the following properties from type 'URLSearchParams': size, append, delete, get, and 2 more.
+=== lint ===
+$ next lint
+✔ No ESLint warnings or errors
+=== build ===
+$ next build
+   ▲ Next.js 15.1.0
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+Failed to compile.
+
+./scripts/audit-hero-pixel-contrast.ts:304:29
+Type error: Argument of type 'Uint8Array<ArrayBufferLike>' is not assignable to parameter of type 'BodyInit | null | undefined'.
+  Type 'Uint8Array<ArrayBufferLike>' is missing the following properties from type 'URLSearchParams': size, append, delete, get, and 2 more.
+
+[0m [90m 302 |[39m       [36mconst[39m cached [33m=[39m [33mASSET_CACHE[39m[33m.[39m[36mget[39m(path)[33m;[39m[0m
+[0m [90m 303 |[39m       [36mif[39m (cached) {[0m
+[0m[31m[1m>[22m[39m[90m 304 |[39m         [36mreturn[39m [36mnew[39m [33mResponse[39m(cached[33m.[39mdata[33m,[39m {[0m
+[0m [90m     |[39m                             [31m[1m^[22m[39m[0m
+[0m [90m 305 |[39m           headers[33m:[39m { [32m"content-type"[39m[33m:[39m cached[33m.[39mcontentType[33m,[39m [32m"cache-control"[39m[33m:[39m [32m"no-cache"[39m }[33m,[39m[0m
+[0m [90m 306 |[39m         })[33m;[39m[0m
+[0m [90m 307 |[39m       }[0m
+error: script "build" exited with code 1
+EXIT_CODE:1
