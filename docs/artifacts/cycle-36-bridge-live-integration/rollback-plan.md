@@ -1,8 +1,16 @@
-# Cycle 36 Rollback Plan
+# Cycle 36/36D Rollback Plan
 
-**Generated:** 2026-05-14T22:09Z
+**Generated:** 2026-05-14T22:09Z, **refreshed 2026-05-15** with Cycle 36D commit hash + deploy state
 **Scope:** Local + staging only. No production cutover occurred this cycle; no production rollback is needed.
 **Trigger conditions:** Mia or Torrey explicitly rejects Cycle 36 work, or staging deploy verification fails in a way that needs to revert.
+
+## Cycle 36D shipped state (target of any rollback)
+
+```yaml
+commit_to_revert: 3a99bc33f037b00b3ed04ac97744c48e2a01512e
+parent_commit: 1386d208fa93b66d3e66f5131b001ff432b35911
+staging_currently_serves_commit: 3a99bc3
+```
 
 ## What Cycle 36 introduced
 
@@ -20,7 +28,7 @@
 ```bash
 cd /home/torrey/code/mia-sanabria-website
 # revert the Cycle 36 commit
-git revert <cycle-36-commit-sha>
+git revert 3a99bc3
 # OR if the commit is the latest and unpublished:
 #   git reset --hard 1386d20 && git push --force-with-lease origin main  (DANGEROUS — confirm first)
 git push origin main

@@ -1,20 +1,32 @@
-# Cycle 36C → Next Cycle Continuation Prompt
+# Cycle 36D → Next Cycle Continuation Prompt
 
-**Generated:** 2026-05-14T22:10Z (will be refreshed at end of cycle with final deploy + verification state)
+**Generated:** 2026-05-14T22:10Z (Cycle 36C scaffold), **refreshed 2026-05-15** after Cycle 36D close-out
 **Use:** Drop this verbatim into the next raw-Claude session if a follow-up cycle is needed.
 
-## Where Cycle 36C left off
+## Where Cycle 36D left off
 
 ```yaml
 branch: main
-head: <to be filled after Phase 9 commit>
-origin_main: <to be filled after Phase 9 push>
-working_tree_state: clean (after Phase 9 + Phase 14 commits)
-phases_completed: 0 through 15 (full mission)
+head: 3a99bc33f037b00b3ed04ac97744c48e2a01512e
+origin_main: 3a99bc33f037b00b3ed04ac97744c48e2a01512e
+working_tree_state: clean (after Phase 9 commit and Phase 14 docs follow-up commit; only 3 transient Cycle 35C deploy log files left untracked, intentional)
+phases_completed: 0 through 15 (full Cycle 36D mission)
 phases_incomplete: none
-deployed_to_staging: true | false
-staging_url_live_with_current_commit: true | false
-deployed_commit_matches_head: true | false
+deployed_to_staging: true
+staging_url_live_with_current_commit: true
+deployed_commit_matches_head: true
+staging_etag_post_deploy_home: dijka7eh7g1s57rf-gzip
+staging_last_modified: "Fri, 15 May 2026 21:17:43 GMT"
+bridge_mode_on_staging: demo   # unchanged — chunk test_sf + BRIDGE_DEMO=true
+live_bridge_feed_proven: false
+visual_qa_local_pngs: 39
+visual_qa_staging_pngs: 108
+mobile_readability_local: pass (84/0/0)
+mobile_readability_staging: pass (84/0/0)
+hero_contrast_stable_local: pass (145/0/0)
+audit_all_critical: 0
+secret_safety: clean (no values printed, logged, or committed)
+production_changes: none
 ```
 
 ## Cycle 36C work summary

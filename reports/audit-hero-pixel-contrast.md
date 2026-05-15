@@ -1,10 +1,10 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-15T20:53:44.928Z
+**Generated:** 2026-05-15T21:11:46.587Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
-**Samples per row:** 1
+**Samples per row:** 3
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
 
 **Summary:** 145 PASS · 0 WARN · 0 FAIL · 0 SKIP
@@ -64,7 +64,7 @@
 | `/markets/sea-ranch-lakes/` | 320x568 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 375x812 | 15.63 | 9.06 | 15.63 (15.63..15.63) | 805 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 768x1024 | 15.79 | 9.56 | 15.79 (15.79..15.79) | 1500 | 800 | ✅ PASS |  |
-| `/markets/sea-ranch-lakes/` | 1280x800 | 15.76 | 9.62 | 15.76 (15.76..15.76) | 1500 | 800 | ✅ PASS |  |
+| `/markets/sea-ranch-lakes/` | 1280x800 | 15.76 | 9.62 | 15.76 (6.20..15.76) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 1440x900 | 15.69 | 9.62 | 15.69 (15.69..15.69) | 1500 | 800 | ✅ PASS |  |
 | `/markets/plantation/` | 320x568 | 15.72 | 9.32 | 15.72 (15.72..15.72) | 1299 | 800 | ✅ PASS |  |
 | `/markets/plantation/` | 375x812 | 15.72 | 9.32 | 15.72 (15.72..15.72) | 1299 | 800 | ✅ PASS |  |
@@ -89,11 +89,11 @@
 | `/markets/davie/` | 320x568 | 15.75 | 9.18 | 15.75 (15.75..15.75) | 1398 | 800 | ✅ PASS |  |
 | `/markets/davie/` | 375x812 | 15.76 | 9.18 | 15.76 (15.76..15.76) | 1412 | 800 | ✅ PASS |  |
 | `/markets/davie/` | 768x1024 | 16.02 | 10.27 | 16.02 (16.02..16.02) | 1500 | 800 | ✅ PASS |  |
-| `/markets/davie/` | 1280x800 | 15.98 | 10.11 | 15.98 (15.98..15.98) | 1500 | 800 | ✅ PASS |  |
-| `/markets/davie/` | 1440x900 | 15.95 | 10.07 | 15.95 (15.95..15.95) | 1500 | 800 | ✅ PASS |  |
+| `/markets/davie/` | 1280x800 | 15.98 | 10.11 | 15.98 (15.98..16.24) | 1500 | 800 | ✅ PASS |  |
+| `/markets/davie/` | 1440x900 | 15.95 | 10.07 | 15.95 (15.95..15.96) | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-springs/` | 320x568 | 15.75 | 9.44 | 15.75 (15.75..15.75) | 1346 | 800 | ✅ PASS |  |
 | `/markets/coral-springs/` | 375x812 | 15.75 | 9.44 | 15.75 (15.75..15.75) | 1356 | 800 | ✅ PASS |  |
-| `/markets/coral-springs/` | 768x1024 | 16.00 | 9.83 | 16.00 (16.00..16.00) | 1500 | 800 | ✅ PASS |  |
+| `/markets/coral-springs/` | 768x1024 | 16.00 | 9.83 | 16.00 (16.00..16.01) | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-springs/` | 1280x800 | 15.97 | 10.22 | 15.97 (15.97..15.97) | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-springs/` | 1440x900 | 15.97 | 10.21 | 15.97 (15.97..15.97) | 1500 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 320x568 | 15.57 | 9.00 | 15.57 (15.57..15.57) | 959 | 800 | ✅ PASS |  |
@@ -124,7 +124,7 @@
 | `/markets/coral-ridge/` | 320x568 | 15.56 | 9.94 | 15.56 (15.56..15.56) | 1125 | 800 | ✅ PASS |  |
 | `/markets/coral-ridge/` | 375x812 | 15.56 | 9.94 | 15.56 (15.56..15.56) | 1125 | 800 | ✅ PASS |  |
 | `/markets/coral-ridge/` | 768x1024 | 15.84 | 9.54 | 15.84 (15.84..15.84) | 1500 | 800 | ✅ PASS |  |
-| `/markets/coral-ridge/` | 1280x800 | 15.90 | 10.08 | 15.90 (15.90..15.90) | 1500 | 800 | ✅ PASS |  |
+| `/markets/coral-ridge/` | 1280x800 | 15.90 | 10.08 | 15.90 (5.54..15.90) | 1500 | 800 | ✅ PASS |  |
 | `/markets/coral-ridge/` | 1440x900 | 15.85 | 10.08 | 15.85 (15.85..15.85) | 1500 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 320x568 | 15.30 | 8.51 | 15.30 (15.30..15.30) | 1040 | 800 | ✅ PASS |  |
 | `/markets/palm-beach/` | 375x812 | 15.31 | 8.51 | 15.31 (15.31..15.31) | 1049 | 800 | ✅ PASS |  |
@@ -133,7 +133,7 @@
 | `/markets/palm-beach/` | 1440x900 | 15.56 | 10.17 | 15.56 (15.56..15.56) | 1500 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 320x568 | 15.18 | 8.77 | 15.18 (15.18..15.18) | 938 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 375x812 | 15.18 | 8.76 | 15.18 (15.18..15.18) | 949 | 800 | ✅ PASS |  |
-| `/markets/lighthouse-point/` | 768x1024 | 15.38 | 9.60 | 15.38 (15.38..15.38) | 1500 | 800 | ✅ PASS |  |
+| `/markets/lighthouse-point/` | 768x1024 | 15.38 | 9.60 | 15.38 (4.21..15.38) | 1500 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 1280x800 | 15.78 | 9.89 | 15.78 (15.78..15.78) | 1500 | 800 | ✅ PASS |  |
 | `/markets/lighthouse-point/` | 1440x900 | 15.82 | 9.89 | 15.82 (15.82..15.82) | 1500 | 800 | ✅ PASS |  |
 | `/markets/delray-beach/` | 320x568 | 15.13 | 8.82 | 15.13 (15.13..15.13) | 1093 | 800 | ✅ PASS |  |
@@ -149,7 +149,7 @@
 | `/markets/sunrise/` | 320x568 | 15.80 | 9.76 | 15.80 (15.80..15.80) | 1396 | 800 | ✅ PASS |  |
 | `/markets/sunrise/` | 375x812 | 15.80 | 9.76 | 15.80 (15.80..15.80) | 1396 | 800 | ✅ PASS |  |
 | `/markets/sunrise/` | 768x1024 | 16.05 | 9.90 | 16.05 (16.05..16.05) | 1500 | 800 | ✅ PASS |  |
-| `/markets/sunrise/` | 1280x800 | 16.01 | 10.10 | 16.01 (16.01..16.01) | 1500 | 800 | ✅ PASS |  |
+| `/markets/sunrise/` | 1280x800 | 16.01 | 10.10 | 16.01 (16.01..16.02) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sunrise/` | 1440x900 | 15.97 | 10.09 | 15.97 (15.97..15.97) | 1500 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 320x568 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 836 | 800 | ✅ PASS |  |
 | `/markets/harbor-beach/` | 375x812 | 15.68 | 9.00 | 15.68 (15.68..15.68) | 860 | 800 | ✅ PASS |  |
@@ -159,7 +159,11 @@
 
 ## Stability summary
 
-_All rows within 1.0 contrast spread — no high-variance rows._
+| Route | Viewport | Min | Median | Max | Spread |
+|---|---|---:|---:|---:|---:|
+| `/markets/sea-ranch-lakes/` | 1280x800 | 6.20 | 15.76 | 15.76 | 9.56 |
+| `/markets/coral-ridge/` | 1280x800 | 5.54 | 15.90 | 15.90 | 10.36 |
+| `/markets/lighthouse-point/` | 768x1024 | 4.21 | 15.38 | 15.38 | 11.17 |
 
 ## Mutation note
 

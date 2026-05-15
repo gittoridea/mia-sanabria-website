@@ -1,0 +1,12 @@
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "out": "docs/artifacts/cycle-36-bridge-live-integration/visual-qa/staging",
+  "routes": 36,
+  "viewports": 3,
+  "jobs": 108,
+  "ok": 108,
+  "fail": 0,
+  "duration_seconds": 79,
+  "failures": [],
+  "timestamp": "2026-05-15T21:20:34.347Z"
+}
