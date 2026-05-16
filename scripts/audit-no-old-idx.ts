@@ -25,6 +25,7 @@ const REPO = process.cwd();
 const REPORTS = join(REPO, "reports");
 
 const SCAN_ROOTS = ["src", "public", "out", ".next"];
+const SCAN_FILES = ["Caddyfile", "Dockerfile", "next.config.ts"];
 const TEXT_EXTENSIONS = new Set([
   ".ts",
   ".tsx",
@@ -150,6 +151,15 @@ async function main() {
   const files: string[] = [];
   for (const root of SCAN_ROOTS) {
     await walk(join(REPO, root), files);
+  }
+  for (const f of SCAN_FILES) {
+    const full = join(REPO, f);
+    try {
+      const s = await stat(full);
+      if (s.isFile()) files.push(full);
+    } catch {
+      // file absent — skip
+    }
   }
   const allFindings: Finding[] = [];
   for (const f of files) {
