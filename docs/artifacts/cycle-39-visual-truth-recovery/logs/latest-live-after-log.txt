@@ -1,0 +1,1 @@
+docs/artifacts/cycle-39-visual-truth-recovery/logs/live-after-capture-20260516-105702.log
