@@ -21,6 +21,7 @@ import {
   getFeaturedMarketSlugs,
   getMarketImagePath,
   getMarketOgImagePath,
+  type MarketSlug,
 } from "../src/lib/mia";
 
 type CheckStatus = "PASS" | "WARN" | "FAIL" | "SKIP";
@@ -382,13 +383,17 @@ async function runAuditImages(): Promise<CheckResult[]> {
   //     /markets/index.html (as a card image) AND the corresponding market
   //     page /markets/<slug>/index.html (as a hero image).
   const marketsIndexHtml = await readFile(join(OUT_DIR, "markets", "index.html"), "utf-8").catch(() => "");
+  // Cycle 39 — match versioned + unversioned card images so versioned slugs
+  // (Deerfield Beach, Hollywood, Plantation, Weston, Coral Springs, Davie,
+  // Sunrise) pass the index-card presence check. Suffix tolerated: any
+  // trailing `-cycle{N}` token before `.jpg`.
   const cardImagePathsOnIndex = new Set<string>(
-    [...marketsIndexHtml.matchAll(/src="(\/markets\/[a-z-]+\.jpg)"/g)].map((m) => m[1] ?? ""),
+    [...marketsIndexHtml.matchAll(/src="(\/markets\/[a-z0-9-]+\.jpg)"/g)].map((m) => m[1] ?? ""),
   );
   const missingCardOnIndex: string[] = [];
   const missingHeroOnPage: string[] = [];
   for (const slug of marketSlugs) {
-    const expectedPath = `/markets/${slug}.jpg`;
+    const expectedPath = getMarketImagePath(slug);
     if (!cardImagePathsOnIndex.has(expectedPath)) {
       missingCardOnIndex.push(slug);
     }
@@ -420,17 +425,19 @@ async function runAuditImages(): Promise<CheckResult[]> {
     details: missingHeroOnPage.length ? { missingHeroOnPage } : undefined,
   });
 
-  // (b) Every market has an OG image at /og-markets/<slug>.jpg AND that image is referenced
-  //     on the market's page in og:image meta.
+  // (b) Every market has an OG image at the slug's resolved path AND that
+  //     image is referenced on the market's page in og:image meta. Path is
+  //     resolved via getMarketOgImagePath() so the Cycle 39 versioned slugs
+  //     are honored.
   const missingOgFile: string[] = [];
   const missingOgOnPage: string[] = [];
   for (const slug of marketSlugs) {
-    const ogFile = join(PUBLIC_DIR, "og-markets", `${slug}.jpg`);
+    const expectedOg = getMarketOgImagePath(slug);
+    const ogFile = join(PUBLIC_DIR, expectedOg.replace(/^\//, ""));
     if (!(await fileExists(ogFile))) {
       missingOgFile.push(slug);
     }
     const pageHtml = await readFile(join(OUT_DIR, "markets", slug, "index.html"), "utf-8").catch(() => "");
-    const expectedOg = `/og-markets/${slug}.jpg`;
     if (!pageHtml.includes(expectedOg)) {
       missingOgOnPage.push(slug);
     }
@@ -452,16 +459,17 @@ async function runAuditImages(): Promise<CheckResult[]> {
   //     (the principal-reported defects). Redundant with (a)+(b) on a green
   //     build but the explicit naming makes regression on these specific
   //     surfaces impossible to miss.
-  const principalReportedMarkets = ["lighthouse-point", "coral-ridge", "palm-beach"];
+  const principalReportedMarkets: ReadonlyArray<MarketSlug> = ["lighthouse-point", "coral-ridge", "palm-beach"];
   type ExplicitCheck = { slug: string; cardOnIndex: boolean; heroOnPage: boolean; ogFile: boolean; ogOnPage: boolean };
   const explicitChecks: ExplicitCheck[] = [];
   for (const slug of principalReportedMarkets) {
-    const expectedCardPath = `/markets/${slug}.jpg`;
+    const expectedCardPath = getMarketImagePath(slug);
+    const expectedOgPath = getMarketOgImagePath(slug);
     const cardOnIndex = cardImagePathsOnIndex.has(expectedCardPath);
     const pageHtml = await readFile(join(OUT_DIR, "markets", slug, "index.html"), "utf-8").catch(() => "");
     const heroOnPage = pageHtml.includes(`src="${expectedCardPath}"`);
-    const ogFile = await fileExists(join(PUBLIC_DIR, "og-markets", `${slug}.jpg`));
-    const ogOnPage = pageHtml.includes(`/og-markets/${slug}.jpg`);
+    const ogFile = await fileExists(join(PUBLIC_DIR, expectedOgPath.replace(/^\//, "")));
+    const ogOnPage = pageHtml.includes(expectedOgPath);
     explicitChecks.push({ slug, cardOnIndex, heroOnPage, ogFile, ogOnPage });
   }
   const principalFails = explicitChecks.filter((c) => !(c.cardOnIndex && c.heroOnPage && c.ogFile && c.ogOnPage));

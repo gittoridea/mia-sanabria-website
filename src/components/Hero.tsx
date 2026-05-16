@@ -150,9 +150,10 @@ export function Hero({
         <div className={useImage ? "w-full min-w-0 max-w-2xl" : "w-full"}>
           <div
             data-hero-copy-panel={useImage ? "true" : undefined}
+            data-hero-copy-panel-version={useImage ? "cycle39" : undefined}
             className={
               useImage
-                ? "min-w-0 rounded-sm border-l-2 border-brass-300 bg-navy-900/95 p-3 shadow-luxury min-[375px]:p-5 sm:p-6 lg:p-8"
+                ? "min-w-0 overflow-hidden rounded-sm border-l-2 border-brass-300 bg-navy-900/85 p-4 shadow-luxury min-[375px]:bg-navy-900/90 min-[375px]:p-5 sm:bg-navy-900/92 sm:p-6 lg:p-8"
                 : ""
             }
           >
@@ -186,7 +187,7 @@ export function Hero({
                 isCream
                   ? "mt-5 w-full max-w-full font-display text-[20px] font-semibold leading-[1.2] tracking-normal text-navy-800 sm:max-w-4xl sm:text-[32px] sm:leading-[1.1] md:text-5xl lg:text-6xl break-words [overflow-wrap:anywhere]"
                   : useImage
-                    ? "mt-4 w-full max-w-[27ch] min-w-0 break-words font-display text-[16px] font-bold leading-[1.18] tracking-normal text-cream-50 [overflow-wrap:anywhere] [word-break:normal] min-[375px]:text-[17px] sm:max-w-xl sm:text-[26px] sm:leading-[1.1] md:text-[32px] lg:text-[36px] lg:leading-[1.08]"
+                    ? "mt-4 w-full max-w-full min-w-0 break-words font-display text-[16px] font-bold leading-[1.18] tracking-normal text-cream-50 [overflow-wrap:anywhere] [word-break:normal] min-[375px]:text-[17px] sm:max-w-xl sm:text-[26px] sm:leading-[1.1] md:text-[32px] lg:text-[36px] lg:leading-[1.08]"
                     : "mt-5 w-full max-w-full font-display text-[20px] font-semibold leading-[1.2] tracking-normal text-cream-50 sm:max-w-4xl sm:text-[32px] sm:leading-[1.1] md:text-5xl lg:text-6xl break-words [overflow-wrap:anywhere]"
               }
             >
@@ -199,7 +200,7 @@ export function Hero({
                   isCream
                     ? "mt-6 max-w-2xl text-lg text-navy-800/80 [text-wrap:pretty] sm:text-xl"
                     : useImage
-                      ? "mt-3 max-w-xl text-[13px] leading-[1.5] text-cream-200/95 [text-wrap:pretty] [overflow-wrap:break-word] [word-break:break-word] hyphens-auto min-[360px]:mt-4 min-[360px]:text-[14px] min-[360px]:leading-[1.55] min-[375px]:text-[15px] min-[375px]:leading-7 sm:text-base md:text-lg lg:leading-6"
+                      ? "mt-3 w-full max-w-full min-w-0 text-[13px] leading-[1.5] text-cream-200/95 [text-wrap:pretty] [overflow-wrap:break-word] [word-break:break-word] hyphens-auto min-[360px]:mt-4 min-[360px]:text-[14px] min-[360px]:leading-[1.55] min-[375px]:text-[15px] min-[375px]:leading-7 sm:max-w-xl sm:text-base md:text-lg lg:leading-6"
                       : "mt-6 max-w-2xl text-lg text-cream-200/90 [text-wrap:pretty] sm:text-xl"
                 }
               >

@@ -12,6 +12,7 @@ import { RealEstateAgentSchema } from "@/components/schema/RealEstateAgentSchema
 import { RelatedInsightsModule } from "@/components/insights/RelatedInsightsModule";
 import { FortLauderdaleV2Page } from "@/components/markets/FortLauderdaleV2";
 import { MARKETS, getMarket, getFortLauderdaleClusterSlugs, type Market } from "@/lib/markets";
+import { getMarketOgImagePath } from "@/lib/mia";
 import { SITE } from "@/lib/site";
 
 type Params = { slug: string };
@@ -61,7 +62,7 @@ export async function generateMetadata({
       url: `${SITE.url}/markets/${market.slug}/`,
       images: [
         {
-          url: `${SITE.url}/og-markets/${market.slug}.jpg`,
+          url: `${SITE.url}${getMarketOgImagePath(market.slug)}`,
           width: 1200,
           height: 630,
           alt: `${market.name} — Mia Sanabria, REALTOR® with LPT Realty`,

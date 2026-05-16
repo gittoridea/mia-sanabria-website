@@ -1,0 +1,61 @@
+{
+  "target": "https://miasanabria.com/",
+  "generated_at": "2026-05-16T14:06:31.975Z",
+  "rendered_dom_path": "docs/artifacts/cycle-39-visual-truth-recovery/reference-home/miasanabria-home-rendered.html",
+  "screenshots": {
+    "desktop_1440x1000": "docs/artifacts/cycle-39-visual-truth-recovery/reference-home/miasanabria-home-1440x1000.png",
+    "mobile_375x812": "docs/artifacts/cycle-39-visual-truth-recovery/reference-home/miasanabria-home-375x812.png"
+  },
+  "candidates": [
+    {
+      "url": "https://vibe.filesafe.space/1776455982521426814/assets/0cea4829-8017-482f-9f70-4d00deda65a0.png",
+      "abs": "https://vibe.filesafe.space/1776455982521426814/assets/0cea4829-8017-482f-9f70-4d00deda65a0.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1237924,
+      "surface": "og+tw"
+    },
+    {
+      "url": "https://vibe.filesafe.space/1776455982521426814/attachments/9d286670-d1c1-44cf-9bfd-4e701ca8f0e0.jpg",
+      "abs": "https://vibe.filesafe.space/1776455982521426814/attachments/9d286670-d1c1-44cf-9bfd-4e701ca8f0e0.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 320733,
+      "surface": "og+tw+img"
+    },
+    {
+      "url": "https://vibe.filesafe.space/1776455982521426814/attachments/9e310e1b-a41d-4b6c-811d-6ede973f7517.png",
+      "abs": "https://vibe.filesafe.space/1776455982521426814/attachments/9e310e1b-a41d-4b6c-811d-6ede973f7517.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 39518,
+      "surface": "og+tw+img"
+    }
+  ],
+  "likely_hero": [
+    {
+      "url": "https://vibe.filesafe.space/1776455982521426814/assets/0cea4829-8017-482f-9f70-4d00deda65a0.png",
+      "abs": "https://vibe.filesafe.space/1776455982521426814/assets/0cea4829-8017-482f-9f70-4d00deda65a0.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1237924,
+      "surface": "og+tw"
+    },
+    {
+      "url": "https://vibe.filesafe.space/1776455982521426814/attachments/9d286670-d1c1-44cf-9bfd-4e701ca8f0e0.jpg",
+      "abs": "https://vibe.filesafe.space/1776455982521426814/attachments/9d286670-d1c1-44cf-9bfd-4e701ca8f0e0.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 320733,
+      "surface": "og+tw+img"
+    },
+    {
+      "url": "https://vibe.filesafe.space/1776455982521426814/attachments/9e310e1b-a41d-4b6c-811d-6ede973f7517.png",
+      "abs": "https://vibe.filesafe.space/1776455982521426814/attachments/9e310e1b-a41d-4b6c-811d-6ede973f7517.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 39518,
+      "surface": "og+tw+img"
+    }
+  ]
+}

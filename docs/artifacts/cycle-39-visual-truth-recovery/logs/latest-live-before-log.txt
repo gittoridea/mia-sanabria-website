@@ -1,0 +1,1 @@
+docs/artifacts/cycle-39-visual-truth-recovery/logs/live-before-capture-20260516-095902.log

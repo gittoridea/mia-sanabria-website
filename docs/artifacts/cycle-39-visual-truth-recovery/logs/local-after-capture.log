@@ -1,0 +1,25 @@
+capture-baseline: 20 jobs · 10 routes × 2 viewports · concurrency 2 · base http://127.0.0.1:4191
+output: docs/artifacts/cycle-39-visual-truth-recovery/local-after/screenshots
+  [2/20] ✓ / @ 1280x800 (1378ms)
+  [1/20] ✓ / @ 375x812 (1930ms)
+  [3/20] ✓ /home-search/ @ 375x812 (999ms)
+  [4/20] ✓ /home-search/ @ 1280x800 (1372ms)
+  [5/20] ✓ /markets/ @ 375x812 (1036ms)
+  [7/20] ✓ /markets/deerfield-beach/ @ 375x812 (1239ms)
+  [6/20] ✓ /markets/ @ 1280x800 (1704ms)
+  [9/20] ✓ /markets/hollywood/ @ 375x812 (1065ms)
+  [8/20] ✓ /markets/deerfield-beach/ @ 1280x800 (1455ms)
+  [11/20] ✓ /markets/plantation/ @ 375x812 (1087ms)
+  [10/20] ✓ /markets/hollywood/ @ 1280x800 (1553ms)
+  [13/20] ✓ /markets/weston/ @ 375x812 (1056ms)
+  [12/20] ✓ /markets/plantation/ @ 1280x800 (1492ms)
+  [15/20] ✓ /markets/coral-springs/ @ 375x812 (1166ms)
+  [14/20] ✓ /markets/weston/ @ 1280x800 (2219ms)
+  [16/20] ✓ /markets/coral-springs/ @ 1280x800 (1159ms)
+  [17/20] ✓ /markets/davie/ @ 375x812 (1185ms)
+  [18/20] ✓ /markets/davie/ @ 1280x800 (1587ms)
+  [19/20] ✓ /markets/sunrise/ @ 375x812 (1055ms)
+  [20/20] ✓ /markets/sunrise/ @ 1280x800 (1149ms)
+
+Done: 20/20 ok · 0 failed · 14s
+Summary: docs/artifacts/cycle-39-visual-truth-recovery/local-after/screenshots/_capture-summary.json

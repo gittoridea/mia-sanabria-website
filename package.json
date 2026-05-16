@@ -36,6 +36,8 @@
     "audit:no-old-idx": "bun run scripts/audit-no-old-idx.ts",
     "audit:neighborhood-images-deep": "bun run scripts/audit-neighborhood-images-deep.ts",
     "audit:home-bridge-search": "bun run scripts/audit-home-bridge-search.ts",
+    "test:home-bridge-e2e": "bun run scripts/test-home-search-bridge-e2e.ts",
+    "probe:reference-hero": "bun run scripts/probe-reference-hero-visual.ts",
     "audit:copy-density": "bun run scripts/audit-copy-density.ts",
     "port-guard": "bun run scripts/lib/port-guard.ts",
     "render:og-insights": "bun run scripts/render-insight-og-images.ts",

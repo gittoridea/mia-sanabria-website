@@ -1,0 +1,7 @@
+probe-reference-hero-visual: wrote 3 candidates → /home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-39-visual-truth-recovery/reference-home/reference-hero-candidates.json
+screenshots: /home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-39-visual-truth-recovery/reference-home/miasanabria-home-1440x1000.png, /home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-39-visual-truth-recovery/reference-home/miasanabria-home-375x812.png
+top candidates (by bytes):
+  og+tw  1237924B  image/png  https://vibe.filesafe.space/1776455982521426814/assets/0cea4829-8017-482f-9f70-4d00deda65a0.png
+  og+tw+img  320733B  image/jpeg  https://vibe.filesafe.space/1776455982521426814/attachments/9d286670-d1c1-44cf-9bfd-4e701ca8f0e0.jpg
+  og+tw+img  39518B  image/png  https://vibe.filesafe.space/1776455982521426814/attachments/9e310e1b-a41d-4b6c-811d-6ede973f7517.png
+EXIT_CODE:0

@@ -18,7 +18,12 @@
 import { mkdir, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import sharp from "sharp";
-import { ALL_MARKET_SLUGS } from "../src/lib/mia";
+import {
+  ALL_MARKET_SLUGS,
+  MIA_CYCLE_39_VERSIONED_SLUGS,
+  getMarketImagePath,
+  getMarketOgImagePath,
+} from "../src/lib/mia";
 
 declare const Bun: { argv: string[] };
 
@@ -89,14 +94,28 @@ async function headStatus(url: string): Promise<number | null> {
   }
 }
 
+async function fetchHtml(url: string): Promise<string> {
+  try {
+    const res = await fetch(url, {
+      headers: { "Cache-Control": "no-cache", Pragma: "no-cache" },
+    });
+    if (!res.ok) return "";
+    return await res.text();
+  } catch {
+    return "";
+  }
+}
+
 async function main() {
   await mkdir(REPORTS, { recursive: true });
   const args = parseArgs();
 
   const rows: Row[] = [];
   for (const slug of ALL_MARKET_SLUGS) {
-    const heroPath = join(REPO, `public/markets/${slug}.jpg`);
-    const ogPath = join(REPO, `public/og-markets/${slug}.jpg`);
+    const heroRel = getMarketImagePath(slug);
+    const ogRel = getMarketOgImagePath(slug);
+    const heroPath = join(REPO, "public", heroRel.replace(/^\//, ""));
+    const ogPath = join(REPO, "public", ogRel.replace(/^\//, ""));
     const heroBytes = await fileSize(heroPath);
     const ogBytes = await fileSize(ogPath);
     const heroDims = heroBytes > 0 ? await imageDims(heroPath) : { w: 0, h: 0 };
@@ -106,8 +125,8 @@ async function main() {
     let ogLive: number | null = null;
     if (args.base) {
       const cb = Math.random().toString(16).slice(2, 10);
-      heroLive = await headStatus(`${args.base}/markets/${slug}.jpg?cb=${cb}`);
-      ogLive = await headStatus(`${args.base}/og-markets/${slug}.jpg?cb=${cb}`);
+      heroLive = await headStatus(`${args.base}${heroRel}?cb=${cb}`);
+      ogLive = await headStatus(`${args.base}${ogRel}?cb=${cb}`);
     }
 
     const reasons: string[] = [];
@@ -123,15 +142,22 @@ async function main() {
       if (heroLive !== null && heroLive !== 200) reasons.push(`hero-live-${heroLive}`);
       if (ogLive !== null && ogLive !== 200) reasons.push(`og-live-${ogLive}`);
     }
+    // Cycle 39 cache-bust enforcement — the seven affected slugs MUST use
+    // versioned filenames so any stale browser/CDN cache cannot serve the
+    // prior pixels. A regression here is the exact failure mode Cycle 38 hid.
+    if (MIA_CYCLE_39_VERSIONED_SLUGS.has(slug)) {
+      if (!heroRel.includes("-cycle39.")) reasons.push("hero-not-versioned-cycle39");
+      if (!ogRel.includes("-cycle39.")) reasons.push("og-not-versioned-cycle39");
+    }
 
     rows.push({
       slug,
-      hero_path: `/markets/${slug}.jpg`,
+      hero_path: heroRel,
       hero_exists: heroBytes > 0,
       hero_bytes: heroBytes,
       hero_w: heroDims.w,
       hero_h: heroDims.h,
-      og_path: `/og-markets/${slug}.jpg`,
+      og_path: ogRel,
       og_exists: ogBytes > 0,
       og_bytes: ogBytes,
       og_w: ogDims.w,
@@ -141,6 +167,34 @@ async function main() {
       status: reasons.length === 0 ? "PASS" : "FAIL",
       reasons,
     });
+  }
+
+  // Cycle 39 live-DOM enforcement: when --base is provided, fetch
+  // /markets/ + /markets/<slug>/ for each versioned slug and require the
+  // versioned path to appear in the rendered HTML. Any reference to the
+  // unversioned `/markets/<slug>.jpg` for a versioned slug is a hard FAIL —
+  // it means the live page is still pointing at a cacheable path.
+  if (args.base) {
+    const indexHtml = await fetchHtml(`${args.base}/markets/`);
+    for (const slug of MIA_CYCLE_39_VERSIONED_SLUGS) {
+      const versioned = `/markets/${slug}-cycle39.jpg`;
+      const unversioned = `/markets/${slug}.jpg`;
+      const row = rows.find((r) => r.slug === slug);
+      if (!row) continue;
+      if (!indexHtml.includes(versioned)) row.reasons.push("live-index-missing-versioned");
+      const indexHasUnversionedAsImage =
+        indexHtml.includes(`src="${unversioned}"`) ||
+        indexHtml.includes(`url(${unversioned})`);
+      if (indexHasUnversionedAsImage) row.reasons.push("live-index-still-unversioned");
+
+      const detailHtml = await fetchHtml(`${args.base}/markets/${slug}/`);
+      if (!detailHtml.includes(versioned)) row.reasons.push("live-detail-missing-versioned");
+      const detailHasUnversionedAsImage =
+        detailHtml.includes(`src="${unversioned}"`) ||
+        detailHtml.includes(`url(${unversioned})`);
+      if (detailHasUnversionedAsImage) row.reasons.push("live-detail-still-unversioned");
+      if (row.reasons.length > 0) row.status = "FAIL";
+    }
   }
 
   const fails = rows.filter((r) => r.status === "FAIL");

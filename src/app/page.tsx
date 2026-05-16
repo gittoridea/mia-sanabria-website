@@ -106,7 +106,7 @@ export default function HomePage() {
           ctaPrimary={{ href: "/home-search/", label: "Search available homes" }}
           ctaSecondary={{ href: "/contact/", label: "Talk with Mia" }}
           background="image"
-          imageSrc="/hero/mia-home-hero.jpg"
+          imageSrc="/hero/mia-home-hero-cycle39.jpg"
           imageAlt="Twilight luxury waterfront residence on calm Atlantic intracoastal, Southeast Florida"
         />
         <HeroSearch floating />

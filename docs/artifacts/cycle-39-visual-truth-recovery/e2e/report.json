@@ -1,0 +1,66 @@
+{
+  "base": "http://127.0.0.1:4190",
+  "target_url": "http://127.0.0.1:4190/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero",
+  "generated_at": "2026-05-16T14:08:56.148Z",
+  "bridge_mode": "fallback",
+  "passed": 11,
+  "failed": 0,
+  "total": 11,
+  "checks": [
+    {
+      "name": "home.form.action",
+      "passed": true,
+      "detail": "homepage form action must be /home-search/"
+    },
+    {
+      "name": "home.form.source",
+      "passed": true,
+      "detail": "hidden source=home-hero input must be present"
+    },
+    {
+      "name": "home.form.city",
+      "passed": true,
+      "detail": "homepage form must have city input"
+    },
+    {
+      "name": "home.form.minPrice",
+      "passed": true,
+      "detail": "homepage form must have minPrice input"
+    },
+    {
+      "name": "home.form.beds",
+      "passed": true,
+      "detail": "homepage form must have beds input"
+    },
+    {
+      "name": "home.form.floating",
+      "passed": true,
+      "detail": "homepage form must carry floating-card marker for layout-regression detection"
+    },
+    {
+      "name": "search.bridge-mode-marker",
+      "passed": true,
+      "detail": "data-bridge-runtime-mode must be live|demo|fallback|error (got fallback)"
+    },
+    {
+      "name": "search.no-old-idx-runtime",
+      "passed": true,
+      "detail": "no old IDX runtime in rendered DOM"
+    },
+    {
+      "name": "search.results-region-rendered",
+      "passed": true,
+      "detail": "search results / demo banner / loading / error must render after JS executes"
+    },
+    {
+      "name": "search.bridge-surface-present",
+      "passed": true,
+      "detail": "BridgeSearch form must be rendered on /home-search/"
+    },
+    {
+      "name": "search.idx-disclosure-rendered",
+      "passed": true,
+      "detail": "IDX/MLS disclosure copy must render under fixture or live results"
+    }
+  ]
+}

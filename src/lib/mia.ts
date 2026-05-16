@@ -221,10 +221,37 @@ export function getFeaturedMarketRoutes(): ReadonlyArray<string> {
   return FEATURED_MARKETS.map((slug) => getMarketRoute(slug));
 }
 
+/**
+ * Cycle 39 (2026-05-16) — slugs whose card+detail+OG image assets were
+ * republished at versioned paths (`/markets/<slug>-cycle39.jpg`,
+ * `/og-markets/<slug>-cycle39.jpg`) to defeat browser/CDN cache ambiguity
+ * after Cycle 38's in-place replacement failed to land in operator-visible
+ * browsers. The set is the authoritative source for both runtime image URLs
+ * (via the helpers below) and the deep-image audit. Adding or removing a
+ * slug requires the corresponding `/markets/<slug>-cycle39.jpg` +
+ * `/og-markets/<slug>-cycle39.jpg` files on disk and a matching change in
+ * `src/lib/markets.ts` `heroImage:` literal.
+ */
+export const MIA_CYCLE_39_VERSIONED_SLUGS: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
+  "deerfield-beach",
+  "hollywood",
+  "plantation",
+  "weston",
+  "coral-springs",
+  "davie",
+  "sunrise",
+]);
+
+const CYCLE_39_VERSION_SUFFIX = "-cycle39";
+
+function imageSuffixForSlug(slug: MarketSlug): string {
+  return MIA_CYCLE_39_VERSIONED_SLUGS.has(slug) ? CYCLE_39_VERSION_SUFFIX : "";
+}
+
 export function getMarketImagePath(slug: MarketSlug): string {
-  return `/markets/${slug}.jpg`;
+  return `/markets/${slug}${imageSuffixForSlug(slug)}.jpg`;
 }
 
 export function getMarketOgImagePath(slug: MarketSlug): string {
-  return `/og-markets/${slug}.jpg`;
+  return `/og-markets/${slug}${imageSuffixForSlug(slug)}.jpg`;
 }
