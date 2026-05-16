@@ -1,0 +1,25 @@
+capture-baseline: 20 jobs · 10 routes × 2 viewports · concurrency 4 · base https://miasanabriarealtor.trueidea.com
+output: docs/artifacts/cycle-37-neighborhood-images-bridge-idx/visual-qa/staging
+  [3/20] ✓ /home-search/ @ 375x812 (2939ms)
+  [1/20] ✓ / @ 375x812 (3265ms)
+  [4/20] ✓ /home-search/ @ 1280x800 (3679ms)
+  [2/20] ✓ / @ 1280x800 (3797ms)
+  [5/20] ✓ /markets/ @ 375x812 (3054ms)
+  [7/20] ✓ /markets/coral-springs/ @ 375x812 (2529ms)
+  [8/20] ✓ /markets/coral-springs/ @ 1280x800 (3013ms)
+  [6/20] ✓ /markets/ @ 1280x800 (4967ms)
+  [9/20] ✓ /markets/davie/ @ 375x812 (2786ms)
+  [11/20] ✓ /markets/deerfield-beach/ @ 375x812 (2742ms)
+  [10/20] ✓ /markets/davie/ @ 1280x800 (3443ms)
+  [12/20] ✓ /markets/deerfield-beach/ @ 1280x800 (2820ms)
+  [13/20] ✓ /markets/hollywood/ @ 375x812 (2377ms)
+  [15/20] ✓ /markets/plantation/ @ 375x812 (2587ms)
+  [14/20] ✓ /markets/hollywood/ @ 1280x800 (3052ms)
+  [17/20] ✓ /markets/sunrise/ @ 375x812 (2598ms)
+  [16/20] ✓ /markets/plantation/ @ 1280x800 (3223ms)
+  [19/20] ✓ /markets/weston/ @ 375x812 (2595ms)
+  [18/20] ✓ /markets/sunrise/ @ 1280x800 (3009ms)
+  [20/20] ✓ /markets/weston/ @ 1280x800 (2366ms)
+
+Done: 20/20 ok · 0 failed · 16s
+Summary: docs/artifacts/cycle-37-neighborhood-images-bridge-idx/visual-qa/staging/_capture-summary.json

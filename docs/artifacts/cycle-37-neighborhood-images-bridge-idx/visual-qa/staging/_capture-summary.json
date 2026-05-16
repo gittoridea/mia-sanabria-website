@@ -1,0 +1,12 @@
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "out": "docs/artifacts/cycle-37-neighborhood-images-bridge-idx/visual-qa/staging",
+  "routes": 10,
+  "viewports": 2,
+  "jobs": 20,
+  "ok": 20,
+  "fail": 0,
+  "duration_seconds": 16,
+  "failures": [],
+  "timestamp": "2026-05-16T02:54:47.028Z"
+}
