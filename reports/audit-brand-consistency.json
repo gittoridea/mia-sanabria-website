@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-15T20:58:19.461Z",
+  "timestamp": "2026-05-16T02:19:03.921Z",
   "counts": {
     "pass": 12,
     "warn": 0,
@@ -12,20 +12,26 @@
       "category": "Color System",
       "description": "No off-brand color tokens (red/orange/amber/yellow/lime/emerald/teal/cyan/sky/indigo/violet/purple/fuchsia/pink/rose) in src/ unless annotated with data-brand-exception=\"demo-warning\"",
       "status": "PASS",
-      "evidence": "no off-brand color tokens (3 allowed by data-brand-exception=\"demo-warning\")",
+      "evidence": "no off-brand color tokens (4 allowed by data-brand-exception=\"demo-warning\")",
       "details": {
         "hits": [],
         "allowedHits": [
           {
             "file": "src/components/bridge/BridgeSearch.tsx",
-            "line": 53,
-            "match": "text-amber-700",
+            "line": 83,
+            "match": "border-amber-400",
             "reason": "off-brand color token (allowed by data-brand-exception=\"demo-warning\")"
           },
           {
             "file": "src/components/bridge/BridgeSearch.tsx",
-            "line": 125,
+            "line": 95,
             "match": "border-amber-400",
+            "reason": "off-brand color token (allowed by data-brand-exception=\"demo-warning\")"
+          },
+          {
+            "file": "src/components/bridge/BridgeSearch.tsx",
+            "line": 109,
+            "match": "text-amber-900",
             "reason": "off-brand color token (allowed by data-brand-exception=\"demo-warning\")"
           },
           {

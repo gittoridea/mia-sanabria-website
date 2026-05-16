@@ -9,7 +9,6 @@ import { FeaturedMarketsPager } from "@/components/FeaturedMarketsPager";
 import { ValueProps } from "@/components/ValueProps";
 import { Faq } from "@/components/Faq";
 import { CTAStrip } from "@/components/CTAStrip";
-import { IdxEmbed } from "@/components/IdxEmbed";
 import { SectionHeading } from "@/components/SectionHeading";
 import { InsightsTeaser } from "@/components/insights/InsightsTeaser";
 import { PersonSchema } from "@/components/schema/PersonSchema";
@@ -163,7 +162,11 @@ export default function HomePage() {
         background="navy"
       />
 
-      <IdxEmbed />
+      {/* Cycle 37 — IdxEmbed (legacy MLS Matrix iframe) removed from runtime.
+          Bridge is now the sole property-search integration path; the Search
+          icon in the top nav and Hero CTA route to /home-search/ for the full
+          BridgeSearch surface (live / demo / fallback) per
+          docs/artifacts/cycle-37-neighborhood-images-bridge-idx/old-idx-removal-report.md. */}
 
       {/* Cycle 15 — Latest Insights cross-site weaving. Three curated briefs:
           buyer guide, deepwater isle comparison, and seller positioning —

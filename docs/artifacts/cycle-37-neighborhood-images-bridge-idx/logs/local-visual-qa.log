@@ -1,0 +1,25 @@
+capture-baseline: 20 jobs · 10 routes × 2 viewports · concurrency 4 · base http://127.0.0.1:4177
+output: docs/artifacts/cycle-37-neighborhood-images-bridge-idx/visual-qa/local
+  [3/20] ✓ /home-search/ @ 375x812 (3020ms)
+  [1/20] ✓ / @ 375x812 (3055ms)
+  [4/20] ✓ /home-search/ @ 1280x800 (3271ms)
+  [2/20] ✓ / @ 1280x800 (3327ms)
+  [7/20] ✓ /markets/coral-springs/ @ 375x812 (2479ms)
+  [5/20] ✓ /markets/ @ 375x812 (2753ms)
+  [8/20] ✓ /markets/coral-springs/ @ 1280x800 (2789ms)
+  [6/20] ✓ /markets/ @ 1280x800 (3126ms)
+  [9/20] ✓ /markets/davie/ @ 375x812 (2172ms)
+  [10/20] ✓ /markets/davie/ @ 1280x800 (2807ms)
+  [11/20] ✓ /markets/deerfield-beach/ @ 375x812 (2784ms)
+  [12/20] ✓ /markets/deerfield-beach/ @ 1280x800 (3090ms)
+  [13/20] ✓ /markets/hollywood/ @ 375x812 (1960ms)
+  [15/20] ✓ /markets/plantation/ @ 375x812 (2586ms)
+  [14/20] ✓ /markets/hollywood/ @ 1280x800 (2946ms)
+  [17/20] ✓ /markets/sunrise/ @ 375x812 (1966ms)
+  [16/20] ✓ /markets/plantation/ @ 1280x800 (2760ms)
+  [18/20] ✓ /markets/sunrise/ @ 1280x800 (2087ms)
+  [19/20] ✓ /markets/weston/ @ 375x812 (2459ms)
+  [20/20] ✓ /markets/weston/ @ 1280x800 (2387ms)
+
+Done: 20/20 ok · 0 failed · 14s
+Summary: docs/artifacts/cycle-37-neighborhood-images-bridge-idx/visual-qa/local/_capture-summary.json

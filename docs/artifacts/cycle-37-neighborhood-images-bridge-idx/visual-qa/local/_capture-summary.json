@@ -1,0 +1,12 @@
+{
+  "base": "http://127.0.0.1:4177",
+  "out": "docs/artifacts/cycle-37-neighborhood-images-bridge-idx/visual-qa/local",
+  "routes": 10,
+  "viewports": 2,
+  "jobs": 20,
+  "ok": 20,
+  "fail": 0,
+  "duration_seconds": 14,
+  "failures": [],
+  "timestamp": "2026-05-16T02:24:33.611Z"
+}

@@ -368,22 +368,26 @@ async function checkIdxIframeIntegrity(): Promise<CheckResult> {
   // Cycle 21 — IDX iframe is the highest-traffic surface; lock the contract.
   // 5 sentinels: Matrix MLS host, refined iframe title, visible fallback link,
   // in-page MLS disclaimer, IDX→form source attribution CTA.
-  const html = await readBuiltHtml("/");
+  // Cycle 37 (2026-05-15) — legacy MLS Matrix iframe fallback removed from
+  // runtime. The check now verifies that /home-search/ ships the Bridge
+  // search surface with the IDX/MLS disclosure copy required for compliance,
+  // rather than the previous matrix iframe sentinels.
+  const html = await readBuiltHtml("/home-search/");
   if (!html) {
     return {
       id: "completeness.idx.iframe",
       category: "IDX",
-      description: "IDX iframe host + wrapper integrity on homepage",
+      description: "Bridge search surface integrity on /home-search/",
       status: "FAIL",
-      evidence: "/ not built — run `bun run build` first",
+      evidence: "/home-search/ not built — run `bun run build` first",
     };
   }
   const sentinels = {
-    matrixHost: /sef\.mlsmatrix\.com\/Matrix\/Public\/IDXSearch/,
-    iframeTitle: /<iframe[^>]+title="Southeast Florida property search/,
-    fallbackLink: /Open the property search in a new tab/i,
-    disclaimer: /Listing data deemed reliable but not guaranteed/i,
-    sourceAttribution: /\?source=idx-search/,
+    bridgeForm: /aria-label="Search available listings"/,
+    cityFilterLabel: /<label[^>]+for="bridge-city"/,
+    disclosure: /(deemed reliable but not guaranteed|IDX\/MLS disclosure)/i,
+    bridgeSourceLink: /source=home-search/i,
+    bridgeRuntimeAttr: /data-bridge-runtime-mode="(live|demo|fallback|error|unconfigured)"/,
   };
   const fails: string[] = [];
   for (const [key, re] of Object.entries(sentinels)) {
@@ -392,11 +396,13 @@ async function checkIdxIframeIntegrity(): Promise<CheckResult> {
   return {
     id: "completeness.idx.iframe",
     category: "IDX",
-    description: "IDX iframe host + wrapper integrity (Matrix MLS host, title, fallback link, disclaimer, source attribution)",
+    description:
+      "Bridge search surface integrity (form, city filter, IDX/MLS disclosure, source attribution, runtime-mode attribute)",
     status: fails.length === 0 ? "PASS" : "FAIL",
-    evidence: fails.length === 0
-      ? `5/5 IDX sentinels present on homepage`
-      : `missing: ${fails.join(", ")}`,
+    evidence:
+      fails.length === 0
+        ? `5/5 Bridge search sentinels present on /home-search/`
+        : `missing: ${fails.join(", ")}`,
     details: { fails },
   };
 }

@@ -1,0 +1,10 @@
+davie: ai-generated-illustrative hero=148852B og=110349B (gemini_2_5_flash_image)
+{
+  "results": [
+    {
+      "slug": "davie",
+      "status": "dry-run",
+      "provenance": "ai-generated-illustrative"
+    }
+  ]
+}

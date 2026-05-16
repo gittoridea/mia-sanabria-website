@@ -75,7 +75,10 @@ export const NAV = [
 
 /** Search icon target; renders as an icon button in SiteHeader (Cycle 24).
  *  Cycle 33: updated from /markets/#property-search to /home-search/ now that
- *  the dedicated Bridge IDX page exists with MLS Matrix fallback. */
+ *  the dedicated Bridge IDX page exists.
+ *  Cycle 37: legacy MLS Matrix iframe fallback removed from runtime; the
+ *  BridgeSearch component on /home-search/ is now Bridge-only with bundled
+ *  demo fixtures when credentials are absent. */
 export const SEARCH_ICON_HREF = "/home-search/" as const;
 
 export const FOOTER_NAV = {

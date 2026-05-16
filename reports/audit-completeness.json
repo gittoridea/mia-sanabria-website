@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-15T20:58:19.128Z",
+  "timestamp": "2026-05-16T02:04:14.731Z",
   "counts": {
     "PASS": 16,
     "WARN": 1,
@@ -93,9 +93,9 @@
     {
       "id": "completeness.idx.iframe",
       "category": "IDX",
-      "description": "IDX iframe host + wrapper integrity (Matrix MLS host, title, fallback link, disclaimer, source attribution)",
+      "description": "Bridge search surface integrity (form, city filter, IDX/MLS disclosure, source attribution, runtime-mode attribute)",
       "status": "PASS",
-      "evidence": "5/5 IDX sentinels present on homepage",
+      "evidence": "5/5 Bridge search sentinels present on /home-search/",
       "details": {
         "fails": []
       }

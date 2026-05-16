@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Search } from "lucide-react";
 import {
-  BRIDGE_AVAILABLE,
   BRIDGE_DEMO_MODE,
+  getBridgeRuntimeStatus,
   searchListings,
+  type BridgeRuntimeMode,
   type BridgeSearchQuery,
   type ListingCard,
 } from "@/lib/bridge-client";
@@ -30,66 +31,6 @@ const BEDS_OPTIONS: ReadonlyArray<{ value: string; label: string }> = [
   { value: "4", label: "4+ beds" },
   { value: "5", label: "5+ beds" },
 ];
-
-const MLS_MATRIX_URL =
-  "https://sef.mlsmatrix.com/Matrix/Public/IDXSearch.aspx?count=1&idx=10bd1eab&pv=&or=";
-
-function MlsMatrixFallback({ reason }: { reason: "no-credentials" | "error" }) {
-  return (
-    <div>
-      {reason === "no-credentials" && (
-        <p className="mb-6 text-sm text-navy-800/70">
-          Bridge listing search is being activated. Use the property search below
-          in the meantime, or{" "}
-          <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
-            contact Mia directly
-          </a>{" "}
-          for a curated property shortlist.
-        </p>
-      )}
-      {reason === "error" && (
-        <p
-          data-brand-exception="demo-warning"
-          className="mb-6 text-sm text-amber-700"
-        >
-          Search is temporarily unavailable. Use the property search below or{" "}
-          <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
-            contact Mia
-          </a>{" "}
-          for assistance.
-        </p>
-      )}
-      <div className="overflow-hidden rounded-sm border border-navy-800/10 bg-white shadow-card">
-        <iframe
-          title="Southeast Florida property search (Matrix MLS)"
-          src={MLS_MATRIX_URL}
-          className="min-h-[760px] w-full aspect-[4/5] sm:aspect-[16/11] lg:aspect-[3/2] lg:min-h-[800px]"
-          loading="lazy"
-          referrerPolicy="strict-origin-when-cross-origin"
-        />
-        <noscript>
-          <a
-            href={MLS_MATRIX_URL}
-            className="block px-6 py-5 text-sm font-medium text-navy-800 underline decoration-brass-400 underline-offset-4"
-          >
-            Open the Southeast Florida property search.
-          </a>
-        </noscript>
-      </div>
-      <p className="mt-4 text-xs text-navy-800/70">
-        Search not displaying?{" "}
-        <a
-          href={MLS_MATRIX_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline decoration-brass-400 underline-offset-2"
-        >
-          Open in a new tab.
-        </a>
-      </p>
-    </div>
-  );
-}
 
 function LoadingSkeleton() {
   return (
@@ -118,29 +59,69 @@ function ListingAttribution() {
   );
 }
 
-function DemoBanner() {
+function FixtureAttribution() {
+  return (
+    <p className="mt-6 text-xs text-navy-800/60 leading-relaxed">
+      IDX/MLS disclosure: Listing data is deemed reliable but not guaranteed when sourced from Southeast Florida MLS via Bridge Data Output.
+      The cards above are demo fixtures, not real Southeast Florida inventory. Mia Sanabria, REALTOR® with LPT Realty. Equal Housing Opportunity.
+    </p>
+  );
+}
+
+function DemoBanner({ mode }: { mode: BridgeRuntimeMode }) {
+  const headline =
+    mode === "fallback"
+      ? "Demo data — Southeast Florida MLS feed pending."
+      : "Demo data — Bridge test fixture connected.";
+  const body =
+    mode === "fallback"
+      ? "Live property search will turn on automatically once SEF MLS approves Mia's IDX feed on Bridge. The cards below are placeholder demo data — not real Southeast Florida inventory."
+      : "This staging page is connected to a Bridge Data Output test fixture so we can verify the integration end-to-end. Listings shown below are placeholder data — not real Southeast Florida inventory. Real listings will appear automatically once SEF MLS approves Mia's IDX feed on this Bridge account.";
   return (
     <div
       data-brand-exception="demo-warning"
       className="mb-6 rounded-sm border border-amber-400/40 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900"
     >
-      <strong className="font-display text-base">Demo data — Southeast Florida MLS feed pending.</strong>
+      <strong className="font-display text-base">{headline}</strong>
+      <p className="mt-1">{body}</p>
+    </div>
+  );
+}
+
+function ErrorPanel() {
+  return (
+    <div
+      data-brand-exception="demo-warning"
+      className="mt-6 rounded-sm border border-amber-400/40 bg-amber-50 p-5 text-sm leading-relaxed text-amber-900"
+    >
+      <p className="font-display text-base">
+        Search is temporarily unavailable.
+      </p>
       <p className="mt-1">
-        This staging page is connected to a Bridge Data Output test fixture so we can
-        verify the integration end-to-end. Listings shown below are placeholder data —
-        not real Southeast Florida inventory. Real listings will appear automatically
-        once SEF MLS approves Mia&rsquo;s IDX feed on this Bridge account.
+        The Bridge listing service did not respond. Please try again in a moment, or{" "}
+        <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
+          contact Mia
+        </a>{" "}
+        for an active-inventory shortlist.
+      </p>
+      <p
+        data-brand-exception="demo-warning"
+        className="mt-3 text-xs text-amber-900/70"
+      >
+        IDX/MLS disclosure: Listing information is deemed reliable but not guaranteed when sourced from Southeast Florida MLS via Bridge Data Output.
       </p>
     </div>
   );
 }
 
 export function BridgeSearch() {
+  const status = getBridgeRuntimeStatus();
   const [query, setQuery] = useState<BridgeSearchQuery>({});
   const [listings, setListings] = useState<ListingCard[] | null>(null);
   const [total, setTotal] = useState<number | null>(null);
+  const [resultMode, setResultMode] = useState<BridgeRuntimeMode>(status.mode);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<"error" | null>(null);
   const [searched, setSearched] = useState(false);
   const inFlightRef = useRef<AbortController | null>(null);
 
@@ -150,14 +131,9 @@ export function BridgeSearch() {
     };
   }, []);
 
-  if (!BRIDGE_AVAILABLE) {
-    return <MlsMatrixFallback reason="no-credentials" />;
-  }
-
   async function handleSearch(e: React.FormEvent) {
     e.preventDefault();
 
-    // Cancel any in-flight request before starting a new one.
     inFlightRef.current?.abort();
     const controller = new AbortController();
     inFlightRef.current = controller;
@@ -170,16 +146,21 @@ export function BridgeSearch() {
 
     if (controller.signal.aborted) return;
 
-    if (result.error === "search-unavailable") {
-      setError("unavailable");
-    } else if (result.error === "search-error") {
+    if (result.error === "search-error") {
       setError("error");
+      setResultMode("error");
     } else {
       setListings(result.listings);
       setTotal(result.total);
+      setResultMode(result.mode);
     }
     setLoading(false);
   }
+
+  const showDemoBanner =
+    resultMode === "demo" || resultMode === "fallback" || BRIDGE_DEMO_MODE;
+  const showFixtureAttribution = resultMode === "fallback";
+  const showLiveAttribution = resultMode === "live";
 
   return (
     <div>
@@ -269,24 +250,37 @@ export function BridgeSearch() {
         </div>
       </form>
 
+      <div
+        className="mt-4 text-xs text-navy-800/60"
+        data-bridge-runtime-mode={status.mode}
+        data-bridge-source={status.source}
+      >
+        {status.mode === "fallback" && (
+          <span>
+            Live IDX feed pending — search currently shows demo fixtures while Bridge integration completes.
+          </span>
+        )}
+        {status.mode === "demo" && (
+          <span>Bridge demo dataset connected — listings shown are test fixtures.</span>
+        )}
+        {status.mode === "live" && (
+          <span>Bridge live IDX feed connected — Southeast Florida MLS via Bridge Data Output.</span>
+        )}
+      </div>
+
       <div className="mt-8">
         {loading && <LoadingSkeleton />}
 
-        {!loading && error === "unavailable" && (
-          <MlsMatrixFallback reason="no-credentials" />
-        )}
-
-        {!loading && error === "error" && (
-          <MlsMatrixFallback reason="error" />
-        )}
+        {!loading && error === "error" && <ErrorPanel />}
 
         {!loading && !error && searched && listings !== null && (
           <>
+            {showDemoBanner && <DemoBanner mode={resultMode} />}
             {total !== null && (
               <p className="mb-4 text-sm text-navy-800/70">
                 {total === 0
                   ? "No listings matched your search."
-                  : `Showing ${listings.length} of ${total.toLocaleString()} available listing${total !== 1 ? "s" : ""}.`}
+                  : `Showing ${listings.length} of ${total.toLocaleString()} ${resultMode === "fallback" ? "demo fixture" : "available"} listing${total !== 1 ? "s" : ""}.`}
               </p>
             )}
 
@@ -302,30 +296,38 @@ export function BridgeSearch() {
               </div>
             ) : (
               <>
-                {BRIDGE_DEMO_MODE && <DemoBanner />}
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {listings.map((l) => (
                     <BridgeListingCard
                       key={l.listingKey}
                       listing={l}
-                      demoMode={BRIDGE_DEMO_MODE}
+                      demoMode={resultMode !== "live"}
                     />
                   ))}
                 </div>
-                {!BRIDGE_DEMO_MODE && <ListingAttribution />}
+                {showFixtureAttribution ? (
+                  <FixtureAttribution />
+                ) : showLiveAttribution ? (
+                  <ListingAttribution />
+                ) : (
+                  <FixtureAttribution />
+                )}
               </>
             )}
           </>
         )}
 
         {!loading && !error && !searched && (
-          <p className="text-sm text-navy-800/70">
-            Select your criteria above and search to see available listings, or{" "}
-            <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
-              contact Mia
-            </a>{" "}
-            for a curated property shortlist based on your goals.
-          </p>
+          <>
+            {status.mode === "fallback" && <DemoBanner mode="fallback" />}
+            <p className="text-sm text-navy-800/70">
+              Select your criteria above and search to see {status.mode === "fallback" ? "demo fixture" : "available"} listings, or{" "}
+              <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
+                contact Mia
+              </a>{" "}
+              for a curated property shortlist based on your goals.
+            </p>
+          </>
         )}
       </div>
     </div>

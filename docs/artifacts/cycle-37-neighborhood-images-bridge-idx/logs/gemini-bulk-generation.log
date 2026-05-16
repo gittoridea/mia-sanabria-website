@@ -1,0 +1,46 @@
+coral-springs: ai-generated-illustrative hero=334930B og=164733B (gemini_2_5_flash_image)
+davie: ai-generated-illustrative hero=146742B og=83631B (gemini_2_5_flash_image)
+deerfield-beach: ai-generated-illustrative hero=178459B og=81645B (gemini_2_5_flash_image)
+hollywood: ai-generated-illustrative hero=136189B og=107879B (gemini_2_5_flash_image)
+plantation: ai-generated-illustrative hero=260806B og=124673B (gemini_2_5_flash_image)
+sunrise: ai-generated-illustrative hero=104091B og=73323B (gemini_2_5_flash_image)
+weston: ai-generated-illustrative hero=177481B og=139743B (gemini_2_5_flash_image)
+{
+  "results": [
+    {
+      "slug": "coral-springs",
+      "status": "wrote",
+      "provenance": "ai-generated-illustrative"
+    },
+    {
+      "slug": "davie",
+      "status": "wrote",
+      "provenance": "ai-generated-illustrative"
+    },
+    {
+      "slug": "deerfield-beach",
+      "status": "wrote",
+      "provenance": "ai-generated-illustrative"
+    },
+    {
+      "slug": "hollywood",
+      "status": "wrote",
+      "provenance": "ai-generated-illustrative"
+    },
+    {
+      "slug": "plantation",
+      "status": "wrote",
+      "provenance": "ai-generated-illustrative"
+    },
+    {
+      "slug": "sunrise",
+      "status": "wrote",
+      "provenance": "ai-generated-illustrative"
+    },
+    {
+      "slug": "weston",
+      "status": "wrote",
+      "provenance": "ai-generated-illustrative"
+    }
+  ]
+}

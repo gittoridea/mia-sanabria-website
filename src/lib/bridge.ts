@@ -64,9 +64,11 @@
 /**
  * Public-side feature flag.
  * Cycle 33B (2026-05-14): flipped true with Browser Token runtime (Option D).
- * Live behavior gated additionally by BRIDGE_AVAILABLE in bridge-client.ts —
- * when credentials are absent at build time, the MLS Matrix iframe fallback
- * renders instead. Rollback path: flip this back to false and redeploy.
+ * Cycle 37 (2026-05-15): when credentials are absent at build time, the
+ * BridgeSearch component renders bundled fixture listings with a DEMO
+ * banner + DEMO badges + IDX/MLS disclosure; the legacy MLS Matrix iframe
+ * fallback was removed from runtime. Rollback path: flip this back to
+ * false and redeploy (BridgeSearch will still render fixtures with banner).
  */
 export const BRIDGE_INTEGRATION_LIVE = true as const;
 

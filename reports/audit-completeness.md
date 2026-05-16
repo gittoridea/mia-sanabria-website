@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-15T20:58:19.128Z
+**Generated:** 2026-05-16T02:04:14.731Z
 
 **Summary:** 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -39,7 +39,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.idx.iframe` | ✅ | IDX iframe host + wrapper integrity (Matrix MLS host, title, fallback link, disclaimer, source attribution) | 5/5 IDX sentinels present on homepage |
+| `completeness.idx.iframe` | ✅ | Bridge search surface integrity (form, city filter, IDX/MLS disclosure, source attribution, runtime-mode attribute) | 5/5 Bridge search sentinels present on /home-search/ |
 
 ### Design/Display Integrity
 

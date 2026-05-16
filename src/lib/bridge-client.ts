@@ -84,7 +84,167 @@ export type BridgeSearchResult = {
   listings: ListingCard[];
   total: number | null;
   error: "search-unavailable" | "search-error" | null;
+  /**
+   * Cycle 37 — runtime mode of the result, single source of truth for the UI:
+   *   - "live" — credentials present, demo flag false, fetch returned non-empty data
+   *   - "demo" — credentials present, demo flag true (Bridge test fixture)
+   *   - "fallback" — no credentials at build time; fixture cards rendered locally
+   *   - "error" — fetch failed (network or non-2xx)
+   *   - "unconfigured" — no credentials and an empty result before any search
+   */
+  mode: BridgeRuntimeMode;
 };
+
+export type BridgeRuntimeMode =
+  | "live"
+  | "demo"
+  | "fallback"
+  | "error"
+  | "unconfigured";
+
+/**
+ * Cycle 37 — Bundled fixture listings used when Bridge is unconfigured at
+ * build time (no NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN / DATASET_ID). These are
+ * NOT real MLS data; they exist so /home-search/ remains a working Bridge-
+ * shaped UI rather than falling back to a third-party iframe. Every card
+ * shows the DEMO badge and the page surfaces the demo banner so visitors
+ * cannot mistake fixture data for active inventory.
+ */
+const FIXTURE_LISTINGS: ReadonlyArray<ListingCard> = [
+  {
+    listingKey: "FIXTURE-FL-001",
+    listPrice: 2950000,
+    beds: 4,
+    baths: 4,
+    sqft: 3450,
+    city: "Fort Lauderdale",
+    zip: "33301",
+    status: "Active",
+    mediaUrl: null,
+    remarks:
+      "Demo fixture — eastern Fort Lauderdale waterfront home illustrating the search surface. Real listings appear once SEF MLS approves the IDX feed.",
+  },
+  {
+    listingKey: "FIXTURE-PB-002",
+    listPrice: 1875000,
+    beds: 3,
+    baths: 3,
+    sqft: 2640,
+    city: "Pompano Beach",
+    zip: "33062",
+    status: "Active",
+    mediaUrl: null,
+    remarks:
+      "Demo fixture — Pompano Beach intracoastal residence. Replaced automatically by Bridge live data once IDX is approved.",
+  },
+  {
+    listingKey: "FIXTURE-DB-003",
+    listPrice: 1295000,
+    beds: 4,
+    baths: 3,
+    sqft: 2880,
+    city: "Deerfield Beach",
+    zip: "33441",
+    status: "Active",
+    mediaUrl: null,
+    remarks:
+      "Demo fixture — Deerfield Beach single-family home. Used to verify the Bridge UI integration end-to-end.",
+  },
+  {
+    listingKey: "FIXTURE-WS-004",
+    listPrice: 1650000,
+    beds: 5,
+    baths: 4,
+    sqft: 4120,
+    city: "Weston",
+    zip: "33326",
+    status: "Active",
+    mediaUrl: null,
+    remarks:
+      "Demo fixture — Weston master-planned community estate. Placeholder data only.",
+  },
+  {
+    listingKey: "FIXTURE-HW-005",
+    listPrice: 985000,
+    beds: 3,
+    baths: 2,
+    sqft: 2150,
+    city: "Hollywood",
+    zip: "33019",
+    status: "Active",
+    mediaUrl: null,
+    remarks:
+      "Demo fixture — Hollywood beachside residence. Demo data ahead of IDX provisioning.",
+  },
+  {
+    listingKey: "FIXTURE-CR-006",
+    listPrice: 3450000,
+    beds: 5,
+    baths: 5,
+    sqft: 4760,
+    city: "Coral Springs",
+    zip: "33067",
+    status: "Active",
+    mediaUrl: null,
+    remarks:
+      "Demo fixture — Coral Springs gated estate. Used for staging visual QA of the Bridge results grid.",
+  },
+];
+
+function filterFixtures(query: BridgeSearchQuery): ListingCard[] {
+  return FIXTURE_LISTINGS.filter((l) => {
+    if (query.city && l.city !== query.city) return false;
+    if (typeof query.minPrice === "number" && (l.listPrice ?? 0) < query.minPrice)
+      return false;
+    if (typeof query.maxPrice === "number" && (l.listPrice ?? 0) > query.maxPrice)
+      return false;
+    if (typeof query.beds === "number" && (l.beds ?? 0) < query.beds) return false;
+    if (typeof query.baths === "number" && (l.baths ?? 0) < query.baths) return false;
+    return true;
+  });
+}
+
+/**
+ * Cycle 37 — typed snapshot of Bridge runtime state. Returned by
+ * `getBridgeRuntimeStatus()` so UI and audit code can render a truthful
+ * banner without importing internal flags.
+ */
+export type BridgeRuntimeStatus = Readonly<{
+  mode: BridgeRuntimeMode;
+  source: "bridge" | "fixture" | "none";
+  reason: string;
+  resourcePath: string;
+  updatedAt: string;
+}>;
+
+export function getBridgeRuntimeStatus(): BridgeRuntimeStatus {
+  const updatedAt = new Date(0).toISOString().replace(/\.\d+Z$/, "Z");
+  if (!BRIDGE_AVAILABLE) {
+    return {
+      mode: "fallback",
+      source: "fixture",
+      reason: "no-credentials-at-build",
+      resourcePath: RESOURCE_PATH,
+      updatedAt,
+    };
+  }
+  if (BRIDGE_DEMO_MODE) {
+    return {
+      mode: "demo",
+      source: "bridge",
+      reason: "bridge-test-fixture-dataset",
+      resourcePath: RESOURCE_PATH,
+      updatedAt,
+    };
+  }
+  return {
+    mode: "live",
+    source: "bridge",
+    reason: "credentials-present-non-demo",
+    resourcePath: RESOURCE_PATH,
+    updatedAt,
+  };
+}
 
 function buildODataParams(query: BridgeSearchQuery): Record<string, string> {
   const filters: string[] = [];
@@ -206,7 +366,13 @@ export async function searchListings(
   signal?: AbortSignal
 ): Promise<BridgeSearchResult> {
   if (!BRIDGE_AVAILABLE) {
-    return { listings: [], total: null, error: "search-unavailable" };
+    const fixtures = filterFixtures(query);
+    return {
+      listings: fixtures,
+      total: fixtures.length,
+      error: null,
+      mode: "fallback",
+    };
   }
 
   const params = buildODataParams(query);
@@ -224,11 +390,8 @@ export async function searchListings(
     });
 
     if (!res.ok) {
-      // Operator visibility — no body content, status only.
-      // Bridge error envelopes can include diagnostic text; we deliberately
-      // do not surface it client-side or in logs.
       console.warn(`bridge: search failed status=${res.status}`);
-      return { listings: [], total: null, error: "search-error" };
+      return { listings: [], total: null, error: "search-error", mode: "error" };
     }
 
     const data = (await res.json()) as ODataCollection<BridgeProperty>;
@@ -238,12 +401,17 @@ export async function searchListings(
     const total =
       typeof data["@odata.count"] === "number" ? data["@odata.count"] : null;
 
-    return { listings, total, error: null };
+    return {
+      listings,
+      total,
+      error: null,
+      mode: BRIDGE_DEMO_MODE ? "demo" : "live",
+    };
   } catch (err) {
     if (err instanceof DOMException && err.name === "AbortError") {
-      return { listings: [], total: null, error: null };
+      return { listings: [], total: null, error: null, mode: "unconfigured" };
     }
     console.warn("bridge: search threw network error");
-    return { listings: [], total: null, error: "search-error" };
+    return { listings: [], total: null, error: "search-error", mode: "error" };
   }
 }
