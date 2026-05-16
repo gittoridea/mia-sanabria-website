@@ -1,5 +1,5 @@
 {
-  "base": "local:out/",
+  "base": "https://miasanabriarealtor.trueidea.com",
   "pass": true,
   "findings": [
     {

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-16T03:22:34.202Z",
+  "timestamp": "2026-05-16T12:50:14.548Z",
   "counts": {
     "PASS": 16,
     "WARN": 1,
@@ -155,7 +155,7 @@
         "search": [
           {
             "route": "/",
-            "action": "/markets/#property-search",
+            "action": "/home-search/",
             "type": "search"
           }
         ],

@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-16T03:39:03.632Z",
+  "generated": "2026-05-16T13:06:46.415Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -644,7 +644,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 14918,
+        "documentHeight": 14908,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -660,16 +660,16 @@
             "selectorPath": "body > header > div > a > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
-            "naturalWidth": 1200,
-            "naturalHeight": 1500,
+            "src": "http://127.0.0.1:4173/hero/mia-home-hero.jpg",
+            "naturalWidth": 2400,
+            "naturalHeight": 1310,
             "renderedWidth": 500,
             "renderedHeight": 440,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
             "loadingLazy": false,
-            "selectorPath": "body > main#main > section[data-component=hero] > img"
+            "selectorPath": "body > main#main > div > section[data-component=hero] > img"
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
@@ -867,7 +867,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Search available homes",
             "box": {
               "x": 38,
@@ -883,7 +883,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Talk with Mia",
             "box": {
               "x": 38,
@@ -952,12 +952,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 227,
+        "rightEdgeContentPx": 229,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (227 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (229 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -975,7 +975,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 14918,
+        "documentHeight": 14908,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -991,16 +991,16 @@
             "selectorPath": "body > header > div > a > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
-            "naturalWidth": 1200,
-            "naturalHeight": 1500,
+            "src": "http://127.0.0.1:4173/hero/mia-home-hero.jpg",
+            "naturalWidth": 2400,
+            "naturalHeight": 1310,
             "renderedWidth": 500,
             "renderedHeight": 440,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
             "loadingLazy": false,
-            "selectorPath": "body > main#main > section[data-component=hero] > img"
+            "selectorPath": "body > main#main > div > section[data-component=hero] > img"
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
@@ -1198,7 +1198,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Search available homes",
             "box": {
               "x": 38,
@@ -1214,7 +1214,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Talk with Mia",
             "box": {
               "x": 38,
@@ -1227,6 +1227,22 @@
             "bgRgba": "rgba(10,29,48,1)",
             "fgRgba": "rgba(253,250,245,1)",
             "contrast": 16.38,
+            "tailClips": false
+          },
+          {
+            "selector": "body > div > div[data-component=hero-search] > div > form > div > div > button",
+            "text": "Search Listings",
+            "box": {
+              "x": 34,
+              "y": 686.5,
+              "w": 434,
+              "h": 44,
+              "right": 468,
+              "bottom": 730.5
+            },
+            "bgRgba": "rgba(184,155,94,1)",
+            "fgRgba": "rgba(10,29,48,1)",
+            "contrast": 6.41,
             "tailClips": false
           }
         ],
@@ -1283,12 +1299,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 219,
+        "rightEdgeContentPx": 223,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (219 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (223 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1306,7 +1322,7 @@
           "h": 937
         },
         "documentWidth": 768,
-        "documentHeight": 10855,
+        "documentHeight": 10853,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1322,16 +1338,16 @@
             "selectorPath": "body > header > div > a > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
-            "naturalWidth": 1200,
-            "naturalHeight": 1500,
+            "src": "http://127.0.0.1:4173/hero/mia-home-hero.jpg",
+            "naturalWidth": 2400,
+            "naturalHeight": 1310,
             "renderedWidth": 768,
             "renderedHeight": 500,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
             "loadingLazy": false,
-            "selectorPath": "body > main#main > section[data-component=hero] > img"
+            "selectorPath": "body > main#main > div > section[data-component=hero] > img"
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
@@ -1529,7 +1545,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Search available homes",
             "box": {
               "x": 42,
@@ -1545,7 +1561,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Talk with Mia",
             "box": {
               "x": 307.515625,
@@ -1561,15 +1577,15 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero-search] > div > form > div > div > button",
-            "text": "Search Homes",
+            "selector": "body > div > div[data-component=hero-search] > div > form > div > div > button",
+            "text": "Search Listings",
             "box": {
               "x": 393,
-              "y": 670,
+              "y": 606,
               "w": 339,
               "h": 44,
               "right": 732,
-              "bottom": 714
+              "bottom": 650
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -1630,12 +1646,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1569,
+        "rightEdgeContentPx": 1540,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1569 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1540 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1653,7 +1669,7 @@
           "h": 713
         },
         "documentWidth": 1280,
-        "documentHeight": 8262,
+        "documentHeight": 8260,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -1669,16 +1685,16 @@
             "selectorPath": "body > header > div > a > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
-            "naturalWidth": 1200,
-            "naturalHeight": 1500,
+            "src": "http://127.0.0.1:4173/hero/mia-home-hero.jpg",
+            "naturalWidth": 2400,
+            "naturalHeight": 1310,
             "renderedWidth": 1280,
             "renderedHeight": 480,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
             "loadingLazy": false,
-            "selectorPath": "body > main#main > section[data-component=hero] > img"
+            "selectorPath": "body > main#main > div > section[data-component=hero] > img"
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
@@ -1860,7 +1876,7 @@
         "marketCards": [],
         "ctas": [
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Search available homes",
             "box": {
               "x": 66,
@@ -1876,7 +1892,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Talk with Mia",
             "box": {
               "x": 339.515625,
@@ -1892,15 +1908,15 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero-search] > div > form > div > div > button",
-            "text": "Search Homes",
+            "selector": "body > div > div[data-component=hero-search] > div > form > div > div > button",
+            "text": "Search Listings",
             "box": {
-              "x": 1043.671875,
-              "y": 569.5,
-              "w": 180.3125,
+              "x": 1037.515625,
+              "y": 505.5,
+              "w": 186.46875,
               "h": 44,
               "right": 1223.984375,
-              "bottom": 613.5
+              "bottom": 549.5
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -1984,7 +2000,7 @@
           "h": 813
         },
         "documentWidth": 1440,
-        "documentHeight": 8262,
+        "documentHeight": 8260,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -2000,16 +2016,16 @@
             "selectorPath": "body > header > div > a > img"
           },
           {
-            "src": "http://127.0.0.1:4173/markets/fort-lauderdale.jpg",
-            "naturalWidth": 1200,
-            "naturalHeight": 1500,
+            "src": "http://127.0.0.1:4173/hero/mia-home-hero.jpg",
+            "naturalWidth": 2400,
+            "naturalHeight": 1310,
             "renderedWidth": 1440,
             "renderedHeight": 480,
             "opacity": 1,
             "visibility": "visible",
             "inViewport": true,
             "loadingLazy": false,
-            "selectorPath": "body > main#main > section[data-component=hero] > img"
+            "selectorPath": "body > main#main > div > section[data-component=hero] > img"
           },
           {
             "src": "http://127.0.0.1:4173/mia-headshot.jpg",
@@ -2191,7 +2207,7 @@
         "marketCards": [],
         "ctas": [
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Search available homes",
             "box": {
               "x": 146,
@@ -2207,7 +2223,7 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero] > div > div > div > div > a",
+            "selector": "body > div > section[data-component=hero] > div > div > div > div > a",
             "text": "Talk with Mia",
             "box": {
               "x": 419.515625,
@@ -2223,15 +2239,15 @@
             "tailClips": false
           },
           {
-            "selector": "body > main#main > section[data-component=hero-search] > div > form > div > div > button",
-            "text": "Search Homes",
+            "selector": "body > div > div[data-component=hero-search] > div > form > div > div > button",
+            "text": "Search Listings",
             "box": {
-              "x": 1123.671875,
-              "y": 569.5,
-              "w": 180.3125,
+              "x": 1149.515625,
+              "y": 505.5,
+              "w": 186.46875,
               "h": 44,
-              "right": 1303.984375,
-              "bottom": 613.5
+              "right": 1335.984375,
+              "bottom": 549.5
             },
             "bgRgba": "rgba(184,155,94,1)",
             "fgRgba": "rgba(10,29,48,1)",
@@ -2292,12 +2308,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1222,
+        "rightEdgeContentPx": 1625,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1222 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1625 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -3127,12 +3143,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1381,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1381 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -19963,12 +19979,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1126,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1126 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -20254,12 +20270,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1128,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1128 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -26655,12 +26671,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1618,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1618 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -40606,12 +40622,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 258,
+        "rightEdgeContentPx": 259,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (258 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (259 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -40913,12 +40929,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1943,
+        "rightEdgeContentPx": 2266,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1943 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2266 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -41204,12 +41220,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1767,
+        "rightEdgeContentPx": 1936,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1767 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1936 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -41495,12 +41511,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1758,
+        "rightEdgeContentPx": 2123,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1758 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2123 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -42348,12 +42364,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 2233,
+        "rightEdgeContentPx": 2227,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (2233 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2227 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -42627,12 +42643,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1936,
+        "rightEdgeContentPx": 1900,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1936 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1900 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -42906,12 +42922,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 2144,
+        "rightEdgeContentPx": 2037,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (2144 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2037 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -43169,12 +43185,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 189,
+        "rightEdgeContentPx": 164,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (189 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (164 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -43464,12 +43480,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 222,
+        "rightEdgeContentPx": 221,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (222 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (221 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -43759,12 +43775,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 2047,
+        "rightEdgeContentPx": 1592,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (2047 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1592 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -44038,12 +44054,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1529,
+        "rightEdgeContentPx": 1845,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1529 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1845 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -44317,12 +44333,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1537,
+        "rightEdgeContentPx": 1840,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1537 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1840 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -44592,12 +44608,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 216,
+        "rightEdgeContentPx": 203,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (216 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (203 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -44899,12 +44915,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 276,
+        "rightEdgeContentPx": 274,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (276 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (274 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -45206,12 +45222,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1590,
+        "rightEdgeContentPx": 2001,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1590 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2001 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -45497,12 +45513,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1338,
+        "rightEdgeContentPx": 1724,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1338 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1724 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -45788,12 +45804,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1429,
+        "rightEdgeContentPx": 1925,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1429 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1925 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -46051,12 +46067,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 230,
+        "rightEdgeContentPx": 233,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (230 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (233 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -46346,12 +46362,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 221,
+        "rightEdgeContentPx": 237,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (221 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (237 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -46641,12 +46657,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1913,
+        "rightEdgeContentPx": 1558,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1913 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1558 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -46920,12 +46936,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1743,
+        "rightEdgeContentPx": 1437,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1743 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1437 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -47199,12 +47215,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1782,
+        "rightEdgeContentPx": 1468,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1782 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1468 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -47781,12 +47797,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 251,
+        "rightEdgeContentPx": 249,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (251 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (249 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -48088,12 +48104,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 2069,
+        "rightEdgeContentPx": 2037,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (2069 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2037 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -48379,12 +48395,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1898,
+        "rightEdgeContentPx": 1786,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1898 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1786 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -48670,12 +48686,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1972,
+        "rightEdgeContentPx": 1927,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1972 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1927 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -49559,12 +49575,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 2030,
+        "rightEdgeContentPx": 2021,
         "bottomEdgeContentPx": 0,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (2030 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2021 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -49850,12 +49866,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1469,
+        "rightEdgeContentPx": 1896,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1469 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1896 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -50141,12 +50157,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1480,
+        "rightEdgeContentPx": 2113,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1480 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (2113 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     }

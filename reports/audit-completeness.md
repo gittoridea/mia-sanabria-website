@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-16T03:22:34.202Z
+**Generated:** 2026-05-16T12:50:14.548Z
 
 **Summary:** 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -95,7 +95,7 @@
   "search": [
     {
       "route": "/",
-      "action": "/markets/#property-search",
+      "action": "/home-search/",
       "type": "search"
     }
   ],
