@@ -1,0 +1,25 @@
+⚠ --no-preflight passed — skipping typecheck/lint/build/audit gates.
+→ triggering deploy
+  pre-deploy last-modified: Sat, 16 May 2026 13:09:27 GMT
+→ polling application status
+  [8s] status=running
+  [16s] status=running
+  [24s] status=running
+  [32s] status=running
+  [41s] status=running
+  [49s] status=running
+  [57s] status=running
+  [65s] status=running
+  [73s] status=running
+  [81s] status=running
+  [89s] status=running
+  [97s] status=running
+  [106s] status=running
+  [114s] status=done
+✓ deploy done in 114s
+  post-deploy last-modified: Sat, 16 May 2026 13:09:27 GMT
+  ⚠ last-modified did not change — Caddy may be caching even with bust headers
+
+→ wait-for-needle: polling https://miasanabriarealtor.trueidea.com/ for "South Florida Lifestyle" (timeout 900s, interval 15s)
+✓ needle present after ~0s (etag="dik4iwm8fb405372-gzip")
+EXIT_CODE:0

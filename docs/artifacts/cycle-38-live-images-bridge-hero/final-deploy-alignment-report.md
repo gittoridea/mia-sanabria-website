@@ -2,19 +2,41 @@
 
 date: 2026-05-16
 
-*(Skeleton — filled in after the staging deploy completes and any follow-up docs commit lands.)*
-
 ## Fields
 
 ```yaml
-origin_main_head:                                    # full sha after any docs commit
-deployed_commit:                                     # full sha of the deployed build
-docs_commit_after_first_deploy:                      # true | false (whether a docs-only commit landed after the first deploy)
-second_alignment_deploy_needed:                      # true | false (true if a docs commit landed and HEAD ≠ deployed commit)
-second_alignment_deploy_exit_code:                   # integer or N/A
-final_staging_live_verified:                         # true | false
-deployed_commit_equals_origin_main_head:             # true | false
+first_deploy_commit: 8eaf986c411d08db8c443387b74da72bdcc02293
+first_deploy_exit_code: 0
+first_deploy_duration_seconds: 164
+docs_commit_after_first_deploy: true
+docs_commit_sha: 2b122b6c672584ce85658b34f4636891b0eb4de3
+second_alignment_deploy_needed: true
+second_alignment_deploy_exit_code: 0
+second_alignment_deploy_duration_seconds: 114
+second_alignment_deploy_log: docs/artifacts/cycle-38-live-images-bridge-hero/logs/final-alignment-deploy-20260516-091846.log
+needle_observed_after_second_deploy: "South Florida Lifestyle" (etag="dik4iwm8fb405372-gzip")
+origin_main_head: 2b122b6c672584ce85658b34f4636891b0eb4de3
+deployed_commit_equals_origin_main_head: true
+final_staging_live_verified: true
+final_staging_etag_observed: dik4iwm8fb405372
 ```
+
+## Final runtime-source classification
+
+After the second alignment deploy (EXIT_CODE:0, 114s, `etag="dik4iwm8fb405372-gzip"`),
+`origin/main HEAD == deployed commit == 2b122b6c672584ce85658b34f4636891b0eb4de3`.
+
+A small follow-on docs commit (this report's `Fields` block + the
+`final-alignment-deploy-20260516-091846.log`) lands after the alignment deploy
+itself. Per the mission brief, that is acceptable when the post-deploy commit
+contains **only docs/logs and does not change runtime source**. The runtime
+source of the deployed build matches `8eaf986`'s `src/`, `public/`, `scripts/`,
+`Caddyfile`, `Dockerfile`, `next.config.ts`; the subsequent commits
+(`2b122b6` + this housekeeping commit) only updated `docs/`, `reports/`,
+`ISA.md`, and `docs/mia-client-decision-record.md`. No third deploy is needed —
+the live HTML and assets being served are byte-for-byte the build of the
+deployed commit, and that build is what `git show 2b122b6` produces for the
+runtime paths.
 
 ## Approach
 
