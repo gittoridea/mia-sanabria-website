@@ -81,45 +81,38 @@ export default function HomePage() {
       <BreadcrumbSchema items={[{ name: "Home", href: "/" }]} />
 
       {/*
-        Cycle 24 Mia-Live-Decisions (2026-05-13): H1 locked by Mia to a two-line
-        search-forward format. The sub-heading retains the practice framing; the
-        primary CTA now leads to the property-search anchor so the hero reads as
-        search-forward, with the private-conversation path retained as secondary.
-        The Bridge IDX inline search-input scaffold is deferred pending the
-        runtime decision documented in src/lib/bridge.ts.
+        Cycle 38 (2026-05-16): hero image now uses the operator-authorized
+        twilight waterfront composition matching the current public
+        miasanabria.com hero. Asset copied locally to /hero/mia-home-hero.jpg
+        from the OG asset published by miasanabria.com — operator-directed
+        reuse, recorded in docs/artifacts/cycle-38-live-images-bridge-hero/
+        reference-hero-provenance.md.
+        The HeroSearch card now floats over the hero image (per
+        miasanabria.com layout pattern) and routes search submissions to
+        /home-search/ with Bridge-compatible URL params; BridgeSearch on
+        /home-search/ reads those params on mount and auto-runs the search.
       */}
-      {/*
-        Cycle 34 World-Class Completion (2026-05-14): hero eyebrow + primary CTA
-        target aligned with Torrey's locked direction. The eyebrow now carries the
-        "South Florida Lifestyle" theme (previously the brokerage attribution
-        line). The primary CTA routes to the dedicated Bridge-backed Home Search
-        page introduced in Cycle 33; the secondary CTA preserves the private-
-        conversation path. Heading and image fallback unchanged — `vibe.filesafe.space`
-        hero asset on the current public miasanabria.com is third-party-hosted
-        and not safely re-licensable for this repo (see
-        docs/artifacts/cycle-34-world-class-completion/current-site-hero-background-audit.md).
-      */}
-      <Hero
-        eyebrow="South Florida Lifestyle"
-        heading={
-          <>
-            South Florida Lifestyle
-            <br />
-            Home Search
-          </>
-        }
-        sub="Discreet, local guidance for Southeast Florida luxury homeowners, absentee owners, and qualified buyers — from a small, deliberate practice."
-        ctaPrimary={{ href: "/home-search/", label: "Search available homes" }}
-        ctaSecondary={{ href: "/contact/", label: "Talk with Mia" }}
-        background="image"
-        imageSrc="/markets/fort-lauderdale.jpg"
-        imageAlt="Twilight luxury waterfront residence, Eastern Fort Lauderdale"
-      />
-
-      {/* Cycle 24 R2 — listings search box scaffold per Mia's live-meeting request.
-          Plain HTML form (no JS) → /markets/#property-search; query params are
-          inert until a Bridge runtime consumer reads them (see src/lib/bridge.ts). */}
-      <HeroSearch />
+      <div className="relative">
+        <Hero
+          eyebrow="South Florida Lifestyle"
+          heading={
+            <>
+              South Florida Lifestyle
+              <br />
+              Home Search
+            </>
+          }
+          sub="Discreet, local guidance for Southeast Florida luxury homeowners, absentee owners, and qualified buyers — from a small, deliberate practice."
+          ctaPrimary={{ href: "/home-search/", label: "Search available homes" }}
+          ctaSecondary={{ href: "/contact/", label: "Talk with Mia" }}
+          background="image"
+          imageSrc="/hero/mia-home-hero.jpg"
+          imageAlt="Twilight luxury waterfront residence on calm Atlantic intracoastal, Southeast Florida"
+        />
+        <HeroSearch floating />
+      </div>
+      {/* Spacer so the floating search card has clearance before the next section */}
+      <div aria-hidden className="h-16 sm:h-20" />
 
       {/* Cycle 24 R2 — Mia's 9 approved working neighborhoods surfaced as a
           service-area rail. Two with hasPage=true link to /markets/<slug>/,

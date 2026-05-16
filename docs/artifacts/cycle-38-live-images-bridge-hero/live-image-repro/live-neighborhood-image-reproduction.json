@@ -1,0 +1,89 @@
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "results": {
+    "/markets/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/",
+      "error": null,
+      "imgs": []
+    },
+    "/markets/deerfield-beach/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/deerfield-beach/",
+      "error": null,
+      "imgs": []
+    },
+    "/markets/hollywood/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/hollywood/",
+      "error": null,
+      "imgs": []
+    },
+    "/markets/plantation/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/plantation/",
+      "error": null,
+      "imgs": []
+    },
+    "/markets/weston/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/weston/",
+      "error": null,
+      "imgs": []
+    },
+    "/markets/coral-springs/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/coral-springs/",
+      "error": null,
+      "imgs": []
+    },
+    "/markets/davie/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/davie/",
+      "error": null,
+      "imgs": []
+    },
+    "/markets/sunrise/": {
+      "url": "https://miasanabriarealtor.trueidea.com/markets/sunrise/",
+      "error": null,
+      "imgs": []
+    }
+  },
+  "slugSummary": {
+    "deerfield-beach": {
+      "card_visible": false,
+      "detail_visible": false,
+      "card_src": null,
+      "detail_src": null
+    },
+    "hollywood": {
+      "card_visible": false,
+      "detail_visible": false,
+      "card_src": null,
+      "detail_src": null
+    },
+    "plantation": {
+      "card_visible": false,
+      "detail_visible": false,
+      "card_src": null,
+      "detail_src": null
+    },
+    "weston": {
+      "card_visible": false,
+      "detail_visible": false,
+      "card_src": null,
+      "detail_src": null
+    },
+    "coral-springs": {
+      "card_visible": false,
+      "detail_visible": false,
+      "card_src": null,
+      "detail_src": null
+    },
+    "davie": {
+      "card_visible": false,
+      "detail_visible": false,
+      "card_src": null,
+      "detail_src": null
+    },
+    "sunrise": {
+      "card_visible": false,
+      "detail_visible": false,
+      "card_src": null,
+      "detail_src": null
+    }
+  }
+}

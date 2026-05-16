@@ -1,0 +1,46 @@
+{
+  "base": "local:out/",
+  "pass": true,
+  "findings": [
+    {
+      "id": "home_form_action_home_search",
+      "ok": true,
+      "detail": "homepage contains <form action=\"/home-search/\">"
+    },
+    {
+      "id": "home_form_source_hidden",
+      "ok": true,
+      "detail": "hidden input source=home-hero found"
+    },
+    {
+      "id": "home_form_filter_inputs",
+      "ok": true,
+      "detail": "city=true minPrice=true beds=true"
+    },
+    {
+      "id": "home_form_legacy_action_absent",
+      "ok": true,
+      "detail": "no legacy /markets/#property-search action on homepage"
+    },
+    {
+      "id": "home_no_old_idx",
+      "ok": true,
+      "detail": "homepage clean of old IDX markers"
+    },
+    {
+      "id": "home_floating_marker",
+      "ok": true,
+      "detail": "homepage contains floating-search-card marker"
+    },
+    {
+      "id": "home_search_bridge_form",
+      "ok": true,
+      "detail": "/home-search/ exposes BridgeSearch surface"
+    },
+    {
+      "id": "home_search_no_old_idx",
+      "ok": true,
+      "detail": "/home-search/ clean of old IDX markers"
+    }
+  ]
+}

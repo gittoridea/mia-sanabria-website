@@ -2,37 +2,33 @@ import { Search } from "lucide-react";
 import { MIA_APPROVED_NEIGHBORHOODS } from "@/lib/mia";
 
 /**
- * Hero listings search box — Cycle 24 R2 (2026-05-13).
+ * Hero listings search box — Cycle 38 (2026-05-16).
  *
- * Mia explicitly requested a listings search box in the hero. Bridge Data
- * Output is the future provider (see `src/lib/bridge.ts`) but the secure
- * runtime decision is still open — until then this scaffold uses a plain
- * HTML `<form method="get">` that works without JavaScript on the static
- * export.
+ * Cycle 38 rewires this surface to the Bridge-backed `/home-search/` page (the
+ * old IDX Matrix iframe was removed in Cycle 37). The form submits as a plain
+ * HTML GET so it works on the static export with JS disabled; on the
+ * destination page `BridgeSearch` reads the URL params on mount and auto-runs
+ * the search.
  *
- * On submit the form GETs to `/markets/` (which already hosts the existing
- * Matrix MLS iframe + the future Bridge consumer), preserving the chosen
- * city / price band / bed count as URL query parameters and anchoring to
- * `#property-search` so the user lands at the search section. The query
- * parameters are inert until a runtime consumer reads them client-side;
- * the form value semantics are stable so the future consumer can hook in.
+ * Param contract sent to /home-search/:
+ *   - city      city LABEL (matches Mia's approved neighborhoods)
+ *   - minPrice  integer USD threshold (≥)
+ *   - beds      integer bedrooms (≥)
+ *   - source    "home-hero" — analytics tag
  *
- * Cities are restricted to Mia's approved 9 (`MIA_APPROVED_NEIGHBORHOODS`)
- * — no extra cities, no invented data. Price + beds are conservative
- * generic ranges; they do not claim any real-listing distribution.
- *
- * Accessibility: every input has a visible label, the form has an
- * `aria-label`, and the submit button uses both visible text and a Search
- * icon with `aria-hidden`.
+ * The `floating` prop renders the card as an absolutely-positioned overlay on
+ * top of the parent Hero image, matching the production miasanabria.com layout
+ * (search card floats on the hero). When false (legacy behavior) the card
+ * renders as a stand-alone cream band below the hero.
  */
 
 const PRICE_OPTIONS: ReadonlyArray<{ value: string; label: string }> = [
   { value: "", label: "Any price" },
-  { value: "600000-1000000", label: "$600k–$1M" },
-  { value: "1000000-2000000", label: "$1M–$2M" },
-  { value: "2000000-3000000", label: "$2M–$3M" },
-  { value: "3000000-5000000", label: "$3M–$5M" },
-  { value: "5000000-", label: "$5M+" },
+  { value: "600000", label: "$600k+" },
+  { value: "1000000", label: "$1M+" },
+  { value: "2000000", label: "$2M+" },
+  { value: "3000000", label: "$3M+" },
+  { value: "5000000", label: "$5M+" },
 ];
 
 const BED_OPTIONS: ReadonlyArray<{ value: string; label: string }> = [
@@ -43,105 +39,125 @@ const BED_OPTIONS: ReadonlyArray<{ value: string; label: string }> = [
   { value: "5", label: "5+ beds" },
 ];
 
-export function HeroSearch() {
+export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
+  const formCard = (
+    <form
+      method="get"
+      action="/home-search/"
+      aria-label="Search Southeast Florida listings"
+      data-form-type="search"
+      data-home-hero-search="true"
+      className={
+        floating
+          ? "rounded-sm border-l-2 border-brass-400 bg-cream-50/95 p-4 shadow-[0_18px_50px_-20px_rgba(15,42,68,0.55)] sm:p-5 lg:p-6"
+          : "rounded-sm border-l-2 border-brass-400 bg-cream-50 p-4 shadow-luxury sm:p-5 lg:p-6"
+      }
+    >
+      <input type="hidden" name="source" value="home-hero" />
+      <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-[1.4fr_1fr_0.9fr_auto]">
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="hero-search-city"
+            className="text-[11px] uppercase tracking-[0.18em] text-navy-800/70"
+          >
+            Neighborhood
+          </label>
+          <select
+            id="hero-search-city"
+            name="city"
+            defaultValue=""
+            className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+          >
+            <option value="">Any approved area</option>
+            {MIA_APPROVED_NEIGHBORHOODS.map((n) => (
+              <option key={n.slug} value={n.label}>
+                {n.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="hero-search-price"
+            className="text-[11px] uppercase tracking-[0.18em] text-navy-800/70"
+          >
+            Min price
+          </label>
+          <select
+            id="hero-search-price"
+            name="minPrice"
+            defaultValue=""
+            className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+          >
+            {PRICE_OPTIONS.map((p) => (
+              <option key={p.value} value={p.value}>
+                {p.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="hero-search-beds"
+            className="text-[11px] uppercase tracking-[0.18em] text-navy-800/70"
+          >
+            Bedrooms
+          </label>
+          <select
+            id="hero-search-beds"
+            name="beds"
+            defaultValue=""
+            className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+          >
+            {BED_OPTIONS.map((b) => (
+              <option key={b.value} value={b.value}>
+                {b.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex items-end">
+          <button
+            type="submit"
+            className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-brass-400 px-6 py-3 text-sm font-semibold tracking-wide text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.45)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200 lg:w-auto"
+          >
+            <Search className="h-4 w-4 shrink-0" aria-hidden />
+            Search Listings
+          </button>
+        </div>
+      </div>
+
+      <p className="mt-3 text-[11px] leading-relaxed text-navy-800/65">
+        Search routes to Mia&apos;s Bridge-backed Southeast Florida home search.
+        Talk with Mia for current comparable sales and the residence specifics
+        listings alone cannot tell you.
+      </p>
+    </form>
+  );
+
+  if (floating) {
+    return (
+      <div
+        data-component="hero-search"
+        data-floating="true"
+        aria-label="Listings search"
+        className="pointer-events-none relative z-20 -mt-20 px-4 sm:-mt-24 lg:px-8"
+      >
+        <div className="pointer-events-auto mx-auto max-w-7xl">{formCard}</div>
+      </div>
+    );
+  }
+
   return (
     <section
       data-component="hero-search"
       aria-label="Listings search"
       className="relative z-10 -mt-6 bg-cream-50 sm:-mt-8"
     >
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <form
-          method="get"
-          action="/markets/#property-search"
-          aria-label="Search Southeast Florida listings"
-          data-form-type="search"
-          className="rounded-sm border-l-2 border-brass-400 bg-cream-50 p-4 shadow-luxury sm:p-5 lg:p-6"
-        >
-          <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-[1.4fr_1fr_0.9fr_auto]">
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="hero-search-city"
-                className="text-[11px] uppercase tracking-[0.18em] text-navy-800/70"
-              >
-                Neighborhood
-              </label>
-              <select
-                id="hero-search-city"
-                name="city"
-                defaultValue=""
-                className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
-              >
-                <option value="">Any approved area</option>
-                {MIA_APPROVED_NEIGHBORHOODS.map((n) => (
-                  <option key={n.slug} value={n.slug}>
-                    {n.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="hero-search-price"
-                className="text-[11px] uppercase tracking-[0.18em] text-navy-800/70"
-              >
-                Price
-              </label>
-              <select
-                id="hero-search-price"
-                name="price"
-                defaultValue=""
-                className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
-              >
-                {PRICE_OPTIONS.map((p) => (
-                  <option key={p.value} value={p.value}>
-                    {p.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="hero-search-beds"
-                className="text-[11px] uppercase tracking-[0.18em] text-navy-800/70"
-              >
-                Bedrooms
-              </label>
-              <select
-                id="hero-search-beds"
-                name="beds"
-                defaultValue=""
-                className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
-              >
-                {BED_OPTIONS.map((b) => (
-                  <option key={b.value} value={b.value}>
-                    {b.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="flex items-end">
-              <button
-                type="submit"
-                className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-brass-400 px-6 py-3 text-sm font-semibold tracking-wide text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.45)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200 lg:w-auto"
-              >
-                <Search className="h-4 w-4 shrink-0" aria-hidden />
-                Search Homes
-              </button>
-            </div>
-          </div>
-
-          <p className="mt-3 text-[11px] leading-relaxed text-navy-800/65">
-            Search anchors to the Southeast Florida property-search section. Listings shown
-            reflect participating brokerages; talk with Mia for current comparable sales,
-            ownership history where available, and the residence specifics that lists alone
-            cannot tell you.
-          </p>
-        </form>
-      </div>
+      <div className="mx-auto max-w-7xl px-4 lg:px-8">{formCard}</div>
     </section>
   );
 }

@@ -114,6 +114,42 @@ function ErrorPanel() {
   );
 }
 
+function parseInitialQueryFromUrl(): { initial: BridgeSearchQuery; hasMeaningful: boolean } {
+  if (typeof window === "undefined") return { initial: {}, hasMeaningful: false };
+  const params = new URLSearchParams(window.location.search);
+  const initial: BridgeSearchQuery = {};
+  let hasMeaningful = false;
+  const city = params.get("city");
+  if (city) {
+    const labels = new Set<string>(MIA_APPROVED_NEIGHBORHOODS.map((n) => n.label));
+    const bySlug = MIA_APPROVED_NEIGHBORHOODS.find((n) => n.slug === city);
+    if (labels.has(city)) {
+      initial.city = city;
+      hasMeaningful = true;
+    } else if (bySlug) {
+      initial.city = bySlug.label;
+      hasMeaningful = true;
+    }
+  }
+  const minPrice = params.get("minPrice");
+  if (minPrice) {
+    const n = Number(minPrice);
+    if (Number.isFinite(n) && n > 0) {
+      initial.minPrice = n;
+      hasMeaningful = true;
+    }
+  }
+  const beds = params.get("beds");
+  if (beds) {
+    const n = Number(beds);
+    if (Number.isFinite(n) && n >= 0) {
+      initial.beds = n;
+      hasMeaningful = true;
+    }
+  }
+  return { initial, hasMeaningful };
+}
+
 export function BridgeSearch() {
   const status = getBridgeRuntimeStatus();
   const [query, setQuery] = useState<BridgeSearchQuery>({});
@@ -124,6 +160,33 @@ export function BridgeSearch() {
   const [error, setError] = useState<"error" | null>(null);
   const [searched, setSearched] = useState(false);
   const inFlightRef = useRef<AbortController | null>(null);
+
+  // Cycle 38 (2026-05-16): prefill from URL params (city/minPrice/beds/source) so
+  // the homepage floating search card can deep-link into a pre-run search. If
+  // any meaningful param is present, kick off the search automatically on mount.
+  useEffect(() => {
+    const { initial, hasMeaningful } = parseInitialQueryFromUrl();
+    if (!hasMeaningful) return;
+    setQuery(initial);
+    inFlightRef.current?.abort();
+    const controller = new AbortController();
+    inFlightRef.current = controller;
+    setLoading(true);
+    setError(null);
+    setSearched(true);
+    searchListings({ ...initial, page: 1 }, controller.signal).then((result) => {
+      if (controller.signal.aborted) return;
+      if (result.error === "search-error") {
+        setError("error");
+        setResultMode("error");
+      } else {
+        setListings(result.listings);
+        setTotal(result.total);
+        setResultMode(result.mode);
+      }
+      setLoading(false);
+    });
+  }, []);
 
   useEffect(() => {
     return () => {
