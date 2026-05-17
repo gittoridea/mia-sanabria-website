@@ -1,0 +1,15 @@
+capture-baseline: 10 jobs · 2 routes × 5 viewports · concurrency 3 · base http://127.0.0.1:4242
+output: docs/artifacts/cycle-42-homepage-hero-copy-polish/local-after/screenshots
+  [1/10] ✓ / @ 375x812 (1875ms)
+  [2/10] ✓ / @ 390x844 (2826ms)
+  [3/10] ✓ / @ 768x1024 (3096ms)
+  [4/10] ✓ / @ 1280x800 (2158ms)
+  [6/10] ✓ /home-search/ @ 375x812 (1787ms)
+  [5/10] ✓ / @ 1440x900 (2837ms)
+  [7/10] ✓ /home-search/ @ 390x844 (1731ms)
+  [8/10] ✓ /home-search/ @ 768x1024 (1890ms)
+  [9/10] ✓ /home-search/ @ 1280x800 (1716ms)
+  [10/10] ✓ /home-search/ @ 1440x900 (1775ms)
+
+Done: 10/10 ok · 0 failed · 8s
+Summary: docs/artifacts/cycle-42-homepage-hero-copy-polish/local-after/screenshots/_capture-summary.json

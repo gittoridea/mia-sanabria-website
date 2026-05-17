@@ -36,6 +36,7 @@
     "audit:no-old-idx": "bun run scripts/audit-no-old-idx.ts",
     "audit:neighborhood-images-deep": "bun run scripts/audit-neighborhood-images-deep.ts",
     "audit:home-bridge-search": "bun run scripts/audit-home-bridge-search.ts",
+    "audit:home-hero-copy": "bun run scripts/audit-home-hero-copy.ts",
     "audit:image-creative-acceptance": "bun run scripts/audit-image-creative-acceptance.ts",
     "generate:neighborhood-images:v3": "bun run scripts/generate-neighborhood-images-v3.ts",
     "export:cycle40b-winner": "bun run scripts/export-cycle40b-winner.ts",

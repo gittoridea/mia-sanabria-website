@@ -1,0 +1,15 @@
+capture-baseline: 10 jobs · 2 routes × 5 viewports · concurrency 3 · base https://miasanabriarealtor.trueidea.com
+output: docs/artifacts/cycle-42-homepage-hero-copy-polish/live-before/screenshots
+  [1/10] ✓ / @ 375x812 (2827ms)
+  [3/10] ✓ / @ 768x1024 (3032ms)
+  [2/10] ✓ / @ 390x844 (3158ms)
+  [6/10] ✓ /home-search/ @ 375x812 (2464ms)
+  [4/10] ✓ / @ 1280x800 (3728ms)
+  [5/10] ✓ / @ 1440x900 (4013ms)
+  [7/10] ✓ /home-search/ @ 390x844 (2233ms)
+  [8/10] ✓ /home-search/ @ 768x1024 (2025ms)
+  [9/10] ✓ /home-search/ @ 1280x800 (2250ms)
+  [10/10] ✓ /home-search/ @ 1440x900 (2283ms)
+
+Done: 10/10 ok · 0 failed · 10s
+Summary: docs/artifacts/cycle-42-homepage-hero-copy-polish/live-before/screenshots/_capture-summary.json

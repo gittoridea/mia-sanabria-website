@@ -1,6 +1,6 @@
 # audit-home-bridge-search PASS
 
-base: https://miasanabriarealtor.trueidea.com
+base: local:out/
 
 - PASS `home_form_action_home_search` — homepage contains <form action="/home-search/">
 - PASS `home_form_source_hidden` — hidden input source=home-hero found

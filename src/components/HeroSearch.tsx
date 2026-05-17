@@ -2,13 +2,11 @@ import { Search } from "lucide-react";
 import { MIA_APPROVED_NEIGHBORHOODS } from "@/lib/mia";
 
 /**
- * Hero listings search box — Cycle 38 (2026-05-16).
+ * Hero listings search box.
  *
- * Cycle 38 rewires this surface to the Bridge-backed `/home-search/` page (the
- * old IDX Matrix iframe was removed in Cycle 37). The form submits as a plain
- * HTML GET so it works on the static export with JS disabled; on the
- * destination page `BridgeSearch` reads the URL params on mount and auto-runs
- * the search.
+ * Submits as a plain HTML GET to `/home-search/` so the form works on the
+ * static export even with JS disabled; the destination page reads the URL
+ * params on mount and runs the search.
  *
  * Param contract sent to /home-search/:
  *   - city      city LABEL (matches Mia's approved neighborhoods)
@@ -17,9 +15,9 @@ import { MIA_APPROVED_NEIGHBORHOODS } from "@/lib/mia";
  *   - source    "home-hero" — analytics tag
  *
  * The `floating` prop renders the card as an absolutely-positioned overlay on
- * top of the parent Hero image, matching the production miasanabria.com layout
- * (search card floats on the hero). When false (legacy behavior) the card
- * renders as a stand-alone cream band below the hero.
+ * top of the parent Hero image (the production layout — search card floats on
+ * the hero). When false (legacy behavior) the card renders as a stand-alone
+ * cream band below the hero.
  */
 
 const PRICE_OPTIONS: ReadonlyArray<{ value: string; label: string }> = [
@@ -133,9 +131,8 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
       </div>
 
       <p className="mt-3 text-[11px] leading-relaxed text-navy-800/65">
-        Search routes to Mia&apos;s Bridge-backed Southeast Florida home search.
-        Talk with Mia for current comparable sales and the residence specifics
-        listings alone cannot tell you.
+        Begin with an area, price range, and bedroom count. Mia will help you
+        interpret the listings, neighborhoods, and details behind the search.
       </p>
     </form>
   );
