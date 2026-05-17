@@ -1,0 +1,20 @@
+capture-baseline: 15 jobs · 3 routes × 5 viewports · concurrency 3 · base https://miasanabriarealtor.trueidea.com
+output: docs/artifacts/cycle-42-homepage-hero-copy-polish/live-after/screenshots
+  [3/15] ✓ / @ 768x1024 (3058ms)
+  [2/15] ✓ / @ 390x844 (3616ms)
+  [1/15] ✓ / @ 375x812 (4203ms)
+  [4/15] ✓ / @ 1280x800 (2511ms)
+  [6/15] ✓ /home-search/ @ 375x812 (1700ms)
+  [5/15] ✓ / @ 1440x900 (2981ms)
+  [7/15] ✓ /home-search/ @ 390x844 (2213ms)
+  [8/15] ✓ /home-search/ @ 768x1024 (2582ms)
+  [9/15] ✓ /home-search/ @ 1280x800 (2359ms)
+  [10/15] ✓ /home-search/ @ 1440x900 (2243ms)
+  [11/15] ✓ /home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero @ 375x812 (2234ms)
+  [12/15] ✓ /home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero @ 390x844 (1979ms)
+  [13/15] ✓ /home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero @ 768x1024 (2316ms)
+  [14/15] ✓ /home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero @ 1280x800 (2270ms)
+  [15/15] ✓ /home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero @ 1440x900 (2264ms)
+
+Done: 15/15 ok · 0 failed · 13s
+Summary: docs/artifacts/cycle-42-homepage-hero-copy-polish/live-after/screenshots/_capture-summary.json
