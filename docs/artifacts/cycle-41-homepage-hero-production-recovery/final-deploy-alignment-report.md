@@ -7,13 +7,36 @@ generated_at: 2026-05-17
 # Cycle 41 — Final Deploy Alignment Report
 
 ```yaml
-origin_main_head_at_commit: e63a35eb10bb1ebd565ef29767c4bf5f10213648
-deployed_commit_built_from: e63a35eb10bb1ebd565ef29767c4bf5f10213648  # Dokploy builds from origin/main HEAD at trigger time
-post_deploy_commit_made: true   # Phase 14 records update + Phase 11 verification artifacts
-second_alignment_deploy_needed: pending_decision   # see Phase 14 records-update commit section below
-second_alignment_deploy_exit_code: pending
-final_deployed_commit_equals_origin_main_head: pending
+origin_main_head_at_phase_9_commit: e63a35eb10bb1ebd565ef29767c4bf5f10213648
+deployed_bundle_built_from: e63a35eb10bb1ebd565ef29767c4bf5f10213648
+post_deploy_commit_made: true                      # Phase 14 docs-only records + verification artifacts
+post_deploy_commit_sha: 18a2e8a3b1b5e15bb2067dc897e352f978fec32a
+post_deploy_commit_touches_bundle_source: false    # ISA.md, docs/*.md, reports/*.{json,md}, cycle-41 artifacts only
+second_alignment_deploy_needed: false              # docs commit does not change bundle; aligning would create the
+                                                   # Cycle 40C closeout-deploy recursion (committing the alignment-deploy
+                                                   # log advances HEAD again past the just-deployed bundle).
+second_alignment_deploy_exit_code: n/a
+final_origin_main_head: 18a2e8a3b1b5e15bb2067dc897e352f978fec32a
+final_deployed_bundle_built_from: e63a35eb10bb1ebd565ef29767c4bf5f10213648
+final_deployed_commit_equals_origin_main_head: false
+final_deployed_bundle_equals_origin_main_bundle: true  # docs commit produces byte-identical bundle
+aligned_by_bundle_equivalence: true
 ```
+
+## Why no second alignment deploy
+
+The Phase 14 docs commit (`18a2e8a`) touches:
+- `ISA.md`
+- `docs/mia-client-decision-record.md`
+- `docs/artifacts/cycle-41-homepage-hero-production-recovery/*` (12 markdown files + 3 log files)
+- `reports/audit-*.{json,md}` (audit re-run output from Phase 11 live verification)
+
+None of these are inputs to the Dokploy build pipeline. The bundle that Dokploy builds from `18a2e8a` is byte-identical to the bundle it built from `e63a35e`. Per the Cycle 40C precedent documented in `docs/artifacts/cycle-40b-image-lab-hero-recovery/final-deploy-alignment-report.md`:
+
+> Triggering a redundant alignment-deploy to make `deployed_commit == origin/main HEAD` numerically equal would force capture + commit of a new `staging-deploy-*.log` file, advancing HEAD again, restarting the recursion.
+
+The honest report is therefore: `final_deployed_commit_equals_origin_main_head = false` (numerically) AND `final_deployed_bundle_equals_origin_main_bundle = true` (semantically). Both statements true; both visible.
+
 
 ## Decision logic
 
