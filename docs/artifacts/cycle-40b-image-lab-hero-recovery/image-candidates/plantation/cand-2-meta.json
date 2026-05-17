@@ -1,0 +1,21 @@
+{
+  "slug": "plantation",
+  "index": 2,
+  "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-2.png",
+  "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-2-meta.json",
+  "attempt_count": 2,
+  "prompt_used": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of a quiet South Florida residential street in Plantation, central Broward County, lined with a dense canopy of mature royal palms arching overhead, dappled warm afternoon sunlight on the road surface, lush emerald tropical landscaping along the curbs, refined residential lots visible behind the palm canopy, no traffic, calm and confident composition, warm golden hour ambient light, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Plantation, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+  "metrics": {
+    "width": 1024,
+    "height": 1024,
+    "perimeter_white_ratio": 0.008264887063655031,
+    "perimeter_total": 194800,
+    "perimeter_near_white": 1610,
+    "mean_brightness": 94.5810085932356,
+    "mean_saturation_proxy": 0.4100380364255096
+  },
+  "accepted_by_automated_validator": true,
+  "rejection_reason": "",
+  "raw_bytes": 2332736,
+  "generated_at": "2026-05-17T00:06:08.269Z"
+}

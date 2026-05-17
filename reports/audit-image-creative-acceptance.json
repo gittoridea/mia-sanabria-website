@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-05-17T00:17:24.137Z",
+  "thresholds": {
+    "MIN_HERO_BYTES": 150000,
+    "MIN_OG_BYTES": 60000,
+    "MIN_CANDIDATES_PER_SLUG": 3
+  },
+  "total_slugs": 7,
+  "pass_slugs": 7,
+  "fail_slugs": 0,
+  "docs_pass": true,
+  "doc_reasons": [],
+  "rows": [
+    {
+      "slug": "deerfield-beach",
+      "hero_bytes": 293115,
+      "og_bytes": 144551,
+      "candidate_count": 3,
+      "contact_sheet_exists": true,
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "slug": "hollywood",
+      "hero_bytes": 251254,
+      "og_bytes": 89484,
+      "candidate_count": 3,
+      "contact_sheet_exists": true,
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "slug": "plantation",
+      "hero_bytes": 392866,
+      "og_bytes": 191933,
+      "candidate_count": 3,
+      "contact_sheet_exists": true,
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "slug": "weston",
+      "hero_bytes": 211209,
+      "og_bytes": 128103,
+      "candidate_count": 3,
+      "contact_sheet_exists": true,
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "slug": "coral-springs",
+      "hero_bytes": 371564,
+      "og_bytes": 190335,
+      "candidate_count": 3,
+      "contact_sheet_exists": true,
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "slug": "davie",
+      "hero_bytes": 244584,
+      "og_bytes": 109505,
+      "candidate_count": 3,
+      "contact_sheet_exists": true,
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "slug": "sunrise",
+      "hero_bytes": 266813,
+      "og_bytes": 125149,
+      "candidate_count": 3,
+      "contact_sheet_exists": true,
+      "status": "PASS",
+      "reasons": []
+    }
+  ]
+}

@@ -81,18 +81,19 @@ export default function HomePage() {
       <BreadcrumbSchema items={[{ name: "Home", href: "/" }]} />
 
       {/*
-        Cycle 38 (2026-05-16): hero image now uses the operator-authorized
-        twilight waterfront composition matching the current public
-        miasanabria.com hero. Asset copied locally to /hero/mia-home-hero.jpg
-        from the OG asset published by miasanabria.com — operator-directed
-        reuse, recorded in docs/artifacts/cycle-38-live-images-bridge-hero/
-        reference-hero-provenance.md.
-        The HeroSearch card now floats over the hero image (per
-        miasanabria.com layout pattern) and routes search submissions to
-        /home-search/ with Bridge-compatible URL params; BridgeSearch on
-        /home-search/ reads those params on mount and auto-runs the search.
+        Cycle 40B (2026-05-16): hero image switched to the operator-authorized
+        DAYTIME luxury waterfront composition that matches the visible
+        miasanabria.com hero. Source asset fetched from vibe.filesafe.space
+        (operator-directed reuse) and optimized locally — provenance recorded
+        in docs/artifacts/cycle-40b-image-lab-hero-recovery/homepage-hero-provenance.md.
+        Cycle 39 used a twilight composition; the daytime swap closes the
+        mood-mismatch defect class the operator reported.
+        The HeroSearch card floats over the hero image (per miasanabria.com
+        layout pattern) and routes search submissions to /home-search/ with
+        Bridge-compatible URL params; BridgeSearch on /home-search/ reads
+        those params on mount and auto-runs the search.
       */}
-      <div className="relative">
+      <div className="relative w-full max-w-full overflow-x-clip">
         <Hero
           eyebrow="South Florida Lifestyle"
           heading={
@@ -106,8 +107,8 @@ export default function HomePage() {
           ctaPrimary={{ href: "/home-search/", label: "Search available homes" }}
           ctaSecondary={{ href: "/contact/", label: "Talk with Mia" }}
           background="image"
-          imageSrc="/hero/mia-home-hero-cycle39.jpg"
-          imageAlt="Twilight luxury waterfront residence on calm Atlantic intracoastal, Southeast Florida"
+          imageSrc="/hero/mia-home-hero-cycle40b.jpg"
+          imageAlt="Daytime luxury waterfront residence with infinity pool and mature palms on calm Intracoastal Waterway, Southeast Florida"
         />
         <HeroSearch floating />
       </div>

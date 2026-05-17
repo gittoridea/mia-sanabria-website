@@ -48,6 +48,14 @@ html {
   scroll-padding-top: calc(5.25rem + env(safe-area-inset-top));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Cycle 40B — global horizontal-overflow safety net. Some hero CTAs and
+   * floating search rows can push above viewport at very narrow widths
+   * (320-414) when a child has implicit `min-content` width from a
+   * `whitespace-nowrap` element. `overflow-x: clip` prevents the body from
+   * growing past the viewport even if a descendant component computes a
+   * wider intrinsic size. `clip` (vs `hidden`) preserves `position: sticky`
+   * for the SiteHeader and `position: fixed` for any future overlays. */
+  overflow-x: clip;
 }
 
 body {
@@ -55,6 +63,7 @@ body {
   background: var(--color-cream-50);
   color: var(--color-soft-black);
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 /* Cycle 8 — typography defaults moved into @layer base so Tailwind utility

@@ -1,0 +1,81 @@
+cycle 40B image-lab v3 — 7 slugs × 3 candidates = 21 total candidates
+output: /home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates
+dry-run: false | concurrency: 2
+  hollywood cand-1 attempt 1 dims=1024x1024 perim_white=0.000
+  deerfield-beach cand-1 attempt 1 dims=1024x1024 perim_white=0.012
+  hollywood cand-2 attempt 1 dims=1024x1024 perim_white=0.000
+  deerfield-beach cand-2 attempt 1 dims=1024x1024 perim_white=0.005
+  hollywood cand-3 attempt 1 dims=1024x1024 perim_white=0.000
+  [2/7] hollywood: 3/3 accepted (17.7s) + sheet
+  deerfield-beach cand-3 attempt 1 dims=1024x1024 perim_white=0.000
+  [1/7] deerfield-beach: 3/3 accepted (19.3s) + sheet
+  plantation cand-1 attempt 1 dims=1024x1024 perim_white=0.000
+  weston cand-1 attempt 1 dims=1024x1024 perim_white=0.000
+  weston cand-2 attempt 1 dims=1024x1024 perim_white=0.022
+  plantation cand-2 attempt 1 dims=1024x1024 perim_white=0.574
+  plantation cand-2 attempt 2 dims=1024x1024 perim_white=0.008
+  weston cand-3 attempt 1 dims=1024x1024 perim_white=0.000
+  [4/7] weston: 3/3 accepted (19.9s) + sheet
+  plantation cand-3 attempt 1 dims=1024x1024 perim_white=0.000
+  [3/7] plantation: 3/3 accepted (27.2s) + sheet
+  coral-springs cand-1 attempt 1 dims=1024x1024 perim_white=0.004
+  coral-springs cand-2 attempt 1 dims=1024x1024 perim_white=0.003
+  davie cand-1 attempt 1 dims=1024x1024 perim_white=0.000
+  davie cand-2 attempt 1 dims=1024x1024 perim_white=0.000
+  coral-springs cand-3 attempt 1 dims=1024x1024 perim_white=0.004
+  [5/7] coral-springs: 3/3 accepted (19.4s) + sheet
+  davie cand-3 attempt 1 dims=1024x1024 perim_white=0.000
+  [6/7] davie: 3/3 accepted (18.8s) + sheet
+  sunrise cand-1 attempt 1 dims=1024x1024 perim_white=0.011
+  sunrise cand-2 attempt 1 dims=1024x1024 perim_white=0.038
+  sunrise cand-3 attempt 1 dims=1024x1024 perim_white=0.014
+  [7/7] sunrise: 3/3 accepted (18.0s) + sheet
+
+manifest written: /home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-generation-results.json
+
+--- SUMMARY ---
+[
+  {
+    "slug": "hollywood",
+    "accepted": 3,
+    "total": 3,
+    "sheet": "yes"
+  },
+  {
+    "slug": "deerfield-beach",
+    "accepted": 3,
+    "total": 3,
+    "sheet": "yes"
+  },
+  {
+    "slug": "weston",
+    "accepted": 3,
+    "total": 3,
+    "sheet": "yes"
+  },
+  {
+    "slug": "plantation",
+    "accepted": 3,
+    "total": 3,
+    "sheet": "yes"
+  },
+  {
+    "slug": "coral-springs",
+    "accepted": 3,
+    "total": 3,
+    "sheet": "yes"
+  },
+  {
+    "slug": "davie",
+    "accepted": 3,
+    "total": 3,
+    "sheet": "yes"
+  },
+  {
+    "slug": "sunrise",
+    "accepted": 3,
+    "total": 3,
+    "sheet": "yes"
+  }
+]
+EXIT_CODE:0

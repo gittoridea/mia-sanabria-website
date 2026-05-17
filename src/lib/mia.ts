@@ -223,14 +223,20 @@ export function getFeaturedMarketRoutes(): ReadonlyArray<string> {
 
 /**
  * Cycle 39 (2026-05-16) — slugs whose card+detail+OG image assets were
- * republished at versioned paths (`/markets/<slug>-cycle39.jpg`,
- * `/og-markets/<slug>-cycle39.jpg`) to defeat browser/CDN cache ambiguity
+ * republished at versioned paths to defeat browser/CDN cache ambiguity
  * after Cycle 38's in-place replacement failed to land in operator-visible
  * browsers. The set is the authoritative source for both runtime image URLs
  * (via the helpers below) and the deep-image audit. Adding or removing a
- * slug requires the corresponding `/markets/<slug>-cycle39.jpg` +
- * `/og-markets/<slug>-cycle39.jpg` files on disk and a matching change in
- * `src/lib/markets.ts` `heroImage:` literal.
+ * slug requires the corresponding versioned files on disk and a matching
+ * change in `src/lib/markets.ts` `heroImage:` literal.
+ *
+ * Cycle 40B (2026-05-16) — same slugs republished at `-cycle40b` after a
+ * multi-candidate (3-per-slug) scored generation workflow. Cycle 40B
+ * supersedes Cycle 39 for these seven slugs; the Cycle 39 files remain on
+ * disk as fallback evidence and audit context until a future Bitter Pill
+ * cleanup cycle removes them. The version helper below resolves to
+ * Cycle 40B first, with Cycle 39 retained only as a lookup-table fallback
+ * (not used at runtime since both sets cover the same 7 slugs).
  */
 export const MIA_CYCLE_39_VERSIONED_SLUGS: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
   "deerfield-beach",
@@ -242,10 +248,23 @@ export const MIA_CYCLE_39_VERSIONED_SLUGS: ReadonlySet<MarketSlug> = new Set<Mar
   "sunrise",
 ]);
 
+export const MIA_CYCLE_40B_VERSIONED_SLUGS: ReadonlySet<MarketSlug> = new Set<MarketSlug>([
+  "deerfield-beach",
+  "hollywood",
+  "plantation",
+  "weston",
+  "coral-springs",
+  "davie",
+  "sunrise",
+]);
+
 const CYCLE_39_VERSION_SUFFIX = "-cycle39";
+const CYCLE_40B_VERSION_SUFFIX = "-cycle40b";
 
 function imageSuffixForSlug(slug: MarketSlug): string {
-  return MIA_CYCLE_39_VERSIONED_SLUGS.has(slug) ? CYCLE_39_VERSION_SUFFIX : "";
+  if (MIA_CYCLE_40B_VERSIONED_SLUGS.has(slug)) return CYCLE_40B_VERSION_SUFFIX;
+  if (MIA_CYCLE_39_VERSIONED_SLUGS.has(slug)) return CYCLE_39_VERSION_SUFFIX;
+  return "";
 }
 
 export function getMarketImagePath(slug: MarketSlug): string {

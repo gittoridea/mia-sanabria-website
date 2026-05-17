@@ -1,6 +1,6 @@
 # audit-no-old-idx
 
-Generated: 2026-05-16T13:06:48.247Z
+Generated: 2026-05-17T00:17:24.598Z
 Scanned files: 480
 Findings: 0
 Pass: true

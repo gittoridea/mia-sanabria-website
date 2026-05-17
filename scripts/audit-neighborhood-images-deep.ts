@@ -21,6 +21,7 @@ import sharp from "sharp";
 import {
   ALL_MARKET_SLUGS,
   MIA_CYCLE_39_VERSIONED_SLUGS,
+  MIA_CYCLE_40B_VERSIONED_SLUGS,
   getMarketImagePath,
   getMarketOgImagePath,
 } from "../src/lib/mia";
@@ -142,10 +143,16 @@ async function main() {
       if (heroLive !== null && heroLive !== 200) reasons.push(`hero-live-${heroLive}`);
       if (ogLive !== null && ogLive !== 200) reasons.push(`og-live-${ogLive}`);
     }
-    // Cycle 39 cache-bust enforcement — the seven affected slugs MUST use
+    // Cycle 40B cache-bust enforcement — supersedes Cycle 39 for the seven
+    // Mia-approved Broward slugs. Affected slugs MUST use the `-cycle40b`
     // versioned filenames so any stale browser/CDN cache cannot serve the
     // prior pixels. A regression here is the exact failure mode Cycle 38 hid.
-    if (MIA_CYCLE_39_VERSIONED_SLUGS.has(slug)) {
+    // Cycle 39 path is retained as a fallback evidence-trail only — never
+    // active at runtime since both sets cover the same 7 slugs.
+    if (MIA_CYCLE_40B_VERSIONED_SLUGS.has(slug)) {
+      if (!heroRel.includes("-cycle40b.")) reasons.push("hero-not-versioned-cycle40b");
+      if (!ogRel.includes("-cycle40b.")) reasons.push("og-not-versioned-cycle40b");
+    } else if (MIA_CYCLE_39_VERSIONED_SLUGS.has(slug)) {
       if (!heroRel.includes("-cycle39.")) reasons.push("hero-not-versioned-cycle39");
       if (!ogRel.includes("-cycle39.")) reasons.push("og-not-versioned-cycle39");
     }
@@ -169,30 +176,42 @@ async function main() {
     });
   }
 
-  // Cycle 39 live-DOM enforcement: when --base is provided, fetch
-  // /markets/ + /markets/<slug>/ for each versioned slug and require the
-  // versioned path to appear in the rendered HTML. Any reference to the
-  // unversioned `/markets/<slug>.jpg` for a versioned slug is a hard FAIL —
-  // it means the live page is still pointing at a cacheable path.
+  // Cycle 40B live-DOM enforcement: when --base is provided, fetch
+  // /markets/ + /markets/<slug>/ for each cycle40b-versioned slug and require
+  // the versioned `-cycle40b` path to appear in the rendered HTML. Any
+  // reference to the unversioned `/markets/<slug>.jpg` OR the prior
+  // `-cycle39` path is a hard FAIL — it means the live page is still
+  // pointing at a stale path. (The unversioned/legacy files remain on disk
+  // as fallback evidence but should never appear in the active runtime
+  // markup for these seven slugs.)
   if (args.base) {
     const indexHtml = await fetchHtml(`${args.base}/markets/`);
-    for (const slug of MIA_CYCLE_39_VERSIONED_SLUGS) {
-      const versioned = `/markets/${slug}-cycle39.jpg`;
+    for (const slug of MIA_CYCLE_40B_VERSIONED_SLUGS) {
+      const versioned = `/markets/${slug}-cycle40b.jpg`;
       const unversioned = `/markets/${slug}.jpg`;
+      const cycle39Legacy = `/markets/${slug}-cycle39.jpg`;
       const row = rows.find((r) => r.slug === slug);
       if (!row) continue;
-      if (!indexHtml.includes(versioned)) row.reasons.push("live-index-missing-versioned");
+      if (!indexHtml.includes(versioned)) row.reasons.push("live-index-missing-cycle40b");
       const indexHasUnversionedAsImage =
         indexHtml.includes(`src="${unversioned}"`) ||
         indexHtml.includes(`url(${unversioned})`);
+      const indexHasCycle39AsImage =
+        indexHtml.includes(`src="${cycle39Legacy}"`) ||
+        indexHtml.includes(`url(${cycle39Legacy})`);
       if (indexHasUnversionedAsImage) row.reasons.push("live-index-still-unversioned");
+      if (indexHasCycle39AsImage) row.reasons.push("live-index-still-cycle39");
 
       const detailHtml = await fetchHtml(`${args.base}/markets/${slug}/`);
-      if (!detailHtml.includes(versioned)) row.reasons.push("live-detail-missing-versioned");
+      if (!detailHtml.includes(versioned)) row.reasons.push("live-detail-missing-cycle40b");
       const detailHasUnversionedAsImage =
         detailHtml.includes(`src="${unversioned}"`) ||
         detailHtml.includes(`url(${unversioned})`);
+      const detailHasCycle39AsImage =
+        detailHtml.includes(`src="${cycle39Legacy}"`) ||
+        detailHtml.includes(`url(${cycle39Legacy})`);
       if (detailHasUnversionedAsImage) row.reasons.push("live-detail-still-unversioned");
+      if (detailHasCycle39AsImage) row.reasons.push("live-detail-still-cycle39");
       if (row.reasons.length > 0) row.status = "FAIL";
     }
   }

@@ -75,13 +75,14 @@ export function Hero({
         <Link
           href={ctaPrimary.href}
           data-hero-cta="primary"
+          data-hero-cta-version="cycle40b"
           className={
             useImage
-              ? "inline-flex w-full items-center justify-center gap-1 whitespace-normal text-balance rounded-full bg-brass-400 px-1.5 py-2.5 text-[9px] font-semibold tracking-normal text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200 min-[360px]:gap-1.5 min-[360px]:px-2 min-[360px]:py-3 min-[360px]:text-[10px] min-[375px]:gap-2 min-[375px]:whitespace-nowrap min-[375px]:px-4 min-[375px]:text-[13px] min-[375px]:tracking-wide sm:w-auto sm:px-6 sm:text-sm lg:px-7"
+              ? "inline-flex w-full max-w-full min-w-0 items-center justify-center gap-1.5 whitespace-normal text-balance rounded-full bg-brass-400 px-3 py-3 text-[12px] font-semibold leading-tight tracking-normal text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200 min-[360px]:text-[13px] min-[400px]:px-4 sm:w-auto sm:px-6 sm:text-sm lg:px-7"
               : "inline-flex items-center gap-2 rounded-full bg-brass-400 px-8 py-3.5 text-sm font-semibold tracking-wide text-navy-900 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)] transition-colors hover:bg-brass-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-200"
           }
         >
-          {ctaPrimary.label}
+          <span className="min-w-0 text-balance">{ctaPrimary.label}</span>
           <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
         </Link>
       ) : null}
@@ -89,15 +90,16 @@ export function Hero({
         <Link
           href={ctaSecondary.href}
           data-hero-cta="secondary"
+          data-hero-cta-version="cycle40b"
           className={
             isCream
               ? "inline-flex items-center justify-center gap-2 rounded-full border border-navy-800/30 bg-cream-50/80 px-7 py-3 text-sm font-medium tracking-wide text-navy-800 transition-colors hover:border-brass-400 hover:text-brass-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
               : useImage
-                ? "inline-flex w-full items-center justify-center whitespace-normal text-balance rounded-full border border-cream-100/80 bg-navy-900/80 px-1.5 py-2.5 text-[9px] font-medium tracking-normal text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-300 min-[360px]:px-2 min-[360px]:py-3 min-[360px]:text-[10px] min-[375px]:whitespace-nowrap min-[375px]:px-4 min-[375px]:text-[13px] min-[375px]:tracking-wide sm:w-auto sm:px-6 sm:text-sm lg:px-7"
+                ? "inline-flex w-full max-w-full min-w-0 items-center justify-center whitespace-normal text-balance rounded-full border border-cream-100/80 bg-navy-900/80 px-3 py-3 text-[12px] font-medium leading-tight tracking-normal text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-300 min-[360px]:text-[13px] min-[400px]:px-4 sm:w-auto sm:px-6 sm:text-sm lg:px-7"
                 : "inline-flex items-center gap-2 rounded-full border border-cream-100/70 bg-navy-900/40 px-7 py-3 text-sm font-medium tracking-wide text-cream-50 transition-colors hover:border-brass-300 hover:text-brass-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-300"
           }
         >
-          {ctaSecondary.label}
+          <span className="min-w-0 text-balance">{ctaSecondary.label}</span>
         </Link>
       ) : null}
     </div>
@@ -107,10 +109,11 @@ export function Hero({
     <section
       data-component="hero"
       data-variant={background}
+      data-hero-overflow-version="cycle40b"
       className={
         isCream
-          ? "relative overflow-hidden bg-cream-100 text-navy-800"
-          : "relative overflow-hidden bg-navy-900 text-cream-100"
+          ? "relative w-full max-w-full overflow-hidden bg-cream-100 text-navy-800"
+          : "relative w-full max-w-full overflow-hidden bg-navy-900 text-cream-100"
       }
     >
       {useImage ? (
@@ -143,17 +146,17 @@ export function Hero({
       <div
         className={
           useImage
-            ? "relative mx-auto flex min-h-[440px] max-w-7xl items-center px-4 py-8 sm:min-h-[500px] sm:py-12 lg:min-h-[480px] lg:px-8 lg:py-6"
+            ? "relative mx-auto flex min-h-[440px] w-full max-w-7xl items-center px-4 py-8 sm:min-h-[500px] sm:py-12 lg:min-h-[480px] lg:px-8 lg:py-6"
             : "relative mx-auto max-w-7xl px-4 py-28 sm:py-32 lg:px-8 lg:py-40"
         }
       >
         <div className={useImage ? "w-full min-w-0 max-w-2xl" : "w-full"}>
           <div
             data-hero-copy-panel={useImage ? "true" : undefined}
-            data-hero-copy-panel-version={useImage ? "cycle39" : undefined}
+            data-hero-copy-panel-version={useImage ? "cycle40b" : undefined}
             className={
               useImage
-                ? "min-w-0 overflow-hidden rounded-sm border-l-2 border-brass-300 bg-navy-900/85 p-4 shadow-luxury min-[375px]:bg-navy-900/90 min-[375px]:p-5 sm:bg-navy-900/92 sm:p-6 lg:p-8"
+                ? "box-border min-w-0 w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-300 bg-navy-900/85 p-4 shadow-luxury [contain:inline-size] min-[375px]:bg-navy-900/90 min-[375px]:p-5 sm:bg-navy-900/92 sm:p-6 lg:p-8"
                 : ""
             }
           >

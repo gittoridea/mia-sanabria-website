@@ -1,0 +1,21 @@
+{
+  "slug": "sunrise",
+  "index": 1,
+  "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-1.png",
+  "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-1-meta.json",
+  "attempt_count": 1,
+  "prompt_used": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of a calm sunny South Florida lakeside scene in Sunrise, western Broward County, a mirror-still small community lake at warm afternoon, tall palms framing both sides of the composition, lush ornamental tropical landscaping along the lake edge in the foreground, refined planned-community residential rooflines barely visible across the lake, soft pastel sky reflection on the water, warm golden hour light, brass-tinted highlights, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Sunrise, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+  "metrics": {
+    "width": 1024,
+    "height": 1024,
+    "perimeter_white_ratio": 0.010749486652977413,
+    "perimeter_total": 194800,
+    "perimeter_near_white": 2094,
+    "mean_brightness": 132.99731318155654,
+    "mean_saturation_proxy": 0.3256008683240032
+  },
+  "accepted_by_automated_validator": true,
+  "rejection_reason": "",
+  "raw_bytes": 2051875,
+  "generated_at": "2026-05-17T00:06:33.904Z"
+}

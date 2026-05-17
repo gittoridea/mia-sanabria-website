@@ -1,0 +1,430 @@
+{
+  "schema_version": "cycle40b-v3-1.0.0",
+  "generated_at": "2026-05-17T00:06:46.118Z",
+  "model": "gemini-2.5-flash-image",
+  "candidates_per_slug": 3,
+  "max_perimeter_white_ratio": 0.25,
+  "dry_run": false,
+  "per_slug": {
+    "hollywood": {
+      "prompt": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of the iconic Hollywood Beach Florida brick-paver beachfront promenade in Broward County, a curving brick promenade arcing along a soft turquoise Atlantic shoreline, mature palms casting long shadows on the warm brick pavers, cream sand beach at the water line, low warm golden hour sky, soft amber afternoon light, brass-tinted highlights, calm turquoise water at the horizon, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Hollywood, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+      "contact_sheet": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/hollywood/contact-sheet.jpg",
+      "candidates": [
+        {
+          "index": 1,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/hollywood/cand-1.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/hollywood/cand-1-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.00002566735112936345,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 5,
+            "mean_brightness": 145.36571661631214,
+            "mean_saturation_proxy": 0.3476027828855346
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1884481
+        },
+        {
+          "index": 2,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/hollywood/cand-2.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/hollywood/cand-2-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 0,
+            "mean_brightness": 135.4359579086301,
+            "mean_saturation_proxy": 0.39622729249557326
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2007058
+        },
+        {
+          "index": 3,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/hollywood/cand-3.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/hollywood/cand-3-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 0,
+            "mean_brightness": 123.9832998911537,
+            "mean_saturation_proxy": 0.38244848377791507
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1924046
+        }
+      ]
+    },
+    "deerfield-beach": {
+      "prompt": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of the Deerfield Beach Atlantic coastal area in Broward County Florida at warm golden hour, a long wooden public ocean pier extending out over calm turquoise Atlantic water, soft surf rolling on cream sand in the foreground, mature coastal palms framing the composition on either side, refined coastal residential rooflines visible in the distant background, soft warm afternoon sunlight raking across the water surface, brass-tinted highlights, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Deerfield Beach, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+      "contact_sheet": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/deerfield-beach/contact-sheet.jpg",
+      "candidates": [
+        {
+          "index": 1,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/deerfield-beach/cand-1.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/deerfield-beach/cand-1-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.011601642710472279,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 2260,
+            "mean_brightness": 155.83088270823117,
+            "mean_saturation_proxy": 0.24766233267877025
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2096918
+        },
+        {
+          "index": 2,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/deerfield-beach/cand-2.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/deerfield-beach/cand-2-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.004984599589322382,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 971,
+            "mean_brightness": 155.7153110504116,
+            "mean_saturation_proxy": 0.2109433388488013
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1888521
+        },
+        {
+          "index": 3,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/deerfield-beach/cand-3.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/deerfield-beach/cand-3-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.00017967145790554414,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 35,
+            "mean_brightness": 165.28042348226035,
+            "mean_saturation_proxy": 0.23578873316252558
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1894006
+        }
+      ]
+    },
+    "weston": {
+      "prompt": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of an elegant master-planned community lakeside scene in Weston Florida, western Broward County, a calm reflective lake at warm late afternoon, mature oak shade trees and tall slender palms along the lake edge in the foreground, manicured emerald lawn rolling down to the water, refined waterfront residential rooflines visible in the distant background, soft warm golden hour light, brass-tinted highlights on the water, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Weston, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+      "contact_sheet": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/weston/contact-sheet.jpg",
+      "candidates": [
+        {
+          "index": 1,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/weston/cand-1.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/weston/cand-1-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.000010266940451745379,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 2,
+            "mean_brightness": 102.21693070729289,
+            "mean_saturation_proxy": 0.4039174868676311
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2186623
+        },
+        {
+          "index": 2,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/weston/cand-2.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/weston/cand-2-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.02211498973305955,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 4308,
+            "mean_brightness": 160.69292767842015,
+            "mean_saturation_proxy": 0.24733883405156892
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1661461
+        },
+        {
+          "index": 3,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/weston/cand-3.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/weston/cand-3-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 0,
+            "mean_brightness": 133.83815860748575,
+            "mean_saturation_proxy": 0.32093425653666047
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1752096
+        }
+      ]
+    },
+    "plantation": {
+      "prompt": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of a quiet South Florida residential street in Plantation, central Broward County, lined with a dense canopy of mature royal palms arching overhead, dappled warm afternoon sunlight on the road surface, lush emerald tropical landscaping along the curbs, refined residential lots visible behind the palm canopy, no traffic, calm and confident composition, warm golden hour ambient light, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Plantation, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+      "contact_sheet": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/contact-sheet.jpg",
+      "candidates": [
+        {
+          "index": 1,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-1.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-1-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.0001540041067761807,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 30,
+            "mean_brightness": 65.74779383341367,
+            "mean_saturation_proxy": 0.4156038025263609
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2208041
+        },
+        {
+          "index": 2,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-2.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-2-meta.json",
+          "attempt_count": 2,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.008264887063655031,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 1610,
+            "mean_brightness": 94.5810085932356,
+            "mean_saturation_proxy": 0.4100380364255096
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2332736
+        },
+        {
+          "index": 3,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-3.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/plantation/cand-3-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.00022073921971252567,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 43,
+            "mean_brightness": 76.48116906483976,
+            "mean_saturation_proxy": 0.3832163402673272
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2214703
+        }
+      ]
+    },
+    "coral-springs": {
+      "prompt": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of a wide tree-lined master-planned residential boulevard in Coral Springs Florida, northwest Broward County, a mature oak canopy arching overhead across both sides of the road, manicured landscaped median strip with low ornamental plantings, soft warm late afternoon sunlight raking across the road surface, distant suburban planned-community rooflines in the background, refined civic calm, brass-tinted highlights, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Coral Springs, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+      "contact_sheet": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/coral-springs/contact-sheet.jpg",
+      "candidates": [
+        {
+          "index": 1,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/coral-springs/cand-1.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/coral-springs/cand-1-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.003726899383983573,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 726,
+            "mean_brightness": 91.05325222015762,
+            "mean_saturation_proxy": 0.3237761515714275
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2260286
+        },
+        {
+          "index": 2,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/coral-springs/cand-2.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/coral-springs/cand-2-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.003095482546201232,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 603,
+            "mean_brightness": 89.5422372817982,
+            "mean_saturation_proxy": 0.3800165786077992
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2247005
+        },
+        {
+          "index": 3,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/coral-springs/cand-3.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/coral-springs/cand-3-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.0042351129363449695,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 825,
+            "mean_brightness": 89.45663102467957,
+            "mean_saturation_proxy": 0.4104767292384392
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2317161
+        }
+      ]
+    },
+    "davie": {
+      "prompt": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of an open equestrian-friendly Florida ranch estate landscape in Davie, central-western Broward County, a curving three-rail white wooden horse-trail fence winding through tall green pasture grass at warm late afternoon, distant tree line of mature trees, soft warm golden hour sunlight, low warm sky, refined ranch-estate residential rooflines barely visible in the distant background, brass-tinted highlights, no horses no riders no people, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Davie, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+      "contact_sheet": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/davie/contact-sheet.jpg",
+      "candidates": [
+        {
+          "index": 1,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/davie/cand-1.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/davie/cand-1-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 0,
+            "mean_brightness": 140.12306690215226,
+            "mean_saturation_proxy": 0.440692153171204
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1776865
+        },
+        {
+          "index": 2,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/davie/cand-2.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/davie/cand-2-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 0,
+            "mean_brightness": 124.04020818074704,
+            "mean_saturation_proxy": 0.48383469765805226
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1844900
+        },
+        {
+          "index": 3,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/davie/cand-3.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/davie/cand-3-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 0,
+            "mean_brightness": 145.2884378433217,
+            "mean_saturation_proxy": 0.3715187425753077
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1749488
+        }
+      ]
+    },
+    "sunrise": {
+      "prompt": "Create a documentary-style editorial PHOTOGRAPH (not a painting, not a drawing, not an illustration, not a digital painting, not a rendered concept-art image, not a framed artwork, not a canvas, not a gallery-wall composition). Output format must be a real-world photograph as if shot with a high-end DSLR or medium-format camera. The image MUST fill the entire frame edge-to-edge with NO frame, NO border, NO matting, NO white margin, NO canvas texture, NO gallery-wall presentation, NO drop shadow, NO 3D-perspective frame. Photoreal, natural light, editorial magazine quality. STRICT requirements:   - NO people, NO faces, NO silhouettes of people   - NO logos, NO text, NO license plates, NO readable street signs   - NO identifiable private residences or named landmarks   - Vertical portrait 4:5 framing native, suitable for both a 1200x1500 hero     tile and a 1200x630 OG crop (subject should not hug a single edge)   - Color palette consistent with refined South Florida luxury real-estate     editorial: natural sunlight tones, cream, soft golden, deep emerald     greens, calm blues, brass-tinted highlights.   - Subject: documentary-style editorial photograph of a calm sunny South Florida lakeside scene in Sunrise, western Broward County, a mirror-still small community lake at warm afternoon, tall palms framing both sides of the composition, lush ornamental tropical landscaping along the lake edge in the foreground, refined planned-community residential rooflines barely visible across the lake, soft pastel sky reflection on the water, warm golden hour light, brass-tinted highlights, full-bleed editorial composition that fills the entire frame edge-to-edge. Place: Sunrise, Florida. Final reminder: full-bleed photograph that completely fills the frame edge-to-edge; absolutely NO frame, border, canvas margin, or gallery presentation; NO people.",
+      "contact_sheet": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/contact-sheet.jpg",
+      "candidates": [
+        {
+          "index": 1,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-1.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-1-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.010749486652977413,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 2094,
+            "mean_brightness": 132.99731318155654,
+            "mean_saturation_proxy": 0.3256008683240032
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2051875
+        },
+        {
+          "index": 2,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-2.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-2-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.03832135523613963,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 7465,
+            "mean_brightness": 138.4475463231453,
+            "mean_saturation_proxy": 0.29699473705970564
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 2041272
+        },
+        {
+          "index": 3,
+          "raw_png_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-3.png",
+          "meta_path": "/home/torrey/code/mia-sanabria-website/docs/artifacts/cycle-40b-image-lab-hero-recovery/image-candidates/sunrise/cand-3-meta.json",
+          "attempt_count": 1,
+          "metrics": {
+            "width": 1024,
+            "height": 1024,
+            "perimeter_white_ratio": 0.014414784394250514,
+            "perimeter_total": 194800,
+            "perimeter_near_white": 2808,
+            "mean_brightness": 145.89374828338555,
+            "mean_saturation_proxy": 0.3008507119660777
+          },
+          "accepted_by_automated_validator": true,
+          "rejection_reason": "",
+          "raw_bytes": 1876937
+        }
+      ]
+    }
+  }
+}

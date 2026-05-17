@@ -1,0 +1,25 @@
+capture-baseline: 20 jobs · 5 routes × 4 viewports · concurrency 3 · base https://miasanabriarealtor.trueidea.com
+output: docs/artifacts/cycle-40-world-class-visual-recovery/live-before/screenshots
+  [3/20] ✓ / @ 1280x800 (2639ms)
+  [2/20] ✓ / @ 768x1024 (2688ms)
+  [1/20] ✓ / @ 375x812 (3091ms)
+  [4/20] ✓ / @ 1440x1000 (2626ms)
+  [5/20] ✓ /markets/ @ 375x812 (3782ms)
+  [6/20] ✓ /markets/ @ 768x1024 (3681ms)
+  [7/20] ✓ /markets/ @ 1280x800 (2827ms)
+  [9/20] ✓ /markets/deerfield-beach/ @ 375x812 (1987ms)
+  [10/20] ✓ /markets/deerfield-beach/ @ 768x1024 (2024ms)
+  [11/20] ✓ /markets/deerfield-beach/ @ 1280x800 (2072ms)
+  [8/20] ✓ /markets/ @ 1440x1000 (6442ms)
+  [12/20] ✓ /markets/deerfield-beach/ @ 1440x1000 (2788ms)
+  [13/20] ✓ /markets/weston/ @ 375x812 (2375ms)
+  [14/20] ✓ /markets/weston/ @ 768x1024 (2672ms)
+  [15/20] ✓ /markets/weston/ @ 1280x800 (3174ms)
+  [16/20] ✓ /markets/weston/ @ 1440x1000 (3452ms)
+  [17/20] ✓ /markets/davie/ @ 375x812 (1995ms)
+  [18/20] ✓ /markets/davie/ @ 768x1024 (2141ms)
+  [19/20] ✓ /markets/davie/ @ 1280x800 (2148ms)
+  [20/20] ✓ /markets/davie/ @ 1440x1000 (2146ms)
+
+Done: 20/20 ok · 0 failed · 20s
+Summary: docs/artifacts/cycle-40-world-class-visual-recovery/live-before/screenshots/_capture-summary.json

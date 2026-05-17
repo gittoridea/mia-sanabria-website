@@ -49,8 +49,8 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
       data-home-hero-search="true"
       className={
         floating
-          ? "rounded-sm border-l-2 border-brass-400 bg-cream-50/95 p-4 shadow-[0_18px_50px_-20px_rgba(15,42,68,0.55)] sm:p-5 lg:p-6"
-          : "rounded-sm border-l-2 border-brass-400 bg-cream-50 p-4 shadow-luxury sm:p-5 lg:p-6"
+          ? "box-border w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-400 bg-cream-50/95 p-4 shadow-[0_18px_50px_-20px_rgba(15,42,68,0.55)] [contain:inline-size] sm:p-5 lg:p-6"
+          : "box-border w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-400 bg-cream-50 p-4 shadow-luxury sm:p-5 lg:p-6"
       }
     >
       <input type="hidden" name="source" value="home-hero" />
@@ -66,7 +66,7 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
             id="hero-search-city"
             name="city"
             defaultValue=""
-            className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+            className="box-border min-w-0 max-w-full w-full min-h-[44px] rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
           >
             <option value="">Any approved area</option>
             {MIA_APPROVED_NEIGHBORHOODS.map((n) => (
@@ -88,7 +88,7 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
             id="hero-search-price"
             name="minPrice"
             defaultValue=""
-            className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+            className="box-border min-w-0 max-w-full w-full min-h-[44px] rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
           >
             {PRICE_OPTIONS.map((p) => (
               <option key={p.value} value={p.value}>
@@ -109,7 +109,7 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
             id="hero-search-beds"
             name="beds"
             defaultValue=""
-            className="min-h-[44px] w-full rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
+            className="box-border min-w-0 max-w-full w-full min-h-[44px] rounded-sm border border-navy-800/20 bg-cream-50 px-3 py-2 text-[15px] text-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-400"
           >
             {BED_OPTIONS.map((b) => (
               <option key={b.value} value={b.value}>
@@ -143,10 +143,11 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
       <div
         data-component="hero-search"
         data-floating="true"
+        data-hero-search-version="cycle40b"
         aria-label="Listings search"
-        className="pointer-events-none relative z-20 -mt-20 px-4 sm:-mt-24 lg:px-8"
+        className="pointer-events-none relative z-20 -mt-20 w-full max-w-full px-4 sm:-mt-24 lg:px-8"
       >
-        <div className="pointer-events-auto mx-auto max-w-7xl">{formCard}</div>
+        <div className="pointer-events-auto mx-auto w-full max-w-7xl min-w-0">{formCard}</div>
       </div>
     );
   }

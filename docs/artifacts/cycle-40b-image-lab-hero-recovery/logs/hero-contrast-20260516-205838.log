@@ -1,0 +1,2 @@
+$ bun run scripts/audit-hero-pixel-contrast.ts --samples=3
+audit:hero-contrast — primed 37 hero asset(s) into in-memory cache
