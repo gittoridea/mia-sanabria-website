@@ -1,7 +1,7 @@
 # Home Search → Bridge E2E
 
-base: http://127.0.0.1:4211
-target: http://127.0.0.1:4211/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero
+base: http://127.0.0.1:4220
+target: http://127.0.0.1:4220/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero
 bridge_mode: fallback
 passed: 11/11 | failed: 0
 

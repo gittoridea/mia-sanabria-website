@@ -1346,7 +1346,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing changes corridor by corridor. Oceanfront condominium, pier-adjacent single-family, Cove residential, Intracoastal-side, and interior all trade against different cohorts. A property-specific review beats a city-wide average.",
     latitude: 26.3184,
     longitude: -80.0998,
-    heroImage: "/markets/deerfield-beach-cycle39.jpg",
+    heroImage: "/markets/deerfield-beach-cycle40b.jpg",
     localContext:
       "Deerfield Beach occupies the northeastern corner of Broward County, bordered on the north by Boca Raton in Palm Beach County and on the south by Pompano Beach and Lighthouse Point. The Hillsboro Inlet to the south anchors the deepwater route to the Atlantic for boat-routed canal residences. The Hillsboro Boulevard / Federal Highway / A1A axis frames the public-corridor identity. Quiet Waters Park, a regional Broward Parks system facility, sits inland and is one of the city's better-known named landmarks.",
     county: "Broward County",
@@ -1421,7 +1421,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing depends on corridor. Beach-corridor condominium, A1A-adjacent, Intracoastal-side single-family, downtown / Young Circle, and interior single-family all trade against different cohorts. A property-specific review beats a city-wide average.",
     latitude: 26.0112,
     longitude: -80.1495,
-    heroImage: "/markets/hollywood-cycle39.jpg",
+    heroImage: "/markets/hollywood-cycle40b.jpg",
     localContext:
       "Hollywood occupies south Broward County between Hallandale Beach to the south and Dania Beach to the north, with West Park on the western boundary. The Atlantic Ocean frames the east; the Hollywood Broadwalk is the public-corridor anchor. Young Circle in the downtown core hosts ArtsPark at Young Circle. The Intracoastal Waterway and a network of residential canals route inland buyers to the inlet shared with Port Everglades to the north. The city was founded in 1925 by Joseph W. Young as a planned Florida-coast development.",
     county: "Broward County",
@@ -1495,7 +1495,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing turns on lot, canopy adjacency, and the architectural state of the residence. Established single-family on a mature-canopy street trades against a different cohort than a newer gated-subdivision residence. A property-specific review beats a city average.",
     latitude: 26.1275,
     longitude: -80.2331,
-    heroImage: "/markets/plantation-cycle39.jpg",
+    heroImage: "/markets/plantation-cycle40b.jpg",
     localContext:
       "Plantation sits in central Broward County, bordered on the north by Sunrise, on the south by Davie, and on the east by Fort Lauderdale and the unincorporated areas adjacent to it. The city was incorporated in 1953. Major civic and commercial spines run along Broward Boulevard (east-west), University Drive (north-south), Sunrise Boulevard, Peters Road, and Pine Island Road. Plantation Heritage Park, a Broward County Parks system facility, is a named regional landmark. The city is predominantly single-family residential with mixed-use along the major commercial corridors.",
     county: "Broward County",
@@ -1569,7 +1569,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing turns on the named community first and the residence second. Comparable-sales cohorts diverge sharply across Weston communities. A property-specific review against the right named-community cohort beats a city-wide average.",
     latitude: 26.1003,
     longitude: -80.3997,
-    heroImage: "/markets/weston-cycle39.jpg",
+    heroImage: "/markets/weston-cycle40b.jpg",
     localContext:
       "Weston sits at the western edge of urbanized Broward County, bordered on the west by the Everglades Water Conservation Area. The city was incorporated in 1996 after Arvida had been developing the area under the Weston master plan since the 1980s. Named Weston communities include Weston Hills, the Falls, Country Isles, Bonaventure, Savanna, and Windmill Ranch Estates — each is a distinct residential cohort with its own community-covenant scope, road-grid pattern, and architectural era. The civic and commercial spine runs along Royal Palm Boulevard, Indian Trace, Bonaventure Boulevard, and Saddle Club Road.",
     county: "Broward County",
@@ -1644,7 +1644,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing turns on the named subdivision, architectural era, and lot specifics. Comparable-sales cohorts diverge by subdivision; a subdivision-specific brief outperforms a city-wide average.",
     latitude: 26.2710,
     longitude: -80.2706,
-    heroImage: "/markets/coral-springs-cycle39.jpg",
+    heroImage: "/markets/coral-springs-cycle40b.jpg",
     localContext:
       "Coral Springs occupies northwestern Broward County, bordered on the north by Parkland, on the east by Coconut Creek, and on the south and east by Tamarac and Margate. The city was incorporated in 1963 and is named for the original Coral Ridge Properties master plan filed the same year. The civic and commercial spine runs along Sample Road (east-west), University Drive (north-south), and Atlantic Boulevard. The Coral Springs Sportsplex and named city parks frame the public-recreation identity. The residential mix runs from original 1960s and 1970s single-family subdivisions to newer gated-community pockets.",
     county: "Broward County",
@@ -1718,7 +1718,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing turns on lot size, zoning use, architectural state, and proximity to the equestrian-trail corridor or the college campuses. Comparable-sales cohorts diverge sharply across these briefs.",
     latitude: 26.0628,
     longitude: -80.2331,
-    heroImage: "/markets/davie-cycle39.jpg",
+    heroImage: "/markets/davie-cycle40b.jpg",
     localContext:
       "Davie sits in central Broward County, bordered on the north by Plantation, on the south by Pembroke Pines, and on the east by Fort Lauderdale and the unincorporated areas. The town was first incorporated in 1925 and re-established as a municipal corporation in 1961. Davie maintains an active Equestrian Trail network that runs through several named residential pockets, and carries a Tree City USA designation from the Arbor Day Foundation. The college corridor includes Nova Southeastern University's main campus, the Broward College Central Campus, and Florida Atlantic University's Davie campus. Major axes run along Griffin Road, Stirling Road, Nova Drive, Davie Road, and University Drive.",
     county: "Broward County",
@@ -1793,7 +1793,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       "Pricing turns on the named subdivision, architectural era, and proximity to the Sawgrass Expressway or Sawgrass Mills corridor. Comparable-sales cohorts diverge by subdivision; a subdivision-specific brief outperforms a city-wide average.",
     latitude: 26.1670,
     longitude: -80.2566,
-    heroImage: "/markets/sunrise-cycle39.jpg",
+    heroImage: "/markets/sunrise-cycle40b.jpg",
     localContext:
       "Sunrise occupies western Broward County. The city was incorporated in 1961, originally as Sunrise Golf Village, and shifted to its current name as the residential character broadened beyond the original golf-community plan. The civic and commercial identity is anchored by the Sawgrass Mills retail district on the western perimeter and by the BB&T Center / Amerant Bank Arena, home of the NHL Florida Panthers. The Sawgrass Expressway, Florida Turnpike, and I-595 provide expressway access. The residential mix runs from established single-family in central Sunrise — the Springs, Pine Island corridor — to newer master-planned subdivisions in the western Sawgrass Lakes corridor.",
     county: "Broward County",

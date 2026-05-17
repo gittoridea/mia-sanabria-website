@@ -1,6 +1,6 @@
 # audit:fort-lauderdale-standard report
 
-**Generated:** 2026-05-16T15:40:46.177Z
+**Generated:** 2026-05-17T02:15:42.355Z
 
 **Summary:** 31 PASS · 0 WARN · 0 FAIL
 

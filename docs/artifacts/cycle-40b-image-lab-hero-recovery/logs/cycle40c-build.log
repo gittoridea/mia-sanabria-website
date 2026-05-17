@@ -1,0 +1,50 @@
+   Finalizing page optimization ...
+   Collecting build traces ...
+   Exporting (0/3) ...
+ ✓ Exporting (3/3)
+
+Route (app)                                                            Size     First Load JS
+┌ ○ /                                                                  2.89 kB         117 kB
+├ ○ /_not-found                                                        138 B           106 kB
+├ ○ /about                                                             216 B           114 kB
+├ ○ /accessibility                                                     190 B           114 kB
+├ ○ /buyers                                                            216 B           114 kB
+├ ○ /contact                                                           216 B           114 kB
+├ ○ /dmca                                                              190 B           114 kB
+├ ● /downloads/[slug]                                                  138 B           106 kB
+├   ├ /downloads/waterfront-buyer-due-diligence-checklist
+├   ├ /downloads/luxury-seller-pre-listing-checklist
+├   └ /downloads/fort-lauderdale-waterfront-valuation-prep-sheet
+├ ○ /home-search                                                       7.28 kB         122 kB
+├ ○ /insights                                                          216 B           114 kB
+├ ● /insights/[slug]                                                   216 B           114 kB
+├   ├ /insights/fort-lauderdale-waterfront-buyer-guide
+├   ├ /insights/dockage-seawalls-bridge-clearance-route-to-inlet
+├   ├ /insights/positioning-luxury-waterfront-eastern-fort-lauderdale
+├   └ [+9 more paths]
+├ ○ /manifest.webmanifest                                              0 B                0 B
+├ ○ /markets                                                           216 B           114 kB
+├ ● /markets/[slug]                                                    216 B           114 kB
+├   ├ /markets/fort-lauderdale
+├   ├ /markets/coral-ridge
+├   ├ /markets/victoria-park
+├   └ [+20 more paths]
+├ ○ /privacy                                                           190 B           114 kB
+├ ○ /robots.txt                                                        0 B                0 B
+├ ○ /sellers                                                           216 B           114 kB
+├ ○ /sitemap.xml                                                       0 B                0 B
+├ ○ /terms                                                             190 B           114 kB
+├ ○ /thank-you                                                         216 B           114 kB
+├ ○ /thank-you/buyer-brief                                             216 B           114 kB
+├ ○ /thank-you/market-brief                                            216 B           114 kB
+├ ○ /thank-you/valuation                                               216 B           114 kB
+└ ○ /valuation                                                         216 B           114 kB
++ First Load JS shared by all                                          105 kB
+  ├ chunks/4bd1b696-c41c22badabd4b31.js                                52.9 kB
+  ├ chunks/517-e142ec6174824ab2.js                                     50.5 kB
+  └ other shared chunks (total)                                        1.91 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

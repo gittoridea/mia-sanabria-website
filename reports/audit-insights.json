@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-16T15:24:08.290Z",
+  "generated": "2026-05-17T01:58:11.265Z",
   "summary": {
-    "pass": 547,
-    "warn": 0,
+    "pass": 535,
+    "warn": 12,
     "fail": 0
   },
   "rows": [
@@ -159,8 +159,8 @@
     {
       "slug": "fort-lauderdale-waterfront-buyer-guide",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "fort-lauderdale-waterfront-buyer-guide",
@@ -435,8 +435,8 @@
     {
       "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "dockage-seawalls-bridge-clearance-route-to-inlet",
@@ -711,8 +711,8 @@
     {
       "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "positioning-luxury-waterfront-eastern-fort-lauderdale",
@@ -993,8 +993,8 @@
     {
       "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "las-olas-vs-seven-isles-vs-harbor-beach",
@@ -1263,8 +1263,8 @@
     {
       "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "bay-colony-and-bermuda-riviera-private-waterfront",
@@ -1527,8 +1527,8 @@
     {
       "slug": "coral-ridge-victoria-park-rio-vista",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "coral-ridge-victoria-park-rio-vista",
@@ -1791,8 +1791,8 @@
     {
       "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "lighthouse-point-sea-ranch-lakes-hillsboro-mile",
@@ -2061,8 +2061,8 @@
     {
       "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "boca-raton-luxury-buyers-club-beach-waterfront",
@@ -2319,8 +2319,8 @@
     {
       "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "delray-beach-luxury-buyers-walkability-beach-waterfront",
@@ -2577,8 +2577,8 @@
     {
       "slug": "why-automated-valuations-miss-luxury-waterfront",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "why-automated-valuations-miss-luxury-waterfront",
@@ -2859,8 +2859,8 @@
     {
       "slug": "preparing-waterfront-residence-private-market-conversations",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "preparing-waterfront-residence-private-market-conversations",
@@ -3141,8 +3141,8 @@
     {
       "slug": "private-buyer-brief-defining-the-search",
       "check": "date.notBackdated",
-      "status": "PASS",
-      "detail": "current"
+      "status": "WARN",
+      "detail": "datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating."
     },
     {
       "slug": "private-buyer-brief-defining-the-search",

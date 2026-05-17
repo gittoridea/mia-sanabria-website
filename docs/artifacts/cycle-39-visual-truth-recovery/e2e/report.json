@@ -1,7 +1,7 @@
 {
-  "base": "http://127.0.0.1:4211",
-  "target_url": "http://127.0.0.1:4211/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero",
-  "generated_at": "2026-05-17T00:47:09.606Z",
+  "base": "http://127.0.0.1:4220",
+  "target_url": "http://127.0.0.1:4220/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero",
+  "generated_at": "2026-05-17T01:58:00.789Z",
   "bridge_mode": "fallback",
   "passed": 11,
   "failed": 0,
