@@ -8,8 +8,8 @@ generated_at: 2026-05-17
 
 ```yaml
 branch: main
-head_at_close: <set after Phase 12 closeout commit + alignment deploy>
-origin_main: <same as head_at_close>
+head_at_close: 76b5bd5ab34b69060af536877b0e93ad80860205
+origin_main: 76b5bd5ab34b69060af536877b0e93ad80860205
 working_tree_after_close: clean of source/scripts deltas; same pre-existing untracked sidecars
   (docs/artifacts/cycle-40b-.../logs/staging-deploy-cycle40c-final-alignment-*.log,
    docs/artifacts/cycle-41-.../logs/*.pid,

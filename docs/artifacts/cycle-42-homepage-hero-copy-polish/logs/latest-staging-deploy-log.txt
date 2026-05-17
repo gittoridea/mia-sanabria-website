@@ -1,1 +1,1 @@
-docs/artifacts/cycle-42-homepage-hero-copy-polish/logs/staging-deploy-20260517-123230.log
+docs/artifacts/cycle-42-homepage-hero-copy-polish/logs/staging-deploy-alignment-20260517-130339.log

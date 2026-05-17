@@ -7,13 +7,27 @@ generated_at: 2026-05-17
 # Cycle 42 — Final Deploy Alignment Report
 
 ```yaml
-origin_main_head:                                       82c70452ceed37c07e0e6f7d48735d6a41c4c833
-deployed_commit:                                        82c70452ceed37c07e0e6f7d48735d6a41c4c833
-post_deploy_commit_made:                                pending_phase_12_records_update
-second_alignment_deploy_needed:                         tbd_per_below
-second_alignment_deploy_exit_code:                      n/a_yet
-final_deployed_commit_equals_origin_main_head:          tbd_at_phase_12_close
+origin_main_head:                                       76b5bd5ab34b69060af536877b0e93ad80860205
+deployed_commit_phase_8:                                82c70452ceed37c07e0e6f7d48735d6a41c4c833
+deployed_commit_phase_12:                               76b5bd5ab34b69060af536877b0e93ad80860205
+post_deploy_commit_made:                                yes — closeout bundle (Cycle 42 Phase 10+ reports + ISA + decision record)
+second_alignment_deploy_needed:                         yes — per Cycle 40C/41 precedent and brief's "if any commit happens after deploy, deploy again" rule
+second_alignment_deploy_session:                        mia-cycle42-alignment-deploy-20260517-130339
+second_alignment_deploy_log:                            docs/artifacts/cycle-42-homepage-hero-copy-polish/logs/staging-deploy-alignment-20260517-130339.log
+second_alignment_deploy_exit_code:                      0
+second_alignment_deploy_dokploy_duration_seconds:       106
+final_deployed_commit_equals_origin_main_head:          true
+post_alignment_etag:                                    'dil3wsiarny853qi'   # byte-equivalent build (docs-only commit)
+post_alignment_last_modified:                           Sun, 17 May 2026 16:53:14 GMT
+post_alignment_new_copy_count_on_live_home:             2
+post_alignment_old_copy_count_on_live_home:             0
 ```
+
+## Alignment outcome notes
+
+The closeout commit `76b5bd5` is a markdown/HTML/log-only delta — no source, scripts, package.json, or any input to the build pipeline changed. Dokploy successfully rebuilt and redeployed, the deploy pipeline took 106s, and the resulting build artifact is byte-equivalent to the Phase 8 artifact (Next.js content-hash-based etags reflect this: the homepage etag remains `dil3wsiarny853qi`).
+
+This is the expected behavior for a docs-only alignment deploy and the same pattern Cycle 40C/41 used. The deployed SHA is now aligned with origin/main HEAD, and the user-visible content is identical to (and binary-identical to) the Phase 8 output. Cache-busted curl confirms the new copy ("Begin with an area" x2) and absence of the old copy ("Bridge-backed" x0) on live.
 
 ## Plan
 
