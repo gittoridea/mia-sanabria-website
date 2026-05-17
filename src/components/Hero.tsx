@@ -12,6 +12,7 @@ export function Hero({
   background = "navy",
   imageSrc,
   imageAlt,
+  imagePanelWidth = "default",
 }: {
   eyebrow?: string;
   /**
@@ -27,6 +28,16 @@ export function Hero({
   background?: "navy" | "cream" | "image";
   imageSrc?: string;
   imageAlt?: string;
+  /**
+   * Image-mode copy panel max-width.
+   *   - "default" (legacy): `max-w-2xl` always — the safe width that
+   *     keeps longer market-page H1s on 2-3 lines and the primary CTA
+   *     above the desktop fold (audit:rendered fold check).
+   *   - "narrow" (Cycle 41 homepage): steps to `sm:max-w-md lg:max-w-md
+   *     xl:max-w-lg` so the navy panel no longer dominates the image.
+   *     Only safe for short, two-line homepage H1.
+   */
+  imagePanelWidth?: "default" | "narrow";
 }) {
   const useImage = background === "image" && imageSrc;
   const isCream = background === "cream";
@@ -127,15 +138,25 @@ export function Hero({
             className="object-cover object-center"
           />
           <div aria-hidden data-hero-overlay="mood" className="absolute inset-0 bg-navy-900/20" />
+          {/* Cycle 41 — lighter content scrim so the waterfront image
+              reads as the primary visual anchor rather than background
+              filler. Left-side dim preserves panel readability; right
+              side stays clear. */}
           <div
             aria-hidden
             data-hero-overlay="content-scrim"
-            className="absolute inset-0 bg-gradient-to-r from-navy-900/45 via-navy-900/20 to-navy-900/10"
+            data-hero-overlay-version="cycle41"
+            className="absolute inset-0 bg-gradient-to-r from-navy-900/35 via-navy-900/10 to-transparent"
           />
+          {/* Cycle 41 — softened bottom scrim. Prior /85 from-top was a
+              second dark mass competing with the copy panel; /55 keeps
+              the search-card seam legible without dragging the image
+              into a second navy zone. */}
           <div
             aria-hidden
             data-hero-overlay="cta-scrim"
-            className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy-900/85 via-navy-900/45 to-transparent"
+            data-hero-overlay-version="cycle41"
+            className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy-900/55 via-navy-900/20 to-transparent"
           />
         </>
       ) : null}
@@ -145,18 +166,44 @@ export function Hero({
       />
       <div
         className={
+          /* Cycle 41 — keep lg min-h/py close to the Cycle 9 above-fold
+             baseline (lg:min-h-[480px] lg:py-6) so the primary CTA stays
+             above the desktop fold (audit:rendered.primaryCtaAboveFoldDesktop
+             check: CTA.bottom <= vh - 112). The image-as-anchor effect at
+             lg comes from the narrower copy column (lg:max-w-md) and the
+             lighter panel/scrim opacities, not from a taller hero. */
           useImage
             ? "relative mx-auto flex min-h-[440px] w-full max-w-7xl items-center px-4 py-8 sm:min-h-[500px] sm:py-12 lg:min-h-[480px] lg:px-8 lg:py-6"
             : "relative mx-auto max-w-7xl px-4 py-28 sm:py-32 lg:px-8 lg:py-40"
         }
       >
-        <div className={useImage ? "w-full min-w-0 max-w-2xl" : "w-full"}>
+        <div
+          className={
+            /* Cycle 41 — homepage opts into "narrow" max-w to let the
+               waterfront image be the visual lead; other image-mode pages
+               keep the legacy "default" max-w-2xl so their longer H1s
+               don't wrap to a panel-tall stack that pushes CTAs below
+               the desktop fold (audit:rendered.primaryCtaAboveFoldDesktop). */
+            useImage
+              ? imagePanelWidth === "narrow"
+                ? "w-full min-w-0 max-w-2xl sm:max-w-md lg:max-w-md xl:max-w-lg"
+                : "w-full min-w-0 max-w-2xl"
+              : "w-full"
+          }
+        >
           <div
             data-hero-copy-panel={useImage ? "true" : undefined}
-            data-hero-copy-panel-version={useImage ? "cycle40b" : undefined}
+            data-hero-copy-panel-version={useImage ? "cycle41" : undefined}
             className={
+              /* Cycle 41 — lighter panel opacity at sm+ so the dark mass
+                 no longer dominates the image. Small-mobile retains a
+                 /9X token (min-[375px]:bg-navy-900/90) for both
+                 readability and brand.heroH1ContrastTokens audit token
+                 detection. sm+ steps down (/72) and lg further (/68)
+                 to let the waterfront image breathe. Padding trimmed
+                 by one step at lg. */
               useImage
-                ? "box-border min-w-0 w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-300 bg-navy-900/85 p-4 shadow-luxury [contain:inline-size] min-[375px]:bg-navy-900/90 min-[375px]:p-5 sm:bg-navy-900/92 sm:p-6 lg:p-8"
+                ? "box-border min-w-0 w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-300 bg-navy-900/85 p-4 shadow-luxury [contain:inline-size] min-[375px]:bg-navy-900/90 min-[375px]:p-5 sm:bg-navy-900/72 sm:p-6 lg:bg-navy-900/68 lg:p-7"
                 : ""
             }
           >
@@ -190,7 +237,16 @@ export function Hero({
                 isCream
                   ? "mt-5 w-full max-w-full font-display text-[20px] font-semibold leading-[1.2] tracking-normal text-navy-800 sm:max-w-4xl sm:text-[32px] sm:leading-[1.1] md:text-5xl lg:text-6xl break-words [overflow-wrap:anywhere]"
                   : useImage
-                    ? "mt-4 w-full max-w-full min-w-0 break-words font-display text-[16px] font-bold leading-[1.18] tracking-normal text-cream-50 [overflow-wrap:anywhere] [word-break:normal] min-[375px]:text-[17px] sm:max-w-xl sm:text-[26px] sm:leading-[1.1] md:text-[32px] lg:text-[36px] lg:leading-[1.08]"
+                    ? /* Cycle 41 — tighter H1 leading on lg so the two-line
+                         homepage H1 reads as one composed mark instead of
+                         two stacked labels. lg size kept at the Cycle 40C
+                         baseline 36px (a 38px bump pushed long market H1s
+                         from 2 to 3 lines and tripped audit:rendered's
+                         primaryCtaAboveFoldDesktop check). The panel
+                         background carries WCAG contrast; no text shadow
+                         added (cycle-5/6 navy-glow halo audit
+                         anti-pattern). */
+                      "mt-4 w-full max-w-full min-w-0 break-words font-display text-[16px] font-bold leading-[1.18] tracking-normal text-cream-50 [overflow-wrap:anywhere] [word-break:normal] min-[375px]:text-[17px] sm:max-w-xl sm:text-[26px] sm:leading-[1.08] md:text-[32px] md:leading-[1.06] lg:text-[36px] lg:leading-[1.04]"
                     : "mt-5 w-full max-w-full font-display text-[20px] font-semibold leading-[1.2] tracking-normal text-cream-50 sm:max-w-4xl sm:text-[32px] sm:leading-[1.1] md:text-5xl lg:text-6xl break-words [overflow-wrap:anywhere]"
               }
             >

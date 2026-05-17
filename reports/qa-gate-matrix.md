@@ -1,6 +1,6 @@
 # QA-Gate Matrix — Cycle 19A-M
 
-Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-17T02:35:57.278Z
+Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-17T13:51:57.707Z
 
 **56 routes scanned** · severity → critical 0 · high 4 · medium 1 · low 56
 
@@ -10,112 +10,112 @@ Base: `https://miasanabriarealtor.trueidea.com`  ·  Generated: 2026-05-17T02:35
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/` | ✓ | 56 | 159 | 6 | 74 | ✓ | ✓ | other | ✓ | ✓ | l:noindex(c6) |
+| `/` | ✓ | 56 | 159 | 6 | 75 | ✓ | ✓ | other | ✓ | ✓ | l:noindex(c6) |
 
 ## other (5 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/404` | ✓ | 39 | 132 | 2 | 39 | ✓ | — | — | ✓ | — | l:noindex(c6) |
-| `/downloads/fort-lauderdale-waterfront-valuation-prep-sheet` | ✓ | 62 | 97 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
-| `/downloads/luxury-seller-pre-listing-checklist` | ✓ | 50 | 85 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
-| `/downloads/waterfront-buyer-due-diligence-checklist` | ✓ | 55 | 90 | 2 | 37 | ✓ | — | — | ✓ | — | l:noindex(c6) |
-| `/home-search` | ✓ | 50 | 144 | 3 | 43 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/404` | ✓ | 39 | 132 | 2 | 40 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/downloads/fort-lauderdale-waterfront-valuation-prep-sheet` | ✓ | 62 | 97 | 2 | 38 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/downloads/luxury-seller-pre-listing-checklist` | ✓ | 50 | 85 | 2 | 38 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/downloads/waterfront-buyer-due-diligence-checklist` | ✓ | 55 | 90 | 2 | 38 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/home-search` | ✓ | 50 | 144 | 3 | 44 | ✓ | — | — | ✓ | — | l:noindex(c6) |
 
 ## identity (1 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/about` | ✓ | 60 | 152 | 6 | 44 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/about` | ✓ | 60 | 152 | 6 | 45 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 
 ## legal (4 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/accessibility` | ✓ | 38 | 131 | 4 | 37 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
-| `/dmca` | ✓ | 26 | 117 | 4 | 37 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
-| `/privacy` | ✓ | 29 | 141 | 4 | 37 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
-| `/terms` | ✓ | 31 | 136 | 4 | 38 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
+| `/accessibility` | ✓ | 38 | 131 | 4 | 38 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
+| `/dmca` | ✓ | 26 | 117 | 4 | 38 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
+| `/privacy` | ✓ | 29 | 141 | 4 | 38 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
+| `/terms` | ✓ | 31 | 136 | 4 | 39 | ✓ | — | — | ✓ | — | h:legal_review(c5) l:noindex(c6) |
 
 ## service (3 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/buyers` | ✓ | 52 | 159 | 7 | 49 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/sellers` | ✓ | 58 | 152 | 7 | 49 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/valuation` | ✓ | 49 | 141 | 6 | 46 | ✓ | ✓ | mailto | ✓ | ✓ | l:noindex(c6) |
+| `/buyers` | ✓ | 52 | 159 | 7 | 50 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/sellers` | ✓ | 58 | 152 | 7 | 50 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/valuation` | ✓ | 49 | 141 | 6 | 47 | ✓ | ✓ | mailto | ✓ | ✓ | l:noindex(c6) |
 
 ## contact (1 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/contact` | ✓ | 58 | 141 | 8 | 42 | ✓ | ✓ | mailto | ✓ | ✓ | m:lead_capture(c4) l:noindex(c6) |
+| `/contact` | ✓ | 58 | 141 | 8 | 43 | ✓ | ✓ | mailto | ✓ | ✓ | m:lead_capture(c4) l:noindex(c6) |
 
 ## insights_index (1 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/insights` | ✓ | 55 | 152 | 4 | 63 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
+| `/insights` | ✓ | 55 | 152 | 4 | 64 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
 
 ## insight_post (12 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/insights/bay-colony-and-bermuda-riviera-private-waterfront` | ✓ | 59 | 143 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/boca-raton-luxury-buyers-club-beach-waterfront` | ✓ | 48 | 147 | 5 | 50 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/coral-ridge-victoria-park-rio-vista` | ✓ | 50 | 129 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/delray-beach-luxury-buyers-walkability-beach-waterfront` | ✓ | 52 | 144 | 5 | 50 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/dockage-seawalls-bridge-clearance-route-to-inlet` | ✓ | 55 | 146 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/fort-lauderdale-waterfront-buyer-guide` | ✓ | 54 | 148 | 5 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/insights/las-olas-vs-seven-isles-vs-harbor-beach` | ✓ | 47 | 153 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile` | ✓ | 49 | 158 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/positioning-luxury-waterfront-eastern-fort-lauderdale` | ✓ | 55 | 150 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/preparing-waterfront-residence-private-market-conversations` | ✓ | 51 | 135 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/private-buyer-brief-defining-the-search` | ✓ | 42 | 145 | 5 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/insights/why-automated-valuations-miss-luxury-waterfront` | ✓ | 47 | 136 | 5 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/insights/bay-colony-and-bermuda-riviera-private-waterfront` | ✓ | 59 | 143 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/boca-raton-luxury-buyers-club-beach-waterfront` | ✓ | 48 | 147 | 5 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/coral-ridge-victoria-park-rio-vista` | ✓ | 50 | 129 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/delray-beach-luxury-buyers-walkability-beach-waterfront` | ✓ | 52 | 144 | 5 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/dockage-seawalls-bridge-clearance-route-to-inlet` | ✓ | 55 | 146 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/fort-lauderdale-waterfront-buyer-guide` | ✓ | 54 | 148 | 5 | 53 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/insights/las-olas-vs-seven-isles-vs-harbor-beach` | ✓ | 47 | 153 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile` | ✓ | 49 | 158 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/positioning-luxury-waterfront-eastern-fort-lauderdale` | ✓ | 55 | 150 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/preparing-waterfront-residence-private-market-conversations` | ✓ | 51 | 135 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/private-buyer-brief-defining-the-search` | ✓ | 42 | 145 | 5 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/insights/why-automated-valuations-miss-luxury-waterfront` | ✓ | 47 | 136 | 5 | 53 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 
 ## markets_index (1 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/markets` | ✓ | 51 | 157 | 4 | 67 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets` | ✓ | 51 | 157 | 4 | 68 | ✓ | — | — | ✓ | ✓ | l:noindex(c6) |
 
 ## market_detail (23 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/markets/bay-colony` | ✓ | 44 | 151 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/bermuda-riviera` | ✓ | 49 | 155 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/boca-raton` | ✓ | 44 | 150 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/coral-ridge` | ✓ | 45 | 157 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/coral-springs` | ✓ | 47 | 158 | 6 | 51 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/davie` | ✓ | 39 | 157 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/deerfield-beach` | ✓ | 49 | 156 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/delray-beach` | ✓ | 46 | 152 | 6 | 54 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/fort-lauderdale` | ✓ | 49 | 155 | 6 | 79 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/harbor-beach` | ✓ | 46 | 156 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/hillsboro-mile` | ✓ | 48 | 157 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/hollywood` | ✓ | 43 | 157 | 6 | 51 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/las-olas-isles` | ✓ | 48 | 155 | 6 | 57 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/lighthouse-point` | ✓ | 50 | 154 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/palm-beach` | ✓ | 44 | 156 | 6 | 53 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/plantation` | ✓ | 44 | 156 | 6 | 51 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/pompano-beach` | ✓ | 47 | 151 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/rio-vista` | ✓ | 43 | 153 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/sea-ranch-lakes` | ✓ | 49 | 149 | 6 | 51 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/seven-isles` | ✓ | 45 | 157 | 6 | 54 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/sunrise` | ✓ | 41 | 148 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
-| `/markets/victoria-park` | ✓ | 47 | 155 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
-| `/markets/weston` | ✓ | 40 | 153 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/bay-colony` | ✓ | 44 | 151 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/bermuda-riviera` | ✓ | 49 | 155 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/boca-raton` | ✓ | 44 | 150 | 6 | 55 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/coral-ridge` | ✓ | 45 | 157 | 6 | 57 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/coral-springs` | ✓ | 47 | 158 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/davie` | ✓ | 39 | 157 | 6 | 53 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/deerfield-beach` | ✓ | 49 | 156 | 6 | 53 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/delray-beach` | ✓ | 46 | 152 | 6 | 55 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/fort-lauderdale` | ✓ | 49 | 155 | 6 | 80 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/harbor-beach` | ✓ | 46 | 156 | 6 | 57 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/hillsboro-mile` | ✓ | 48 | 157 | 6 | 54 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/hollywood` | ✓ | 43 | 157 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/las-olas-isles` | ✓ | 48 | 155 | 6 | 58 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/lighthouse-point` | ✓ | 50 | 154 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/palm-beach` | ✓ | 44 | 156 | 6 | 54 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/plantation` | ✓ | 44 | 156 | 6 | 52 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/pompano-beach` | ✓ | 47 | 151 | 6 | 53 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/rio-vista` | ✓ | 43 | 153 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/sea-ranch-lakes` | ✓ | 49 | 149 | 6 | 52 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/seven-isles` | ✓ | 45 | 157 | 6 | 55 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/sunrise` | ✓ | 41 | 148 | 6 | 53 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
+| `/markets/victoria-park` | ✓ | 47 | 155 | 6 | 56 | ✓ | ✓ | — | ✓ | — | l:noindex(c6) |
+| `/markets/weston` | ✓ | 40 | 153 | 6 | 53 | ✓ | ✓ | — | ✓ | ✓ | l:noindex(c6) |
 
 ## thank_you (4 routes)
 
 | Route | H1 | Title (len) | Meta (len) | Schemas | Links | Trust | FAQ | Form | Stale clean | Mobile | Findings |
 |-------|----|--------------|------------|---------|-------|-------|-----|------|-------------|--------|----------|
-| `/thank-you` | ✓ | 24 | 138 | 3 | 39 | ✓ | — | — | ✓ | — | l:noindex(c6) |
-| `/thank-you/buyer-brief` | ✓ | 35 | 123 | 3 | 39 | ✓ | — | — | ✓ | — | l:noindex(c6) |
-| `/thank-you/market-brief` | ✓ | 44 | 119 | 3 | 39 | ✓ | — | — | ✓ | — | l:noindex(c6) |
-| `/thank-you/valuation` | ✓ | 41 | 139 | 3 | 39 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/thank-you` | ✓ | 24 | 138 | 3 | 40 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/thank-you/buyer-brief` | ✓ | 35 | 123 | 3 | 40 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/thank-you/market-brief` | ✓ | 44 | 119 | 3 | 40 | ✓ | — | — | ✓ | — | l:noindex(c6) |
+| `/thank-you/valuation` | ✓ | 41 | 139 | 3 | 40 | ✓ | — | — | ✓ | — | l:noindex(c6) |
 
 ## Owner-category legend
 

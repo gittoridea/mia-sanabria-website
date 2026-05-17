@@ -93,9 +93,17 @@ export default function HomePage() {
         Bridge-compatible URL params; BridgeSearch on /home-search/ reads
         those params on mount and auto-runs the search.
       */}
+      {/*
+        Cycle 41 — Eyebrow text removed from the homepage Hero. The Mia
+        decision-record §Homepage hero locks the H1 to two lines
+        ("South Florida Lifestyle" / "Home Search"); the prior eyebrow used
+        the same five words verbatim, producing a visible duplication. The
+        H1 word-lock is preserved here — only the eyebrow prop is dropped,
+        and the gold accent line disappears with it (rendered conditionally
+        in Hero.tsx).
+      */}
       <div className="relative w-full max-w-full overflow-x-clip">
         <Hero
-          eyebrow="South Florida Lifestyle"
           heading={
             <>
               South Florida Lifestyle
@@ -109,11 +117,14 @@ export default function HomePage() {
           background="image"
           imageSrc="/hero/mia-home-hero-cycle40b.jpg"
           imageAlt="Daytime luxury waterfront residence with infinity pool and mature palms on calm Intracoastal Waterway, Southeast Florida"
+          imagePanelWidth="narrow"
         />
         <HeroSearch floating />
       </div>
-      {/* Spacer so the floating search card has clearance before the next section */}
-      <div aria-hidden className="h-16 sm:h-20" />
+      {/* Cycle 41 — tightened rhythm into "Mia's Service Areas". Prior
+          h-16 sm:h-20 spacer compounded with the next section's py-* to
+          create an accidental cream gap; reduced here. */}
+      <div aria-hidden className="h-6 sm:h-8 lg:h-10" />
 
       {/* Cycle 24 R2 — Mia's 9 approved working neighborhoods surfaced as a
           service-area rail. Two with hasPage=true link to /markets/<slug>/,

@@ -48,13 +48,15 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
       data-form-type="search"
       data-home-hero-search="true"
       className={
+        /* Cycle 41 — slimmer card on lg (p-4 lg:p-5 vs prior lg:p-6) so the
+           search reads as a refined tool, not a database admin band. */
         floating
-          ? "box-border w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-400 bg-cream-50/95 p-4 shadow-[0_18px_50px_-20px_rgba(15,42,68,0.55)] [contain:inline-size] sm:p-5 lg:p-6"
-          : "box-border w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-400 bg-cream-50 p-4 shadow-luxury sm:p-5 lg:p-6"
+          ? "box-border w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-400 bg-cream-50/95 p-4 shadow-[0_18px_50px_-20px_rgba(15,42,68,0.55)] [contain:inline-size] sm:p-5 lg:p-5"
+          : "box-border w-full max-w-full overflow-hidden rounded-sm border-l-2 border-brass-400 bg-cream-50 p-4 shadow-luxury sm:p-5 lg:p-5"
       }
     >
       <input type="hidden" name="source" value="home-hero" />
-      <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-[1.4fr_1fr_0.9fr_auto]">
+      <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-[1.5fr_1fr_1fr_auto] lg:gap-3">
         <div className="flex flex-col gap-1">
           <label
             htmlFor="hero-search-city"
@@ -139,15 +141,23 @@ export function HeroSearch({ floating = false }: { floating?: boolean } = {}) {
   );
 
   if (floating) {
+    /*
+     * Cycle 41 — narrower max-w on lg (max-w-4xl, ~896px) so the search card
+     * stops reading as a full-width database row across the hero. Smaller
+     * negative-margin float (-mt-12 sm:-mt-14 lg:-mt-16) reduces the awkward
+     * half-in/half-out integration the operator flagged.
+     */
     return (
       <div
         data-component="hero-search"
         data-floating="true"
-        data-hero-search-version="cycle40b"
+        data-hero-search-version="cycle41"
         aria-label="Listings search"
-        className="pointer-events-none relative z-20 -mt-20 w-full max-w-full px-4 sm:-mt-24 lg:px-8"
+        className="pointer-events-none relative z-20 -mt-12 w-full max-w-full px-4 sm:-mt-14 lg:-mt-16 lg:px-8"
       >
-        <div className="pointer-events-auto mx-auto w-full max-w-7xl min-w-0">{formCard}</div>
+        <div className="pointer-events-auto mx-auto w-full max-w-7xl min-w-0 lg:max-w-4xl">
+          {formCard}
+        </div>
       </div>
     );
   }

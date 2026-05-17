@@ -1,4 +1,4 @@
-# audit-mobile-readability — 2026-05-16T14:29:41.728Z
+# audit-mobile-readability — 2026-05-17T13:52:03.329Z
 
 **⚠ HONESTY DISCLOSURE (Cato F1, Cycle 19A-M).** This audit is a CSS-contract presence check, NOT a real per-viewport layout measurement. Pass = the documented CSS contract tokens are present in the served HTML/CSS. It does NOT measure the `@media (max-width: 640px)` mobile bump — that signal lives in the screenshot capture path (`--capture` → `docs/artifacts/.../mobile-readability/after/`) and in independent visual review. A future cycle should replace `fetchAndMeasure` with real chrome JS evaluation via `--remote-debugging-port` + CDP eval.
 
