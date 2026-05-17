@@ -1,0 +1,101 @@
+[
+  {
+    "vp": 320,
+    "result": {
+      "vp": 320,
+      "docScroll": 320,
+      "hasHorizontalScroll": false,
+      "panel": 288,
+      "form": 288,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 360,
+    "result": {
+      "vp": 360,
+      "docScroll": 360,
+      "hasHorizontalScroll": false,
+      "panel": 328,
+      "form": 328,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 375,
+    "result": {
+      "vp": 375,
+      "docScroll": 375,
+      "hasHorizontalScroll": false,
+      "panel": 343,
+      "form": 343,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 390,
+    "result": {
+      "vp": 390,
+      "docScroll": 390,
+      "hasHorizontalScroll": false,
+      "panel": 358,
+      "form": 358,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 414,
+    "result": {
+      "vp": 414,
+      "docScroll": 414,
+      "hasHorizontalScroll": false,
+      "panel": 382,
+      "form": 382,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 430,
+    "result": {
+      "vp": 430,
+      "docScroll": 430,
+      "hasHorizontalScroll": false,
+      "panel": 398,
+      "form": 398,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 768,
+    "result": {
+      "vp": 768,
+      "docScroll": 768,
+      "hasHorizontalScroll": false,
+      "panel": 672,
+      "form": 736,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 1280,
+    "result": {
+      "vp": 1280,
+      "docScroll": 1280,
+      "hasHorizontalScroll": false,
+      "panel": 672,
+      "form": 1216,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  },
+  {
+    "vp": 1440,
+    "result": {
+      "vp": 1440,
+      "docScroll": 1440,
+      "hasHorizontalScroll": false,
+      "panel": 672,
+      "form": 1280,
+      "heroAsset": "https://miasanabriarealtor.trueidea.com/hero/mia-home-hero-cycle40b.jpg"
+    }
+  }
+]

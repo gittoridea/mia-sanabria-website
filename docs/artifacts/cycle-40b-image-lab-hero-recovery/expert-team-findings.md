@@ -270,3 +270,93 @@ consequence-framed verdict-on-LAST-line prompt per
   and the manifest JSON). No race possible.
 - Build runs in background while docs are written.
 - Deploy will run in tmux while live-verification scripts are prepped.
+
+---
+
+## Cycle 40C addendum (2026-05-17)
+
+Cycle 40C resumed the dropped Cycle 40B session in a single primary
+executor context. No subagent dispatch was attempted — the work was
+deterministic recovery + verification + commit + deploy, not parallelizable
+multi-agent investigation.
+
+```yaml
+recovery_commander_40c:
+  actual_agent_used: false
+  tool_or_method: primary executor in-context
+  work_done:
+    - HEAD/branch/tmux/process discovery
+    - inspected dropped staging-deploy log (audit:images EXIT_CODE:1 root cause)
+    - traced root cause to missing markets.ts wire-up (uncommitted fix in working tree)
+    - documented Phase 0/1/2 recovery
+  findings:
+    - HEAD = origin/main = 8095c78 (Cycle 40B commit pushed)
+    - prior staging deploy aborted at pre-flight audit:images
+    - markets.ts working-tree fix flips heroImage cycle39 → cycle40b for 7 slugs
+
+mobile_hero_surgeon_40c:
+  actual_agent_used: false
+  tool_or_method: primary executor + Playwright system Chromium
+  work_done:
+    - three independent capture methods at viewports 320-1440
+    - getBoundingClientRect + scrollWidth + hasHorizontalScroll measurements
+    - cross-method comparison + decisive proof
+  findings:
+    - chrome --headless --window-size only sets OS window, NOT layout viewport
+    - layout panel = vp-32px at every viewport from 320 up (real-browser truth)
+    - no horizontal scroll at any viewport
+    - no code change required to the hero
+  rejected_options:
+    - applying speculative CSS patches to "fix" the screenshot artifact would have introduced real bugs to fix a phantom
+  risks: real-device verification by Mia/Torrey remains the closing operator gate
+
+visual_qa_lead_40c:
+  actual_agent_used: false
+  tool_or_method: primary executor + Read tool on PNGs + Playwright probes
+  work_done:
+    - inspected 9 Playwright screenshots with written visible descriptions
+    - inspected 8 direct-chrome screenshots and noted the same apparent overflow
+    - inspected 9 capture-baseline screenshots and noted the same apparent overflow
+    - wrote per-viewport verdict table
+  findings: layout passes at every viewport in real browsers; capture pipeline misrepresents narrow viewports
+
+neighborhood_image_art_director_40c:
+  actual_agent_used: false
+  tool_or_method: relied on Cycle 40B scorecards + manifest already shipped in 8095c78
+  work_done: verified files exist on disk, image-manifest + scorecards + art-direction + provenance all complete
+  findings: 7 cycle40b winners confirmed (deerfield-beach cand-1, hollywood cand-3, plantation cand-2, weston cand-3, coral-springs cand-2, davie cand-1, sunrise cand-2)
+
+bridge_e2e_engineer_40c:
+  actual_agent_used: false
+  tool_or_method: scripts/test-home-search-bridge-e2e.ts local + staging
+  work_done:
+    - local E2E: 11/11 PASS, mode=fallback
+    - staging E2E: pending Phase 9
+  findings: local passes; staging mode TBD by deployed host env
+
+release_engineer_40c:
+  actual_agent_used: false
+  tool_or_method: deploy-and-verify.ts in tmux background
+  work_done:
+    - typecheck/lint/build/audit:all gates run via deploy-and-verify pre-flight
+    - tmux session launched + log path captured + bg notification watcher in place
+  findings_pre_phase_9: deploy in flight; needle wait + Dokploy POST + audit:all pre-flight all wired
+  findings_phase_9: <fill>
+
+security_secrets_officer_40c:
+  actual_agent_used: false
+  tool_or_method: git grep + grep -RniE + presence-only node -e probe
+  work_done:
+    - source/scripts scan: only public URL/path constants matched (no credentials)
+    - out/+.next/ scan: 0 matches
+    - env presence-only probes — no values printed
+    - staged-patch scan: only documentation prose strings of pattern shape (no credentials)
+  findings: clean; no secret values printed, logged, screenshotted, or committed
+
+red_team_reviewer_40c:
+  actual_agent_used: false
+  tool_or_method: primary executor wrote red-team-final-review.md
+  work_done: 10 risk vectors enumerated with falsification evidence + Phase 9 verdicts queued
+  findings: nine of ten vectors falsified pre-Phase-9; one (real-device mobile hero by Mia) remains operator-only territory
+```
+

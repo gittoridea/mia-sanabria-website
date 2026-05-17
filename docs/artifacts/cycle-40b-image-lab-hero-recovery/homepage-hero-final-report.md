@@ -105,11 +105,31 @@ The Playwright proof is decisive for the AI-layer verification gate, but
 the human eyes at an actual device close the loop. This is intentionally
 NOT something I claim to have done.
 
+## Live confirmation (Phase 9, post-deploy)
+
+Playwright probe against `https://miasanabriarealtor.trueidea.com`:
+
+```text
+vp=320   panel=288   docScroll=320   hasHorizontalScroll=false   form=288   hero=/hero/mia-home-hero-cycle40b.jpg
+vp=360   panel=328   docScroll=360   hasHorizontalScroll=false   form=328   hero=/hero/mia-home-hero-cycle40b.jpg
+vp=375   panel=343   docScroll=375   hasHorizontalScroll=false   form=343   hero=/hero/mia-home-hero-cycle40b.jpg
+vp=390   panel=358   docScroll=390   hasHorizontalScroll=false   form=358   hero=/hero/mia-home-hero-cycle40b.jpg
+vp=414   panel=382   docScroll=414   hasHorizontalScroll=false   form=382   hero=/hero/mia-home-hero-cycle40b.jpg
+vp=430   panel=398   docScroll=430   hasHorizontalScroll=false   form=398   hero=/hero/mia-home-hero-cycle40b.jpg
+vp=768   panel=672   docScroll=768   hasHorizontalScroll=false   form=736   hero=/hero/mia-home-hero-cycle40b.jpg
+vp=1280  panel=672   docScroll=1280  hasHorizontalScroll=false   form=1216  hero=/hero/mia-home-hero-cycle40b.jpg
+vp=1440  panel=672   docScroll=1440  hasHorizontalScroll=false   form=1280  hero=/hero/mia-home-hero-cycle40b.jpg
+```
+
+Identical to the pre-deploy local Playwright probe. The Cycle 40B defensive CSS + the daytime waterfront hero asset are live and render correctly across the full viewport range.
+
 ## Conclusion
 
 ```yaml
 hero_mobile_safe: true
-hero_asset_active: true
+hero_asset_active_live: true
 patch_required: false
+live_verified: true
 production_readiness: not_claimed
+remaining_operator_gate: Mia/Torrey real-device check at staging URL
 ```

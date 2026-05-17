@@ -1,0 +1,12 @@
+{
+  "base": "http://127.0.0.1:4220",
+  "out": "docs/artifacts/cycle-40b-image-lab-hero-recovery/cycle40c-mobile-hero-proof/local",
+  "routes": 2,
+  "viewports": 9,
+  "jobs": 18,
+  "ok": 18,
+  "fail": 0,
+  "duration_seconds": 12,
+  "failures": [],
+  "timestamp": "2026-05-17T01:49:21.616Z"
+}

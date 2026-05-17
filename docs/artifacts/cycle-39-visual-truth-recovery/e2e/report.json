@@ -1,8 +1,8 @@
 {
-  "base": "http://127.0.0.1:4220",
-  "target_url": "http://127.0.0.1:4220/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero",
-  "generated_at": "2026-05-17T01:58:00.789Z",
-  "bridge_mode": "fallback",
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "target_url": "https://miasanabriarealtor.trueidea.com/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero",
+  "generated_at": "2026-05-17T02:43:42.594Z",
+  "bridge_mode": "demo",
   "passed": 11,
   "failed": 0,
   "total": 11,
@@ -40,7 +40,7 @@
     {
       "name": "search.bridge-mode-marker",
       "passed": true,
-      "detail": "data-bridge-runtime-mode must be live|demo|fallback|error (got fallback)"
+      "detail": "data-bridge-runtime-mode must be live|demo|fallback|error (got demo)"
     },
     {
       "name": "search.no-old-idx-runtime",

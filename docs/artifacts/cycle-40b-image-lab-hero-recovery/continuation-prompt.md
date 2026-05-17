@@ -7,15 +7,16 @@
 
 ```yaml
 branch: main
-head: <will be filled after Phase 7 commit>
-origin_main: <will be filled after Phase 7 commit>
-working_tree_state: clean (Phase 7 committed and pushed) OR uncommitted (if dropped mid-cycle)
-completed_phases: [0, 1, 2, 3, 4, 5, 6, 7]
-in_progress_phase: <8 if deploy pending; 9 if live verify pending>
-incomplete_phases: <to be filled>
+head: d851494  # to be re-confirmed after closeout commit
+origin_main: d851494  # to be re-confirmed after closeout commit
+working_tree_state: see git status after final closeout commit (likely clean)
+completed_phases: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+in_progress_phase: 13/14 (closeout commit + handoff)
+incomplete_phases: none — closeout complete
 
 cycle_40b_commit: 8095c78  # image lab + hero recovery + daytime waterfront swap (pushed to origin/main)
-cycle_40c_commit: <fix-up commit SHA after Phase 7>
+cycle_40c_commit: d851494  # markets.ts wire-up + cycle40c reports + audit refreshes (pushed to origin/main)
+cycle_40c_closeout_commit: <SHA after this turn's closeout commit, if separate>
 prior_dropped_session_failure: |
   Cycle 40B staging deploy aborted at audit:images pre-flight because
   src/lib/markets.ts still pointed to /markets/<slug>-cycle39.jpg paths
@@ -33,12 +34,15 @@ validation_results:
   typecheck: pass
   lint: pass
   build: pass
-  audit:all: <pass / fail — fill after Phase 6 completes>
+  audit:all: pass (21 audits — including audit:images, the original blocker)
+  audit:image-creative-acceptance: pass (7/7)
+  audit:home-bridge-search: pass (8/8)
   test:home-bridge-e2e (local): pass (11/11, mode=fallback)
-  secret_scan: clean
+  test:home-bridge-e2e (staging): pass (11/11, mode=demo)
+  secret_scan: clean (source, build, staged patch, live HTML)
 
 cycle_40b_deploy_result: completed_fail (EXIT_CODE:1 from audit:images pre-flight)
-cycle_40c_deploy_result: <to fill after Phase 8>
+cycle_40c_deploy_result: completed_success (EXIT_CODE:0, 172s, needle present, ETag diklqh3jne2o541d)
 
 mobile_hero_proof_result: |
   Defect ruled NON-EXISTENT in real browsers via Playwright + system Chromium
@@ -71,13 +75,13 @@ image_winner_selection:
 homepage_hero_asset_active: /hero/mia-home-hero-cycle40b.jpg (daytime waterfront, operator-authorized derivation from miasanabria.com)
 
 bridge_e2e_local: 11/11 PASS, mode=fallback
-bridge_e2e_staging: <to fill after Phase 9>
-bridge_mode_staging: <live | demo | fallback — fill after Phase 9>
-old_idx_runtime_absent: true (cycle 37 removal still holds)
+bridge_e2e_staging: 11/11 PASS, mode=demo
+bridge_mode_staging: demo (honest demo posture per Cycle 33B doctrine)
+old_idx_runtime_absent: true (cycle 37 removal still holds; verified live)
 
-tmux_deploy_session: <session name>
-tmux_deploy_log: docs/artifacts/cycle-40b-image-lab-hero-recovery/logs/staging-deploy-cycle40c-<timestamp>.log
-deployed_commit_equals_origin_main: <true | false — fill after Phase 8>
+tmux_deploy_session: mia-cycle40c-staging-deploy-20260516-221822
+tmux_deploy_log: docs/artifacts/cycle-40b-image-lab-hero-recovery/logs/staging-deploy-cycle40c-20260516-221822.log
+deployed_commit_equals_origin_main: true (both d851494)
 ```
 
 ## Exact next commands (if dropped after Phase 8 before Phase 9)

@@ -14,22 +14,21 @@ prior_drop_state: |
   Cycle 40B staging deploy aborted at audit:images pre-flight (EXIT_CODE:1).
   origin/main was 8095c78 but live deploy was still 21533b9. NOT aligned.
 
-cycle_40c_commit: <SHA after Phase 7>      # the fix-up: markets.ts wire-up + cycle40c reports + audit refreshes
-post_phase_7_origin_main: <SHA>            # should equal cycle_40c_commit
+cycle_40c_commit: d851494deede38e0692f17faf22f7e8d90fb861d   # markets.ts wire-up + cycle40c reports + audit refreshes
+post_phase_7_origin_main: d851494deede38e0692f17faf22f7e8d90fb861d
 
 phase_8_deploy_outcome:
-  log_path: <docs/artifacts/cycle-40b-image-lab-hero-recovery/logs/staging-deploy-cycle40c-<ts>.log>
-  exit_code: <0 if success>
-  deployed_commit: <SHA matched by needle-verify>
+  log_path: docs/artifacts/cycle-40b-image-lab-hero-recovery/logs/staging-deploy-cycle40c-20260516-221822.log
+  exit_code: 0
+  deployed_commit: d851494deede38e0692f17faf22f7e8d90fb861d   # confirmed via cycle40b data-marker grep + cycle40b hero asset + 7 cycle40b market image paths on live HTML
 
 post_deploy_commit_made:
-  needed: <true | false — only true if Phase 9 live-verify exposed a regression requiring a patch>
-  if_true: <patch_commit_SHA>
-  second_alignment_deploy_needed: <true | false>
-  second_alignment_deploy_log: <log path if any>
-  second_alignment_deploy_exit_code: <if any>
+  needed: false                                   # Phase 9 live-verify showed all gates green; no patch required
+  second_alignment_deploy_needed: false
+  second_alignment_deploy_log: null
+  second_alignment_deploy_exit_code: null
 
-final_deployed_commit_equals_origin_main_head: <true | false>
+final_deployed_commit_equals_origin_main_head: true
 production_changed: false
 dns_changed: false
 ghl_changed: false
@@ -38,11 +37,18 @@ bridge_credentials_rotated: false
 
 ## Outcome
 
-(Filled after Phase 8 + Phase 11 complete.)
-
 ```yaml
-result: <aligned | misaligned>
+result: aligned
 notes: |
-  <free-form summary of what was deployed, what live verification showed,
-  whether a follow-up alignment deploy was needed, and what's left external>
+  Phase 8 deploy completed cleanly (EXIT_CODE:0, 172s, needle verified).
+  Phase 9 confirmed via independent grep that the cycle40b data markers,
+  cycle40b hero asset, and all 7 cycle40b market image paths are present
+  in the live HTML — so the deployed commit IS d851494 = origin/main HEAD.
+
+  The deploy-and-verify "last-modified did not change" warning was a
+  Caddy cache-control variance, not a deploy miss. The independent marker
+  grep is the decisive verification.
+
+  No patch needed after Phase 9. Final aligned state achieved on a single
+  deploy.
 ```
