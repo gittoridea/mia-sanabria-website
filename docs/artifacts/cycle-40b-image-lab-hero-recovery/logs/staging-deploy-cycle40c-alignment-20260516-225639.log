@@ -1,0 +1,450 @@
+
+▶ pre-flight typecheck
+$ tsc --noEmit
+
+▶ pre-flight lint
+$ next lint
+✔ No ESLint warnings or errors
+
+▶ pre-flight build
+$ next build
+   ▲ Next.js 15.1.0
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/61) ...
+   Generating static pages (15/61) 
+   Generating static pages (30/61) 
+   Generating static pages (45/61) 
+ ✓ Generating static pages (61/61)
+   Finalizing page optimization ...
+   Collecting build traces ...
+   Exporting (0/3) ...
+ ✓ Exporting (3/3)
+
+Route (app)                                                            Size     First Load JS
+┌ ○ /                                                                  2.89 kB         117 kB
+├ ○ /_not-found                                                        138 B           106 kB
+├ ○ /about                                                             216 B           114 kB
+├ ○ /accessibility                                                     190 B           114 kB
+├ ○ /buyers                                                            216 B           114 kB
+├ ○ /contact                                                           216 B           114 kB
+├ ○ /dmca                                                              190 B           114 kB
+├ ● /downloads/[slug]                                                  138 B           106 kB
+├   ├ /downloads/waterfront-buyer-due-diligence-checklist
+├   ├ /downloads/luxury-seller-pre-listing-checklist
+├   └ /downloads/fort-lauderdale-waterfront-valuation-prep-sheet
+├ ○ /home-search                                                       7.28 kB         122 kB
+├ ○ /insights                                                          216 B           114 kB
+├ ● /insights/[slug]                                                   216 B           114 kB
+├   ├ /insights/fort-lauderdale-waterfront-buyer-guide
+├   ├ /insights/dockage-seawalls-bridge-clearance-route-to-inlet
+├   ├ /insights/positioning-luxury-waterfront-eastern-fort-lauderdale
+├   └ [+9 more paths]
+├ ○ /manifest.webmanifest                                              0 B                0 B
+├ ○ /markets                                                           216 B           114 kB
+├ ● /markets/[slug]                                                    216 B           114 kB
+├   ├ /markets/fort-lauderdale
+├   ├ /markets/coral-ridge
+├   ├ /markets/victoria-park
+├   └ [+20 more paths]
+├ ○ /privacy                                                           190 B           114 kB
+├ ○ /robots.txt                                                        0 B                0 B
+├ ○ /sellers                                                           216 B           114 kB
+├ ○ /sitemap.xml                                                       0 B                0 B
+├ ○ /terms                                                             190 B           114 kB
+├ ○ /thank-you                                                         216 B           114 kB
+├ ○ /thank-you/buyer-brief                                             216 B           114 kB
+├ ○ /thank-you/market-brief                                            216 B           114 kB
+├ ○ /thank-you/valuation                                               216 B           114 kB
+└ ○ /valuation                                                         216 B           114 kB
++ First Load JS shared by all                                          105 kB
+  ├ chunks/4bd1b696-c41c22badabd4b31.js                                52.9 kB
+  ├ chunks/517-e142ec6174824ab2.js                                     50.5 kB
+  └ other shared chunks (total)                                        1.91 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+▶ pre-flight audit:all
+$ bun run audit:stale && bun run audit:schema && bun run audit:links && bun run audit:seo && bun run audit:completeness && bun run audit:images && bun run audit:brand && bun run audit:insights && bun run audit:featured-markets && bun run audit:legal && bun run audit:about && bun run audit:hero-contrast:stable && bun run audit:rendered && bun run audit:route-inventory && bun run audit:qa-gate && bun run audit:trust-row && bun run audit:lead-magnets && bun run audit:no-fabrications && bun run audit:no-old-idx && bun run audit:neighborhood-images-deep && bun run audit:fort-lauderdale-standard
+$ bun run scripts/audit-stale-terms.ts
+✓ audit-stale-terms: clean across out/. (914ms)
+$ bun run scripts/audit-schema.ts
+audit-schema: scanned 57 pages, found 287 JSON-LD blocks (30ms).
+✓ All JSON-LD blocks parse with @context + @type.
+$ bun run scripts/audit-links.ts
+audit-links: scanned 57 pages, checked 2846 internal links (114ms).
+✓ All internal links resolve.
+$ bun run scripts/audit-seo.ts
+✓ audit-seo: 0 warning(s), no errors across out/. (66ms)
+$ bun run scripts/audit-completeness.ts
+→ audit-completeness — production-readiness structural-drift detector
+
+
+=== Sitemap coverage ===
+  ✓ completeness.sitemap.builtInSitemap — 48 built · 48 in sitemap · 0 missing
+  ✓ completeness.sitemap.sitemapInBuilt — 0 unresolved
+
+=== Compliance ===
+  ✓ completeness.legal.routesExist — all 4 legal routes built
+  ✓ completeness.footer.trust — all 56 built routes carry full footer trust set
+
+=== SEO/AEO ===
+  ✓ completeness.metadata.allPresent — 0 field issues across 35 pages
+  ✓ completeness.metadata.uniqueTitles — 35 unique titles across 35 pages
+  ✓ completeness.metadata.uniqueDescriptions — all descriptions unique
+  ✓ completeness.og.imagesResolve — all og:images resolve
+
+=== Local Authority ===
+  ✓ completeness.markets.wordFloor — all 23 market pages exceed 200-word floor
+
+=== IDX ===
+  ✓ completeness.idx.iframe — 5/5 Bridge search sentinels present on /home-search/
+
+=== Design/Display Integrity ===
+  ✓ completeness.images.dimsAltPlaceholder — no img-attribute issues (32 next/image fill-mode images correctly classified)
+  ✓ completeness.images.localFilesExist — all referenced local images exist
+
+=== Forms/CTAs ===
+  ⚠ completeness.forms.classification — 3 forms · 0 live-ghl · 2 mailto · 0 disabled · 1 search · 0 other
+
+=== Blog ===
+  ✓ completeness.blog.inNav — insights linked from homepage
+  ✓ completeness.blog.inSitemap — /insights/ in sitemap
+  ✓ completeness.blog.articleSchema — Blog schema on index + Article on representative post
+
+=== Schema ===
+  ✓ completeness.schema.valid — 202 JSON-LD blocks across 35 pages · 0 broken
+
+Summary: 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-completeness.json
+→ reports/audit-completeness.md
+
+✓ audit-completeness exit 0
+$ bun run scripts/audit-images.ts
+  ✓ images.localFilesResolve — 397 <img> tags across 57 pages — all local references resolve
+  ✓ images.ogImagesResolve — 57 og:image entries across 57 pages — all local references resolve
+  ✓ images.twitterImagesResolve — 0 broken twitter:image references
+  ✓ images.noPlaceholderFilenames — no placeholder filenames detected
+  ✓ images.altPresent — 397 <img> tags — all have alt attribute
+  ✓ images.noUnresolvableRemote — no remote <img> URLs detected
+  ✓ images.requiredAssetsExist — all required assets present
+  ✓ images.homepageFeaturedCards — all 6 first-page featured cards render <img src="/markets/SLUG.jpg">
+  ✓ images.hubPageHeroImage — 2 hub pages — all render image-mode hero
+  ✓ images.everyMarketCardImagePresent — all 23 markets have card images on /markets/
+  ✓ images.everyMarketPageHeroImagePresent — all 23 market pages have a hero image
+  ✓ images.everyMarketOgImageExists — all 23 markets have OG image asset + reference
+  ✓ images.principalReportedMarkets — all 3 principal-reported markets PASS — Lighthouse Point, Coral Ridge, Palm Beach
+  ✓ images.publicEmailConsistency — single canonical email: msanabriarea@gmail.com
+
+Summary: 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-images.json
+→ reports/audit-images.md
+$ bun run scripts/audit-brand-consistency.ts
+  ✓ brand.noForbiddenColors — no off-brand color tokens (4 allowed by data-brand-exception="demo-warning")
+  ✓ brand.noForbiddenFonts — no forbidden font families
+  ✓ brand.noForbiddenInBuilt — 0 off-brand classes in built output
+  ✓ brand.footerTrustElements — 8 sampled pages carry full footer trust set
+  ✓ brand.siteFooterStructure — all 3 named footer columns present
+  ✓ brand.siteFooterTrustStripAria — trust-strip aria-label present
+  ✓ brand.mobileNavPresent — mobile nav toggle + breakpoint visibility classes detected
+  ✓ brand.heroH1ContrastTokens — panel attr + navy-9X bg + brass-300 left edge + bold weight all present in Hero.tsx
+  ✓ brand.heroNoNavyGlowHalo — no navy-tint text-shadow halo present
+  ✓ brand.heroNoCycle7WeakOverlay — copy panel present — overlay strength is decorative not load-bearing
+  ✓ brand.heroOverlayLayers — all 3 overlay layers present (mood, content-scrim, cta-scrim)
+  ✓ brand.publicEmailConsistency — 1 distinct email(s) in src/, all canonical
+
+Summary: 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-brand-consistency.json
+→ reports/audit-brand-consistency.md
+$ bun run scripts/audit-insights.ts
+⚠ fort-lauderdale-waterfront-buyer-guide                       0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ dockage-seawalls-bridge-clearance-route-to-inlet             0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ positioning-luxury-waterfront-eastern-fort-lauderdale        0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ las-olas-vs-seven-isles-vs-harbor-beach                      0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ bay-colony-and-bermuda-riviera-private-waterfront            0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ coral-ridge-victoria-park-rio-vista                          0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ lighthouse-point-sea-ranch-lakes-hillsboro-mile              0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ boca-raton-luxury-buyers-club-beach-waterfront               0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ delray-beach-luxury-buyers-walkability-beach-waterfront      0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ why-automated-valuations-miss-luxury-waterfront              0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ preparing-waterfront-residence-private-market-conversations  0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+⚠ private-buyer-brief-defining-the-search                      0 FAIL · 1 WARN
+    ⚠ date.notBackdated: datePublished 2026-05-10 is more than 7 days in the past — verify this is honest revision history, not backdating.
+✓ library.count12 — 12 posts (expected 12)
+✓ library.uniqueSlugs — ok
+✓ library.uniqueTopicMonths — ok
+
+audit:insights — 535 PASS · 12 WARN · 0 FAIL
+$ bun run scripts/audit-featured-markets.ts
+  ✓ featured.order.firstPageMatchesPrincipal — Order: fort-lauderdale, boca-raton, palm-beach, victoria-park, lighthouse-point, delray-beach
+  ✓ featured.pageSize.is6 — HOMEPAGE_FEATURED_PAGE_SIZE = 6
+  ✓ featured.pager.rendered — aria-label="Featured markets pagination" present in /index.html
+  ✓ featured.homepage.firstPagePresent — Routes found for: fort-lauderdale, boca-raton, palm-beach, victoria-park, lighthouse-point, delray-beach
+  ✓ featured.market.fort-lauderdale — route=/markets/fort-lauderdale/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.coral-ridge — route=/markets/coral-ridge/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.victoria-park — route=/markets/victoria-park/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.boca-raton — route=/markets/boca-raton/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.palm-beach — route=/markets/palm-beach/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.delray-beach — route=/markets/delray-beach/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.lighthouse-point — route=/markets/lighthouse-point/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.rio-vista — route=/markets/rio-vista/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.harbor-beach — route=/markets/harbor-beach/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.las-olas-isles — route=/markets/las-olas-isles/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.bay-colony — route=/markets/bay-colony/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.market.bermuda-riviera — route=/markets/bermuda-riviera/, hero=ok, og=ok, sitemap=ok
+  ✓ featured.marketsIndex.complete — 23 markets linked
+
+Summary: 17 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-featured-markets.json
+→ reports/audit-featured-markets.md
+$ bun run scripts/audit-legal.ts
+  ✓ legal.canonical.privacy — canonical present
+  ✓ legal.breadcrumb.privacy — BreadcrumbList present
+  ✓ legal.footerLinks.privacy — all legal links present
+  ✓ legal.email.privacy — email msanabriarea@gmail.com present
+  ✓ legal.canonical.terms — canonical present
+  ✓ legal.breadcrumb.terms — BreadcrumbList present
+  ✓ legal.footerLinks.terms — all legal links present
+  ✓ legal.email.terms — email msanabriarea@gmail.com present
+  ✓ legal.canonical.accessibility — canonical present
+  ✓ legal.breadcrumb.accessibility — BreadcrumbList present
+  ✓ legal.footerLinks.accessibility — all legal links present
+  ✓ legal.email.accessibility — email msanabriarea@gmail.com present
+  ✓ legal.canonical.dmca — canonical present
+  ✓ legal.breadcrumb.dmca — BreadcrumbList present
+  ✓ legal.footerLinks.dmca — all legal links present
+  ✓ legal.email.dmca — email msanabriarea@gmail.com present
+  ⚠ legal.dmca.uscoFlag — USCO + in-process language present (acceptable for staging; BLOCKED for production cutover per CYCLE_16_LEGAL_PAGE_ACCURACY_AUDIT.md)
+  ✓ legal.privacy.ghlConditional — conditional language present
+  ✓ legal.terms.realtorAndFL — REALTOR® definition + FL governing law present
+
+Summary: 18 PASS · 1 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-legal.json
+→ reports/audit-legal.md
+$ bun run scripts/audit-about.ts
+  ✓ about.forbidden.deliberately_small_client_list — phrase absent across 5 routes
+  ✓ about.forbidden.global_distribution — phrase absent across 5 routes
+  ✓ about.forbidden.Klein_Morgan — phrase absent across 5 routes
+  ✓ about.forbidden.sunandbreeze — phrase absent across 5 routes
+  ✓ about.serviceArea.canonical — Eastern Fort Lauderdale · Eastern Boca Raton · Eastern Delray Beach
+  ✓ about.no.designations — pattern not found
+  ✓ about.no.yearsLicensed — pattern not found
+  ✓ about.no.salesVolume — pattern not found
+  ✓ about.no.awardClaims — pattern not found
+  ✓ about.no.testimonials — pattern not found
+  ✓ about.license.notOnAbout — license # absent from body (correctly lives on Footer + Terms)
+  ✓ about.brokerage.lpt — LPT Realty present
+
+Summary: 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
+
+→ reports/audit-about.json
+→ reports/audit-about.md
+$ bun run scripts/audit-hero-pixel-contrast.ts --samples=3
+audit:hero-contrast — primed 37 hero asset(s) into in-memory cache
+audit:hero-contrast — 145 PASS · 0 WARN · 0 FAIL · 0 SKIP
+→ reports/audit-hero-pixel-contrast.json
+→ reports/audit-hero-pixel-contrast.md
+$ bun run scripts/audit-rendered-visual.ts
+  ✓ rendered.images.allRendered — 0 broken images across 175 probes
+  ✓ rendered.marketCards.allVisibleOnIndex — 23 visible cards (best viewport: 320x568)
+  ✓ rendered.principalReportedMarkets.visible — all 3 principal-reported markets visible
+  ✓ rendered.hero.headingFitsPanel — 0 offenders across 175 probes
+  ✓ rendered.hero.eyebrowFitsPanel — 0 offenders across 175 probes
+  ✓ rendered.hero.subFitsPanel — 0 offenders across 175 probes
+  ✓ rendered.hero.primaryCtaAboveFoldDesktop — 0 desktop probes show primary CTA below fold
+  ✓ rendered.hero.primaryCtaTextFits — 0 primary-CTA tail-clips
+  ✓ rendered.hero.secondaryCtaTextFits — 0 secondary-CTA tail-clips
+  ✓ rendered.mobile.noHorizontalOverflow — 0 overflow at 35 viewport-honest probes; 70 dishonest probes SKIPPED (instrumentation mismatch)
+  ✓ rendered.ctas.contrastVisible — 0 CTAs below contrast threshold
+  ✓ rendered.staleStrings.absent — 0 stale-string hits across rendered surfaces
+  ✓ rendered.canonicalEmail.consistent — single canonical email rendered: msanabriarea@gmail.com
+  ✓ rendered.errors.zero — 0 probe errors
+  ⚠ rendered.probe.viewportSanity — 105/175 probes viewport-honest; 70 mismatched (chrome --dump-dom clamps mobile to ~500px — screenshot channel + GPT-5.5 visual review covers the gap)
+
+audit:rendered — 14 PASS · 1 WARN · 0 FAIL · 0 SKIP
+→ reports/audit-rendered-visual.json
+→ reports/audit-rendered-visual.md
+$ bun run scripts/audit-route-inventory.ts
+{
+  "base": "https://miasanabriarealtor.trueidea.com",
+  "sitemap_routes": 48,
+  "filesystem_static_pages": 17,
+  "sitemap_only_unmatched": [],
+  "filesystem_only_unmatched_unexpected": [],
+  "filesystem_only_optional_present": [
+    "/thank-you/buyer-brief",
+    "/thank-you/valuation",
+    "/thank-you",
+    "/thank-you/market-brief"
+  ],
+  "pass": true
+}
+✓ audit-route-inventory: 48 sitemap routes reconcile to filesystem
+$ bun run scripts/audit-qa-gate.ts
+qa-gate: 4 fs-only route(s) — scanning anyway: /downloads/luxury-seller-pre-listing-checklist, /downloads/waterfront-buyer-due-diligence-checklist, /downloads/fort-lauderdale-waterfront-valuation-prep-sheet, /404
+audit-qa-gate — 56 routes · critical 0 · high 4 · medium 1 · low 56
+→ reports/qa-gate-matrix.json
+→ reports/qa-gate-matrix.md
+$ bun run scripts/audit-trust-row.ts
+✓ out/dmca/index.html
+✓ out/valuation/index.html
+✓ out/accessibility/index.html
+✓ out/downloads/luxury-seller-pre-listing-checklist/index.html
+✓ out/downloads/waterfront-buyer-due-diligence-checklist/index.html
+✓ out/downloads/fort-lauderdale-waterfront-valuation-prep-sheet/index.html
+✓ out/thank-you/buyer-brief/index.html
+✓ out/thank-you/valuation/index.html
+✓ out/thank-you/market-brief/index.html
+✓ out/thank-you/index.html
+✓ out/markets/las-olas-isles/index.html
+✓ out/markets/sea-ranch-lakes/index.html
+✓ out/markets/plantation/index.html
+✓ out/markets/seven-isles/index.html
+✓ out/markets/victoria-park/index.html
+✓ out/markets/pompano-beach/index.html
+✓ out/markets/davie/index.html
+✓ out/markets/fort-lauderdale/index.html
+✓ out/markets/index.html
+✓ out/markets/coral-springs/index.html
+✓ out/markets/bermuda-riviera/index.html
+✓ out/markets/hillsboro-mile/index.html
+✓ out/markets/hollywood/index.html
+✓ out/markets/bay-colony/index.html
+✓ out/markets/rio-vista/index.html
+✓ out/markets/boca-raton/index.html
+✓ out/markets/weston/index.html
+✓ out/markets/coral-ridge/index.html
+✓ out/markets/palm-beach/index.html
+✓ out/markets/lighthouse-point/index.html
+✓ out/markets/delray-beach/index.html
+✓ out/markets/deerfield-beach/index.html
+✓ out/markets/sunrise/index.html
+✓ out/markets/harbor-beach/index.html
+✓ out/privacy/index.html
+✓ out/index.html
+✓ out/insights/bay-colony-and-bermuda-riviera-private-waterfront/index.html
+✓ out/insights/lighthouse-point-sea-ranch-lakes-hillsboro-mile/index.html
+✓ out/insights/boca-raton-luxury-buyers-club-beach-waterfront/index.html
+✓ out/insights/private-buyer-brief-defining-the-search/index.html
+✓ out/insights/why-automated-valuations-miss-luxury-waterfront/index.html
+✓ out/insights/index.html
+✓ out/insights/preparing-waterfront-residence-private-market-conversations/index.html
+✓ out/insights/fort-lauderdale-waterfront-buyer-guide/index.html
+✓ out/insights/las-olas-vs-seven-isles-vs-harbor-beach/index.html
+✓ out/insights/delray-beach-luxury-buyers-walkability-beach-waterfront/index.html
+✓ out/insights/dockage-seawalls-bridge-clearance-route-to-inlet/index.html
+✓ out/insights/coral-ridge-victoria-park-rio-vista/index.html
+✓ out/insights/positioning-luxury-waterfront-eastern-fort-lauderdale/index.html
+✓ out/sellers/index.html
+✓ out/home-search/index.html
+✓ out/contact/index.html
+✓ out/buyers/index.html
+✓ out/terms/index.html
+✓ out/404/index.html
+✓ out/about/index.html
+✓ public/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf
+✓ public/downloads/waterfront-buyer-due-diligence-checklist.pdf
+✓ public/downloads/luxury-seller-pre-listing-checklist.pdf
+audit-trust-row — 59/59 sources clean (HTML routes + PDFs)
+$ bun run scripts/audit-lead-magnets.ts
+✓ public/downloads/waterfront-buyer-due-diligence-checklist.pdf
+   warning: canvas render failed: Value is none of these types `String`, `Path`, 
+✓ public/downloads/luxury-seller-pre-listing-checklist.pdf
+   warning: canvas render failed: Value is none of these types `String`, `Path`, 
+✓ public/downloads/fort-lauderdale-waterfront-valuation-prep-sheet.pdf
+   warning: canvas render failed: Value is none of these types `String`, `Path`, 
+✓ fort-lauderdale-cta-section
+audit-lead-magnets — 4/4 checks pass
+$ bun run scripts/audit-no-fabrications.ts
+audit-no-fabrications — 0 hits
+$ bun run scripts/audit-no-old-idx.ts
+audit-no-old-idx: PASS (480 files scanned)
+$ bun run scripts/audit-neighborhood-images-deep.ts
+audit-neighborhood-images-deep: PASS — 23/23 markets
+$ bun run scripts/audit-fort-lauderdale-standard.ts
+✓ v3.heroPrecisionFrame                    "Where deepwater yacht access" present
+✓ v3.preludeEyebrow                        "A decision, not a default" present
+✓ v3.preludeHeading                        "Fort Lauderdale rewards a written brief" present
+✓ v3.seventhCardTitle                      "Insurance underwriting and the 4-point sequence" present
+✓ v3.emphasizedCardEyebrow                 "THE QUESTION BUYERS ASK MOST OFTEN" present
+✓ v3.peerPointers                          12 matches (target ≥ 4)
+✓ v3.antiPatternAside                      4 matches (target ≥ 2)
+✓ v3.faqPrivateBriefVsAlert                "How is a private buyer brief different from a saved-search alert?" present
+✓ v3.faqRouteToInletNonYachter             "Why does route-to-inlet matter for a buyer who isn" present
+✓ v3.sellerPlaybookInsightsLink            "/insights/why-automated-valuations-miss-luxury-waterfront/" present
+✓ v4.researchBackedEyebrow                 "What the geography actually is" present
+✓ v4.researchBackedHeading                 "Fort Lauderdale, in honest scope" present
+✓ v4.researchBackedSourcesLine             1 matches (target 1)
+✓ v4.frameworkNineVariablesHeading         "Nine verifiable variables before any offer" present
+✓ v4.frameworkCanalWidthCard               "Canal width and turning basin" present
+✓ v4.frameworkOutdoorLivingCard            "Outdoor living and dock-side amenities" present
+✓ v4.cohortEyebrow                         "What Fort Lauderdale buyers are actually comparing" present
+✓ v4.cohortHeading                         "Three tiers of decision, not one" present
+✓ v4.cohortTier1Heading                    "Tier 1 — Eastern Fort Lauderdale finger-isle peers" present
+✓ v4.cohortTier2Heading                    "Tier 2 — Northern Broward waterfront alternatives" present
+✓ v4.cohortTier3Heading                    "Tier 3 — Palm Beach County peers" present
+✓ v4.cohortPompanoLink                     "href="/markets/pompano-beach/"" present
+✓ v4.cohortHillsboroLink                   "href="/markets/hillsboro-mile/"" present
+✓ v4.buyerStep5Financing                   "Confirm financing, cash, and insurance early" present
+✓ v4.sellerStep3InsuranceDataroom          "Organize the insurance dataroom" present
+✓ v4.sellerStep5PhotoNarrative             "Editorial photography and dock-up narrative" present
+✓ v4.faqNoFixedBridges                     "What does &quot;no fixed bridges&quot; mean and where does it actually apply" present
+✓ v4.faqPompanoComparison                  "How does Fort Lauderdale compare to Pompano Beach for waterfront buyers" present
+✓ v4.anti.no300MilesCityScope              no banned match
+✓ v4.anti.noFixedBridgesNewRiverClaim      no banned match
+✓ v4.faqPageCountIs11                      FAQPage schema has 11 Question entries (target 11 = market.faqs:5 + V2 specifics:6)
+
+audit:fort-lauderdale-standard — 31 PASS · 0 WARN · 0 FAIL
+
+▶ pre-flight audit:completeness gate
+  pass=16 warn=1 fail=0 skip=0
+
+✓ pre-flight passed — proceeding to deploy.
+→ triggering deploy
+  pre-deploy last-modified: Sun, 17 May 2026 02:38:39 GMT
+→ polling application status
+  [8s] status=running
+  [16s] status=running
+  [24s] status=running
+  [33s] status=running
+  [41s] status=running
+  [49s] status=running
+  [57s] status=running
+  [65s] status=running
+  [73s] status=running
+  [81s] status=running
+  [89s] status=running
+  [98s] status=running
+  [106s] status=running
+  [114s] status=running
+  [122s] status=running
+  [130s] status=done
+✓ deploy done in 130s
+  post-deploy last-modified: Sun, 17 May 2026 02:38:39 GMT
+  ⚠ last-modified did not change — Caddy may be caching even with bust headers
+
+→ wait-for-needle: polling https://miasanabriarealtor.trueidea.com/ for "South Florida Lifestyle" (timeout 900s, interval 15s)
+✓ needle present after ~0s (etag="diklqh3jne2o541d-gzip")
+EXIT_CODE:0
