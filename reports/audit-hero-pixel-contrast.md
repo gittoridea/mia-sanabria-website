@@ -1,10 +1,10 @@
 # Audit Hero Pixel Contrast Report
 
-**Generated:** 2026-05-17T14:22:14.404Z
+**Generated:** 2026-05-17T14:42:14.138Z
 **Mode:** local
 **Mutation:** false
 **Base:** http://127.0.0.1:4173
-**Samples per row:** 1
+**Samples per row:** 3
 **Thresholds:** glyph ≥ 3:1 · edge ≥ 2.5:1
 
 **Summary:** 145 PASS · 0 WARN · 0 FAIL · 0 SKIP
@@ -62,7 +62,7 @@
 | `/markets/bermuda-riviera/` | 1280x800 | 12.15 | 8.72 | 12.15 (12.15..12.15) | 1500 | 800 | ✅ PASS |  |
 | `/markets/bermuda-riviera/` | 1440x900 | 11.04 | 8.19 | 11.04 (11.04..11.04) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 320x568 | 15.53 | 9.00 | 15.53 (15.53..15.53) | 677 | 800 | ✅ PASS |  |
-| `/markets/sea-ranch-lakes/` | 375x812 | 15.47 | 9.07 | 15.47 (15.47..15.47) | 741 | 800 | ✅ PASS |  |
+| `/markets/sea-ranch-lakes/` | 375x812 | 15.47 | 9.07 | 15.47 (12.13..15.47) | 741 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 768x1024 | 13.86 | 8.71 | 13.86 (13.86..13.86) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 1280x800 | 12.84 | 8.07 | 12.84 (12.84..12.84) | 1500 | 800 | ✅ PASS |  |
 | `/markets/sea-ranch-lakes/` | 1440x900 | 12.78 | 7.98 | 12.78 (12.78..12.78) | 1500 | 800 | ✅ PASS |  |
@@ -99,7 +99,7 @@
 | `/markets/hillsboro-mile/` | 320x568 | 15.11 | 8.65 | 15.11 (15.11..15.11) | 909 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 375x812 | 15.07 | 8.74 | 15.07 (15.07..15.07) | 983 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 768x1024 | 13.62 | 8.85 | 13.62 (13.62..13.62) | 1500 | 800 | ✅ PASS |  |
-| `/markets/hillsboro-mile/` | 1280x800 | 4.16 | 4.15 | 4.16 (4.16..4.16) | 1500 | 800 | ✅ PASS |  |
+| `/markets/hillsboro-mile/` | 1280x800 | 13.50 | 8.69 | 13.50 (13.50..13.50) | 1500 | 800 | ✅ PASS |  |
 | `/markets/hillsboro-mile/` | 1440x900 | 13.53 | 8.53 | 13.53 (13.53..13.53) | 1500 | 800 | ✅ PASS |  |
 | `/markets/hollywood/` | 320x568 | 14.39 | 8.41 | 14.39 (14.39..14.39) | 963 | 800 | ✅ PASS |  |
 | `/markets/hollywood/` | 375x812 | 14.53 | 8.52 | 14.53 (14.53..14.53) | 1118 | 800 | ✅ PASS |  |
@@ -159,7 +159,9 @@
 
 ## Stability summary
 
-_All rows within 1.0 contrast spread — no high-variance rows._
+| Route | Viewport | Min | Median | Max | Spread |
+|---|---|---:|---:|---:|---:|
+| `/markets/sea-ranch-lakes/` | 375x812 | 12.13 | 15.47 | 15.47 | 3.34 |
 
 ## Mutation note
 

@@ -1,6 +1,6 @@
 # Audit Rendered Visual Report
 
-**Generated:** 2026-05-17T14:17:20.003Z
+**Generated:** 2026-05-17T14:45:32.825Z
 **Mode:** local
 **Base:** http://127.0.0.1:4173
 **Concurrency:** 3

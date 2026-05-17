@@ -1,10 +1,10 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-17T14:22:14.404Z",
+  "generated": "2026-05-17T14:42:14.138Z",
   "mode": "local",
   "mutation": false,
   "base": "http://127.0.0.1:4173",
-  "samples": 1,
+  "samples": 3,
   "thresholds": {
     "glyph": 3,
     "edge": 2.5
@@ -791,10 +791,10 @@
     {
       "route": "/markets/sea-ranch-lakes/",
       "viewport": "375x812",
-      "glyphContrastMin": 15.47,
+      "glyphContrastMin": 12.13,
       "glyphContrastMedian": 15.47,
       "glyphContrastMax": 15.47,
-      "edgeContrastMin": 9.07,
+      "edgeContrastMin": 6.3,
       "edgeContrastMedian": 9.07,
       "edgeContrastMax": 9.07,
       "meanGlyphContrast": 15.47,
@@ -1346,14 +1346,14 @@
     {
       "route": "/markets/hillsboro-mile/",
       "viewport": "1280x800",
-      "glyphContrastMin": 4.16,
-      "glyphContrastMedian": 4.16,
-      "glyphContrastMax": 4.16,
-      "edgeContrastMin": 4.15,
-      "edgeContrastMedian": 4.15,
-      "edgeContrastMax": 4.15,
-      "meanGlyphContrast": 4.16,
-      "meanEdgeContrast": 4.15,
+      "glyphContrastMin": 13.5,
+      "glyphContrastMedian": 13.5,
+      "glyphContrastMax": 13.5,
+      "edgeContrastMin": 8.69,
+      "edgeContrastMedian": 8.69,
+      "edgeContrastMax": 8.69,
+      "meanGlyphContrast": 13.5,
+      "meanEdgeContrast": 8.69,
       "glyphSamples": 1500,
       "edgeSamples": 800,
       "status": "PASS"
