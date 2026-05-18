@@ -1,6 +1,6 @@
 # Audit Rendered Visual Report
 
-**Generated:** 2026-05-17T16:51:25.590Z
+**Generated:** 2026-05-18T21:16:42.235Z
 **Mode:** local
 **Base:** http://127.0.0.1:4173
 **Concurrency:** 3
@@ -57,7 +57,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `rendered.canonicalEmail.consistent` | ✅ PASS | Only the canonical email address (msanabriarea@gmail.com) appears in rendered text | single canonical email rendered: msanabriarea@gmail.com |
+| `rendered.canonicalEmail.consistent` | ✅ PASS | Only the canonical email address (mia@miasanabria.com) appears in rendered text | single canonical email rendered: mia@miasanabria.com |
 
 ### Probe Health
 

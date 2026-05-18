@@ -21,7 +21,11 @@ export const MIA = {
   contact: {
     phone: "(954) 540-0358",
     phoneTel: "+19545400358",
-    email: "msanabriarea@gmail.com",
+    // Public displayed email canonicalized to mia@miasanabria.com on 2026-05-18
+    // (docs/artifacts/cycle-public-email-canonicalization/). Legacy msanabriarea@gmail.com
+    // may remain only as private/backend lead-alert routing; it is forbidden from public
+    // rendered HTML and enforced by scripts/audit-public-email.ts.
+    email: "mia@miasanabria.com",
     serviceCore: { city: "Fort Lauderdale", region: "FL", postalCode: "33305" },
   },
   social: {

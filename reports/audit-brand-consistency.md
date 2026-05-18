@@ -1,6 +1,6 @@
 # Audit Brand Consistency Report
 
-**Generated:** 2026-05-17T16:33:05.993Z
+**Generated:** 2026-05-18T20:58:16.919Z
 
 **Summary:** 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -56,4 +56,4 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `brand.publicEmailConsistency` | ✅ | All emails referenced in src/ are the canonical public email (msanabriarea@gmail.com) | 1 distinct email(s) in src/, all canonical |
+| `brand.publicEmailConsistency` | ✅ | All emails referenced in src/ are the canonical public email (mia@miasanabria.com) | 1 distinct email(s) in src/, all canonical |

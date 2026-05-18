@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-17T16:51:25.590Z",
+  "generated": "2026-05-18T21:16:42.235Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -568,9 +568,9 @@
     {
       "id": "rendered.canonicalEmail.consistent",
       "category": "Email",
-      "description": "Only the canonical email address (msanabriarea@gmail.com) appears in rendered text",
+      "description": "Only the canonical email address (mia@miasanabria.com) appears in rendered text",
       "status": "PASS",
-      "evidence": "single canonical email rendered: msanabriarea@gmail.com"
+      "evidence": "single canonical email rendered: mia@miasanabria.com"
     },
     {
       "id": "rendered.errors.zero",
@@ -914,6 +914,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -940,17 +945,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 318,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1132,
+        "bottomEdgeContentPx": 64,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (318 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1132 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1254,6 +1259,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -1280,17 +1290,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 344,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1460,
+        "bottomEdgeContentPx": 48,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (344 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1460 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -1594,6 +1604,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -1620,7 +1635,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -1918,6 +1933,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -1944,7 +1964,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -2242,6 +2262,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -2268,7 +2293,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -2455,6 +2480,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -2481,17 +2511,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 491,
+        "rightEdgeContentPx": 1131,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (491 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1131 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -2668,6 +2698,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -2694,17 +2729,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1010,
+        "rightEdgeContentPx": 1358,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1010 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1358 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -2881,6 +2916,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -2907,13 +2947,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1446,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 292,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -3077,6 +3117,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -3103,13 +3148,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1704,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1529,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -3273,6 +3318,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -3299,7 +3349,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -3520,6 +3570,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -3546,17 +3601,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 220,
+        "rightEdgeContentPx": 1261,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (220 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1261 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -3767,6 +3822,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -3793,17 +3853,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 262,
+        "rightEdgeContentPx": 1824,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (262 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1824 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -4014,6 +4074,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -4040,7 +4105,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -4245,6 +4310,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -4271,13 +4341,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1917,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 41,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -4476,6 +4546,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -4502,13 +4577,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1917,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 21,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -4723,6 +4798,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -4749,17 +4829,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 245,
+        "rightEdgeContentPx": 1221,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (245 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1221 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -4970,6 +5050,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -4996,17 +5081,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 398,
+        "rightEdgeContentPx": 1767,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (398 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1767 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -5217,6 +5302,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -5243,7 +5333,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -5448,6 +5538,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -5474,13 +5569,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1864,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 50,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -5679,6 +5774,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -5705,13 +5805,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1858,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 32,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -5880,6 +5980,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -5906,17 +6011,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 506,
+        "rightEdgeContentPx": 1261,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (506 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1261 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -6081,6 +6186,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -6107,17 +6217,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 927,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1762,
+        "bottomEdgeContentPx": 11,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (927 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1762 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -6282,6 +6392,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -6308,7 +6423,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -6466,6 +6581,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -6492,13 +6612,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1921,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 47,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -6650,6 +6770,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -6676,13 +6801,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1921,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 49,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -6851,6 +6976,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -6877,17 +7007,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 220,
+        "rightEdgeContentPx": 962,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (220 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (962 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -7052,6 +7182,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -7078,17 +7213,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 872,
+        "rightEdgeContentPx": 1524,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (872 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1524 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -7253,6 +7388,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -7279,13 +7419,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1850,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 57,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -7437,6 +7577,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -7463,13 +7608,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1764,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 2249,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -7621,6 +7766,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -7647,13 +7797,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1754,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 8,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -7810,6 +7960,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -7836,17 +7991,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 58,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (58 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -7999,6 +8154,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -8025,17 +8185,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 95,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (95 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -8188,6 +8348,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -8214,13 +8379,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 4,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1380,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": false,
@@ -8360,6 +8525,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -8386,7 +8556,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -8532,6 +8702,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -8558,7 +8733,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -8586,7 +8761,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7766,
+        "documentHeight": 7722,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8714,6 +8889,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -8740,17 +8920,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 29,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (29 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -8768,7 +8948,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7766,
+        "documentHeight": 7722,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -8896,6 +9076,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -8922,17 +9107,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 27,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (27 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -9078,6 +9263,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -9104,13 +9294,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 4,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 10,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": false,
@@ -9243,6 +9433,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -9269,7 +9464,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -9408,6 +9603,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -9434,13 +9634,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 4,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 41,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": false,
@@ -9462,7 +9662,7 @@
           "h": 481
         },
         "documentWidth": 500,
-        "documentHeight": 7894,
+        "documentHeight": 7850,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9590,6 +9790,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -9616,17 +9821,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 28,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (28 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -9644,7 +9849,7 @@
           "h": 725
         },
         "documentWidth": 500,
-        "documentHeight": 7894,
+        "documentHeight": 7850,
         "hasHorizontalOverflow": false,
         "images": [
           {
@@ -9772,6 +9977,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -9798,17 +10008,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 72,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 4,
+        "bottomEdgeContentPx": 437,
         "imageWidth": 375,
         "imageHeight": 812,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (72 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -9954,6 +10164,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -9980,7 +10195,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -10119,6 +10334,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -10145,7 +10365,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -10284,6 +10504,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -10310,13 +10535,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 4,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 67,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": false,
@@ -10466,6 +10691,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -10492,17 +10722,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 14,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": false,
-        "reason": "clean (right-edge non-bg px: 14)"
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -10648,6 +10878,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -10674,17 +10909,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 20,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 4,
+        "bottomEdgeContentPx": 197,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": false,
-        "reason": "clean (right-edge non-bg px: 20)"
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -10830,6 +11065,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -10856,13 +11096,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 4,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 5,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": false,
@@ -10995,6 +11235,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -11021,7 +11266,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -11160,6 +11405,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -11186,13 +11436,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 4,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 57,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": false,
@@ -11342,6 +11592,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -11368,17 +11623,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 27,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (27 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -11524,6 +11779,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -11550,17 +11810,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 22,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 4,
+        "bottomEdgeContentPx": 62,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": false,
-        "reason": "clean (right-edge non-bg px: 22)"
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -11706,6 +11966,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -11732,7 +11997,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -11871,6 +12136,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -11897,7 +12167,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -12036,6 +12306,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -12062,13 +12337,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 4,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 138,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": false,
@@ -13066,6 +13341,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -13092,17 +13372,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 185,
+        "rightEdgeContentPx": 1163,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (185 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1163 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -14096,6 +14376,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -14122,17 +14407,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 173,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1507,
+        "bottomEdgeContentPx": 41,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (173 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1507 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -15126,6 +15411,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -15152,13 +15442,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1901,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 2609,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -16140,6 +16430,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -16166,13 +16461,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1610,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 847,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -17154,6 +17449,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -17180,13 +17480,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1645,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 3019,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -17473,6 +17773,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -17499,17 +17804,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 262,
+        "rightEdgeContentPx": 1126,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (262 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1126 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -17792,6 +18097,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -17818,17 +18128,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 274,
+        "rightEdgeContentPx": 1849,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (274 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1849 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -18111,6 +18421,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -18137,7 +18452,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -18414,6 +18729,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -18440,13 +18760,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1643,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 48,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -18717,6 +19037,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -18743,13 +19068,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1691,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 43,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -19024,6 +19349,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -19050,17 +19380,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 243,
+        "rightEdgeContentPx": 1232,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (243 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1232 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -19331,6 +19661,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -19357,17 +19692,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 267,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1825,
+        "bottomEdgeContentPx": 161,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (267 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1825 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -19638,6 +19973,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -19664,7 +20004,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -19929,6 +20269,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -19955,13 +20300,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1663,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1501,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -20220,6 +20565,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -20246,13 +20596,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1659,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 111,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -20515,6 +20865,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -20541,17 +20896,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 257,
+        "rightEdgeContentPx": 1242,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (257 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1242 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -20810,6 +21165,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -20836,17 +21196,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 394,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1916,
+        "bottomEdgeContentPx": 53,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (394 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1916 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -21105,6 +21465,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -21131,13 +21496,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2051,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 57,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -21384,6 +21749,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -21410,7 +21780,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -21663,6 +22033,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -21689,13 +22064,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1753,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 992,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -21946,6 +22321,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -21972,17 +22352,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 255,
+        "rightEdgeContentPx": 1234,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (255 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1234 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -22229,6 +22609,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -22255,17 +22640,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 360,
+        "rightEdgeContentPx": 1855,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (360 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1855 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -22512,6 +22897,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -22538,13 +22928,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2076,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 440,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -22779,6 +23169,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -22805,13 +23200,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1924,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 747,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -23046,6 +23441,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -23072,13 +23472,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1924,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 254,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -23317,6 +23717,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -23343,17 +23748,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 196,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1264,
+        "bottomEdgeContentPx": 5,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (196 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1264 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -23588,6 +23993,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -23614,17 +24024,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 249,
+        "rightEdgeContentPx": 1798,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (249 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1798 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -23859,6 +24269,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -23885,13 +24300,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1765,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1330,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -24114,6 +24529,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -24140,13 +24560,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1756,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 709,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -24369,6 +24789,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -24395,13 +24820,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1728,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 234,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -24652,6 +25077,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -24678,17 +25108,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 249,
+        "rightEdgeContentPx": 1245,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (249 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1245 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -24935,6 +25365,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -24961,17 +25396,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 279,
+        "rightEdgeContentPx": 1783,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (279 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1783 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -25218,6 +25653,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -25244,7 +25684,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -25485,6 +25925,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -25511,13 +25956,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1769,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 888,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -25752,6 +26197,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -25778,13 +26228,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1816,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 261,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -26047,6 +26497,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -26073,17 +26528,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 239,
+        "rightEdgeContentPx": 1185,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (239 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1185 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -26342,6 +26797,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -26368,17 +26828,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 332,
+        "rightEdgeContentPx": 1864,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (332 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1864 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -26637,6 +27097,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -26663,7 +27128,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -26916,6 +27381,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -26942,13 +27412,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1670,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1498,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -27195,6 +27665,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -27221,13 +27696,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1582,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 107,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -27474,6 +27949,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -27500,17 +27980,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 274,
+        "rightEdgeContentPx": 1178,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (274 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1178 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -27769,6 +28249,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -27795,17 +28280,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 270,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1694,
+        "bottomEdgeContentPx": 224,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (270 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1694 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -28064,6 +28549,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -28090,13 +28580,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1780,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1279,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -28343,6 +28833,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -28369,13 +28864,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1455,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 131,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -28622,6 +29117,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -28648,13 +29148,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1457,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 14,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -28913,6 +29413,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -28939,17 +29444,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 223,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1164,
+        "bottomEdgeContentPx": 64,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (223 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1164 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -29220,6 +29725,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -29246,17 +29756,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 278,
+        "rightEdgeContentPx": 1844,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (278 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1844 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -29527,6 +30037,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -29553,13 +30068,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1718,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1207,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -29818,6 +30333,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -29844,13 +30364,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1577,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 917,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -30109,6 +30629,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -30135,13 +30660,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1628,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 209,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -30412,6 +30937,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -30438,17 +30968,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 238,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1000,
+        "bottomEdgeContentPx": 85,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (238 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1000 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -30731,6 +31261,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -30757,17 +31292,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 316,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1604,
+        "bottomEdgeContentPx": 55,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (316 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1604 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -31050,6 +31585,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -31076,13 +31616,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1552,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1246,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -31353,6 +31893,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -31379,7 +31924,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -31656,6 +32201,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -31682,13 +32232,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1910,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1508,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -31923,6 +32473,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -31949,17 +32504,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 227,
+        "rightEdgeContentPx": 1188,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (227 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1188 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -32206,6 +32761,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -32232,17 +32792,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 192,
+        "rightEdgeContentPx": 1852,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (192 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1852 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -32489,6 +33049,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -32515,7 +33080,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -32756,6 +33321,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -32782,13 +33352,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1589,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 846,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -33023,6 +33593,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -33049,13 +33624,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1649,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 248,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -33278,6 +33853,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -33304,17 +33884,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 224,
+        "rightEdgeContentPx": 1217,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (224 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1217 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -33549,6 +34129,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -33575,17 +34160,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 243,
+        "rightEdgeContentPx": 1817,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (243 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1817 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -33820,6 +34405,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -33846,7 +34436,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -34075,6 +34665,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -34101,17 +34696,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1600,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 4,
+        "bottomEdgeContentPx": 881,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1600 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -34330,6 +34925,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -34356,13 +34956,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1664,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 215,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -34597,6 +35197,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -34623,17 +35228,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 240,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1164,
+        "bottomEdgeContentPx": 90,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (240 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1164 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -34880,6 +35485,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -34906,17 +35516,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 273,
+        "rightEdgeContentPx": 1812,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (273 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1812 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -35163,6 +35773,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -35189,13 +35804,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2101,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 935,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -35430,6 +36045,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -35456,13 +36076,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1646,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 163,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -35697,6 +36317,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -35723,13 +36348,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1682,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 21,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -35960,6 +36585,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -35986,17 +36616,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 251,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1210,
+        "bottomEdgeContentPx": 61,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (251 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1210 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -36255,6 +36885,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -36281,17 +36916,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 247,
+        "rightEdgeContentPx": 1860,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (247 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1860 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -36550,6 +37185,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -36576,13 +37216,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2020,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1269,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -36829,6 +37469,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -36855,7 +37500,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -37108,6 +37753,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -37134,7 +37784,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -37387,6 +38037,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -37413,17 +38068,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 262,
+        "rightEdgeContentPx": 1141,
         "bottomEdgeContentPx": 0,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (262 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1141 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -37682,6 +38337,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -37708,17 +38368,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 242,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1800,
+        "bottomEdgeContentPx": 55,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (242 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1800 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -37977,6 +38637,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -38003,13 +38668,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1923,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 738,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -38256,6 +38921,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -38282,17 +38952,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1690,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1690 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -38535,6 +39205,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -38561,13 +39236,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1741,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1013,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -38826,6 +39501,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -38852,17 +39532,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 269,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1065,
+        "bottomEdgeContentPx": 20,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (269 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1065 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -39133,6 +39813,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -39159,17 +39844,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 266,
+        "rightEdgeContentPx": 1342,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (266 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1342 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -39440,6 +40125,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -39466,13 +40156,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1403,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 35,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -39731,6 +40421,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -39757,7 +40452,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -40022,6 +40717,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -40048,13 +40748,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1408,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1496,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -40297,6 +40997,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -40323,17 +41028,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 278,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1257,
+        "bottomEdgeContentPx": 128,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (278 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1257 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -40604,6 +41309,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -40630,17 +41340,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 304,
+        "rightEdgeContentPx": 1931,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (304 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1931 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -40911,6 +41621,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -40937,13 +41652,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2275,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 58,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -41202,6 +41917,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -41228,13 +41948,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1922,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 381,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -41493,6 +42213,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -41519,13 +42244,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2193,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1474,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -41772,6 +42497,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -41798,17 +42528,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 250,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1163,
+        "bottomEdgeContentPx": 147,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (250 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1163 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -42067,6 +42797,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -42093,17 +42828,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 293,
+        "rightEdgeContentPx": 1836,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (293 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1836 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -42362,6 +43097,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -42388,13 +43128,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2235,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 51,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -42641,6 +43381,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -42667,17 +43412,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 1874,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (1874 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -42920,6 +43665,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -42946,13 +43696,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2059,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1567,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -43199,6 +43949,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -43225,17 +43980,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 264,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1135,
+        "bottomEdgeContentPx": 63,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (264 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1135 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -43494,6 +44249,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -43520,17 +44280,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 218,
+        "rightEdgeContentPx": 1872,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (218 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1872 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -43789,6 +44549,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -43815,13 +44580,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2152,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 40,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -44068,6 +44833,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -44094,7 +44864,7 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
@@ -44347,6 +45117,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -44373,13 +45148,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2082,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1525,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -44622,6 +45397,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -44648,17 +45428,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 261,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1264,
+        "bottomEdgeContentPx": 83,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (261 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1264 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -44929,6 +45709,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -44955,17 +45740,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 290,
+        "rightEdgeContentPx": 1886,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (290 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1886 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -45236,6 +46021,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -45262,13 +46052,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2340,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 28,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -45527,6 +46317,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -45553,13 +46348,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1761,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 381,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -45818,6 +46613,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -45844,13 +46644,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1958,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1427,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -46081,6 +46881,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -46107,17 +46912,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 291,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1135,
+        "bottomEdgeContentPx": 147,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (291 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1135 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -46376,6 +47181,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -46402,17 +47212,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 247,
+        "rightEdgeContentPx": 1763,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (247 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1763 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -46671,6 +47481,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -46697,13 +47512,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2191,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 39,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -46950,6 +47765,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -46976,13 +47796,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1738,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 381,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -47229,6 +48049,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -47255,13 +48080,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2019,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1436,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -47504,6 +48329,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -47530,17 +48360,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 280,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1262,
+        "bottomEdgeContentPx": 147,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (280 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1262 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -47811,6 +48641,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -47837,17 +48672,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 295,
+        "rightEdgeContentPx": 1945,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (295 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1945 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -48118,6 +48953,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -48144,13 +48984,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2355,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 38,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -48409,6 +49249,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -48435,13 +49280,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1892,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 381,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -48700,6 +49545,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -48726,13 +49576,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2164,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1438,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -48975,6 +49825,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -49001,17 +49856,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 267,
-        "bottomEdgeContentPx": 0,
+        "rightEdgeContentPx": 1245,
+        "bottomEdgeContentPx": 1,
         "imageWidth": 320,
         "imageHeight": 568,
         "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (267 non-bg px in rightmost 4 cols, upper 70%)"
+        "reason": "right-edge content reaches viewport boundary (1245 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -49282,6 +50137,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -49308,17 +50168,17 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 230,
+        "rightEdgeContentPx": 4,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
-        "flagged": true,
-        "reason": "right-edge content reaches viewport boundary (230 non-bg px in rightmost 4 cols, upper 70%)"
+        "flagged": false,
+        "reason": "clean (right-edge non-bg px: 4)"
       },
       "errors": []
     },
@@ -49589,6 +50449,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -49615,13 +50480,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2199,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 41,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -49880,6 +50745,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -49906,13 +50776,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 1879,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 381,
         "imageWidth": 1280,
         "imageHeight": 800,
         "flagged": true,
@@ -50171,6 +51041,11 @@
             "context": ""
           },
           {
+            "needle": "msanabriarea@gmail.com",
+            "found": false,
+            "context": ""
+          },
+          {
             "needle": "[Mia Confirm]",
             "found": false,
             "context": ""
@@ -50197,13 +51072,13 @@
           }
         ],
         "emails": [
-          "msanabriarea@gmail.com"
+          "mia@miasanabria.com"
         ],
         "errors": []
       },
       "edge": {
         "rightEdgeContentPx": 2107,
-        "bottomEdgeContentPx": 0,
+        "bottomEdgeContentPx": 1526,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,

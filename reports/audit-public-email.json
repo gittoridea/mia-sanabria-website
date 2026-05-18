@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-05-18T21:16:44.419Z",
+  "canonical_public_email": "mia@miasanabria.com",
+  "legacy_public_email_forbidden_in_out": "msanabriarea@gmail.com",
+  "branded_variant_forbidden": "mia@miasanabriarealtor.com",
+  "scanned_html_pages": 57,
+  "findings": [],
+  "checks": [
+    {
+      "id": "public-email.present./",
+      "description": "/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    },
+    {
+      "id": "public-email.present./contact/",
+      "description": "/contact/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    },
+    {
+      "id": "public-email.present./accessibility/",
+      "description": "/accessibility/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    },
+    {
+      "id": "public-email.present./dmca/",
+      "description": "/dmca/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    },
+    {
+      "id": "public-email.present./privacy/",
+      "description": "/privacy/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    },
+    {
+      "id": "public-email.present./terms/",
+      "description": "/terms/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    },
+    {
+      "id": "public-email.present./about/",
+      "description": "/about/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    },
+    {
+      "id": "public-email.present./valuation/",
+      "description": "/valuation/ renders canonical public email (mia@miasanabria.com)",
+      "status": "PASS",
+      "evidence": "canonical email present"
+    }
+  ],
+  "pass": true
+}

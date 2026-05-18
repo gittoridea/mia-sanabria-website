@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-17T16:33:05.899Z",
+  "timestamp": "2026-05-18T20:58:16.822Z",
   "counts": {
     "pass": 14,
     "warn": 0,
@@ -128,7 +128,7 @@
       "category": "Email Consistency",
       "description": "Exactly one canonical public email address appears in rendered HTML",
       "status": "PASS",
-      "evidence": "single canonical email: msanabriarea@gmail.com"
+      "evidence": "single canonical email: mia@miasanabria.com"
     }
   ]
 }

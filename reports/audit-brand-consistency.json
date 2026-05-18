@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-17T16:33:05.993Z",
+  "timestamp": "2026-05-18T20:58:16.919Z",
   "counts": {
     "pass": 12,
     "warn": 0,
@@ -116,7 +116,7 @@
     {
       "id": "brand.publicEmailConsistency",
       "category": "Email Consistency",
-      "description": "All emails referenced in src/ are the canonical public email (msanabriarea@gmail.com)",
+      "description": "All emails referenced in src/ are the canonical public email (mia@miasanabria.com)",
       "status": "PASS",
       "evidence": "1 distinct email(s) in src/, all canonical"
     }

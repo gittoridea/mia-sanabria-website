@@ -114,6 +114,9 @@ const STALE_NEEDLES: ReadonlyArray<string> = [
   "kleinmorgan",
   "Family Homes Where Memories Are Made",
   "mia@miasanabriarealtor.com",
+  // Legacy public email — public canonical flipped to mia@miasanabria.com on 2026-05-18.
+  // msanabriarea@gmail.com may remain only as private/backend lead-alert routing.
+  "msanabriarea@gmail.com",
   "[Mia Confirm]",
   "[Legal Brokerage Name]",
   "[Privacy Email]",
@@ -121,7 +124,7 @@ const STALE_NEEDLES: ReadonlyArray<string> = [
   "accessibility@agent3000.com",
 ];
 
-const ALLOWED_EMAIL = "msanabriarea@gmail.com";
+const ALLOWED_EMAIL = "mia@miasanabria.com";
 const PRINCIPAL_REPORTED_MARKETS: ReadonlyArray<string> = [
   "Lighthouse Point",
   "Coral Ridge",

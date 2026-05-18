@@ -413,9 +413,9 @@ async function checkHeroH1ContrastTokens(): Promise<CheckResult[]> {
 async function checkPublicEmailConsistency(): Promise<CheckResult[]> {
   const results: CheckResult[] = [];
   // Source-side check: the canonical public email is in src/lib/mia.ts MIA.contact.email.
-  // Any other email literal (matching the standard email regex) in src/ that isn't an internal allow-listed
-  // pattern (msanabriarea@gmail.com) is a violation.
-  const allowed = new Set<string>(["msanabriarea@gmail.com", "noreply@example.com", "abuse@example.com"]);
+  // Canonical flipped to mia@miasanabria.com on 2026-05-18; the legacy msanabriarea@gmail.com is
+  // forbidden in src/ (it may persist only in private/backend lead-routing surfaces, never in repo source).
+  const allowed = new Set<string>(["mia@miasanabria.com", "noreply@example.com", "abuse@example.com"]);
   const files = await walkSrc(SRC_DIR, [".tsx", ".ts"]);
   type EmailHit = { file: string; line: number; email: string };
   const violations: EmailHit[] = [];
@@ -441,7 +441,7 @@ async function checkPublicEmailConsistency(): Promise<CheckResult[]> {
   results.push({
     id: "brand.publicEmailConsistency",
     category: "Email Consistency",
-    description: "All emails referenced in src/ are the canonical public email (msanabriarea@gmail.com)",
+    description: "All emails referenced in src/ are the canonical public email (mia@miasanabria.com)",
     status: violations.length === 0 ? "PASS" : "FAIL",
     evidence:
       violations.length === 0

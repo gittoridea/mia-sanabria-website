@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-17T16:33:05.718Z
+**Generated:** 2026-05-18T20:58:16.635Z
 
 **Summary:** 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -82,12 +82,12 @@
   "mailto": [
     {
       "route": "/contact/",
-      "action": "mailto:msanabriarea@gmail.com?subject=Private%20Inquiry%20%E2%80%94%20Mia%20Sanabria",
+      "action": "mailto:mia@miasanabria.com?subject=Private%20Inquiry%20%E2%80%94%20Mia%20Sanabria",
       "type": "mailto"
     },
     {
       "route": "/valuation/",
-      "action": "mailto:msanabriarea@gmail.com?subject=Valuation%20Request%20%E2%80%94%20Mia%20Sanabria",
+      "action": "mailto:mia@miasanabria.com?subject=Valuation%20Request%20%E2%80%94%20Mia%20Sanabria",
       "type": "mailto"
     }
   ],

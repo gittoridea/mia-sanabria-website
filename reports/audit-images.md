@@ -1,6 +1,6 @@
 # Audit Images Report
 
-**Generated:** 2026-05-17T16:33:05.899Z
+**Generated:** 2026-05-18T20:58:16.822Z
 
 **Summary:** 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -73,4 +73,4 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.publicEmailConsistency` | ✅ | Exactly one canonical public email address appears in rendered HTML | single canonical email: msanabriarea@gmail.com |
+| `images.publicEmailConsistency` | ✅ | Exactly one canonical public email address appears in rendered HTML | single canonical email: mia@miasanabria.com |

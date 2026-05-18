@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-17T16:33:06.116Z",
+  "generatedAt": "2026-05-18T20:58:17.039Z",
   "summary": {
     "pass": 18,
     "warn": 1,
@@ -33,7 +33,7 @@
       "category": "Contact",
       "description": "/privacy/ uses canonical email from PUBLIC_FACT_LEDGER §1",
       "status": "PASS",
-      "evidence": "email msanabriarea@gmail.com present"
+      "evidence": "email mia@miasanabria.com present"
     },
     {
       "id": "legal.canonical.terms",
@@ -61,7 +61,7 @@
       "category": "Contact",
       "description": "/terms/ uses canonical email from PUBLIC_FACT_LEDGER §1",
       "status": "PASS",
-      "evidence": "email msanabriarea@gmail.com present"
+      "evidence": "email mia@miasanabria.com present"
     },
     {
       "id": "legal.canonical.accessibility",
@@ -89,7 +89,7 @@
       "category": "Contact",
       "description": "/accessibility/ uses canonical email from PUBLIC_FACT_LEDGER §1",
       "status": "PASS",
-      "evidence": "email msanabriarea@gmail.com present"
+      "evidence": "email mia@miasanabria.com present"
     },
     {
       "id": "legal.canonical.dmca",
@@ -117,7 +117,7 @@
       "category": "Contact",
       "description": "/dmca/ uses canonical email from PUBLIC_FACT_LEDGER §1",
       "status": "PASS",
-      "evidence": "email msanabriarea@gmail.com present"
+      "evidence": "email mia@miasanabria.com present"
     },
     {
       "id": "legal.dmca.uscoFlag",

@@ -33,8 +33,10 @@
  *      Broward).
  *  14. Hillsboro Mile correctly identified as a Broward barrier-island
  *      municipality (not Palm Beach).
- *  15. Canonical email `msanabriarea@gmail.com` if present; never
- *      `mia@miasanabriarealtor.com`.
+ *  15. Canonical public email `mia@miasanabria.com` if present; never
+ *      `mia@miasanabriarealtor.com` or the legacy `msanabriarea@gmail.com`
+ *      (canonical flipped 2026-05-18; legacy may persist only in private/backend
+ *      lead routing, never on a public rendered surface).
  *
  * Exit 0 on PASS / WARN; exit 1 on any FAIL. Writes JSON + Markdown reports
  * to reports/audit-insights.json and reports/audit-insights.md.
@@ -83,7 +85,8 @@ const BANNED_PHRASES: ReadonlyArray<{ pattern: RegExp; reason: string }> = [
   { pattern: /\bzillow\b/i, reason: "Competitor name; frame as 'category limitation' instead" },
   { pattern: /\bredfin\b/i, reason: "Competitor name; frame as 'category limitation' instead" },
   { pattern: /\brealtor\.com\b/i, reason: "Competitor name; frame as 'category limitation' instead" },
-  { pattern: /\bmia@miasanabriarealtor\.com\b/i, reason: "Non-canonical email; canonical is msanabriarea@gmail.com" },
+  { pattern: /\bmia@miasanabriarealtor\.com\b/i, reason: "Non-canonical email; canonical is mia@miasanabria.com" },
+  { pattern: /\bmsanabriarea@gmail\.com\b/i, reason: "Legacy public email; canonical flipped 2026-05-18 to mia@miasanabria.com (legacy is backend-only)" },
   { pattern: /\bDirect private intake is being finalized\b/i, reason: "Banned overclaim per Cycle 15 strategy doc" },
   // Cycle 17 — visible label "Evergreen Brief · <Month>" replaced with "Market Note · <Month>"
   // per CYCLE_17_DECISION_REGISTER.md Card 1. Audit rejects the legacy phrase across any
