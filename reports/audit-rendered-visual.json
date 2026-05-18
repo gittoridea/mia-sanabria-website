@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-rendered-visual.ts",
-  "generated": "2026-05-18T21:16:42.235Z",
+  "generated": "2026-05-18T21:35:50.398Z",
   "mode": "local",
   "base": "http://127.0.0.1:4173",
   "concurrency": 3,
@@ -15448,7 +15448,7 @@
       },
       "edge": {
         "rightEdgeContentPx": 1901,
-        "bottomEdgeContentPx": 2609,
+        "bottomEdgeContentPx": 1398,
         "imageWidth": 768,
         "imageHeight": 1024,
         "flagged": true,
@@ -17486,7 +17486,7 @@
       },
       "edge": {
         "rightEdgeContentPx": 1645,
-        "bottomEdgeContentPx": 3019,
+        "bottomEdgeContentPx": 1501,
         "imageWidth": 1440,
         "imageHeight": 900,
         "flagged": true,
@@ -34701,12 +34701,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1600,
         "bottomEdgeContentPx": 881,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1600 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -38957,12 +38957,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1690,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1690 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -43417,12 +43417,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1874,
         "bottomEdgeContentPx": 0,
         "imageWidth": 1280,
         "imageHeight": 800,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1874 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },
@@ -50173,12 +50173,12 @@
         "errors": []
       },
       "edge": {
-        "rightEdgeContentPx": 4,
+        "rightEdgeContentPx": 1928,
         "bottomEdgeContentPx": 0,
         "imageWidth": 375,
         "imageHeight": 812,
-        "flagged": false,
-        "reason": "clean (right-edge non-bg px: 4)"
+        "flagged": true,
+        "reason": "right-edge content reaches viewport boundary (1928 non-bg px in rightmost 4 cols, upper 70%)"
       },
       "errors": []
     },

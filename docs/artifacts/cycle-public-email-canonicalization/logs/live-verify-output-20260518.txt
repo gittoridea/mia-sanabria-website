@@ -1,0 +1,26 @@
+route                     | status | can  | legacy | branded | a3kcom | sun | klm | fhm
+------------------------------------------------------------------------------------------------------------
+/                         | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/about/                   | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/contact/                 | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/buyers/                  | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/sellers/                 | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/valuation/               | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/markets/                 | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/insights/                | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/privacy/                 | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/terms/                   | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/accessibility/           | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+/dmca/                    | 200    | 1    | 0      | 0       | 0      | 0   | 0   | 0  
+
+--- /sitemap.xml + /robots.txt status ---
+/sitemap.xml              | 200 | 9367 bytes
+/robots.txt               | 200 | 73 bytes
+
+--- production / miasanabria.com check ---
+https://miasanabria.com/ : status=200
+  canonical present: 0
+  legacy present:    1
+  branded present:   0
+  React-SPA marker (div#root): 1
+  Next.js marker (/_next/):    0

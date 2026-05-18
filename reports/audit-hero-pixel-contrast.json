@@ -1,6 +1,6 @@
 {
   "tool": "scripts/audit-hero-pixel-contrast.ts",
-  "generated": "2026-05-18T21:13:19.904Z",
+  "generated": "2026-05-18T21:32:38.168Z",
   "mode": "local",
   "mutation": false,
   "base": "http://127.0.0.1:4173",
@@ -206,10 +206,10 @@
     {
       "route": "/markets/",
       "viewport": "768x1024",
-      "glyphContrastMin": 3.71,
+      "glyphContrastMin": 13.84,
       "glyphContrastMedian": 13.84,
       "glyphContrastMax": 13.84,
-      "edgeContrastMin": 3.38,
+      "edgeContrastMin": 9.22,
       "edgeContrastMedian": 9.22,
       "edgeContrastMax": 9.22,
       "meanGlyphContrast": 13.84,
@@ -1136,10 +1136,10 @@
     {
       "route": "/markets/pompano-beach/",
       "viewport": "1440x900",
-      "glyphContrastMin": 13.46,
+      "glyphContrastMin": 3.2,
       "glyphContrastMedian": 13.46,
       "glyphContrastMax": 13.46,
-      "edgeContrastMin": 8.71,
+      "edgeContrastMin": 3.14,
       "edgeContrastMedian": 8.71,
       "edgeContrastMax": 8.71,
       "meanGlyphContrast": 13.46,
