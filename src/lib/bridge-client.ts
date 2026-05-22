@@ -86,11 +86,19 @@ export type BridgeSearchResult = {
   error: "search-unavailable" | "search-error" | null;
   /**
    * Cycle 37 — runtime mode of the result, single source of truth for the UI:
-   *   - "live" — credentials present, demo flag false, fetch returned non-empty data
+   *   - "live" — credentials present, demo flag false, AND a real fetch returned 2xx
    *   - "demo" — credentials present, demo flag true (Bridge test fixture)
    *   - "fallback" — no credentials at build time; fixture cards rendered locally
    *   - "error" — fetch failed (network or non-2xx)
+   *   - "ready" — credentials present + demo flag false, but NO fetch has run yet
+   *               (configured-but-unproven; build-time/SSR state only)
    *   - "unconfigured" — no credentials and an empty result before any search
+   *
+   * Cycle 42 (2026-05-22) — "live" is never asserted from configuration alone.
+   * getBridgeRuntimeStatus() returns "ready" for a configured non-demo build;
+   * only a successful runtime fetch promotes the mode to "live". This keeps the
+   * data-bridge-runtime-mode marker honest: it cannot read "live" unless a Bridge
+   * request actually succeeded in the browser.
    */
   mode: BridgeRuntimeMode;
 };
@@ -100,6 +108,7 @@ export type BridgeRuntimeMode =
   | "demo"
   | "fallback"
   | "error"
+  | "ready"
   | "unconfigured";
 
 /**
@@ -237,10 +246,13 @@ export function getBridgeRuntimeStatus(): BridgeRuntimeStatus {
       updatedAt,
     };
   }
+  // Cycle 42 — configured + non-demo is NOT proof of a working feed. Report
+  // "ready" (configured, awaiting first fetch). Only searchListings() promotes
+  // to "live" after a successful Bridge request.
   return {
-    mode: "live",
+    mode: "ready",
     source: "bridge",
-    reason: "credentials-present-non-demo",
+    reason: "credentials-present-awaiting-fetch",
     resourcePath: RESOURCE_PATH,
     updatedAt,
   };

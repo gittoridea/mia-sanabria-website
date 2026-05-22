@@ -1,0 +1,149 @@
+{
+  "base": "http://127.0.0.1:4190",
+  "target_url": "http://127.0.0.1:4190/home-search/?city=Fort%20Lauderdale&minPrice=1000000&beds=3&source=home-hero",
+  "strict_require_live": true,
+  "generated_at": "2026-05-22T13:46:36.582Z",
+  "bridge_mode": "fallback",
+  "classification": "Env vars missing at build time, or a stale static bundle is served. Fix Dokploy build args (NEXT_PUBLIC_BRIDGE_*) and REBUILD.",
+  "proven_live": false,
+  "passed": 18,
+  "failed": 7,
+  "total": 25,
+  "sanitized_sample": {
+    "sample_mls_ids": [],
+    "sample_prices": [
+      "$2,950,000"
+    ],
+    "showing_count": 1,
+    "card_count": 0,
+    "geography_plausible": true,
+    "status_plausible": true
+  },
+  "checks": [
+    {
+      "name": "home.form.action",
+      "passed": true,
+      "detail": "homepage form action must be /home-search/"
+    },
+    {
+      "name": "home.form.source",
+      "passed": true,
+      "detail": "hidden source=home-hero input must be present"
+    },
+    {
+      "name": "home.form.city",
+      "passed": true,
+      "detail": "homepage form must have city input"
+    },
+    {
+      "name": "home.form.minPrice",
+      "passed": true,
+      "detail": "homepage form must have minPrice input"
+    },
+    {
+      "name": "home.form.beds",
+      "passed": true,
+      "detail": "homepage form must have beds input"
+    },
+    {
+      "name": "home.form.floating",
+      "passed": true,
+      "detail": "homepage form must carry floating-card marker for layout-regression detection"
+    },
+    {
+      "name": "search.bridge-mode-marker",
+      "passed": true,
+      "detail": "data-bridge-runtime-mode must be live|demo|fallback|ready|error (got fallback)"
+    },
+    {
+      "name": "search.no-old-idx-runtime",
+      "passed": true,
+      "detail": "no old IDX runtime in rendered DOM"
+    },
+    {
+      "name": "search.results-region-rendered",
+      "passed": true,
+      "detail": "search results / demo banner / loading / error must render after JS executes"
+    },
+    {
+      "name": "search.bridge-surface-present",
+      "passed": true,
+      "detail": "BridgeSearch form must be rendered on /home-search/"
+    },
+    {
+      "name": "search.idx-disclosure-rendered",
+      "passed": true,
+      "detail": "IDX/MLS disclosure copy must render under fixture or live results"
+    },
+    {
+      "name": "live.mode-is-live",
+      "passed": false,
+      "detail": "EXPECTED live, GOT fallback — Env vars missing at build time, or a stale static bundle is served. Fix Dokploy build args (NEXT_PUBLIC_BRIDGE_*) and REBUILD."
+    },
+    {
+      "name": "live.no-demo-banner",
+      "passed": false,
+      "detail": "no 'Demo data' banner may appear in live mode"
+    },
+    {
+      "name": "live.no-feed-pending-copy",
+      "passed": false,
+      "detail": "no 'Live IDX feed pending' copy in live mode"
+    },
+    {
+      "name": "live.no-demo-dataset-copy",
+      "passed": true,
+      "detail": "no 'Bridge demo dataset connected' copy in live mode"
+    },
+    {
+      "name": "live.no-demo-badge",
+      "passed": false,
+      "detail": "no DEMO badge / demo-disabled CTA on listing cards"
+    },
+    {
+      "name": "live.no-fixtures",
+      "passed": false,
+      "detail": "no FIXTURE-* keys or 'Demo fixture' copy in rendered DOM"
+    },
+    {
+      "name": "live.at-least-one-result",
+      "passed": true,
+      "detail": "at least one live listing must render (cards=0, showing=1)"
+    },
+    {
+      "name": "live.inquiry-enabled",
+      "passed": false,
+      "detail": "'Inquire About This Property' CTA must be enabled on live cards"
+    },
+    {
+      "name": "live.nonfixture-listing-key",
+      "passed": false,
+      "detail": "at least one plausible non-fixture MLS id (found 0)"
+    },
+    {
+      "name": "live.plausible-price",
+      "passed": true,
+      "detail": "at least one plausible price rendered (found 1)"
+    },
+    {
+      "name": "live.plausible-status",
+      "passed": true,
+      "detail": "at least one plausible listing status (Active / Coming Soon)"
+    },
+    {
+      "name": "live.plausible-geography",
+      "passed": true,
+      "detail": "at least one South Florida city or 33xxx/34xxx ZIP"
+    },
+    {
+      "name": "live.idx-disclosure",
+      "passed": true,
+      "detail": "IDX/MLS disclosure must remain visible in live mode"
+    },
+    {
+      "name": "live.no-old-idx",
+      "passed": true,
+      "detail": "no legacy MLS Matrix / IDX markers in live DOM"
+    }
+  ]
+}

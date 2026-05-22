@@ -313,21 +313,34 @@ export function BridgeSearch() {
         </div>
       </form>
 
+      {/*
+        Cycle 42 (2026-05-22) — data-bridge-runtime-mode now reflects the PROVEN
+        runtime (resultMode), not build-time config. It can only read "live"
+        after a Bridge fetch returns 2xx. Before a search on a configured build
+        it reads "ready" (connected, awaiting fetch); a failed fetch reads
+        "error". This is the single source of truth the strict live audit reads.
+      */}
       <div
         className="mt-4 text-xs text-navy-800/60"
-        data-bridge-runtime-mode={status.mode}
+        data-bridge-runtime-mode={resultMode}
         data-bridge-source={status.source}
       >
-        {status.mode === "fallback" && (
+        {resultMode === "fallback" && (
           <span>
             Live IDX feed pending — search currently shows demo fixtures while Bridge integration completes.
           </span>
         )}
-        {status.mode === "demo" && (
+        {resultMode === "demo" && (
           <span>Bridge demo dataset connected — listings shown are test fixtures.</span>
         )}
-        {status.mode === "live" && (
+        {resultMode === "ready" && (
+          <span>Bridge IDX feed connected — run a search to load Southeast Florida listings.</span>
+        )}
+        {resultMode === "live" && (
           <span>Bridge live IDX feed connected — Southeast Florida MLS via Bridge Data Output.</span>
+        )}
+        {resultMode === "error" && (
+          <span>Bridge search is temporarily unavailable — please retry in a moment.</span>
         )}
       </div>
 
@@ -382,9 +395,9 @@ export function BridgeSearch() {
 
         {!loading && !error && !searched && (
           <>
-            {status.mode === "fallback" && <DemoBanner mode="fallback" />}
+            {resultMode === "fallback" && <DemoBanner mode="fallback" />}
             <p className="text-sm text-navy-800/70">
-              Select your criteria above and search to see {status.mode === "fallback" ? "demo fixture" : "available"} listings, or{" "}
+              Select your criteria above and search to see {resultMode === "fallback" ? "demo fixture" : "available"} listings, or{" "}
               <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
                 contact Mia
               </a>{" "}

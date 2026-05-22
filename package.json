@@ -42,6 +42,8 @@
     "generate:neighborhood-images:v3": "bun run scripts/generate-neighborhood-images-v3.ts",
     "export:cycle40b-winner": "bun run scripts/export-cycle40b-winner.ts",
     "test:home-bridge-e2e": "bun run scripts/test-home-search-bridge-e2e.ts",
+    "test:home-bridge-e2e:live": "bun run scripts/test-home-search-bridge-e2e.ts --require-live --base=https://miasanabriarealtor.trueidea.com",
+    "audit:bridge-live": "bun run scripts/test-home-search-bridge-e2e.ts --require-live",
     "probe:reference-hero": "bun run scripts/probe-reference-hero-visual.ts",
     "audit:copy-density": "bun run scripts/audit-copy-density.ts",
     "port-guard": "bun run scripts/lib/port-guard.ts",

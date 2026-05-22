@@ -6,8 +6,18 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      # Build-time env passthrough. NEXT_PUBLIC_* values are baked into the static
+      # bundle, so they MUST be present at `docker build` time (not just runtime).
+      # Values come from the environment / Dokploy build secrets — never hardcode
+      # token values here. Only the Browser Token is ever passed client-side;
+      # the Server Token and Client Secret must NEVER appear in this file.
       args:
         NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://miasanabriarealtor.trueidea.com}
+        NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN: ${NEXT_PUBLIC_BRIDGE_BROWSER_TOKEN:-}
+        NEXT_PUBLIC_BRIDGE_DATASET_ID: ${NEXT_PUBLIC_BRIDGE_DATASET_ID:-}
+        NEXT_PUBLIC_BRIDGE_RESOURCE_PATH: ${NEXT_PUBLIC_BRIDGE_RESOURCE_PATH:-idx/Properties}
+        NEXT_PUBLIC_BRIDGE_DEMO: ${NEXT_PUBLIC_BRIDGE_DEMO:-false}
+        NEXT_PUBLIC_BRIDGE_MEDIA_HOSTS: ${NEXT_PUBLIC_BRIDGE_MEDIA_HOSTS:-}
     container_name: mia-website
     restart: unless-stopped
     expose:

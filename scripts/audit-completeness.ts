@@ -387,7 +387,7 @@ async function checkIdxIframeIntegrity(): Promise<CheckResult> {
     cityFilterLabel: /<label[^>]+for="bridge-city"/,
     disclosure: /(deemed reliable but not guaranteed|IDX\/MLS disclosure)/i,
     bridgeSourceLink: /source=home-search/i,
-    bridgeRuntimeAttr: /data-bridge-runtime-mode="(live|demo|fallback|error|unconfigured)"/,
+    bridgeRuntimeAttr: /data-bridge-runtime-mode="(live|demo|fallback|error|ready|unconfigured)"/,
   };
   const fails: string[] = [];
   for (const [key, re] of Object.entries(sentinels)) {
