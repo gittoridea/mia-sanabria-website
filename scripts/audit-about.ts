@@ -143,7 +143,11 @@ async function run() {
     { id: "about.no.yearsLicensed", needle: /licensed since|practicing since 19|practicing since 20/i, description: "No unverified 'practicing since YYYY' rendered (experience.since is null)" },
     { id: "about.no.salesVolume", needle: /\$[0-9]+(?:\.[0-9]+)?[\s]*(?:million|billion|m|b)\s+(?:in\s+sales|in\s+volume|closed)/i, description: "No unverified sales-volume claim rendered" },
     { id: "about.no.awardClaims", needle: /(?:top|chairman'?s|presidential|hall of fame|number one|#1)\s+(?:agent|producer|REALTOR|broker)/i, description: "No unverified awards/ranking claim rendered" },
-    { id: "about.no.testimonials", needle: /testimonial[s]?\b/i, description: "No unverified testimonials section rendered" },
+    // Cycle 2026-06-01 — Mia supplied verbatim, attributed client notes; an
+    // on-page "what clients say" section is now permitted. The real compliance
+    // risk is structured-data overclaim, so the guard moved from "no testimonials
+    // word" to "no Review / AggregateRating JSON-LD" (prompt non-negotiable #5).
+    { id: "about.no.reviewSchema", needle: /"@type"\s*:\s*"(Review|AggregateRating)"/i, description: "No Review / AggregateRating JSON-LD emitted for self-hosted client notes" },
   ];
 
   for (const c of negativeChecks) {

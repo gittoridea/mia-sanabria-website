@@ -1,8 +1,8 @@
 # audit-public-email
 
-Generated: 2026-05-18T21:35:52.407Z
+Generated: 2026-06-01T14:37:27.710Z
 Canonical public email: `mia@miasanabria.com`
-Scanned HTML pages in out/: 57
+Scanned HTML pages in out/: 58
 Findings: 0
 Pass: true
 

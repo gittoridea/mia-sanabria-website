@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-22T13:47:20.794Z",
+  "timestamp": "2026-06-01T14:37:25.251Z",
   "counts": {
     "PASS": 16,
     "WARN": 1,
@@ -12,11 +12,11 @@
       "category": "Sitemap coverage",
       "description": "Every public built route is in sitemap.xml",
       "status": "PASS",
-      "evidence": "48 built · 48 in sitemap · 0 missing",
+      "evidence": "49 built · 49 in sitemap · 0 missing",
       "details": {
         "missing": [],
-        "builtCount": 48,
-        "sitemapCount": 48
+        "builtCount": 49,
+        "sitemapCount": 49
       }
     },
     {
@@ -44,7 +44,7 @@
       "category": "SEO/AEO",
       "description": "Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image",
       "status": "PASS",
-      "evidence": "0 field issues across 35 pages",
+      "evidence": "0 field issues across 36 pages",
       "details": {
         "issues": []
       }
@@ -54,7 +54,7 @@
       "category": "SEO/AEO",
       "description": "Each core/legal/market page has unique <title>",
       "status": "PASS",
-      "evidence": "35 unique titles across 35 pages",
+      "evidence": "36 unique titles across 36 pages",
       "details": {
         "duplicates": []
       }
@@ -74,10 +74,10 @@
       "category": "Local Authority",
       "description": "Market pages have ≥200 visible words",
       "status": "PASS",
-      "evidence": "all 23 market pages exceed 200-word floor",
+      "evidence": "all 24 market pages exceed 200-word floor",
       "details": {
         "thinPages": [],
-        "marketsChecked": 23
+        "marketsChecked": 24
       }
     },
     {
@@ -85,7 +85,7 @@
       "category": "Compliance",
       "description": "Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route",
       "status": "PASS",
-      "evidence": "all 56 built routes carry full footer trust set",
+      "evidence": "all 57 built routes carry full footer trust set",
       "details": {
         "failsByRoute": {}
       }
@@ -188,7 +188,7 @@
       "category": "Schema",
       "description": "All JSON-LD blocks parse and carry @type",
       "status": "PASS",
-      "evidence": "202 JSON-LD blocks across 35 pages · 0 broken",
+      "evidence": "207 JSON-LD blocks across 36 pages · 0 broken",
       "details": {
         "issues": []
       }

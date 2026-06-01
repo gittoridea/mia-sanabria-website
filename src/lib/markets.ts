@@ -593,7 +593,7 @@ export const MARKETS: ReadonlyArray<Market> = [
     miaQuote:
       "Lighthouse Point is a small Broward city north of Pompano Beach, known for finger-isle canals with no-fixed-bridge ocean access via the Hillsboro Inlet — a defining feature for yacht-capable single-family residences.",
     aeoAnswer:
-      "Lighthouse Point is a small residential city in northern Broward County north of Pompano Beach, known for a tight network of finger isles and ocean-access canals routed to the Atlantic via the Hillsboro Inlet. Many of the canals offer no-fixed-bridge access, which makes the city a recognized destination for yacht-capable single-family residences. The market is predominantly single-family, quieter than Fort Lauderdale, and centered on water — bridge clearance, dock length, and seawall condition often matter more to pricing than interior square footage. The Lighthouse Point Yacht & Racquet Club anchors the social geography for many residents.",
+      "Lighthouse Point is a small residential city in northern Broward County north of Pompano Beach, known for a tight network of finger isles and ocean-access canals routed to the Atlantic via the Hillsboro Inlet. Many of the canals offer no-fixed-bridge access, which makes the city a recognized destination for yacht-capable single-family residences. The market is predominantly single-family, quieter than Fort Lauderdale, and centered on water — bridge clearance, dock length, and seawall condition often matter more to pricing than interior square footage. The Lighthouse Point Yacht Club anchors the social geography for many residents.",
     propertyTypes: [
       "No-fixed-bridge deepwater single-family residences",
       "Canal-front estate homes on finger-isle blocks",
@@ -622,9 +622,9 @@ export const MARKETS: ReadonlyArray<Market> = [
           "Lighthouse Point is smaller, quieter, and more residential, with a tighter focus on the boating lifestyle. Fort Lauderdale offers a real city alongside the waterfront — downtown, beach corridor, restaurants, and a larger overall market. The choice depends on whether the priority is residential calm with serious boating, or a full-city lifestyle.",
       },
       {
-        question: "Is the Lighthouse Point Yacht & Racquet Club tied to homeownership?",
+        question: "Is the Lighthouse Point Yacht Club tied to homeownership?",
         answer:
-          "No. Membership at the Lighthouse Point Yacht & Racquet Club is independent of homeownership in the city. Buyers interested in club access apply separately. Mia helps clients clarify membership intentions early so the residence search and the club lifestyle goal stay aligned.",
+          "No. Membership at the Lighthouse Point Yacht Club is independent of homeownership in the city. Buyers interested in club access apply separately. Mia helps clients clarify membership intentions early so the residence search and the club lifestyle goal stay aligned.",
       },
       {
         question: "What should non-waterfront buyers know about Lighthouse Point?",
@@ -1689,6 +1689,7 @@ export const MARKETS: ReadonlyArray<Market> = [
       },
     ],
     internalLinks: [
+      { slug: "parkland", label: "Parkland" },
       { slug: "plantation", label: "Plantation" },
       { slug: "sunrise", label: "Sunrise" },
       { slug: "weston", label: "Weston" },
@@ -1696,6 +1697,85 @@ export const MARKETS: ReadonlyArray<Market> = [
     ],
     comparisonContext:
       "Coral Springs is the northwestern Broward master-planned peer in the cohort that includes Parkland to the north and Weston to the south. Buyers usually compare four vectors: Weston for the later Arvida master plan at the Everglades perimeter; Sunrise for the western-Broward civic-and-retail spine with Sawgrass Mills; Plantation for the central-Broward connector alternative with mature canopy; and Fort Lauderdale for the broader anchor city to the southeast. The right Coral Springs brief usually centers on the named subdivision first and the architectural era second, with the parkway road grid and the deliberate planned-community character as the through-line of the city's identity.",
+  },
+  {
+    // Cycle 2026-06-01 — Parkland added as a primary northwestern Broward
+    // market for the About + 7-market refresh. Durable, source-grounded
+    // geography + master-planned/equestrian framing. No school/safety/
+    // familial-status claims; no event references; no fabricated metrics.
+    // Hero/OG generated via scripts/generate-parkland-images.ts (Gemini).
+    slug: "parkland",
+    cluster: "primary",
+    name: "Parkland",
+    tagline:
+      "Northwestern Broward's low-density city of large lots, mature greenery, and master-planned communities.",
+    intro:
+      "Parkland is an affluent, low-density city in northwestern Broward County, incorporated in 1963 and known for a deliberately park-like character — large residential lots, mature tree canopy, generous green space, and an equestrian heritage in its original acreage. The market centers on newer gated master-planned communities alongside the established large-acre estates of Pine Tree Estates.",
+    highlights: [
+      "Northwestern Broward County municipality, incorporated 1963",
+      "Low-density zoning, large residential lots, and protected green space",
+      "Newer gated master-planned communities (Heron Bay, Parkland Golf & Country Club, MiraLago, Cascata, Parkland Bay)",
+      "Pine Tree Estates — established large-acre, equestrian-heritage lots",
+      "Sawgrass Expressway and University Drive corridor access; Everglades buffer to the west",
+    ],
+    lifestyle:
+      "Parkland suits buyers who want a quiet, low-density setting with large lots, lush landscaping, and master-planned-community amenities, away from the coastal corridor. Mia helps clients compare the newer gated communities — each with its own builder era, amenity package, and HOA scope — against the established large-acre estates of Pine Tree Estates, and frames the comparison honestly against the master-planned alternatives in Coral Springs and Weston.",
+    priceCharacter:
+      "Pricing turns on the named community, lot size, builder era, and amenity package. An estate on a Pine Tree Estates acre trades against a different cohort than a newer gated-community residence. A community-specific review beats a city-wide average.",
+    latitude: 26.3098,
+    longitude: -80.237,
+    heroImage: "/markets/parkland.jpg",
+    localContext:
+      "Parkland occupies the northwestern corner of Broward County, bordered on the south by Coral Springs, on the east by Coconut Creek, and on the north by the Palm Beach County line near Boca Raton. The Sawgrass Expressway and University Drive frame the primary corridors; the Everglades water conservation area lies to the west. The city is predominantly residential, with named master-planned communities, the signature Pine Trails Park, and the large-acre Pine Tree Estates section carrying the city's original equestrian heritage.",
+    county: "Broward County",
+    aeoAnswer:
+      "Parkland is an affluent, low-density city in northwestern Broward County, incorporated in 1963 and named for the park-like, green character it has deliberately preserved through low-density zoning and tree-protection ordinances. The market is known for large residential lots, mature landscaping, and newer gated master-planned communities — Heron Bay, Parkland Golf & Country Club, MiraLago, Cascata, and Parkland Bay among them — alongside the established large-acre estates of Pine Tree Estates, which carry the city's equestrian heritage. Parkland is inland, framed by the Sawgrass Expressway and University Drive, with the Everglades water conservation area to the west; it has no ocean or Intracoastal frontage, though many communities sit on lakes. Pricing is strongly segmented by community, lot size, and builder era.",
+    propertyTypes: [
+      "Newer gated master-planned single-family (Heron Bay, MiraLago, Parkland Bay, Cascata)",
+      "Golf-and-country-club residences at Parkland Golf & Country Club",
+      "Large-acre estate and equestrian-heritage lots in Pine Tree Estates",
+      "Lakefront single-family within named master-planned communities",
+      "Renovated and newer-construction estate homes on generous lots",
+    ],
+    buyerGuidance:
+      "Parkland suits buyers who want a low-density, green, master-planned setting with large lots — inland, away from the coastal corridor. The first decision is usually newer gated community versus established large-acre Pine Tree Estates: they trade as different micro-markets with different lot sizes, amenity packages, and HOA scope. Diligence covers HOA and community-covenant scope, lot size and orientation, builder era, impact-window and roof status, lake-lot considerations where applicable, and utility specifics on the larger legacy acreage. Buyers comparing Parkland against Coral Springs or Weston should weigh lot size and density against the alternative.",
+    sellerGuidance:
+      "Sellers in Parkland should position the residence to its specific community and the buyer pool that shops there. Comparable-sales cohorts diverge sharply between the newer gated communities and the large-acre Pine Tree Estates section — a residence priced against the wrong cohort underperforms. Pre-list preparation typically includes HOA documentation for gated communities, lot-and-acreage framing for the estate section, photography that captures the lot and mature landscaping as features, and a comparable-sales packet drawn narrowly from the same community rather than the city average.",
+    faqs: [
+      {
+        question: "Where is Parkland in Broward County?",
+        answer:
+          "Parkland sits in the northwestern corner of Broward County, bordered on the south by Coral Springs, on the east by Coconut Creek, and on the north by the Palm Beach County line near Boca Raton. It is a separately incorporated Broward municipality with its own city government, incorporated in 1963. The Everglades water conservation area lies to its west.",
+      },
+      {
+        question: "What kinds of communities make up the Parkland market?",
+        answer:
+          "Parkland centers on newer gated master-planned communities — Heron Bay, Parkland Golf & Country Club, MiraLago, Cascata, and Parkland Bay among them — alongside the established large-acre estates of Pine Tree Estates. Each community has its own builder era, amenity package, and HOA scope, so buyers and sellers should treat the named community as the primary comparable-sales cohort, not the city as a whole.",
+      },
+      {
+        question: "What is Pine Tree Estates?",
+        answer:
+          "Pine Tree Estates is Parkland's established large-acre section, known for generous lots, mature landscaping, and an equestrian heritage — a more rural, low-density character than the newer gated communities. Lots there trade as their own cohort, and diligence often includes acreage, easements, and utility considerations that differ from a typical gated-community residence.",
+      },
+      {
+        question: "Is there waterfront in Parkland?",
+        answer:
+          "Parkland is inland; it does not have Atlantic or Intracoastal frontage. Many Parkland communities sit on lakes or man-made water features within the master plan, which is a different diligence conversation than ocean or canal water access. Buyers seeking Atlantic, Intracoastal, or yacht-capable access should compare to Fort Lauderdale, Pompano Beach, Deerfield Beach, or Lighthouse Point.",
+      },
+      {
+        question: "How does Parkland compare to Coral Springs or Weston?",
+        answer:
+          "All three are inland Broward master-planned markets. Coral Springs sits immediately to the south and traces to the 1963 Coral Ridge Properties master plan. Weston sits to the southwest at the Everglades perimeter, developed later under Arvida. Parkland is the lower-density of the three, with larger lots, more protected green space, and the Pine Tree Estates equestrian-heritage section. Buyers comparing them should weigh lot size, density, and community amenities.",
+      },
+    ],
+    internalLinks: [
+      { slug: "coral-springs", label: "Coral Springs" },
+      { slug: "weston", label: "Weston" },
+      { slug: "deerfield-beach", label: "Deerfield Beach" },
+      { slug: "fort-lauderdale", label: "Fort Lauderdale" },
+    ],
+    comparisonContext:
+      "Parkland is the low-density, large-lot master-planned peer at the northwestern edge of Broward County. Buyers usually compare four vectors: Coral Springs for the immediately-south Coral Ridge Properties master-planned alternative at higher density; Weston for the southwestern Arvida master-planned alternative at the Everglades perimeter; Deerfield Beach for the coastal Broward alternative to the east when water access matters; and Fort Lauderdale for the broader anchor city with deepwater waterfront. The right Parkland brief usually centers on the named community first — newer gated community or established large-acre Pine Tree Estates — with lot size, builder era, and HOA scope as the through-line rather than coastal water access.",
   },
   {
     slug: "davie",

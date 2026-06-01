@@ -1,6 +1,6 @@
 # Audit Completeness Report
 
-**Generated:** 2026-05-22T13:47:20.794Z
+**Generated:** 2026-06-01T14:37:25.251Z
 
 **Summary:** 16 PASS · 1 WARN · 0 FAIL · 0 SKIP
 
@@ -10,7 +10,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 48 built · 48 in sitemap · 0 missing |
+| `completeness.sitemap.builtInSitemap` | ✅ | Every public built route is in sitemap.xml | 49 built · 49 in sitemap · 0 missing |
 | `completeness.sitemap.sitemapInBuilt` | ✅ | Every sitemap route resolves to a built page | 0 unresolved |
 
 ### Compliance
@@ -18,14 +18,14 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `completeness.legal.routesExist` | ✅ | Required legal routes /privacy/, /terms/, /dmca/, /accessibility/ are built | all 4 legal routes built |
-| `completeness.footer.trust` | ✅ | Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route | all 56 built routes carry full footer trust set |
+| `completeness.footer.trust` | ✅ | Footer trust elements (LPT, license, EHO, REALTOR, 4 policy links) on every built route | all 57 built routes carry full footer trust set |
 
 ### SEO/AEO
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 35 pages |
-| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 35 unique titles across 35 pages |
+| `completeness.metadata.allPresent` | ✅ | Every core/legal/market page has title + description + canonical + og:title + og:description + og:url + og:image | 0 field issues across 36 pages |
+| `completeness.metadata.uniqueTitles` | ✅ | Each core/legal/market page has unique <title> | 36 unique titles across 36 pages |
 | `completeness.metadata.uniqueDescriptions` | ✅ | Each core/legal/market page has unique <meta description> | all descriptions unique |
 | `completeness.og.imagesResolve` | ✅ | Every page's og:image resolves to a local file in out/ | all og:images resolve |
 
@@ -33,7 +33,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 23 market pages exceed 200-word floor |
+| `completeness.markets.wordFloor` | ✅ | Market pages have ≥200 visible words | all 24 market pages exceed 200-word floor |
 
 ### IDX
 
@@ -66,7 +66,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 202 JSON-LD blocks across 35 pages · 0 broken |
+| `completeness.schema.valid` | ✅ | All JSON-LD blocks parse and carry @type | 207 JSON-LD blocks across 36 pages · 0 broken |
 
 ## Failures and warnings — details
 

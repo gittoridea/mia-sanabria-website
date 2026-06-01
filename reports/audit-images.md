@@ -1,6 +1,6 @@
 # Audit Images Report
 
-**Generated:** 2026-05-18T21:18:40.407Z
+**Generated:** 2026-06-01T14:37:25.436Z
 
 **Summary:** 14 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -10,8 +10,8 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 397 <img> tags across 57 pages — all local references resolve |
-| `images.ogImagesResolve` | ✅ | Every og:image referencing a local /public/* path resolves to an actual file | 57 og:image entries across 57 pages — all local references resolve |
+| `images.localFilesResolve` | ✅ | Every <img> referencing a local /public/* path resolves to an actual file | 408 <img> tags across 58 pages — all local references resolve |
+| `images.ogImagesResolve` | ✅ | Every og:image referencing a local /public/* path resolves to an actual file | 58 og:image entries across 58 pages — all local references resolve |
 | `images.twitterImagesResolve` | ✅ | Every twitter:image referencing a local /public/* path resolves to an actual file | 0 broken twitter:image references |
 
 ### Production Polish
@@ -24,7 +24,7 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 397 <img> tags — all have alt attribute |
+| `images.altPresent` | ✅ | Every <img> has an alt attribute (empty alt for decorative is acceptable) | 408 <img> tags — all have alt attribute |
 
 ### Static Export Integrity
 
@@ -43,7 +43,7 @@
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
 | `images.homepageFeaturedCards` | ✅ | Homepage Featured Markets section renders an <img> for each of the 6 first-page featured market cards | all 6 first-page featured cards render <img src="/markets/SLUG.jpg"> |
-| `images.everyMarketCardImagePresent` | ✅ | Every market in MARKETS renders <img src=/markets/<slug>.jpg> on /markets/ index | all 23 markets have card images on /markets/ |
+| `images.everyMarketCardImagePresent` | ✅ | Every market in MARKETS renders <img src=/markets/<slug>.jpg> on /markets/ index | all 24 markets have card images on /markets/ |
 
 ### Hub Pages
 
@@ -55,13 +55,13 @@
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.everyMarketPageHeroImagePresent` | ✅ | Every market page /markets/<slug>/ renders <img src=/markets/<slug>.jpg> in its hero | all 23 market pages have a hero image |
+| `images.everyMarketPageHeroImagePresent` | ✅ | Every market page /markets/<slug>/ renders <img src=/markets/<slug>.jpg> in its hero | all 24 market pages have a hero image |
 
 ### OG Images
 
 | ID | Status | Description | Evidence |
 |---|:-:|---|---|
-| `images.everyMarketOgImageExists` | ✅ | Every market has an OG image at /og-markets/<slug>.jpg AND its page emits og:image referencing it | all 23 markets have OG image asset + reference |
+| `images.everyMarketOgImageExists` | ✅ | Every market has an OG image at /og-markets/<slug>.jpg AND its page emits og:image referencing it | all 24 markets have OG image asset + reference |
 
 ### Principal-Reported Markets (Cycle 9 Addendum)
 

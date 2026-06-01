@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Search } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import {
   BRIDGE_DEMO_MODE,
   getBridgeRuntimeStatus,
@@ -98,12 +98,16 @@ function ErrorPanel() {
         Search is temporarily unavailable.
       </p>
       <p className="mt-1">
-        The Bridge listing service did not respond. Please try again in a moment, or{" "}
-        <a href="/contact/" className="underline decoration-brass-400 underline-offset-2">
-          contact Mia
-        </a>{" "}
-        for an active-inventory shortlist.
+        Live listing search is offline right now. Tell Mia what you're looking for and she'll
+        prepare a current shortlist of active inventory matched to your goals.
       </p>
+      <a
+        href="/contact/?source=home-search"
+        className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-sm bg-navy-900 px-5 py-2.5 text-sm font-medium text-cream-50 transition-colors hover:bg-navy-800"
+      >
+        Request an active-inventory shortlist
+        <ArrowRight aria-hidden className="h-4 w-4" />
+      </a>
       <p
         data-brand-exception="demo-warning"
         className="mt-3 text-xs text-amber-900/70"

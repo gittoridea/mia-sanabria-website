@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { HeroSearch } from "@/components/HeroSearch";
 import { NeighborhoodsRail } from "@/components/NeighborhoodsRail";
+import { ScrollCue } from "@/components/ScrollCue";
 import { AnswerFirst } from "@/components/AnswerFirst";
 import { MeetMia } from "@/components/MeetMia";
 import { IntentRouter } from "@/components/IntentRouter";
@@ -121,10 +122,11 @@ export default function HomePage() {
         />
         <HeroSearch floating />
       </div>
-      {/* Cycle 41 — tightened rhythm into "Mia's Service Areas". Prior
-          h-16 sm:h-20 spacer compounded with the next section's py-* to
-          create an accidental cream gap; reduced here. */}
-      <div aria-hidden className="h-6 sm:h-8 lg:h-10" />
+      {/* UX polish — replaces the prior aria-hidden rhythm spacer with a
+          subtle, server-safe scroll cue. The hero + floating search card can
+          fill the first fold (false bottom); this names and links to the first
+          content section below. Spacing is preserved by the cue's own padding. */}
+      <ScrollCue targetId="service-areas" label="Explore Mia's service areas" />
 
       {/* Cycle 24 R2 — Mia's 9 approved working neighborhoods surfaced as a
           service-area rail. Two with hasPage=true link to /markets/<slug>/,

@@ -95,6 +95,11 @@ export const ALL_MARKET_SLUGS = [
   "plantation",
   "weston",
   "coral-springs",
+  // Cycle 2026-06-01 (About + 7-market refresh) — Parkland added as a primary
+  // northwestern Broward market. Mia named it in her supplied "Areas Served"
+  // list. Inland, master-planned; hero/OG generated via the Gemini image
+  // pipeline (scripts/generate-parkland-images.ts), unversioned filenames.
+  "parkland",
   "davie",
   "sunrise",
 ] as const;
