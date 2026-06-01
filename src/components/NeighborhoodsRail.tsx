@@ -22,6 +22,7 @@ import { SectionHeading } from "./SectionHeading";
 export function NeighborhoodsRail() {
   return (
     <section
+      id="service-areas"
       aria-labelledby="neighborhoods-rail-heading"
       className="bg-cream-100 py-14 lg:py-20"
     >

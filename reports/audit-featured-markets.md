@@ -1,6 +1,6 @@
 # Audit Featured Markets Report
 
-**Generated:** 2026-05-18T21:18:40.641Z
+**Generated:** 2026-06-01T14:37:25.638Z
 
 **Summary:** 17 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
@@ -24,4 +24,4 @@
 | `featured.market.las-olas-isles` | ✅ | Featured market las-olas-isles has page + hero + OG + sitemap entry | route=/markets/las-olas-isles/, hero=ok, og=ok, sitemap=ok |
 | `featured.market.bay-colony` | ✅ | Featured market bay-colony has page + hero + OG + sitemap entry | route=/markets/bay-colony/, hero=ok, og=ok, sitemap=ok |
 | `featured.market.bermuda-riviera` | ✅ | Featured market bermuda-riviera has page + hero + OG + sitemap entry | route=/markets/bermuda-riviera/, hero=ok, og=ok, sitemap=ok |
-| `featured.marketsIndex.complete` | ✅ | /markets/ index links to every market in ALL_MARKET_SLUGS | 23 markets linked |
+| `featured.marketsIndex.complete` | ✅ | /markets/ index links to every market in ALL_MARKET_SLUGS | 24 markets linked |

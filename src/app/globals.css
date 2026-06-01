@@ -37,6 +37,20 @@
   --shadow-luxury: 0 20px 60px -20px rgba(15, 42, 68, 0.35);
   --shadow-card: 0 4px 24px -8px rgba(15, 42, 68, 0.18);
   --shadow-soft: 0 1px 3px rgba(15, 42, 68, 0.08);
+
+  /* Scroll-cue chevron nudge. Disabled under prefers-reduced-motion by the
+     global block below (animation-duration collapses to 0.01ms). */
+  --animate-scroll-cue: scroll-cue-nudge 2.4s ease-in-out infinite;
+}
+
+@keyframes scroll-cue-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.3rem);
+  }
 }
 
 :root {

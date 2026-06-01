@@ -1,8 +1,8 @@
 # audit-neighborhood-images-deep
 
-Generated: 2026-05-18T21:35:52.313Z
+Generated: 2026-06-01T14:37:27.604Z
 Base: (local files only)
-Total: 23 | Pass: 23 | Fail: 0
+Total: 24 | Pass: 24 | Fail: 0
 
 | Slug | Hero KB | Hero WxH | OG KB | OG WxH | Hero live | OG live | Status | Reasons |
 |------|--------:|----------|------:|--------|----------:|--------:|:------:|---------|
@@ -27,5 +27,6 @@ Total: 23 | Pass: 23 | Fail: 0
 | plantation | 384 | 1200x1500 | 187 | 1200x630 | - | - | PASS | - |
 | weston | 206 | 1200x1500 | 125 | 1200x630 | - | - | PASS | - |
 | coral-springs | 363 | 1200x1500 | 186 | 1200x630 | - | - | PASS | - |
+| parkland | 447 | 1200x1500 | 218 | 1200x630 | - | - | PASS | - |
 | davie | 239 | 1200x1500 | 107 | 1200x630 | - | - | PASS | - |
 | sunrise | 261 | 1200x1500 | 122 | 1200x630 | - | - | PASS | - |

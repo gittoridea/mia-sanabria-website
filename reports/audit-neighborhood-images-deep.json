@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T21:35:52.313Z",
+  "generated_at": "2026-06-01T14:37:27.604Z",
   "base": null,
   "thresholds": {
     "MIN_HERO_BYTES": 80000,
@@ -9,8 +9,8 @@
     "MIN_OG_WIDTH": 1200,
     "MIN_OG_HEIGHT": 630
   },
-  "total": 23,
-  "pass": 23,
+  "total": 24,
+  "pass": 24,
   "fail": 0,
   "rows": [
     {
@@ -363,6 +363,23 @@
       "og_path": "/og-markets/coral-springs-cycle40b.jpg",
       "og_exists": true,
       "og_bytes": 190335,
+      "og_w": 1200,
+      "og_h": 630,
+      "hero_live_status": null,
+      "og_live_status": null,
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "slug": "parkland",
+      "hero_path": "/markets/parkland.jpg",
+      "hero_exists": true,
+      "hero_bytes": 457962,
+      "hero_w": 1200,
+      "hero_h": 1500,
+      "og_path": "/og-markets/parkland.jpg",
+      "og_exists": true,
+      "og_bytes": 223547,
       "og_w": 1200,
       "og_h": 630,
       "hero_live_status": null,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T21:18:40.713Z",
+  "generatedAt": "2026-06-01T14:37:25.717Z",
   "summary": {
     "pass": 12,
     "warn": 0,
@@ -71,9 +71,9 @@
       "evidence": "pattern not found"
     },
     {
-      "id": "about.no.testimonials",
+      "id": "about.no.reviewSchema",
       "category": "Credentials",
-      "description": "No unverified testimonials section rendered",
+      "description": "No Review / AggregateRating JSON-LD emitted for self-hosted client notes",
       "status": "PASS",
       "evidence": "pattern not found"
     },

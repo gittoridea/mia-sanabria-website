@@ -1,5 +1,5 @@
 # Audit About Report
-**Generated:** 2026-05-18T21:18:40.714Z
+**Generated:** 2026-06-01T14:37:25.717Z
 **Summary:** 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
 
 | ID | Status | Description | Evidence |
@@ -13,6 +13,6 @@
 | `about.no.yearsLicensed` | ✅ | No unverified 'practicing since YYYY' rendered (experience.since is null) | pattern not found |
 | `about.no.salesVolume` | ✅ | No unverified sales-volume claim rendered | pattern not found |
 | `about.no.awardClaims` | ✅ | No unverified awards/ranking claim rendered | pattern not found |
-| `about.no.testimonials` | ✅ | No unverified testimonials section rendered | pattern not found |
+| `about.no.reviewSchema` | ✅ | No Review / AggregateRating JSON-LD emitted for self-hosted client notes | pattern not found |
 | `about.license.notOnAbout` | ✅ | License # does not appear inside About <main> | license # absent from body (correctly lives on Footer + Terms) |
 | `about.brokerage.lpt` | ✅ | About page attributes Mia to LPT Realty | LPT Realty present |

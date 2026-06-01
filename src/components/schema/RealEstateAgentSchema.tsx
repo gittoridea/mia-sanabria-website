@@ -3,7 +3,27 @@ import { JsonLd } from "./JsonLd";
 import { SITE } from "@/lib/site";
 import { MIA } from "@/lib/mia";
 
-export function RealEstateAgentSchema() {
+export function RealEstateAgentSchema({
+  areaServed,
+  knowsAbout,
+}: {
+  /** Optional override of the served areas (place/municipality names). Defaults
+   *  to MIA.serviceArea.administrative. Used on /about to carry Mia's confirmed
+   *  broader market set (the seven named markets + both counties). */
+  areaServed?: ReadonlyArray<string>;
+  /** Optional override of the knowsAbout expertise list. */
+  knowsAbout?: ReadonlyArray<string>;
+} = {}) {
+  const servedAreas = areaServed ?? MIA.serviceArea.administrative;
+  const expertise = knowsAbout ?? [
+    "Residential real estate",
+    "Waterfront properties",
+    "Buyer representation",
+    "Seller representation",
+    "Fort Lauderdale real estate",
+    "Boca Raton real estate",
+    "Delray Beach real estate",
+  ];
   const data: WithContext<RealEstateAgent> = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
@@ -21,20 +41,12 @@ export function RealEstateAgentSchema() {
       postalCode: MIA.contact.serviceCore.postalCode,
       addressCountry: "US",
     },
-    areaServed: MIA.serviceArea.administrative.map((county) => ({
+    areaServed: servedAreas.map((name) => ({
       "@type": "AdministrativeArea",
-      name: county,
+      name,
     })),
     parentOrganization: { "@id": `${SITE.url}/#organization` },
-    knowsAbout: [
-      "Residential real estate",
-      "Waterfront properties",
-      "Buyer representation",
-      "Seller representation",
-      "Fort Lauderdale real estate",
-      "Boca Raton real estate",
-      "Delray Beach real estate",
-    ],
+    knowsAbout: expertise,
     sameAs: [
       MIA.social.facebook,
       MIA.social.instagram,

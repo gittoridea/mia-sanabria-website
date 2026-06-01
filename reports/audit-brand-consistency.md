@@ -1,6 +1,6 @@
 # Audit Brand Consistency Report
 
-**Generated:** 2026-05-18T21:18:40.542Z
+**Generated:** 2026-06-01T14:37:25.537Z
 
 **Summary:** 12 PASS · 0 WARN · 0 FAIL · 0 SKIP
 

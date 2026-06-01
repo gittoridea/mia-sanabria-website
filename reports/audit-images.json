@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-18T21:18:40.407Z",
+  "timestamp": "2026-06-01T14:37:25.436Z",
   "counts": {
     "pass": 14,
     "warn": 0,
@@ -12,14 +12,14 @@
       "category": "Image Resolution",
       "description": "Every <img> referencing a local /public/* path resolves to an actual file",
       "status": "PASS",
-      "evidence": "397 <img> tags across 57 pages — all local references resolve"
+      "evidence": "408 <img> tags across 58 pages — all local references resolve"
     },
     {
       "id": "images.ogImagesResolve",
       "category": "Image Resolution",
       "description": "Every og:image referencing a local /public/* path resolves to an actual file",
       "status": "PASS",
-      "evidence": "57 og:image entries across 57 pages — all local references resolve"
+      "evidence": "58 og:image entries across 58 pages — all local references resolve"
     },
     {
       "id": "images.twitterImagesResolve",
@@ -40,7 +40,7 @@
       "category": "Accessibility",
       "description": "Every <img> has an alt attribute (empty alt for decorative is acceptable)",
       "status": "PASS",
-      "evidence": "397 <img> tags — all have alt attribute"
+      "evidence": "408 <img> tags — all have alt attribute"
     },
     {
       "id": "images.noUnresolvableRemote",
@@ -75,21 +75,21 @@
       "category": "Featured Markets",
       "description": "Every market in MARKETS renders <img src=/markets/<slug>.jpg> on /markets/ index",
       "status": "PASS",
-      "evidence": "all 23 markets have card images on /markets/"
+      "evidence": "all 24 markets have card images on /markets/"
     },
     {
       "id": "images.everyMarketPageHeroImagePresent",
       "category": "Market Pages",
       "description": "Every market page /markets/<slug>/ renders <img src=/markets/<slug>.jpg> in its hero",
       "status": "PASS",
-      "evidence": "all 23 market pages have a hero image"
+      "evidence": "all 24 market pages have a hero image"
     },
     {
       "id": "images.everyMarketOgImageExists",
       "category": "OG Images",
       "description": "Every market has an OG image at /og-markets/<slug>.jpg AND its page emits og:image referencing it",
       "status": "PASS",
-      "evidence": "all 23 markets have OG image asset + reference"
+      "evidence": "all 24 markets have OG image asset + reference"
     },
     {
       "id": "images.principalReportedMarkets",
