@@ -66,6 +66,10 @@ When a Mia-confirmed fact changes, edit exactly these locations (in order). Cros
 - Visual edit = `.tsx` in `src/components/`, `globals.css`, image swap, hero, footer.
 - Required on visual edit: capture mobile screenshots at 320/375/414/768 via `audit:mobile-readability:capture` and store under `docs/artifacts/cycle-<id>/mobile-readability/{before,after}/`.
 
+## Navigating / refactoring the code
+
+- Before "where is X / what uses X / what breaks if I change `src/lib/*`", read **`AGENT_NAV.md`** (repo root) — zero-install `rg`/`fd` recipes for symbol-def, usages, route import graph (both directions), and the refactor preflight. Recipe 3b gives the reverse impact set for any content module.
+
 ## When in doubt
 
 - Read the project ISA at `~/code/mia-sanabria-website/ISA.md` (single source of truth, 745 ISCs).
