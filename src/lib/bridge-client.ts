@@ -49,7 +49,7 @@ export const BRIDGE_DEMO_MODE =
   (process.env.NEXT_PUBLIC_BRIDGE_DEMO ?? "").toLowerCase() === "true";
 
 /** True when both required public env vars are present in the bundle. */
-export const BRIDGE_AVAILABLE = !!(BROWSER_TOKEN && DATASET_ID);
+const BRIDGE_AVAILABLE = !!(BROWSER_TOKEN && DATASET_ID);
 
 const ALLOWED_CITIES: Set<string> = new Set(
   MIA_APPROVED_NEIGHBORHOODS.map((n) => n.label)

@@ -226,10 +226,6 @@ export function getFeaturedMarketSlugs(): ReadonlyArray<MarketSlug> {
   return FEATURED_MARKETS;
 }
 
-export function getFeaturedMarketRoutes(): ReadonlyArray<string> {
-  return FEATURED_MARKETS.map((slug) => getMarketRoute(slug));
-}
-
 /**
  * Cycle 39 (2026-05-16) — slugs whose card+detail+OG image assets were
  * republished at versioned paths to defeat browser/CDN cache ambiguity

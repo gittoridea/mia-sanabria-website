@@ -27,7 +27,7 @@ import { POST_12 } from "@/data/insights/12-private-buyer-brief-defining-the-sea
  *    CRM capture or automated follow-up.
  */
 
-export type InsightCategory =
+type InsightCategory =
   | "buyer-guide"
   | "seller-guide"
   | "market-comparison"
@@ -60,7 +60,7 @@ export type InsightCategory =
  *                          posts that were originally part of the 12-post launch cohort.
  *                          (Retained for opt-in revision-only display; not used by current cohort.)
  */
-export type InsightDateDisplayMode = "evergreen-month" | "full-date" | "updated-only";
+type InsightDateDisplayMode = "evergreen-month" | "full-date" | "updated-only";
 
 export type InsightCTAVariant =
   | "buyer-brief"
@@ -78,12 +78,12 @@ export type InsightCTA = {
   readonly href: string;
 };
 
-export type InsightSection = {
+type InsightSection = {
   readonly heading: string;
   readonly paragraphs: ReadonlyArray<string>;
 };
 
-export type InsightFaq = {
+type InsightFaq = {
   readonly question: string;
   readonly answer: string;
 };
@@ -171,8 +171,6 @@ const INSIGHT_BY_SLUG: ReadonlyMap<string, InsightPost> = new Map(
   INSIGHTS.map((post) => [post.slug, post] as const)
 );
 
-export const INSIGHTS_INDEX_ROUTE = "/insights/" as const;
-
 export function getAllInsights(): ReadonlyArray<InsightPost> {
   return INSIGHTS;
 }
@@ -199,10 +197,6 @@ export function getInsightsForMarket(marketSlug: MarketSlug): ReadonlyArray<Insi
       post.relatedMarkets.includes(marketSlug) ||
       post.secondaryMarkets.includes(marketSlug)
   );
-}
-
-export function getPrimaryInsightsForMarket(marketSlug: MarketSlug): ReadonlyArray<InsightPost> {
-  return INSIGHTS.filter((post) => post.relatedMarkets.includes(marketSlug));
 }
 
 export function getInsightsByTopicMonth(month: number): ReadonlyArray<InsightPost> {
