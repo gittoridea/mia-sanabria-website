@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cinzel, Montserrat } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { LeadSourceStamp } from "@/components/LeadSourceStamp";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { WebSiteSchema } from "@/components/schema/WebSiteSchema";
@@ -103,6 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="color-scheme" content="light" />
         <link rel="alternate" hrefLang="en-US" href={SITE.url} />
         <link rel="alternate" hrefLang="x-default" href={SITE.url} />
+        <GoogleAnalytics />
       </head>
       <body>
         <OrganizationSchema />

@@ -4,6 +4,8 @@
  * Schema components must read from this file — never inline unverified facts.
  */
 
+export const MIA_GA4_ID = "G-GTPQM5P6Q6";
+
 export const MIA = {
   name: { legal: "Mia Mary Sanabria", marketing: "Mia Sanabria" },
   title: "REALTOR®",
@@ -40,7 +42,7 @@ export const MIA = {
     anchorLine: "If I don't know the answer, I will find it.",
   },
   tracking: {
-    ga4Id: (process.env.NEXT_PUBLIC_GA_ID ?? null) as string | null,
+    ga4Id: MIA_GA4_ID,
     userwayId: (process.env.NEXT_PUBLIC_USERWAY_ID ?? null) as string | null,
   },
   unverified: {
@@ -224,10 +226,6 @@ export function getAllMarketRoutesIncludingIndex(): ReadonlyArray<string> {
 
 export function getFeaturedMarketSlugs(): ReadonlyArray<MarketSlug> {
   return FEATURED_MARKETS;
-}
-
-export function getFeaturedMarketRoutes(): ReadonlyArray<string> {
-  return FEATURED_MARKETS.map((slug) => getMarketRoute(slug));
 }
 
 /**

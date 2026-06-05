@@ -1951,22 +1951,6 @@ export function getPrimarySlugs(): ReadonlyArray<MarketSlug> {
   return getMarketsByCluster("primary").map((m) => m.slug);
 }
 
-export function getNeighborhoodSlugs(): ReadonlyArray<MarketSlug> {
-  return getMarketsByCluster("neighborhood").map((m) => m.slug);
-}
-
-/**
- * Cycle 18 — Northern Broward waterfront (currently: Hillsboro Mile only).
- * Markets that are NOT Fort Lauderdale and NOT a "primary" city/town the way
- * the South Florida cities/towns cohort is, but belong visually next to the
- * Fort Lauderdale waterfront cluster on the /markets/ index because that's
- * the cohort serious waterfront buyers compare. See
- * docs/CYCLE_18_HILLSBORO_MILE_MARKET_TAXONOMY_FIX.md.
- */
-export function getNorthernBrowardWaterfrontSlugs(): ReadonlyArray<MarketSlug> {
-  return getMarketsByCluster("northern-broward-waterfront").map((m) => m.slug);
-}
-
 /**
  * Cycle 18 — Fort Lauderdale-adjacent cluster (renders under the renamed
  * "Fort Lauderdale Waterfront and Northern Broward Clusters" section on
