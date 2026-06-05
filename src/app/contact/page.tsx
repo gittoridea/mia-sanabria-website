@@ -107,6 +107,7 @@ export default function ContactPage() {
           </div>
 
           <form
+            data-lead-form="contact"
             method="post"
             action={`mailto:${MIA.contact.email}?subject=${encodeURIComponent("Private Inquiry — Mia Sanabria")}`}
             encType="text/plain"

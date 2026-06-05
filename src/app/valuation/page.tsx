@@ -101,6 +101,7 @@ export default function ValuationPage() {
       <section className="bg-cream-50 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 lg:px-8">
           <form
+            data-lead-form="valuation"
             method="post"
             action={`mailto:${MIA.contact.email}?subject=${encodeURIComponent("Valuation Request — Mia Sanabria")}`}
             encType="text/plain"

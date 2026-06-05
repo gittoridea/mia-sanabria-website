@@ -134,5 +134,5 @@ curl -s https://miasanabriarealtor.trueidea.com/robots.txt
 - [ ] Add property in Google Search Console (DNS TXT or HTML file verification)
 - [ ] Submit `https://miasanabriarealtor.trueidea.com/sitemap.xml`
 - [ ] Add Bing Webmaster property + sitemap
-- [ ] Wire GA4 (`G-PYYSF87G8K` already in `mia.ts`) via GTM (`<script>` injection in `layout.tsx`)
+- [ ] Wire GA4 (`G-GTPQM5P6Q6` already in `mia.ts`) via GTM (`<script>` injection in `layout.tsx`)
 - [ ] Wire UserWay accessibility widget (`vVNkJJLvR4`) when Mia approves
